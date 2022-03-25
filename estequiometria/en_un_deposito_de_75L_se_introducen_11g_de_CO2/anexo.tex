@@ -1,0 +1,29 @@
+%\subsection[Anexo]{Anexo: relación entre masa molecular y densidad en la ecuación de los gases ideales}
+\begin{frame}
+    \frametitle{Anexo}
+    \framesubtitle{Apartado (\rom{3})}
+    En el apartado c se pide la densidad ($d$). Partiendo de la ecuación de los gases ideales se obtiene la densidad:
+    $$
+        P_T\cdot V = \overbrace{n}^{n=\frac{m}{Mm}}\cdot R\cdot T
+    $$
+    $$
+        P_T=\overbrace{\frac{m}{V}}^{d=\frac{m}{V}}\cdot\frac{R\cdot T}{\overline{Mm}} = d\cdot\frac{R\cdot T}{\overline{Mm}}
+        \Rightarrow
+        d=\frac{P_T\cdot\overline{Mm}}{R\cdot T}
+    $$
+    Esta $\overline{Mm}$ viene dada por:
+    $$
+        \overline{Mm}=\sum_{i=1}^{n}x_i\cdot Mm_i = \sum_{i=1}^{n}\frac{n_i}{n_T}\cdot Mm_i =\frac{1}{n_T}\sum_{i=1}^{n}\overbrace{n_i}^{n_i=\frac{m_i}{Mm_i}}\cdot Mm_i= \frac{1}{\underbrace{n_T}_{\frac{P_T\cdot V}{R\cdot T}}}\sum_{i=1}^{n}\frac{m_i}{\cancel{Mm_i}}\cdot\cancel{Mm_i}
+    $$
+    $$
+        \overline{Mm}=\frac{R\cdot T}{P_T\cdot V}\sum_{i=1}^{n}m_i
+    $$
+    Sustituyendo en la ecuación de los gases ideales en función de la densidad:
+    $$
+        d=\frac{P_T\cdot\overbrace{\overline{Mm}}^{\overline{Mm}=\frac{R\cdot T}{P_T\cdot V}\sum_{i=1}^{n}m_i}}{R\cdot T}=
+        \frac{\cancel{P_T}\cdot\frac{\cancel{R\cdot T}}{\cancel{P_T}\cdot V}\sum_{i=1}^{n}m_i}{\cancel{R\cdot T}}=
+        \frac{\sum_{i=1}^{n}m_i}{V}
+    $$
+    Es decir, la densidad de una mezcla de gases ideales es la suma de las masas dividido el volumen que ocupan. No es necesario ni $P_T$, ni $T$, ni $\overline{Mm}$.
+\end{frame}
+
