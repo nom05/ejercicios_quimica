@@ -1,0 +1,127 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/en_el_proceso_H2+CO2--H2O+CO_y_teniendo_en_cuenta_los_datos_de_la_tabla/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): $\Delta G^o$ a \SI{25}{\celsius}}
+    \structure{Reacción en equilibrio:} \ce{H2(g) + CO2(g) <=> H2O(g) + CO(g)}
+    \structure{Calculamos $\Delta S_R$:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \Delta S^o_{\text{Reacción}} = \sum S^o_{\text{productos}} - S^o_{\text{reactivos}}
+            $$
+        \onslide<2>
+            $$
+                \Delta S^o_R = \sum S^o_p - S^o_r
+            $$
+        \onslide<3>
+            $$
+                \textstyle\Delta S^o_R = \scriptstyle\SI{188,72}{\joule\per\mol\per\kelvin} 
+                           + \SI{197,56}{\joule\per\mol\per\kelvin} 
+                           - (\SI{-130,57}{\joule\per\mol\per\kelvin} + \SI{213,68}{\joule\per\mol\per\kelvin})
+            $$
+        \onslide<4->
+            $$
+                \Delta S^o_R = \SI{303,17}{\joule\per\mol\per\kelvin}
+            $$
+    \end{overprint}
+    \visible<5->{
+        \structure{Calculamos $\Delta H^o_R$:}
+        \begin{overprint}
+            \onslide<5>
+                $$
+                    \Delta H^o_{\text{Reacción}} = \sum\Delta H^o_{\text{productos}} - \Delta H^o_{\text{reactivos}}
+                $$
+            \onslide<6>
+                $$
+                    \Delta H^o_R = \sum\Delta H^o_p - \Delta H^o_r
+                $$
+            \onslide<7>
+                $$
+                    \Delta H^o_R = \SI{-228,58}{\kilo\joule\per\mol} \SI{-137,15}{\kilo\joule\per\mol} - (\SI{0}{\kilo\joule\per\mol} \SI{-393,50}{\kilo\joule\per\mol})
+                $$
+            \onslide<8->
+                $$
+                    \Delta H^o_R = \SI{27,77}{\kilo\joule\per\mol}
+                $$
+        \end{overprint}
+                }
+    \visible<9->{
+        \structure{Calculamos $\Delta G^o$:}
+        \begin{overprint}
+            \onslide<9>
+                $$
+                    \Delta G^o = \Delta H^o_R - T\vdot\Delta S^o_R
+                $$
+            \onslide<10>
+                $$
+                    \Delta G^o = \SI{27,77e3}{\joule\per\mol} - \SI{298,15}{\cancel\kelvin}\vdot\SI{303,17}{\joule\per\mol\per\cancel\kelvin}
+                $$
+            \onslide<11->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta G^o = \SI{-62620}{\joule\per\mol} = \SI{-62,62}{\kilo\joule\per\mol}}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): $\Delta G$ en equilibrio}
+    \visible<2->{
+        \structure{Por definición de equilibrio:}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta G = 0}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): $T$ de equilibrio}
+    \visible<1->{
+        \structure{Por definición de equilibrio:}
+        $$
+            \Delta G = 0
+        $$
+                }
+    \visible<2->{
+        \structure{Por definición de $\Delta G$:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    \overbrace{\Delta G}^{\Delta G_{\text{equilibrio}} = 0} =  \Delta H - T\vdot\Delta S
+                $$
+            \onslide<3>
+                $$
+                    0 = \Delta H - T\vdot\Delta S = 0
+                $$
+            \onslide<4>
+                $$
+                    T\vdot\Delta S = \Delta H
+                $$
+            \onslide<5>
+                $$
+                    T = \frac{\Delta H}{\Delta S}
+                $$
+            \onslide<6->
+                $$
+                    T = \frac{\SI{27,77e3}{\cancel\joule\per\cancel\mol}}{\SI{303,17}{\cancel\joule\per\cancel\mol\per\kelvin}}
+                $$
+        \end{overprint}
+                }
+    \visible<7>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{T = \SI{91,60}{\kelvin}}
+        $$
+                }
+\end{frame}
+

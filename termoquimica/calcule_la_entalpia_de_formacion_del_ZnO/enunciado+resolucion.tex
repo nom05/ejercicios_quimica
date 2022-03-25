@@ -1,0 +1,90 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/cursos/21-22/EEI-Quimica/bol3-termoquimica+coligativas/termoquimica/calcule_la_entalpia_de_formacion_del_ZnO/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $\Delta H_{\text{formación}}(\ce{ZnO})$}
+	\structure{Combinando las 3 reacciones del enunciado buscamos la reacción:}
+	$$
+		\ce{Zn(s) + 1/2O2(g) -> ZnO}
+	$$
+	Reacciones de partida:
+	\begin{align}
+	    \ce{H2SO4(ac) + Zn(s) -> ZnSO4(ac) + H2(g)}\quad\Delta H=\SI{80,1}{\kilo\calorie\per\mol}\label{reac:ZnSO4}\\
+		\ce{2H2(g) + O2(g) -> 2H2O(l)}\quad\Delta H=\SI{136,6}{\kilo\calorie\per\mol}\label{reac:H2O}\\
+		\ce{H2SO4(ac) + ZnO(s) -> ZnSO4(ac) + H2O(l)}\quad\Delta H=\SI{50,52}{\kilo\calorie\per\mol}\label{reac:H2SO4}
+	\end{align}
+	\visible<2->{
+		\structure{Aplicando la \underline{ley de Hess}, nos interesa que el \ce{H2SO4} y \ce{ZnSO4} aparezcan en reactivos y productos:}
+		\begin{overprint}
+			\onslide<2>
+				\centering A la inversa de la Reacción~\ref{reac:H2SO4} le sumamos la Reacción~\ref{reac:ZnSO4}:
+					\[\renewcommand\arraystretch{1.4}
+						\arraycolsep=1.4pt
+						\begin{array}{rl}\toprule[1pt]
+								\ce{ZnSO4(ac) + H2O(l) -> H2SO4(ac) + ZnO(s)}\quad\Delta H=\SI{-50,52}{\kilo\calorie\per\mol}\\
+								\ce{H2SO4(ac) + Zn(s) -> ZnSO4(ac) + H2(g)}\quad\Delta H=\SI{80,1}{\kilo\calorie\per\mol}\\
+							\midrule
+								\ce{\cancel{\ce{ZnSO4(ac)}} + \cancel{\ce{H2SO4(ac)}} + H2O(l) + Zn(s) -> \cancel{\ce{H2SO4(ac)}} + ZnO(s) + \cancel{\ce{ZnSO4(ac)}} + H2(g)}\\
+							\bottomrule[1pt]
+						\end{array}
+					\]
+			\onslide<3>
+				\centering A la inversa de la Reacción~\ref{reac:H2SO4} le sumamos la Reacción~\ref{reac:ZnSO4}:
+					\[\renewcommand\arraystretch{1.4}
+						\arraycolsep=1.4pt
+						\begin{array}{rl}\toprule[1pt]
+								\ce{ZnSO4(ac) + H2O(l) -> H2SO4(ac) + ZnO(s)}\quad\Delta H=\SI{-50,52}{\kilo\calorie\per\mol}\\
+								\ce{H2SO4(ac) + Zn(s) -> ZnSO4(ac) + H2(g)}\quad\Delta H=\SI{80,1}{\kilo\calorie\per\mol}\\
+							\midrule
+								\ce{H2O(l) + Zn(s) -> ZnO(s) + H2(g)}\quad\Delta H=\SI{29,58}{\kilo\calorie\per\mol}\\
+							\bottomrule[1pt]
+						\end{array}
+					\]
+			\onslide<4>
+				\centering Comparando con la Reacción~\ref{reac:H2O}:
+					\[\renewcommand\arraystretch{1.4}
+						\arraycolsep=1.4pt
+							\begin{array}{rl}\toprule[1pt]
+								\ce{H2O(l) + Zn(s) -> ZnO(s) + H2(g)}\quad\Delta H=\SI{29,58}{\kilo\calorie\per\mol}\\
+								\ce{2H2(g) + O2(g) -> 2H2O(l)}\quad\Delta H=\SI{136,6}{\kilo\calorie\per\mol}\\
+							\bottomrule[1pt]
+						\end{array}
+					\]
+				\centering Vemos que necesitamos dividir por $\rfrac{1}{2}$ la Reacción~\ref{reac:H2O}.
+			\onslide<5>
+				\centering Comparando con la Reacción~\ref{reac:H2O}:
+					\[\renewcommand\arraystretch{1.4}
+						\arraycolsep=1.4pt
+						\begin{array}{rl}
+							\toprule[1pt]
+								\ce{H2O(l) + Zn(s) -> ZnO(s) + H2(g)}\quad\Delta H=\SI{29,58}{\kilo\calorie\per\mol}\\
+								\frac{1}{2}\times\left(\ce{2H2(g) + O2(g) -> 2H2O(l)}\right)\quad\Delta H=\frac{1}{2}\cdot\SI{136,6}{\kilo\calorie\per\mol}\\
+							\midrule
+								\ce{\cancel{\ce{H2O(l)}} + Zn(s) + \cancel{\ce{H2(g)}} + 1/2O2(g) -> ZnO(s) + \cancel{\ce{H2(g)}} + \cancel{\ce{H2O(l)}}}\\
+							\bottomrule[1pt]
+						\end{array}
+					\]
+			\onslide<6->
+				\centering Comparando con la Reacción~\ref{reac:H2O}:
+					\[\renewcommand\arraystretch{1.4}
+						\arraycolsep=1.4pt
+						\begin{array}{rl}
+							\toprule[1pt]
+								\ce{H2O(l) + Zn(s) -> ZnO(s) + H2(g)}\quad\Delta H=\SI{29,58}{\kilo\calorie\per\mol}\\
+								\ce{H2(g) + 1/2O2(g) -> H2O(l)}\quad\Delta H=\SI{68,3}{\kilo\calorie\per\mol}\\
+							\midrule
+								\ce{Zn(s) + 1/2O2(g) -> ZnO(s)}\quad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\Delta H=\SI{97,88}{\kilo\calorie\per\mol}}\\
+							\bottomrule[1pt]
+						\end{array}
+					\]
+		\end{overprint}
+				}
+\end{frame}

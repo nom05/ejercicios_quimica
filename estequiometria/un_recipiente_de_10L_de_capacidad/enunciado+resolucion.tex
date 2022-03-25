@@ -1,0 +1,107 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/un_recipiente_de_10L_de_capacidad/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+	$$
+		\Delta m(\ce{O2})?\quad\quad T(P_{inicial},m_{final})?
+	$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{O2})=\SI{10,0}{\liter}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m\textsubscript{inicial}(\ce{O2})=m\textsubscript{i}(\ce{O2})=\SI{30,0}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T\textsubscript{inicial}(\ce{O2})=T\textsubscript{i}(\ce{O2})=\SI{350,15}{\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{P\textsubscript{final}(\ce{O2})=P\textsubscript{f}(\ce{O2})=\SI{1}{\atm}}
+	\end{center}
+      \visible<2-|handout:0>{Pero también\ldots\\
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{O2}) = \SI{32,0}{\gram\per\mol}}
+		$$
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): obtención de la presión inicial}
+	\structure{Combinando la ecuación de los gases ideales y la relación entre el número de moles ($n$) y la masa ($m$) a través de la masa molecular ($Mm$):} $PV=nRT$ y $n = \rfrac{m}{Mm}$
+	\onslide<1->
+	$$
+		P\cdot V = \overbrace{n}^{n=\frac{m}{Mm}}\cdot R\cdot T
+	$$
+	\onslide<2->
+	$$
+		P\cdot V = \frac{m}{Mm}\cdot R\cdot T
+	$$
+	\onslide<3->
+	$$
+		P=\frac{m\cdot R\cdot T}{Mm\cdot V}\Rightarrow P_i=\frac{m_i\cdot R\cdot T}{Mm\cdot V}
+	$$
+	$$
+		P_i=\frac{\SI{30,0}{\cancel\gram}\cdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{350,15}{\cancel\kelvin}}{\SI{32}{\cancel\gram\per\cancel\mol}\cdot\SI{10,0}{\cancel\liter}}
+	$$
+		\centering\myovalbox{\textcolor{yellow}{$P_{inicial}=\SI{2,692}{\atm}$}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa final y variación de masa}
+	\structure{La temperatura del recipiente y el volumen no cambian entre la presión inicial y la final, se mantienen constantes} Despejando de la ecuación de los gases ideales:
+	\begin{overprint}
+		\onslide<1>
+			$$
+				P\cdot V = n\cdot R\cdot T\Rightarrow\frac{P}{n}=\frac{\overbrace{R}^{\text{constante}}\cdot\overbrace{T}^{\text{constante}}}{\underbrace{V}_{\text{constante}}}
+			$$
+		\onslide<2-|handout:0>
+			$$
+				P\cdot V = n\cdot R\cdot T\Rightarrow\frac{P}{n}=\frac{\overbrace{R}^{\text{constante}}\cdot\overbrace{T}^{\text{constante}}}{\underbrace{V}_{\text{constante}}}=\text{constante}
+			$$
+	\end{overprint}
+	\onslide<2->
+		$$
+			\frac{P_i}{\underbrace{n_i}_{n=\frac{m}{Mm}}}=\frac{P_f}{\underbrace{n_f}_{n=\frac{m}{Mm}}}\Rightarrow
+			\frac{P_i}{\frac{m_i}{\cancel{Mm}}}=\frac{P_f}{\frac{m_f}{\cancel{Mm}}}\Rightarrow
+			\frac{P_i}{m_i}=\frac{P_f}{m_f}
+		$$
+	\onslide<3-|handout:0>
+		$$
+			m_f=m_i\cdot\frac{P_f}{P_i}\Rightarrow
+			m_f=\SI{30,0}{\gram}\cdot\frac{\SI{1}{\cancel\atm}}{\SI{2,692}{\cancel\atm}}
+		$$
+		\centering\myovalbox{\textcolor{yellow}{$m_f=\SI{11,15}{\gram}$}}
+	\visible<3->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\Delta m=\SI{30,0}{\gram}-\SI{11,15}{\gram}=\SI{18,85}{\gram}}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación de temperatura final si $P_f=P_i$}
+	\structure{Sustituimos en la ecuación de los gases ideales la presión final por la inicial:}
+	\onslide<1->
+		$$
+			\overbrace{P_f}^{P_f=P_i}\cdot V=\underbrace{n_f}_{n=\frac{m}{Mm}}\cdot R\cdot T^\prime\Rightarrow P_i\cdot V=\frac{m_f}{Mm}\cdot R\cdot T^\prime
+		$$
+	\onslide<2->
+		$$
+			T^\prime = \frac{P_i\cdot V}{\frac{m_f}{Mm}\cdot R\cdot}\Rightarrow T^\prime = \frac{P_i\cdot V\cdot Mm}{m_f\cdot R\cdot}\Rightarrow
+			T^\prime = \frac{\SI{2,692}{\cancel\atm}\cdot\SI{10,0}{\cancel\liter}\cdot\SI{32,0}{\cancel\gram\per\cancel\mol}}{\SI{11,15}{\cancel\gram}\cdot\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\kelvin}}
+		$$
+	\visible<3->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{T^\prime=\SI{942,53}{\kelvin}=\SI{669,38}{\celsius}}
+		$$}
+\end{frame}

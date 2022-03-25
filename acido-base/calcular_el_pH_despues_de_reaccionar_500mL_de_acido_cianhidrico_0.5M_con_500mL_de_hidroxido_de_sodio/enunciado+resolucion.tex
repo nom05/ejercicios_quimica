@@ -1,0 +1,94 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcular_el_pH_despues_de_reaccionar_500mL_de_acido_cianhidrico_0.5M_con_500mL_de_hidroxido_de_sodio/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del ejercicio}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{HCN}) = \SI{500}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{HCN}] = \SI{,5}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_a(\ce{HCN})= \SI{4,9e-10}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{NaOH}) = \SI{500}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[NaOH] = \SI{0,5}{\Molar}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): pH de disolución en el punto de equivalencia}
+    \structure{Tipo de reacción:} base fuerte + ácido débil
+    $$
+        n(\ce{HCN}) = \SI{,5}{\mol\per\cancel\liter}\cdot\SI{,5}{\cancel\liter} = \SI{2,5e-1}{\mol}
+    $$
+    $$
+        n(\ce{NaOH}) = \SI{,5}{\mol\per\cancel\liter}\cdot\SI{,5}{\cancel\liter} = \SI{2,5e-1}{\mol}
+    $$
+    \structure{Reacción de neutralización:} \ce{HCN(ac) + NaOH(ac) -> NaCN(ac) + H2O(l)}\\[.3cm]
+    \visible<2->{
+        Como $n(\ce{HCN}) = n(NaOH)$, como la reacción es \textbf{\underline{mol a mol}} y estamos en el \textbf{\underline{punto de equivalencia}}.
+                }
+    \visible<3->{
+        El volumen total será: $V_T = \SI{,5}{\liter} + \SI{,5}{\liter} = \SI{1,0}{\liter}$
+        \structure{Al final de la reacción:} $n(\ce{CN-}) = \SI{2,5e-1}{\mol}\Rightarrow[\ce{CN-}] = \SI{2,5e-1}{\Molar}$
+                }
+    \visible<4->{
+        \structure{Por tanto tendremos:} \ce{CN-(ac) + H2O(l) <=> HCN(ac) + OH-(ac)}
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    K_h(\ce{CN-}) = \frac{K_w}{K_a(\ce{HCN})} = \frac{[\ce{HCN}][\ce{OH-}]}{[\ce{CN-}]}
+                $$
+            \onslide<5>
+                \structure{Despreciamos la disociación frente a la concentración inicial de sal conjugada:}
+                    $$
+                        K_h(\ce{CN-}) = \frac{K_w}{K_a(\ce{HCN})} = \frac{[\ce{HCN}][\ce{OH-}]}{[\ce{CN-}]_0}
+                    $$
+            \onslide<6>
+                \structure{Usando logaritmos:}
+                    $$
+                        \log\frac{K_w}{K_a(\ce{HCN})} = \log\frac{\overbrace{[\ce{HCN}]}^{[\ce{HCN}]=[\ce{OH-}]}[\ce{OH-}]}{[\ce{CN-}]_0}
+                    $$
+            \onslide<7>
+                    $$
+                        -14 -\log{K_a(\ce{HCN})} = \log\frac{[\ce{OH-}]^2}{[\ce{CN-}]_0}
+                    $$
+            \onslide<8>
+                    $$
+                        -14 -\log{K_a(\ce{HCN})} -2\log{[\ce{OH-}]} = -\log{[\ce{CN-}]_0}
+                    $$
+            \onslide<9>
+                    $$
+                        -14 +pK_a(\ce{HCN}) + 2\overbrace{pOH}^{pOH = 14-pH} = -\log{[\ce{CN-}]_0}
+                    $$
+            \onslide<10>
+                    $$
+                        -14 +pK_a(\ce{HCN}) + 2\cdot(14-pH) = -\log{[\ce{CN-}]_0}
+                    $$
+            \onslide<11>
+                    $$
+                        pK_a(\ce{HCN}) + 14 - 2\cdot pH = -\log{[\ce{CN-}]_0}
+                    $$
+            \onslide<12>
+                    $$
+                        pH = 7 + \frac{1}{2}\left( pK_a(\ce{HCN}) +\log{[\ce{CN-}]_0}\right)
+                    $$
+        \end{overprint}
+                }
+    \visible<12>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{pH = \SI{11,35}{}}
+        $$
+                }
+\end{frame}

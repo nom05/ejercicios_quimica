@@ -1,0 +1,122 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/indique_si_las_reacciones_siguientes_transcurren_espontaneamente_en_el_sentido_indicado_a_20C/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del enunciado}
+	\begin{center}
+		{\Large\textbf{¿Reacciones espontáneas?}}\\
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Pb^2+/Pb})=\SI{-,126}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Cu^2+/Cu})=\SI{,337}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Ni^2+/Ni})=\SI{-,250}{\volt}}
+	\end{center}
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Pb(II) (\SI{1}{\Molar}) + Cu -> Cu(II) (\SI{1}{\Molar}) + Pb}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{Pb(II) (\SI{1}{\Molar}) + Ni -> Ni(II) (\SI{,1}{\Molar}) + Pb}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\ce{Pb(II) (\SI{1e-7}{\Molar}) + Ni -> Ni(II) (\SI{,1}{\Molar}) + Pb}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Pb(II) (\SI{,1}{\Molar}) + Cu -> Cu(II) (\SI{,1}{\Molar}) + Pb}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{Pb(II) (\SI{,1}{\Molar}) + Ni -> Ni(II) (\SI{,01}{\Molar}) + Pb}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\ce{Pb(II) (\SI{1e-8}{\Molar}) + Ni -> Ni(II) (\SI{,01}{\Molar}) + Pb}}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): teoría a tener en cuenta}
+	Una reacción es espontánea o no en función de $\Delta G$. La Termodinámica nos dice:
+	\begin{itemize}
+		\item<1->$\Delta G>0$: proceso no espontáneo.
+		\item<2->$\Delta G=0$: proceso en equilibrio.
+		\item<3->$\Delta G<0$: proceso espontáneo.
+	\end{itemize}
+	\visible<3->{
+		La expresión que relaciona los potenciales de oxidación y reducción ($\varepsilon$) con $\Delta G$ es la siguiente: $\Delta G = -n\vdot F\vdot\varepsilon$, siendo $F$ la constante de Faraday (\SI{96485}{\coulomb\per\mol}) y $n$ el número de electrones implicados en el proceso.
+				}
+	\visible<4->{
+		Fuera de condiciones estándar, además, tenemos que tener en cuenta:
+		$$
+			\Delta G = \overbrace{\Delta G^0}^{\text{estándar}} + R\vdot T\ln(Q)\Rightarrow\varepsilon=\varepsilon^0-\frac{R\vdot T}{n\vdot F}\ln(Q)
+		$$
+		La última expresión es la conocida como \textbf{ecuación de Nernst.}
+				}
+	\visible<5->{
+		Vamos a hacer una tabla calculando $\Delta G$ de la reacción.
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): reacciones del ejercicio}
+    \structure{Reacción de oxidación-reducción plomo/cobre:}
+	\begin{center}
+		\begin{tabular}{lcr}
+			Oxidación, reductor (ánodo):  & \ce{Cu(s) + -> Cu^2+(ac) + \cancel{2e-}} & $\varepsilon^0_{\text{ox}}=\SI{-,337}{\volt}$\\
+			Reducción, oxidante (cátodo): & \ce{Pb^2+(ac) + \cancel{2e-} -> Pb(s)} & $\varepsilon^0_{\text{red}}=\SI{-,126}{\volt}$\\
+			\midrule
+			Reacción global: & \ce{Pb^2+(ac) + Cu(s) -> Pb(s) + Cu^2+(ac)}  & $\varepsilon^0_{\text{total}}=\SI{-,463}{\volt}$\\
+		\end{tabular}
+	\end{center}
+	\textbf{2 electrones implicados}
+	$$
+		Q=\frac{[\ce{Cu^2+}]}{[\ce{Pb^2+}]}
+	$$
+	\visible<2->{
+		\structure{Reacción de oxidación-reducción plomo/níquel:}
+		\begin{center}
+			\begin{tabular}{lcr}
+				Oxidación, reductor (ánodo):  & \ce{Ni(s) + -> Ni^2+(ac) + \cancel{2e-}} & $\varepsilon^0_{\text{ox}}=\SI{,250}{\volt}$\\
+				Reducción, oxidante (cátodo): & \ce{Pb^2+(ac) + \cancel{2e-} -> Pb(s)} & $\varepsilon^0_{\text{red}}=\SI{-,126}{\volt}$\\
+				\midrule
+				Reacción global: & \ce{Pb^2+(ac) + Ni(s) -> Pb(s) + Ni^2+(ac)}  & $\varepsilon^0_{\text{total}}=\SI{,124}{\volt}$\\
+			\end{tabular}
+		\end{center}
+		\textbf{2 electrones implicados}
+		$$
+			Q=\frac{[\ce{Ni^2+}]}{[\ce{Pb^2+}]}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): análisis de la espontaneidad de las reacciones REDOX}
+	\structure{Reacciones:}
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item\label{Pb21MCu}  \ce{Pb^2+(\SI{1}{\Molar})    + Cu(s) -> Cu^2+(\SI{1}{\Molar})   + Pb(s)}
+		\item\label{Pb21MNi}  \ce{Pb^2+(\SI{1}{\Molar})    + Ni(s) -> Ni^2+(\SI{,1}{\Molar}   + Pb(s)}
+		\item\label{Pb2107MNi}\ce{Pb^2+(\SI{1e-7}{\Molar}) + Ni(s) -> Ni^2+(\SI{,1}{\Molar})  + Pb(s)}
+		\item\label{Pb201MCu} \ce{Pb^2+(\SI{,1}{\Molar})   + Cu(s) -> Cu^2+(\SI{,1}{\Molar})  + Pb(s)}
+		\item\label{Pb201MNi} \ce{Pb^2+(\SI{,1}{\Molar})   + Ni(s) -> Ni^2+(\SI{,01}{\Molar}) + Pb(s)}
+		\item\label{Pb2108MNi}\ce{Pb^2+(\SI{1e-8}{\Molar}) + Ni(s) -> Ni^2+(\SI{,01}{\Molar}) + Pb(s)}
+	\end{enumerate}
+	\structure{Condiciones:} $T=\SI{293,15}{\kelvin}$, $n=2$
+	\begin{center}
+		\begin{tabular}{lSSSSSSSc}
+			\toprule
+				R. &
+			    {$\varepsilon^0_T(\si{\volt})$} &
+			    {$\Delta G^0$\footnote[1]{\si{\kilo\joule\per\mol}}} &
+			    {$[ox](\si{\Molar})$\footnote[2]{Concentración de oxidante}} &
+			    {$[re](\si{\Molar})$\footnote[3]{Concentración de reductor}} &
+			    {$Q$} &
+			    {$\frac{RT\ln(Q)}{1000}$} &
+			    {$\Delta G$\footnotemark[1]} &
+			    {\footnotesize ¿Espontánea?} \\
+			\midrule
+				\ref{Pb21MCu}   & -,463 &  89,3 & 1   & 1    & 1   &     0    &  89,3 & NO \\
+				\ref{Pb21MNi}   &  ,124 & -23,9 & 1   &  ,1  &  ,1 &    -5,6  & -29,5 & SÍ \\
+				\ref{Pb2107MNi} &  ,124 & -23,9 & e-7 &  ,1  &  e6 &    33,7  &   9,7 & NO \\
+				\ref{Pb201MCu}  & -,463 &  89,3 &  ,1 &  ,1  & 1   &     0    &  89,3 & NO \\
+				\ref{Pb201MNi}  &  ,124 & -23,9 &  ,1 &  ,01 &  ,1 &    -5,6  & -29,5 & SÍ \\
+				\ref{Pb2108MNi} &  ,124 & -23,9 & e-8 &  ,01 & e6  &    33,7  &   9,7 & NO \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}

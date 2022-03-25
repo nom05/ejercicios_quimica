@@ -1,0 +1,47 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/sabiendo_que_los_potenciales_estandar_de_los_procesos_Sn+4_Sn+2_y_Sn+2_Sn/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\varepsilon^0_{\text{red}}(\ce{Sn^{4+}}/\ce{Sn})$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0_{\text{red}}(\ce{Sn^{4+}}/\ce{Sn^{2+}})=\SI{,15}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0_{\text{red}}(\ce{Sn^{2+}}/\ce{Sn})=\SI{-,14}{\volt}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): potencial estándar de \ce{Sn^{4+}}/\ce{Sn}}
+	\structure{Aplicaremos en todos los casos:}\quad$\Delta G = -nF\varepsilon$
+	$$
+		\ce{Sn^{4+} + 2e- -> Sn^{2+}}\quad\varepsilon^0=\SI{,15}{\volt}\Rightarrow\Delta G^0=-\num{2}\cdot F\cdot\num{,15}=F\cdot\SI{-,30}{\joule\per\mol}
+	$$
+	$$
+		\ce{Sn^{2+} + 2e- -> Sn}\quad\varepsilon^0=\SI{-,14}{\volt}\Rightarrow\Delta G^0=-\num{2}\cdot F\cdot\num{-,14}=F\cdot\SI{+,28}{\joule\per\mol}
+	$$
+	\begin{center}
+		{\small (No necesitamos usar el valor numérico de $F$)}\\[.6cm]
+	\end{center}
+	\structure{Como $\Delta G$ es una función de estado:} podemos sumar $\Delta G^0(\ce{Sn^4+/Sn^2+}) + \Delta G^0(\ce{Sn^2+/Sn})$
+	$$
+		\ce{Sn^{4+} + 4e- -> Sn}\quad\Delta G^0_{\ce{Sn^{4+}/Sn}}=\Delta G^0_{\ce{Sn^{4+}/Sn^{2+}}}+\Delta G^0_{\ce{Sn^{2+}/Sn}}=F\cdot\SI{-,02}{\joule\per\mol}
+	$$
+	$$
+		\ce{Sn^{4+} + 4e- -> Sn}\quad\Delta G^0_{\ce{Sn^{4+}/Sn}}=\cancel{F}\cdot\SI{-,02}{\joule\per\mol}=-\overbrace{n}^4\cdot\cancel{F}\cdot\varepsilon^0
+	$$
+	$$
+		\ce{Sn^{4+} + 4e- -> Sn}\quad\varepsilon^0=\frac{\num{,02}}{4}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=green]{\varepsilon^0_{\text{red}}(\ce{Sn^{4+}/Sn})=\SI{,005}{\volt}}
+	$$\\[.6cm]
+	\begin{center}
+		{\LARGE \myovalbox{\textbf{\textcolor{red}{$\boldsymbol{\varepsilon}$ NO ES FUNCIÓN DE ESTADO}}}}
+	\end{center}
+\end{frame}

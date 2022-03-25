@@ -1,0 +1,225 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/el_pH_de_la_disolucion_de_H2O+CO2_obtenida_al_disolver__y_otros_apartados/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a): determinación de pH de disolución de \ce{H2CO3}}
+    \begin{center}
+        {\Large \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n(\ce{HCl}) = \SI{,02}{\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{CH3COOH}) = \SI{1}{\liter}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{a_1} = \SI{4,3e-7}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{a_2} = \SI{5,6e-11}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de pH de disolución de \ce{H2CO3}}
+    {\small \structure{Concentración:} $[\ce{H2CO3}]_0 = \frac{n(\ce{H2CO3})}{V(\ce{H2CO3})} = \SI{,02}{\Molar}$}
+    {\small \structure{\ce{H2CO3} es un \underline{ácido poliprótico}}:}\\
+    \begin{center}
+	    \ce{H2CO3(ac) <=>[$K_{a_1}$] H+(ac) + HCO3-(ac)}\\
+    	\ce{HCO3-(ac) <=>[$K_{a_2}$] H+(ac) + CO3^{2-}(ac)}
+    \end{center}
+    \visible<2->{
+        \structure{Primera disociación:}
+        \begin{overprint}
+            \onslide<2-4>
+                \begin{center}
+                    {\small \begin{tabular}{clll}
+                            \toprule
+                            Estado  & [\ce{H2CO3}] (\si{\Molar}) & [\ce{H+}] (\si{\Molar})& [\ce{HCO3-}] (\si{\Molar}) \\
+                            \midrule
+                            Inicial & $[\ce{H2CO3}]_{0}$   & 0                & 0            \\
+                            Final   & $[\ce{H2CO3}]_{0}-x$ & $x$              & $x$          \\
+                            \bottomrule
+                    \end{tabular}}
+                    $$
+                        K_{a_1} = \frac{[\ce{H+}][\ce{HCO3-}]}{[\ce{H2CO3}]} =\frac{x^2}{[\ce{H2CO3}]_{0}-x}
+                    $$
+                \end{center}
+                \visible<3-4>{
+                    {\small \structure{Resolver ecuación de 2"o grado:}}
+                    $$
+                        x^2 -\SI{4,3e-7}{}\vdot(\SI{,02}{}-x) = 0\Rightarrow x^2 -\SI{4,3e-7}{}x -\SI{8,6e-9}{} = 0\Rightarrow x= [\ce{H+}]_1 = \SI{9,29e-5}{\Molar}
+                    $$
+                            }
+                \visible<4>{
+                    {\small \structure{Resolver ecuación de 2"o grado con aproximación:}}
+                    $$
+                        x^2 -\SI{4,3e-7}{}\vdot(\underbrace{\SI{,02}{}-x}_{\approx\SI{,02}{}}) = 0\Rightarrow x^2 -\SI{8,6e-9}{} = 0\Rightarrow x=\SI{9,27e-5}{\Molar} = [\ce{H+}]
+                    $$
+                            }
+            \onslide<5>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{\Molar} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                \begin{center}
+                    {\small \begin{tabular}{clll}
+                            \toprule
+                            Estado  & \ce{HCO3-}           & \ce{H+}         & \ce{CO3^{2-}} \\
+                            \midrule
+                            Inicial & $[\ce{HCO3-}]_{1}$   & 0               & 0             \\
+                            Final   & $[\ce{HCO3-}]_{1}-y$ & $[\ce{H+}]_1+y$ & $y$           \\
+                            \bottomrule
+                    \end{tabular}}
+                \end{center}
+            \onslide<6>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{\Molar} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                $$
+                    K_{a_2} = \frac{[\ce{H+}][\ce{CO3^{2-}}]}{[\ce{HCO3-}]}
+                    = \frac{([\ce{H+}]_1 + y)\vdot y}{[\ce{HCO3-}]_{1}-y}
+                $$
+            \onslide<7>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{\Molar} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                $$
+                    K_{a_2} = \frac{[\ce{H+}][\ce{CO3^{2-}}]}{[\ce{HCO3-}]}
+                    = \frac{(\overbrace{[\ce{H+}]_1 + y)}^{\approx[\ce{H+}]_1}\vdot y}{\underbrace{[\ce{HCO3-}]_{1}-y}_{\approx[\ce{HCO3-}]_{1}}}
+                $$
+            \onslide<8>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{\Molar} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                $$
+                    K_{a_2} = \frac{[\ce{H+}][\ce{CO3^{2-}}]}{[\ce{HCO3-}]}
+                    = \frac{(\overbrace{[\ce{H+}]_1 + y)}^{\approx[\ce{H+}]_1}\vdot y}{\underbrace{[\ce{HCO3-}]_{1}-y}_{\approx[\ce{HCO3-}]_{1}}}
+                    = \frac{[\ce{H+}]_1\vdot y}{[\ce{HCO3-}]_{1}}
+                $$
+            \onslide<9>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{\Molar} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                $$
+                    K_{a_2} = \frac{[\ce{H+}][\ce{CO3^{2-}}]}{[\ce{HCO3-}]}
+                    = \frac{[\ce{H+}]_1\vdot y}{\underbrace{[\ce{HCO3-}]_{1}}^{[\ce{H+}]_{1}}}
+                    = \frac{\cancel{[\ce{H+}]_1}\vdot y}{\cancel{[\ce{H+}]_{1}}}
+                    = y
+                $$
+            \onslide<10>
+                $$[\ce{H+}]_1 = \SI{9,27e-5}{} = [\ce{HCO3-}]_1$$
+                \structure{Segunda disociación:}
+                $$
+                    K_{a_2} = y = [\ce{H+}]_2 = \SI{5,6e-11}{\Molar}
+                $$
+                \structure{pH total:}
+                $$
+                    [\ce{H+}] = [\ce{H+}]_1 + [\ce{H+}]_2 = \SI{9,27e-5}{\Molar} + \SI{5,6e-11}{\Molar}\approx\SI{9,27e-5}{\Molar}
+                $$
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{pH = -\log[\ce{H+}] = -\log\SI{9,27e-5}{} = \SI{4,03}{}}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b): [\ce{OH-}] y pH de disolución de \ce{Ba(OH)2*8H2O}}
+    \begin{center}
+        {\Large \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m(\ce{Ba(OH)2*8H2O}) = \SI{2,23}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V(\ce{Ba(OH)2*8H2O}) = \SI{50}{\milli\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{Mm(\ce{Ba(OH)2*8H2O}) = \SI{315,46}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): [\ce{OH-}] y pH de disolución de \ce{Ba(OH)2*8H2O}}
+    \structure{Disociación de base fuerte:} \underline{TOTAL} según reacción: \ce{Ba(OH)2(ac) -> Ba^{2+}(ac) + 2OH-(ac)}
+    $$
+        [\ce{Ba(OH)2*8H2O}] = \frac{m(\ce{Ba(OH)2*8H2O})}{Mm(\ce{Ba(OH)2*8H2O})\vdot V(\ce{Ba(OH)2*8H2O})}\Rightarrow[\ce{Ba(OH)2*8H2O}] = \SI{,141}{\Molar}
+    $$
+    \visible<2->{
+        \alert{\textbf{CUIDADO:}} \SI{1}{\mol} de \ce{Ba(OH)2 ->} \SI{2}{\mol} de \ce{OH-}
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Estado  & [\ce{Ba(OH)2}] (\si{\Molar}) & [\ce{Ba^{2+}}] (\si{\Molar}) & [\ce{OH-}] (\si{\Molar}) \\
+                \midrule
+                Inicial & \SI{,141}{}                  & 0                            & 0                \\
+                Final   &             0                & \SI{,141}{} & \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\SI{,282}{}} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+                }
+    \visible<3->{
+        $$
+            pH = 14 -\overbrace{pOH}^{pOH = -\log[\ce{OH-}]} = 14+\log[\ce{OH-}]\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{pH = 14+\log\SI{,282}{}=\SI{13,45}{}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (c): $K_b(\ce{NH3})$}
+    \begin{center}
+        {\Large \textbf{¿$K_b(\ce{NH3})$?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m(\ce{NH3}) = \SI{1}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V(\ce{NH3}) = \SI{610}{\milli\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{pH = \SI{11,11}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{Mm(\ce{NH3}) = \SI{17,03}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): $K_b(\ce{NH3})$}
+    \structure{Disociación de base débil:} \underline{PARCIAL} según reacción:
+    \begin{center}
+        \ce{NH3(ac) + H2O(l) -> NH4+(ac) + OH-(ac)}
+    \end{center}
+    $$
+        [\ce{NH3}]_0 = \frac{m(\ce{NH3})}{Mm(\ce{NH3})\vdot V(\ce{NH3})}\Rightarrow[\ce{NH3}]_0 = \frac{\SI{1}{\cancel\gram}}{\SI{17,03}{\cancel\gram\per\mol}\vdot \SI{,610}{\liter}}
+        = \SI{,0962}{\Molar}
+    $$
+    \visible<2->{
+        $$
+            [\ce{OH-}] = 10^{-(14-pH)}\Rightarrow[\ce{H+}] = \SI{1,288e-3}{\Molar} = x
+        $$
+                }
+    \visible<3->{
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Estado  & [\ce{NH3}] (\si{\Molar}) & [\ce{NH4+}] (\si{\Molar}) & [\ce{OH-}] (\si{\Molar}) \\
+                \midrule
+                Inicial & $[\ce{NH3}]_0$                  & 0                            & 0                \\
+                Final   &             $[\ce{NH3}]_0-x$                & $x$ & $x$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+        \visible<4->{
+            \begin{overprint}
+                \onslide<4>
+                    $$
+                        K_b = \frac{[\ce{OH-}][\ce{NH4+}]}{[\ce{NH3}]} = \frac{x^2}{[\ce{NH3}]_0-x}
+                    $$
+                \onslide<5>
+                    $$
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_b = \frac{[\ce{OH-}][\ce{NH4+}]}{[\ce{NH3}]} = \frac{(\SI{1,288e-3}{})^2}{\SI{,0962}{}-\SI{1,288e-3}{}} = \SI{1,75e-5}{}}
+                    $$
+            \end{overprint}
+                    }
+\end{frame}
+

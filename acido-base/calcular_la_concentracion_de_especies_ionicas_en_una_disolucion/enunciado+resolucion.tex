@@ -1,0 +1,53 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcular_la_concentracion_de_especies_ionicas_en_una_disolucion/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿concentración de especies iónicas?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HCl}]=\SI{,050}{\Molar}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{HA}]=\SI{,100}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{K_a(\ce{HA})=\num{1,75e-5}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de las formas iónicas}
+	\structure{Ácido fuerte:} \ce{HCl(ac) -> H+(ac) + Cl-(ac)}, [\ce{HCl}]=\SI{,050}{\Molar}\\
+	\begin{multicols}{2}
+		 [
+			 Por tanto:
+		 ]
+		 \myovalbox{\textcolor{yellow}{$[\ce{H+}]_{\ce{HCl}}=\SI{,050}{\Molar}$}}
+		 \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Cl-}]=\SI{,050}{\Molar}}
+	\end{multicols}  
+	\structure{Ácido débil:} \ce{HA(ac) <=> H+(ac) + A-(ac)}\quad $K_a(\ce{HA})=\frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}=\num{1,75e-5}$
+	\begin{center}
+		\begin{tabular}{cccc}
+				\toprule
+				Concentración(\si{\Molar}) & [\ce{HA}]       &  [\ce{H+}]    & [\ce{A-}]  \\
+				{[Inicial]}                & \num{1e-1}      & \num{5e-2}    &  0         \\
+				{[Equilibrio]}             &$\num{1e-1}-x$   &$\num{5e-2}+x$ & $x$        \\
+				\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Constante de equilibrio y suponiendo que $x<<\SI{10e-2}{\Molar}$:}
+			$$
+				\overbrace{K_a(\ce{HA})}^{\num{1,75e-5}}=\frac{\overbrace{[\ce{H+}]}^{\num{5e-2}+x}\overbrace{[\ce{A-}]}^{x}}{\underbrace{[\ce{HA}]}_{\num{10e-2}}}\Rightarrow
+				\num{1,75e-5}=\frac{(\num{5e-2}+x)\cdot x}{\num{10e-2}}
+			$$
+			$$
+				\num{1,75e-5}\approx\frac{\num{5e-2}x}{\num{10e-2}}\Rightarrow x=\SI{3,50e-5}{\Molar}=[\ce{H+}]_{\ce{HA}}=[\ce{A-}]
+			$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{H+}]_{\text{TOTAL}}=[\ce{H+}]_{\ce{HCl}}+[\ce{H+}]_{\ce{HA}}=\SI{,050}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{A-}]=\SI{3,50e-5}{\Molar}}
+\end{frame}

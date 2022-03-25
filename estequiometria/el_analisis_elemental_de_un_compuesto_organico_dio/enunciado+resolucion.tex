@@ -1,0 +1,86 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_analisis_elemental_de_un_compuesto_organico_dio/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿Fórmula del compuesto?}\\[.4cm]
+		\structure{Datos de los \underline{átomos} que forman la molécula:}\\
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{\% C (m/m):}~\SI{55,8}{\percent}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{\% H (m/m):}~\SI{7,03}{\percent}}\\[.2cm]
+		\visible<2->{
+			Pero también ...\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{\% O (m/m):}~\num{100}\num{-55,8}\num{-7,03}~=~\SI{37,17}{\percent}}\\[.4cm]
+					}
+		\structure{Datos de la \underline{molécula}:}\\
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{m=\SI{1,500}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{V=\SI{530}{\cubic\centi\meter}=\SI{,530}{\liter}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{T=\SI{100}{\celsius}=\SI{373,15}{\kelvin}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{P=\SI{740}{\torr}=\rfrac{74\cancel{0}}{76\cancel{0}}~\si{\atm}=\SI{,974}{\atm}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la fórmula empírica}
+	\begin{overprint}
+		\onslide<1>
+			La idea para resolver estos ejercicios es la misma que pensar en una fracción. Es lo mismo: $\rfrac{1}{4} = \rfrac{2}{8} = \rfrac{2,5}{10} = \ldots$. Por ello, suponemos inicialmente que tenemos \underline{\textbf{\SI{100}{\gram} de masa}} y calculamos el número de moles de cada uno de los átomos:
+			$$
+				n = \frac{m}{M_{at}}
+			$$
+		\onslide<2->
+			Una vez obtenidos el número de moles para cada átomo en \SI{100}{\gram} dividimos por el menor de ellos (\SI{2,32}{\mol} en este caso) y redondeamos al número entero más próximo.
+	\end{overprint}
+	\begin{overprint}
+		\onslide<1>
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{\% C (m/m):}~\SI{55,8}{\percent} \Rightarrow \frac{\SI{55,8}{\cancel\gram}}{\SI{12}{\cancel\gram\per\mol}} = \SI{4,65}{\mol}}\\[.2cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{\% H (m/m):}~\SI{7,03}{\percent} \Rightarrow \frac{\SI{7,03}{\cancel\gram}}{\SI{1,01}{\cancel\gram\per\mol}} = \SI{7,00}{\mol}}\\[.2cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{\% O (m/m):}~\SI{37,17}{\percent} \Rightarrow \frac{\SI{37,17}{\cancel\gram}}{\SI{16,00}{\cancel\gram\per\mol}} = \SI{2,32}{\mol}}
+		\onslide<2->
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{\% C (m/m):}~\SI{55,8}{\percent} \Rightarrow \frac{\SI{55,8}{\cancel\gram}}{\SI{12}{\cancel\gram\per\mol}} = \schemestart \SI{4,65}{\mol} \arrow{->[$\scriptsize\times\frac{1}{\SI{2,32}{\mol}}$]} \num{2}\schemestop}\\[.2cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{\% H (m/m):}~\SI{7,03}{\percent} \Rightarrow \frac{\SI{7,03}{\cancel\gram}}{\SI{1,01}{\cancel\gram\per\mol}} = \schemestart \SI{7,00}{\mol}\arrow{->[$\scriptsize\times\frac{1}{\SI{2,32}{\mol}}$]} \num{3}\schemestop}\\[.2cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{\% O (m/m):}~\SI{37,17}{\percent} \Rightarrow \frac{\SI{37,17}{\cancel\gram}}{\SI{16,00}{\cancel\gram\per\mol}} = \schemestart\SI{2,32}{\mol}\arrow{->[$\scriptsize\times\frac{1}{\SI{2,32}{\mol}}$]} \num{1}\schemestop}
+	\end{overprint}
+	\visible<2->{
+		Por tanto, la \underline{FÓRMULA EMPÍRICA} será:
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\scalebox{2.}{\ce{C2H3O}}}\\[.2cm]
+			Con una masa molecular empírica de:
+			$2\times12+3\times 1+1\times 16=\SI{43}{\gram\per\mol}$
+		\end{center}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de la fórmula molecular}
+	Nos dan información de su estado gaseoso (presión, volumen y temperatura).
+	\structure{Ecuación de los gases ideales:}\quad $P\vdot V = n\vdot R\vdot T$
+	\structure{Combinando con:}\quad $n = \rfrac{m}{Mm}$
+	\begin{overprint}
+		\onslide<1>
+			$$
+				P\vdot V = \frac{m}{Mm}\vdot R\vdot T\Rightarrow Mm = \frac{m\vdot R\vdot T}{P\vdot V}
+			$$
+		\onslide<2->
+			$$
+				Mm = \frac{\SI{1,500}{\gram}\vdot \SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{373,15}{\cancel\kelvin}}{\rfrac{74}{76}~\si{\cancel\atm}\vdot\SI{,530}{\cancel\liter}} = \SI{88,94}{\gram\per\mol}
+			$$
+	\end{overprint}
+	\visible<2->{
+		Y ahora averiguamos por cuántas veces tenemos que multiplicar la fórmula empírica para obtener la fórmula molecular:
+		$$
+			x = \frac{\num{88,94}}{\num{43}} = \num{2,07}\approx\num{2}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\text{Resultado:}\quad\scalebox{2.}{\schemestart\ce{C2H3O} \arrow{->[$\scriptsize\times\num{2}$]} \ce{C4H6O2}\schemestop}}
+				}
+\end{frame}

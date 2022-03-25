@@ -1,0 +1,70 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcular_la_masa_de_NH4Cl_que_se_debe_anhadir_a_2L_de_NH3_0.1M/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del enunciado}
+    \begin{center}
+        {\huge \textbf{¿$m(\ce{NH4Cl})$?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{dis}(\ce{NH3}) = \SI{2}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NH3}] = \SI{,1}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{pH = \SI{10,99}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{NH4Cl}) = \SI{53,49}{\gram\per\mol}}\quad
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Determinación de $m(\ce{NH4Cl})$}
+    \structure{La reacción de disociación será:}
+    $$
+        \ce{NH3(ac) + H2O(l) <=> NH4+(ac) + OH-(ac)}\quad\quad K_b(\ce{NH3}) = \frac{[\ce{NH4+}][\ce{OH-}]}{[\ce{NH3}]}
+    $$
+    \visible<2->{
+        \structure{Despejando $[\ce{OH-}]$:}
+        $$
+            [\ce{OH-}] = K_b(\ce{NH3})\cdot\frac{[\ce{NH3}]}{[\ce{NH4+}]}
+        $$
+                }
+    \visible<3->{
+        \structure{Aplicando ``menos logaritmos'' y despejando:}
+        \begin{overprint}
+            \onslide<3>
+                $$
+                    -\log[\ce{OH-}] = -\log K_b(\ce{NH3})-\log\frac{[\ce{NH3}]}{[\ce{NH4+}]}
+                $$
+            \onslide<4>
+                $$
+                    \overbrace{pOH}^{14-pH} = pK_b(\ce{NH3})+\log\frac{[\ce{NH4+}]}{[\ce{NH3}]}
+                $$
+            \onslide<5>
+                $$
+                    \overbrace{\log\frac{[\ce{NH4+}]}{[\ce{NH3}]}}^{\log[\ce{NH4+}]-\log[\ce{NH3}]} = 14-pH-pK_b(\ce{NH3})
+                $$
+            \onslide<6>
+                $$
+                    \log[\ce{NH4+}] = 14-\overbrace{pH}^{pH = \SI{10,99}{}}-\underbrace{pK_b(\ce{NH3})}_{pK_b(\ce{NH3})=\SI{4,7447}{}}+\overbrace{\log[\ce{NH3}]}^{\log\SI{,1}{}=\SI{-1}{}}
+                $$
+            \onslide<7>
+                $$
+                    \overbrace{[\ce{NH4+}]}^{[\ce{NH4Cl}]=\frac{m(\ce{NH4Cl})}{Mm(\ce{NH4Cl})\cdot V_{dis}(\ce{NH3})}} = \SI{1,842e-3}{\Molar}
+                $$
+            \onslide<8>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{NH4Cl}) = \SI{1,842e-3}{\cancel\mol\per\cancel\liter}\cdot\SI{53,49}{\gram\per\cancel\mol}\cdot\SI{2}{\cancel\liter} = \SI{,198}{\gram}}
+                $$
+        \end{overprint}
+                }
+\end{frame}

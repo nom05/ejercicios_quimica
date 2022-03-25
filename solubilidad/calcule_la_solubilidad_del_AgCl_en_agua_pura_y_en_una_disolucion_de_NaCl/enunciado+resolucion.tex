@@ -1,0 +1,74 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/calcule_la_solubilidad_del_AgCl_en_agua_pura_y_en_una_disolucion_de_NaCl/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del ejercicio}
+	\begin{center}
+		{\huge ¿$s(\ce{AgCl})$ en agua y en disolución acuosa \ce{NaCl}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{ps}(\ce{AgCl})=\num{1,7e-10}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NaCl}]=\SI{,1}{\Molar}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de solubilidad en agua pura}
+	\structure{Equilibrio de solubilidad:} \ce{AgCl(s) <=> Ag+(ac) + Cl-(ac)}
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{Ag+}] &     [\ce{Cl-}] \\
+			Solubilidad                &    $s$    &           $s$        \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Constante de equilibrio de solubilidad:}
+	\begin{center}
+		\ce{$K_{ps}(\ce{AgCl})={\underbrace{[\ce{Ag+}]}_{s}}\underbrace{[\ce{Cl-}]}_{s}=s\cdot s=s^2=\num{1,7e-10}$}
+	\end{center}
+	\visible<2->{
+		$$
+			s(\ce{AgCl},\ce{H2O(l)}) = +\sqrt{K_{ps}(\ce{AgCl})}\Rightarrow s(\ce{AgCl},\ce{H2O(l)}) = +\sqrt{\num{1,7e-10}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{s(\ce{AgCl},\ce{H2O(l)})=\SI{1,31e-5}{\Molar}}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de solubilidad en disolución de \ce{NaCl} \SI{,1}{\Molar}}
+	\structure{Disolución de \ce{NaCl}:} \ce{NaCl(ac) -> Na+(ac) + Cl-(ac)}\\[.2cm]
+	Por tanto: $[\ce{NaCl}] = [\ce{Cl-}] = \SI{,1}{\Molar}$
+	\structure{Equilibrio de solubilidad:} \ce{AgCl(s) <=> Ag+(ac) + Cl-(ac)}
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+				Concentración(\si{\Molar}) & [\ce{Ag+}] &     [\ce{Cl-}] 				 \\
+				Solubilidad                &    $s$     &           $s$  				 \\
+				Solubilidad modificada     &    $s^\prime$    & $[\ce{Cl-}]=\SI{,1}{\Molar}$   \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Constante de equilibrio de solubilidad:}
+	\begin{center}
+		\ce{$K_{ps}(\ce{AgCl})={\underbrace{[\ce{Ag+}]}_{s^\prime}}\underbrace{[\ce{Cl-}]}_{[\ce{Cl-}]=[\ce{NaCl}]}=s\vdot [\ce{Cl-}]=\num{1,7e-10}$}
+	\end{center}
+	\visible<2->{
+		$$
+			s(\ce{AgCl},\ce{NaCl(ac)}) = \frac{K_{ps}(\ce{AgCl})}{[\ce{NaCl}]}\Rightarrow s(\ce{AgCl},\ce{NaCl(ac)}) = \frac{\num{1,7e-10}}{\num{,1}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{s(\ce{AgCl},\ce{NaCl(ac)})=\SI{1,7e-9}{\Molar}}
+		$$
+				}
+\end{frame}

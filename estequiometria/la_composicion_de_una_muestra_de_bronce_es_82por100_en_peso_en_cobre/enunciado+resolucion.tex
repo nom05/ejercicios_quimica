@@ -1,0 +1,143 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/la_composicion_de_una_muestra_de_bronce_es_82por100_en_peso_en_cobre/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge
+        $$
+            m(\ce{CuSO4})?
+        $$
+    }
+    Relación entre la aleación y el sulfato de cobre:\\[.3cm]
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{Cu}}
+        \ce{ -> }
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{CuSO4}}
+    $$\\[.5 cm]
+    $$
+        \SI{1}{\mol}\text{ de }\ce{Cu ->}\SI{1}{\mol}\text{ de }\ce{CuSO4}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n(\ce{Cu})}
+        =
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{n(\ce{CuSO4})}
+    $$
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\%\text{pureza}(\ce{Cu})=\SI{82}{\percent}}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{d_{\text{bronce}}(\ce{Cu})=\SI{8,7}{\gram\per\milli\liter}}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V_{\text{bronce}}(\ce{Cu})=\SI{62}{\milli\liter}}\\[.5cm]
+    \visible<2-|handout:0>{
+        y las masas moleculares o molares:\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mat(\ce{Cu}) = \SI{63,55}{\gram\per\mol}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{Mm(\ce{PCl3})=\SI{159,61}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): masa del sulfato de cobre}
+    \structure{Paso 1:} Relación entre la masa de aleación y el cobre que contiene.
+    \begin{overprint}
+        \onslide<1>
+            $$
+                m_{\text{bronce}}(\ce{Cu})
+                \quad ??\quad 
+                m(\ce{Cu})
+            $$
+        \onslide<2>    
+            $$
+                m_{\text{bronce}}(\ce{Cu})
+                \quad >\quad 
+                m(\ce{Cu})
+            $$
+        \onslide<3->
+            $$
+                \frac{82}{100}m_{\text{bronce}}(\ce{Cu})
+                \quad =\quad 
+                m(\ce{Cu})
+            $$
+    \end{overprint}
+    \visible<4->{
+        \structure{Paso 2:} Utilizar la relación molar entre \ce{Cu} y \ce{CuSO4} para obtener la expresión del sulfato en función del bronce
+               }
+     \begin{overprint}
+         \onslide<4>
+              $$
+                 n(\ce{Cu})
+                 =
+                 n(\ce{CuSO4})
+             $$
+         \onslide<5>
+              $$
+                \overbrace{n(\ce{Cu})}^{n=\frac{m}{Mm}}
+                =
+                \underbrace{n(\ce{CuSO4})}_{n=\frac{m}{Mm}}
+              $$
+         \onslide<6->
+              $$
+                  \frac{m(\ce{Cu})}{Mm(\ce{Cu})}
+                  =
+                  \frac{m(\ce{CuSO4})}{Mm(\ce{CuSO4})}
+              $$
+     \end{overprint}
+     \visible<7->{
+         \structure{Paso 3:} Unimos las expresiones de los pasos anteriores, añadimos la densidad y el volumen del bronce y despejamos
+                 }
+      \begin{overprint}
+         \onslide<7>
+             $$
+                 \frac{\overbrace{m(\ce{Cu})}^{m(\ce{Cu})=\frac{82}{100}m_{\text{bronce}}(\ce{Cu})}}{Mm(\ce{Cu})}
+                 =
+                 \frac{m(\ce{CuSO4})}{Mm(\ce{CuSO4})}
+             $$
+         \onslide<8>
+             $$
+                 \frac{82}{100}
+                 \frac{m_{\text{bronce}}(\ce{Cu})}{Mm(\ce{Cu})}
+                 =
+                 \frac{m(\ce{CuSO4})}{Mm(\ce{CuSO4})}
+             $$
+         \onslide<9>
+             $$
+                 \frac{82}{100}
+                 \frac{\overbrace{m_{\text{bronce}}(\ce{Cu})}^{d=\frac{m}{V}\Rightarrow m=d\cdot V}}{Mm(\ce{Cu})}
+                 =
+                 \frac{m(\ce{CuSO4})}{Mm(\ce{CuSO4})}
+             $$
+         \onslide<10>
+             $$
+                 \frac{82}{100}
+                 \frac{d_{\text{bronce}}(\ce{Cu})\cdot V_{\text{bronce}}(\ce{Cu})}{Mm(\ce{Cu})}
+                 =
+                 \frac{m(\ce{CuSO4})}{Mm(\ce{CuSO4})}
+             $$
+          \onslide<11->
+             $$
+                 m(\ce{CuSO4})
+                 =
+                 \frac{82}{100}\cdot
+                 d_{\text{bronce}}(\ce{Cu})\cdot V_{\text{bronce}}(\ce{Cu})\cdot
+                 \frac{Mm(\ce{CuSO4})}{Mm(\ce{Cu})}
+             $$
+     \end{overprint}
+     \visible<12->{
+         \structure{Paso 4:} Sustituimos
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{CuSO4})}
+                =
+                \frac{82}{100}\cdot
+                \SI{8,7}{\gram\per\cancel\milli\liter}\cdot \SI{62}{\cancel\milli\liter}\cdot
+                \frac{\SI{159,61}{\cancel\gram\per\cancel\mol}}{\SI{63,55}{\cancel\gram\per\cancel\mol}}
+                = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{1111}{\gram}}
+            $$
+                  }
+\end{frame}

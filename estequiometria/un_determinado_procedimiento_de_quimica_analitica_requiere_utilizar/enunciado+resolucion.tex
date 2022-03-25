@@ -1,0 +1,34 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/un_determinado_procedimiento_de_quimica_analitica_requiere_utilizar/enunciado.tex}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$V_{\text{conc}}(\ce{K2CrO4})$?} \\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{[\ce{K2CrO4}]_{\text{conc}} = \SI{,250}{\Molar}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{K2CrO4}]_{\text{dil}} = \SI{,0100}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{V_{\text{dil}}(\ce{K2CrO4}) = \SI{,250}{\liter}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{El n"o de moles (o número de moléculas de \ce{K2CrO4}) que hay en los dos volúmenes es el mismo.} Usamos la definición de concentración molar 
+	$M=\rfrac{n}{V}\Rightarrow n = M\vdot V$ y despejamos
+	$$
+		n_{\text{conc}} = n_{\text{dil}}\Rightarrow [\ce{K2CrO4}]_{\text{conc}}\vdot V_{\text{conc}} = [\ce{K2CrO4}]_{\text{dil}}\vdot V_{\text{dil}}\Rightarrow
+		V_{\text{conc}} = \frac{[\ce{K2CrO4}]_{\text{dil}}\vdot V_{\text{dil}}}{[\ce{K2CrO4}]_{\text{conc}}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{
+			V_{\text{conc}}(\ce{K2CrO4}) = \frac{\SI{,0100}{\cancel\Molar}\vdot\SI{,250}{\liter}}{\SI{,250}{\cancel\Molar}} = \SI{,0100}{\liter}
+		}
+	$$
+\end{frame}

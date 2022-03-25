@@ -1,0 +1,154 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_valoraron_40mL_de_un_acido_fuerte_con_hidroxido_sodico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$\mathrm{pH}$ a \SI{10}{\milli\liter}, \SI{20}{\milli\liter} y \SI{23}{\milli\liter}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{HA})=\SI{40e-3}{\liter}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HA}]_0=\SI{1e-2}{\Molar}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{NaOH}]=\SI{2e-2}{\Molar}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): reacciones implicadas}
+	\alert{\textbf{El tipo de FLECHA es importante. En este caso todas las reacciones son irreversibles (\ce{->}).}} En otro ejercicio veremos la diferencia con valorar un ácido débil.
+	\structure{Disociación del ácido fuerte:}\\
+	\begin{center}
+		\ce{HA(ac) -> H+(ac) + A-(ac)}
+	\end{center}
+	\structure{Disociación de la base fuerte:}\\
+	\begin{center}
+		\ce{NaOH(ac) -> Na+(ac) + OH-(ac)}
+	\end{center}
+	\structure{Al añadir \ce{NaOH} ocurre la reacción de neutralización (ácido+base dan sal+agua):}\\
+	\begin{center}
+		\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}
+	\end{center}
+	\alert{\textbf{Antes de calcular el pH (usando concentraciones) los ejercicios de volumetría se resuelven como los ejercicios de estequiometría (reactivo limitante y reactivo en exceso):}} tenemos que trabajar con \underline{número de moles}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $\mathrm{pH}$ si añadimos \SI{10}{\milli\liter} de \ce{NaOH}}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+			$$
+				n(\ce{HA})=\SI{e-2}{\mol\per\cancel\liter}\times\SI{40e-3}{\cancel\liter}=\SI{4e-4}{\mol}
+			$$
+			$$
+				n(\ce{NaOH})=\SI{2e-2}{\mol\per\cancel\liter}\times\SI{10e-3}{\cancel\liter}=\SI{2e-4}{\mol}
+			$$\\[.2cm]
+			\begin{center}
+				\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}\\[.2cm]
+			\end{center}
+			\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HA})=n_{\text{reaccionan}}(\ce{NaOH})=n_{\text{producen}}(\ce{NaA})$\\[.2cm]
+			\begin{center}
+				\begin{tabular}{cccc}
+					\toprule
+					N"o de moles(\si{\mol}) & n(\ce{HA})      					   &  n(\ce{NaOH})    & n(\ce{NaA})  \\
+					{Inicial}               & \num{4e-4}     					   &   \num{2e-4}     &  0           \\
+					{Final}                 &$\num{4e-4}-\num{2e-4}=\num{2e-4}$    &    	0		  & \num{2e-4}   \\
+					\bottomrule
+				\end{tabular}
+				\myovalbox{\textcolor{white}{
+					\ce{NaOH} es el reactivo limitante, \ce{HA} es el reactivo en exceso
+											}}
+			\end{center}
+		\item\structure{Obtenemos el volumen total:}
+			$$
+				V_T = V_{\text{inicial}}(\ce{HA}) + V_{\text{añadido}}(\ce{NaOH})\Rightarrow V_T = \SI{40e-3}{\liter} + \SI{10e-3}{\liter} = \SI{50e-3}{\liter}
+			$$
+		\item\structure{Concentración de nuestro reactivo en exceso (\ce{HA}):} va a ser igual a la concentración de \ce{H+} (ácido fuerte).
+			$$
+				[\ce{HA}] = \frac{\SI{2e-4}{\mol}}{\SI{50e-3}{\liter}} = \SI{,004}{\Molar} = [\ce{H+}]
+			$$
+		\item\structure{Cálculo del pH:} $\pH = -\log([\ce{H+}])$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\pH=\num{2,40}}
+			$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $\mathrm{pH}$ si añadimos \SI{20}{\milli\liter} de \ce{NaOH}}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+		$$
+			n(\ce{HA})=\SI{e-2}{\mol\per\cancel\liter}\times\SI{40e-3}{\cancel\liter}=\SI{4e-4}{\mol}
+		$$
+		$$
+			n(\ce{NaOH})=\SI{2e-2}{\mol\per\cancel\liter}\times\SI{20e-3}{\cancel\liter}=\SI{4e-4}{\mol}
+		$$\\[.2cm]
+		\begin{center}
+			\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}\\[.2cm]
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reacciona}}(\ce{HA})=n_{\text{reacciona}}(\ce{NaOH})=n_{\text{producido}}(\ce{NaA})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				N"o de moles(\si{\mol}) & n(\ce{HA})      					   &  n(\ce{NaOH})    & n(\ce{NaA})  \\
+				{Inicial}               & \num{4e-4}     					   &   \num{4e-4}     &  0           \\
+				{Final}                 &$\num{4e-4}-\num{4e-4}=\num{0}$       &    	0		  & \num{4e-4}   \\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					No hay ni reactivo limitante ni reactivo en exceso:
+					}\textcolor{red}{\textbf{PUNTO DE EQUIVALENCIA}}}
+		\end{center}
+		\item\structure{Como \ce{HA} y \ce{NaOH} \underline{son fuertes} el pH en el punto de equivalencia es \num{7}.} No ocurre lo mismo en el caso de ácidos y bases débiles.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $\mathrm{pH}$ si añadimos \SI{23}{\milli\liter} de \ce{NaOH}}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+		$$
+			n(\ce{HA})=\SI{e-2}{\mol\per\cancel\liter}\times\SI{40e-3}{\cancel\liter}=\SI{4e-4}{\mol}
+		$$
+		$$
+			n(\ce{NaOH})=\SI{2e-2}{\mol\per\cancel\liter}\times\SI{23e-3}{\cancel\liter}=\SI{4,6e-4}{\mol}
+		$$
+		\begin{center}
+			\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reacciona}}(\ce{HA})=n_{\text{reacciona}}(\ce{NaOH})=n_{\text{producido}}(\ce{NaA})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				N"o de moles(\si{\mol}) & n(\ce{HA})    &  n(\ce{NaOH})    						& n(\ce{NaA})  \\
+				{Inicial}               & \num{4e-4}    &   \num{4,6e-4}     					&  0           \\
+				{Final}                	& \num{0}       & $\num{4,6e-4}-\num{4e-4}=\num{6e-5}$	& \num{4e-4}   \\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					\ce{HA} es el reactivo limitante, \ce{NaOH} es el reactivo en exceso
+				}}
+		\end{center}
+			\item\structure{Obtenemos el volumen total:}
+				$$
+					V_T = V_{\text{inicial}}(\ce{HA}) + V_{\text{añadido}}(\ce{NaOH})\Rightarrow V_T = \SI{40e-3}{\liter} + \SI{23e-3}{\liter} = \SI{63e-3}{\liter}
+				$$
+			\item\structure{Concentración de nuestro reactivo en exceso (\ce{NaOH}):} va a ser igual a la concentración de \ce{OH-} (base fuerte).
+				$$
+					[\ce{NaOH}] = \frac{\SI{6e-5}{\mol}}{\SI{63e-3}{\liter}} = \SI{9,5e-4}{\Molar} = [\ce{OH-}]
+				$$
+			\item\structure{Cálculo del pH:} $\pOH = -\log([\ce{OH-}])$; $\pH = 14 - \pOH$
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\pH=\num{10,98}}
+				$$
+	\end{enumerate}
+\end{frame}

@@ -1,0 +1,85 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/determine_a_partir_de_que_valor_de_pH_aumenta_la_solubilidad_en_agua_del_Mg.OH.2/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿pH en que aumenta solubilidad?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{K_{ps}(\ce{Mg(OH)2})=\num{1,8e-11}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): pH en que aumenta solubilidad de disolución \ce{Mg(OH)2}}
+	\structure{Reacción de solubilidad:}
+	$$
+		\ce{Mg(OH)2(s) <=> Mg^{2+}(ac) + 2OH-}\quad K_{ps}(\ce{Mg(OH)2}) = [\ce{Mg^{2+}}]\vdot[\ce{OH-}]^2
+	$$
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+				Concentración(\si{\Molar}) & $[\ce{Mg^{2+}}]$ &     [\ce{OH-}] \\
+				Solubilidad                &    $s$    	    &       $2s$    \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\visible<2->{
+		\structure{La solubilidad en el equilibrio será:}
+		\begin{overprint}
+			\onslide<2>
+				$$
+					K_{ps}(\ce{Mg(OH)2}) = \overbrace{[\ce{Mg^{2+}}]}^{s}\vdot\underbrace{[\ce{OH-}]^2}_{(2s)^2}
+				$$
+			\onslide<3>
+				$$
+					K_{ps}(\ce{Mg(OH)2}) = s\vdot(2s)^2 = s\vdot{4s^2} = 4s^3
+				$$
+			\onslide<4->
+				Despejamos $s\equiv s(\ce{Mg(OH)2})$. Recordad que es una raíz cúbica:
+				$$
+					s(\ce{Mg(OH)2}) = \sqrt[3]{\frac{K_{ps}(\ce{Mg(OH)2})}{4}}\Rightarrow s(\ce{Mg(OH)2}) = \SI{1,65e-4}{\Molar}
+				$$
+		\end{overprint}
+				}
+	\visible<4->{
+		\structure{Concentración de iones hidroxilo:} Fijaos en la relación entre $s$ y [\ce{OH-}] en la tabla de arriba.
+		$$
+			[\ce{OH-}] = 2s\Rightarrow[\ce{OH-}]=\num{2}\vdot\SI{1,65e-4}{\Molar}=\SI{3,30e-4}{\Molar}
+		$$
+				}
+	\visible<5->{
+		\structure{Determinación del pH:}
+		\begin{overprint}
+			\onslide<5>
+				Recordad:
+				$$
+					K_w = [\ce{H+}][\ce{OH-}]=\num{1e-14}\Rightarrow-\log([\ce{H+}][\ce{OH-}])=-\log(\num{1e-14})
+				$$
+			\onslide<6>
+				Operando:
+				$$
+					\overbrace{-\log([\ce{H+}])}^{\text{pH}=-\log([\ce{H+}])}\underbrace{-\log([\ce{OH-}])}_{\text{pOH}=-\log([\ce{OH-}])}=-(\num{-14})
+				$$
+			\onslide<7>
+				Operando:
+				$$
+					\text{pH}-\log([\ce{OH-}])=\num{14}
+				$$
+			\onslide<8->
+				Operando:
+				$$
+					\text{pH}=\num{14}+\log(\overbrace{[\ce{OH-}]}^{\SI{3,30e-4}{\Molar}})=\num{14}-\num{3,49}\Rightarrow
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\text{pH}<\num{10,51}}
+				$$
+		\end{overprint}
+				}
+\end{frame}

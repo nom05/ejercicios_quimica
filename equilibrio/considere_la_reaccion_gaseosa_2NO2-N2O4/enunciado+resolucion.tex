@@ -1,0 +1,89 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/considere_la_reaccion_gaseosa_2NO2-N2O4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge\begin{enumerate*}[label={\alph*)},font=\bfseries]
+		\item ¿$\Delta G^0$ y $K_p$?
+		\item ¿$\Delta G_{\text{inv}}^0$ y $K_p^{\text{inv}}$?
+		\item ¿$\Delta G^0_{\rfrac{1}{2}}$ y $K_p^{\rfrac{1}{2}}$?
+	\end{enumerate*}}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{T=\SI{298,15}{\kelvin}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=blue]{\ce{2NO2 <=> N2O4}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=green]{\ce{NO2 <=> 1/2N2O4}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta G_{\text{formación}}^0(\ce{NO2})=\Delta G_f^0(\ce{NO2})=\SI{51,30}{\kilo\joule\per\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta G_{\text{formación}}^0(\ce{N2O4})=\Delta G_f^0(\ce{N2O4})=\SI{97,82}{\kilo\joule\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\Delta G^0$ y $K_p$ en condiciones estándar de \ce{2NO2 <=> N2O4}}
+	\begin{block}{$\Delta G^0$}
+		\structure{Ley de Hess:} $\Delta G^0 = \sum_{i=1}^{n\text{ prod}}n_i\cdot\Delta G_{f,i}^0 - \sum_{j=1}^{n\text{ react}}n_j\cdot\Delta G_{f,j}^0$
+		$$
+			\Delta G^0 = 1\cdot\SI{97,82}{\kilo\joule\per\mol}-2\cdot\SI{51,30}{\kilo\joule\per\mol}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=blue]{\Delta G^0 =\SI{-4,78}{\kilo\joule\per\mol}<0}
+		\centering\myovalbox{\textcolor{yellow}{Espontánea}}
+	\end{block}
+	\begin{alertblock}<1->{$K_p$}
+		\structure{Aplicando:} $\Delta G = \Delta G^0 + RT\ln{K_p}$, si $\Delta G=0$ entonces $\Delta G^0= -RT\ln{K_p}$
+				$$
+					\overbrace{\Delta G^0}^{\SI{-4,78}{\kilo\joule\per\mol}} = \SI{-8,314}{\cancel\joule\per\mol\per\cancel\kelvin}\cdot\frac{\SI{1}{\kilo\joule}}{\SI{1e3}{\cancel\joule}}\cdot\SI{298,15}{\cancel\kelvin}\cdot\ln{K_p}
+				$$
+				$$
+					\ln{K_p} = \frac{\SI{-4,78}{\cancel\kilo\joule\per\cancel\mol}}{\num{-8,314e-3}\cdot\SI{298,15}{\cancel\kilo\joule\per\cancel\mol}}=\num{1,928}\Rightarrow
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_p=\num{6,88}=\frac{P(\ce{N2O4})}{P(\ce{NO2})^2}}
+				$$
+				\centering\myovalbox{\textcolor{yellow}{Reacción favorecida hacia productos}}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $\Delta G^0$ y $K_p$ en condiciones estándar de \ce{N2O4 <=> 2NO2}}
+	\begin{block}{$\Delta G^0_{\text{inv}}$}
+		\structure{Reacción inversa, cambio de signo:} $\Delta G^0_{\text{inv}} = -\Delta G^0$\\[.4cm]
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=blue]{\Delta G^0_{\text{inv}} =\SI{4,78}{\kilo\joule\per\mol}>0}
+	\end{block}
+	\begin{alertblock}<1->{$K_p^{\text{inv}}$}
+		\structure{Reacción inversa, invertimos $K_p^{\text{inv}}=\rfrac{1}{K_p}$:}\\[.4cm]
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_p^{\text{inv}}=\frac{1}{\num{6,88}}=\num{,145}}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $\Delta G^0$ y $K_p$ en condiciones estándar de \ce{NO2 <=> 1/2N2O4}}
+	\begin{block}{$\Delta G^0_{\rfrac{1}{2}}$}
+		$$
+			\Delta G^0_{\rfrac{1}{2}} = \frac{1}{2}\cdot\Delta G^0\Rightarrow\Delta G^0_{\rfrac{1}{2}} = \frac{1}{2}\cdot\left(\SI{97,82}{\kilo\joule\per\mol}-2\cdot\SI{51,30}{\kilo\joule\per\mol}\right)
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=blue]{\Delta G^0_{\rfrac{1}{2}} =\SI{-2,39}{\kilo\joule\per\mol}<0}
+		\centering\myovalbox{\textcolor{yellow}{Espontánea}}
+	\end{block}
+	\begin{alertblock}<1->{$K_p^{\rfrac{1}{2}}$}
+		\structure{Aplicando:} $\Delta G = \Delta G^0 + RT\ln{K_p}$, si $\Delta G=0$ entonces $\Delta G^0= -RT\ln{K_p}$
+		$$
+			\ln K_p^{\rfrac{1}{2}} = -\frac{\overbrace{\Delta G^0_{\rfrac{1}{2}}}^{\Delta G^0_{\rfrac{1}{2}}=\frac{1}{2}\cdot\Delta G^0}}{RT}\Rightarrow
+			\ln K_p^{\rfrac{1}{2}} = \frac{1}{2}\cdot\overbrace{-\frac{\Delta G^0}{RT}}^{\ln K_p}\Rightarrow
+			\ln K_p^{\rfrac{1}{2}} = \frac{1}{2}\ln K_p\Rightarrow
+		$$
+		$$
+			\Rightarrow\ln K_p^{\rfrac{1}{2}} = \ln\left(\sqrt{K_p}\right)\Rightarrow
+			K_p^{\rfrac{1}{2}} = \sqrt{K_p}\Rightarrow
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_p^{\rfrac{1}{2}}=\num{2,62}}
+		$$
+		\centering\myovalbox{\textcolor{yellow}{Reacción favorecida hacia productos}}
+	\end{alertblock}
+\end{frame}

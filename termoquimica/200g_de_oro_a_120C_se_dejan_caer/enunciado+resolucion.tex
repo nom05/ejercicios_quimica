@@ -1,0 +1,86 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/200g_de_oro_a_120C_se_dejan_caer/enunciado.tex}
+			}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		$$
+			T_{\text{final}}?
+		$$
+	}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Au})=\SI{200}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{H2O})=\SI{25}{\gram}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_{\text{inicial}}(\ce{Au})=\SI{120}{\celsius}=\SI{393,15}{\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{inicial}}(\ce{H2O})=\SI{10}{\celsius}=\SI{283,15}{\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{c_e(\ce{Au})=\SI{,1308}{\joule\per\gram\per\kelvin}=\SI{,1308}{\joule\per\gram\per\celsius}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{c_e(\ce{H2O})=\SI{1}{\calorie\per\gram\per\kelvin}=\SI{4,18}{\joule\per\gram\per\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la temperatura final}
+	\centering\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+	\visible<2->{
+			\structure{No se realiza ningún trabajo ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+				}
+	\visible<3->{
+		\structure{Transferencia de calor total tiene que ser cero:} $Q_{\text{total}}=Q(\ce{Au})+Q(\ce{H2O})=0$
+				}
+	\visible<4->{
+		\structure{Cumpliéndose:} $Q(\ce{Au})=-Q(\ce{H2O})$
+				}
+	\visible<5->{
+		\begin{overprint}
+			\onslide<5>
+				\centering\structure{Aplicando:} $Q=m\cdot c_e\Delta T$
+				$$
+					m(\ce{Au})\cdot c_e(\ce{Au})\cdot\overbrace{\Delta T(\ce{Au})}^{T_{\text{final}}-T_{\text{inicial}}(\ce{Au})} = -m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot\underbrace{\Delta T(\ce{H2O})}_{T_{\text{final}}-T_{\text{inicial}}(\ce{H2O})}
+				$$
+			\onslide<6>
+				\centering\structure{Despejamos $T_{\text{final}}=T_{\text{f}}$:} $T_{\text{inicial}} = T_{\text{i}}$
+				$$
+					m(\ce{Au})\cdot c_e(\ce{Au})\cdot(T_{\text{final}}-T_{\text{i}}(\ce{Au})) = -m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot(T_{\text{f}}-T_{\text{i}}(\ce{H2O}))
+				$$
+			\onslide<7>
+				\centering\structure{Despejamos $T_{\text{f}}:$}
+				$$
+					m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{f}}-m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{i}}(\ce{Au}) = -m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{f}}+ m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{i}}(\ce{H2O})
+				$$
+			\onslide<8>
+				\centering\structure{Despejamos $T_{\text{f}}$:}
+				$$
+					m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{f}} + m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{f}} = m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{i}}(\ce{Au}) + m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{i}}(\ce{H2O})
+				$$
+			\onslide<9>
+				\centering\structure{Despejamos $T_{\text{f}}$:}
+				$$
+					T_{\text{f}}\cdot\left[m(\ce{Au})\cdot c_e(\ce{Au}) + m(\ce{H2O})\cdot c_e(\ce{H2O})\right] = m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{i}}(\ce{Au}) + m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{i}}(\ce{H2O})
+				$$
+			\onslide<10->
+				\centering\structure{Despejamos $T_{\text{f}}$:}
+				$$
+					T_{\text{f}} = \frac{m(\ce{Au})\cdot c_e(\ce{Au})\cdot T_{\text{i}}(\ce{Au}) + m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot T_{\text{i}}(\ce{H2O})}{m(\ce{Au})\cdot c_e(\ce{Au}) + m(\ce{H2O})\cdot c_e(\ce{H2O})}
+				$$
+		\end{overprint}
+				}
+		\visible<10->{
+			\centering\structure{Sustituimos por los valores del enunciado:}
+			$$
+				T_{\text{f}} = \frac{\SI{200}{\cancel\gram}\cdot\SI{,1308}{\cancel\joule\per\cancel\gram\per\cancel\kelvin}\cdot\SI{393,15}{\cancel\kelvin} + \SI{25}{\cancel\gram}\cdot \SI{4,18}{\cancel\joule\per\cancel\gram\per\cancel\kelvin}\cdot\SI{283,15}{\cancel\kelvin}}{\SI{200}{\cancel\gram}\cdot\SI{,1308}{\cancel\joule\per\cancel\gram\per\kelvin} + \SI{25}{\cancel\gram}\cdot\SI{4,18}{\cancel\joule\per\cancel\gram\per\kelvin}}
+			$$
+			\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{T_{\text{final}}=\SI{305,17}{\kelvin}=\SI{32}{\celsius}}
+					}
+\end{frame}

@@ -1,0 +1,115 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/el_HNO3_reacciona_con_H2S_para_producir_S_y_NO/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿V(\ce{H2S})?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HNO3}]=\SI{,2}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{HNO3})=\SI{500}{\milli\liter}=\SI{,5}{\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{T(\ce{H2S})=\SI{60}{\celsius}=\SI{333,15}{\kelvin}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{P(\ce{H2S})=\SI{760}{\torr}=\SI{1}{\atm}}\\[.3cm]
+		\structure{Reacción sin ajustar:}\quad\ce{HNO3 + H2S -> S + NO}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción en medio ácido}
+	\structure{Ajuste en medio ``\textbf{\underline{ácido}}''}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{NO3-(ac) + S^2-(ac) -> S(s) + NO(g)^}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{+1}{\ce{H}}$
+					$\overset{+5}{\ce{N}}$
+					$\overset{-2}{\ce{O}}$3-
+					+
+					$\overset{-2}{\ce{S}}$^2-
+					->
+					$\overset{0}{\ce{S}}$
+					+
+					$\overset{+2}{\ce{N}}$
+					$\overset{-2}{\ce{O}}$
+				}
+			$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:}\quad\ce{S^2- -> S}
+			\structure{Semirreacción de reducción:}\quad\ce{NO3- -> NO}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:}\quad\ce{S^2- -> S}
+			\structure{Semirreacción de reducción:}\quad\ce{N\textbf{\ce{O3}}- -> N\textbf{O} + \textbf{\color{red}\ce{2H2O}}}\quad
+					{\footnotesize (3 \ce{O} en reactivos / 1 \ce{O} en productos $\rightarrow$ \ce{2H2O})}
+		\onslide<5>
+		\structure{Semirreacción de oxidación:}\quad\ce{S^2- -> S}
+		\structure{Semirreacción de reducción:}\quad\ce{NO3- + \textbf{\color{red}\ce{4H+}} -> NO + \textbf{\ce{2H2}}O}
+					{\footnotesize (el agua ha añadido 4 hidrógenos)}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{S^2- -> S \textbf{\color{red}\ce{+ 2e-}}}\quad
+					{\footnotesize (2 cargas negativas en reactivos frente a 0 en productos $\rightarrow$ 2 electrones en productos)}
+			\structure{Semirreacción de reducción:}\quad\ce{NO3- + 4H+ \textbf{\color{red}\ce{+ 3e-}} -> NO + 2H2O}\quad
+					{\footnotesize (3 cargas positivas en reactivos frente a 0 en productos $\rightarrow$ 3 electrones en reactivos)}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:} $3\times\left(\ce{S^2- -> S + 2e-}\right)$
+			\structure{Semirreacción de reducción:} $2\times\left(\ce{NO3- + 4H+ + 3e- -> NO + 2H2O}\right)$
+		\onslide<8>
+			\structure{Semirreacción de oxidación:}\quad\ce{3S^2- -> 3S + 6e-}
+			\structure{Semirreacción de reducción:}\quad\ce{2NO3- + 8H+ + 6e- -> 2NO + 4H2O}
+		\onslide<9-10>
+			\begin{center}
+				\begin{tabular}{c}
+						\ce{3S^2- -> 3S + \cancel{6e-}} \\
+						\ce{2NO3- + 8H+ + \cancel{6e-} -> 2NO + 4H2O} \\
+					\midrule
+						\ce{2NO3- + 3S^2- + 8H+ -> 3S + 2NO + 4H2O}
+				\end{tabular}				
+			\end{center}
+		\onslide<11->
+			\ce{2HNO3 + 3H2S -> 3S + 2NO + 4H2O} \\
+	\end{overprint}
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<3-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+		\item<4-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+		\item<5-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+		\item<6-> Ajustamos las cargas de las semirreacciones \underline{añadiendo} electrones.
+		\item<7-> Hacemos que el número de electrones sea igual en las dos semirreacciones. Para ello multiplicamos por un factor.
+		\item<9-> Sumamos ambas reacciones.
+		\item<10-> Simplificamos si procede (en este caso no).
+		\item<11-> Añadimos los iones que no entraban en la reacción vigilando que esté todo ajustado.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): volumen de \ce{H2S}}
+	\structure{Según la estequiometría:}\quad$3n(\ce{HNO3}) = 2n(\ce{H2S})$
+	\structure{Aplicando la definición de concentración y la ecuación de los gases ideales:}
+	$$
+		3\overbrace{n(\ce{HNO3})}^{n=M\vdot V} = 2\underbrace{n(\ce{H2S})}_{n=\frac{P\vdot V}{R\vdot T}}\Rightarrow
+		3\vdot[\ce{HNO3}]\vdot V(\ce{HNO3}) = 2\vdot \frac{P(\ce{H2S})\vdot V(\ce{H2S})}{R\vdot T(\ce{H2S})}
+	$$
+	$$
+		V(\ce{H2S})=\frac{3\vdot[\ce{HNO3}]\vdot V(\ce{HNO3})\vdot R\vdot T(\ce{H2S})}{2\vdot P(\ce{H2S})}
+	$$
+	$$
+		V(\ce{H2S})=\frac{3\vdot\SI{,2}{\cancel\mol\per\cancel\liter}\vdot\SI{,5}{\liter}\vdot\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{333,15}{\cancel\kelvin}}{2\vdot\SI{1}{\cancel\atm}}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{V(\ce{H2S})=\SI{4,10}{\liter}}
+	\end{center}
+\end{frame}

@@ -1,0 +1,145 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/la_combustion_del_propano_desprende_2200kJ_mol/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \structure{Reacción:} \ce{CH3CH2CH3 + 5O2 ->[$\Delta H_C = \SI{-2200}{\kilo\joule\per\mol}$] 3CO2 + 4H2O}
+    \begin{center}
+        \textbf{\Large ¿m(\ce{H2O(l)}) en gramos $\Rightarrow$ en vapor?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\Delta H_C(\ce{CH3CH2CH3}) = \SI{-2200}{\kilo\joule\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{CH3CH2CH3}) = \SI{1000}{\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{P(\ce{CH3CH2CH3}) = \SI{1}{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{T(\ce{CH3CH2CH3}) = \SI{0}{\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{Aprovechamiento de energía} = \SI{80}{\percent}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{inicial}}(\ce{H2O(l)}) = \SI{15}{\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{final}}(\ce{H2O(g)}) = \SI{100}{\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_v(\ce{H2O})= \SI{40,7}{\kilo\joule\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{C_e(\ce{H2O}) = \SI{1}{\calorie\per\gram\per\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{H2O}) = \SI{18,02}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (1): calor emitido por el propano}
+    \structure{\ce{CH3CH2CH3} es un gas:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                P\cdot V = n\cdot R\cdot T
+            $$
+        \onslide<2>
+            $$
+                n = \frac{P\cdot V}{R\cdot T}
+            $$
+        \onslide<3->
+            $$
+                n(\ce{CH3CH2CH3}) = \frac{\SI{1}{\cancel\atm}\cdot\SI{1000}{\cancel\liter}}{\SI{,082}{\cancel\atm\liter\per\mol\per\cancel\kelvin}\cdot\SI{273,15}{\cancel\kelvin}}
+            $$
+    \end{overprint}
+    \visible<3->{
+        $$
+            n(\ce{CH3CH2CH3}) = \SI{44,65}{\mol}
+        $$
+                }
+    \visible<4->{
+        \structure{Calor emitido por el propano:}
+        $$
+            Q_{\text{emitido}}(\ce{CH3CH2CH3}) = \SI{-2200}{\kilo\joule\per\cancel\mol}\cdot\SI{44,65}{\cancel\mol} = \SI{-98221,74}{\kilo\joule}
+        $$
+                }
+    \visible<5->{
+    \structure{Aprovechamiento de la energía de un \SI{80}{\percent}:}
+        $$
+            Q_{\text{emitido}}(\ce{CH3CH2CH3}) = \SI{-98221,74}{\kilo\joule}\times\frac{8\cancel{0}}{10\cancel{0}} = \SI{-78576,80}{\kilo\joule}
+        $$
+            }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (2): calor recibido por el agua}
+    \structure{El proceso termodinámico es el siguiente:}
+    $$
+        \ce{           
+                $\underset{\SI{15}{\celsius}}{\ce{H2O(l)}}$
+                ->[Q_1]
+                $\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+                ->[Q_2]
+                $\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+            }
+    $$
+    \visible<2->{
+        \structure{Si tenemos un sistema aislado:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = Q_{\text{recibido}}(\ce{H2O})
+                $$
+            \onslide<3>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = \overbrace{Q_1(\ce{H2O(l)})}^{\text{calentar el agua de \SI{15}{\celsius} hasta \SI{100}{\celsius}}} + \underbrace{Q_2(\ce{H2O(g)})}_{\text{hervir el agua}}
+                $$
+            \onslide<4>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = \overbrace{Q_1(\ce{H2O(l)})}^{Q_1=m\cdot C_e\cdot\Delta T} + \underbrace{Q_2(\ce{H2O(g)})}_{n\cdot\Delta H_v}
+                $$
+            \onslide<5>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = m(\ce{H2O})\cdot C_e(\ce{H2O(l)})\cdot\Delta T(\ce{H2O}) + \overbrace{n(\ce{H2O})}^{n=\frac{m}{Mm}}\cdot\Delta H_v(\ce{H2O})
+                $$
+            \onslide<6>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = m(\ce{H2O})\cdot C_e(\ce{H2O(l)})\cdot\Delta T(\ce{H2O}) + \frac{m(\ce{H2O})}{Mm(\ce{H2O})}\cdot\Delta H_v(\ce{H2O})
+                $$
+            \onslide<7>
+                $$
+                    -Q_{\text{emitido}}(\ce{CH3CH2CH3}) = m(\ce{H2O})\cdot\left(C_e(\ce{H2O(l)})\cdot\Delta T(\ce{H2O}) + \frac{\Delta H_v(\ce{H2O})}{Mm(\ce{H2O})}\right)
+                $$
+            \onslide<8->
+                $$
+                    m(\ce{H2O})
+                    =
+                    -\frac{Q_{\text{emitido}}(\ce{CH3CH2CH3})}{\left(C_e(\ce{H2O(l)})\cdot\Delta T(\ce{H2O}) + \frac{\Delta H_v(\ce{H2O})}{Mm(\ce{H2O})}\right)}
+                $$
+        \end{overprint}
+                }
+    \visible<9->{
+        \structure{Sustituyendo por los correspondientes valores:}
+        $$
+            m(\ce{H2O})
+            =
+            -          
+            \frac{\SI{-78576,80e3}{\cancel\joule}}{\left(\underbrace{\SI{4,18}{\cancel\joule\per\gram\per\cancel\celsius}}_{\SI{1}{\calorie\per\gram\per\celsius}}\cdot\left(100-15~\si{\cancel\celsius}\right) + \frac{\SI{40,7e3}{\cancel\joule\per\cancel\mol}}{\SI{18,02}{\gram\per\cancel\mol}}\right)}
+        $$
+                }
+    \visible<10->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{
+                m(\ce{H2O})
+                =
+                \SI{30061,111}{\gram} = \SI{30}{\kilogram}
+            }
+        $$
+                }
+\end{frame}

@@ -1,0 +1,115 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/el_acido_nitrico_en_disolucion_1M_reacciona_con_cadmio_metalico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\varepsilon^0_{\text{total}}$?, ¿ocurre con \ce{Cu}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0(\ce{NO3-}/\ce{NO}) = \SI{,96}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Cd^{2+}}/\ce{Cd}) = \SI{-,40}{\volt}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Cu^{2+}}/\ce{Cu}) = \SI{,34}{\volt}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}):ajuste de la reacción con \ce{Cd}}
+	\structure{Ajuste en medio ``\textbf{\underline{ácido}}''}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{HNO3(ac) + Cd(s) -> Cd(NO3)2(ac) + NO(g)}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{+5}{\ce{N}}$
+					$\overset{-2}{\ce{O}}$3^{-}
+					+
+					$\overset{0}{\ce{Cd}}$
+					->
+					$\overset{+2}{\ce{Cd^{2+}}}$
+					+
+					$\overset{+2}{\ce{N}}$
+					$\overset{-2}{\ce{O}}$
+				}
+			$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cd -> Cd^{2+}}
+			\structure{Semirreacción de reducción:}\quad\ce{NO3- -> NO}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cd -> Cd^{2+}}
+			\structure{Semirreacción de reducción:}\quad\ce{NO3- -> NO}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cd -> Cd^{2+}}
+			\structure{Semirreacción de reducción:}\quad\ce{NO3- -> NO + 2H2O}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cd -> Cd^{2+}}
+			\structure{Semirreacción de reducción:}\quad\ce{4H+ + NO3- -> NO + 2H2O}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cd -> Cd^{2+} + 2e-}
+			\structure{Semirreacción de reducción:}\quad\ce{4H+ + NO3- + 3e- -> NO + 2H2O}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:} $3\times\left(\ce{Cd -> Cd^{2+} + 2e-}\right)$
+			\structure{Semirreacción de reducción:} $2\times\left(\ce{4H+ + NO3- + 3e- -> NO + 2H2O}\right)$
+		\onslide<9>
+			\structure{Semirreacción de oxidación:}\quad\ce{3Cd -> 3Cd^{2+} + 6e-}
+			\structure{Semirreacción de reducción:}\quad\ce{8H+ + 2NO3- + 6e- -> 2NO + 4H2O}
+		\onslide<10>
+			\begin{center}
+				\begin{tabular}{cr}
+					\ce{3Cd -> 3Cd^{2+} + \cancel{6e-}} & ${\tiny\Delta G^0=-6\cdot F\cdot\varepsilon^0_{\text{ox}}=-\num{6}\cdot F\cdot\SI{,40}{\joule\per\mol}}$\\
+					\ce{8H+ + 2NO3- + \cancel{6e-} -> 2NO + 4H2O} & ${\tiny\Delta G^0=-6\cdot F\cdot\varepsilon^0_{\text{red}}=-\num{6}\cdot F\cdot\SI{,96}{\joule\per\mol}}$\\
+					\midrule
+					\ce{3Cd + 8H+ + 2NO3- -> 3Cd^{2+} + 2NO + 4H2O}  & ${\tiny\Delta G^0_{\text{total}}=-\num{6}\cdot F\cdot\varepsilon^0_{\text{total}}=-\num{6}\cdot F\cdot\SI{1,36}{\joule\per\mol}}$\\
+				\end{tabular}				
+			\end{center}
+		\onslide<11>
+			\begin{center}
+				\begin{tabular}{cr}
+					\ce{3Cd -> 3Cd^{2+} + \cancel{6e-}} & $\varepsilon^0_{\text{ox}}=\SI{,40}{\volt}$\\
+					\ce{8H+ + 2NO3- + \cancel{6e-} -> 2NO + 4H2O} & $\varepsilon^0_{\text{red}}=\SI{,96}{\volt}$\\
+					\midrule
+					\ce{3Cd + 8H+ + 2NO3- -> 3Cd^{2+} + 2NO + 4H2O}  & $\varepsilon^0_{\text{total}}=\SI{1,36}{\volt}$\\
+				\end{tabular}				
+			\end{center}
+		\onslide<12->
+			\centering\ce{3Cd(s) + 8HNO3(ac) -> 3Cd(NO3)2(ac) + 2NO(g) + 4H2O(l)}\quad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\text{total}}=\SI{1,36}{\volt}}
+	\end{overprint}
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H} (en este caso están todos ajustados).
+		\item<5-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+		\item<6-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+		\item<7-> Ajustamos número de electrones en cada reacción.
+		\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+		\item<10-> Sumamos ambas reacciones.
+		\item<11-> Simplificamos si procede (en este caso no).
+		\item<12-> Añadimos los iones que no entraban en la reacción vigilando que esté todo ajustado.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): averiguar si \ce{NO3-} oxida al cobre}
+	\structure{Recordando:}\quad$\Delta G=-nF\varepsilon$
+	\structure{Reacción (ajuste equivalente, \ce{Cu} puede tener el mismo estado de oxidación que \ce{Cd}):}
+	$$
+		\ce{3Cu(s) + 8HNO3(ac) -> 3Cu(NO3)2(ac) + 2NO(g) + 4H2O(l)}
+	$$
+	$$
+		\varepsilon^0_{\text{total}}=\SI{-,34}{\volt} + \SI{,96}{\volt}=\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\varepsilon^0_{\text{total}}=\SI{,62}{\volt}}
+	$$
+	Por tanto:
+	Si $\varepsilon^0_{\text{total}}>0\Rightarrow\Delta G^0=-\overbrace{n}^{n>0}\cdot\underbrace{F}_{F>0}\cdot\overbrace{\varepsilon}^{\varepsilon^0>0}<0$ y el proceso es favorable.
+\end{frame}

@@ -1,0 +1,128 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/coligativas/una_disolucion_formada_por_40g_de_benceno_y_60g_de_tolueno/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge ¿$P_{v}$ parcial?, ¿$P_{v}$ total?, ¿\si{\percent} en $m/m$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{T=\SI{323,15}{\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{C6H6})=\SI{40}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{C7H8})=\SI{60}{\gram}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P_v(\ce{C6H6})=\SI{271}{\torr}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v(\ce{C7H8})=\SI{92,6}{\torr}}
+	\end{center}
+	\visible<2->{
+		Y también:
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{C6H6})=\SI{78,112}{\gram\per\mol}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{C7H8})=\SI{92,138}{\gram\per\mol}}
+		\end{center}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Fracciones molares y presiones de vapor de la mezcla}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				m(\ce{C6H6}) = \SI{40}{\gram}\Rightarrow\overbrace{n(\ce{C6H6})}^{n=\rfrac{m}{Mm}}=\frac{\SI{40}{\cancel\gram}}{\SI{78,112}{\cancel\gram\per\mol}}=\SI{,512}{\mol}
+			$$
+			$$
+				m(\ce{C7H8}) = \SI{60}{\gram}\Rightarrow           n(\ce{C7H8})                   =\frac{\SI{60}{\cancel\gram}}{\SI{92,138}{\cancel\gram\per\mol}}=\SI{,651}{\mol}
+			$$
+			$$
+				n_{\text{total}} = \SI{,512}{\mol}+\SI{,651}{\mol}=\SI{1,163}{\mol}
+			$$
+		\onslide<2->
+			$$
+				m(\ce{C6H6}) = \SI{40}{\gram}\Rightarrow\overbrace{x(\ce{C6H6})}^{x_i=\rfrac{n_i}{n_{\text{total}}}}=\frac{\SI{,512}{\cancel\mol}}{\SI{1,163}{\cancel\mol}}=\num{,44}
+			$$
+			$$
+				m(\ce{C7H8}) = \SI{60}{\gram}\Rightarrow x(\ce{C7H8})=\frac{\SI{,651}{\cancel\mol}}{\SI{1,163}{\cancel\mol}}=\num{,56}
+			$$
+	\end{overprint}
+	\visible<3->{
+		\structure{Aplicando la ley de Raoult:} $\underbrace{P_i}_{\text{presión de vapor de sustancia en mezcla}} = x_i\cdot\overbrace{P_i^0}^{\text{presión de vapor de sustancia pura}}$
+		$$
+			P_v^0(\ce{C6H6})=\SI{271}{\torr}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P_v(\ce{C6H6})=\num{,44}\cdot\SI{271}{\torr}=\SI{119,30}{\torr}}
+		$$
+		$$
+			P_v^0(\ce{C7H8})=\SI{92,6}{\torr}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v(\ce{C7H8})=\num{,56}\cdot\SI{92,6}{\torr}=\SI{51,84}{\torr}}
+		$$
+				}
+	\visible<4->{
+		\structure{Aplicando la ley de Dalton:} $P_{\text{total}}=\sum_{i=1}^{2}P_i$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{P_v(\text{total}) = \SI{119,30}{\torr}+\SI{51,84}{\torr}=\SI{171,13}{\torr}}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): composición del vapor en \% en masa}
+	\structure{Como consecuencia de la ley de Dalton:}
+	$$
+		\frac{P_i}{P_{\text{total}}}=\frac{\frac{n_i\cdot R\cdot T}{V}}{\sum_{j=1}P_j} = \frac{n_i\cdot\cancel{\frac{R\cdot T}{V}}}{\cancel{\frac{R\cdot T}{V}}\underbrace{\sum_{j=1}n_j}_{n_{\text{total}}}}=x_i
+	$$
+	\visible<2->{
+		\structure{aplicado a las presiones de vapor:}
+		$$
+			x(\ce{C6H6}) = \frac{\SI{119,30}{\torr}}{\SI{171,13}{\torr}}=\num{,70}
+		$$
+		$$
+			x(\ce{C7H8}) =\num{,30}
+		$$
+				}
+	\visible<3->{
+		\structure{Partiendo de la definición de \% en masa:}
+		\begin{overprint}
+			\onslide<3>
+				$$
+					\si{\percent}~m/m~(\ce{C6H6})=\frac{\overbrace{m(\ce{C6H6})}^{m=n\cdot Mm}}{\underbrace{m_{\text{total}}}_{m_{\text{total}}=n_{\text{total}}\cdot\overline{Mm}}}\times 100
+				$$
+			\onslide<4>
+				$$
+					\si{\percent}~m/m~(\ce{C6H6})=\frac{n(\ce{C6H6})\cdot Mm(\ce{C6H6})}{n_{\text{total}}\cdot\overline{Mm}}\times 100
+				$$
+			\onslide<5>
+				$$
+					\si{\percent}~m/m~(\ce{C6H6})=
+					\overbrace{\frac{n(\ce{C6H6})}{n_{\text{total}}}}^{x(\ce{C6H6})=\frac{n(\ce{C6H6})}{n_{\text{total}}}}
+					\cdot\frac{Mm(\ce{C6H6})}{\underbrace{\overline{Mm}}_{\overline{Mm}=\sum_{k=1}x_k\cdot Mm_k}}\times 100
+				$$
+			\onslide<6>
+				$$
+					\si{\percent}~m/m~(\ce{C6H6}) = x(\ce{C6H6})\cdot\frac{Mm(\ce{C6H6})}{x(\ce{C6H6})\cdot Mm(\ce{C6H6}) + \underbrace{x(\ce{C7H8})}_{x(\ce{C7H8})=1-x(\ce{C6H6})}\cdot Mm(\ce{C7H8})}\times 100
+				$$
+			\onslide<7->
+				$$
+					\si{\percent}~m/m~(\ce{C6H6}) = x(\ce{C6H6})\cdot\frac{Mm(\ce{C6H6})}{x(\ce{C6H6})\cdot Mm(\ce{C6H6}) + (1-x(\ce{C6H6}))\cdot Mm(\ce{C7H8})}\times 100
+				$$
+		\end{overprint}
+				}
+	\begin{overprint}
+		\onslide<8>
+			$$
+				\si{\percent}~m/m~(\ce{C6H6}) = \num{,70}\cdot\frac{\SI{78,112}{\cancel\gram\per\cancel\mol}}{\num{,70}\cdot\SI{78,112}{\cancel\gram\per\cancel\mol} + (1-\num{,70})\cdot\SI{92,138}{\cancel\gram\per\cancel\mol}}\times 100
+			$$
+		\onslide<9->
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\si{\percent}~m/m~(\ce{C6H6}) = \SI{66,11}{\percent}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\si{\percent}~m/m~(\ce{C7H8}) = \SI{33,88}{\percent}}
+			$$
+	\end{overprint}
+\end{frame}

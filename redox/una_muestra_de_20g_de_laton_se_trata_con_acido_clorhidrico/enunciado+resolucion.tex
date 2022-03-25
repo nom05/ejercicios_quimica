@@ -1,0 +1,73 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/una_muestra_de_20g_de_laton_se_trata_con_acido_clorhidrico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del ejercicio}
+	\begin{center}
+		{\huge ¿$\% m/m(\ce{Zn})$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\text{latón})=m(\ce{Cu})+m(\ce{Zn})=\SI{20}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Zn^2+/Zn})=\SI{-,76}{\volt}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Cu^2+/Cu})=\SI{,34}{\volt}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\varepsilon^0(\ce{H+/H2})=\SI{,00}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{V(\ce{H2})=\SI{2,8}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{P(\ce{H2})=\SI{1}{\atm}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{T(\ce{H2})=\SI{25}{\celsius}=\SI{298,15}{\kelvin}}\\[.6cm]
+	\end{center}
+	\structure{\Large Pero también:}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{Zn})=\SI{65,38}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{Cu})=\SI{63,54}{\gram\per\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{$\text{pH ácido}$}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de reacción y composición de la aleación}
+	\structure{Punto de partida:} {\small El proceso es ``$\text{metal}^{(0)} \rightarrow \text{ion}^{2+}$'', se van a \textbf{oxidar}. \underline{Los potenciales estándar, por convenio de la IUPAC, siempre los damos de reducción}. Para obtener los de oxidación, cambiamos el signo.}
+	\begin{center}
+		\begin{tabular}{cc}
+			\ce{Zn -> Zn^2+ + 2e-} & $\varepsilon^0_{\text{ox}}=\SI{,76}{\volt}$\\
+			\ce{Cu -> Cu^2+ + 2e-} & $\varepsilon^0_{\text{ox}}=\SI{-,34}{\volt}$
+		\end{tabular}
+	\end{center}
+	\structure{Obtención del potencial estándar total:} {\small hay que combinar el potencial estándar de oxidación con el de reducción de la otra reacción (\ce{2H+ +2e- -> H2}, $\varepsilon^0=\SI{0}{\volt}$). El proceso ocurre sin aportar energía eléctrica, entonces $\Delta G = -n\vdot F\vdot\varepsilon<0\Rightarrow\varepsilon>0$. Por tanto, estamos ante la oxidación del cinc: \textcolor{red}{$\varepsilon^0_{\text{total}}=\SI{,76}{\volt}$}.}
+	\structure{Reacción global:}
+	\begin{center}
+		\begin{tabular}{rl}
+				S. oxidación: 	& \ce{Zn -> Zn^2+ + 2e-} 	\\
+				S. reducción: 	& \ce{2H+ + 2e- -> H2}		\\
+			\midrule
+								& \ce{2H+ + Zn -> Zn^2+ + H2}$\Rightarrow$\ce{2HCl(ac) + Zn(s) -> ZnCl2(ac) + H2(g) ^}
+		\end{tabular}
+	\end{center}
+	\structure{Según estequiometría y recordando la definición de $\% m/m$:} $\% m/m=100\vdot\frac{m_i}{m_T}$
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\overbrace{n(\ce{Zn})}^{n=\frac{m}{Mm}} = \overbrace{n(\ce{H2})}^{n=\frac{PV}{RT}}\Rightarrow
+				\frac{m(\ce{Zn})}{M_{at}(\ce{Zn})} = \frac{P(\ce{H2})\vdot V(\ce{H2})}{R\vdot T(\ce{H2})}\Rightarrow
+				m(\ce{Zn}) = M_{at}(\ce{Zn})\vdot\frac{P(\ce{H2})\vdot V(\ce{H2})}{R\vdot T(\ce{H2})}\Rightarrow
+			$$
+			$$
+				\% m/m(\ce{Zn})=\frac{100}{m_T}\vdot M_{at}(\ce{Zn})\vdot\frac{P(\ce{H2})\vdot V(\ce{H2})}{R\vdot T(\ce{H2})}\Rightarrow
+			$$
+		\onslide<2>
+			$$
+				\% m/m(\ce{Zn})=\num{100}\vdot\frac{\SI{65,38}{\cancel\gram\per\cancel\mol}}{\SI{20}{\cancel\gram}}\vdot\frac{\SI{1}{\cancel\atm}\vdot\SI{2,8}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{298,15}{\cancel\kelvin}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\% m/m(\ce{Zn})=\SI{37,44}{\percent}}\qquad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\% m/m(\ce{Cu})=\SI{62,56}{\percent}}
+			$$
+	\end{overprint}
+
+\end{frame}

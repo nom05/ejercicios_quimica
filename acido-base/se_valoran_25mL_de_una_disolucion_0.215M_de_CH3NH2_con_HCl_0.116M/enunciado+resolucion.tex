@@ -1,0 +1,345 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_valoran_25mL_de_una_disolucion_0.215M_de_CH3NH2_con_HCl_0.116M/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{CH3NH2}) = \SI{25}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{CH3NH2}]_0 = \SI{,215}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_b(\ce{CH3NH2})= \SI{5e-4}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): pH inicial de \ce{CH3NH2}}
+    \structure{Reacción de disociación:}
+    $$
+        \ce{CH3NH2(ac) + H2O(l) <=> CH3NH3+(ac) + OH-(ac)}~~~K_b(\ce{CH3NH2})=\frac{[\ce{CH3NH3+}][\ce{OH-}]}{[\ce{CH3NH2}]}
+    $$
+    \visible<2->{
+        \begin{center}
+            \begin{tabular}{clll}
+                \toprule
+                Estado  & [\ce{CH3NH2}] (\si{\Molar})         & {[\ce{CH3NH3+}] (\si{\Molar})}          & {[\ce{OH-}] (\si{\Molar})}         \\
+                \midrule
+                Inicial & $[\ce{CH3NH2}]_0$ & 0                & 0                \\
+                Final   & $[\ce{CH3NH2}]_0-x$                & $x$ & $x$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+                }
+    \visible<3->{
+        \structure{Si suponemos que $x=[\ce{CH3NH3+}]=[\ce{OH-}]$ es mucho menor que $[\ce{CH3NH2}]_0$}
+        $$
+            K_b(\ce{CH3NH2})=\frac{[\ce{CH3NH3+}][\ce{OH-}]}{[\ce{CH3NH2}]_0-x}\approx\frac{[\ce{CH3NH3+}][\ce{OH-}]}{[\ce{CH3NH2}]_0}
+        $$
+                }
+    \visible<4->{
+        \structure{Aplicando logaritmos y la relación $pH+pOH=14$:}
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    K_b(\ce{CH3NH2})=\frac{\overbrace{[\ce{CH3NH3+}]}^{[\ce{CH3NH3+}]=[\ce{OH-}]}[\ce{OH-}]}{[\ce{CH3NH2}]_0-x}\approx\frac{[\ce{OH-}]^2}{[\ce{CH3NH2}]_0}
+                $$
+            \onslide<5>
+                $$
+                    [\ce{OH-}]^{-2} = K_b(\ce{CH3NH2})^{-1}\cdot\frac{1}{[\ce{CH3NH2}]_0}
+                $$
+            \onslide<6>
+                $$
+                    \log[\ce{OH-}]^{-2} = \log K_b(\ce{CH3NH2})^{-1} + \log\left(\frac{1}{[\ce{CH3NH2}]_0}\right)
+                $$
+            \onslide<7>
+                $$
+                    2\overbrace{pOH}^{pOH=14-pH} = pK_b(\ce{CH3NH2}) - \log[\ce{CH3NH2}]_0
+                $$
+            \onslide<8>
+                $$
+                    2\times(14-pH) = \left(pK_b(\ce{CH3NH2}) - \log[\ce{CH3NH2}]_0\right)
+                $$
+            \onslide<9>
+                $$
+                    pH = 14 - \frac{1}{2}\left(\overbrace{pK_b(\ce{CH3NH2})}^{\SI{3,301}{}} - \underbrace{\log[\ce{CH3NH2}]_0}_{\SI{-,668}{}}\right)
+                $$
+        \end{overprint}
+                }
+    \visible<9->{
+        \begin{center}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{pH = 12}
+        \end{center}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{CH3NH2}) = \SI{25}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{CH3NH2}]_0 = \SI{,215}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_b(\ce{CH3NH2})= \SI{5e-4}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{HCl}) = \SI{5}{\milli\liter}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): pH de disolución de \ce{CH3NH2} después de añadir \SI{5}{\milli\liter} de \ce{HCl}}
+    \structure{Hay que trabajar con número de moles:}
+    \visible<2->{
+        $$
+            n(\ce{CH3NH2}) = \SI{,215}{\mol\per\cancel\liter}\cdot\SI{,025}{\cancel\liter} = \SI{5,375e-3}{\mol}
+        $$
+        $$
+            n(\ce{HCl}) = \SI{,116}{\mol\per\cancel\liter}\cdot\SI{,005}{\cancel\liter} = \SI{5,8e-4}{\mol}
+        $$
+                }
+    \visible<3->{
+        \textbf{El volumen cambia después de añadir \SI{5}{\milli\liter} de \ce{HCl(ac)}}: $V_{Total} = V_T = \SI{25}{\milli\liter} + \SI{5}{\milli\liter} = \SI{30}{\milli\liter}$
+        \structure{Reacción de neutralización:}
+        $$
+            \ce{CH3NH2(ac) + HCl(ac) -> CH3NH3Cl(ac)}
+        $$
+        La reacción de neutralización es \underline{\textbf{TOTAL}}: reaccionaron \SI{5,8e-4}{\mol} de \ce{CH3NH2} y quedan: $\SI{5,375e-3}{\mol}-\SI{5,8e-4}{\mol} = \SI{4,795e-3}{\mol}$ de \ce{CH3NH2} sin neutralizar.
+                }
+    \visible<4->{
+        $$
+            \ce{CH3NH2(ac) + H2O(l) <=> CH3NH3+(ac) + OH-(ac)}~~~K_b(\ce{CH3NH2})=\frac{[\ce{CH3NH3+}][\ce{OH-}]}{[\ce{CH3NH2}]}
+        $$
+        \alert{\textbf{ATENCIÓN:} como los volúmenes cambian, se trabaja con número de moles. Para la concentración de \ce{OH-} dividir por ese volumen. \underline{$K_b$} se define a través de \underline{concentraciones}.}
+        \begin{overprint}
+            \onslide<4>
+                \begin{center}
+                    \begin{tabular}{clll}
+                        \toprule
+                        Estado  & [\ce{CH3NH2}] (\si{\mol})         & {[\ce{CH3NH3+}] (\si{\mol})}          & {[\ce{OH-}] (\si{\mol})}         \\
+                        \midrule
+                        Inicial & \SI{4,795e-3}{} & \SI{5,8e-4}{}                & 0                \\
+                        Final   & $\SI{4,795e-3}{}-x$                & $\SI{5,8e-4}{}+x$ & $x$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<5>
+                $$
+                    K_b(\ce{CH3NH2}) = \frac{
+                                \overbrace{\frac{x}{0,03}}^{[\ce{OH-}]}\cdot\frac{\overbrace{\SI{5,8e-4}{}+x}^{\SI{5,8e-4}{}}}{\cancel{0,03}}
+                                            }{
+                                \underbrace{\frac{\SI{4,795e-3}{}-x}{\cancel{0,03}}_{\approx\SI{4,795e-3}{}}}
+                                             } = \SI{5e-4}{}
+                $$
+            \onslide<6>
+                $$
+                    \frac{
+                        [\ce{OH-}]\cdot\SI{5,8e-4}{}
+                    }{
+                        \SI{4,795e-3}{}
+                    } = \SI{5e-4}{}
+                $$
+            \onslide<7>
+                $$
+                    [\ce{OH-}] = \SI{4,13e-4}{\Molar}
+                $$
+            \onslide<8>
+                $$
+                    \overbrace{-\log[\ce{OH-}]}^{pOH} = \SI{2,38}{}
+                $$
+            \onslide<9>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{pH = 11,62}
+                $$
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{pH = 11,53\text{ (Sin aproximaciones matemáticas)}}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (c)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{CH3NH2}) = \SI{25}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{CH3NH2}]_0 = \SI{,215}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_b(\ce{CH3NH2})= \SI{5e-4}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{Punto de equivalencia}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): pH de disolución de \ce{CH3NH2} en el punto de equivalencia}
+    \structure{Hay que trabajar con número de moles:}
+    \visible<2->{
+        $$
+            n(\ce{CH3NH2}) = n(\ce{HCl}) = \overbrace{\SI{5,375}{\mol}}^{\text{Anterior apartado}}
+        $$
+                }
+    \visible<3->{
+        $$
+            V(\ce{HCl}) = \frac{n(\ce{HCl})}{[\ce{HCl}]}\Rightarrow V(\ce{HCl}) = \frac{\SI{5,375}{\mol}}{\SI{,116}{\cancel\mol\per\liter}} = \SI{,046}{\liter}
+        $$
+        $$
+            V_T = \SI{,025}{\liter} + \SI{,046}{\liter} = \SI{,071}{\liter}
+        $$
+                }
+    \visible<4->{
+        \structure{En el punto de equivalencia únicamente hay el ácido conjugado:}
+        $$
+            [\ce{CH3NH3+}] = \frac{\SI{5,375e-3}{\mol}}{\SI{,071}{\liter}} = \SI{,0757}{\Molar}
+        $$
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    \ce{CH3NH3+(ac) <=> CH3NH2(ac) + H+(ac)}~~K_h(\ce{CH3NH3+}) = \frac{K_w}{K_b(\ce{CH3NH2})} = \frac{\overbrace{[\ce{CH3NH2}]}^{=[\ce{H+}]}[\ce{H+}]}{[\ce{CH3NH3+}]}       
+                $$
+            \onslide<5>
+                \structure{Despreciamos disociación, despejamos y aplicamos logaritmos:}
+                $$
+                    K_h(\ce{CH3NH3+}) = \frac{[\ce{H+}]^2}{[\ce{CH3NH3+}]}       
+                $$
+            \onslide<6>
+                $$
+                    \frac{1}{[\ce{H+}]^2} = \frac{1}{K_h(\ce{CH3NH3+})}\cdot\frac{1}{[\ce{CH3NH3+}]}       
+                $$
+            \onslide<7>
+                $$
+                    \log[\ce{H+}]^{-2} = \log\frac{K_b(\ce{CH3NH3+})}{K_w}+\log[\ce{CH3NH3+}]^{-1}
+                $$
+            \onslide<8>
+                $$
+                    2pH = -pK_b(\ce{CH3NH3+})+14-\log[\ce{CH3NH3+}]
+                $$
+            \onslide<9->
+                $$
+                    pH = 7-\frac{1}{2}\left(\overbrace{pK_b(\ce{CH3NH3+})}^{\SI{3,301}{}}+\underbrace{\log[\ce{CH3NH3+}]}_{\SI{-1,121}{}}\right)
+                $$
+        \end{overprint}
+                }
+    \visible<9>{
+        \begin{center}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{pH = \SI{5,91}{}}
+        \end{center}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (d)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{CH3NH2}) = \SI{25}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{CH3NH2}]_0 = \SI{,215}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_b(\ce{CH3NH2})= \SI{5e-4}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{\SI{10}{\milli\liter} después del punto de equivalencia}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): pH de disolución \SI{10}{\milli\liter} después del punto de equivalencia}
+    \structure{Del anterior apartado:} $V_T(\text{p.equiv.}) = \SI{71}{\milli\liter}$
+    \visible<2->{
+        \structure{Por tanto, el volumen en este apartado será:} $V_T = \SI{71}{\milli\liter} + \SI{10}{\milli\liter} = \SI{81}{\milli\liter}$
+                }
+    \visible<3->{
+        $$
+            n_0(\ce{CH3NH2}) = n(\ce{CH3NH3+}) = \SI{5,375e-3}{\mol}
+        $$
+                }
+    \visible<4->{
+        \begin{overprint}
+            \onslide<4>
+                Del apartado anterior (punto de equivalencia):
+                $$
+                    V(HCl) = \SI{46}{\milli\liter}
+                $$
+            \onslide<5>
+                Pero hemos echado \SI{10}{\milli\liter} de \ce{HCl} más ahora:
+                $$
+                    V(HCl) = \SI{46}{\milli\liter} + \SI{10}{\milli\liter} = \SI{56}{\milli\liter}
+                $$
+            \onslide<6>
+                Número de moles de \ce{HCl} totales:
+                $$
+                    [\ce{HCl}] = \frac{n(HCl)}{V(HCl)}\Rightarrow n(HCl) = \SI{,116}{\mol\per\cancel\liter}\cdot\SI{,056}{\cancel\liter} = \SI{6,49e-3}{\mol}
+                $$
+            \onslide<7->
+                Número de moles de \ce{HCl} totales en exceso (no reaccionados):
+                $$
+                    n_{\text{exceso}}(HCl) = \SI{6,49e-3}{\mol} - \SI{5,375e-3}{\mol} = \SI{1,12e-3}{\mol}
+                $$
+        \end{overprint}
+                }
+    \visible<8>{
+        \structure{Hay dos maneras para resolver el apartado:} suponer que pH viene dado por el exceso de \ce{HCl} o tener en cuenta también la disociación de la sal conjugada.
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{5}): pH de disolución \SI{10}{\milli\liter} después del punto de equivalencia}
+    \begin{block}{Incluir únicamente pH del \ce{HCl}}
+        $$
+            [\ce{HCl}] = [\ce{H+}] = \frac{n(\ce{HCl})}{V_T}\Rightarrow[\ce{H+}] = \frac{\SI{1,12e-3}{\mol}}{\SI{,081}{\liter}} = \SI{,0138}{\Molar}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{pH = -\log[\ce{H+}] = \SI{1,86}{}}
+        $$
+    \end{block}
+    \begin{block}<2->{Incluir disociación de sal conjugada}
+        \structure{Reacción de disociación de \ce{CH3NH3+}:}
+        $$
+            \ce{CH3NH3+(ac) <=> CH3NH2(ac) + H+(ac)}\quad K_h(\ce{CH3NH3+}) = \frac{K_w}{K_b(\ce{CH3NH2})} = \frac{[\ce{CH3NH2}][\ce{H+}]}{[\ce{CH3NH3+}]}
+        $$
+        \begin{overprint}
+            \onslide<2>
+                \begin{center}
+                    \begin{tabular}{clll}
+                        \toprule
+                        Estado  & [\ce{CH3NH3+}] (\si{\mol})         & {[\ce{CH3NH2}] (\si{\mol})}   & {[\ce{H+}] (\si{\mol})}   \\
+                        \midrule
+                        Inicial & \SI{5,375e-3}{}                    & \SI{0}{}                      & \SI{1,12e-3}{}            \\
+                        Final   & $\SI{5,375e-3}{}-x$                & $x$                           & $\SI{1,12e-3}{}+x$        \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<3>
+                $$
+                    \frac{K_w}{K_b(\ce{CH3NH2})} = \frac{\frac{x}{\cancel{V_T}}\cdot\frac{\SI{1,12e-3}{}+x}{V_T}}{\frac{\SI{5,375e-3}{}-x}{\cancel{V_T}}}
+                $$
+            \onslide<4>
+                $$
+                    x = \SI{6,965e-12}{\mol}\Rightarrow [\ce{CH3NH2}] = \SI{8,598e-11}{\Molar}
+                $$
+            \onslide<5->
+                $$
+                    [\ce{H+}] = \SI{,0138}{\Molar} + \SI{8,598e-11}{\Molar}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{pH = -\log[\ce{H+}] = \SI{1,86}{}}
+                $$
+        \end{overprint}
+    \end{block}
+\end{frame}

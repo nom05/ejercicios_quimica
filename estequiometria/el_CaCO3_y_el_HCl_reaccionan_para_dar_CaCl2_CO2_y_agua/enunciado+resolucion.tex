@@ -1,0 +1,201 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_CaCO3_y_el_HCl_reaccionan_para_dar_CaCl2_CO2_y_agua/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        V(\ce{HCl})?
+    $$}
+    Reacción: 
+    \ce{CaCO3}
+    + 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{HCl}}
+    \ce{->[\SI{90}{\percent}]}
+    \ce{CaCl2}
+    +
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{CO2}}
+    +
+    \ce{H2O}
+    \visible<1-|handout:0>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{CO2}) = \SI{100}{\liter}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T(\ce{CO2}) = \SI{20}{\degreeCelsius}=(273,15+20)\si{\kelvin}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P(\ce{CO2}) = \SI{750}{\torr} = \frac{75\cancel 0}{76\cancel 0}\si{\atm}}
+        $$
+        $$
+            Rto = \SI{90}{\percent}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{[\ce{HCl}] = \SI{5}{\mol\per\liter}}
+        $$
+    }
+    \visible<2-|handout:0>{Pero también ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{HCl}) = \SI{36,46}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ajuste de la ecuación de la reacción química}
+    \structure{Por tanteo}, es análogo al ejercicio~12:\\[.3cm]
+    \visible<2-|handout:0>{
+        \centering\ce{CaCO3 + H}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl}} \ce{-> CO2 + Ca}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl2}} \ce{+ H2O}\\[.3cm]
+    }
+    \visible<3-|handout:0>{
+        \centering\ce{CaCO3(s) + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{2}\ce{H}{\ce{Cl}} \ce{-> CO2 + Ca}\ce{Cl2} \ce{+ H2O}\\
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo del volumen de \ce{HCl}}
+    \structure{Paso 1:} Volumen teórico vs. volumen real. Si la reacción tiene un \SI{90}{\percent} de rendimiento, significa que no todo el \ce{HCl} reacciona para dar \ce{CO2}.\\
+    Tened en cuenta que, según la ecuación de los gases ideales, el volumen y el número de moles son proporcionales por lo que ya podemos obtener el volumen teórico.\\
+    \begin{overprint}
+        \onslide<1>
+            $$
+                V_{\text{teo}}(\ce{CO2})
+                \quad ??\quad 
+                V_{\text{real}}(\ce{CO2})
+            $$
+        \onslide<2>    
+            $$
+                V_{\text{teo}}(\ce{CO2})
+                \quad >\quad
+                V_{\text{real}}(\ce{CO2})
+            $$
+        \onslide<3->
+            $$
+                \frac{9\cancel 0}{10\cancel 0}
+                V_{\text{teo}}(\ce{CO2})
+                \quad =\quad
+                V_{\text{real}}(\ce{CO2})
+                \Rightarrow
+                V_{\text{teo}}(\ce{CO2})
+                \quad =\quad
+                \frac{10}{9}
+                V_{\text{real}}(\ce{CO2})
+            $$
+    \end{overprint}
+    \visible<3->{
+        \structure{Paso 2:} \textbf{¿Cuántos moles de \ce{CO2}?} Utilizando el $V_{\text{teo}}(\ce{CO2})$ obtenemos el número de moles $n(\ce{CO2})$ mediante la ecuación de los gases ideales:
+        \begin{equation}\label{eq:gas_ideal}
+            PV=nRT\Rightarrow V=\frac{nRT}{P}
+        \end{equation}
+                }
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    V_{\text{teo}}(\ce{CO2})=\frac{n(\ce{CO2})RT(\ce{CO2})}{P(\ce{CO2})}
+                    \Rightarrow
+                    n(\ce{CO2}) = V_{\text{teo}}(\ce{CO2})\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}
+                $$
+            \onslide<5>
+                $$
+                    V_{\text{teo}}(\ce{CO2})=\frac{n(\ce{CO2})RT(\ce{CO2})}{P(\ce{CO2})}
+                    \Rightarrow
+                    n(\ce{CO2}) = \overbrace{V_{\text{teo}}(\ce{CO2})}^{\frac{10}{9}V_{\text{real}}(\ce{CO2})}\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}
+                $$
+            \onslide<6->
+                $$
+                    n(\ce{CO2}) = \frac{10}{9}V_{\text{real}}(\ce{CO2})\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}
+                $$
+        \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo del volumen de \ce{HCl}}
+    \structure{Reacción:} \textbf{\ce{CaCO3 + 2HCl -> CO2 + CaCl2 + H2O}}\\[.3cm]
+    \structure{Paso 3:} \textbf{Cálculo del número de moles de \ce{HCl}.}\\
+    \centering Según la estequiometría: \SI{2}{\mol} de \ce{HCl} \ce{->} \SI{1}{\mol} de \ce{CO2}
+    \begin{overprint}
+        \onslide<2>
+            $$
+                n(\ce{HCl})
+                \quad ??\quad 
+                n(\ce{CO2})
+            $$
+        \onslide<3>    
+            $$
+                n(\ce{HCl})
+                \quad >\quad 
+                n(\ce{CO2})
+            $$
+        \onslide<4>
+            $$
+                n(\ce{HCl})
+                \quad =\quad 
+                2n(\ce{CO2})
+            $$
+        \onslide<5>
+            $$
+                n(\ce{HCl})
+                \quad =\quad 
+                2\times\underbrace{n(\ce{CO2})}_{n(\ce{CO2}) = \frac{10}{9}V_{\text{real}}(\ce{CO2})\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}}
+            $$
+        \onslide<6->
+            $$
+                n(\ce{HCl})
+                \quad =\quad 
+                \frac{\cancelto{20}{2\cdot 10}}{9}V_{\text{real}}(\ce{CO2})\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}
+            $$
+    \end{overprint}
+    \visible<7->{
+        \structure{Paso 4:} Sustituimos $n(\ce{HCl})$ por la relación con la molaridad de la ecuación~\eqref{eq:molaridad} y despejamos:
+        $$
+            M=\frac{n}{V}\Rightarrow n=M\cdot V
+        $$
+                }
+    \visible<8->{
+        $$
+            [\ce{HCl}]V(\ce{HCl})
+            \quad =\quad 
+            \frac{20}{9}V_{\text{real}}(\ce{CO2})\cdot\frac{P(\ce{CO2})}{RT(\ce{CO2})}
+        $$
+                }
+    \visible<9->{
+        $$
+            V(\ce{HCl})
+            \quad =\quad 
+            \frac{20}{9}\cdot\frac{V_{\text{real}}(\ce{CO2})\cdot P(\ce{CO2})}{[\ce{HCl}]\cdot R\cdot T(\ce{CO2})}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo del volumen de \ce{HCl}}
+        \structure{Reacción:} \textbf{\ce{CaCO3 + 2HCl -> CO2 + CaCl2 + H2O}}\\[.3cm]
+        \structure{Paso 5:} \textbf{Sustituimos por los valores:}\\
+        $$
+            V(\ce{HCl})
+            \quad =\quad 
+            \frac{20}{9}\cdot\frac{V_{\text{real}}(\ce{CO2})\cdot P(\ce{CO2})}{[\ce{HCl}]\cdot R\cdot T(\ce{CO2})}
+        $$
+        \visible<2->{
+            $$
+                V(\ce{HCl})
+                \quad =\quad 
+                \frac{20}{9}\cdot\frac{\SI{100}{\liter}\cdot \frac{75}{76}~\si{\cancel\atm}}{\SI{5}{\cancel\mol\per\cancel\liter}\cdot\SI{0,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{293,15}{\cancel\kelvin}}
+            $$
+                    }
+        \visible<3->{
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{CO2}) = \SI{1,824}{\liter} = \SI{1824}{\milli\liter}}
+            $$
+                    }
+\end{frame}

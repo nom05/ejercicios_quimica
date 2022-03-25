@@ -1,0 +1,186 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/determinar_la_temperatura_final_resultante_al_mezclar_150g_de_hielo_a_0C/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        \textbf{\Large ¿$T_{\text{final}}$?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{H2O(s)}) = \SI{150}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T(\ce{H2O(s)}) = \SI{0}{\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{H2O(l)}) = \SI{300}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T(\ce{H2O(l)}) = \SI{50}{\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{C_e(H2O(l)) = \SI{1}{\calorie\per\gram\per\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{H2O}) = \SI{80}{\calorie\per\gram}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): temperatura final do sistema}
+    \structure{\Large Dos procesos:}
+    \begin{block}{Calentamiento del agua sólida}
+        $$
+            \ce{
+                    $\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+                    ->[Q_1]
+                    $\underset{\SI{0}{\celsius}}{\ce{H2O(l)}}$
+                    ->[Q_2]
+                    $\underset{T_{\text{final}}}{\ce{H2O(l)}}$
+                }
+        $$
+    \end{block}
+    \begin{alertblock}<2->{Enfriamiento del agua líquida}
+        $$
+            \ce{
+                $\underset{\SI{50}{\celsius}}{\ce{H2O(l)}}$
+                ->[Q_e]
+                $\underset{T_{\text{final}}}{\ce{H2O(l)}}$
+            }
+        $$
+    \end{alertblock}
+    \visible<3->{
+        \begin{overprint}
+            \onslide<3>
+                \structure{Estamos en un \underline{sistema aislado}: } $\sum Q = 0\Rightarrow Q_{\text{agua sólida}} = -Q_{\text{agua líquida}}$
+            \onslide<4>
+                \structure{Estamos en un \underline{sistema aislado}:}
+                $$
+                    \overbrace{Q_1 + Q_2}^{Q_{\text{agua sólida}}} = -\underbrace{Q_e}_{Q_{\text{agua líquida}}}
+                $$
+            \onslide<5>
+                $$
+                    \underbrace{m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O})}_{Q_1} + \underbrace{m(\ce{H2O(s)})\vdot C_e\vdot\Delta T(\ce{H2O(s)})}_{Q_2} = -\overbrace{m(\ce{H2O(l)})\vdot C_e\vdot\Delta T(\ce{H2O(l)})}^{Q_e}
+                $$
+            \onslide<6>
+                $$
+                    m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) + m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot\overbrace{\left[T_{\text{final}}-T_{\text{inicial}}(\ce{H2O(s)})\right]}^{\Delta T(\ce{H2O(s)})} =
+                $$
+                $$
+                   = -m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot\underbrace{\left[T_{\text{final}}-T_{\text{inicial}}(\ce{H2O(l)})\right]}_{\Delta T(\ce{H2O(l)})}
+                $$
+            \onslide<7>
+                $$
+                    m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) + m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}-m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(s)}) =
+                $$
+                $$
+                    = -\left[m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}-m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(l)})\right]
+                $$
+            \onslide<8>
+                $$
+                    m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) + m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}-m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(s)}) =
+                $$
+                $$
+                    = m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(l)})-m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}
+                $$
+            \onslide<9>
+                \begin{align*}
+                    m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}\\
+                    &+
+                    m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{final}}=\\
+                    &=
+                    m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(l)})\\
+                    &+
+                    m(\ce{H2O(s)})\vdot C_e(\ce{H2O(l)})\vdot T_{\text{inicial}}(\ce{H2O(s)})\\
+                    &-
+                    m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) 
+                \end{align*}
+            \onslide<10>
+                \begin{align*}
+                    T_{\text{final}}\vdot C_e(\ce{H2O(l)})\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]=\\
+                    &=
+                    m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\\
+                    &\times\left[T_{\text{inicial}}(\ce{H2O(l)})-T_{\text{inicial}}(\ce{H2O(s)})\right]\\
+                    &-
+                    m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) 
+                \end{align*}
+            \onslide<11>
+                \begin{align*}
+                    T_{\text{final}}=&\\
+                    &=
+                    \frac{
+                            m(\ce{H2O(l)})\vdot C_e(\ce{H2O(l)})\vdot\left[T_{\text{inicial}}(\ce{H2O(l)})-T_{\text{inicial}}(\ce{H2O(s)})\right]
+                         }{
+                            C_e(\ce{H2O(l)})\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                          }
+                    \\
+                    &-
+                    \frac{
+                            m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) 
+                        }{
+                            C_e(\ce{H2O(l)})\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                         }
+                \end{align*}
+            \onslide<12>
+                \begin{align*}
+                    T_{\text{final}}=&\\
+                    &=
+                    \frac{
+                        m(\ce{H2O(l)})\vdot \cancel{C_e(\ce{H2O(l)})}\vdot\left[T_{\text{inicial}}(\ce{H2O(l)})-T_{\text{inicial}}(\ce{H2O(s)})\right]
+                    }{
+                        \cancel{C_e(\ce{H2O(l)})}\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                    }
+                    \\
+                    &-
+                    \frac{
+                        m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) 
+                    }{
+                        C_e(\ce{H2O(l)})\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                    }
+                \end{align*}
+            \onslide<13>
+                \begin{align*}
+                    T_{\text{final}}=&\\
+                    &=
+                    \frac{
+                        m(\ce{H2O(l)})\vdot\left[T_{\text{inicial}}(\ce{H2O(l)})-T_{\text{inicial}}(\ce{H2O(s)})\right]
+                    }{
+                        \left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                    }
+                    \\
+                    &-
+                    \frac{
+                        m(\ce{H2O(s)})\vdot\Delta H_f(\ce{H2O}) 
+                    }{
+                        C_e(\ce{H2O(l)})\vdot\left[m(\ce{H2O(s)}) + m(\ce{H2O(l)})\right]
+                    }
+                \end{align*}
+            \onslide<14->
+                \begin{align*}
+                    T_{\text{final}}=&\\
+                    &=
+                    \frac{
+                        \SI{300}{\cancel\gram}\vdot\left[\SI{50}{\celsius}-\SI{0}{\celsius}\right]
+                    }{
+                        \left[\SI{150}{\cancel\gram} + \SI{300}{\cancel\gram}\right]
+                    }
+                    \\
+                    &-
+                    \frac{
+                        \SI{150}{\cancel\gram}\vdot\SI{80}{\cancel\calorie\per\cancel\gram} 
+                    }{
+                        \SI{1}{\cancel\calorie\per\cancel\gram\per\celsius}\vdot\left[\SI{150}{\cancel\gram} + \SI{300}{\cancel\gram}\right]
+                    }
+                \end{align*}
+        \end{overprint}
+                }
+        \visible<15->{
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{final}}(\ce{H2O(l)}) = \SI{7}{\celsius}}
+            $$
+                      }
+\end{frame}
+

@@ -1,0 +1,254 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/a_la_vista_de_la_tabla_de_potenciales_estándar_de_reduccion_adjunta_imagine_una_celda_galvanica_maximizando_la_fem/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{
+				¿Semirreacciones y reacción ajustadas? ¿$\varepsilon^0_{\text{total}}$? ¿$K$? ¿$\varepsilon$?
+		}}\\[.4cm]
+		\begin{tabular}{cc}
+			$\varepsilon^0(\ce{Ni^2+|Ni}) = \SI{-,250}{\volt}$			&	$\varepsilon^0(\ce{Sn^2+|Sn}) = \SI{-,136}{\volt}$		\\[.2cm]
+			$\varepsilon^0(\ce{Pb^2+|Pb}) = \SI{-,126}{\volt}$			&	$\varepsilon^0(\ce{H+|H2}) = \SI{,000}{\volt}$			\\[.2cm]
+			$\varepsilon^0(\ce{Cr2O7^2-|Cr^3+}) = \SI{+1,333}{\volt}$	&	$\varepsilon^0(\ce{MnO4^-|Mn^2+}) = \SI{+1,507}{\volt}$	\\[.2cm]
+			$\varepsilon^0(\ce{Pb^4+|Pb^2+}) = \SI{+1,693}{\volt}$		&	$\varepsilon^0(\ce{F^-|F2}) = \SI{+2,865}{\volt}$		\\[.2cm]
+		\end{tabular}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{celda galvánica}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{medio ácido}}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\varepsilon^0_{\text{total}}\text{ máximo}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{cátodo:} \ce{Cr2O7^2-}/\ce{Cr^3+}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}\\[.2cm]
+		\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\setcounter{enumi}{5}
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{[\ce{K2Cr2O7}] = \SI{,20}{\Molar}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\pH = \num{2}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{[\text{otros cationes}] = \SI{,15}{\Molar}}\\[.2cm]
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{t = \SI{5}{\min}=\SI{300}{\second}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{I = \SI{,5}{\ampere}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}
+		\end{enumerate}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Reacciones, ajuste y $\varepsilon^0_{\text{total}}$}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Consideraciones previas:}
+			\begin{itemize}
+				\item\textbf{Celda galvánica:} el proceso es espontáneo en condiciones estándar ($\Delta G^0 = - n\vdot F\vdot\varepsilon^0_{\text{total}} < 0$). Por tanto, $\varepsilon^0_{\text{total}}\equiv\varepsilon^0_{\text{T}} > 0$.
+				\item Según el enunciado el \textbf{ajuste es en medio ácido}.
+				\item\textbf{Cátodo/reducción:} $\varepsilon^0(\ce{Cr2O7^2-|Cr^3+}) = \SI{+1,333}{\volt}$.
+				\item\textbf{Maximizar:} conseguir el valor más alto de $\varepsilon^0_\text{T}$
+			\end{itemize}
+			Con estos datos y la tabla de \underline{potenciales estándar de reducción} que nos dan tenemos que escoger el potencial que, cambiado de signo para que sea un potencial estándar de oxidación, se sume a $\varepsilon^0(\ce{Cr2O7^2-|Cr^3+})$ y dé el valor más alto posible.
+
+			\structure{La única posibilidad es la oxidación del níquel:} $\varepsilon^0(\ce{Ni^2+|Ni}) = \SI{-,250}{\volt}\Rightarrow\varepsilon^0(\ce{Ni|Ni^2+}) = \SI{,250}{\volt}$
+		\onslide<2>
+			$$
+				\ce{Cr2O7^2- + Ni -> Cr^3+ + Ni^2+}
+			$$
+		\onslide<3>
+			$$
+				\ce{
+					$\overset{+6}{\ce{Cr}}$2
+					$\overset{-2}{\ce{O}}$7^{2-}
+					+
+					$\overset{0}{\ce{Ni}}$
+					->
+					$\overset{+3}{\ce{Cr^{3+}}}$
+					+
+					$\overset{+2}{\ce{Ni^2+}}$
+				}
+			$$
+		\onslide<4>
+			\structure{Semirreacción de oxidación:} (aumenta el estado de oxidación)\quad\ce{$\overset{0}{\ce{Ni}}$ -> Ni^2+}
+			\structure{Semirreacción de reducción:} (disminuye el estado de oxidación)\quad\ce{
+				$\overset{+6}{\ce{Cr}}$2
+				O7^{2-} -> Cr^{3+}
+			}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:}\quad\ce{Ni -> Ni^2+}
+			\structure{Semirreacción de reducción:}\quad\ce{\textbf{\color{green}\ce{Cr2}}O7^{2-} -> \textbf{\color{green}2}Cr^3+}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{Ni -> Ni^2+}
+			\structure{Semirreacción de reducción:}\quad\ce{Cr2\textbf{\color{red}\ce{O7}}^2- -> 2Cr^3+ + \textbf{\color{red}\ce{7H2O}}}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:}\quad\ce{Ni -> Ni^2+}
+			\structure{Semirreacción de reducción:}\quad\ce{\textbf{\color{green}\ce{14H+}} + Cr2O7^2- -> 2Cr^3+ + \textbf{\color{green}\ce{7H2}}O}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:}\quad\ce{Ni -> Ni^2+ \textbf{\color{red}\ce{+ 2e-}}}
+			{\footnotesize (2 cargas negativas en reactivos frente a 0 en productos $\rightarrow$ 2 electrones en productos)}
+			\structure{Semirreacción de reducción:}\quad\ce{14H+ + Cr2O7^2- \textbf{\color{green}\ce{+ 6e-}} -> 2Cr^3+ + 7H2O}
+			{\footnotesize (12 cargas positivas en reactivos frente a 6 positivas en productos $\rightarrow$ 6 electrones en reactivos)}
+		\onslide<9>
+			\structure{Semirreacción de oxidación:} $3\times\left(\ce{Ni -> Ni^2+ + 2e-}\right)$
+			\structure{Semirreacción de reducción:} $1\times\left(\ce{14H+ + Cr2O7^2- + 6e- -> 2Cr^3+ + 7H2O}\right)$
+		\onslide<10>
+			\structure{Semirreacción de oxidación:}\quad\ce{3Ni -> 3Ni^2+ + 6e-}
+			\structure{Semirreacción de reducción:}\quad\ce{14H+ + Cr2O7^2- + 6e- -> 2Cr^3+ + 7H2O}
+		\onslide<11-12>
+			\begin{center}
+				\begin{tabular}{lcr}
+					{\small Oxid., reductor (ánodo):}	&	\ce{3Ni -> 3Ni^2+ + \cancel{6e-}}							&	$\varepsilon^0_{\text{ox}}=\SI{,250}{\volt}$	\\
+					{\small Reduc., oxidante (cátodo):}	&	\ce{14H+ + Cr2O7^{2-} + \cancel{6e-} -> 2Cr^{3+} + 7H2O}	&	$\varepsilon^0_{\text{red}}=\SI{1,333}{\volt}$	\\
+					\midrule
+					Reacción global:													&
+					\amarillo{\ce{14H+ + Cr2O7^2- + 3Ni -> 2Cr^3+ + 7H2O + 3Ni^2+}}		&
+					\underline{\textbf{$\varepsilon^0_{\text{T}}=\SI{1,583}{\volt}$}}	\\
+				\end{tabular}				
+			\end{center}
+			\textbf{6 electrones implicados}
+			$$
+				Q=\frac{
+							[\ce{Cr^3+}]^2\vdot [\ce{Ni^2+}]^3
+						}{
+							[\ce{H+}]^{14}\vdot[\ce{Cr2O7^2-}]
+						}
+			$$
+	\end{overprint}
+	\visible<-12>{
+		\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item<2-> Escribimos la reacción sin ajustar.
+			\item<3-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+			\item<4-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+			\item<5-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+			\item<6-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+			\item<7-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+			\item<8-> Ajustamos número de electrones en cada reacción.
+			\item<9-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+			\item<11-> Sumamos ambas reacciones.
+			\item<12-> Simplificamos si procede (en este caso no).
+		\end{enumerate}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): constante de equilibrio a \SI{25}{\celsius}}
+	\structure{Condición de equilibrio:} $\Delta G = 0\Rightarrow\Delta G = -n\vdot F\vdot\varepsilon\Rightarrow\varepsilon_{\text{total}} = 0$
+	\structure{Ecuación de Nernst:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\varepsilon = \varepsilon^0 - \frac{\overbrace{R}^{\SI{8,314}{\joule\per\mol\per\kelvin}}\vdot\overbrace{T}^{\SI{298,15}{\kelvin}}}{\underbrace{n}_{\text{coef.esteq. electrones}}\vdot\underbrace{F}_{\SI{96485}{\coulomb\per\mol}}}\ln Q}
+			\Leftrightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log Q}
+	$$
+	\begin{itemize}
+		\item La segunda es válida a \SI{25}{\celsius} o cuando no nos dicen la temperatura (la suponemos a \SI{25}{\celsius}).
+		\item En la primera ecuación se usa el logaritmo natural (base número ``$e$''), en la segunda el logaritmo decimal (base \num{10}).
+	\end{itemize}
+	En este caso la ecuación de Nernst para el equilibrio ($Q=K_{\text{eq}}$) a \SI{25}{\celsius} nos queda:
+	$$
+		0 = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log K_{\text{eq}}\Rightarrow
+		\log K_{\text{eq}} = \frac{\varepsilon^0\vdot n}{\num{,0592}}\Rightarrow
+		\log K_{\text{eq}} = \frac{\num{1,583}\vdot 6}{\num{,0592}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{\text{eq}}=\num{e160,44}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): potencial con otras concentraciones no estándar}
+	\structure{Tenemos que expresar $Q$ de acuerdo a nuestra reacción y calcular su logaritmo para nuestras concentraciones:}
+	$$
+		Q=\frac{
+					[\ce{Cr^3+}]^2\vdot [\ce{Ni^2+}]^3
+							}{
+					[\ce{H+}]^{14}\vdot[\ce{Cr2O7^2-}]
+				}
+		\Rightarrow
+		\log Q = \log(\frac{
+				[\ce{Cr^3+}]^2\vdot [\ce{Ni^2+}]^3
+							}{
+				[\ce{Cr2O7^2-}]
+							}
+					)
+					+ \underbrace{\log(\frac{1}{[\ce{H+}]^{14}})}_{\num{14}\vdot\pH}\Rightarrow
+	$$
+	$$
+		\log Q = \log(\frac{\num{,15}^3\vdot\num{,15}^2}{\num{,20}}) + \num{14}\vdot\num{2} = \num{24,579}
+	$$
+	\structure{Usando la ecuación de Nernst:}
+	$$
+		\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log Q\Rightarrow
+		\varepsilon = \num{1,583} - \frac{\num{,0592}}{6}\vdot\num{24,58}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \SI{1,340}{\volt}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): potencial con otras concentraciones después de pasar \SI{5}{\minute} a \SI{,5}{\ampere}}
+	\structure{Ley de Faraday:} con ello obtenemos el n"o de moles de electrones que han pasado desde el proceso de oxidación al de reducción.
+	$$
+		n(\ce{e-})\vdot F = I\vdot t\Rightarrow n(\ce{e-}) = \frac{I\vdot t}{F}\Rightarrow n(\ce{e-}) =
+		\frac{\SI{,5}{\ampere}\vdot\overbrace{\SI{300}{\second}}^{\SI{5}{\minute}}}{\SI{96485}{\coulomb\per\mol}} =
+		\SI{1,554e-3}{\mol}
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\structure{Estequiometría de las reacciones:} usando las semirreacciones y la reacción global, relacionamos estequiométricamente el n"o de moles de electrones y el resto de especies. {\footnotesize (NOTA: ``c=consumidos'' y ``p=producidos'')}
+			\begin{center}
+				\amarillo{\ce{\cancel{\ce{6e-}} + 14H+ + Cr2O7^2- + 3Ni -> 2Cr^3+ + 7H2O + 3Ni^2+ + \cancel{\ce{6e-}}}}
+			\end{center}
+				$$
+					14n(\ce{e-}) = 6n_{\text{c}}(\ce{H+})\Rightarrow
+					n_{\text{c}}(\ce{H+}) = \frac{7}{3}n(\ce{e-})\Rightarrow
+					n_{\text{c}}(\ce{H+}) = \SI{3,627e-3}{\mol}
+				$$
+				$$
+					n(\ce{e-}) = 6n_{\text{c}}(\ce{Cr2O7^2-})\Rightarrow
+					n_{\text{c}}(\ce{Cr2O7^2-}) = \frac{1}{6}n(\ce{e-})\Rightarrow
+					n_{\text{c}}(\ce{Cr2O7^2-}) = \SI{2,591e-4}{\mol}
+				$$
+				$$
+					2n(\ce{e-}) = 6n_{\text{p}}(\ce{Cr^3+})\Rightarrow
+					n_{\text{p}}(\ce{Cr^3+}) = \frac{1}{3}n(\ce{e-})\Rightarrow
+					n_{\text{p}}(\ce{Cr^3+}) = \SI{5,182e-4}{\mol}
+				$$
+				$$
+					3n(\ce{e-}) = 6n_{\text{p}}(\ce{Ni^2+})\Rightarrow
+					n_{\text{p}}(\ce{Ni^2+}) = \frac{1}{2}n(\ce{e-})\Rightarrow
+					n_{\text{p}}(\ce{Ni^2+}) = \SI{7,773e-4}{\mol}
+				$$
+		\onslide<2>
+			\structure{\textbf{$\boldmath V=\SI{1}{\liter}$:}} pasamos el n"o de moles de cada sustancia a concentraciones molares ($M = \rfrac{n}{V}$). {\footnotesize (NOTA: ``c=consumidos'' y ``p=producidos'')}
+				$$
+					[\ce{H+}]_{\text{c}} = \frac{\SI{3,627e-3}{\mol}}{\SI{1}{\liter}} = \SI{3,627e-3}{\Molar}
+				$$
+				$$
+					[\ce{Cr2O7^2-}]_{\text{c}} = \frac{\SI{2,591e-4}{\mol}}{\SI{1}{\liter}} = \SI{2,591e-4}{\Molar}
+				$$
+				$$
+					[\ce{Cr^3+}]_{\text{p}} = \frac{\SI{5,182e-3}{\mol}}{\SI{1}{\liter}} = \SI{5,182e-4}{\Molar}
+				$$
+				$$
+					[\ce{Ni^2+}]_{\text{p}} = \frac{\SI{7,773e-3}{\mol}}{\SI{1}{\liter}} = \SI{7,773e-4}{\Molar}
+				$$
+		\onslide<3>
+			\structure{Calculamos las nuevas concentraciones después de que la pila esté funcionando \SI{5}{\minute} con las concentraciones del anterior apartado:}
+			\begin{center}
+				\begin{tabular}{c|SSSS}
+									&	{[\ce{H+}]~(\si{\Molar})}	&	{[\ce{Cr2O7^2-}]~(\si{\Molar})}	&	{[\ce{Cr^3+}]~(\si{\Molar})}	&	{[\ce{Ni^2+}]~(\si{\Molar})}	\\
+					\midrule
+					Inicial			&	{$\num{,01}=\num{10e-3}$}	&	 ,2								&	 ,15							&	 ,15							\\
+					Reaccionan		&	-3,627e-3					&	-,00026							&	+,00052							&	+,00078							\\
+					Finales			&	 6,372e-3					&	 ,19974							&	 ,15052							&	 ,15078							\\
+				\end{tabular}
+			\end{center}
+			\structure{Ecuación de Nernst:} sustituimos los nuevos valores:
+			$$
+				\varepsilon = \num{1,583} - \frac{\num{,0592}}{6}\vdot\log(\frac{\num{,15052}^2\vdot\num{,15052}^3}{\num{,19974}\vdot(\num{6,372e-3})^{14}})\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \SI{1,313}{\volt}}
+			$$
+	\end{overprint}
+\end{frame}

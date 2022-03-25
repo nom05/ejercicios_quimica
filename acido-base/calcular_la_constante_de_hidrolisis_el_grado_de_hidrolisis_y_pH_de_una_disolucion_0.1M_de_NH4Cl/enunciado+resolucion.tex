@@ -1,0 +1,129 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcular_la_constante_de_hidrolisis_el_grado_de_hidrolisis_y_pH_de_una_disolucion_0.1M_de_NH4Cl/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del enunciado}
+    {\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿$K_h(\ce{NH4+}) = K_a(\ce{NH4+})$?
+        \item ¿$\alpha(\ce{NH4+})$?
+        \item ¿pH?
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NH4Cl}]_0 = \SI{,1}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de $K_h(\ce{NH4+})$}
+    \structure{Disociación de ácido débil:} \underline{PARCIAL} implicando estas reacciones:\\
+    \begin{equation}\label{re:dis_NH4+}
+	    \ce{NH4+(ac) + H2O(l) <=> NH3(ac)  + H3O+(ac)}
+    \end{equation}
+	\begin{equation}\label{re:dis_NH3}
+    	\ce{NH3(ac) + H2O(l) <=> NH4+(ac) + OH-(ac)}
+	\end{equation}
+	\begin{equation}\label{re:dis_agua}
+		\ce{2H2O(l) <=> H3O+(ac) + OH-(ac)}
+	\end{equation}
+    \visible<2->{
+        \structure{Combinando:} la reacción opuesta de la segunda $-$\eqref{re:dis_NH3} sumada a la disociación del agua \eqref{re:dis_agua} nos da la primera ecuación \eqref{re:dis_NH4+}
+        $$
+            \ce{NH4+(ac) + \cancel{\ce{OH-(ac)}} -> NH3(ac) + \cancel{\ce{H2O(l)}}}\quad K^{-1}_b(\ce{NH3}) = \frac{[\ce{NH3}]}{[\ce{NH4+}][\ce{OH-}]}
+        $$
+        $$
+                \ce{\cancel{2}H2O(l) -> H3O+(ac) + \cancel{\ce{OH-(ac)}}}\quad K_w = [\ce{H3O+}][\ce{OH-}]
+        $$
+        \hrulefill
+        $$
+            \ce{NH4+(ac) + H2O(l) <=> NH3(ac)  + H3O+(ac)}\quad K_h = \frac{[\ce{NH3}]}{[\ce{NH4+}]\cancel{[\ce{OH-}]}}\cdot [\ce{H3O+}]\cancel{[\ce{OH-}]}
+        $$
+                }
+    \visible<3->{
+        Que se corresponde con la constante de equilibrio de la reacción \eqref{re:dis_NH4+}. \textbf{Por tanto:}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_h = \frac{\SI{1e-14}{}}{\SI{1,8e-5}{}} = \SI{5,6e-10}{}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): determinación de $\alpha(\ce{NH4+})$}
+    \structure{Reacción:} \ce{NH4+(ac) + H2O(l) <=> NH3(ac)  + H3O+(ac)}~~~~$[\ce{NH4+}]_0 = \SI{,1}{\Molar}$
+    \visible<2->{
+        \begin{center}
+            \begin{tabular}{cccc}
+                \toprule
+                Estado  & [\ce{NH4+}] (\si{\Molar}) & [\ce{NH3}] (\si{\Molar}) & [\ce{H3O+}] (\si{\Molar}) \\
+                \midrule
+                Inicial & $[\ce{NH4+}]_0$                  & 0                            & 0                \\
+                Final 1  & $[\ce{NH4+}]_0-\overbrace{x}^{[\ce{NH4+}]_0\cdot\alpha(\ce{NH4+})}$                & $x$ & $x$ \\
+                Final 2  & $[\ce{NH4+}]_0(1-\alpha(\ce{NH4+}))$                & $[\ce{NH4+}]_0\cdot\alpha(\ce{NH4+})$ & $[\ce{NH4+}]_0\cdot\alpha(\ce{NH4+})$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+                }
+    \visible<3->{
+        \begin{overprint}
+            \onslide<3>
+                $$
+                    K_h = \frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]}
+                $$
+            \onslide<4>
+                $$
+                    K_h = \frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]} = 
+                    \frac{[\ce{NH4+}]^{\cancel{2}}_0\cdot\alpha(\ce{NH4+})^2}{\cancel{[\ce{NH4+}]_0}(\underbrace{1-\alpha(\ce{NH4+}))}_{\approx 1}}
+                $$
+            \onslide<5>
+                $$
+                    K_h = \frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]} = 
+                    \frac{[\ce{NH4+}]_0\cdot\alpha(\ce{NH4+})^2}{1}
+                $$
+            \onslide<6->
+                $$
+                    \alpha(\ce{NH4+}) = +\sqrt{\frac{K_w}{K_b(\ce{NH3})\cdot[\ce{NH3}]_0}}\Rightarrow
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\alpha(\ce{NH4+}) = +\sqrt{\frac{\SI{1e-14}{}}{\SI{1,8e-5}{}\cdot\SI{,1}{\Molar}}} = \SI{7,5e-5}{}}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): determinación de $pH$}
+    \structure{Con la definición de $pH$:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                pH = -\log[\ce{H+}] = -\log\left(\alpha(\ce{NH4+})\cdot[\ce{NH4+}]_0\right)
+            $$
+        \onslide<2>
+            $$
+                pH = -\log[\ce{H+}] = -\log\left(\alpha(\ce{NH4+})\cdot[\ce{NH4+}]_0\right) = -\log\left(\alpha(\ce{NH4+})\right)-\log\left([\ce{NH4+}]_0\right)
+            $$
+        \onslide<3>
+            $$
+                pH = -\log[\ce{H+}] = -\log\left(\alpha(\ce{NH4+})\cdot[\ce{NH4+}]_0\right) = -\log\left(\alpha(\ce{NH4+})\right)-\log\left(\SI{,1}{}\right)
+            $$
+        \onslide<4>
+            $$
+                pH = -\log[\ce{H+}] = -\log\left(\alpha(\ce{NH4+})\cdot[\ce{NH4+}]_0\right) = -\log\left(\alpha(\ce{NH4+})\right)+1
+            $$
+    \end{overprint}
+    \visible<4>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{pH = \SI{5,13}{}}
+        $$
+                }
+\end{frame}
+

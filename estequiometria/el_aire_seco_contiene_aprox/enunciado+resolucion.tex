@@ -1,0 +1,150 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_aire_seco_contiene_aprox/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema: si se resuelve usando porcentaje en masa}
+	{\huge
+		$$
+			d(\text{aire})?\quad\quad\overline{Mm}(\text{aire})?
+		$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T(aire)=\SI{273,15}{\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(aire)=\SI{1}{\atm}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{21}{\percent}\rfrac{m}{m}\text{ \ce{O2}}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{78}{\percent}\rfrac{m}{m}\text{ \ce{N2}}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{1}{\percent}\rfrac{m}{m}\text{ \ce{Ar}}}
+	\end{center}
+    \visible<2-|handout:0>{Pero también\ldots\\
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{O2}) = \SI{32,00}{\gram\per\mol}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{N2}) = \SI{28,01}{\gram\per\mol}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mat(\ce{Ar})= \SI{39,95}{\gram\per\mol}}
+					}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): obtención de las fracciones molares de cada gas}
+	\structure{Suponiendo \SI{100}{\gram} de muestra, se obtiene $n$ de cada gas:}
+	\begin{overprint}
+		\onslide<1-3>
+			\visible<1->{
+				\begin{itemize}
+					\item<1-> $\SI{21}{\percent}\Rightarrow\SI{21}{\gram}\Rightarrow n(\ce{O2})=\frac{\SI{21}{\cancel\gram}}{\SI{32,00}{\cancel\gram\per\mol}}=\SI{,66}{\mol}$
+					\item<2-> $\SI{78}{\percent}\Rightarrow\SI{78}{\gram}\Rightarrow n(\ce{N2})=\frac{\SI{78}{\cancel\gram}}{\SI{28,01}{\cancel\gram\per\mol}}=\SI{2,78}{\mol}$
+					\item<3-> $\SI{1}{\percent}\Rightarrow\SI{1}{\gram}\Rightarrow n(\ce{Ar})=\frac{\SI{1}{\cancel\gram}}{\SI{39,95}{\cancel\gram\per\mol}}=\SI{,03}{\mol}$
+					\item<3-> \textbf{Total:} $\SI{3,47}{\mol}$
+				\end{itemize}
+						}
+		\onslide<4->
+			\visible<4->{
+				\begin{itemize}
+					\item<4-> $\SI{21}{\percent}\Rightarrow\SI{21}{\gram}\Rightarrow x(\ce{O2})=\frac{\SI{,66}{\cancel\mol}}{\SI{3,47}{\cancel\mol}}=\num{,19}$
+					\item<4-> $\SI{78}{\percent}\Rightarrow\SI{78}{\gram}\Rightarrow x(\ce{N2})=\frac{\SI{2,78}{\cancel\mol}}{\SI{3,47}{\cancel\mol}}=\num{,80}$
+					\item<4-> $\SI{1}{\percent}\Rightarrow\SI{1}{\gram}\Rightarrow x(\ce{Ar})=\frac{\SI{,03}{\cancel\mol}}{\SI{3,47}{\cancel\mol}}=\num{,01}$
+					\item<5-> \textbf{NOTA:} Las fracciones molares tienen que \underline{sumar la unidad}
+				\end{itemize}
+						}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa molecular media}
+	\structure{A partir de la definición de la masa molecular media:} (anteriormente vista)
+		$$
+			\overline{Mm} = \sum_{i=1}^{n}x_i\cdot Mm_i
+		$$
+	\visible<2->{
+		Sustituimos por nuestros valores:
+		$$
+			\overline{Mm} = x(\ce{O2})\cdot Mm(\ce{O2}) + x(\ce{N2})\cdot Mm(\ce{N2}) + x(\ce{Ar})\cdot Mm(\ce{Ar})
+		$$
+		$$
+			\overline{Mm} = \num{,19}\cdot\SI{32,00}{\gram\per\mol} + \num{,80}\cdot\SI{28,01}{\gram\per\mol} + \num{,01}\cdot\SI{39,95}{\gram\per\mol} = \SI{28,85}{\gram\per\mol}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\overline{Mm} = \SI{28,85}{\gram\per\mol}}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): densidad del aire}
+	\visible<1->{
+		\alert{\textbf{Una mezcla de gases ideales (las moléculas no interaccionan entre sí) es un gas ideal}}
+				}
+	\visible<2->{
+		\structure{A partir de la expresión de la densidad de un gas ideal:} (anteriormente vista) solamente hay que sustituir la masa molecular ($Mm$) por la masa molecular media ($\overline{Mm}$)
+		$$
+			d = \frac{P\cdot\overline{Mm}}{R\cdot T}
+		$$
+		$$
+			d(\text{aire}) = \frac{\SI{1}{\cancel\atm}\cdot\SI{28,85}{\gram\per\cancel\mol}}{\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{273,15}{\cancel\kelvin}}
+		$$
+				}
+	\visible<3->{
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{d(\text{aire}) = \SI{1,29}{\gram\per\liter}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema: si se resuelve usando porcentaje en volumen}
+	{\huge
+		$$
+			d(\text{aire})?\quad\quad\overline{Mm}(\text{aire})?
+		$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T(aire)=\SI{273,15}{\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(aire)=\SI{1}{\atm}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{21}{\percent}\rfrac{v}{v}\text{ \ce{O2}}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{78}{\percent}\rfrac{v}{v}\text{ \ce{N2}}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{1}{\percent}\rfrac{v}{v}\text{ \ce{Ar}}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{O2}) = \SI{32,00}{\gram\per\mol}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{N2}) = \SI{28,01}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mat(\ce{Ar})= \SI{39,95}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): porcentaje en volumen}
+	Si suponemos \SI{1}{\mol} de aire:
+	$$
+		P\vdot V = n\vdot R\vdot T\Rightarrow V = \frac{n\vdot R\vdot T}{P}\Rightarrow V =
+		 		   \frac{\SI{1}{\cancel\mol}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}}{\SI{1}{\cancel\atm}} =
+		 		   \SI{22,4}{\liter}
+	$$
+	de esos \SI{22,4}{\liter} el \SI{21}{\percent} de \ce{O2}, el \SI{78}{\percent} de \ce{N2} y el \SI{1}{\percent} de \ce{Ar}, o, como es \SI{1}{\mol}, \SI{,21}{\mol} de \ce{O2}, \SI{,78}{\mol} de \ce{N2} y \SI{,01}{\mol} de \ce{Ar}.
+	\structure{Fracción molar:} como $n_T = \SI{1}{\mol}$, $x(\ce{O2}) = \num{,21}$, $x(\ce{N2}) = \num{,78}$ y $x(\ce{Ar}) = \num{,01}$.
+	\structure{Presiones parciales:} $P_i = x_i\vdot P_T$, $P(\ce{O2}) = \SI{,21}{\atm}$, $P(\ce{N2}) = \SI{,78}{\atm}$ y $P(\ce{Ar}) = \SI{,01}{\atm}$.
+	\structure{Fracción molar promedio:}
+	$$
+		\overline{Mm} = \sum_{i=1}^{3} x_i\vdot Mm_i\Rightarrow
+		\overline{Mm} = x(\ce{O2})\vdot Mm(\ce{O2}) + x(\ce{N2})\vdot Mm(\ce{N2}) + x(\ce{Ar})\vdot M_{at}(\ce{Ar})
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\overline{Mm} = \num{,21}\vdot\SI{32,00}{\gram\per\mol} + \num{,78}\vdot\SI{28,01}{\gram\per\mol} + \num{,01}\vdot\SI{39,95}{\gram\per\mol} = \SI{28,96}{\gram\per\mol}}
+	$$
+	\structure{Densidad del aire:}
+	$$
+		P\vdot V = n\vdot R\vdot T\Rightarrow P = \frac{m}{V\vdot Mm}\vdot R\vdot T\Rightarrow \overbrace{d}^{d = \frac{m}{V}} = \frac{P\vdot Mm}{R\vdot T}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{d(\text{aire}) =
+			 \frac{\SI{1}{\cancel\atm}\vdot\SI{28,96}{\gram\per\cancel\mol}}{\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{273,15}{\cancel\kelvin}} = \SI{1,29}{\gram\per\liter}}
+	$$
+\end{frame}

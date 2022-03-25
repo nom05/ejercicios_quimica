@@ -1,0 +1,100 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_el_pH_de_la_disolucion_de_un_acido_debil_diprótico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge$\mathrm{pH}$}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{H2A})=\SI{,02}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{H2A})=\SI{,5}{\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{K_{a_1}=\num{4,3e-3}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{K_{a_2}=\num{5,6e-7}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): primera disociación}
+	\structure{Concentración del ácido sin disociar:} $M=\rfrac{n}{V}\Rightarrow[\ce{H2A}]_0=\rfrac{\SI{,02}{\mol}}{\SI{,5}{\liter}}=\SI{,04}{\Molar}$
+	\structure{Reacción de la 1"a disociación:}\\
+	\centering\ce{H2A(ac) <=> H+(ac) + HA-(ac)}\quad\quad$K_{a_1}=\frac{[\ce{H+}]_1[\ce{HA-}]_1}{[\ce{H2A}]}$
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{H2A}]       &         [\ce{H+}]              & [\ce{HA-}] \\
+			{[Inicial]}                & $[\ce{H2A}]_0$   &              0                 &         0  \\
+			{[Equilibrio]}             & $[\ce{H2A}]_0-x$ &  			$x$ 			   &        $x$ \\
+			\bottomrule
+		\end{tabular}%\\[.5cm]
+	\end{center}
+	\structure{Constante de equilibrio de la primera disociación ($K_{a_1}>\num{1e-4}$ (\num{4,3e-3}), $x$ no es despreciable):}
+	$$
+		K_{a_1}=\frac{\overbrace{[\ce{H+}]_1}^{x}\overbrace{[\ce{HA-}]_1}^{x}}{\underbrace{[\ce{H2A}]}_{[\ce{H2A}]_0-x}}\Rightarrow
+		\overbrace{K_{a_1}}^{\num{4,3e-3}}=\frac{x^2}{\underbrace{[\ce{H2A}]_0}_{\SI{,04}{\Molar}}-x}
+	$$
+	\begin{multicols}{2}
+		\structure{Sin aproximación (forma correcta de resolver en este caso):}
+		{\small
+			$$
+				\frac{x^2}{\num{,04}-x}=\num{4,3e-3}\Rightarrow
+			$$
+			$$
+				x^2+\num{4,3e-3}x-\num{1,62e-4}=0
+			$$
+		}
+		\begin{center}
+			\myovalbox{\textcolor{yellow}{$x=[\ce{H+}]_1=[\ce{HA-}]_1=\SI{,0129}{\Molar}$}}
+		\end{center}
+		\alert{\textbf{Con aproximación (forma incorrecta) $[\ce{H2A}]_0-x\approx[\ce{H2A}]$:}}
+		{\small $$
+			\frac{x^2}{\num{,04}}=\num{4,3e-3}\Rightarrow x=\sqrt{\num{,04}\cdot\num{4,3e-3}}
+		$$}
+		\centering$x=[\ce{H+}]_1=\cancel{\SI{,0131}{\Molar}}$
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): segunda disociación y $\mathrm{pH}$}
+	\structure{Reacción de la 2"a disociación:}\\
+	\begin{center}
+		\ce{HA-(ac) <=> H+(ac) + A2-(ac)}\quad\quad$K_{a_2}=\frac{[\ce{H+}][\ce{A^{2-}}]}{[\ce{HA-}]}$
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{HA-}]       &         [\ce{H+}]              					  & [\ce{A^{2-}}] \\
+			{[Inicial]}                & $[\ce{HA-}]_1$   &        $[\ce{H+}]_1$           					  &         0     \\
+			{[Equilibrio]}             & $[\ce{HA-}]_1-y$ &  	   $[\ce{H+}]_1+\underbrace{y}_{[\ce{H+}]_2}$ &        $y$    \\
+			\bottomrule
+		\end{tabular}\\[.5cm]
+	\end{center}
+%	\begin{overprint}
+%		\onslide<2>
+	\structure{Concentración de \ce{H+} de la segunda disociación ({\footnotesize $K_{a_2}=\num{5,6e-7}<<\num{1e-4}$ , $y$ es despreciable}):}
+	$$
+		K_{a_2}=\frac{\overbrace{[\ce{H+}]}^{[\ce{H+}]_1+y}\overbrace{[\ce{A^{2-}}]_1}^{y}}{\underbrace{[\ce{HA-}]}_{[\ce{HA-}]_1-y}}\Rightarrow
+		K_{a_2}=\frac{([\ce{H+}]_1+\cancel{y})y}{[\ce{HA-}]_1-\cancel{y}}\Rightarrow
+		K_{a_2}=\frac{(\overbrace{[\ce{H+}]_1}^{x})y}{\underbrace{[\ce{HA-}]_1}_{x}}\Rightarrow
+		K_{a_2}=\frac{\cancel{x}y}{\cancel{x}}=[\ce{H+}]_2
+	$$
+	\begin{center}
+		{\small ($[\ce{H+}]_1$ y $[\ce{HA-}]_1$ se conocen de antes y valían $x=\SI{,0129}{\Molar}$:)}\\[.2cm]
+		\myovalbox{\textcolor{yellow}{$[\ce{H+}]_2=\SI{5,6e-7}{\Molar}$}}
+	\end{center}
+	$$
+		[\ce{H+}]_{\text{TOTAL}}=\SI{,0129}{\Molar}+\SI{5,6e-7}{\Molar}=\SI{,01290056}{\Molar}\approx\SI{,0129}{\Molar}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=-\log[\ce{H+}]_{\text{TOTAL}}=\num{1,89}}
+	\end{center}
+\end{frame}

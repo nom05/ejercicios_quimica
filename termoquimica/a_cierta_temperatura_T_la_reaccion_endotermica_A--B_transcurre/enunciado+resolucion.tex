@@ -1,0 +1,72 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/a_cierta_temperatura_T_la_reaccion_endotermica_A--B_transcurre/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): signo de $\Delta S$}
+    \structure{Reacción:} \ce{A -> B}
+    \structure{Razonaremos utilizando la ecuación:} $\Delta G = \Delta H -T\vdot\Delta S$
+    \visible<2->{
+        \structure{Reacción endotérmica:} $\Delta H>0$
+                }
+    \visible<3->{
+        \structure{Reacción transcurre hasta el final:} $\Delta G<0$
+                }
+    \visible<4->{
+        \begin{overprint}
+            \onslide<4>
+                \structure{Por tanto:} $\overbrace{\Delta H}^{\Delta H>0} -T\vdot\Delta S<0$
+            \onslide<5>
+                \structure{Por tanto:} $\overbrace{\Delta H}^{\Delta H>0} <T\vdot\Delta S$
+            \onslide<6->
+                \structure{Por tanto:} $\overbrace{\Delta H}^{\Delta H>0} <\underbrace{T\vdot\Delta S}_{>0}$
+
+                $T\vdot\Delta S$ tiene que ser mayor que cero porque es imposible que sea mayor que cero y negativo ya que $\Delta H>0$
+        \end{overprint}
+                }
+    \visible<7>{
+        \structure{Por el tercer principio de la Termodinámica:} $\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta S>0}$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): signo de $\Delta G$ para \ce{B -> A}}
+    \structure{Reacción:} \ce{B -> A}
+    \structure{Como $\Delta G$ es una función de estado y esta reacción es la inversa a la anterior:}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta G > 0}
+        $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): \ce{B -> A} a baja T}
+    \structure{Reacción:} \ce{B -> A}
+    \structure{Razonaremos utilizando la ecuación:} $\Delta G = \Delta H -T\vdot\Delta S$
+    \visible<2->{
+        \structure{Reacción exotérmica:} $\Delta H<0$
+    }
+    \visible<3->{
+        \structure{Signo de la Entropía también se invierte:} $\Delta S<0$
+    }
+    \visible<4->{
+        \begin{overprint}
+            \onslide<4>
+                \structure{Si $T$ baja (imaginaos casi cero):} $\Delta H < T\vdot\Delta S$
+                
+                Un número negativo es mayor que otro cuanto más cerca esté de cero.
+            \onslide<5>
+                \structure{Por tanto:} $\overbrace{\Delta H - T\vdot\Delta S}^{\Delta G} < 0$
+            \onslide<6->
+                \structure{Por tanto:} $\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta G < 0}$
+        \end{overprint}
+    }
+\end{frame}

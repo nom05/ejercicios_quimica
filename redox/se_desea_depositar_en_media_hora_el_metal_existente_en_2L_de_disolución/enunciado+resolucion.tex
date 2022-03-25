@@ -1,0 +1,147 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_desea_depositar_en_media_hora_el_metal_existente_en_2L_de_disolución/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del enunciado}
+	\begin{center}
+		{\Large
+			\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+				\item ¿$I$?
+				\item ¿$V_{gas}(\text{ánodo})$?
+				\item ¿pH?
+			\end{enumerate}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{V(\ce{Cu(NO3)2})=\SI{2}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{[\ce{Cu(NO3)2}]=\SI{,03}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{t=\SI{30}{\minute}=\SI{1800}{\second}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{T(\text{ánodo})=\SI{300,15}{\kelvin}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{P(\text{ánodo})=\SI{750}{\torr}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{El cobre se deposita: \ce{Cu^2+(ac) + 2e- -> Cu(s)}}}
+	\end{center}
+	\visible<2->{
+		Pero también los potenciales estándar de reducción:\\[.2cm]
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Cu^2+/Cu})=\SI{,337}{\volt}}\\[.2cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\varepsilon^0(\ce{O2,H2O/OH-})=\SI{,401}{\volt}?}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\varepsilon^0(\ce{O2,H+/H2O})=\SI{1,229}{\volt}?}
+		\end{center}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): obtención de la reacción REDOX}
+	Como dato del problema sabemos dos cosas: por un lado que estamos ante una \underline{celda electrolítica} ($\varepsilon^0<0$) y por el otro que el \underline{cobre se deposita} (\ce{Cu^2+(ac) + 2e- -> Cu(s)}). Con esto ya sabemos la \underline{semirreacción de reducción} y nos queda razonar cuál será la de oxidación. Buscando en la tabla de potenciales estándar de reducción encontramos dos posibilidades. El más probable será el que implique que tengamos que aportar menor f.e.m:\\[.5cm]
+	\begin{overprint}
+		\onslide<1>
+			\begin{center}
+				\begin{tabular}{cl}
+					\ce{Cu^2+(ac) + 2e- -> Cu(s)} & $\varepsilon^0_{red} = \SI{,337}{\volt}$\\
+					\ce{O2(g) + 2H2O(l) + 4e- ->  4OH-(ac)} & $\varepsilon^0_{red} = \SI{,401}{\volt}$
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\begin{center}
+				\begin{tabular}{lcl}
+					S. reducción (cátodo) & \ce{Cu^2+(ac) + 2e- -> Cu(s)}          & $\varepsilon^0_{red} = \SI{,337}{\volt}$\\
+					S. oxidación (ánodo)  & \ce{4OH-(ac) -> O2(g) + 2H2O(l) + 4e-} & $\varepsilon^0_{ox} = \SI{-,401}{\volt}$
+				\end{tabular}
+			\end{center}
+		\onslide<3>
+			\begin{center}
+				\begin{tabular}{lcl}
+					S. reducción (cátodo) & $2\times(\ce{Cu^2+(ac) + 2e- -> Cu(s)})$        & $\varepsilon^0_{red} = \SI{,337}{\volt}$\\
+					S. oxidación (ánodo)  & \ce{4OH-(ac) -> O2(g) + 2H2O(l) + 4e-} & $\varepsilon^0_{ox} = \SI{-,401}{\volt}$
+				\end{tabular}
+			\end{center}
+		\onslide<4>
+			\begin{center}
+				\begin{tabular}{lcl}
+					Cátodo & \ce{2Cu^2+(ac) + \cancel{4e-} -> 2Cu(s)}        & $\varepsilon^0_{red} = \SI{,337}{\volt}$\\
+					Ánodo  & \ce{4OH-(ac) -> O2(g) + 2H2O(l) + \cancel{4e-}} & $\varepsilon^0_{ox} = \SI{-,401}{\volt}$\\
+					\midrule
+					Reacción global       & \ce{2Cu^2+(ac) + 4OH-(ac) -> 2Cu(s) + O2(g) ^ + 2H2O(l)} & $\varepsilon^0_{T} = \SI{-,064}{\volt}$
+				\end{tabular}
+			\end{center}
+			{\small y obtenemos un gas (\ce{O2 ^}) como producto, necesario para uno de los apartados.}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): intensidad de corriente después de \SI{30}{\minute}}
+	\structure{Calcular el nº moles de \ce{Cu^2+}:}
+	$$
+		[\ce{Cu(NO3)2}] = \SI{,03}{\Molar}; V=\SI{2}{\liter}\Rightarrow n(\ce{Cu(NO3)2})=n(\ce{Cu^2+}) = \SI{,03}{\mol\per\cancel\liter}\vdot\SI{2}{\cancel\liter} = \SI{,06}{\mol}
+	$$
+	\visible<2->{
+		\structure{Relación estequiométrica entre \ce{Cu^2+} y \ce{e-}:} $n(\ce{e-}) = 2\vdot n(\ce{Cu^2+})\Rightarrow n(\ce{e-}) = \SI{,12}{\mol}$
+				}
+	\visible<3->{
+		\structure{Aplicamos ley de Faraday: }
+		\begin{overprint}
+			\onslide<3>
+				$$
+					n(\ce{e-})\vdot F = I\vdot t\Rightarrow I = \frac{\overbrace{n(\ce{e-})}^{\SI{,12}{\mol}}\vdot\overbrace{F}^{\SI{96485}{\coulomb\per\mol}}}{\underbrace{t}_{\SI{1800}{\second}}}
+				$$
+			\onslide<4->
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{I = \frac{\SI{,12}{\cancel\mol}\vdot\SI{96485}{\coulomb\per\cancel\mol}}{\SI{1800}{\second}}=\SI{6,43}{\ampere}}
+				$$
+		\end{overprint}
+
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación del V(\ce{O2}) desprendido}
+	\structure{Reacción REDOX ajustada:}\quad\ce{2Cu^2+(ac) + 4OH-(ac) -> 2Cu(s) v + O2(g) ^ + 2H2O(l)}
+	\structure{Estequiometría:} $2\vdot n(\ce{O2}) = n(\ce{Cu^2+})\Rightarrow n(\ce{O2}) = \frac{\SI{,06}{\mol}}{\num{2}}=\SI{,03}{\mol}$
+	\structure{Ecuación de los gases ideales:} $P\vdot V = n\vdot R\vdot T$
+	$$
+		V(\ce{O2}) = \frac{n(\ce{O2})\vdot R\vdot T(\ce{O2})}{P(\ce{O2})}\Rightarrow
+		V(\ce{O2}) = \frac{\SI{,03}{\cancel\mol}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{300,15}{\cancel\kelvin}}{\rfrac{75}{76}~\si{\cancel\atm}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V(\ce{O2}) = \SI{,75}{\liter}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación del pH después de \SI{30}{\minute}}
+	\structure{Reacción REDOX ajustada:}\quad\ce{2Cu^2+(ac) + 4OH-(ac) -> 2Cu(s) v + O2(g) ^ + 2H2O(l)}
+	\structure{Estequiometría:} $n(\ce{OH-}) = 2\vdot n(\ce{Cu^2+})\Rightarrow n(\ce{OH-}) = \num{2}\vdot\SI{,06}{\mol}=\SI{,12}{\mol}$
+	\structure{Concentración de \ce{OH-} consumidos:} $[\ce{OH-}] = \rfrac{\SI{,12}{\mol}}{\SI{2}{\liter}} = \SI{,06}{\Molar}$
+	\visible<2->{
+		Como veis en la reacción, son \ce{OH-} que se consumen. El agua, por el principio de Le Chatelier, se disociará para mantener el producto de solubilidad de agua, por lo que quedarán los iones \ce{H+} sin consumir y son los que provocarán que el pH disminuya de \num{7}.
+		$$
+			\ce{H2O(l) <=> H+(ac) + OH-(ac)}\quad K_w = [\ce{H+}]\vdot[\ce{OH-}] = \num{e-14}
+		$$
+		\begin{center}
+			\begin{tabular}{lcS}
+				Sin disociación & 0 & -,06\\
+				Equilibrio      & x & {$x-\num{,06}$}
+			\end{tabular}
+		\end{center}
+		$$
+			x(x-\num{,06}) = \num{e-14}\Rightarrow x^2-\num{,06}x -\num{e-14} = 0\Rightarrow\left\{\begin{array}{l}
+				x_1 = \SI{,06}{\Molar}\\
+				\cancel{x_2 = 0}
+			\end{array}\right.
+		$$
+				}
+	\visible<3->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{[\ce{H+}] = \SI{,06}{\Molar}\Rightarrow\text{pH} = -\log([\ce{H+}])\Rightarrow\text{pH}=-\log(\num{,06})=\num{1,22}}
+		$$
+				}
+\end{frame}

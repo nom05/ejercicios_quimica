@@ -1,0 +1,52 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_dispone_de_dos_cubas_electroliticas_conectadas_en_serie_con_disoluciones_de_AgNO3_y_H2SO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$V(\ce{H2})$?}\\[.3cm]
+		\textbf{circuito en serie}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Ag(s) v})=\SI{,2325}{\gram}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{P(\ce{H2(g) ^})=\SI{1}{\atm}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{T(\ce{H2(g) ^})=\SI{25}{\celsius}=\SI{298,15}{\kelvin}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): volumen de hidrógeno gas}
+	\structure{Las dos cubas están conectadas \underline{en serie}:} pasa la misma cantidad de corriente a través de ellas durante el mismo tiempo.
+	$$
+		I(\ce{AgNO3})\vdot\cancel{t} = I(\ce{H2SO4})\vdot\cancel{t}
+	$$
+	\structure{Ley de Faraday:} $n(\ce{e-})\vdot F = I\vdot t$
+	$$
+		n_{\ce{H2SO4}}(\ce{e-})\vdot\cancel{F} = n_{\ce{AgNO3}}(\ce{e-})\vdot\cancel{F}
+	$$
+	\structure{Semirreacciones de reducción:}
+	$$
+		\left.
+			\begin{array}{ll}
+				\ce{Ag+ + 1e- -> Ag} & n(\ce{Ag}) = n_{\ce{AgNO3}}(\ce{e-})\\
+				\ce{2H+ + 2e- -> H2} & 2\vdot n(\ce{H2}) = n_{\ce{H2SO4}}(\ce{e-})
+			\end{array}
+		\right\}\Rightarrow
+		\overbrace{n(\ce{Ag})}^{n=\frac{m}{M_{at}}}=2\vdot\underbrace{n(\ce{H2})}_{n=\frac{PV}{RT}}\Rightarrow
+	$$
+	$$
+		\frac{m(\ce{Ag})}{M_{at}(\ce{Ag})} = 2\vdot\frac{P(\ce{H2})\vdot V(\ce{H2})}{R\vdot T(\ce{H2})}\Rightarrow
+		V(\ce{H2})=\frac{m(\ce{Ag})\vdot R\vdot T(\ce{H2})}{2\vdot M_{at}(\ce{Ag})\vdot P(\ce{H2})}\Rightarrow
+	$$
+	$$
+		V(\ce{H2})=\frac{\SI{,2325}{\cancel\gram}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{298,15}{\cancel\kelvin}}{2\vdot\SI{107,868}{\cancel\gram\per\cancel\mol}\vdot\SI{1}{\cancel\atm}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{V(\ce{H2(g) ^})=\SI{,026}{\liter}=\SI{26}{\milli\liter}}
+	$$
+\end{frame}

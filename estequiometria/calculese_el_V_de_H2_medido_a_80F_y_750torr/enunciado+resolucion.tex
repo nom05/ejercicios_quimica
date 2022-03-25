@@ -1,0 +1,155 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/calculese_el_V_de_H2_medido_a_80F_y_750torr/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\large ¿$V(\ce{H2})$?}
+    \end{center}
+    \structure{Reacción:}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{CO}}
+    \ce{ + }
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\ce{H2}}
+    \ce{->}
+    \ce{CH3CH2CH3}
+    \ce{+}
+    \ce{H2O}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V(\ce{CO}) = \SI{28,5}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{T(\ce{CO}) = 0+\SI{273,15}{\kelvin}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{P(\ce{CO}) = \SI{1}{\atm}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{T(\ce{H2}) = \SI{80}{\degree{F}}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{P(\ce{H2}) = \frac{750}{760}~\si{\atm}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ajuste de la reacción y volumen de \ce{H2}}
+    \begin{center}
+        \begin{overprint}
+            \onslide<1>
+                \ce{CO + H2 -> CH3CH2CH3 + H2O}
+            \onslide<2>
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{O + H2 -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H3}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H2}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H3 + H2O}
+            \onslide<3>
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{3C}}
+                \ce{O + H2 -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H3}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H2}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+                \ce{H3 + H2O}
+            \onslide<4>
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{3}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{O}}
+                \ce{ + H2 -> CH3CH2CH3 + H2}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{O}}
+            \onslide<5>
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{3}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{O}}
+                \ce{ + H2 -> CH3CH2CH3 +} 
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{3}}
+                \ce{H2}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{O}}
+            \onslide<6>
+                \ce{3CO +}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H2}}
+                \ce{ -> C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H3}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H2}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H3}}
+                \ce{ +} 
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{3H2}}
+                \ce{O}\\[.6cm]
+                (2 hidrógenos vs. 14 hidrógenos)
+            \onslide<7>
+                \ce{3CO +}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{7H2}}
+                \ce{ -> C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H3}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H2}}
+                \ce{C}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{H3}}
+                \ce{ +} 
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{3H2}}
+                \ce{O}
+            \onslide<8->
+                \structure{Reacción ajustada:} \ce{3CO +7H2 -> CH3CH2CH3 + 3H2O}
+        \end{overprint}
+    \end{center}
+    \visible<8->{
+        \structure{Según la estequiometría:} \SI{3}{\mol} de \ce{CO} \ce{->} \SI{7}{\mol} de \ce{H2}
+        \begin{overprint}
+            \onslide<9>
+                $$
+                    7\cdot n(\ce{CO}) = 3\cdot n(\ce{H2})
+                $$
+            \onslide<10>
+                $$
+                    n(\ce{H2}) = \frac{7}{3}\cdot n(\ce{CO})
+                $$
+            \onslide<11>
+                $$
+                    \overbrace{n(\ce{H2})}^{PV=nRT\Rightarrow n=\frac{PV}{RT}} = \frac{7}{3}\cdot \underbrace{n(\ce{CO})}_{n=\frac{PV}{RT}}
+                $$
+            \onslide<12>
+                $$
+                    \frac{P(\ce{H2})\cdot V(\ce{H2})}{\cancel{R}\cdot T(\ce{H2})} = \frac{7}{3}\cdot\frac{P(\ce{CO})\cdot V(\ce{CO})}{\cancel{R}\cdot T(\ce{CO})}
+                $$
+            \onslide<13->
+                $$
+                    V(\ce{H2}) = \frac{7}{3}\cdot\frac{P(\ce{CO})}{P(\ce{H2})}\cdot\frac{T(\ce{H2})}{T(\ce{CO})}\cdot V(\ce{CO})
+                $$
+        \end{overprint}
+                }
+    \visible<14->{
+        \structure{Cambio de unidades de \si{\degree{F}} a \si{\kelvin}:}
+        \begin{overprint}
+            \onslide<14>
+                $$
+                    T(\si{\celsius}) = \frac{5}{9}\cdot\left[T(\si{\degree{F}}) - 32 \right]
+                $$
+            \onslide<15->
+                $$
+                    T(\si{\kelvin}) = T(\si{\celsius}) + 273,15 = \frac{5}{9}\cdot\left[T(\si{\degree{F}}) - 32\right] + 273,15
+                $$
+        \end{overprint}
+                }
+    \visible<16->{
+        \structure{Sustituimos por valores:}
+            \begin{overprint}
+                \onslide<16>
+                    $$
+                        V(\ce{H2}) = \frac{7}{3}\cdot\frac{\frac{760}{\cancel{760}}\si{\cancel\atm}}{\frac{750}{\cancel{760}}\si{\cancel\atm}}\cdot\frac{\frac{5}{9}\cdot\left[80 - 32\right]+\SI{273,15}{\cancel\kelvin}}{\SI{273,15}{\cancel\kelvin}}\cdot \SI{28,5}{\liter}
+                    $$
+                \onslide<17->
+                    $$
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V(\ce{H2}) = \SI{74,0}{\liter}}
+                    $$
+            \end{overprint}
+            }
+\end{frame}

@@ -1,0 +1,127 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_construye_una_pila_empleando_disoluciones_Sn4+-Sn2+_y_Cr3+-Cr2+/enunciado.tex
+		}
+           }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a)}
+    \textbf{\Large $K$ y $\Delta G^0$}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\varepsilon^0(\ce{Sn^4+/Sn^2+}) = \SI{,15}{\volt}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\varepsilon^0(\ce{Cr^3+/Cr^2+}) = \SI{-,41}{\volt}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): constante de equilibrio y $\Delta G^0$}
+    \begin{tabular}{lcr}
+	        \textbf{Semirreacción de oxidación (ánodo):}  & \ce{2Cr^2+ -> 2Cr^3+ + \cancel{2e-}}  & $\varepsilon^0_{ox} = \SI{,41}{\volt}$\\
+	        \textbf{Semirreacción de reducción (cátodo):} & \ce{Sn^4+ \cancel{+2e-} -> Sn^2+}     & $\varepsilon^0_{re} = \SI{,15}{\volt}$\\
+        \midrule
+	        \textbf{Total:}  & \ce{2Cr^2+ + Sn^4+ -> 2Cr^3+ + Sn^2+} & $\varepsilon^0_{T} = \SI{,56}{\volt}$
+    \end{tabular}
+    \structure{En el equilibrio:} $\Delta G = 0$, $\varepsilon_T = 0$ y $Q=K$ (Ec. de Nernst)
+    \structure{Ecuación de Nernst:}
+    $$
+        \cancelto{0}{\varepsilon_T} = \varepsilon^0_T -\frac{\SI{,0592}{}}{n}\log{\overbrace{Q}^{Q=K}}\Rightarrow
+        \overbrace{\varepsilon^0_T}^{\varepsilon^0_{T} = \SI{,56}{\volt}} = \frac{\SI{,0592}{}}{\underbrace{n}_{n=2}}\log{K}\Rightarrow
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{K=\num{9,62e18}}
+    $$
+    \structure{Relación entre $\varepsilon^0$ y $\Delta G^0$:}\quad$\Delta G^0 = -n\vdot F\vdot\varepsilon^0$\quad{\footnotesize (podríamos usar también $\Delta G^0 = -RT\ln K$ con resultados similares)}
+    $$
+        \Delta G^0 = -\overbrace{n}^{n=2}\vdot \underbrace{F}_{F=\num{96485}}\vdot\overbrace{\varepsilon^0_T}^{\SI{,56}{\volt}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\Delta G^0=\SI{-108,06}{\kilo\joule\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b)}
+    \textbf{\Large ¿$\varepsilon$?}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{[\ce{Sn^4+}] = \SI{e-2}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{[\ce{Sn^2+}] = \SI{5e-3}{\Molar}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Cr^3+}] = \SI{2,5e-3}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Cr^2+}] = \SI{5,5e-3}{\Molar}}
+    $$
+\end{frame}
+%
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): potencial de la pila}
+    \structure{Reacción química:}
+    $$
+        \ce{2Cr^2+ + Sn^4+ -> 2Cr^3+ + Sn^2+}\quad\varepsilon^0_{T} = \SI{,56}{\volt}
+    $$
+    \structure{Ecuación de Nernst:}
+    $$
+        \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{n}\log{Q}\Rightarrow
+        \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{\underbrace{n}_{n=2}}\log(\frac{[\ce{Cr^3+}]^2[\ce{Sn^2+}]}{[\ce{Cr^2+}]^2[\ce{Sn^4+}]})
+    $$
+    $$
+        \varepsilon_T = \num{,56} -\frac{\num{,0592}}{2}\log(\frac{(\num{2,5e-3})^2\vdot\num{5e-3}}{(\num{5,5e-3})^2\vdot\num{e-2}})
+    $$
+    \begin{center}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\varepsilon_T = \SI{,56}{\volt} + \SI{,029}{\volt} = \SI{,589}{\volt}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (c)}
+    \textbf{\Large ¿$\varepsilon_T$?}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{I = \SI{1,00505}{\ampere}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{t = \SI{8}{\minute}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): potencial de la pila después de pasar \SI{1,00505}{\ampere} en \SI{8}{\minute}}
+    \structure{Reacción química:}
+%	{\small
+		\begin{tabular}{lcr}
+				\textbf{Semirreacción de oxidación (ánodo):}  & \ce{2Cr^2+ -> 2Cr^3+ + \cancel{2e-}}  & $\varepsilon^0_{ox} = \SI{,41}{\volt}$\\
+				\textbf{Semirreacción de reducción (cátodo):} & \ce{Sn^4+ \cancel{+2e-} -> Sn^2+}     & $\varepsilon^0_{re} = \SI{,15}{\volt}$\\
+			\midrule
+				\textbf{Total:}  & \ce{2Cr^2+ + Sn^4+ -> 2Cr^3+ + Sn^2+} & $\varepsilon^0_{T} = \SI{,56}{\volt}$
+		\end{tabular}
+%	}
+    \structure{Ley de Faraday:}\quad$n(\ce{e-})\vdot F = I\vdot t\Rightarrow n(\ce{e-}) = \frac{I\vdot t}{F}\Rightarrow n(\ce{e-})=\SI{5e-3}{\mol}$
+    \structure{Según la estequiometría:}
+%    {\small
+    	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+	        \item en el \textbf{ánodo}: se oxidan \SI{5e-3}{\mol} de \ce{Cr^2+} y se forman \SI{5e-3}{\mol} de \ce{Cr^3+}.
+	        \item en el \textbf{cátodo}: se reducen $\frac{\SI{5e-3}{}}{2}~\si{\mol}$ de \ce{Sn^4+} y se forman $\frac{\SI{5e-3}{}}{2}~\si{\mol}$ de \ce{Sn^2+}
+	    \end{enumerate}
+%    }
+    \structure{Las nuevas concentraciones son (volumen constante):}
+%	{\small
+		$$
+	        [\ce{Cr^2+}] = \SI{5,5e-3}{\Molar}-\SI{5e-3}{\Molar} = \SI{,5e-3}{\Molar}
+	    $$
+	    $$
+	        [\ce{Cr^3+}] = \SI{2,5e-3}{\Molar}+\SI{5e-3}{\Molar} = \SI{7,5e-3}{\Molar}
+	    $$
+	    $$
+	        [\ce{Sn^2+}] = \SI{5e-3}{\Molar}+\SI{2,5e-3}{\Molar} = \SI{7,5e-3}{\Molar}
+	    $$
+	    $$
+	        [\ce{Sn^4+}] = \SI{e-2}{\Molar}-\SI{2,5e-3}{\Molar} = \SI{7,5e-3}{\Molar}
+	    $$
+%    }
+    \structure{Sustituyendo en la ecuación de Nernst:}
+	$$
+	    \varepsilon_T = \num{,56} -\frac{\num{,0592}}{2}\log(\frac{(\num{7,5e-3})^2\vdot\cancel{\num{7,5e-3}}}{(\num{,5e-3}{})^2\vdot\cancel{\num{7,5e-3}}})\Rightarrow
+	    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{\varepsilon_T = \SI{,49}{\volt}}
+	$$
+\end{frame}

@@ -1,0 +1,260 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_ha_realizado_una_valoracion_de_20mL_de_una_base_debil_BOH/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{¿[\ce{BOH}]? ¿pH?}}\\[.2cm]
+	\end{center}
+	\structure{Base débil (\ce{BOH}):}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{BOH})   = \SI{20}{\milli\liter}}				\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_b(\ce{BOH}) = \num{3e-5}}							\\[.2cm]
+	\structure{Ácido fuerte (\ce{HNO3}):}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{HNO3}]=\SI{,15}{\Molar}}						\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{\text{PE}}(\ce{NaOH})=\SI{16,5}{\milli\liter}}	\\[.2cm]
+	{\Large
+		\begin{center}
+			\begin{tabular}{cSSSS}
+				\toprule
+				$V(\ce{HNO3})$ añadido (\si{\milli\liter})	 & 0	& 10	& 16,5	&	18	\\
+				pH 											 & 		&		& 		&		\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	}
+	PE: punto de equivalencia
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Cálculo de $[\ce{BOH}]_0$ y su pH}
+	\structure{En el punto de equivalencia:}\quad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{n(\ce{BOH}) = n(\ce{HNO3})}
+	\structure{Usamos el $V_{\text{PE}}(\ce{HNO3})$ añadido para alcanzar el punto de equivalencia y su concentración:}
+	$M=\rfrac{n}{V}\Rightarrow n=M\vdot V\Rightarrow n(\ce{HNO3}) = \SI{,15}{\mol\per\cancel\liter}\vdot\SI{16,5e-3}{\cancel\liter} = \SI{2,475e-3}{\mol} = n(\ce{BOH})$
+	\structure{Dividimos por $V(\ce{BOH})=\SI{20}{\milli\liter}$ para obtener $[\ce{BOH}]$:}
+	$[\ce{BOH}] = \frac{\SI{2,475e-3}{\mol}}{\SI{20e-3}{\liter}} = \SI{,1238}{\Molar}$
+	\structure{Cuando $V(\ce{HNO3}) = \SI{0}{\milli\liter}$ solo tenemos \ce{BOH} y su pH. Por tanto, podemos plantear el equilibrio de disociación de la base y calculamos el pH con su $K_b$:}
+    \begin{center}
+		{\small \begin{tabular}{clll}
+				\toprule
+							& \multicolumn{3}{c}{\ce{BOH(ac) <=> B+(ac) + OH-(ac)}}	\\
+				Estado  	& [\ce{BOH}] (\si{\Molar})	& [\ce{B+}] (\si{\Molar})	& [\ce{OH-}] (\si{\Molar})	\\
+				\midrule
+				Inicial 	& \num{,1238}				& 0							& 0							\\
+				Equilibrio  & $\num{,1238}-x$ 			& $x$						& $x$						\\
+				\bottomrule
+		\end{tabular}}
+		$$
+			K_b = \frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]} =\frac{x^2}{[\ce{BOH}]_{0}-x}\approx
+			\frac{x^2}{[\ce{BOH}]_{0}}\Rightarrow
+			\num{3e-5} = \frac{x^2}{\num{,1238}}\Rightarrow
+		$$
+		$$
+			x = [\ce{OH-}] = \sqrt{\num{3e-5}\vdot\num{,1238}} = \SI{1,9268e-3}{\Molar}\Rightarrow
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\pH = 14 + \log[\ce{OH-}] = \num{11,28}}
+		$$
+	\end{center}
+		{\small Como $K_b < \num{4e-4}$ la disociación de la base débil es muy pequeña con respecto a su concentración inicial. Aproximamos: $[\ce{BOH}]_0 - x \approx[\ce{BOH}]_0$. Podéis usar $\pH = 14-\underbrace{\pOH}_{-\log[\ce{OH-}]} = 14+\log[\ce{OH-}]$.
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): pH si añadimos \SI{10}{\milli\liter} de \ce{HNO3} (\rom{1})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+			$$
+				n(\ce{BOH})=\SI{,1238}{\mol\per\cancel\liter}\times\SI{20e-3}{\cancel\liter}=\SI{2,475e-3}{\mol}
+			$$
+			$$
+				n(\ce{HNO3})=\SI{,15}{\mol\per\cancel\liter}\times\SI{10e-3}{\cancel\liter}=\SI{1,5e-3}{\mol}
+			$$\\[.2cm]
+		\begin{center}
+			\ce{BOH(ac) + HNO3(ac) -> BNO3(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{BOH})=n_{\text{reaccionan}}(\ce{HNO3})=n_{\text{producen}}(\ce{BNO3})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				{Estado}		& n(\ce{BOH})~(\si{\mol})						&  n(\ce{HNO3})~(\si{\mol})		& n(\ce{BNO3})~(\si{\mol})	\\
+				{Inicial}		& \num{2,475e-3}     							&   \num{1,5e-3}				&  0						\\
+				{Final}			&$\num{2,475e-3}-\num{1,5e-3}=\num{,975e-3}$	&		0						& \num{1,5e-3}				\\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					\ce{HNO3} es el reactivo limitante, \ce{BOH} es el reactivo en exceso
+			}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V_{\text{inicial}}(\ce{BOH}) + V_{\text{añadido}}(\ce{HNO3})\Rightarrow V_T = \SI{20e-3}{\liter} + \SI{10e-3}{\liter} = \SI{30e-3}{\liter}
+		$$
+		\item\structure{Concentración de nuestro reactivo en exceso (\ce{BOH}) y de nuestro producto (\ce{B+}):} tenemos una base débil y su ion conjugado sin contar con la disociación. \ce{B+} proviene de la disociación \ce{BNO3(ac) -> B+(ac) + NO3-(ac)}
+		\begin{center}
+			\myovalbox{\textcolor{red}{\textbf{DISOLUCIÓN AMORTIGUADORA}}}
+		\end{center}
+		$$
+			[\ce{BOH}]	=\frac{\SI{,975e-3}{\mol}}{\SI{30e-3}{\liter}}=\SI{,0325}{\Molar};\qquad
+			[\ce{B+}]	=\frac{\SI{1,5e-3}{\mol}}{\SI{30e-3}{\liter}}=\SI{,05}{\Molar}
+		$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH si añadimos \SI{10}{\milli\liter} de \ce{HNO3} (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo del pH:} tenemos que usar $K_b$.
+		\begin{center}
+			\begin{tabular}{cccc}
+											& \multicolumn{3}{c}{\ce{BOH(ac) <=> B+(ac) + OH-(ac)}}	\\
+				\midrule
+				Estado		& [\ce{BOH}]~(\si{\Molar})	&  [\ce{B+}]~(\si{\Molar})	&	[\ce{OH-}]~(\si{\Molar})	\\
+				Inicial		& \num{,0325}				&	\num{,05}				&	\num{0}						\\
+				Equilibrio	&$\num{,0325}-x$			& 	$\num{,05}+x$			&	$x$						 	\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Podemos resolverlo de dos formas:
+		\begin{enumerate}[label={\alph*)},font=\bfseries]
+			\item\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podemos considerar $x$ despreciable si $K_b < \num{4e-4}$.
+			$$
+				\overbrace{K_b(\ce{BOH})}^{\num{3e-5}}=\frac{\overbrace{[\ce{B+}]}^{\num{,05}+x}\overbrace{[\ce{OH-}]}^{x}}{\underbrace{[\ce{BOH}]}_{\num{,0325}-x}}=
+				\frac{(\num{,05}+x)\vdot x}{\num{,0325}-x}\approx\frac{\num{,05}\vdot x}{\num{,0325}}\Rightarrow x=[\ce{OH-}]=\SI{1,95e-05}{\Molar}
+			$$
+			\item\structure{Como segunda opción, podemos tomar logaritmos decimales y operar:} Ecuación de HENDERSON -- HASSELBALCH
+			$$
+				\log K_b(\ce{BOH})=\log\left(\frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]}\right)\Rightarrow\overbrace{-\log[\ce{OH-}]}^{\pOH}=\underbrace{-\log K_b(\ce{BOH})}_{\pKb}+\log\left(\frac{[\ce{B+}]}{[\ce{BOH}]}\right)
+			$$
+			$$
+				\pOH = \pKb + \log(\frac{[\ce{B+}]}{[\ce{BOH}]})\Rightarrow
+				\pOH = \pKb + \log(\frac{[\ce{B+}]_0}{[\ce{BOH}]_0})\quad\text{(despreciamos $x$)}%\Rightarrow
+%				\pOH = \underbrace{\pKb}_{\num{4,52}} + \log(\frac{\rfrac{n_0(\ce{B+})}{\cancel{V}}}{\rfrac{n_0(\ce{BOH})}{\cancel{V}}})
+			$$
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{
+					\pOH=-\log[\ce{OH-}]=\num{4,71}
+						\qquad
+					\pH=-\log[\ce{H+}]=\num{9,29}
+				}
+			\end{center}
+		\end{enumerate}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH si añadimos \SI{16,5}{\milli\liter} de \ce{HNO3} (\rom{1})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos si hay reactivo limitante y en exceso}
+		$$
+			n(\ce{BOH})=\SI{,1238}{\mol\per\cancel\liter}\times\SI{20e-3}{\cancel\liter}=\SI{2,475e-3}{\mol}
+		$$
+		$$
+			n(\ce{HNO3})=\SI{,15}{\mol\per\cancel\liter}\times\SI{16,5e-3}{\cancel\liter}=\SI{2,475e-3}{\mol}
+		$$\\[.2cm]
+		\begin{center}
+			\ce{BOH(ac) + HNO3(ac) -> BNO3(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{BOH})=n_{\text{reaccionan}}(\ce{HNO3})=n_{\text{producen}}(\ce{BNO3})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				Estado	&	n(\ce{BOH})~(\si{\mol})					&	n(\ce{HNO3})~(\si{\mol})	&	n(\ce{BNO3})~(\si{\mol})	\\
+				Inicial	&	\num{2,475e-3}							&	\num{2,475e-3}				&	0							\\
+				Final	&	$\num{2,475e-3}-\num{2,475e-3}=\num{0}$	&    	0						&	\num{2,475e-3}				\\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					No hay r. limitante ni r. en exceso, \underline{PUNTO DE EQUIVALENCIA}
+			}}
+			\myovalbox{\textcolor{red}{pH controlado por \ce{B+}, \textbf{pH ÁCIDO}}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V_{\text{inicial}}(\ce{BOH}) + V_{\text{añadido}}(\ce{HNO3})\Rightarrow V_T = \SI{20e-3}{\liter} + \SI{16,5e-3}{\liter} = \SI{36,5e-3}{\liter}
+		$$
+		\item\structure{Disociación: \ce{BNO3(ac) -> B+(ac) + NO3-(ac)}. Concentración de nuestro producto (\ce{B+}):} tenemos el ion conjugado de un ácido débil.
+		$$
+			[\ce{B+}]=\frac{\SI{2,475e-3}{\mol}}{\SI{36,5e-3}{\liter}}=\SI{,0678}{\Molar}
+		$$
+	\end{enumerate}
+\end{frame}	
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH si añadimos \SI{16,5}{\milli\liter} de \ce{HNO3} (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo del pH:} tenemos que usar $K_h=\rfrac{K_w}{K_b}$, $\pH<7$.
+		\begin{center}
+			\begin{tabular}{cccc}
+				& \multicolumn{3}{c}{\ce{B+(ac) + H2O(l) <=> BOH(ac) + H+(ac)}}	\\
+				\midrule
+				Estado 		& 	[\ce{B+}]~(\si{\Molar})	&  [\ce{BOH}]~(\si{\Molar})	& [\ce{H+}]~(\si{\Molar})			\\
+				Inicial		& 	\num{,0678}				&	0						&  0				\\
+				Equilibrio	&	$\num{,0678}-x$			& 	$x$						& $x$ 				\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podemos considerar $x$ despreciable si $K_h<\num{4e-4}$.
+		$$
+			\overbrace{K_h(\ce{B+})}^{\num{3.33e-10}}=\frac{\overbrace{[\ce{BOH}]}^{x}\overbrace{[\ce{H+}]}^{x}}{\underbrace{[\ce{BOH}]}_{\num{,0678}-x}}=
+			\frac{x^2}{\num{,0678}-x}\approx\frac{x^2}{\num{,0678}}\Rightarrow x=[\ce{H+}]=\SI{4,75e-06}{\Molar}
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH=\num{5,32}}
+		\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): pH si añadimos \SI{18}{\milli\liter} de \ce{HNO3}}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos si hay reactivo limitante y en exceso}
+		$$
+			n(\ce{BOH})=\SI{,1238}{\mol\per\cancel\liter}\times\SI{20e-3}{\cancel\liter}=\SI{2,475e-3}{\mol}
+		$$
+		$$
+			n(\ce{HNO3})=\SI{,15}{\mol\per\cancel\liter}\times\SI{18e-3}{\cancel\liter}=\SI{2,700e-3}{\mol}
+		$$\\[.2cm]
+		\begin{center}
+			\ce{BOH(ac) + HNO3(ac) -> BNO3(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{BOH})=n_{\text{reaccionan}}(\ce{HNO3})=n_{\text{producen}}(\ce{BNO3})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				Estado	&	n(\ce{BOH})~(\si{\mol})					&	n(\ce{HNO3})~(\si{\mol})						&	n(\ce{BNO3})~(\si{\mol})	\\
+				Inicial	&	\num{2,475e-3}							&	\num{2,700e-3}									&	0							\\
+				Final	&	0										&   $\num{2,700e-3}-\num{2,475e-3}=\num{,225e-3}$	&	\num{2,475e-3}				\\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					\ce{BOH} es el reactivo limitante, \ce{HNO3} es el reactivo en exceso
+			}}
+			\myovalbox{\textcolor{red}{pH controlado por \ce{HNO3}, \textbf{pH muy ÁCIDO}}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V_{\text{inicial}}(\ce{BOH}) + V_{\text{añadido}}(\ce{HNO3})\Rightarrow V_T = \SI{20e-3}{\liter} + \SI{18e-3}{\liter} = \SI{38e-3}{\liter}
+		$$
+		\item\structure{Concentración del exceso de \ce{HNO3}:} recordemos que es un ácido fuerte (\ce{HNO3(ac) -> H+(ac) + NO3-(ac)})
+		$$
+			[\ce{HNO3}] = [\ce{H+}] = \frac{\SI{,225e-3}{\mol}}{\SI{38e-3}{\liter}} = \SI{5,921e-3}{\Molar}
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH=\num{2,23}}
+		\end{center}
+	\end{enumerate}
+\end{frame}

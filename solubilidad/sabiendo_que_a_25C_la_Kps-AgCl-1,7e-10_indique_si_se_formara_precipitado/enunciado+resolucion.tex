@@ -1,0 +1,90 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/sabiendo_que_a_25C_la_Kps-AgCl-1,7e-10_indique_si_se_formara_precipitado/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿se forma precipitado?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{K_{ps}(\ce{AgCl})=\num{1,7e-10}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{[\ce{AgNO3}]_0=\SI{,1}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{V(\ce{AgNO3})_0=\SI{1}{\liter}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{[\ce{HCl}]_0=\SI{,1}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{V(\ce{HCl})_0=\SI{1}{\liter}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): concentraciones de los iones implicados}
+	\structure{Primeramente calcular las concentraciones al juntar las disoluciones de \ce{AgNO3} y \ce{HCl}:} $V_{\text{total}}=V_T=\SI{1}{\liter}+\SI{1}{\liter}=\SI{2}{\liter}$; $M = \rfrac{n}{V}\Rightarrow n = M\vdot V$
+	\begin{overprint}
+		\onslide<1>
+			$$
+				n(\ce{AgNO3})=\overbrace{[\ce{AgNO3}]_0}^{\SI{,1}{\mol\per\cancel\liter}}\vdot\underbrace{V_0(\ce{AgNO3})}_{\SI{1}{\cancel\liter}}\Rightarrow n(\ce{AgNO3})=\SI{,1}{\mol}
+			$$
+			$$
+				n(\ce{HCl})=\overbrace{[\ce{HCl}]_0}^{\SI{,1}{\mol\per\cancel\liter}}\vdot\underbrace{V_0(\ce{HCl})}_{\SI{1}{\cancel\liter}}\Rightarrow n(\ce{HCl})=\SI{,1}{\mol}
+			$$
+		\onslide<2->
+			$$
+				n(\ce{AgNO3})=\SI{,1}{\mol}\Rightarrow
+				[\ce{AgNO3}]=\frac{\overbrace{n(\ce{AgNO3})}^{\SI{,1}{\mol}}}{\underbrace{V_T}_{\SI{2}{\liter}}}\Rightarrow[\ce{AgNO3}]=\SI{,05}{\Molar}
+			$$
+			$$
+				n(\ce{HCl})=\SI{,1}{\mol}\Rightarrow
+				[\ce{HCl}]=\frac{\overbrace{n(\ce{HCl})}^{\SI{,1}{\mol}}}{\underbrace{V_T}_{\SI{2}{\liter}}}\Rightarrow[\ce{HCl}]=\SI{,05}{\Molar}
+			$$
+	\end{overprint}
+	\visible<2->{
+		\structure{\ce{AgNO3} y \ce{HCl} son solubles y en agua se disocian:} (\alert{Fijaos en la flecha representando que es un proceso irreversible})
+		$$
+			\ce{AgNO3(ac) -> Ag+(ac) + NO3-(ac)}
+		$$
+		$$
+			\ce{HCl(ac) -> H+(ac) + Cl-(ac)}
+		$$
+		\structure{Por tanto:}
+		$$
+			[\ce{AgNO3}] = [\ce{Ag+}]=\SI{,05}{\Molar}\quad\quad[\ce{HCl}] = [\ce{Cl-}]=\SI{,05}{\Molar}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinar si se forma precipitado}
+	\structure{Reacción de solubilidad:} \ce{AgCl(s) <=> Ag+(ac) + Cl-(ac)}
+	$$
+		K_{ps}(\ce{AgCl}) = [\ce{Ag+}]_{eq}\vdot[\ce{Cl-}]_{eq}=\num{1,7e-10}
+	$$
+	\structure{Este producto se realiza con las concentraciones en el equilibrio. Usando las concentraciones fuera de este equilibrio, se utiliza el producto iónico $Q_{ps}$.}
+	\begin{itemize}
+		\item $Q_{ps}=K_{ps}$: disolución saturada. Situación de equilibrio. No admite ni un ion más para empezar a precipitar.
+		\item $Q_{ps}<K_{ps}$: disolución no saturada. Situación de no equilibrio. Se pueden añadir más iones hasta que $Q=K$.
+		\item $Q_{ps}>K_{ps}$: disolución sobresaturada. Situación de no equilibrio. Se forma precipitado para disminuir $Q$ hasta $Q=K$.
+	\end{itemize}
+	\visible<2->{
+		\structure{Condiciones del ejercicio:}
+		$$
+			Q(\ce{AgCl}) = \overbrace{[\ce{Ag+}]}^{\SI{,05}{\Molar}}\vdot\underbrace{[\ce{Cl-}]}_{\SI{,05}{\Molar}}\Rightarrow Q(\ce{AgCl}) = \num{,05}\vdot\num{,05} = \num{2,5e-3}
+		$$
+		\begin{columns}
+			\column{.35\textwidth}
+				\begin{center}
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\overbrace{Q(\ce{AgCl})}^{\num{2,5e-3}} >> \underbrace{K_{ps}(\ce{AgCl})}_{\num{1,7e-10}}}
+				\end{center}
+			\column{.35\textwidth}
+				\begin{center}
+					\myovalbox{\textcolor{yellow}{\LARGE\textbf{\underline{SÍ PRECIPITA}}}}
+				\end{center}
+		\end{columns}
+				}
+\end{frame}

@@ -1,0 +1,358 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/calcular_CO2_desprendido_a_partir_de_CaCO3_y_HNO3/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        m(\ce{CO2})?\quad
+        V(\ce{HNO3}\text{ comercial})?
+    $$}
+    Reacción: \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{CaCO3(s)}} + 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{HNO3(ac)}}
+     \ce{->[\SI{95}{\percent}]}
+     \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{CO2(g)}} + \ce{Ca(NO3)2(ac)} + \ce{H2O(l)}
+    \visible<1-|handout:0>{$$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{CaCO3}) = \SI{30}{\gram}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{V(\ce{HNO3}) = \SI{60}{\milli\liter} = \SI{0,060}{\liter}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{[\ce{HNO3}] = \SI{2,5}{\Molar}}
+        $$
+        $$
+            Rto = \SI{95}{\percent}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\text{pureza de \ce{HNO3} comercial} = \SI{64,2}{\percent}~m/m}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{d(\text{\ce{HNO3} comercial}) = \SI{1,39}{g\per\milli\liter}}
+        $$
+    }
+    \visible<2-|handout:0>{Pero también ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{CaCO3}) = \SI{100,09}{\gram\per\mol}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{HNO3}) = \SI{63,01}{\gram\per\mol}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{CO2}) = \SI{44,01}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Ejemplo de la vida cotidiana en un laboratorio de Química}
+            \centering
+            \begin{tikzpicture}
+                \begin{scope}[spy using outlines={rectangle,magnification=3.5,connect spies,size=3.4cm,height=1.8cm}]
+                    \node[inner sep=0,outer sep=0,anchor=south west] (image) at (0,0) 
+                    {\polaroid{ 6}{.094}{/home/nicux/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/calcular_CO2_desprendido_a_partir_de_CaCO3_y_HNO3/figs/nitrico_comercial}{Un paseo por el laboratorio\ldots}};
+                    \spy[red!70!black] on (2.28,5.20) in node (zoom) at (-2.00,7.40);
+                    \spy[blue!70!black] on (4.15,4.62) in node (zoom) at (-2.00,4.40);
+                \end{scope}
+        \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción}
+    \structure{Reacción:} \textbf{\ce{CaCO3(s) + HNO3(ac) -> CO2(g) + Ca(NO3)2(ac) + H2O(l)}}
+    \structure{Por tanteo} en general es el más rápido. Contabilizar átomos en reactivos y átomos en los productos y ajustar las cantidades en ambos lados.\\
+    \visible<2-|handout:0>{
+        \centering\ce{CaCO3(s) + H}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{NO3(ac)}} \ce{-> CO2(g) + Ca}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{(NO3)2(ac)}} \ce{+ H2O(l)}\\[.3cm]
+    }
+    \visible<3-|handout:0>{
+        \centering\ce{CaCO3(s) + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{2}\ce{H}{\ce{NO3(ac)}} \ce{-> CO2(g) + Ca}\ce{(NO3)2(ac)} \ce{+ H2O(l)}\\
+    }
+    \visible<4-|handout:0>{
+        \begin{flushleft}
+            \structure{Método aritmético} mediante coeficientes y agrupando por átomos:\\
+        \end{flushleft}
+
+    }
+    \visible<5-|handout:0>{
+        \centering\colorbox{red}{\color{white}\textbf{a}}\ce{CaCO3(s)} + \colorbox{green}{\textbf{b}}\ce{HNO3(ac)} \ce{->} \colorbox{blue}{\color{white}\textbf{c}}\ce{CO2(g)} + \colorbox{orange}{\color{white}\textbf{d}}\ce{Ca(NO3)2(ac)} + \colorbox{yellow}{\textbf{e}}\ce{H2O(l)}\\
+    }
+    \begin{columns}
+            \visible<6-|handout:0>{
+                \column{.45\textwidth}
+                    \begin{flushleft}
+                        \ce{Ca}:\quad\colorbox{red}{\color{white}\textbf{a}}=\colorbox{orange}{\color{white}\textbf{d}}\\
+                        \ce{C}:\quad\colorbox{red}{\color{white}\textbf{a}}=\colorbox{blue}{\color{white}\textbf{c}}\\
+                        \ce{O}:\quad\textbf{3}\colorbox{red}{\color{white}\textbf{a}} + \textbf{3}\colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{blue}{\color{white}\textbf{c}} + \textbf{6}\colorbox{orange}{\color{white}\textbf{d}} + \colorbox{yellow}{\textbf{e}}\\
+                        \ce{H}:\quad\colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{yellow}{\textbf{e}}\\
+                        \ce{N}:\quad\colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{orange}{\color{white}\textbf{d}}
+                    \end{flushleft}
+            }
+            \visible<7-|handout:0>{
+                \column{.45\textwidth}
+                        \underline{Escogemos} \colorbox{red}{\color{white}\textbf{a}} = \textbf{1}\\
+                        Entonces:
+                        \colorbox{red}{\color{white}\textbf{a}}=\colorbox{orange}{\color{white}\textbf{d}}=\colorbox{blue}{\color{white}\textbf{c}}=\textbf{1}\\
+                        \colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{orange}{\color{white}\textbf{d}} = \textbf{2}\\
+                        \colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{yellow}{\textbf{e}}$\Rightarrow$\colorbox{yellow}{\textbf{e}} = \colorbox{green}{\textbf{b}} / \textbf{2} = \textbf{1}
+            }
+    \end{columns}
+    \visible<8-|handout:0>{
+        \centering
+        \colorbox{red}{\color{white}\textbf{1}}
+        \colorbox{green}{\textbf{2}}
+        \colorbox{blue}{\color{white}\textbf{1}}
+        \colorbox{orange}{\color{white}\textbf{1}}
+        \colorbox{yellow}{\textbf{1}}\\
+    }
+    \visible<9-|handout:0>{
+        \colorbox{red}{\color{white}\textbf{1}}\ce{CaCO3(s)} + \colorbox{green}{\textbf{2}}\ce{HNO3(ac)} \ce{->} \colorbox{blue}{\color{white}\textbf{1}}\ce{CO2(g)} + \colorbox{orange}{\color{white}\textbf{1}}\ce{Ca(NO3)2(ac)} + \colorbox{yellow}{\textbf{1}}\ce{H2O(l)}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): volumen de ácido nítrico comercial}
+    \structure{Resumen:} a partir de la definición de la concentración molar obtenemos el número de moles de disolución de \ce{HNO3} ($n(\ce{HNO3})$)\footnote{El número de moles se utiliza en el siguiente apartado}. Con estos moles, sabremos su masa a través de la relación entre la masa y masa molecular. Esa masa es del ácido puro que, por un factor de proporcionalidad empleando la pureza, nos va a permitir saber la masa del \ce{HNO3} comercial. Con la expresión de la densidad, obtenemos el volume.
+    \visible<2->{
+        \structure{Paso 1:} partimos de la definición de molaridad e despejamos $n(\ce{HNO3})$:
+        \begin{equation}\label{eq:molaridad}
+            M = \frac{n}{V}\Rightarrow n = M\cdot V
+        \end{equation}
+        $$
+            n(\ce{HNO3})= [\ce{HNO3}]\cdot V(\ce{HNO3})
+        $$
+        $$
+            n(\ce{HNO3})= \SI{2,5}{\mol\per\cancel\liter}\cdot\SI{0,060}{\cancel\liter} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\SI{0,15}{\mol}\text{ de \ce{HNO3}}}
+        $$
+    }
+    \visible<3->{
+        \structure{Paso 2:} introducimos la relación de $n$ con la masa ($m$) y la masa molecular ($Mm$) en la ecuación~\eqref{eq:molaridad}:
+        \begin{equation}\label{eq:mol-Mm}
+            n = \frac{m}{Mm}
+        \end{equation}
+        \begin{equation}\label{eq:m_puro_dis}
+            \frac{m_{\text{puro}}(\ce{HNO3})}{Mm(\ce{HNO3})} = [\ce{HNO3}]\cdot V\Rightarrow \colorboxed{orange}{m_{\text{puro}}(\ce{HNO3})} = [\ce{HNO3}]\cdot V_{\text{puro}}(\ce{HNO3})\cdot Mm(\ce{HNO3})
+        \end{equation}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): volumen de ácido nítrico comercial}
+    \structure{Paso 3:} Esta $m$ corresponde a la sustancia pura ¿Cuál es la relación entre el \ce{HNO3} puro y el comercial?
+    \begin{overprint}
+        \onslide<1>
+            $$
+                m_{\text{puro}}(\ce{HNO3})
+                \quad ??\quad 
+                m_{\text{comercial}}(\ce{HNO3})
+            $$
+        \onslide<2>    
+            $$
+                m_{\text{puro}}(\ce{HNO3})
+                \quad <\quad
+                m_{\text{comercial}}(\ce{HNO3})
+            $$
+        \onslide<3->
+            \begin{equation}\label<5->{eq:m_teo-com}
+                \colorboxed{orange}{m_{\text{puro}}(\ce{HNO3})}
+                \quad =\quad
+                \colorboxed{red}{\frac{64,2}{100}}\Cline[blue]{m_{\text{comercial}}(\ce{HNO3})}
+            \end{equation}
+    \end{overprint}
+    \visible<4->{
+        \structure{Paso 4:} Y con la expresión de la densidad ($d$)
+        \begin{equation}\label{eq:dens}
+            d_{\text{comercial}}(\ce{HNO3}) = \frac{m_{\text{comercial}}(\ce{HNO3})}{V_{\text{comercial}}(\ce{HNO3})}\Rightarrow \Cline[blue]{m_{\text{comercial}}(\ce{HNO3})} = \Cline[green]{V_{\text{comercial}}(\ce{HNO3})\cdot d_{\text{comercial}}(\ce{HNO3})}
+        \end{equation}
+        }
+    \visible<5->{
+        Unimos las ecuaciones~\eqref{eq:m_teo-com} y \eqref{eq:dens}:
+        \begin{equation}
+            \colorboxed{orange}{m_{\text{puro}}(\ce{HNO3})}
+            \quad =\quad
+            \colorboxed{red}{\frac{64,2}{100}}\cdot\Cline[green]{V_{\text{comercial}}(\ce{HNO3})\cdot d_{\text{comercial}}(\ce{HNO3})}
+        \end{equation}
+        }
+    \visible<6->{
+        \structure{Paso 5:} Igualamos con la ecuación~\eqref{eq:m_puro_dis} que también hacía referencia a la $\colorboxed{orange}{m_{\text{puro}}}$:
+        \begin{equation}
+           \colorboxed{orange}{m_{\text{puro}}(\ce{HNO3})} = [\ce{HNO3}]\cdot V_{\text{puro}}(\ce{HNO3})\cdot Mm(\ce{HNO3}) 
+            =
+            \colorboxed{red}{\frac{64,2}{100}}\cdot\Cline[green]{V_{\text{comercial}}(\ce{HNO3})\cdot d_{\text{comercial}}(\ce{HNO3})}
+        \end{equation}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): volumen de ácido nítrico comercial}
+    \structure{Paso 6:} Despejamos $V_{\text{comercial}}$:
+    \begin{equation}
+        \Cline[green]{V_{\text{comercial}}(\ce{HNO3})} = \colorboxed{red}{\frac{100}{64,2}}\cdot\frac{[\ce{HNO3}]\cdot V_{\text{puro}}(\ce{HNO3})\cdot Mm(\ce{HNO3})}{\Cline[green]{d_{\text{comercial}}(\ce{HNO3})}} 
+    \end{equation}
+    \visible<2->{\structure{Paso 6:} Sustituimos valores:
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Cline[green]{V_{\text{comercial}}}} = \colorboxed{red}{\frac{100}{64,2}}\cdot\frac{\SI{2,5}{\cancel\mol\per\cancel\liter}\cdot \SI{0,060}{\cancel\liter}\cdot\SI{63,01}{\cancel\gram\per\cancel\mol}}{\Cline[green]{\SI{1,394}{\cancel\gram\per\milli\liter}}} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\SI{10,6}{\milli\liter}}
+    $$}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): gramos de dióxido de carbono}
+    \structure{Reacción:} \textbf{\ce{CaCO3(s) + 2HNO3(ac) ->[\SI{95}{\percent}] CO2(g) + Ca(NO3)2(ac) + H2O(l)}}
+    \structure{Paso 1:} Número de moles de \ce{CaCO3} (Ecuación~\eqref{eq:mol-Mm}):
+    $$
+        n=\frac{m}{Mm}\Rightarrow n(\ce{CaCO3})=\frac{\SI{30}{\cancel\gram}}{\SI{100,09}{\cancel\gram\per\mol}}=\SI{0,30}{\mol}\text{ de \ce{CaCO3}}
+    $$
+    \visible<2->{\structure{Paso 2:} Encontrar el reactivo limitante.\\[.5cm]
+    Según la estequiometría: $\quad\SI{1}{\mol}~\ce{CaCO3}\ce{->}\SI{2}{\mol}~\ce{HNO3}$\\
+    Tenemos:\quad\quad\quad\quad\quad\quad\quad\quad $\quad\SI{0,30}{\mol}~\ce{CaCO3}\ce{->}\SI{0,15}{\mol}~\ce{HNO3}$}\\[.5cm]
+    \visible<3->{Para hacer \underline{reaccionar \SI{0,30}{\mol} de \ce{CaCO3}} necesitaríamos \underline{\SI{0,60}{\mol} de \ce{HNO3}} (el doble), pero \underline{hay \SI{0,15}{\mol} de \ce{HNO3}}.}\\[.5cm]
+    \visible<4->{\centering\myovalbox{\textcolor{white}{\ce{HNO3} es el reactivo limitante}}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): gramos de dióxido de carbono}
+    \structure{Reacción:} \textbf{\ce{CaCO3(s) + 2HNO3(ac) ->[\SI{95}{\percent}] CO2(g) + Ca(NO3)2(ac) + H2O(l)}}
+    \structure{Paso 3:} Según la estequiometría: $\quad\SI{2}{\mol}~\ce{HNO3}\ce{->}\SI{1}{\mol}~\ce{CO2}$\\[.3cm]
+    \begin{overprint}
+        \onslide<2>
+            $$
+                n(\ce{HNO3})
+                \quad ??\quad 
+                n(\ce{CO2})
+            $$
+        \onslide<3>    
+            $$
+                n(\ce{HNO3})
+                \quad >\quad
+                n(\ce{CO2})
+            $$
+        \onslide<4>
+            $$
+                n(\ce{HNO3})
+                \quad =\quad
+                2n(\ce{CO2})
+            $$
+        \onslide<5>
+            Empleando una regla de tres:
+            $$
+                \left.
+                \begin{aligned}
+                    \quad\SI{2}{\mol}~\ce{HNO3}\ce{->}\SI{1}{\mol}~\ce{CO2}\\
+                    \quad n(\ce{HNO3})\quad\ce{->}x\qquad\qquad
+                \end{aligned}
+                \right\}
+                \qquad x = \frac{n(\ce{HNO3})\cdot\SI{1}{\mol}~\ce{CO2}}{\SI{2}{\mol}~\ce{HNO3}}
+            $$
+        \onslide<6->
+            Empleando una regla de tres:
+            $$
+                \left.
+                \begin{aligned}
+                    \quad\SI{2}{\mol}~\ce{HNO3}\ce{->}\SI{1}{\mol}~\ce{CO2}\\
+                    \quad n(\ce{HNO3})\quad\ce{->}x\qquad\qquad
+                \end{aligned}
+                \right\}
+                \qquad x = \frac{n(\ce{HNO3})\cdot\SI{1}{\mol}~\ce{CO2}}{\SI{2}{\mol}~\ce{HNO3}}
+            $$
+            Pero $x$ é $n(\ce{CO2})$ por lo que llegamos a la misma expresión:
+            \begin{equation}\label<6->{eq:n_HNO3-n_CO2}
+                \qquad x = n(\ce{CO2})\Rightarrow n(\ce{HNO3}) = 2n(\ce{CO2})            
+            \end{equation}
+    \end{overprint}
+    \visible<7->{
+        \structure{Paso 4:} Rendimiento de la reacción - Experimentalmente se encontró que no todos los moles de \ce{HNO3} reaccionan para dar \ce{CO2} (\SI{95}{\percent} de rendimiento).
+        \begin{overprint}
+            \onslide<7>
+                $$
+                    n_{\text{teo}}(\ce{CO2})
+                    \quad ??\quad 
+                    n_{\text{real}}(\ce{CO2})
+                $$
+            \onslide<8>    
+                $$
+                    n_{\text{teo}}(\ce{CO2})
+                    \quad >\quad 
+                    n_{\text{real}}(\ce{CO2})
+                $$
+            \onslide<9->
+                $$
+                    \frac{95}{100}
+                    n_{\text{teo}}(\ce{CO2})
+                    \quad =\quad
+                    n_{\text{real}}(\ce{CO2})
+                    \Rightarrow
+                    n_{\text{teo}}(\ce{CO2})
+                    =
+                    \frac{100}{95}
+                    n_{\text{real}}(\ce{CO2})
+                $$
+        \end{overprint}
+            }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): gramos de dióxido de carbono}
+    \structure{Paso 5:} Introducimos el número de moles reales en la Ecuación~\eqref{eq:n_HNO3-n_CO2}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                n(\ce{HNO3}) = 2\cdot\overbrace{n_{\text{teo}}(\ce{CO2})}^{n_{\text{teo}}(\ce{CO2})=\frac{100}{95}n_{\text{real}}(\ce{CO2})}
+            $$
+        \onslide<2>
+            $$
+                n(\ce{HNO3}) = 2\cdot\frac{100}{95}n_{\text{real}}(\ce{CO2})
+            $$
+        \onslide<3->
+            $$
+                n(\ce{HNO3}) = \frac{\cancelto{200}{2\cdot 100}}{95}n_{\text{real}}(\ce{CO2})
+            $$
+    \end{overprint}
+    \visible<4->{
+        \structure{Paso 6:} Obtenemos $m(\ce{CO2})$ y despejamos:
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    \overbrace{n(\ce{HNO3})}^{[\ce{HNO3}]\cdot V(\ce{HNO3})}
+                    \quad =\quad
+                    \frac{200}{95}\underbrace{n_{\text{real}}(\ce{CO2})}_{\frac{m_{\text{real}}(\ce{CO2})}{Mm(\ce{CO2})}}
+                $$
+            \onslide<5>
+                $$
+                    [\ce{HNO3}]\cdot V(\ce{HNO3})
+                    \quad =\quad
+                    \frac{200}{95}\cdot\frac{m_{\text{real}}(\ce{CO2})}{Mm(\ce{CO2})}
+                $$
+            \onslide<6>
+                $$
+                    [\ce{HNO3}]\cdot V(\ce{HNO3})\cdot Mm(\ce{CO2})
+                    \quad =\quad
+                    \frac{200}{95}\cdot m_{\text{real}}(\ce{CO2})
+                $$
+            \onslide<7->
+                $$
+                    \frac{95}{200}\cdot [\ce{HNO3}]\cdot V(\ce{HNO3})\cdot Mm(\ce{CO2})
+                    \quad =\quad
+                    m_{\text{real}}(\ce{CO2})
+                $$
+        \end{overprint}
+                }
+        \visible<8->{
+            \structure{Paso 7:} Sustituimos y resolvemos:
+                $$
+                    m(\ce{CO2})
+                    \quad =\quad
+                    \frac{95}{200}\cdot\SI{2,5}{\cancel\mol\per\cancel\liter}\cdot\SI{0,060}{\cancel\liter}\cdot\SI{44,01}{\gram\per\cancel\mol}
+                $$
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{CO2})=\SI{3}{\gram}}
+                $$
+                    }
+\end{frame}

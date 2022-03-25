@@ -1,0 +1,72 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_LiOH_se_utiliza_en_vehiculos_espaciales_para_eliminar_el_CO2/enunciado.tex}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$m(\ce{CO2})$ en \si{\gram}?}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{m(\ce{LiOH}) = \SI{1,00}{\gram}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Li2CO3}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\ce{H2O}}\\[.4cm]
+		Pero también ...\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{Mm(\ce{LiOH}) = \SI{23,95}{\gram\per\mol}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=black]{Mm(\ce{CO2}) = \SI{44,01}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{Ajustamos la reacción: \visible<4->{(comprobar que todos los átomos están ajustados)}}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{LiOH(s) + CO2(g) -> Li2CO3(s) + H2O(l)}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{Li}}$
+							OH(s) + CO2(g) -> 
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{Li2}}$
+							CO3(s) + H2O(l)
+					}
+			$$
+		\onslide<3>
+			$$
+				\ce{
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\textbf{2}\ce{Li}}$
+							OH(s) + CO2(g) -> 
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{Li2}}$
+							CO3(s) + H2O(l)
+				}
+			$$
+		\onslide<4->
+			$$
+				\ce{2LiOH(s) + CO2(g) -> Li2CO3(s) + H2O(l)}
+			$$
+	\end{overprint}
+	\visible<4->{
+		 \structure{Relacionamos estequiométricamente \ce{LiOH} y \ce{CO2}:} por cada mol de \ce{CO2} que reacciona, consumimos \SI{2}{\mol} de \ce{LiOH}
+		 $$
+		 	n(\ce{LiOH}) = 2 n(\ce{CO2})
+		 $$
+		 \structure{Usamos $n = \rfrac{m}{Mm}$:}
+		 $$
+		 	\frac{m(\ce{LiOH})}{Mm(\ce{LiOH})} = 2\vdot\frac{m(\ce{CO2})}{Mm(\ce{CO2})}\Rightarrow
+		 	m(\ce{CO2}) = \frac{m(\ce{LiOH})\vdot Mm(\ce{CO2})}{2\vdot Mm(\ce{LiOH})}\Rightarrow
+		 $$
+		 $$
+		 	m(\ce{CO2}) = \frac{\SI{1,00}{\gram}\vdot\SI{44,01}{\cancel\gram\per\cancel\mol}}{2\vdot\SI{23,95}{\cancel\gram\per\cancel\mol}}
+		 $$
+		 \begin{center}
+ 	 		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=black]{m(\ce{CO2}) = \SI{,92}{\gram}}
+		 \end{center}
+				}
+\end{frame}

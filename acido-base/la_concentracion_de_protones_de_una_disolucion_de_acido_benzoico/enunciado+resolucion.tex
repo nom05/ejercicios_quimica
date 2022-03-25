@@ -1,0 +1,55 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/la_concentracion_de_protones_de_una_disolucion_de_acido_benzoico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$K_a(\ce{C6H5COOH})$?}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{C6H5COOH}]=\SI{,072}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{H+}]=\SI{2,1e-3}{\Molar}}\\[.4cm]
+		\chemname{\chemfig{**6(----(-COOH)--)}}{\textbf{ácido benzoico}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $K_a$}
+	\structure{La reacción de equilibrio del ácido débil sera:}\\
+	\begin{center}
+		\schemestart
+			\chemnameinit{\chemfig{[:30,.8]**6(--(-COOH)----)}} 
+			\chemname{\chemfig{[:30,.6,,,thick]**6(--(-COOH)----)}}{Ácido benzoico(ac)}
+		\arrow{<=>} 
+			\chemname{\chemfig{[:30,.6,,,thick]**6(--(-COO^{-})----)}}{Ion benzoato(ac)}
+			\+
+			\ce{H+}
+			\chemnameinit{}
+		\schemestop\\[.5cm]
+	\end{center}
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+			Concentración(\si{\Molar})  & $\left[\chemfig{[:30,.3,,,thick]**6(--(-COOH)----)}\right]$ & [\ce{H+}] & $\left[\chemfig{[:30,.3,,,thick]**6(--(-COO^{-})----)}\right]$\\
+			{[Inicial]}    & \num{72e-3}	   					  &       0	            &     0               \\
+			{[Equilibrio]} & $\num{72e-3}-\num{2,1e-3}$ & \num{2,1e-3} & \num{2,1e-3} \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Constante de equilibrio:}
+		$$
+			K_a(\text{ácido benzoico}) = \frac{[\ce{H+}]\cdot\left[\chemfig{[:30,.3,,,thick]**6(--(-COO^{-})----)}\right]}{\left[\chemfig{[:30,.3,,,thick]**6(--(-COOH)----)}\right]}
+		$$
+	\structure{Sustituimos por los valores de la tabla:}
+		$$
+			K_a(\text{ácido benzoico}) = \frac{\num{2,1e-3}\cdot\num{2,1e-3}}{\num{72e-3}-\num{2,1e-3}}\Rightarrow
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a(\text{ácido benzoico}) =\num{6,31e-5}}
+		$$
+\end{frame}

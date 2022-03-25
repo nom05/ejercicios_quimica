@@ -1,0 +1,48 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/coligativas/disolvemos_12g_de_un_soluto_no_volatil_en_60g_de_agua_y_la_temperatura/enunciado.tex
+			}
+		}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge ¿$Mm(\text{soluto})=Mm$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\text{soluto})=\SI{12}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{K_e(\text{soluto})=\SI{,52}{\celsius\kilogram\per\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{H2O})=\SI{60}{\gram}=\SI{,060}{\kilogram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{T_e(\ce{H2O}\text{+soluto})=\SI{374,45}{\kelvin}}\\[.3cm]
+		\visible<2->{
+			{\Large Pero también \ldots}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T(\ce{H2O})=\SI{100}{\celsius}=\SI{373,15}{\kelvin}}
+					}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la masa molecular del soluto}
+	\structure{Variación de temperatura:}\quad$\Delta T = T - T^0\Rightarrow\Delta T = \SI{374,45}{\kelvin} - \SI{373,15}{\kelvin} = \SI{1,3}{\kelvin} = \SI{1,3}{\celsius}$\\[.4cm]
+	\visible<2->{
+		\alert{\textbf{Recordad:}}\quad las escalas Kelvin y Celsius son centígradas. Por tanto $\Delta T(\si{\celsius}) = \Delta T(\si{\kelvin}) $\\[.4cm]
+		\structure{Aumento ebulloscópico:}
+		$$
+			\Delta T = K_e\vdot m\Rightarrow m = \frac{\Delta T}{K_e}\Rightarrow m(\text{soluto}) = \frac{\SI{1,3}{\cancel\celsius}}{\SI{,52}{\cancel\celsius\kilogram\per\mol}} = \SI{2,5}{\mol\per\kilogram}
+		$$
+		\structure{Número de moles del soluto:}
+		$$
+			n(\text{soluto})=\SI{2,5}{\mol\per\cancel\kilogram}\vdot\SI{,060}{\kilogram}=\SI{,15}{\mol}
+		$$
+		Y finalmente:
+		$$
+			n = \frac{m}{Mm}\Rightarrow Mm = \frac{m}{n}\Rightarrow Mm = \frac{\SI{12}{\gram}}{\SI{,15}{\mol}}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\text{soluto})=\SI{80}{\gram\per\mol}}
+				}
+\end{frame}

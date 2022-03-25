@@ -1,0 +1,142 @@
+\ProvidesPackage{./config/comun}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\def\spanishoptions{spain}
+\usepackage[spanish]{babel}
+\usepackage{chemfig}        % this package loads chemfig and defines variable
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[version=4]{mhchem}
+\usepackage{blkarray}
+\usepackage[most,skins,theorems]{tcolorbox}
+\usepackage{rotating}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{xfrac}
+\usepackage{siunitx}
+\usepackage[super]{nth}
+\usepackage{cancel}
+\usepackage{acronym}
+\usepackage{xcolor}
+\usepackage[inline]{enumitem}
+\usepackage{xparse}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{hanging}% http://ctan.org/pkg/hanging
+%\usepackage[bottom,norule]{footmisc}
+\usepackage{subcaption}
+
+
+%% Unidades de SIUnitx
+\DeclareSIUnit\molar{\mol\per\liter}
+\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\molal{\mol\per\kilogram}
+\DeclareSIUnit\Molal{m}
+\DeclareSIUnit\torr{Torr}
+\DeclareSIUnit\atm{atm}
+\DeclareSIUnit\fahrenheit{\degree{F}}
+\DeclareSIUnit\rankine{Ra}
+\DeclareSIUnit\calorie{cal}
+
+%% Configuración de SIUnitx
+\sisetup{
+	output-decimal-marker = {,},
+	per-mode              = reciprocal-positive-first,
+	range-phrase		  = --,
+	inter-unit-product	  = \ensuremath{{}\cdot{}},
+}
+
+% mhchem: write list of compounds as a command that splits at commas (plus space)
+\newcommand*\cec[1]{\cesplit{{\,\ }{\0}}{#1}}
+
+%% Comandos personales
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\amarillo}[1]{\colorbox{yellow}{#1}}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}} %running fraction with slash - requires math mode.
+\newcommand{\resultadocmd}[1]{  %Formato para imprimir resultados si se define comando "imprimeresultado" (\newcommand{\imprimeresultado}{})
+	\ifdefined\imprimeresultado
+	\quad{\scriptsize\texttt{R:\quad#1.}}
+	\fi
+							}
+\newcommand{\cte}{\text{cte\,}} %para el entorno matemático
+\newcommand{\pH}{\text{pH\,}} %para el entorno matemático
+\newcommand{\pOH}{\text{pOH\,}} %para el entorno matemático
+\newcommand{\Kan}[1]{K_{a_{#1}}} %para el entorno matemático
+\newcommand{\pKa}{\text{p}K_a} %para el entorno matemático
+\newcommand{\pKan}[1]{\text{p}K_{a_{#1}}} %para el entorno matemático
+\newcommand{\pKb}{\text{p}K_b} %para el entorno matemático
+\newcommand{\pKbn}[1]{\text{p}K_{b_{#1}}} %para el entorno matemático
+\newcommand{\pKn}[1]{\text{p}K_{#1}} %para el entorno matemático
+
+\usetikzlibrary{automata,spy,shapes.misc,calc,positioning,patterns}
+\newtcbox{\myovalbox}{colback=black,boxrule=0pt,arc=5pt,boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt}
+%\tcbset{colback=white,colframe=black}
+\tcbset{highlight math style={enhanced,colframe=red,colback=white,arc=0pt,boxrule=1pt}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+\usepgflibrary{arrows}
+\newsavebox\MBox
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+		\rlap{\usebox\MBox}\color{#1}\rule[-2.0\dp\MBox]{\wd\MBox}{1.5pt}}}
+\newcommand{\polaroid}[5][top=.20cm,left=.20cm,right=.20cm,bottom=.20cm,boxsep=0pt,colback=white,width=5.50cm,arc=0pt,auto outer arc,fuzzy shadow={2mm}{-2mm}{1mm}{0.3mm}{black}]{%
+	\tcbset{enhanced}
+	\rotatebox{#2}{%
+		\begin{tcolorbox}[#1]
+			\begin{center}%
+				\setlength{\fboxrule}{0.2pt}%
+				\setlength{\fboxsep}{0pt}%
+				\fbox{%
+					\includegraphics[scale=#3]{#4}}
+				
+				#5%
+			\end{center}%
+		\end{tcolorbox}%
+	}%
+}%
+
+% Syntax: \colorboxed[<color model>]{<color specification>}{<math formula>}
+\newcommand*{\colorboxed}{}
+\def\colorboxed#1#{%
+	\colorboxedAux{#1}%
+}
+\newcommand*{\colorboxedAux}[3]{%
+	% #1: optional argument for color model
+	% #2: color specification
+	% #3: formula
+	\begingroup
+	\colorlet{cb@saved}{.}%
+	\color#1{#2}%
+	\boxed{%
+		\color{cb@saved}%
+		#3%
+	}%
+	\endgroup
+}
+
+\makeatletter
+\renewcommand*{\@textcolor}[3]{%
+	\protect\leavevmode
+	\begingroup
+	\color#1{#2}#3%
+	\endgroup
+}
+\makeatother
+
+
+%% Definición de contadores
+\newcounter{unidadnumero}
+\newcounter{bloquejercicios}
+\newcounter{contarejercicios}
+
+%% Definición de acrónimos
+\acrodef{HH}{Henderson-Hasselbalch}
+\acrodef{SI}{Sistema Internacional de Unidades}
+\acrodef{SA}{sistema aislado}
+\acrodef{ADN}{ácido desoxirribonucleico}
+\acrodef{PE}{punto de equivalencia}

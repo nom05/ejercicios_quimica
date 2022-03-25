@@ -1,0 +1,103 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/la_solubilidad_del_BaF2_calcule_producto_de_solubilidad/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$K_{ps}$?, ¿$s^\prime$ si [\ce{BaCl2}]=\SI{,1}{\Molar}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{s(\ce{BaF2})=\SI{1,30}{\gram\per\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{BaF2})=\SI{17,324}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): producto de solubilidad del \ce{BaF2}}
+	\structure{Cambio de unidades:}
+	$$
+		s(\ce{BaF2})=\frac{\SI{1,30}{\cancel\gram\per\liter}}{\SI{175,324}{\cancel\gram\per\mol}}=\SI{7,41e-3}{\Molar}
+	$$
+	\structure{Equilibrio de solubilidad:}
+	\begin{center}
+		\ce{BaF2(s) <=> Ba^{2+}(ac) + 2F-(ac)}\quad$K_{ps}(\ce{BaF2})=\underbrace{[\ce{Ba^{2+}}]}_{s}{\underbrace{[\ce{F-}]}_{2s}}^2=s\vdot(2s)^2=s\vdot 4s^2=4s^3$
+		$$
+			K_{ps}(\ce{BaF2})=4\times(\num{7,41e-3})^3
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{BaF2})=\num{1,63e-6}}
+		$$
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): solubilidad si [\ce{BaF2}]=\SI{,1}{\Molar}}
+	\structure{Suponiendo que $K_{ps}$ es muy baja:} $s^\prime+\num{,1}\approx\num{,1}$
+	\structure{Constante de solubilidad:}\\
+	\begin{multicols}{2}
+		\alert{Con aproximación:}
+			$$
+				\overbrace{K_{ps}(\ce{BaF2})}^{\num{1,63e-6}}=\underbrace{[\ce{Ba^{2+}}]}_{s^\prime+\num{,1}\approx\num{,1}}{\underbrace{[\ce{F-}]}_{2s^\prime}}^2
+			$$
+			$$
+				\num{1,63e-6}=\num{,1}\vdot(2s^\prime)^2
+			$$
+			$$
+				s^\prime=\sqrt{\frac{\num{1,63e-5}}{4}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{s^\prime=\SI{2,02e-3}{\Molar}}
+			$$
+		\alert{Sin aproximación:} Método de Newton
+			$$
+				s_{n+1} = s_n - \frac{f(s_n)}{f^\prime(s_n)}
+			$$
+			$$
+				f(s) = \num{4}s^3 + \num{,4}s^2 -\num{1,63e-5}
+			$$
+			$$
+				f^\prime(s) = \num{12}s^2 + \num{,8}s
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{s^\prime=\SI{2,00e-3}{\Molar}}
+			$$
+	\end{multicols}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): tabla para calcular solución con el método de Newton}
+	\begin{center}
+		{\footnotesize
+			\begin{tabular}{SSSSS}
+				\toprule
+					{$n$}	& {$s_{n}$}	& {$f(s)$}	& {$f^\prime(s)$}	& {$s_{n+1}$}	\\
+				\midrule
+					1		& 1			& 4.40		& 1.28E+1			& 6.56E-1		\\
+					2		& 6.56E-1	& 1.30E+0	& 5.69E+0			& 4.27E-1		\\
+					3		& 4.27E-1	& 3.85E-1	& 2.53E+0			& 2.75E-1		\\
+					4		& 2.75E-1	& 1.14E-1	& 1.13E+0			& 1.75E-1		\\
+					5		& 1.75E-1	& 3.35E-2	& 5.06E-1			& 1.08E-1		\\
+					6		& 1.08E-1	& 9.79E-3	& 2.28E-1			& 6.54E-2		\\
+					7		& 6.54E-2	& 2.83E-3	& 1.04E-1			& 3.81E-2		\\
+					8		& 3.81E-2	& 8.00E-4	& 4.79E-2			& 2.14E-2		\\
+					9		& 2.14E-2	& 2.21E-4	& 2.26E-2			& 1.16E-2		\\
+					10		& 1.16E-2	& 5.88E-5	& 1.09E-2			& 6.25E-3		\\
+					11		& 6.25E-3	& 1.50E-5	& 5.47E-3			& 3.51E-3		\\
+					12		& 3.51E-3	& 3.48E-6	& 2.96E-3			& 2.34E-3		\\
+					13		& 2.34E-3	& 6.06E-7	& 1.94E-3			& 2.02E-3		\\
+					14		& 2.02E-3	& 4.19E-8	& 1.67E-3			& 2.00E-3		\\
+					15		& 2.00E-3	& 2.67E-10	& 1.65E-3			& 2.00E-3		\\
+				\bottomrule
+			\end{tabular}
+		}
+	\end{center}
+\end{frame}

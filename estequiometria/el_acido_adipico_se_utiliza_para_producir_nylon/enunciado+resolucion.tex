@@ -1,0 +1,107 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_acido_adipico_se_utiliza_para_producir_nylon/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge
+        $$
+            m_{teo}(\ce{C6H12})?\quad\quad\% \text{Rto da reacción}?
+        $$
+    }
+    Reacción:\\[.3cm]
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{C6H12(l)}}
+    \ce{ + O2(g) ->}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{H2C6H8O4(l)}}
+    \ce{ + H2O(g)} \\[.5 cm]
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{C6H12}) = \SI{25,0}{\gram}}
+    \quad
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{m_{real}(\ce{H2C6H8O4})=\SI{33,5}{\gram}}\\[.5 cm]
+    \visible<2-|handout:0>{Pero tamén ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{C6H12}) = \SI{84,16}{\gram\per\mol}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{H2C6H8O4}) = \SI{146,14}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción}
+    \begin{overprint}
+        \onslide<1>
+            \ce{C6H12(l) + O2(g) -> H2C6H8O4(l) + H2O(g)}
+        \onslide<2>
+            \ce{C6H12(l) + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O2(g)}}
+            \ce{-> H2C6H8}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O4(l)}}
+            \ce{+ H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O(g)}}
+        \onslide<3>
+            \ce{C6H12(l) + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\frac{5}{2}\ce{O2(g)}}
+            \ce{-> H2C6H8}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O4(l)}}
+            \ce{+ H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O(g)}}
+        \onslide<4->
+            \ce{C6H12(l) + \frac{5}{2}\ce{O2(g)} -> H2C6H8O4(l) + H2O(g)}
+    \end{overprint}
+    \visible<2->{
+        \begin{itemize}
+            \item<2-> Únicamente los átomos de oxígeno no están ajustados.
+            \item<3-> $\rfrac{5}{2}$ es recomendable en este caso en vez de multiplicar toda la reacción $\times 2$ porque simplifica la relación entre los compuestos del problema.
+            \item<4-> Según la estequiometría: $\SI{1}{\mol}\text{ de }\ce{C6H12(l)}\Rightarrow\SI{1}{\mol}\text{ de }\ce{H2C6H8O4}$.
+        \end{itemize}
+                }
+    \visible<4->{
+        \centering\myovalbox{\textcolor{white}{$n(\ce{C6H12})=n(\ce{H2C6H8O4})$}}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): masa teórica de \ce{H2C6H8O4}}
+    \structure{Recordando:}
+        $$
+            n=\frac{m}{Mm}
+        $$
+     \visible<2->{
+         {\centering\myovalbox{\textcolor{white}{$n(\ce{C6H12})=n(\ce{H2C6H8O4})$}}}
+                 }
+     \visible<3->{
+         \structure{Se obtiene:}
+         $$
+             \frac{m(\ce{C6H12})}{Mm(\ce{C6H12})} = \frac{m(\ce{H2C6H8O4})}{Mm(\ce{H2C6H8O4})}
+         $$
+                 }
+     \visible<4->{
+        \structure{Despejando:}
+            $$
+                m(\ce{H2C6H8O4}) = m(\ce{C6H12})\cdot\frac{Mm(\ce{H2C6H8O4})}{Mm(\ce{C6H12})}
+            $$
+                 }
+     \visible<5->{
+        \structure{Sustituyendo:}
+            $$
+                m(\ce{H2C6H8O4}) = \SI{25,0}{\gram}\cdot\frac{\SI{146,14}{\cancel\gram\per\cancel\mol}}{\SI{84,16}{\cancel\gram\per\cancel\mol}} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{43,4}{\gram}=m(\ce{H2C6H8O4})}
+            $$
+                 }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): \% Rto de la reacción}
+    \structure{Masa teórica:} $m_{\text{teo}}(\ce{H2C6H8O4}) = \SI{43,4}{\gram}$
+    \structure{Masa real:} $m_{\text{real}}(\ce{H2C6H8O4}) = \SI{33,5}{\gram}$
+    \structure{\% Rendimiento:} $\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Rto (\ce{H2C6H8O4})} = \frac{\SI{33,5}{\cancel\gram}}{\SI{43,4}{\cancel\gram}}\cdot 100 = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{77,2}{\percent}}$
+\end{frame}

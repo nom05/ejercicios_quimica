@@ -1,0 +1,114 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/el_CS2_tiene_una_Pv_de_298Torr_a_20C/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿$V_{\max}$ con equilibrio líquido-vapor?
+        \item Si $V = \SI{3,0}{\liter}$, ¿$P(\ce{CS2(g)})$?
+        \item Si $V = \SI{6,0}{\liter}$, ¿$P(\ce{CS2(g)})$?
+    \end{enumerate}
+    $$
+        P_v(\ce{CS2}) = \frac{298}{760}~\si{\atm}
+    $$
+    $$
+        T(\ce{CS2}) = 20+273,15~\si{\kelvin}
+    $$
+    $$
+        m(\ce{CS2})=\SI{6,00}{\gram}
+    $$
+    $$
+        Mm(\ce{CS2}) = \SI{76,14}{\gram\per\mol}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Volumen máximo con equilibrio líquido-vapor}
+    \structure{$V_{\max}$ corresponderá a partir de cuándo el líquido es gas:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                P\vdot V = n\vdot R\vdot T
+            $$
+        \onslide<2>
+            $$
+                V = \frac{\overbrace{n}^{n=\frac{m}{Mm}}\vdot R\vdot T}{P}
+            $$
+        \onslide<3>
+            $$
+                V_{\max}(\ce{CS2}) = \frac{m(\ce{CS2})\vdot R\vdot T(\ce{CS2})}{P(\ce{CS2})\vdot Mm(\ce{CS2})}
+            $$
+        \onslide<4>
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{
+                V_{\max}(\ce{CS2}) =
+                \frac{\SI{6}{\cancel\gram}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot(20+273,15~\si{\cancel\kelvin})}{\frac{298}{760}~\si{\cancel\atm}\vdot\SI{76,14}{\cancel\gram\per\cancel\mol}} =
+                \SI{4,83}{\liter}
+                }
+            $$
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): Si $V = \SI{3,0}{\liter}$, presión del gas}
+    \structure{Según el apartado anterior:}
+    $$
+        V_{\max}(\ce{CS2}) = \SI{4,83}{\liter} > V(\ce{CS2}) = \SI{3}{\liter}
+    $$
+    \visible<2->{
+        \structure{Entonces:} todo \textbf{\underline{volumen}} de recipiente \textbf{\underline{inferior}} al $V_{\max}$ en las mismas condiciones provoca la \textbf{\underline{condensación}}. Por tanto, hay líquido y su $P(\ce{CS2(g)})$ será
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{
+                P_v(\ce{CS2}) = \frac{298}{760}~\si{\atm} = \SI{,392}{\atm}
+            }
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): Si $V = \SI{6,0}{\liter}$, presión del gas}
+    \structure{Habíamos visto:}
+    $$
+        V_{\max}(\ce{CS2}) = \SI{4,83}{\liter} < V(\ce{CS2}) = \SI{6}{\liter}
+    $$
+    \visible<2->{
+        \structure{Entonces:} todo \textbf{\underline{volumen}} de recipiente \textbf{\underline{superior}} al $V_{\max}$ en las mismas condiciones provoca la \textbf{\underline{evaporación}}. Por tanto, todo el \ce{CS2} es gas:
+        \begin{overprint}
+            \onslide<3>
+                $$
+                    P\vdot V = n\vdot R\vdot T
+                $$
+            \onslide<4>
+                $$
+                    P = \frac{\overbrace{n}^{n=\frac{m}{Mm}}\vdot R\vdot T}{V}
+                $$
+            \onslide<5>
+                $$
+                    P = \frac{m\vdot R\vdot T}{Mm\vdot V}
+                $$
+            \onslide<6->
+                $$
+                    P(\ce{CS2(g)}) = \frac{\SI{6}{\cancel\gram}\vdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{293,15}{\cancel\kelvin}}{\SI{76,14}{\cancel\gram\per\cancel\mol}\vdot\SI{6}{\cancel\liter}}
+                $$
+        \end{overprint}
+        \visible<6->{
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{
+                    P(\ce{CS2(g)}) = \SI{,316}{\atm} = \SI{240}{\torr}
+                }
+            $$
+                    }
+    }
+\end{frame}
+

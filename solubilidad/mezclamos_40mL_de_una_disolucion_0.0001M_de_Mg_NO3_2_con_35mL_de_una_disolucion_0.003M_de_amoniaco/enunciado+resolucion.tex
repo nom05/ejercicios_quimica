@@ -1,0 +1,113 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/mezclamos_40mL_de_una_disolucion_0.0001M_de_Mg_NO3_2_con_35mL_de_una_disolucion_0.003M_de_amoniaco/enunciado.tex
+		}
+            }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large \textbf{¿Precipita el \ce{Mg(OH)2}?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{Mg(NO3)2}]_0 = \SI{1e-4}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{Mg(NO3)2})_0 = \SI{,04}{\liter}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{ps}(\ce{Mg(OH)2}) = \SI{1,8e-11}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{V_0(\ce{NH3}) = \SI{,035}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{[\ce{NH3}]_0 = \SI{3e-3}{\Molar}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinar si hay precipitado de \ce{Mg(OH)2}}
+    \structure{Recalcular concentraciones al mezclar dos disoluciones:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                V_T = \SI{,040}{\liter} + \SI{,035}{\liter} = \SI{,075}{\liter}
+            $$
+            $$
+                [\ce{NH3}] = \frac{\overbrace{n(\ce{NH3})}^{n=M\cdot V}}{V_T}
+            $$
+        \onslide<2>
+            $$
+                V_T = \SI{,040}{\liter} + \SI{,035}{\liter} = \SI{,075}{\liter}
+            $$
+            $$
+                [\ce{NH3}] = \frac{[\ce{NH3}]_0\cdot V_0(\ce{NH3})}{V_T}
+            $$
+        \onslide<3-4>
+            $$
+                [\ce{NH3}] = \frac{[\ce{NH3}]_0\cdot V_0(\ce{NH3})}{V_T}\Rightarrow[\ce{NH3}] = \frac{\SI{3e-3}{\Molar}\cdot\SI{,035}{\cancel\liter}}{\SI{,075}{\cancel\liter}} = \SI{1,4e-3}{\Molar}
+            $$
+        \onslide<5->
+            $$
+                [\ce{NH3}] = \SI{1,4e-3}{\Molar}
+            $$
+    \end{overprint}
+    \begin{overprint}
+        \onslide<4>
+            $$
+                [\ce{Mg(NO3)2}] = \frac{[\ce{Mg(NO3)2}]_0\cdot V_0(\ce{Mg(NO3)2})}{V_T}\Rightarrow[\ce{Mg(NO3)2}] = \frac{\SI{1e-4}{\Molar}\cdot\SI{,040}{\cancel\liter}}{\SI{,075}{\cancel\liter}}
+            $$
+        \onslide<5->
+            $$
+                [\ce{Mg(NO3)2}] = [\ce{Mg^2+}] = \SI{5,333e-5}{\Molar}
+            $$
+    \end{overprint}
+    \visible<6->{
+        \structure{Habrá precipitado si producto de solubilidad ($Q(\ce{Mg(OH)2})$) es mayor que $K_{ps}(\ce{Mg(OH)2})$}
+        $$
+            Q(\ce{Mg(OH)2}) = [\ce{Mg^2+}][\ce{OH-}]^2 \text{(producto de concentraciones que no están en equilibrio)}
+        $$
+                }
+    \visible<7->{
+        \structure{Concentración de aniones hidróxido [\ce{OH-}]:}
+        \begin{overprint}
+            \onslide<7>
+                $$
+                    \ce{
+                        $\underset{\SI{1,4e-3}{\Molar}-x}{\ce{NH3(ac)}}$
+                        + 
+                        H2O(l)
+                        <=>
+                        $\underset{x}{\ce{NH4+(ac)}}$
+                        +
+                        $\underset{x}{\ce{OH-(ac)}}$
+                       }\quad K_b(\ce{NH3}) = \frac{[\ce{NH4+}][\ce{OH-}]}{[\ce{NH3}]}
+                $$
+            \onslide<8>
+                $$
+                    K_b(\ce{NH3}) = \frac{[\ce{NH4+}][\ce{OH-}]}{[\ce{NH3}]} = \frac{x^2}{\SI{1,4e-3}{}-x}\approx\frac{x^2}{\SI{1,4e-3}{}}
+                $$
+            \onslide<9->
+                $$
+                    x=[\ce{OH-}] = +\sqrt{K_b(\ce{NH3})\cdot\SI{1,4e-3}{}} = \SI{1,587e-4}{\Molar}
+                $$
+        \end{overprint}
+                }
+    \visible<10->{
+        \structure{Comparación de $Q(\ce{Mg(OH)2})$ con $K_{ps}(\ce{Mg(OH)2})$:}
+        \begin{overprint}
+            \onslide<10>
+                $$
+                    Q(\ce{Mg(OH)2}) = [\ce{Mg^2+}][\ce{OH-}]^2\Rightarrow Q(\ce{Mg(OH)2})=  [\ce{Mg^2+}] = \SI{5,333e-5}{}\cdot(\SI{1,587e-4}{})^2
+                $$
+            \onslide<11>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Q(\ce{Mg(OH)2}) = \SI{1,344e-12}{} < K_{ps}(\ce{Mg(OH)2}) = \SI{1,8e-11}{}\quad\text{\Large\textbf{No precipita}}}
+                $$
+        \end{overprint}
+                 }
+\end{frame}

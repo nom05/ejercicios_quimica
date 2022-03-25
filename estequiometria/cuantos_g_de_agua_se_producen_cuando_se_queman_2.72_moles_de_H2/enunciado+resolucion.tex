@@ -1,0 +1,36 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/cuantos_g_de_agua_se_producen_cuando_se_queman_2.72_moles_de_H2/enunciado.tex}
+      		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿\si{\gram} de \ce{H2O}?} \\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{n(\ce{H2}) = \SI{2,72}{\mol}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{quemar o combustión } = \text{reacción con \ce{O2}}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{exceso de \ce{O2}}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{Mm(\ce{H2O}) = \SI{18,02}{\gram\per\mol}}\\[.4cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{Reacción de combustión del \ce{H2}:} \ce{H2(g) + 1/2O2(g) -> H2O(g)}\qquad Con los datos del problema no sabemos en que estado de agregación se forma el agua ni nos importa. Es probable que la energía desprendida permita obtener agua en fase gas.
+	\structure{Exceso de \ce{O2}:} hay suficiente moléculas de \ce{O2} para consumir todo el \ce{H2}. Según la estequiometría:
+	$$
+		n(\ce{H2}) = n(\ce{H2O}) = \SI{2,72}{\mol}
+	$$
+	\structure{Usando la relación entre el n"o de moles y la masa a través de la masa molecular:}
+	$$
+		n = \frac{m}{Mm} \Rightarrow m = n\vdot Mm\Rightarrow m(\ce{H2O}) = \SI{2,72}{\cancel\mol}\vdot\SI{18,02}{\gram\per\cancel\mol}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{m(\ce{H2O}) = \SI{49,01}{\gram}}
+	$$
+\end{frame}

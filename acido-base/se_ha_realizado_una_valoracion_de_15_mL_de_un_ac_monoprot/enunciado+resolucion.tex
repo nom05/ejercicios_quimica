@@ -1,0 +1,213 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_ha_realizado_una_valoracion_de_15_mL_de_un_ac_monoprot/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{¿$K_a$? ¿pH?}}\\[.2cm]
+	\end{center}
+	Ácido (\ce{HA}):\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{HA}) = \SI{15}{\milli\liter}}\\[.2cm]
+	Base (\ce{BOH}):\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NaOH}]=\SI{,2000}{\Molar}}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{\text{PE}}(\ce{NaOH})=\SI{12}{\milli\liter}}\\[.2cm]
+	\begin{center}
+		\begin{tabular}{cSSS}
+			\toprule
+			$V(\ce{NaOH})$ añadido (\si{\milli\liter})	 & 0	& 5	& 12	\\
+			pH 											 & 3,30	& 	& 		\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	PE: punto de equivalencia
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Determinación de $K_a(\ce{HA})$}
+	\structure{En el punto de equivalencia:}\quad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{n(\ce{HA}) = n(\ce{NaOH})}
+	\structure{Usamos el $V_{\text{PE}}(\ce{NaOH})$ añadido para alcanzar el punto de equivalencia y su concentración:}
+	$M=\rfrac{n}{V}\Rightarrow n=M\vdot V\Rightarrow n(\ce{NaOH}) = \SI{,2}{\mol\per\cancel\liter}\vdot\SI{12e-3}{\cancel\liter} = \SI{2,4e-3}{\mol} = n(\ce{HA})$
+	\structure{Obteniendo $n(\ce{HA})$. Dividimos por $V(\ce{HA})=\SI{15}{\milli\liter}$ para obtener $[\ce{HA}]$:}
+	$[\ce{HA}] = \frac{\SI{2,4e-3}{\mol}}{\SI{15e-3}{\liter}} = \SI{,16}{\Molar}$
+	\structure{Cuando $V(\ce{NaOH}) = \SI{0}{\milli\liter}$ solo tenemos \ce{HA} y su pH. Por tanto, podemos plantear el equilibrio de disociación del ácido y calculamos de antemano $[\ce{H+}]$:}
+	$$
+		\pH = -\log[\ce{H+}]\Rightarrow [\ce{H+}] = 10^{-\pH}\Rightarrow [\ce{H+}] = \num{10}^{\num{-3,3}}\,{\si{\Molar}} = \SI{5,01e-4}{\Molar}
+	$$
+	$$
+		\ce{HA(ac) <=> H+(ac) + A-(ac)}\quad K_a(\ce{HA}) = \frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}
+	$$
+    \begin{center}
+		{\small \begin{tabular}{clll}
+				\toprule
+							& \multicolumn{3}{c}{\ce{HA(ac) <=> H+(ac) + A-(ac)}}	\\
+				Estado  	& [\ce{HA}] (\si{\Molar})	& [\ce{H+}] (\si{\Molar})	& [\ce{A-}] (\si{\Molar})	\\
+				\midrule
+				Inicial 	& \num{,16}					& 0							& 0							\\
+				Equilibrio  & $\num{,16}-x$ 					& $x=\SI{5,01e-4}{\Molar}$	& $x$						\\
+				\bottomrule
+		\end{tabular}}
+		$$
+			K_a = \frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]} =\frac{x^2}{[\ce{HA}]_{0}-x}\Rightarrow
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_a = \frac{(\num{5,01e-4})^2}{\num{,16}-\num{5,01e-4}} = \num{1,57e-6}}
+		$$
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): pH si añadimos \SI{5}{\milli\liter} de \ce{NaOH} (\rom{1})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+			$$
+				n(\ce{HA})=\SI{,16}{\mol\per\cancel\liter}\times\SI{15e-3}{\cancel\liter}=\SI{2,4e-3}{\mol}
+			$$
+			$$
+				n(\ce{NaOH})=\SI{,2}{\mol\per\cancel\liter}\times\SI{5e-3}{\cancel\liter}=\SI{1e-3}{\mol}
+			$$\\[.2cm]
+		\begin{center}
+			\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HA})=n_{\text{reaccionan}}(\ce{NaOH})=n_{\text{producen}}(\ce{NaA})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				N"o de moles~(\si{\mol})	& n(\ce{HA})								&  n(\ce{NaOH})    & n(\ce{NaA})	\\
+				{Inicial}					& \num{2,4e-3}     						   	&   \num{1e-3}     &  0				\\
+				{Final}						&$\num{2,4e-3}-\num{1e-3}=\num{1,4e-3}$    	&    	0		  & \num{1e-3}		\\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					\ce{NaOH} es el reactivo limitante, \ce{HA} es el reactivo en exceso
+			}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V_{\text{inicial}}(\ce{HA}) + V_{\text{añadido}}(\ce{NaOH})\Rightarrow V_T = \SI{15e-3}{\liter} + \SI{5e-3}{\liter} = \SI{20e-3}{\liter}
+		$$
+		\item\structure{Concentración de nuestro reactivo en exceso (\ce{HA}) y de nuestro producto (\ce{A-}):} tenemos un ácido débil y su ion conjugado sin contar con la disociación.
+		\begin{center}
+			\myovalbox{\textcolor{red}{\textbf{DISOLUCIÓN AMORTIGUADORA}}}
+		\end{center}
+		$$
+			[\ce{HA}]=\frac{\SI{1,4e-3}{\mol}}{\SI{20e-3}{\liter}}=\SI{,07}{\Molar};\qquad
+			[\ce{A-}]=\frac{\SI{1e-3}{\mol}}{\SI{20e-3}{\liter}}=\SI{,05}{\Molar}
+		$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH si añadimos \SI{5}{\milli\liter} de \ce{NaOH} (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo del pH:} tenemos que usar $K_a$.
+		\begin{center}
+			\begin{tabular}{cccc}
+											& \multicolumn{3}{c}{\ce{HA(ac) <=> H+(ac) + A-(ac)}}	\\
+				\midrule
+				Concentración~(\si{\Molar}) & [\ce{HA}]			&  [\ce{H+}] 	& [\ce{A-}]			\\
+				{[Inicial]}					& \num{,07}			&	\num{0}		&  \num{,05}		\\
+				{[Equilibrio]}				&$\num{,07}-x$		& 	$x$			& $\num{,05}+x$ 	\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Podemos resolverlo de dos formas:
+		\begin{enumerate}[label={\alph*)},font=\bfseries]
+			\item\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podemos considerar $x$ despreciable si $K_a<\num{4e-4}$.
+			$$
+				\overbrace{K_a(\ce{HA})}^{\num{1,57e-6}}=\frac{\overbrace{[\ce{H+}]}^{x}\overbrace{[\ce{A-}]}^{\num{,05}+x}}{\underbrace{[\ce{HA}]}_{\num{,07}-x}}=
+				\frac{x\vdot(\num{,05}+x)}{\num{,07}-x}\approx\frac{x\vdot\num{,05}}{\num{,07}}\Rightarrow x=[\ce{H+}]=\SI{2,24e-6}{\Molar}
+			$$
+			\item\structure{Como segunda opción, podemos tomar logaritmos decimales y operar:} Ecuación de HENDERSON -- HASSELBALCH
+			$$
+				\log K_a(\ce{HA})=\log\left(\frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}\right)\Rightarrow\overbrace{-\log[\ce{H+}]}^{\pH}=\underbrace{-\log K_a(\ce{HA})}_{\pKa}+\log\left(\frac{[\ce{A-}]}{[\ce{HA}]}\right)
+			$$
+			$$
+				\pH = \pKa + \log(\frac{[\ce{A-}]}{[\ce{HA}]})\Rightarrow
+				\pH = \pKa + \log(\frac{[\ce{A-}]_0}{[\ce{HA}]_0})\Rightarrow
+				\pH = \underbrace{\pKa}_{\num{5,80}} + \log(\frac{\rfrac{n_0(\ce{A-})}{\cancel{V}}}{\rfrac{n_0(\ce{HA})}{\cancel{V}}})
+			$$
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH=-\log[\ce{H+}]=\num{5,66}}
+			\end{center}
+		\end{enumerate}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH si añadimos \SI{12}{\milli\liter} de \ce{NaOH} (\rom{1})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos si hay reactivo limitante y en exceso}
+		$$
+			n(\ce{HA})=\SI{,16}{\mol\per\cancel\liter}\times\SI{15e-3}{\cancel\liter}=\SI{2,4e-3}{\mol}
+		$$
+		$$
+			n(\ce{NaOH})=\SI{,2}{\mol\per\cancel\liter}\times\SI{12e-3}{\cancel\liter}=\SI{2,4e-3}{\mol}
+		$$\\[.2cm]
+		\begin{center}
+			\ce{HA(ac) + NaOH(ac) -> NaA(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HA})=n_{\text{reaccionan}}(\ce{NaOH})=n_{\text{producen}}(\ce{NaA})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				N"o de moles~(\si{\mol}) & n(\ce{HA})      						&  n(\ce{NaOH})		& n(\ce{NaA})  \\
+				{Inicial}               & \num{2,4e-3}     						&  \num{2,4e-3}		& 0           \\
+				{Final}                 &$\num{2,4e-4}-\num{2,4e-4}=\num{0}$	&    	0			& \num{2,4e-3}   \\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					No hay r. limitante ni r. en exceso, \underline{PUNTO DE EQUIVALENCIA}
+			}}
+			\myovalbox{\textcolor{red}{pH controlado por \ce{A-}, \textbf{pH BÁSICO}}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V_{\text{inicial}}(\ce{HA}) + V_{\text{añadido}}(\ce{NaOH})\Rightarrow V_T = \SI{15e-3}{\liter} + \SI{12e-3}{\liter} = \SI{27e-3}{\liter}
+		$$
+		\item\structure{Concentración de nuestro producto (\ce{A-}):} tenemos el ion conjugado de un ácido débil.
+		$$
+			[\ce{A-}]=\frac{\SI{2,4e-3}{\mol}}{\SI{27e-3}{\liter}}=\SI{,0889}{\Molar}
+		$$
+	\end{enumerate}
+\end{frame}	
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): pH si añadimos \SI{12}{\milli\liter} de \ce{NaOH} (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo del pH:} tenemos que usar $K_h=\rfrac{K_w}{K_a}$, $\pH>7$.
+		\begin{center}
+			\begin{tabular}{cccc}
+				& \multicolumn{3}{c}{\ce{A-(ac) + H2O(l) <=> OH-(ac) + HA(ac)}}	\\
+				\midrule
+				Concentración~(\si{\Molar}) & [\ce{A-}]			&  [\ce{OH-}] 	& [\ce{HA}]			\\
+				{[Inicial]}					& \num{,0889}		&	0			&  0				\\
+				{[Equilibrio]}				&$\num{,0889}-x$ 	& 	$x$			& $x$ 				\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podemos considerar $x$ despreciable si $K_h<\num{4e-4}$.
+		$$
+			\overbrace{K_h(\ce{A-})}^{\num{6,37e-9}}=\frac{\overbrace{[\ce{OH-}]}^{x}\overbrace{[\ce{HA}]}^{x}}{\underbrace{[\ce{A-}]}_{\num{,0889}-x}}=
+			\frac{x^2}{\num{,0889}-x}\approx\frac{x^2}{\num{,0889}}\Rightarrow x=[\ce{OH-}]=\SI{2,38e-5}{\Molar}
+		$$
+		$$
+			\pH = \num{14}-\underbrace{\pOH}_{-\log[\ce{OH-}]} = 14 + \log[\ce{OH-}]
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=\num{9,38}}
+		\end{center}
+	\end{enumerate}
+\end{frame}

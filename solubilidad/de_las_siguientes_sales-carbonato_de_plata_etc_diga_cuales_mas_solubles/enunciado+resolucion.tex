@@ -1,0 +1,60 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/de_las_siguientes_sales-carbonato_de_plata_etc_diga_cuales_mas_solubles/enunciado.tex
+		}
+            }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large \textbf{¿Compuestos más solubles en medio ácido que en agua?}}\\[.5cm]
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{Ag2CO3}}~
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\ce{CaF2}}~
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{BaSO4}}~
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\ce{PbI2}}~
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{Mg(OH)2}}
+        $$\\[.5cm]
+        {\Large \textbf{¿Compuestos más solubles en disolución de \ce{NH3} en agua que en agua únicamente?}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución: aumento de solubilidad}
+    \begin{block}{Compuestos con carácter básico}
+        \structure{Hidróxidos:}
+            $$
+                \ce{Mg(OH)2(s) <=> Mg^2+(ac) +
+                     $\underset{\text{se consume en m. ácido}}{\ce{2OH-(ac)}}$
+                   }
+            $$\\[.5cm]
+        \visible<2->{
+            \structure{Sales conjugadas de ácido débil:}
+            $$
+                \ce{CO3^2-(ac) + 2H2O(l) <=> H2CO3(ac) + 
+                    $\underset{\text{se consume en m. ácido}}{\ce{2OH-(ac)}}$
+                }
+            $$
+            Como son 
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{Ag2CO3}},
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\ce{CaF2}} y 
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{Mg(OH)2}}
+                    }
+    \end{block}
+    \begin{block}<3->{En medio acuoso con \ce{NH3}}
+        \structure{Como base, cualquier sal con carácter ácido, que \underline{NO ES ESTE EL CASO}}
+        \visible<4->{
+            \structure{Como ligando en compuestos de coordinación:} Las sales complejas tienen constantes de formación muy elevadas. Este es el caso de:
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{Ag2CO3(s) v + NH3(ac) -> Ag(NH3)2^+(ac) + CO3^2-(ac)}}
+            $$
+                    }
+    \end{block}
+\end{frame}
+

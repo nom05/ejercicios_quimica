@@ -1,0 +1,48 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/una_reaccion_tiene_una_constante_de_velocidad/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$k_2$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{k_1=\SI{,017}{\per\second}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{E_a^{(1)}=\SI{27235}{\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{T=\SI{298}{\kelvin}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{E_a^{(2)}=\SI{33}{\percent}\vdot E_a^{(1)}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $k$ si la $E_a$ disminuye un \SI{33}{\percent}}
+	\structure{Catalizador reduce a un \SI{33}{\percent} la $E_a$:}
+	$$
+		E_a^{(2)}=\frac{33}{100}\vdot\overbrace{E_a^{(1)}}^{\SI{27235}{\joule\per\mol}}\Rightarrow E_a^{(2)}=\SI{8987,55}{\joule\per\mol}
+	$$
+	\structure{A partir de la ecuación de Arrhenius:}
+	$$
+		k = A\vdot\exp(-\frac{E_a}{RT})\Rightarrow
+		\frac{k_2}{k_1} = \frac{\cancel{A}}{\cancel{A}}\vdot\exp[-\frac{1}{RT}(\overbrace{E_a^{(2)}}^{E_a^{(2)}=\frac{33}{100}\vdot E_a^{(1)}}-E_a^{(1)})]\Rightarrow
+	$$
+	$$
+		\frac{k_2}{k_1} = \exp[-\frac{1}{RT}\left(\frac{33}{100}\vdot E_a^{(1)}-E_a^{(1)}\right)]\Rightarrow
+		\frac{k_2}{k_1} = \exp[-\frac{1}{RT}\vdot E_a^{(1)}\left(\frac{33}{100}-1\right)]\Rightarrow
+	$$
+	$$
+		k_2 = \overbrace{k_1}^{\SI{,017}{\per\second}}\vdot
+		\exp(\frac{\overbrace{E_a^{(1)}}^{\SI{27235}{\joule\per\mol}}}{\underbrace{R}_{\SI{8,314}{\joule\per\mol\per\kelvin}}\vdot\underbrace{T}_{\SI{298}{\kelvin}}}\vdot\frac{77}{100})\Rightarrow
+	$$
+	$$
+		k_2 = \SI{,017}{\per\second}\vdot
+		\exp(\frac{\SI{27235}{\cancel\joule\per\cancel\mol}}{\SI{8,314}{\cancel\joule\per\cancel\mol\per\cancel\kelvin}\vdot\SI{298}{\cancel\kelvin}}\vdot\frac{77}{100})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{k_2=\SI{26,86}{\per\second}}
+	$$
+\end{frame}

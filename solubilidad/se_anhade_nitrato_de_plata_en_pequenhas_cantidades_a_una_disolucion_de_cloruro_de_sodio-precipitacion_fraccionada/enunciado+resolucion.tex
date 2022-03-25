@@ -1,0 +1,102 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/se_anhade_nitrato_de_plata_en_pequenhas_cantidades_a_una_disolucion_de_cloruro_de_sodio-precipitacion_fraccionada/enunciado.tex
+		}
+            }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \textbf{\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item Orden en que precipitarán
+        \item ¿[\ce{Ag+}] con especie menos soluble precipitando?
+        \item ¿[\ce{I-}] cuando empieza a precipitar \ce{AgBr}?
+        \item ¿[\ce{Ag+}] y [\ce{Br-}] cuando empieza a precipitar \ce{AgCl}?
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{NaCl}] = \SI{,01}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_{ps}(\ce{AgCl}) = \SI{1,6e-10}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{[\ce{NaBr}] = \SI{,01}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{K_{ps}(\ce{AgBr}) = \SI{5,2e-13}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{NaI}] = \SI{,01}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{K_{ps}(\ce{AgI}) = \SI{8,3e-17}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Orden en que precipitan las sales}
+    \structure{Por orden creciente de $K_{ps}$} ya que las constantes representan el producto de las concentraciones de los iones en equilibrio.
+    $$
+          \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{K_{ps}(\ce{NaI}) = \SI{8,3e-17}{}}
+        <
+          \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{K_{ps}(\ce{AgBr}) = \SI{5,2e-13}{}}
+        <
+          \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_{ps}(\ce{AgCl}) = \SI{1,6e-10}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): [\ce{Ag+}] con especie menos soluble precipitando}
+    \structure{La sal menos soluble es \ce{AgI}:} $K_{ps}(\ce{AgI}) = [\ce{Ag+}][\ce{I-}]\Rightarrow[\ce{Ag+}]=\frac{K_{ps}(\ce{AgI})}{[\ce{I-}]}$
+    $$
+        [\ce{Ag+}] = \frac{\SI{8,3e-17}{}}{\underbrace{\SI{,01}{}}_{[\ce{NaI}]=[\ce{I-}]_0=\SI{,01}{\Molar}}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{Ag+}] = \SI{8,3e-15}{\Molar}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): [\ce{I-}] cuando empieza a precipitar \ce{AgBr}}
+    \structure{La segunda sal menos soluble es \ce{AgBr}:}
+    $$
+        \ce{AgBr(s) v <=> Ag+(ac) + Br-(ac)}
+    $$
+    $$
+        K_{ps}(\ce{AgBr}) = [\ce{Ag+}][\ce{Br-}]\Rightarrow[\ce{Ag+}]=\frac{K_{ps}(\ce{AgBr})}{[\ce{Br-}]}\Rightarrow
+    [\ce{Ag+}] = \frac{\SI{5,2e-13}{}}{\underbrace{\SI{,01}{}}_{[\ce{NaBr}]=[\ce{Br-}]_0=\SI{,01}{\Molar}}} = \SI{5,2e-11}{\Molar}
+    $$
+    \visible<2->{
+        \structure{Con $[\ce{Ag+}]$ cuando precipita \ce{AgBr} sustituimos en $K_{ps}(\ce{AgI})$:}
+        $$
+            \ce{AgI(s) v <=> Ag+(ac) + I-(ac)}
+        $$
+        $$
+            K_{ps}(\ce{AgI}) = [\ce{Ag+}][\ce{I-}]\Rightarrow[\ce{I-}]=\frac{K_{ps}(\ce{AgI})}{[\ce{Ag+}]}\Rightarrow
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{I-}] = \frac{\SI{8,3e-17}{}}{\SI{5,2e-11}{}} = \SI{1,596e-6}{\Molar}}
+        $$
+        El resto del yodo ha precipitado en forma de sal (\ce{AgI}).
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): [\ce{Ag+}] y [\ce{Br-}] cuando empieza a precipitar \ce{AgCl}}
+    \structure{La última sal en preciptar es \ce{AgCl}:}
+    $$
+        \ce{AgCl(s) v <=> Ag+(ac) + Cl-(ac)}
+    $$
+    $$
+        K_{ps}(\ce{AgCl}) = [\ce{Ag+}][\ce{Cl-}]\Rightarrow[\ce{Ag+}]=\frac{K_{ps}(\ce{AgCl})}{[\ce{Cl-}]}\Rightarrow
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{Ag+}] = \frac{\SI{1,6e-10}{}}{\underbrace{\SI{,01}{}}_{[\ce{NaCl}]=[\ce{Cl-}]_0=\SI{,01}{\Molar}}} = \SI{1,6e-8}{\Molar}}
+    $$
+    \visible<2->{
+        \structure{Con $[\ce{Ag+}]$ cuando precipita \ce{AgCl} sustituimos en $K_{ps}(\ce{AgBr})$:}
+        $$
+            \ce{AgBr(s) v <=> Ag+(ac) + Br-(ac)}
+        $$
+        $$
+            K_{ps}(\ce{AgBr}) = [\ce{Ag+}][\ce{Br-}]\Rightarrow[\ce{Br-}]=\frac{K_{ps}(\ce{AgBr})}{[\ce{Ag+}]}\Rightarrow
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{Br-}] = \frac{\SI{5,2e-13}{}}{\SI{1,6e-8}{}} = \SI{3,25e-5}{\Molar}}
+        $$
+    }
+\end{frame}
+

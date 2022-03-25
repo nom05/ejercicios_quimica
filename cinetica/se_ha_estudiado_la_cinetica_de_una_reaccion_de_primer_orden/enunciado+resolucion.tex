@@ -1,0 +1,81 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/se_ha_estudiado_la_cinetica_de_una_reaccion_de_primer_orden/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$E_a$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{Orden 1 (}n=1\text{)}}\\[.3cm]
+		\begin{tabular}{SS}
+			\toprule
+				{$T~(\si{\kelvin})$} & {$k~(\si{\per\second})$}\\
+			\midrule
+				278 & 9,065e-3 \\
+				288 & 1,470e-2 \\
+				298 & 2,306e-2 \\
+				308 & 3,515e-2 \\
+				318 & 5,217e-2 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la energía de activación}
+	\structure{Partimos de la ecuación de Arrhenius:}
+	$$
+		\ln(k)=\ln(A) -\frac{E_a}{R\vdot T}
+	$$
+	Por analogía a la ecuación de una recta ($y = mx + n$) si representamos $\ln k$ frente a $\rfrac{1}{T}$ deberíamos poder usar el método de regresión lineal para obtener la ecuación de una recta.
+	\structure{Expandimos tabla con las columnas que necesitamos para la representación gráfica:}
+	\begin{center}
+		\begin{tabular}{SSSS}
+			\toprule
+				{$T~(\si{\kelvin})$} & {$k~(\si{\per\second})$} & {$\frac{1}{T}~(\si{\per\kelvin})$} & {$\ln(k)$}\\
+			\midrule
+				278 & 9,065e-3 & 3,597e-3 & -4,7033 \\
+				288 & 1,470e-2 & 3,472e-3 & -4,2199 \\
+				298 & 2,306e-2 & 3,356e-3 & -3,7697 \\
+				308 & 3,515e-2 & 3,247e-3 & -3,3481 \\
+				318 & 5,217e-2 & 3,145e-3 & -2,9532 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de la energía de activación}
+	\begin{center}
+		\begin{figure}
+			\caption{Representación del logaritmo neperiano de $k$ ($\ln(k)$) con respecto a la inversa de la temperatura ($T^{-1}$).}
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/se_ha_estudiado_la_cinetica_de_una_reaccion_de_primer_orden/figs/se_ha_estudiado_la_cinetica_de_una_reaccion_de_primer_orden.tex
+				}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación de la energía de activación}
+	\structure{A partir de la pendiente determinamos la energía de activación:}
+	$$
+		\underbrace{-\frac{E_a}{R}}_{\SI{8,314}{\joule\per\mol\per\kelvin}}=\SI{-3872,46}{\kelvin}
+	$$
+	$$
+		E_a=\SI{3872,46}{\cancel\kelvin}\vdot\SI{8,314}{\joule\per\mol\per\cancel\kelvin}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{E_a=\SI{32195,63}{\joule\per\mol}=\SI{32,20}{\kilo\joule\per\mol}}
+	\end{center}
+\end{frame}

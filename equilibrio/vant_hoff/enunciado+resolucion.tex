@@ -1,0 +1,69 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/vant_hoff/enunciado.tex
+			}
+		}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Obtención de la $\Delta H$ de reacción}
+	\begin{overprint}
+		\onslide<1>
+			Para poder utilizar la ecuación de Van't Hoff, que nos relaciona el valor de la constante de equilibrio a dos temperaturas diferentes primeramente necesitamos $\Delta H$ de reacción. Si observamos la expresión:
+			$$
+				\ln K = -\frac{\Delta H}{R\vdot T} + \frac{\Delta S^0}{R}
+			$$
+			Nos damos cuenta de que podemos usar los datos de la tabla para representar $\ln K$ frente a $T^{-1}$. En la siguiente tabla realizamos las operaciones necesarias para la representación:
+			\begin{center}
+				\begin{tabular}{SSSS}
+					\toprule
+						{$T~(\si{\kelvin})$} & {$T^{-1}~(\si{\per\kelvin})$} & {K} & {$\ln K$} \\
+					\midrule
+						 800 & 12.50e-4 & 9.1e2  &  6.81 \\
+						 850 & 11.80e-4 & 1.7e2  &  5.14 \\
+						 900 & 11.10e-4 & 4.2e1  &  3.74 \\
+						 950 & 10.50e-4 & 1.0e1  &  2.30 \\
+						1000 & 10.00e-4 & 3.2e0  &  1.16 \\
+						1050 &  9.52e-4 & 1.0e0  &  0.00 \\
+						1100 &  9.09e-4 & 3.9e-1 & -0.94 \\
+						1170 &  8.50e-4 & 1.2e-1 & -2.12 \\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/vant_hoff/figs/vant_hoff.tex
+				}
+			\structure{Pendiente:} $\num{2,2492} = -\rfrac{\Delta H}{R}\times\num{1e-4}$ (recordad que la inversa de $T$ está multiplicada por \num{10000}).
+			\structure{Variación de entalpía estándar de esta reacción:}
+			$$
+				\Delta H = -\SI{8,3145}{\joule\per\mol\per\kelvin}\times\num{2,2492}\times\num{1e4} = \SI{-1,870e5}{\joule\per\mol} = \SI{-187,0}{\kilo\joule\per\mol}
+			$$ 
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): temperatura a la que la constante de equilibrio vale \num{1e6}}
+	\structure{Ecuación de Van't Hoff:}
+	$$
+		\ln(\frac{K_2}{K_1}) = \frac{\Delta H}{R}\vdot\left(\frac{T_2 - T_1}{T_2\vdot T_1}\right)
+	$$
+	Para el estado \num{1} podemos emplear cualquier valor de la tabla (p.ej. $T_1 = \SI{800}{\kelvin}$ y $K_1 = \num{910}$). Para el estado \num{2} $K_2 = \num{1e6}$.\\[.2cm]
+	\structure{Despejando $T_2$:}
+	$$
+		T_2 = \frac{\Delta H}{\frac{\Delta H}{T_1} + R\vdot\ln(\frac{K_1}{K_2})}
+	$$
+	\structure{Sustituyendo:}
+	$$
+		T_2 = \frac{\SI{-1,870e5}{\cancel\joule\per\cancel\mol}}{\frac{\SI{-1,870e5}{\cancel\joule\per\cancel\mol}}{\SI{800}{\kelvin}} + \SI{8,3145}{\cancel\joule\per\cancel\mol\per\kelvin}\vdot\ln(\frac{\num{9,1e2}}{\num{1e6}})}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{T_2 = \SI{637}{\kelvin}}
+	$$
+\end{frame}

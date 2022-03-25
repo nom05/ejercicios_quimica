@@ -1,0 +1,157 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_pone_1L_de_aire_a_1atm_y_86C_en_contacto_con_1mL_de_agua_liquida/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+\frametitle{\ejerciciocmd}
+\framesubtitle{Datos del problema}
+    \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿$P(\text{aire})$?
+        \item ¿$P_v(\ce{H2O})$?
+        \item ¿$P_T$?
+        \item ¿$m(\ce{H2O})$ evaporada?
+        \item ¿$V(\ce{H2O})$ restante?
+    \end{enumerate}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\text{aire}) = \SI{1}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\text{aire}) = \SI{1}{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T(\text{aire}) = \SI{86}{\celsius}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{H2O(l)}) = \SI{1}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T(\ce{H2O}) = \SI{86}{\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{H2O}) = \SI{18,02}{\gram\per\mol}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{d(\ce{H2O(l)}) =\SI{0,97}{\gram\per\cubic\centi\meter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v(\ce{H2O(g)}) = \SI{0,593}{\atm}}
+    $$
+    $$
+        V(\text{aire}+\ce{H2O}) = \text{constante}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Presión parcial del aire}
+    \structure{Gases ideales:} Habíamos visto que, en las mezclas de gases ideales, estos no interaccionan entre sí. Entonces:
+    $$
+        P_{inicial}(\text{aire}) = P_{final}(\text{aire})
+    $$
+    \visible<2->{
+        De los datos del problema:
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\text{aire}) = \SI{1}{\atm}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): Presión parcial del vapor de \ce{H2O}}
+    \structure{Equilibrio Líquido-Gas:} El agua se evapora hasta alcanzar la presión de vapor. De los datos del problema:
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v(\ce{H2O}) = \SI{0,593}{\atm}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): Presión total de la mezcla}
+    \structure{Ley de Dalton:} $P_T = \sum_{i=1}^{n}P_i$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P_T = P(\text{aire}) + P_v(\ce{H2O}) = \SI{1,593}{\atm}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): Agua evaporada}
+    \structure{Ecuación de los gases ideales:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                P\vdot V = n\vdot R\vdot T
+            $$
+        \onslide<2>
+            $$
+                n = \frac{P\vdot V}{R\vdot T}
+            $$
+        \onslide<3>
+            $$
+                \overbrace{n}^{\frac{m}{Mm}} = \frac{P\vdot V}{R\vdot T}
+            $$
+        \onslide<4>
+            $$
+                \frac{m}{Mm} = \frac{P\vdot V}{R\vdot T}
+            $$
+        \onslide<5>
+            $$
+                m = \frac{P\vdot V\vdot Mm}{R\vdot T}
+            $$
+    \end{overprint}
+        \visible<6>{
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{H2O(g)}) = \frac{\SI{,593}{\cancel\atm}\vdot\SI{1}{\cancel\liter}\vdot\SI{18,02}{\gram\per\cancel\mol}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot(273,15+86~\si{\cancel\kelvin})} = \SI{,36}{\gram}}
+            $$
+                    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{5}): Volumen de agua líquida restante}
+    \structure{Inicialmente teníamos:}
+        $$
+            V_{\text{inicial}}(\ce{H2O(l)}) = \SI{1}{\milli\liter}\quad\quad d(\ce{H2O(l)}) = \SI{,97}{\gram\per\milli\liter}
+        $$
+    \visible<2->{
+        \structure{Cuya masa es:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    d = \frac{m}{V}
+                $$
+            \onslide<3>
+                $$
+                    m = d\vdot V
+                $$
+            \onslide<4->
+                $$
+                    m_{\text{inicial}}(\ce{H2O(l)}) = \SI{,97}{\gram\per\cancel\milli\liter}\vdot\SI{1}{\cancel\milli\liter} = \SI{,97}{\gram}
+                $$
+        \end{overprint}
+                }
+    \visible<5->{
+        \structure{En el apartado anterior:}
+            $$
+                m(\ce{H2O(g)}) = \SI{,36}{\gram}
+            $$
+                }
+    \visible<6->{
+        \structure{Volumen sin evaporar:}
+        \begin{overprint}
+            \onslide<6>
+                $$
+                    m_{\text{final}}(\ce{H2O(l)}) = \SI{,97}{\gram}-\SI{,36}{\gram} = \SI{,61}{\gram}
+                $$
+            \onslide<7>
+                $$
+                    V = \frac{m}{d}\text{ (ya despejado)}
+                $$
+            \onslide<8>
+                $$
+                    V_{\text{final}}(\ce{H2O(l)}) = \frac{\overbrace{\SI{,61}{\cancel\gram}}^{\SI{,97}{\gram}-\SI{,36}{\gram}}}{\SI{,97}{\cancel\gram\per\milli\liter}}
+                $$
+            \onslide<9->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V_{\text{final}}(\ce{H2O(l)}) = \SI{,63}{\milli\liter}}
+                $$
+        \end{overprint}
+                }
+\end{frame}

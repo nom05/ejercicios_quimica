@@ -1,0 +1,159 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_desea_preparar_una_disolucion_amortiguadora_con_un_pH9/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{¿$V(\ce{NaOH})$? ¿pH?}}\\[.2cm]
+	\end{center}
+	\structure{Disolución amortiguadora formada por:}
+	\begin{itemize}
+		\item	Base (\ce{NH3}):\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{NH3}) = \SI{15}{\milli\liter}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{NH3}] = \SI{,6}{\Molar}}\\[.2cm]
+			\qquad\qquad\qquad\qquad\qquad\qquad\qquad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_b(\ce{NH3}) = \num{1,8e-5}}\\[.2cm]
+		\item	Ácido fuerte (\ce{HCl}):\qquad\qquad\qquad\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{HCl}]=\SI{,3}{\Molar}}\quad
+	\end{itemize}
+	\begin{enumerate}[label={Apartado \alph*)},font={\color{red!50!black}\bfseries}]
+		\setcounter{enumi}{1}
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HClO4}]=\SI{,5}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{HClO4})=\SI{5}{\milli\liter}}
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{KOH}]=\SI{,5}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{V(\ce{KOH})=\SI{5}{\milli\liter}}\quad
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Consideraciones iniciales}
+	El ejercicio se puede hacer usando la ec. de Henderson--Hasselbalch o directamente expresando la constante de equilibrio y operando. Las dos formas son equivalentes pero La primera quizá tenga alguna operación menos. Esa es la razón por la que la hemos escogido.
+	$$
+		\pOH = \underbrace{\pKb}_{\pKb = -\log K_b} + \log(\frac{[\ce{NH4+}]_0}{[\ce{NH3}]_0})
+	$$
+	
+	\structure{Disolución amortiguadora:} existen las dos especies, ácido o base débil y su contraión conjugado. En nuestro caso \ce{NH3} y \ce{NH4+}. Hay dos formas de conseguir esa situación:
+	\begin{itemize}
+		\item Mezclar una \textbf{disolución de la base con} otra de \textbf{su sal conjugada}.
+		\item Mezclar una \textbf{disolución de la base con} otra de un \textbf{ácido fuerte antes del punto de equivalencia}.
+	\end{itemize}
+	En este ejercicio se considera la segunda opción. Las reacciones de neutralización y de equilibrio de disociación de la base serán:
+	\begin{center}
+		\ce{NH3(ac) + HCl(ac) -> $\underset{\ce{NH4Cl(ac) -> NH4+(ac) + Cl-(ac)}}{\ce{NH4Cl(ac)}}$}\\
+		$$
+			\ce{NH3(ac) + H2O(l) <=> NH4+(ac) + OH-(ac)}\qquad K_b=\frac{[\ce{NH4+}][\ce{OH-}]}{[\ce{NH3}]}
+		$$
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): Volumen necesario de \ce{HCl} \SI{,3}{\Molar}}
+	\structure{Ecuación de Henderson--Hasselbalch:} recuerda que $\pKb = -\log K_b\Rightarrow\pKb = -\log(\num{1,8e-5})$
+	$$
+		\overbrace{\pH}^9 = \overbrace{\pKb}^{\num{4,74}} + \log(\frac{[\ce{NH4+}]}{[\ce{NH3}]})\Rightarrow
+		\frac{[\ce{NH4+}]}{[\ce{NH3}]} = \overbrace{\frac{\rfrac{n(\ce{NH4+})}{\cancel{V}}}{\rfrac{n(\ce{NH3})}{\cancel{V}}}}^{M=\rfrac{n}{V}} = 10^{(9-4,74)} = \num{1,82}
+	$$
+	{\small (Despreciamos las disociaciones frente a las concentraciones iniciales, $K_b < \num{4e-4}$)}
+	\structure{N"o de moles iniciales de \ce{NH3}:} $n_0(\ce{NH3}) = \SI{,6}{\mol\per\cancel\liter}\vdot\SI{15e-3}{\cancel\liter} = \SI{9e-3}{\mol}$\\
+	\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{NH3}) = n_{\text{reaccionan}}(\ce{HCl}) = n_{\text{producido}}(\ce{NH4+})$
+	\begin{center}
+		\begin{tabular}{lccc}
+					&	\multicolumn{3}{c}{\ce{NH3(ac) + HCl(ac) -> NH4+(ac) + Cl-(ac)}}					\\
+			\midrule
+			Estado	&	$n(\ce{NH3})~(\si{\mol})$	&	$n(\ce{HCl})~(\si{\mol})$	&	$n(\ce{NH4+})~(\si{\mol})$	\\
+			\midrule
+			Inicial	&	\num{9e-3}					&	$x$							&	0							\\
+			Final	&	$\num{9e-3}-x$				&	0							&	$x$							\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\frac{n(\ce{NH4+})}{n(\ce{NH3})} = \frac{x}{\num{9e-3}-x} = \num{1,82}\Rightarrow
+		\num{2,82}x = \num{1,638e-2}\Rightarrow
+		x = n(\ce{NH4+}) = \SI{5,81e-3}{\mol}
+	$$
+	\structure{Según la relación estequiométrica anterior:} $n_{\text{producido}}(\ce{NH4+}) = n_{\text{inicial}}(\ce{HCl}) = \SI{5,81e-3}{\mol}$
+	$$
+		M = \frac{n}{V}\Rightarrow V = \frac{n}{M}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V(\ce{HCl}) = \frac{\SI{5,81e-3}{\cancel\mol}}{\SI{,3}{\cancel\mol\per\liter}} = \SI{19,36e-3}{\liter}=\SI{19,36}{\milli\liter}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH al añadir \SI{5}{\milli\liter} de \ce{HClO4} \SI{,5}{\Molar}}
+	\structure{Condiciones del anterior apartado:} Calculamos volumen total y concentración de \ce{NH3} y \ce{NH4+} después de añadir el \ce{HCl}. $V_T = \SI{15}{\milli\liter} + \SI{19,36}{\milli\liter} = \SI{34,36}{\milli\liter}$
+	$$
+		[\ce{NH3}] = \frac{\overbrace{\SI{9e-3}{\mol}-\SI{5,81e-3}{\mol}}^{\SI{3,19e-3}{\mol}}}{\SI{34,36e-3}{\liter}} = \SI{,0930}{\Molar};
+		\qquad
+		[\ce{NH4+}] = \frac{\SI{5,81e-3}{\mol}}{\SI{34,36e-3}{\liter}} = \SI{,1691}{\Molar}
+	$$
+	\structure{N"o de moles de \ce{HClO4} añadidos:} $n(\ce{HClO4}) = \SI{,5}{\mol\per\cancel\liter}\vdot\SI{5e-3}{\cancel\liter} = \SI{2,5e-3}{\mol}$
+	\structure{Volumen después de añadir el \ce{HClO4}:} $V_T = \SI{34,36}{\milli\liter} + \SI{5}{\milli\liter} = \SI{39,36}{\milli\liter}$
+	\structure{\ce{HClO4} (ác. fuerte) reaccionará con la \amarillo{especie básica}:}\qquad
+	$\ce{$\underset{\text{\textbf{Base}}}{\amarillo{\ce{NH3}}}$ + H2O <=> OH- + $\underset{\text{Ácido}}{\ce{NH4+}}$}$
+	\begin{center}
+		\begin{tabular}{lccc}
+					&	\multicolumn{3}{c}{\ce{NH3(ac) + HClO4(ac) -> NH4+(ac) + ClO4-(ac)}}								\\
+			\midrule
+			Estado	&	$n(\ce{NH3})$~(\si{\mol})		&	$n(\ce{HClO4})$~(\si{\mol})	&	$n(\ce{NH4+})$~(\si{\mol})		\\
+			\midrule
+			Inicial	&	\num{3,19e-3}					&	\num{2,5e-3}				&	\num{5,81e-3}					\\
+			Final	&	$\num{3,19e-3}-\num{2,5e-3}$	&	\num{0}						&	$\num{5,81e-3}+\num{2,5e-3}$	\\
+					&		$=\num{,692e-3}$			&								&		$=\num{8,31e-3}$			\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\pOH = \overbrace{\pKb}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{NH4+})}{\cancel{V}}}{\rfrac{n(\ce{NH3})}{\cancel{V}}})\Rightarrow
+		\pOH = \num{4,74} + \log(\frac{\num{8,31e-3}}{\num{,692e-3}})\Rightarrow
+	$$
+	$$
+		\pH  = 14 -\pOH\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH = \num{8,18}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH al añadir \SI{5}{\milli\liter} de \ce{KOH} \SI{,5}{\Molar}}
+	\structure{Calculado anteriormente:} $V_T = \SI{34,36}{\milli\liter}$
+	$$
+		[\ce{NH3}] = \SI{,0930}{\Molar};
+			\qquad
+		[\ce{NH4+}] = \SI{,1691}{\Molar}
+	$$
+	\structure{N"o de moles de \ce{KOH} añadidos:} $n(\ce{KOH}) = \SI{,5}{\mol\per\cancel\liter}\vdot\SI{5e-3}{\cancel\liter} = \SI{2,5e-3}{\mol}$
+	\structure{Volumen después de añadir el \ce{KOH}:} $V_T = \SI{34,36}{\milli\liter} + \SI{5}{\milli\liter} = \SI{39,36}{\milli\liter}$
+	\structure{\ce{KOH} (base fuerte) reaccionará con la \amarillo{especie ácida}:}\qquad
+	$\ce{$\underset{\text{Base}}{\ce{NH3}}$ + H2O <=> OH- + $\underset{\text{\amarillo{\textbf{Ácido}}}}{\ce{NH4+}}$}$
+	\begin{center}
+		\begin{tabular}{lccc}
+			&	\multicolumn{3}{c}{\ce{NH4+(ac) + KOH(ac) -> K+(ac) + NH3(ac) + H2O(l)}}									\\
+			\midrule
+			Estado	&	$n(\ce{NH4+})$~(\si{\mol})		&	$n(\ce{KOH})$~(\si{\mol})	&	$n(\ce{NH3})$~(\si{\mol})		\\
+			\midrule
+			Inicial	&	\num{5,81e-3}					&	\num{2,5e-3}				&	\num{3,19e-3}					\\
+			Final	&	$\num{5,81e-3}-\num{2,5e-3}$	&	\num{0}						&	$\num{3,19e-3}+\num{2,5e-3}$	\\
+					&		$=\num{3,31e-3}$			&								&		$=\num{5,69e-3}$			\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\pOH = \overbrace{\pKb}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{NH4+})}{\cancel{V}}}{\rfrac{n(\ce{NH3})}{\cancel{V}}})\Rightarrow
+		\pOH = \num{4,74} + \log(\frac{\num{3,31e-3}}{\num{5,69e-3}})\Rightarrow
+	$$
+	$$
+		\pH = 14 - \pOH\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\pH = \num{9,49}}
+	$$
+\end{frame}

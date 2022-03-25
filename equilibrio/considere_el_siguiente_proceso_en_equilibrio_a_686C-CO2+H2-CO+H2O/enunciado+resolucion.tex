@@ -1,0 +1,153 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/considere_el_siguiente_proceso_en_equilibrio_a_686C-CO2+H2-CO+H2O/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$K_c$?\quad¿[ ] en eq. al cambiar [\ce{CO2}]?\quad¿$K_p$ y $K_x$?}\\
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=black,drop fuzzy shadow=red]{\ce{CO2 (g) + H2 (g) <=> CO(g) + H2O(g)}}
+	\end{center}
+	\begin{enumerate}[label={\alph*)},font=\bfseries]
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{CO}] = \SI{,050}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{H2}] = \SI{,045}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{CO2}] = \SI{,086}{\Molar}}\\[.2cm]
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{H2O}] = \SI{,040}{\Molar}}
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{[\ce{CO2}] = \SI{,50}{\Molar}}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calcular la constante de equilibrio}
+	\structure{Reacción de equilibrio:}
+	$$
+		\ce{CO2(g) + H2(g) <=> CO(g) + H2O(g)}\qquad K_c = \ce{\frac{[CO][H2O]}{[CO2][H2]}}
+	$$
+	\structure{Como datos del problema dan las concentraciones en equilibrio:}
+	$$
+		K_c = \frac{
+						\overbrace{[\ce{CO}]}^{\SI{,050}{\Molar}}
+							\vdot
+						\overbrace{[\ce{H2O}]}^{\SI{,040}{\Molar}}
+				}{
+						\underbrace{[\ce{CO2}]}_{\SI{,086}{\Molar}}
+							\vdot
+						\underbrace{[\ce{H2}]}_{\SI{,045}{\Molar}}
+				}\Rightarrow
+		K_c = \frac{\num{,050}\vdot\num{,040}}{\num{,086}\vdot\num{,045}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{K_c = \num{,6541}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calcular concentraciones en eq. al cambiar [\ce{CO2}]}
+	\structure{Reacción de equilibrio:}
+	$$
+		\ce{CO2(g) + H2(g) <=> CO(g) + H2O(g)}\qquad K_c = \ce{\frac{[CO][H2O]}{[CO2][H2]}} = \num{,6541}
+	$$
+	\structure{Actualizar concentraciones:}
+	\begin{center}
+		\begin{tabular}{lcccc}
+			\toprule
+							&	[\ce{CO2}]~(\si{\Molar})	&	[\ce{H2}]~(\si{\Molar})	&	[\ce{CO}]~(\si{\Molar})	&	[\ce{H2O}]~(\si{\Molar})	\\
+			\midrule
+				Inicial		&	\num{,500}					&	\num{,045}				&	\num{,050}				&	\num{,040}					\\
+				Reacciona	&	$-x$						&	$-x$					&	$+x$					&	$+x$						\\
+				Equilibrio	&	$\num{,500}-x$				&	$\num{,045}-x$			&	$\num{,050}+x$			&	$\num{,040}+x$				\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Sustituirlas en la expresión del equilibrio:}
+			$$
+				K_c = \frac{
+					(\num{,050}+x)
+						\vdot
+					(\num{,040}+x)
+				}{
+					(\num{,500}-x)
+						\vdot
+					(\num{,045}-x)
+				}\Rightarrow
+				\num{,6541} = \frac{
+					x^2 + \num{,090}x + \num{,0020}
+				}{
+					x^2 -\num{,545}x + \num{,0225}
+				}\Rightarrow
+			$$
+			$$
+				x^2 + \num{,090}x + \num{,0020} = \num{,6541}x^2 -\num{,3565}x + \num{,01472}\Rightarrow
+				\num{,3459}x^2 + \num{0,4465}x - \num{,01272} = 0\Rightarrow
+			$$
+			$$
+				x = \frac{-\num{,4465}\pm\sqrt{\num{,4465}^2 +4\vdot\num{,3459}\vdot\num{,01272}}}{2\vdot\num{,3459}} =
+				\begin{cases}
+					x_1 = \SI{,02789}{\Molar}\\
+					\cancel{x_2 < 0}&
+				\end{cases}
+			$$
+		\onslide<2->
+			\structure{Sustituimos el valor de la x (\num{,02789}) en la tabla de concentraciones:}
+			\begin{center}
+				\begin{tabular}{lcccc}
+					\toprule
+								&	[\ce{CO2}]~(\si{\Molar})	&	[\ce{H2}]~(\si{\Molar})	&	[\ce{CO}]~(\si{\Molar})	&	[\ce{H2O}]~(\si{\Molar})	\\
+					\midrule
+					Equilibrio	&	$\num{,500}-\num{,02789}$	&
+									$\num{,040}-\num{,02789}$	&
+									$\num{,050}+\num{,02789}$	&
+									$\num{,045}+\num{,02789}$	\\
+					Resultado	&	$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\num{,4721}}$	&
+									$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\num{,0121}}$	&
+									$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\num{,0779}}$	&
+									$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\num{,0729}}$	\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $K_p$ y $K_x$}
+	Primero de todo vamos a destacar los coeficientes estequiométricos de nuestra reacción:
+	\begin{center}
+		\ce{$\colorbox{blue}{\color{yellow}\textbf{1}}$CO2(g)
+			 	+ 
+			$\colorbox{green}{\color{yellow}\textbf{1}}$H2(g)
+			 	<=>
+		 	$\colorbox{red}{\color{yellow}\textbf{1}}$CO(g)
+		 		+
+	 		$\colorbox{black}{\color{yellow}\textbf{1}}$H2O(g)
+		}
+	\end{center}
+	\structure{Calculamos la variación de los coeficientes estequiométricos:} los productos los representamos con valor positivo, los reactivos con valor negativo.
+	$$
+		\Delta n = 1+1-1-1 = 0
+	$$
+	\structure{Por tanto:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{K_c = K_p = K_x}. Veremos cómo obtener la relación entre $K_c$, $K_p$ y $K_c$.
+	$$
+		PV = nRT\Rightarrow P = \overbrace{\frac{n}{V}}^MRT\qquad\qquad P_i = x_i\vdot P_T
+	$$
+	$$
+		K_p = 	\frac{P_{\ce{CO}}\vdot P_{\ce{H2O}}}{P_{\ce{CO2}}\vdot P_{\ce{H2}}} =
+				\frac{[\ce{CO}]\vdot\cancel{RT}\vdot[\ce{H2O}]\vdot\cancel{RT}}{[\ce{CO2}]\vdot\cancel{RT}\vdot[\ce{H2}]\vdot\cancel{RT}} = K_c\Rightarrow
+		K_p = K_c\vdot (RT)^{\Delta n}
+	$$
+	\newline
+	$$
+		K_p = 	\frac{P_{\ce{CO}}\vdot P_{\ce{H2O}}}{P_{\ce{CO2}}\vdot P_{\ce{H2}}} =
+				\frac{x_{\ce{CO}}\vdot\cancel{P_T}\vdot x_{\ce{H2O}}\vdot\cancel{P_T}}{x_{\ce{CO2}}\vdot\cancel{P_T}\vdot x_{\ce{H2}}\vdot\cancel{P_T}} = K_x\Rightarrow
+		K_p = K_x\vdot(P_T)^{\Delta n}
+	$$
+\end{frame}

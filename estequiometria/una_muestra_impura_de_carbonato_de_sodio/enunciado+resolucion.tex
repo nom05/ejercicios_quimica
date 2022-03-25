@@ -1,0 +1,107 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/una_muestra_impura_de_carbonato_de_sodio/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge\si{\percent} pureza \ce{Na2CO3}?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Na2CO3})=\SI{1,2048}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{m(\ce{CaCO3})=\SI{1,0262}{\gram}}
+	\end{center}
+	\visible<2-|handout:0>{Pero también\ldots\\
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{Na2CO3}) = \SI{105,99}{\gram\per\mol}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{Mm(\ce{CaCO3}) = \SI{100,09}{\gram\per\mol}}
+		$$
+		Reacción sin ajustar: \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na2CO3(ac)}} + \ce{CaCl2(ac)} \ce{->} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{CaCO3(ac)}} + \ce{NaCl(ac)}
+						}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción}
+	\structure{Reacción:}
+	\begin{overprint}
+		\onslide<1>
+			\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na2}}\ce{CO3 + CaCl2 -> CaCO3 +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na}}\ce{Cl} (\textbf{\underline{sin ajustar}})
+		\onslide<2>
+			\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na2}}\ce{CO3 + CaCl2 -> CaCO3 +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\textbf{2}\ce{Na}}\ce{Cl} (\textbf{\underline{ajustado}})
+		\onslide<3>
+			\centering\ce{Na2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{CO3}}
+			\ce{ + CaCl2 -> Ca}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{CO3}}
+			\ce{ + \textbf{2}NaCl} (\textbf{\underline{ajustado}})
+		\onslide<4>
+			\centering\ce{Na2CO3 + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Ca}}
+			\ce{Cl2 -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Ca}}
+			\ce{CO3 + \textbf{2}NaCl} (\textbf{\underline{ajustado}})
+		\onslide<5>
+			\centering\ce{Na2CO3 + Ca}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{\textbf{Cl2}}}
+			\ce{ -> CaCO3 + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{\textbf{2}Na\textbf{Cl}}} (\textbf{\underline{ajustado}})
+		\onslide<6->
+			\centering\ce{Na2CO3 + CaCl2 -> CaCO3 + \textbf{2}NaCl} (\textbf{\underline{ajustado}})
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa pura de \ce{Na2CO3}}
+	\structure{Reacción ajustada:} \ce{Na2CO3 + CaCl2 -> CaCO3 + 2NaCl}\\[.5cm]
+	\begin{overprint}
+		\onslide<1>
+			Según la estequiometría:
+			$$
+				\overbrace{n(\ce{Na2CO3})}^{\text{sustancia pura}} = n(\ce{CaCO3})
+			$$
+		\onslide<2>
+			Como $n=\rfrac{m}{Mm}$
+			$$
+				\frac{m_{\text{puro}}(\ce{Na2CO3})}{Mm(\ce{Na2CO3})} = \frac{m(\ce{CaCO3})}{Mm(\ce{CaCO3})}
+			$$
+		\onslide<3->
+			Despejamos:
+			$$
+				m_{\text{puro}}(\ce{Na2CO3}) = m(\ce{CaCO3})\cdot\frac{Mm(\ce{Na2CO3})}{Mm(\ce{CaCO3})}
+			$$	
+	\end{overprint}
+	\visible<4->{
+		Sustituimos por los valores correspondientes:
+		$$
+			m_{\text{puro}}(\ce{Na2CO3}) = \SI{1,0262}{\gram}\cdot\frac{\SI{105,99}{\cancel\gram\per\cancel\mol}}{\SI{100,09}{\cancel\gram\per\cancel\mol}}
+		$$
+		\centering\myovalbox{\textcolor{yellow}{$m_{\text{puro}}(\ce{Na2CO3}) = \SI{1,086}{\gram}$}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): porcentaje de pureza}
+	\structure{NOTA:} \textbf{Siempre} $m_{\text{puro}}(\text{sustancia}) < m(\text{sustancia})$
+	$$
+		\si{\percent}\text{ pureza \ce{Na2CO3}} = \frac{m_{\text{puro}}(\ce{Na2CO3})}{m(\ce{Na2CO3})}\times\num{100}
+	$$
+	\visible<2->{
+		Sustituimos valores:
+		$$
+			\si{\percent}\text{ pureza \ce{Na2CO3}} = \frac{\SI{1,0876}{\cancel\gram}}{\underbrace{\SI{1,2048}{\cancel\gram}}_{\text{(del enunciado)}}}\times\num{100}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\si{\percent}\text{ pureza \ce{Na2CO3}} = \SI{90,20}{\percent}}
+		$$
+				}
+\end{frame}

@@ -1,0 +1,49 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/coligativas/calcule_la_presion_de_vapor_a_25C_y_100C_de_una_disolucion_formada/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge ¿$P_v$ a \SI{25}{\celsius} y \SI{100}{\celsius}?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\text{sac})=\SI{90}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{V(\ce{H2O})=\SI{1}{\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v^0(\SI{25}{\celsius})=\SI{23,76}{\torr}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{P_v^0(\SI{100}{\celsius})=\SI{760}{\torr}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\text{sac})=\SI{342,296}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{Mm(\ce{H2O})=\SI{18,015}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la presión de vapor a \SI{25}{\celsius} y \SI{100}{\celsius}}
+	\structure{Fracción molar del \ce{H2O}:}
+		$$
+			x_i=\frac{\overbrace{n_i}^{n=\rfrac{m}{Mm}}}{n_{\text{total}}}
+		$$
+		$$
+			x(\ce{H2O})=\frac{\frac{m(\ce{H2O})}{Mm(\ce{H2O})}}{\frac{m(\ce{H2O})}{Mm(\ce{H2O})}+\frac{m(\text{sac})}{Mm(\text{sac})}}\Rightarrow
+			x(\ce{H2O})=\frac{\frac{\SI{1000}{\gram}}{\SI{18,0153}{\gram\per\mol}}}{\frac{\SI{1000}{\gram}}{\SI{18,0153}{\gram\per\mol}}+\frac{\SI{90}{\gram}}{\SI{342,296}{\gram\per\mol}}}=
+			\num{,995}
+		$$
+	\visible<2->{
+		\structure{Ley de Raoult:} $\underbrace{P_i}_{\text{presión de vapor de sustancia en mezcla}} = x_i\cdot\overbrace{P_i^0}^{\text{presión de vapor de sustancia pura}}$
+			$$
+				P_v(\ce{H2O})=x(\ce{H2O})\cdot P_v^0(\ce{H2O})
+			$$
+				}
+	\visible<3->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P_v(\SI{25}{\celsius})=\num{,995}\cdot\SI{23,76}{\torr}=\SI{23,65}{\torr}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{P_v(\SI{100}{\celsius})=\num{,995}\cdot\SI{760}{\torr}=\SI{756}{\torr}}
+		$$
+				}
+\end{frame}

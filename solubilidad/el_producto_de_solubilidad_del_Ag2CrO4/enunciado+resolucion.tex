@@ -1,0 +1,50 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/el_producto_de_solubilidad_del_Ag2CrO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$[\ce{Ag+}]$ mínima para precipitado?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{Ag2CrO4})=\num{1,9e-12}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{K2CrO4}]=\SI{,1}{\Molar}}\\[.3cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): concentración de ion plata}
+	\structure{Equilibrio de solubilidad:} \ce{Ag2CrO4(s) <=> 2Ag+(ac) + CrO4^{2-}(ac)}
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{Ag+}] &     [\ce{CrO4^{2-}}] \\
+			Solubilidad                &    $2s$    &           $s$        \\
+			Solubilidad modificada     &    $2s^\prime$   & $s^\prime+\SI{,1}{\Molar}$ \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Constante de equilibrio de solubilidad:}
+	\begin{center}
+		\ce{$K_{ps}(\ce{Ag2CrO4})={\underbrace{[\ce{Ag+}]}_{2s}}^2\underbrace{[\ce{CrO4^{2-}}]}_{s}=4s^2\cdot s=4s^3=\num{1,9e-12}$}
+	\end{center}
+	\structure{Constante de equilibrio de solubilidad modificada ($s^\prime$):}
+	\begin{center}
+		$[\ce{Ag+}]=2s^\prime$ y $[\ce{CrO4^{2-}}]>> s^\prime\Rightarrow s^\prime+\num{,1}\approx\num{,1}$
+	\end{center}
+			$$
+				K_{ps}(\ce{Ag2CrO4})={\underbrace{[\ce{Ag+}]}_{2s^\prime=[\ce{Ag+}]}}^2\underbrace{[\ce{CrO4^{2-}}]}_{s^\prime+\num{,1}\approx\num{,1}}\Rightarrow
+				\overbrace{K_{ps}(\ce{Ag2CrO4})}^{\num{1,9e-12}}={[\ce{Ag+}]}^2\cdot\num{,1}
+			$$
+			$$
+				[\ce{Ag+}]=\sqrt{\frac{\num{1,9e-12}}{\num{,1}}}
+			$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Ag+}]=\SI{4,36e-6}{\Molar}}
+\end{frame}

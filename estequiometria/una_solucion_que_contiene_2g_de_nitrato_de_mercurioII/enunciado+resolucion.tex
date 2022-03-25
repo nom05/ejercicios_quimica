@@ -1,0 +1,132 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/una_solucion_que_contiene_2g_de_nitrato_de_mercurioII/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge m(\ce{HgS})?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Hg(NO3)2})=\SI{2,00}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{m(\ce{Na2S})=\SI{2,00}{\gram}}
+	\end{center}
+	\visible<2-|handout:0>{Pero también\ldots\\
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{Hg(NO3)2}) = \SI{324,6}{\gram\per\mol}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{Mm(\ce{Na2S}) = \SI{78,04}{\gram\per\mol}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{Mm(\ce{HgS}) = \SI{232,66}{\gram\per\mol}}
+		$$
+		Reacción sin ajustar: 
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Hg(NO3)2}}
+		\ce{+}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Na2S}}
+		\ce{->}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{HgS}}
+		\ce{ + NaNO3}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción}
+	\structure{Reacción:} 
+	\begin{overprint}
+		\onslide<1>
+			\centering
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Hg}}
+			\ce{(NO3)2 + Na2S -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Hg}}
+			\ce{S + NaNO3} (\textbf{\underline{\ce{Hg} ajustado}})
+		\onslide<2>
+			\centering
+			\ce{Hg}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{(NO3)\textbf{2}}}
+			\ce{ + Na2S -> HgS + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Na(NO3)\textbf{1}}}\quad\quad(\textbf{\underline{\ce{NO3-} sin ajustar}})
+		\onslide<3>
+			\centering
+			\ce{Hg}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{(NO3)\textbf{2}}}
+			\ce{ + Na2S -> HgS + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{\textbf{2}Na(NO3)\textbf{1}}}\quad\quad(\textbf{\ce{NO3-} \underline{ajustado}})
+		\onslide<4>
+			\centering
+			\ce{Hg(NO3)2 +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Na2}}
+			\ce{S -> HgS + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{2Na}}
+			\ce{NO3} (\textbf{\ce{Na} \underline{ajustado}})
+		\onslide<5>
+			\centering
+			\ce{Hg(NO3)2 + Na2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{S}}
+			\ce{ -> Hg}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{S}}
+			\ce{ + \textbf{2}NaNO3} (\textbf{\ce{S} \underline{ajustado}})
+		\onslide<6->
+			\centering\ce{Hg(NO3)2 + Na2S -> HgS + \textbf{2}NaNO3}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): averiguar quién es el reactivo limitante}
+	\structure{Reacción:} \ce{Hg(NO3)2 + Na2S -> HgS + 2NaNO3}
+	\structure{Relación estequiométrica entre los reactivos:} $n(\ce{Hg(NO3)2}) = n(\ce{Na2S})$ (relación $1:1$)
+	\visible<2>{
+		\structure{Cálculo de número de moles de reactivos:} Empleamos $n=\rfrac{m}{Mm}$
+		$$
+			n(\ce{Hg(NO3)2}) = \frac{\SI{2}{\cancel\gram}}{\SI{324,6}{\cancel\gram\per\mol}} = \SI{6,161e-3}{\mol}
+		$$
+		$$
+			n(\ce{Na2S}) = \frac{\SI{2}{\cancel\gram}}{\SI{78,04}{\cancel\gram\per\mol}} = \SI{2,562e-2}{\mol}
+		$$
+				}
+	\visible<3->{
+		\structure{Comparamos cantidades:}
+		$$
+			n(\ce{Hg(NO3)2}) = \SI{6,161e-3}{\mol} < \SI{2,562e-2}{\mol}=n(\ce{Na2S})
+		$$
+		Cuando deberíamos tener la relación $1:1$. Vemos que hay un \underline{déficit} de \underline{\ce{Hg(NO3)2}}, por lo que \underline{se agotará antes que el \ce{Na2S}}.
+		\centering\myovalbox{\textcolor{yellow}{\textbf{\ce{Hg(NO3)2} es el \underline{reactivo limitante}}}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): masa de \ce{HgS}}
+	\structure{Reacción:} \ce{Hg(NO3)2 + Na2S -> HgS + 2NaNO3}
+	\structure{Relación estequiométrica entre reactivo limitante y producto:} $n(\ce{Hg(NO3)2}) = n(\ce{HgS})$
+	\visible<2->{
+		\structure{Cálculo de la masa deseada:} Empleamos $n=\rfrac{m}{Mm}$
+		\begin{overprint}
+			\onslide<2>
+				$$
+					n(\ce{Hg(NO3)2}) = \overbrace{n(\ce{HgS})}^{n=\frac{m}{Mm}}
+				$$
+			\onslide<3>
+				$$
+					n(\ce{Hg(NO3)2}) = \frac{m(\ce{HgS})}{Mm(\ce{HgS})}
+				$$
+			\onslide<4>
+				$$
+					m(\ce{HgS}) = n(\ce{Hg(NO3)2})\cdot Mm(\ce{HgS})
+				$$
+			\onslide<5->
+				$$
+					m(\ce{HgS}) = n(\ce{Hg(NO3)2})\cdot Mm(\ce{HgS})\Rightarrow m(\ce{HgS}) = \SI{6,161e-3}{\cancel\mol}\cdot\SI{232,66}{\gram\per\cancel\mol}
+				$$
+		\end{overprint}
+				}
+	\visible<5->{
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{m(\ce{HgS}) = \SI{1,43}{\gram}}
+				}
+\end{frame}

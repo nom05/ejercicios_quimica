@@ -1,0 +1,58 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_el_pH_de_una_disolucion_de_un_acido_fuerte_monoprotico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$\mathrm{pH}$?}\\[.5cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{Ácido fuerte monoprótico: }\ce{HA}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HA}]=\SI{5,0e-8}{\Molar}}\\[.8cm]
+		Pero también ...
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=blue]{K_w=\num{1e-14}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\mathrm{pH}$ de la disolución}
+	\structure{Ácido fuerte monoprótico:} Disociación total\\
+	\centering\ce{HA(ac) -> H+(ac) + A-(ac)}\quad$[\ce{HA}]= \SI{5,0e-8}{\Molar}=[\ce{H+}]$\\[.6cm]
+	\begin{center}
+		\alert{El \underline{ácido} fuerte está \underline{muy diluido}, la \underline{disociación del agua \textbf{no}} se puede \textbf{\underline{despreciar}}}
+	\end{center}
+	$$
+		\ce{H2O(l) <=> H+(ac) + OH-(ac)}\quad K_w = [\ce{H+}][\ce{OH-}]=\num{1e-14}
+	$$
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{H+}]       & [\ce{OH-}] \\
+			{[Inicial]}                & \num{5,0e-8}     &       0	  \\
+			{[Equilibrio]}             & $\num{5,0e-8}+x$ & $x$       \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\overbrace{K_w}^{\num{1e-14}} = \underbrace{[\ce{H+}]}_{\num{5,0e-8}+x}\cdot\overbrace{[\ce{OH-}]}^{x}\Rightarrow
+		\num{1e-14} = (\num{5,0e-8}+x)x
+	$$
+	$$
+		x^2+\num{5,0e-8}x -\num{1e-14}=0\Rightarrow x=[\ce{H+}]_{\text{agua}} = \SI{7,81e-8}{\Molar}
+	$$
+%			\onslide<6->
+				$$
+					[\ce{H+}]_{\text{total}} = \overbrace{[\ce{H+}]_{\ce{HA}}}^{\SI{5,0e-8}{\Molar}}+\underbrace{[\ce{H+}]_{\text{agua}}}_{\SI{7,81e-8}{\Molar}}
+				$$
+%		\end{overprint}
+%		\visible<6->{
+			\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=-\log(\num{5,0e-8}+\num{7,81e-8})=6,89}
+%					}
+\end{frame}

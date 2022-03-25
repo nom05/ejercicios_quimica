@@ -1,0 +1,75 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_calento_una_muestra_de_25C_de_una_aleación_hasta_100C/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		$$
+			c_e(\text{aleación})=c_e(\text{al})?
+		$$
+	}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{al})=\SI{25}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{H2O})=\SI{90}{\gram}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_{\text{inicial}}(\ce{al})=\SI{100}{\celsius}=\SI{373,15}{\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{inicial}}(\ce{H2O})=\SI{25,32}{\celsius}=\SI{298,47}{\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{c_e(\ce{H2O})=\SI{1}{\calorie\per\gram\per\kelvin}=\SI{4,18}{\joule\per\gram\per\celsius}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{T_{\text{final}}=T_{\text{f}}=\SI{27,18}{\celsius}=\SI{298,47}{\kelvin}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación del calor específico}
+	\centering\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+	\visible<2->{
+		\structure{No se realiza ningún trabajo ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+	}
+	\visible<3->{
+		\structure{Transferencia de calor total tiene que ser cero:} $Q_{\text{total}}=Q(\ce{al})+Q(\ce{H2O})=0$
+	}
+	\visible<4->{
+		\structure{Cumpliéndose:} $Q(\ce{al})=-Q(\ce{H2O})$
+	}
+	\visible<5->{
+		\begin{overprint}
+			\onslide<5>
+				\centering\structure{Aplicando:} $Q=m\cdot c_e\Delta T$
+				$$
+					m(\ce{al})\cdot c_e(\ce{al})\cdot\overbrace{\Delta T(\ce{al})}^{T_{\text{f}}-T_{\text{i}}(\ce{al})} = -m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot\underbrace{\Delta T(\ce{H2O})}_{T_{\text{f}}-T_{\text{i}}(\ce{H2O})}
+				$$
+			\onslide<6>
+				\centering\structure{Despejamos $c_e{\ce{al}}$:}
+				$$
+					m(\ce{al})\cdot c_e(\ce{al})\cdot(T_{\text{f}}-T_{\text{i}}(\ce{al})) = -m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot(T_{\text{f}}-T_{\text{i}}(\ce{H2O}))
+				$$
+			\onslide<7->
+				\centering\structure{Despejamos $c_e{\ce{al}}$:}
+				$$
+					c_e(\ce{al}) = -\frac{m(\ce{H2O})\cdot c_e(\ce{H2O})\cdot(T_{\text{f}}-T_{\text{i}}(\ce{H2O}))}{m(\ce{al})\cdot(T_{\text{f}}-T_{\text{i}}(\ce{al}))}
+				$$
+		\end{overprint}
+	}
+	\visible<7->{
+		\centering\structure{Sustituimos por los valores del enunciado:}
+		$$
+			c_e(\ce{al}) = -\frac{\SI{90}{\cancel\gram}\cdot\SI{1}{\calorie\per\cancel\gram\per\cancel\celsius}\cdot(\SI{27,18}{\cancel\celsius}-\SI{25,32}{\cancel\celsius}}{\SI{25}{\gram}\cdot(\SI{27,18}{\celsius}-\SI{100,0}{\celsius})}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{c_e(\ce{al})=\SI{,091}{\calorie\per\gram\per\celsius}=\SI{,091}{\calorie\per\gram\per\kelvin}=\SI{,022}{\joule\per\gram\per\celsius}}
+				}
+\end{frame}

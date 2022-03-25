@@ -1,0 +1,92 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+    	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/la_entalpia_de_vaporizacion_normal_de_hexano/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+      	{\huge\textbf{¿$P$, fases?} del hexano (\ce{C6H14})}\\[.4cm]
+        Condiciones normales: \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{P=\SI{1}{\atm}}\ce{->}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{T_{\text{ebullición}}=\SI{341,6}{\kelvin}}\\[.4cm]
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\Delta H_{vap}=\SI{7,611}{\kilo\calorie\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{d=\SI{,6548}{\gram\per\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{n=\SI{1}{\mol}}\\[.4cm]
+        Dos recipientes de diferente volumen:
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V_1=\SI{6}{\liter}}\quad\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V_2=\SI{100}{\liter}}
+    \end{center}
+    \visible<2->{
+        Pero también:\\
+        \centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{Mm=\SI{86,175}{\gram\per\mol}}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de la presión de vapor a \SI{313}{\kelvin}}
+    \structure{Presión de vapor tenemos que utilizar la ecuación de Clausius-Clapeyron:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \ln\left(\frac{P_2}{P_1}\right) = \frac{\Delta H}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)
+            $$
+            Con $T_1=T_{\text{ebullición}}=\SI{341,6}{\kelvin}$ a $P_1=\SI{1}{\atm}$
+        \onslide<2->
+            $$
+				\ln\left(\frac{P_2}{\SI{1}{\atm}}\right) = \frac{\overbrace{\Delta H}^{\SI{7611}{\calorie\per\mol}}}{\underbrace{R}_{\SI{1,987}{\calorie\per\mol\per\kelvin}}}\left(\frac{1}{\underbrace{T_{\text{ebullición}}}_{\SI{341,6}{\kelvin}}}-\frac{1}{\underbrace{T_2}_{\SI{313}{\kelvin}}}\right)=\num{-1,025}
+			$$
+			\centering\myovalbox{\textcolor{yellow}{$P_2=\SI{,359}{\atm}=P_v(\text{hexano})$}}
+
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de las fases en \SI{6}{\liter}}
+	\begin{block}{Si todo el hexano es líquido}
+		\centering$n=\rfrac{m}{Mm}$; $d=\rfrac{m}{V}$\ce{->}$V=\rfrac{n\cdot Mm}{d}$
+		$$
+			V(\text{líquido})=\frac{\SI{1}{\cancel\mol}\cdot\SI{86,175}{\cancel\gram\per\cancel\mol}}{\SI{,6548}{\cancel\gram\per\milli\liter}}=\SI{131,61}{\milli\liter}
+		$$
+		\centering\textbf{No ocupa los \SI{6}{\liter}}
+	\end{block}
+	\begin{alertblock}{Si todo el hexano es gas}<2->
+		$$
+			P\cdot V=n\cdot R\cdot T\Rightarrow P=\frac{\SI{1}{\cancel\mol}\cdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{313}{\cancel\kelvin}}{\SI{6}{\cancel\liter}}=\SI{4,28}{\atm}
+		$$
+		\centering$P>P_v$ ($\SI{4,28}{\atm}>\SI{,359}{\atm}$) por lo que el \textbf{gas se condensa}.
+	\end{alertblock}
+	\visible<2->{
+		\centering\myovalbox{\textcolor{yellow}{Vamos a encontrarnos con dos fases: líquido+vapor}}
+				}
+	\visible<3->{
+		\structure{Estimación de fases:} si suponemos que el $V(\text{líquido}) <<< V(\text{recipiente})$
+		$$
+			n(\text{gas})=\frac{P_v\cdot V(\text{recipiente})}{R\cdot T}\Rightarrow n(\text{gas})=\frac{\SI{,359}{\cancel\atm}\cdot\SI{6}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\cdot\SI{313}{\cancel\kelvin}}=\SI{,0839}{\mol}
+		$$
+				}
+		\visible<4->{
+			$$
+				m=n\cdot Mm\Rightarrow m(\text{gas})=\SI{,0839}{\cancel\mol}\cdot\SI{86,175}{\gram\per\cancel\mol}=\SI{7,23}{\gram}
+			$$
+			$$
+				m(\text{líquido})=\overbrace{\SI{86,175}{\gram}}^{\SI{1}{\mol}}-\SI{7,23}{\gram}=\SI{78,95}{\gram}\Rightarrow V(\text{líquido})=\frac{\SI{78,95}{\cancel\gram}}{\SI{,6548}{\cancel\gram\per\milli\liter}}=\SI{120,6}{\milli\liter}
+			$$
+					}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación de las fases en \SI{100}{\liter}}
+	$$
+		P\cdot V=n\cdot R\cdot T\Rightarrow P=\frac{\SI{1}{\cancel\mol}\cdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{313}{\cancel\kelvin}}{\SI{100}{\cancel\liter}}=\SI{,26}{\atm}
+	$$
+	\centering$P<P_v$ ($\SI{,26}{\atm}<\SI{,359}{\atm}$) por lo que \textbf{únicamente} hay \textbf{fase gas}.
+\end{frame}

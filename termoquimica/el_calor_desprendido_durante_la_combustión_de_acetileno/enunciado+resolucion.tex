@@ -1,0 +1,117 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/el_calor_desprendido_durante_la_combustión_de_acetileno/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge $\Delta H^o_{\text{formación}}(\ce{C2H2})=\Delta H^o_f(\ce{C2H2})$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=black]{\Delta H^o_{\text{combustión}}(\ce{C2H2})=\Delta H^o_C(\ce{C2H2})=\SI{-1299,1}{\kilo\joule\per\mol}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\Delta H^o_f(\ce{O2})=\SI{0}{\kilo\joule\per\mol}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta H^o_f(\ce{CO2})=\SI{-393,5}{\kilo\joule\per\mol}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\Delta H^o_f(\ce{H2O})=\SI{-285,8}{\kilo\joule\per\mol}}
+	\end{center}
+	\visible<2->{
+		\myovalbox{\textcolor{white}{NOTA IMPORTANTE:}} El texto del enunciado pone ``calor desprendido''. Por tanto, según el criterio de signos de la Termodinámica, la \textbf{\underline{entalpía de combustión}} del \ce{C2H2} será \textbf{\underline{negativa}}.
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): reacción de combustión y ley de Hess}
+	\structure{Reacción de combustión de \ce{C2H2}:}\\[.4cm]
+	\begin{overprint}
+		\onslide<1>
+			\centering\ce{C2H2(g) + O2(g) -> CO2(g) + H2O(l)}
+		\onslide<2>
+			\centering
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{C2}H2(g)}}
+			\ce{ + O2(g) -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{C}O2(g)}}
+			\ce{ + H2O(l)} (\textbf{\ce{C}} sin ajustar)
+		\onslide<3>
+			\centering
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{C2}H2(g)}}
+			\ce{ + O2(g) -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{2C}O2(g)}}
+			\ce{ + H2O(l)} (\textbf{\ce{C}} ajustado)
+		\onslide<4>
+			\centering
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{C2\textbf{H2}(g)}}
+			\ce{ + O2(g) -> }
+			\ce{2CO2(g) + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{\textbf{H2}O(l)}} (\textbf{\ce{H}} ajustado)
+		\onslide<5>
+			\centering
+			\ce{C2H2(g) + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{O2(g)}}
+			\ce{ -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{\textbf{2}C\textbf{O2}(g)}}
+			\ce{ + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{H2\textbf{O}(l)}} (\textbf{\ce{O}} sin ajustar)
+		\onslide<6>
+			\centering
+			\ce{C2H2(g) + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{\textbf{$\mathbf{\rfrac{5}{2}}$O2}(g)}}
+			\ce{ -> }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{\textbf{2}C\textbf{O2}(g)}}
+			\ce{ + }
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{H2\textbf{O}(l)}} (\textbf{\ce{O}} ajustado)
+        \onslide<7->
+            \centering\structure<8>{\textbf{Ajuste 1}:} \ce{C2H2(g) + 5/2O2(g) -> 2CO2(g) + H2O(l)}\\
+            \centering\structure<9>{\textbf{Ajuste 2:}} \ce{2C2H2(g) + 5O2(g) -> 4CO2(g) + 2H2O(l)}
+	\end{overprint}
+    \visible<7->{
+        \structure{Por la ley de Hess:} $n(\ce{C2H2})\times\Delta H^o_C(\ce{C2H2}) = \sum_{i=1}^{n\text{ prods}}{n_i\cdot\Delta H^o_{f,i}} - \sum_{j=1}^{n\text{ reacts}}{n_j\cdot\Delta H^o_{f,j}}$
+                }
+    \visible<8->{
+        \structure<8>{\textbf{Ajuste 1:}}
+        \begin{align*}
+            \SI{1}{\mol}\times\Delta H^o_C(\ce{C2H2}) &= \overbrace{2}^{n(\ce{CO2})}\times\Delta H^o_f(\ce{CO2}) 
+            + \overbrace{1}^{n(\ce{H2O})}\times\Delta H^o_f(\ce{H2O})\\
+            &- \underbrace{1}_{n(\ce{C2H2})}\times\Delta H^o_f(\ce{C2H2})
+            - \underbrace{\rfrac{5}{2}}_{n(\ce{O2})}\times\cancelto{0}{\Delta H^o_f(\ce{O2})}
+        \end{align*}
+                }
+    \visible<9->{
+        \structure<9>{\textbf{Ajuste 2:}}
+        \begin{align*}
+            \SI{2}{\mol}\times\Delta H^o_C(\ce{C2H2}) &= \overbrace{4}^{n(\ce{CO2})}\times\Delta H^o_f(\ce{CO2}) 
+            + \overbrace{2}^{n(\ce{H2O})}\times\Delta H^o_f(\ce{H2O})\\
+            &- \underbrace{2}_{n(\ce{C2H2})}\times\Delta H^o_f(\ce{C2H2})
+            - \underbrace{5}_{n(\ce{O2})}\times\cancelto{0}{\Delta H^o_f(\ce{O2})}
+        \end{align*}
+               }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo de la entalpía de formación del \ce{C2H2}}
+    \structure{Partiendo del \textbf{ajuste 1} de la anterior diapositiva y despejando:}\\[.4cm]
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \Cline[blue]{\Delta H^o_C(\ce{C2H2})} = 2\cdot\Delta H^o_f(\ce{CO2}) + \Delta H^o_f(\ce{H2O}) - \Cline[green]{\Delta H^o_f(\ce{C2H2})}
+            $$
+        \onslide<2>
+            $$
+                \Cline[green]{\Delta H^o_f(\ce{C2H2})} = 2\cdot\Delta H^o_f(\ce{CO2}) + \Delta H^o_f(\ce{H2O}) - \Cline[blue]{\Delta H^o_C(\ce{C2H2})}
+            $$
+    \end{overprint}
+    \visible<2->{
+        \structure{Sustituimos por los correspondientes valores:}
+        $$
+            \Delta H^o_f(\ce{C2H2}) = 2\cdot\left(\SI{-393,5}{\kilo\joule\per\mol}\right) + \left(\SI{-285,80}{\kilo\joule\per\mol}\right) - \left(\SI{-1299,1}{\kilo\joule\per\mol}\right)
+        $$
+        \centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=black]{\Delta H^o_f(\ce{C2H2})=\SI{226,3}{\kilo\joule\per\mol}}
+                }
+\end{frame}

@@ -1,0 +1,84 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/cuando_se_queman_1.5g_de_C3H8_en_una_bomba_calorimetrica_de_capacidad/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \structure{Reacción:} \ce{CH3CH2CH3 + 5O2 ->[\text{¿$\Delta H_C$?}] 3CO2 + 4H2O}
+    \begin{center}
+        \textbf{\Large ¿$\Delta H_C(\ce{C3H8})$?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{m(\ce{C3H8}) = \SI{1,5}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{Mm(\ce{C3H8}) = \SI{44,10}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{C(\text{calorímetro}) = C_{\text{cal}} = \SI{440}{\calorie\per\kelvin}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{m(\ce{H2O}) = \SI{5}{\kilogram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{c_e(\ce{H2O(l)}) = \SI{1}{\calorie\per\gram\per\kelvin}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{T_{\text{inicial}}(\ce{H2O}) = T_{i}(\ce{H2O}) = \SI{22,05}{\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{T_{\text{final}}(\ce{H2O}) = T_{f}(\ce{H2O}) = \SI{24,13}{\celsius}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): calor absorbido por calorímetro y agua}
+	\centering\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+\visible<2->{
+	\structure{No se realiza ningún trabajo ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+}
+\visible<3->{
+	\structure{Transferencia de calor total tiene que ser cero:} $Q_{\text{total}}=\overbrace{Q(\text{cal})+Q(\ce{H2O})}^{\text{absorben, }Q>0}+\underbrace{Q(\ce{C3H8})}_{\text{cede, }Q<0}=0$
+}
+\visible<4->{
+	\structure{Cumpliéndose:} $\overbrace{Q(\text{cal})+Q(\ce{H2O})}^{Q_{\text{absorbido}}}=-Q(\ce{C3H8})$
+}
+\visible<5->{
+	\structure{Variación de temperatura:} $\Delta T = \SI{24,13}{\celsius} - \SI{22,05}{\celsius} = \SI{2,08}{\celsius} = \SI{2,08}{\kelvin}$
+}
+\visible<6->{
+	\begin{overprint}
+		\onslide<6>
+			\centering\structure{Aplicando:} $Q(\ce{H2O})=m(\ce{H2O})\vdot c_e(\ce{H2O(l)})\vdot\Delta T$\quad y\quad $Q(\text{cal})=C_\text{cal}\vdot\Delta T$
+		\onslide<7>
+			$$
+				Q(\text{cal})=C_\text{cal}\vdot\Delta T\Rightarrow Q(\text{cal})=\SI{440}{\calorie\per\cancel\kelvin}\vdot\SI{2,08}{\cancel\kelvin}=\SI{915,2}{\calorie}
+			$$
+			$$
+				Q(\ce{H2O})=m(\ce{H2O})\vdot c_e(\ce{H2O(l)})\vdot\Delta T\Rightarrow Q(\ce{H2O})=\SI{5e3}{\cancel\gram}\vdot\SI{1}{\calorie\per\cancel\gram\per\cancel\kelvin}\vdot\SI{2,08}{\cancel\kelvin}=\SI{10400}{\calorie}
+			$$
+		\onslide<8>
+			$$
+				Q_{\text{absorbido}}=\SI{915,2}{\calorie}+\SI{10400}{\calorie}=\SI{11315,2}{\calorie} = -Q(\ce{C3H8})
+			$$
+		\onslide<9->
+			$$
+				Q({\ce{C3H8}})=\SI{-11315,2}{\calorie} = \SI{-11,32}{\kilo\calorie}
+			$$
+	\end{overprint}
+}
+\visible<10->{
+	\begin{overprint}
+		\onslide<10>
+			\structure{Nº de moles de propano:} $n(\ce{C3H8})=\rfrac{m(\ce{C3H8})}{Mm(\ce{C3H8})}\Rightarrow n(\ce{C3H8})=\rfrac{\SI{1,5}{\cancel\gram}}{\SI{44,10}{\cancel\gram\per\mol}}=\SI{,034}{\mol}$
+		\onslide<11->
+			\structure{Entalpía de combustión:}
+			$$
+				\Delta H_C(\ce{C3H8})=\frac{\SI{-11,3}{\kilo\calorie}}{\SI{,034}{\mol}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\Delta H_C(\ce{C3H8}) = \SI{-332,63}{\kilo\calorie\per\mol}}
+			$$
+	\end{overprint}
+}
+\end{frame}

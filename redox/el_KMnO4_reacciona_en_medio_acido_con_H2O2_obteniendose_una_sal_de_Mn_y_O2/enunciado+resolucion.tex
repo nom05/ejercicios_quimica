@@ -1,0 +1,217 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/el_KMnO4_reacciona_en_medio_acido_con_H2O2_obteniendose_una_sal_de_Mn_y_O2/enunciado.tex
+		}
+           }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \textbf{\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item Ajuste (ácido)
+        \item $N(\ce{H2O2})$
+        \item $V(\ce{O2})$
+        \item $V(\ce{HCl})$
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{H2O2})=\SI{10}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{V(\ce{KMnO4})=\SI{18,6}{\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{KMnO4}]=\SI{,02}{\milli\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\text{\ce{O2} en condiciones normales}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\text{Riqueza}(\ce{HCl}) = \SI{12}{\percent}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{d(\ce{HCl}) = \SI{1,06}{\gram\per\milli\liter}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ajuste de la reacción en medio ácido}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \ce{KMnO4(ac) + H2O2(ac) -> Mn^2+(ac) + O2(g) (^)}
+            $$
+        \onslide<2>
+            $$
+                \ce{
+                        $\overset{+1}{\ce{K}}$
+                        $\overset{+7}{\ce{Mn}}$
+                        $\overset{-2}{\ce{O}}$4(ac)
+                         +
+                        $\overset{+1}{\ce{H}}$2
+                        $\overset{-1}{\ce{O}}$2(ac)
+                         ->
+                        Mn^2+(ac)
+                         +
+                        $\overset{0}{\ce{O}}$2(g) (^)
+                    }
+            $$
+        \onslide<3-4>
+            \structure{Semirreacción de oxidación:} \ce{H2O2 -> O2}
+            \structure{Semirreacción de reducción:} \ce{MnO4- -> Mn^2+}
+        \onslide<5>
+            \structure{Semirreacción de oxidación:} \ce{H2O2 -> O2}
+            \structure{Semirreacción de reducción:} \ce{MnO4- -> Mn^2+ + 4H2O}
+        \onslide<6>
+            \structure{Semirreacción de oxidación:} \ce{H2O2 -> O2 + 2H+}
+            \structure{Semirreacción de reducción:} \ce{MnO4- + 8H+ -> Mn^2+ + 4H2O}
+        \onslide<7>
+            \structure{Semirreacción de oxidación:} \ce{H2O2 -> O2 + 2H+ + 2e-}
+            \structure{Semirreacción de reducción:} \ce{MnO4- + 8H+ + 5e- -> Mn^2+ + 4H2O}
+        \onslide<8>
+            \structure{Semirreacción de oxidación:} $5\times(\ce{H2O2 -> O2 + 2H+ + 2e-})$
+            \structure{Semirreacción de reducción:} $2\times(\ce{MnO4- + 8H+ + 5e- -> Mn^2+ + 4H2O})$
+        \onslide<9>
+            \structure{Semirreacción de oxidación:} \ce{5H2O2 -> 5O2 + 10H+ + 10e-}
+            \structure{Semirreacción de reducción:} \ce{2MnO4- + 16H+ + 10e- -> 2Mn^2+ + 8H2O}
+        \onslide<10->
+            \begin{tabular}{c}
+                \ce{5H2O2 -> 5O2 + \cancel{\ce{10H+}} + \cancel{\ce{10e-}}}\\
+                \ce{2MnO4- + $\cancelto{\ce{6H+}}{\ce{16H+}}$ + \cancel{\ce{10e-}} -> 2Mn^2+ + 8H2O}\\
+                \midrule
+                \ce{2MnO4-(ac) + 5H2O2(ac) + 6H+(ac) -> 2Mn^2+(ac) + 5O2(g) (^) + 8H2O(l)}
+            \end{tabular}
+    \end{overprint}
+    \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item<1-> Escribimos la reacción sin ajustar.
+        \item<2-> Asignamos números de oxidación.
+        \item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+        \item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+        \item<5-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+        \item<6-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+        \item<7-> Ajustamos número de electrones en cada reacción.
+        \item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+        \item<10-> Sumamos ambas reacciones.
+        \item<11-> Simplificamos si procede.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): normalidad de \ce{H2O2}}
+    \structure{Reacción ajustada:}
+    $$
+        \ce{2MnO4-(ac) + 5H2O2(ac) + 6H+(ac) -> 2Mn^2+(ac) + 5O2(g) (^) + 8H2O(l)}
+    $$
+    \structure{Según estequiometría:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                5\vdot \overbrace{n(\ce{MnO4-})}^{n=M\vdot V} = 2\vdot \underbrace{n(\ce{H2O2})}_{n=M\vdot V}
+            $$
+        \onslide<2>
+            $$
+                5\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-}) = 2\vdot[\ce{H2O2}]\vdot V(\ce{H2O2})
+            $$
+        \onslide<3>
+            $$
+                 [\ce{H2O2}] = \frac{5}{2}\vdot[\ce{MnO4-}]\vdot \frac{V(\ce{MnO4-})}{V(\ce{H2O2})}
+            $$
+        \onslide<4>
+            $$
+                [\ce{H2O2}] = \frac{5}{2}\vdot\SI{,02}{\mol\per\liter}\vdot \frac{\SI{18,6}{\cancel\milli\liter}}{\SI{10}{\cancel\milli\liter}}
+            $$
+        \onslide<5->
+            $$
+                [\ce{H2O2}] = \SI{,093}{\Molar}
+            $$
+    \end{overprint}
+    \visible<6->{
+        \structure{Normalidad:} $N = M\times\text{valencia}$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{N(\ce{H2O2}) = \SI{,093}{\Molar}\times 2 = \SI{,186}{N}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): volumen de \ce{O2} en condiciones normales}
+    \structure{Reacción ajustada:}
+    $$
+        \ce{2MnO4-(ac) + 5H2O2(ac) + 6H+(ac) -> 2Mn^2+(ac) + 5O2(g) (^) + 8H2O(l)}
+    $$
+    \structure{Condiciones normales:} $T=\SI{273,15}{\kelvin}$ y $P=\SI{1}{\atm}$
+    \structure{Según estequiometría:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                5\vdot\overbrace{n(\ce{MnO4-})}^{n=M\vdot V} = 2\vdot\underbrace{ n(\ce{O2})}_{n=\frac{PV}{RT}}
+            $$
+        \onslide<2>
+            $$
+                5\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-}) = 2\vdot\frac{P(\ce{O2})V(\ce{O2})}{RT(\ce{O2})}
+            $$
+        \onslide<3>
+            $$
+                V(\ce{O2}) = 
+                              \frac{5}{2}\vdot\frac{[\ce{MnO4-}]\vdot V(\ce{MnO4-})\vdot R\vdot T(\ce{O2})}{P(\ce{O2})}
+            $$
+        \onslide<4>
+            $$
+                V(\ce{O2}) = 
+                                \frac{5}{2}\vdot\frac{\SI{,02}{\cancel\mol\per\cancel\liter}\vdot\SI{18,6e-3}{\liter}\vdot\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{273,15}{\cancel\kelvin}}{\SI{1}{\cancel\atm}}
+            $$
+    \end{overprint}
+    \visible<4>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{O2}) = \SI{20,16}{\milli\liter}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): volumen de \ce{HCl} comercial}
+    \structure{Reacción ajustada:}
+    $$
+        \ce{2MnO4-(ac) + 5H2O2(ac) + 6H+(ac) -> 2Mn^2+(ac) + 5O2(g) (^) + 8H2O(l)}
+    $$
+    \structure{Según estequiometría:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                6\vdot n(\ce{MnO4-}) = 2\vdot n(\ce{HCl})
+            $$
+        \onslide<2>
+            $$
+                3\vdot\overbrace{n(\ce{MnO4-})}^{n=M\vdot V} = \underbrace{ n(\ce{HCl})}_{n=\frac{m}{Mm}}
+            $$
+        \onslide<3>
+            $$
+                3\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-}) = \frac{\overbrace{m_{\text{puro}}(\ce{HCl})}^{m_{\text{puro}}(\ce{HCl}) = m_{\text{com}}(\ce{HCl})\vdot\frac{12}{100}}}{Mm(\ce{HCl})}
+            $$
+        \onslide<4>
+            $$
+                3\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-}) = \frac{\overbrace{m_{\text{com}}(\ce{HCl})}^{m=d\vdot V}}{Mm(\ce{HCl})}\vdot\cancelto{\frac{3}{25}}{\frac{12}{100}}
+            $$
+        \onslide<5>
+            $$
+                \cancel{3}\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-}) = \frac{d_{\text{com}}(\ce{HCl})\vdot V_{\text{com}}(\ce{HCl})}{Mm(\ce{HCl})}\vdot\frac{\cancel{3}}{25}
+            $$
+        \onslide<6>
+            $$
+                V_{\text{com}}(\ce{HCl}) =
+                                \frac{25\vdot[\ce{MnO4-}]\vdot V(\ce{MnO4-})\vdot Mm(\ce{HCl})}{d_{\text{com}}(\ce{HCl})}
+            $$
+        \onslide<7>
+            $$
+                V_{\text{com}}(\ce{HCl}) =
+                    \frac{25\vdot\SI{,02}{\cancel\mol\per\cancel\liter}\vdot\SI{18,6e-3}{\cancel\liter}\vdot\SI{36,46}{\cancel\gram\per\cancel\mol}}{\SI{1,06}{\cancel\gram\per\milli\liter}}
+            $$
+    \end{overprint}
+    \visible<7>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{V_{\text{com}}(\ce{HCl}) = \SI{,32}{\milli\liter}}
+        $$
+                }
+\end{frame}
+

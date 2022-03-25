@@ -1,0 +1,58 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/se_tiene_el_siguiente_equilibrio_con_una_constante_de_equilibrio_de_K=10/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge $¿n_\text{eq}(\ce{H2})$, $n_\text{eq}(\ce{I2})$ y $n_\text{eq}(\ce{HI})$?}
+	\structure{Reacción (ajustada):} \ce{H2(g) + I2(g) <=> 2 HI(g)}\qquad$K_x = 10$
+	\structure{Condiciones iniciales:}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n_\text{iniciales}(\ce{H2})=\SI{1}{\mol}}\qquad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n_\text{iniciales}(\ce{I2})=\SI{e-3}{\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolucion (\rom{1}): condiciones de equilibrio}
+	\begin{center}
+		\begin{tabular}{lccc}
+				& \multicolumn{3}{c}{\ce{H2(g) + I2(s) <=> 2HI(g)}}		\\
+			\midrule
+				(\si{\mol}) & \ce{H2} 		& \ce{I2} 		& \ce{HI}	\\
+				Inicial		& \num{1}		& \num{e-3}		& \num{0}	\\
+				Equilibrio	& $\num{1}-x$	& $\num{e-3}-x$	& $2x$
+		\end{tabular}
+	\end{center}
+	\structure{N"o de moles totales en fase gas:} $n_T = \num{1}-x + 2x = \num{1} + x$
+	\structure{Fracción molar ($x$) de sustancias gaseosas:}
+		$$
+			x_{\ce{H2}} = \frac{\num{1}-x}{\num{1}+x};\qquad x_{\ce{HI}} = \frac{2x}{\num{1}+x}
+		$$
+	\structure{Constante de equilibrio:}
+		$$
+			K_x = 	\frac{x^2_{\ce{HI}}}{x_{\ce{H2}}} = 
+						\frac{
+							\frac{4x^2}{(\num{1}+x)^{\cancel{2}}}
+						}{
+							\frac{\num{1}-x}{\cancel{\num{1}+x}}
+						}=
+					\frac{4x^2}{(\num{1}+x)\vdot(\num{1}-x)} =
+					\frac{4x^2}{\num{1}-x^2} = 10
+		$$
+		$$
+			x=\SI{,845}{\mol}
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{Imposible porque }x>>\SI{e-3}{\mol}\text{. Debe de haber exceso de reactivo sólido}}
+		\end{center}
+
+\end{frame}

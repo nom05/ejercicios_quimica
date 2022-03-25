@@ -1,0 +1,84 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_propano_es_un_combustible_comun_utilizado_en_cocinas/enunciado.tex}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$V(\ce{O2})$?} \\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{m(\ce{C3H8}) = \SI{1,00}{\gram}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T(\ce{O2}) = \SI{0}{\celsius} = \SI{273,15}{\kelvin}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(\ce{O2}) = \SI{1}{\atm}}\\[.4cm]
+		Pero también ...\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{Mm(\ce{C3H8}) = \SI{44,06}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{Ajustamos la ecuación de combustión del \ce{C3H8}:} La combustión de los alcanos, alquenos y alquinos siempre produce \ce{CO2} y \ce{H2O}. El orden para ajustar fácilmente es: \underline{primero carbonos, segundo hidrógenos y finalmente oxígenos.}
+	\begin{overprint}
+		\onslide<1>
+			$$		
+				\ce{
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{C3}}$
+							H8 + O2 ->
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{\textbf{3}C}}$
+							O2 + H2O
+					}
+			$$
+		\onslide<2>
+			$$		
+				\ce{
+							C3
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\ce{H8}}$
+							+ O2 -> 3CO2 +
+						$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\ce{\textbf{4}H2}}$
+					 		O
+				}
+			$$
+		\onslide<3>
+			$$
+				\ce{
+							C3H8 + 
+						$\underset{\SI{10}{\text{oxígenos}}}{\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\ce{\textbf{5}O2}}}$
+							->
+						$\underset{\SI{6}{\text{oxígenos}}}{\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{3}
+							\ce{C}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\ce{O2}}}$
+							+
+						$\underset{\SI{4}{\text{oxígenos}}}{\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{4}
+							\ce{H2}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\ce{O}}}$
+				}
+			$$
+		\onslide<4->
+			$$
+				\ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}
+			$$
+	\end{overprint}
+	\visible<4->{
+		\structure{Usamos la estequiometría para relacionar \ce{C3H8} y \ce{O2}:} $5n(\ce{C3H8}) = n(\ce{O2})$
+		\structure{Empleamos la ec. de gases ideales ($PV = nRT$) y la relación entre $n$ y $m$ y despejamos:}
+		$$
+			5n(\ce{C3H8}) = \underbrace{n(\ce{O2})}_{n = \frac{PV}{RT}}\Rightarrow
+			5\frac{m(\ce{C3H8})}{Mn(\ce{C3H8})} = \frac{P_{\ce{O2}}\vdot V(\ce{O2})}{R\vdot T(\ce{O2})}\Rightarrow
+			V(\ce{O2}) = \frac{5\vdot m(\ce{C3H8})\vdot R\vdot T(\ce{O2})}{Mn(\ce{C3H8})\vdot P_{\ce{O2}}}
+		$$
+		$$
+			V(\ce{O2}) = \frac{5\vdot\SI{1,00}{\cancel\gram}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{273,15}{\cancel\kelvin}}{\SI{44,06}{\cancel\gram\per\cancel\mol}\vdot\SI{1}{\cancel\atm}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{O2}) = \SI{2,54}{\liter}}
+		$$
+				}
+\end{frame}
+
+%5.- El propano, es un combustible común utilizado en cocinas y calefacciones. ¿Qué volumen de oxígeno se consume en la combustión de 1,00 g de propano a 0ºC y 1 atm de presión?
+%R: 2,5 L 

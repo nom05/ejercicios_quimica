@@ -1,0 +1,140 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					/home/nicux/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/se_introducen_en_un_recipiente_56g_de_A/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$K_C$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m_0(\ce{A})=\SI{56}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{A})=\SI{28}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m_0(\ce{C})=\SI{34}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{C})=\SI{17}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{P_0(\ce{A}) + P_0(\ce{C})=\SI{4,10}{\atm}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{T=\SI{227}{\celsius}=\SI{500,15}{\kelvin}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{P_{eq}(\ce{B})=\SI{958}{\torr}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{Mm(\ce{B})=\SI{2}{\gram\per\mol}}\\[.2cm]
+		\structure{Reacción:} \ce{A(g) + 3B(g) <=> 2C(g)}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): presiones parciales iniciales de \ce{A} y \ce{C}}
+	Inicialmente solo hay \ce{A} y \ce{C} (situación sin equilibrio)
+	\structure{Nº de moles y fracción molar de \ce{A} y \ce{C} iniciales (no equilibrio):} $n = \rfrac{m}{Mm}$; $\chi_i = \rfrac{n_i}{n_T}$
+	$$
+		n_0(\ce{A}) = \frac{\SI{56}{\cancel\gram}}{\SI{28}{\cancel\gram\per\mol}}=\SI{2}{\mol}\Rightarrow\chi_0(\ce{A})=\frac{\SI{2}{\cancel\mol}}{\SI{4}{\cancel\mol}}=\num{,5}
+	$$
+	$$
+		n_0(\ce{C}) = \frac{\SI{34}{\cancel\gram}}{\SI{17}{\cancel\gram\per\mol}}=\SI{2}{\mol}\Rightarrow\chi_0(\ce{C})=\frac{\SI{2}{\cancel\mol}}{\SI{4}{\cancel\mol}}=\num{,5}
+	$$
+	\visible<2->{
+		\structure{Por consecuencia de la ley de Dalton:} $P_i=\chi_i\vdot P_T$
+		$$
+			P_0(\ce{A})=\num{,5}\vdot\SI{4,10}{\atm}=\SI{2,05}{\atm}
+		$$
+		$$
+			P_0(\ce{C})=\num{,5}\vdot\SI{4,10}{\atm}=\SI{2,05}{\atm}
+		$$
+				}
+	\visible<3->{
+		\structure{Ecuación de los gases ideales:} $P\vdot V = n\vdot R\vdot T$, dos conclusiones para este ejercicio:
+		\begin{itemize}
+			\item Presión es proporcional al número de moles ($P\propto n$)
+			\item $\frac{n}{V} = M = \frac{P}{R\vdot T}$
+		\end{itemize}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): análisis del equilibrio considerando las condiciones iniciales}
+	\structure{Reacción de equilibrio:}
+	$$
+		\ce{A(g) + 3B(g) <=> 2C(g)}\quad\quad K_C=\frac{[\ce{C}]^2}{[\ce{A}][\ce{B}]^3}
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\begin{center}
+				\begin{tabular}{cSSS}
+					{Presión} & {\ce{A(g)}} & {\ce{B(g)}} & {\ce{C(g)}}\\
+					Inicial   &    2,05     &     0       &      2,05  \\
+				\end{tabular}\\
+				\textbf{¡¡El equilibrio se tiene que desplazar hacia la izquierda para formar \ce{B} y que tenga una presión parcial como la que nos dan en el enunciado ($P_{eq}(\ce{B})=\SI{958}{\torr}$)!!}
+			\end{center}
+		\onslide<2->
+			\begin{center}
+				\begin{tabular}{cSSS}
+					{Presión}  & {\ce{A(g)}}         & {\ce{B(g)}} & {\ce{C(g)}}        \\
+					Inicial    &    2,05             &     0       &      2,05          \\
+					Reacciona  &    {$x$}            &   {$3x$}    &     {$-2x$}        \\
+					Equilibrio &  {$\num{2,05}+x$}   &   {$3x$}    &   {$\num{2,05}-2x$}\\
+				\end{tabular}\\[.3cm]
+				$P_{\text{total eq}} = \num{2,05}+x+3x+\num{2,05}-2x = \num{4,10}+2x$
+			\end{center}
+	\end{overprint}
+	\visible<3->{
+		\structure{Cálculo de $x$:}\quad$P_{eq}(\ce{B})=3x$
+		$$
+			P_{eq}(\ce{B})=\frac{\SI{958}{\cancel\torr}}{\SI{760}{\cancel\torr\per\atm}}=\SI{1,260}{\atm}\Rightarrow x = \frac{P_{eq}(\ce{B})}{3}\Rightarrow x=\SI{,420}{\atm}
+		$$
+				}
+	\visible<4->{
+		\structure{Presiones parciales de \ce{A} y \ce{C} en equilibrio:}
+		$$
+			P_{eq}(\ce{A})=\SI{2,05}{\atm}+\SI{,420}{\atm} = \SI{2,470}{\atm}
+		$$
+		$$
+			P_{eq}(\ce{C})=\SI{2,05}{\atm}-2\vdot\SI{,420}{\atm} = \SI{1,210}{\atm}
+		$$
+				}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación de $K_C$}
+	\structure{Según la reacción:} \ce{A(g) + 3B(g) <=> 2C(g)}
+	\structure{La constante de equilibrio en función de las concentraciones molares se expresa como:}
+	$$
+		K_C=\frac{[\ce{C}]^2}{[\ce{A}][\ce{B}]^3}
+	$$
+	\visible<2->{
+		\structure{La concentración molar se puede expresar con la ecuación de los gases ideales:}
+		$$
+			P\vdot V = n\vdot R\vdot T\Rightarrow \frac{n}{V} = M = \frac{P}{R\vdot T}
+		$$
+				}
+	 \visible<3->{
+	 	\structure{Sustituyendo en la constante:}
+	 	\begin{overprint}
+	 		\onslide<3>
+	 			$$
+					K_C=\overbrace{\frac{[\ce{C}]^2}{[\ce{A}][\ce{B}]^3}}^{M = \frac{P}{R\vdot T}}
+	 			$$
+ 			\onslide<4>
+	 			$$
+					K_C=\frac{\frac{P(\ce{C})^2}{(RT)^2}}{\frac{P(\ce{A})}{RT}\vdot\frac{P(\ce{B})^3}{(RT)^3}}
+				$$
+				{\centering\footnotesize(Todas las presiones son del equilibrio)}
+			\onslide<5>
+	 			$$
+					K_C=\frac{P(\ce{C})^2}{P(\ce{A})\vdot P(\ce{B})^3}\vdot(RT)^2\Rightarrow K_C = \frac{(\num{1,210})^2}{\num{2,470}\vdot(\num{1,260})^3}\vdot\left(\num{,082}\vdot\num{500,15}\right)
+				$$
+				{\centering\footnotesize(Todas las presiones son del equilibrio)}
+	 	\end{overprint}
+	 			}
+			\visible<5->{
+				\begin{center}
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_C=\num{497,47}}
+				\end{center}
+						}
+\end{frame}

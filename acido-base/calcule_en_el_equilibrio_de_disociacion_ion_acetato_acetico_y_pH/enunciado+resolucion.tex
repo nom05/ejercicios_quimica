@@ -1,0 +1,98 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_en_el_equilibrio_de_disociacion_ion_acetato_acetico_y_pH/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del enunciado}
+	{\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item ¿$[\ce{CH3COO-}]$?
+			\item ¿$[\ce{CH3COOH}]$?
+			\item ¿pH?
+			\item $\alpha$
+	\end{enumerate}}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{CH3COOH}]_0 = \SI{,1}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_a(\ce{CH3COOH}) = \num{1,8e-5}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{HCl}] = \SI{,05}{\Molar}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de las concentraciones y el grado de disociación}
+	\begin{alertblock}{Concentración de \ce{H+} proveniente del \ce{HCl} (ácido fuerte)}
+		$$
+			\ce{HCl(ac) -> H+(ac) + Cl-(ac)}\quad\quad[\ce{HCl}]=[\ce{H+}]=\SI{,05}{\Molar}
+		$$
+	\end{alertblock}
+	\visible<2->{
+		\begin{block}{Concentración de \ce{H+} proveniente del \ce{CH3COOH} (ácido débil)}
+			$$
+				\ce{CH3COOH(ac) <=> CH3COO-(ac) + H+(ac)}\quad K_a(\ce{CH3COOH}) = \frac{[\ce{CH3COO-}]\vdot[\ce{H+}]}{[\ce{CH3COOH}]}
+			$$
+			\begin{overprint}
+				\onslide<2>
+					\begin{center}
+						\begin{tabular}{cccc}
+							\toprule
+							Estado     & [\ce{CH3COOH}] (\si{\Molar})   & [\ce{CH3COO-}] (\si{\Molar}) & [\ce{H+}] (\si{\Molar}) \\
+	%						\midrule
+							Inicial    & $[\ce{CH3COOH}]_0=\num{,1}$    & \num{0}                      & \num{,05}               \\
+	%						Equilibrio & $\num{,1}-x$                   & $x$                          & $\num{,05}+x$ 			 \\
+							\bottomrule
+						\end{tabular}
+					\end{center}
+				\onslide<3->
+					\begin{center}
+						\begin{tabular}{cccc}
+							\toprule
+							Estado     & [\ce{CH3COOH}] (\si{\Molar})   & [\ce{CH3COO-}] (\si{\Molar}) & [\ce{H+}] (\si{\Molar}) \\
+							\midrule
+							Inicial    & $[\ce{CH3COOH}]_0=\num{,1}$    & \num{0}                      & \num{,05}               \\
+							Equilibrio & $\underbrace{\num{,1}-x}_{[\ce{CH3COOH}]=[\ce{CH3COOH}]_0-x}$                   & $x$                          & $\underbrace{\num{,05}+x}_{[\ce{H+}]_{\text{total}}=[\ce{H+}]_{\ce{HCl}}+[\ce{H+}]_{\ce{CH3COOH}}}$	 \\
+							\bottomrule
+						\end{tabular}
+					\end{center}
+			\end{overprint}
+		\end{block}
+				}
+		\begin{overprint}
+			\onslide<3>
+				\structure{Dos aproximaciones posibles porque $x$ muy pequeña:}\\[.2cm]
+				\begin{itemize}
+					\item $[\ce{CH3COOH}]=[\ce{CH3COOH}]_0-x\approx[\ce{CH3COOH}]_0$
+					\item $[\ce{H+}]_{\text{total}}=\underbrace{[\ce{H+}]_{\ce{HCl}}}_{\SI{,05}{\Molar}}+\underbrace{[\ce{H+}]_{\ce{CH3COOH}}}_x\approx[\ce{H+}]_{\ce{HCl}}$
+				\end{itemize}
+			\onslide<4>
+				$$
+					K_a(\ce{CH3COOH}) = \frac{\overbrace{[\ce{CH3COO-}]}^x\vdot\overbrace{[\ce{H+}]}^{\num{,05}+x\approx\num{,05}}}{\underbrace{[\ce{CH3COOH}]}_{\num{,1}-x\approx\num{,1}}}
+				$$
+			\onslide<5>
+				$$
+					K_a(\ce{CH3COOH}) = \frac{x\vdot\num{,05}}{\num{,1}}\Rightarrow K_a = x\vdot\num{,5}\Rightarrow K_a = \frac{x}{2}\Rightarrow x = 2\vdot \underbrace{K_a}_{\num{1,8e-5}} = \num{3,6e-5}
+				$$
+			\onslide<6>
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{CH3COOH}] = \SI{,1}{\Molar}}\quad
+				$$
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{x = [\ce{CH3COO-}] = [\ce{H+}]_{\ce{CH3COOH}} = \SI{3,6e-5}{\Molar}}
+				$$
+			\onslide<7->
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\text{pH} = -\log([\ce{H+}]_{\text{total}})=-\log(\num{,05})=\num{1,30}}
+				$$
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\alpha = \frac{[\ce{H+}]_{\ce{CH3COOH}}}{[\ce{CH3COOH}]_0}=\frac{\SI{3,6e-5}{\cancel\Molar}}{\SI{,1}{\cancel\Molar}}=\num{3,6e-4}=\SI{,036}{\percent}}
+				$$
+		\end{overprint}
+\end{frame}

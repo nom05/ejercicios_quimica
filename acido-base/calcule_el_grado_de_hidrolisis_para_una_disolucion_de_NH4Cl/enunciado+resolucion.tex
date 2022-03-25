@@ -1,0 +1,105 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_el_grado_de_hidrolisis_para_una_disolucion_de_NH4Cl/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿\% disociación?}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{NH4Cl}]=\SI{,0100}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{K_b(\ce{NH3})=\num{1,75e-5}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): obtención de $K_h(\ce{NH4+})$}
+	\structure{Reacciones a tener en cuenta:}
+	\begin{center}
+		El \ce{NH4Cl} se disuelve en agua:
+		\ce{NH4Cl(ac) -> NH4+(ac) + Cl-}
+	\end{center}
+	\begin{itemize}
+		\item Ion \ce{Cl-} viene de un ácido fuerte. No tiene carácter básico.
+		\item Ion \ce{NH4+} proviene del \ce{NH3}, base débil. En el enunciado nos dan su $K_b(\ce{NH3})$. \ce{NH4+} se comporta como ácido débil.
+	\end{itemize}
+	\structure{Equilibrio de disociación del \ce{NH4+}:}
+		$$
+			\ce{NH4+(ac) + H2O(l) <=> NH3(ac) + H3O+(ac)}\quad
+			K_h(\ce{NH4+}) = \frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]}
+		$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): obtención de $K_h(\ce{NH4+})$}
+	\structure{Cómo obtener la constante de hidrólisis del \ce{NH4+}:}\\[.2cm]
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item Partimos de la disociación de \ce{NH3}:
+			$$
+				\ce{NH3(ac) + H2O(l) <=> NH4+(ac) + OH-(ac)}\quad
+				K_b(\ce{NH3}) = \frac{[\ce{NH4+}][\ce{OH-}]}{[\ce{NH3}]}
+			$$
+		\item Invertimos la reacción de disociación de \ce{NH3}:
+			$$
+				\ce{NH4+(ac) + OH-(ac) <=> NH3(ac) + H2O(l)}\quad
+				\frac{1}{K_b(\ce{NH3})} = \frac{[\ce{NH3}]}{[\ce{NH4+}][\ce{OH-}]}
+			$$
+		\item Sumamos disociación de \ce{H2O}:
+			$$
+				\text{\textcolor{blue}{\ce{2H2O(l) <=> H3O+(ac) + OH-(ac)}}}\quad
+				K_w(\ce{H2O}) = [\ce{H3O+}][\ce{OH-}]
+			$$
+			$$
+				\ce{NH4+(ac) + \cancel{\ce{OH-(ac)}} + \textcolor{blue}{\ce{\cancel{2}H2O(l)}} <=> NH3(ac) + \cancel{\ce{H2O(l)}} + \textcolor{blue}{\ce{H3O+(ac)}} + \textcolor{blue}{\cancel{\ce{OH-(ac)}}}}
+			$$
+			$$
+				K_h(\ce{NH4+}) = \frac{1}{K_b(\ce{NH3})}\cdot K_w = \frac{[\ce{NH3}][\ce{H3O+}]\cancel{[\ce{OH-}]}}{[\ce{NH4+}]\cancel{[\ce{OH-}]}}
+			$$
+		\item Resultado final:
+			$$
+				\centering\ce{NH4+(ac) + H2O(l) <=> NH3(ac) + H3O+(ac)}\quad
+				K_h(\ce{NH4+}) = \frac{\overbrace{K_w}^{\num{1e-14}}}{\underbrace{K_b(\ce{NH3})}_{\num{1,75e-5}}} = \frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]}
+			$$
+			\begin{center}
+				\myovalbox{\textcolor{yellow}{$K_h(\ce{NH4+}) = \frac{4}{7}\times\num{e-9}$}}
+			\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de \% de disociación}
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+				Concentración(\si{\Molar}) & [\ce{NH4+}]               & [\ce{NH3}] & [\ce{H3O+}]\\
+				{[Inicial]}                & $[\ce{NH4+}]_0=\num{,01}$ &       0	&     0      \\
+				{[Equilibrio]}             & $[\ce{NH4+}]_0-x$         &      $x$   &    $x$     \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Habíamos visto en ejercicios anteriores:}
+		$$
+			\alpha = \frac{[\ce{H3O+}]}{[\ce{NH4+}]_0}\quad\text{correspondiéndose }x=[\ce{H3O+}]
+		$$
+	\structure{Sustituyendo en la expresión de la constante de equilibrio:}
+		$$
+			K_h(\ce{NH4+})=\frac{[\ce{NH3}][\ce{H3O+}]}{[\ce{NH4+}]}\Rightarrow
+			K_h(\ce{NH4+})=\frac{\overbrace{x^2}^{x^2=[\ce{NH4+}]_0^2\cdot\alpha^2}}{[\ce{NH4+}]_0-\underbrace{x}_{x=[\ce{NH4+}]_0\cdot\alpha}}
+		$$
+		$$
+			K_h(\ce{NH4+})=\frac{\cancel{[\ce{NH4+}]_0}\vdot[\ce{NH4+}]_0\vdot\alpha^2}{\cancel{[\ce{NH4+}]_0}\vdot(\underbrace{1-\alpha}_{\text{suponemos }1>>\alpha})}\approx
+			\frac{\overbrace{[\ce{NH4+}]_0}^{[\ce{NH4+}]_0=\SI{1e-2}{\Molar}}\cdot\alpha^2}{1}\Rightarrow
+            \alpha=\sqrt{\underbrace{\frac{4}{7}\times\num{e-9}}_{K_h}\times\underbrace{\num{1e-2}}_{[\ce{NH4+}]_0}}
+		$$
+
+			\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\alpha=\num{2,4e-4}\Rightarrow\text{\% disociación}=\SI{,024}{\percent}}
+\end{frame}

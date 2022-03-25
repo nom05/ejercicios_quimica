@@ -1,0 +1,149 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/un_determinado_farmacoA_se_encuentra_liofilizado_a_una_T/enunciado.tex}
+			}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema (\rom{1}): el agua}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm = \SI{18}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{inicial}} = \SI{120}{\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{final}} = \SI{37}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m = \SI{100}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{d = \SI{1}{\gram\per\milli\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{eb}} = \SI{373}{\kelvin}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_{\text{vap}} = 	\SI{241,8}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{c_e(\ce{g}) = \SI{4,18}{\joule\per\gram\per\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{c_e(\ce{l}) = \SI{2,08}{\joule\per\gram\per\celsius}}\quad
+	\end{center}
+	{\small * eb = ebullición; vap = vaporización}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema (\rom{2}): el fármaco $A$}
+	{\large
+		$$
+		\text{¿masa de $A$ en gramos?}
+		$$
+	}
+	{\small * fus = fusión; $f$ = formación}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm = \SI{36}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_{\text{inicial}} = \SI{7}{\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_{\text{final}} = \SI{37}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_{\text{fus}} = \SI{32}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_{f}(\ce{A(l)}) = \SI{-70}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_{f}(\ce{A(s)}) = \SI{-216}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{c_e(\ce{s}) = \SI{2,0}{\joule\per\gram\per\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{c_e(\ce{l}) = \SI{3,1}{\joule\per\gram\per\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calor cedido por el agua}
+	\begin{center}
+		\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+	\end{center}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{T}+\cancelto{\Delta V=0}{W}$
+	\structure{Transferencia de $Q_T$ tiene que ser cero:} $Q_{T} = Q(\ce{H2O})+Q(\ce{A})= 0 \Rightarrow Q(\ce{H2O})=-Q(\ce{A})$
+	\structure{Proceso termodinámico de enfriamiento del agua:}
+	$$
+		\ce{
+				$\underset{\SI{120}{\celsius}}{\ce{H2O(g)}}$
+					->[$\mathbf{\textcolor{red}{Q_1}}$][{$\Delta T_1=\SI{-20}{\celsius}$}]
+				$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+					->[$\mathbf{\textcolor{blue}{Q_2}}$]
+				$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+					->[$\mathbf{\textcolor{green}{Q_3}}$][{$\Delta T_3=\SI{-63}{\celsius}$}]
+				$\underset{\SI{37}{\celsius}}{\ce{H2O(l)}}$
+			}
+	$$
+	$$
+		\mathbf{\textcolor{red}{Q_1}} = m_{\ce{H2O}}\vdot c_e(\ce{H2O(g)})\vdot\Delta T_1\Rightarrow\mathbf{\textcolor{red}{Q_1}} = \SI{100}{\cancel\gram}\vdot\SI{2,08}{\joule\per\cancel\gram\per\cancel\celsius}\vdot\SI{-20}{\cancel\celsius} = \SI{-4160}{\joule} = \SI{-4,16}{\kilo\joule}
+	$$
+	\alert{\textbf{RECORDAD}, función de estado del proceso \ce{gas(g) -> l{í}quido(l)} es igual pero de signo contrario a \ce{l -> g} (condensación, $cond$), entonces $\Delta H_{cond}=-\Delta H_{vap}$}
+	$$
+		\mathbf{\textcolor{blue}{Q_2}} = \overbrace{\Delta H_{cond}}^{-\Delta H_{vap}}\vdot\underbrace{n(\ce{H2O})}_{\text{ver unidades de $\Delta H$}}\Rightarrow
+		\mathbf{\textcolor{blue}{Q_2}} = \SI{-241,8}{\kilo\joule\per\cancel\mol}\vdot\frac{\SI{100}{\cancel\gram}}{\SI{18}{\cancel\gram\per\cancel\mol}} = \SI{-1343,33}{\kilo\joule}
+	$$
+	$$
+		\mathbf{\textcolor{green}{Q_3}} = m_{\ce{H2O}}\vdot c_e(\ce{H2O(l)})\vdot\Delta T_3\Rightarrow
+		\mathbf{\textcolor{green}{Q_3}} = \SI{100}{\cancel\gram}\vdot\SI{4,18}{\joule\per\cancel\gram\per\cancel\celsius}\vdot\SI{-63}{\cancel\celsius} = \SI{-26334}{\joule} = \SI{-26,33}{\kilo\joule}
+	$$
+	\structure{Calor total del proceso de enfriamiento del agua:}
+	$$
+		Q(\ce{H2O}) = \sum_{i=1}^{3} Q_i = \mathbf{\textcolor{red}{Q_1}} + \mathbf{\textcolor{blue}{Q_2}} + \mathbf{\textcolor{green}{Q_3}}\Rightarrow
+		Q(\ce{H2O}) = (\SI{-4,16}{\kilo\joule}) + (\SI{-1343,33}{\kilo\joule}) + (\SI{-26,33}{\kilo\joule})
+	$$
+	\centering\myovalbox{\textcolor{yellow}{$Q(\ce{H2O}) = \SI{-1373,83}{\kilo\joule}$}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa en gramos del fármaco $A$}
+	\structure{Por el 1"er principio de la Termodinámica:} $Q(A) = -Q(\ce{H2O})\Rightarrow Q(A) = \sum_{j=1}^{3} Q_j^\prime = \SI{1373,83}{\kilo\joule}$
+	\structure{Proceso termodinámico de calentamiento del fármaco $A$:}
+	$$
+		\ce{
+			$\underset{\SI{7}{\celsius}}{\ce{A(s)}}$
+			->[$\mathbf{\textcolor{orange}{Q_1^\prime}}$][{$\Delta T_1^\prime=\SI{25}{\celsius}$}]
+			$\underset{\SI{32}{\celsius}}{\ce{A(s)}}$
+			->[$\mathbf{\textcolor{gray}{Q_2^\prime}}$]
+			$\underset{\SI{32}{\celsius}}{\ce{A(l)}}$
+			->[$\mathbf{\textcolor{purple}{Q_3^\prime}}$][{$\Delta T_3^\prime=\SI{5}{\celsius}$}]
+			$\underset{\SI{37}{\celsius}}{\ce{A(l)}}$
+		}
+	$$
+	$$
+		\mathbf{\textcolor{orange}{Q_1^\prime}} = \overbrace{n_{\ce{A}}}^{\text{ver unidades de $c_e$}}\vdot c_e(\ce{A(s)})\vdot\Delta T_1^\prime\Rightarrow
+		\mathbf{\textcolor{orange}{Q_1^\prime}} = \frac{m_{\ce{A}}}{Mm_{\ce{A}}}\vdot c_e(\ce{A(s)})\vdot\Delta T_1^\prime
+	$$
+	$$
+		\mathbf{\textcolor{gray}{Q_2^\prime}} = \Delta H_{fus}\vdot\underbrace{n(\ce{A})}_{\text{ver unidades de $\Delta H$}}\Rightarrow
+		\mathbf{\textcolor{gray}{Q_2^\prime}} = \Delta H_{fus}\vdot\frac{m_{\ce{A}}}{Mm_{\ce{A}}}
+	$$
+	$$
+		\mathbf{\textcolor{purple}{Q_3^\prime}} = \overbrace{n_{\ce{A}}}^{\text{ver unidades de $c_e$}}\vdot c_e(\ce{A(l)})\vdot\Delta T_3^\prime\Rightarrow
+		\mathbf{\textcolor{purple}{Q_3^\prime}} = \frac{m_{\ce{A}}}{Mm_{\ce{A}}}\vdot c_e(\ce{A(l)})\vdot\Delta T_3^\prime
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\structure{Ley de Hess:} necesitamos obtener la variación de entalpía de fusión del fármaco $A$ a partir de sus reacciones de formación:
+				\begin{center}
+					\begin{tabular}{cc}
+						$\ce{Reactivos -> A(s)}$ & $\Delta H_f(\ce{A}) = \SI{-216}{\kilo\joule\per\mol}$ \\
+						$\ce{Reactivos -> A(l)}$ & $\Delta H_f(\ce{A}) = \SI{-70}{\kilo\joule\per\mol}$
+					\end{tabular}
+				\end{center}
+		\onslide<2>
+			\structure{Ley de Hess:} invirtiendo la reacción de formación del sólido y sumando ambas reacciones obtenemos la reacción de fusión:\\
+				\begin{center}
+					\begin{tabular}{cc}
+							$\ce{A(s) -> \cancel{Reactivos}}$ & $\Delta H_f(\ce{A}) = \SI{216}{\kilo\joule\per\mol}$ \\
+							$\ce{\cancel{Reactivos} -> A(l)}$ & $\Delta H_f(\ce{A}) = \SI{-70}{\kilo\joule\per\mol}$ \\
+						\midrule
+							$\ce{A(s) -> A(l)}$ & $\Delta H_{fus}(\ce{A}) = \SI{146}{\kilo\joule\per\mol}$
+					\end{tabular}
+				\end{center}
+		\onslide<3>
+			\structure{Sacamos factor común $\rfrac{m_{\ce{A}}}{Mm_{\ce{A}}}$ y despejamos $m_{\ce{A}}$:}
+				$$
+					Q(\ce{A}) = \frac{m_{\ce{A}}}{Mm_{\ce{A}}}\left(c_e(\ce{A(s)})\vdot\Delta T_1^\prime + \Delta H_{fus} + c_e(\ce{A(l)})\vdot\Delta T_3^\prime\right)\Rightarrow
+				$$
+				$$
+					m_{\ce{A}} =  \frac{Q(\ce{A})\vdot Mm_{\ce{A}}}{c_e(\ce{A(s)})\vdot\Delta T_1^\prime + \Delta H_{fus} + c_e(\ce{A(l)})\vdot\Delta T_3^\prime}\Rightarrow
+				$$
+				$$
+					m_{\ce{A}} =  \frac{\SI{1373,83e3}{\cancel\joule}\vdot\SI{36}{\gram\per\cancel\mol}}{\SI{2,0}{\cancel\joule\per\cancel\mol\per\cancel\kelvin}\vdot\SI{25}{\cancel\kelvin} + \SI{146e3}{\cancel\joule\per\cancel\mol} + \SI{3,1}{\cancel\joule\per\cancel\mol\per\cancel\kelvin}\vdot\SI{5}{\cancel\kelvin}}
+				$$
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m_A = \SI{338,60}{\gram}}
+				$$
+	\end{overprint}
+\end{frame}

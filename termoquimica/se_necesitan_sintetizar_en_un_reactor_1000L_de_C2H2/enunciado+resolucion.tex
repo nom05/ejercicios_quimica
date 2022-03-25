@@ -1,0 +1,218 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					/home/nicux/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_necesitan_sintetizar_en_un_reactor_1000L_de_C2H2/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\textbf{\begin{center}
+		{\Large ¿$V(\ce{C2H2})$?}
+	\end{center}}
+%%%%% ACETILENO
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V(\ce{C2H2}) = \SI{1000}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta H_f^0(\ce{C2H2})= \SI{226,8}{\kilo\joule\per\mol}}
+	$$
+%%%%% AGUA
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\ce{H2O(g)}) = \SI{3,2}{\atm}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{H2O(g)}) = \SI{950}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T(\ce{H2O(g)}) = \SI{117,2}{\celsius}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{c_e(\ce{H2O(g)}) = c_e(\ce{H2O(s)}) = \SI{,5}{\calorie\per\gram\per\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{c_e(\ce{H2O(l)}) = \SI{4,18}{\joule\per\gram\per\kelvin}}\quad
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_\text{vap}^0(\ce{H2O})=\SI{40,7}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_f^0(\ce{H2O}) = \SI{-285,8}{\kilo\joule\per\mol}}
+	$$
+%%%
+%%%%% PROPANO
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{P(\ce{C3H8})=\SI{2,3}{\atm}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\Delta H_f^0(\ce{C3H8})=\SI{-104,6}{\kilo\joule\per\mol}}
+	$$
+%%%% CO2
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\Delta H_f^0(\ce{CO2})=\SI{-393,51}{\kilo\joule\per\mol}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calor absorbido por el \ce{C2H2}}
+	\structure{Nº de moles de \ce{C2H2} usando \underline{ecuación de los gases ideales}:} $P\vdot V=n\vdot R\vdot T\Rightarrow n=\frac{P\vdot V}{R\vdot T}$
+	$$
+		n(\ce{C2H2})=\frac{\SI{1}{\cancel\atm}\vdot\SI{1000}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{298,15}{\cancel\kelvin}}=\SI{40,90}{\mol}
+	$$
+	\visible<2->{
+		\structure{Reacción de formación del acetileno a partir de sus elementos:}
+		$$
+			\ce{2C(s) + H2(g) ->[\Delta] C2H2(g)}\quad\Delta H_f^0(\ce{C2H2})=\SI{226,8}{\kilo\joule\per\mol}
+		$$
+				}
+	\visible<3->{
+		\structure{Calor absorbido (\underline{\textbf{MAYOR QUE CERO}}) por el \ce{C2H2}:}
+		$$
+			Q_{\text{absorbido}}(\ce{C2H2}) = \SI{226,8}{\kilo\joule\per\cancel\mol}\vdot\SI{40,90}{\cancel\mol}=\SI{9276,72}{\kilo\joule}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calor emitido o cedido por el \ce{H2O}}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Estado inicial del agua es vapor, de nuevo \underline{ecuación de los gases ideales}}:
+			$$
+				n(\ce{H2O}) = 		\frac{\SI{3,2}{\cancel\atm}\vdot\SI{950}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{390,35}{\cancel\kelvin}}=\SI{94,97}{\mol}
+			$$
+		\onslide<2->
+			\structure{Masa de agua:} $n=\rfrac{m}{Mm}\Rightarrow m=n\vdot Mm$
+			$$
+				m(\ce{H2O}) = \SI{94,97}{\cancel\mol}\vdot\SI{18}{\gram\per\cancel\mol}=\SI{1709,54}{\gram}
+			$$
+	\end{overprint}
+	\visible<3->{
+		\structure{El calor que puede ceder el agua se resume en el siguiente esquema:}\footnote{Recordemos que $\Delta T(\si{\celsius})=\Delta T(\si{\kelvin})$}
+		\begin{overprint}
+			\onslide<3>
+				$$
+					\ce{
+						$\underset{\SI{390,35}{\kelvin}}{\ce{H2O(g)}}$
+						->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{-17,2}{\kelvin}$}]
+						$\underset{\SI{373,15}{\kelvin}}{\ce{H2O(g)}}$
+					}
+				$$
+			\onslide<4>
+				$$
+					\ce{
+						$\underset{\SI{390,35}{\kelvin}}{\ce{H2O(g)}}$
+						->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{-17,2}{\kelvin}$}]
+						$\underset{\SI{373,15}{\kelvin}}{\ce{H2O(g)}}$
+						->[$\textcolor{red}{Q_2}$][$\Delta$fase]
+						$\underset{\SI{373,15}{\celsius}}{\ce{H2O(l)}}$
+					}
+				$$
+			\onslide<5->
+				$$
+					\ce{
+						$\underset{\SI{390,35}{\kelvin}}{\ce{H2O(g)}}$
+						->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{-17,2}{\kelvin}$}]
+						$\underset{\SI{373,15}{\kelvin}}{\ce{H2O(g)}}$
+						->[$\textcolor{red}{Q_2}$][$\Delta$fase]
+						$\underset{\SI{373,15}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{blue}{Q_3}$][{$\Delta T_3=\SI{-75}{\kelvin}$}]
+						$\underset{\SI{298,15}{\kelvin}}{\ce{H2O(l)}}$
+					}
+				$$
+		\end{overprint}
+		$$
+			\textcolor{green}{Q_1} = \SI{1709,54}{\cancel\gram}\vdot\SI{2,09}{\joule\per\cancel\gram\per\cancel\kelvin}\vdot(\SI{-17,2}{\cancel\kelvin}) = \SI{-61454,37}{\joule} = \SI{-61,45}{\kilo\joule}
+		$$
+				}
+	\visible<4->{
+		\alert{\textbf{RECORDAD}, función de estado del proceso \ce{gas(g) -> l{í}quido(l)} es igual pero de signo contrario a \ce{l -> g} (condensación, $cond$), entonces $\Delta H_{cond}=-\Delta H_v$}
+		$$
+			\textcolor{red}{Q_2}=\underbrace{\SI{-40,7}{\kilo\joule\per\cancel\mol}}_{\Delta H_{cond}=-\Delta H_v}\vdot\SI{94,97}{\cancel\mol} = \SI{-3865,45}{\kilo\joule}
+		$$
+				}
+	\visible<5->{
+		$$
+			\textcolor{blue}{Q_3} = \SI{1709,54}{\cancel\gram}\vdot\SI{4,18}{\joule\per\cancel\gram\per\cancel\kelvin}\vdot(\SI{-75}{\cancel\kelvin}) = \SI{-535939,29}{\joule} = \SI{-535,94}{\kilo\joule}
+		$$
+		$$
+			Q_{\text{cedido}}(\ce{H2O})=\textcolor{green}{Q_1}+\textcolor{red}{Q_2}+\textcolor{blue}{Q_3}
+		$$
+				}
+	\visible<6->{
+		\structure{El calor cedido del agua es (\underline{\textbf{MENOR QUE CERO}}):}
+		$$
+			Q_{\text{cedido}}(\ce{H2O})=\SI{-4462,84}{\kilo\joule}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): calor de \ce{C3H8} necesario}
+	\centering\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+	\visible<2->{
+		\structure{No se realiza ningún trabajo ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+	}
+	\visible<3->{
+		\begin{overprint}
+			\onslide<3>
+				\structure{Transferencia de calor total tiene que ser cero:}
+				$$
+					Q_{\text{total}}=Q_{\text{cedido}}(\ce{H2O})+Q_{\text{absorbido}}(\ce{C2H2})+Q_{\text{cedido}}(\ce{C3H8})=0
+				$$
+			\onslide<4>
+				\structure{Despejando el calor que nos interesa:}
+				$$
+					\underbrace{Q_{\text{cedido}}(\ce{C3H8})}_{<0}=\overbrace{-\underbrace{Q_{\text{cedido}}(\ce{H2O})}_{\SI{-4462,84}{\kilo\joule}}}^{\SI{4462,84}{\kilo\joule}}\underbrace{-\overbrace{Q_{\text{absorbido}}(\ce{C2H2})}^{\SI{9276,72}{\kilo\joule}}}_{\SI{-9276,72}{\kilo\joule}}
+				$$
+			\onslide<5>
+				$$
+					\underbrace{Q_{\text{cedido}}(\ce{C3H8})}_{<0}=-(\SI{-4462,84}{\kilo\joule})-(\SI{+9276,72}{\kilo\joule})
+				$$
+			\onslide<6->
+				$$
+					\underbrace{Q_{\text{cedido}}(\ce{C3H8})}_{<0}=\SI{+4462,84}{\kilo\joule}-\SI{9276,72}{\kilo\joule} = \SI{-4813,88}{\kilo\joule}
+				$$
+		\end{overprint}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): variación de entalpía de combustión del \ce{C3H8}}
+	\structure{Aplicamos la \textbf{ley de Hess} a la siguiente reacción:}
+	$$
+		\ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}
+	$$
+	$$
+		\Delta H^0_{\text{reacción}}=\sum_{i=1}^{\text{nº productos}} n_i\vdot\Delta H^0_{f,i} - \sum_{m=1}^{\text{nº reactivos}} n_j\vdot\Delta H^0_{f,j}
+	$$
+	\visible<2->{
+		$$
+			\Delta H_C^0(\ce{C3H8}) = 3\times(\SI{-393,51}{\kilo\joule\per\mol})+4\times(\SI{-285,8}{\kilo\joule\per\mol})-1\times(\SI{-104,6}{\kilo\joule\per\mol})
+		$$
+		\structure{Recordad:}
+		\begin{itemize}
+			\item $\Delta H^0_f(\ce{O2})=0$, por eso no está incluido.
+			\item Hay que comprobar el coeficiente estequiométrico de \ce{C3H8} y dividir por él si es distinto de \num{1}.
+		\end{itemize}
+				}
+	\visible<3->{
+		\structure{Resultado:}
+		\begin{center}
+			\myovalbox{\textcolor{yellow}{$\Delta H_C^0(\ce{C3H8}) = \SI{-2219,13}{\kilo\joule\per\mol}$}}
+		\end{center}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): volumen de \ce{C3H8}}
+	\structure{El número de moles se obtiene al dividir el calor cedido del \ce{C3H8} entre su variación de entalpía de combustión:}
+	$$
+		n(\ce{C3H8})=\frac{Q_{\text{cedido}}(\ce{C3H8})}{\Delta H_C^0(\ce{C3H8})}\Rightarrow n(\ce{C3H8})=\frac{\SI{-4813,88}{\cancel\kilo\joule}}{\SI{-2219,13}{\cancel\kilo\joule\per\mol}}=\SI{2,17}{\mol}
+	$$
+	\structure{Con la ecuación de los gases ideales obtenemos el volumen:}
+	$$
+		P\vdot V=n\vdot R\vdot T\Rightarrow V=\frac{n\vdot R\vdot T}{P}\Rightarrow V(\ce{C3H8})=\frac{\SI{2,17}{\cancel\mol}\vdot\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{298,15}{\cancel\kelvin}}{\SI{2,3}{\cancel\atm}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{V(\ce{C3H8})=\SI{23,06}{\liter}}
+	$$
+\end{frame}

@@ -1,0 +1,154 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/si_se_disuelven_0.05mol_de_carbonato_de_potasion_en_1L/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a) del problema}
+    \begin{center}
+        {\Large \textbf{¿$m(\text{precipitado})$}?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{[\ce{SrCl2}] = \SI{e-3}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{V = \SI{1}{\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{n(\ce{K2CO3}) = \SI{,05}{\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_{ps}(\ce{SrCO3}) = \SI{9,4e-10}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{Mm(\ce{SrCO3}) = \SI{147,63}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de la masa de precipitado}
+    \structure{Reacciones de solubilidad:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \ce{K2CO3(s) -> 2K+(ac) + CO3^2-(ac)}
+            $$
+            $$
+                \ce{SrCl2(s) -> Sr^2+(ac) + 2Cl-(ac)}
+            $$
+        \onslide<2->
+            $$
+                \ce{K2CO3(s) -> 2K+(ac) + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{CO3^2-(ac)}}
+            $$
+            $$
+                \ce{SrCl2(s) -> } \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{Sr^2+(ac)}} \ce{ + 2Cl-(ac)}
+            $$
+    \end{overprint}
+    \visible<2->{
+        $$
+            \ce{SrCO3(s) <=> Sr^2+(ac) + CO3^2-(ac)}
+        $$
+        \structure{$K_{ps}(\ce{SrCO3}) = \SI{9,4e-10}{}$ muy bajo.}
+        
+        Como $V = \SI{1}{\liter}$, $n(\ce{SrCO3}) = \SI{1e-3}{\mol}$ y $n(\ce{CO3^2-}) = \SI{5e-2}{\mol}$\\[.5cm]
+                }
+    \visible<3->{
+        \begin{overprint}
+            \onslide<3>
+                \begin{center}
+                    \textbf{¿Reactivo limitante?}
+                \end{center}
+            \onslide<4->
+                El reactivo limitante será \ce{Sr^2+} porque se necesitarían \SI{1e-3}{\mol} de \ce{CO3^2-} (reacción 1:1) y tenemos \SI{5e-2}{\mol}.
+        \end{overprint}        
+                }
+    \visible<5->{
+        \structure{Solubilidad (s) de los iones:} $K_{ps}(\ce{SrCO3}) = s^2\Rightarrow s = \SI{3,066e-5}{\Molar} = \frac{n_{\text{solubles}}(\ce{SrCO3})}{\SI{1}{\liter}}$
+                }
+    \visible<6->{
+        \begin{overprint}
+            \onslide<6>
+                \structure{Número de moles precipitados:} $n_{\text{precipitado}}(\ce{SrCO3}) = \SI{1e-3}{\mol} - \SI{3,066e-5}{\mol} = \SI{9,69e-4}{\mol}$
+            \onslide<7>
+                \structure{Masa de precipitado:} $\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{m_{\text{precipitado}}(\ce{SrCO3}) = \SI{9,69e-4}{\cancel\mol}\cdot\SI{147,63}{\gram\per\cancel\mol} = \SI{,143}{\gram}}$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b) del problema}
+    \begin{center}
+        {\Large \textbf{¿$m(\text{precipitado})$}?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{m(\ce{MgCl2}) = \SI{,04}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{Mm(\ce{MgCl2}) = \SI{95,21}{\gram\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{V = \SI{,500}{\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{m(\ce{KOH}) = \SI{,16}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{Mm(\ce{KOH}) = \SI{56,11}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{K_{ps}(\ce{Mg(OH)2}) = \SI{1,8e-11}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{Mm(\ce{Mg(OH)2}) = \SI{58,32}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): determinación de la masa de precipitado (b)}
+    \structure{Reacción de solubilidad:}
+        $$
+            \ce{
+                    Mg(OH)2(s) v
+                     <=> 
+                    $\underset{s}{\ce{Mg^2+(ac)}}$
+                     +
+                    $\underset{2s}{\ce{2OH-(ac)}}$
+               }
+        $$
+        $$
+            K_{ps}(\ce{Mg(OH)2}) = [\ce{Mg^2+}][\ce{OH-}]^2 = 4s^3 =\SI{1,8e-11}{}
+        $$
+    \visible<2->{
+        \structure{Reactivo limitante:}
+        $$
+            n(\ce{MgCl2}) = n(\ce{Mg^2+}) = \frac{\SI{,04}{\gram}}{\SI{95,21}{\gram\per\mol}} = \SI{4,201e-4}{\mol}
+        $$
+        $$
+            n(\ce{KOH}) = n(\ce{OH-}) = \frac{\SI{,16}{\gram}}{\SI{56,11}{\gram\per\mol}} = \SI{2,852e-3}{\mol}
+        $$
+                }
+    \visible<3->{
+            Para formar el \ce{Mg(OH)2} consumiendo todos los iones se necesitarán \SI{4,201e-4}{\mol} de \ce{Mg^2+} y \SI{8,402e-4}{\mol} de \ce{OH-} (tenemos \SI{2,852e-3}{\mol}). Por tanto, el \textbf{\alert{reactivo limitante es el \ce{Mg^2+}}}.
+                }
+    \visible<4->{
+        \begin{overprint}
+            \onslide<4>
+                \structure{Obtenemos s y $n_{\text{solubles}}(\ce{Mg(OH)2})$:}
+                $$
+                    s = \left(\frac{K_{ps}(\ce{Mg(OH)2})}{4}\right)^{\frac{1}{3}} \Rightarrow s = \SI{1,650e-4}{\Molar}\Rightarrow n_{\text{solubles}}(\ce{Mg(OH)2}) = \SI{1,650e-4}{\mol\per\cancel\liter}\cdot\SI{,5}{\cancel\liter}
+                $$
+            \onslide<5>
+                \structure{Obtenemos s y $n_{\text{solubles}}(\ce{Mg(OH)2})$:}
+                $$
+                    n_{\text{solubles}}(\ce{Mg(OH)2}) = \SI{8,255e-5}{\mol}
+                $$
+            \onslide<6>
+                \structure{$n_{\text{precipitan}}(\ce{Mg(OH)2})$:}
+                $$
+                    n_{\text{precipitan}}(\ce{Mg(OH)2}) = \SI{4,201e-4}{\mol}- \SI{8,255e-5}{\mol} = \SI{3,376e-4}{\mol}
+                $$
+            \onslide<7>
+                \structure{$m_{\text{precipitan}}(\ce{Mg(OH)2})$:}
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{m_{\text{precipitan}}(\ce{Mg(OH)2}) = \SI{3,376e-4}{\cancel\mol}\cdot\SI{58,32}{\gram\per\cancel\mol} = \SI{,020}{\gram}}
+                $$
+        \end{overprint}
+                }
+\end{frame}

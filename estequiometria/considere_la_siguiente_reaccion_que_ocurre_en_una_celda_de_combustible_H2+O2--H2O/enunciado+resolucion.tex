@@ -1,0 +1,127 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/considere_la_siguiente_reaccion_que_ocurre_en_una_celda_de_combustible_H2+O2--H2O/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge
+        $$
+            m(\ce{H2O})?
+        $$
+    }
+    Reacción:\\[.3cm]
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{H2(g)}}
+    \ce{+}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2(g)}}
+    \ce{->}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H2O(g)}}
+    \\[.5 cm]
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{H2(g)})=\SI{150}{\gram}}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{m(\ce{O2(g)})=\SI{1500}{\gram}}\\[.5cm]
+    \visible<2-|handout:0>{Pero también ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{H2}) = \SI{2,02}{\gram\per\mol}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{O2}) = \SI{32,00}{\gram\per\mol}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{Mm(\ce{H2O(g)})=\SI{18,02}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción y reactivo limitante}
+    \begin{overprint}
+        \onslide<1>
+            \ce{H2(g) + O2(g) -> H2O(g)}
+        \onslide<2>
+            \ce{H2(g) + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O2(g)}}
+            \ce{-> H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O(g)}}
+        \onslide<3>
+            \ce{H2(g) + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\frac{1}{2}\ce{O2(g)}}
+            \ce{-> H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O(g)}}
+        \onslide<4->
+            \ce{H2(g) + \frac{1}{2}O2(g) -> H2O(g)}
+    \end{overprint}
+    \visible<2->{
+        \begin{itemize}
+            \item<4-> Según la estequiometría: $\frac{\SI{,5}{\mol}\text{ de }\ce{O2}}{\SI{1}{\mol}\text{ de }\ce{H2}}=\frac{\SI{1}{\mol}\text{ de }\ce{O2}}{\SI{2}{\mol}\text{ de }\ce{H2}}$.
+            \item<5-> $n(\ce{H2})=\frac{\SI{150}{\cancel\gram}}{\SI{2,02}{\cancel\gram\per\mol}}=\SI{74,26}{\mol}$
+            \item<6-> $n(\ce{O2})=\frac{\SI{1500}{\cancel\gram}}{\SI{32,00}{\cancel\gram\per\mol}}=\SI{46,88}{\mol}$
+            \item<7-> Según las cantidades de los reactivos: $\frac{\SI{46,88}{\mol}\text{ de }\ce{O2}}{\SI{74,26}{\mol}\text{ de }\ce{H2}}=\frac{\SI{1}{\mol}\text{ de }\ce{O2}}{\SI{1,58}{\mol}\text{ de }\ce{H2}}>\frac{\SI{,5}{\mol}\text{ de }\ce{O2}}{\SI{1}{\mol}\text{ de }\ce{H2}}=\frac{\SI{1}{\mol}\text{ de }\ce{O2}}{\SI{2}{\mol}\text{ de }\ce{H2}}$.
+            \item<8-> \ldots o $\SI{1,58}{\mol}\text{ de }\ce{H2}<\SI{2}{\mol}\text{ de }\ce{H2}$
+        \end{itemize}
+                }
+    \visible<8->{
+        \centering\myovalbox{\textcolor{yellow}{\textbf{El hidrógeno es el reactivo limitante}}}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo de la masa de agua}
+    \begin{center}
+        \textbf{\ce{H2(g) + \frac{1}{2}O2(g) -> H2O(g)}}
+    \end{center}
+    \structure{Según la estequiometría:}
+        $$
+            \SI{1}{\mol}\text{ de }\ce{H2 ->}\SI{1}{\mol}\text{ de } \ce{H2O}
+        $$
+    \begin{overprint}
+        \onslide<2>
+            $$
+                n(\ce{H2}) = n(\ce{H2O})
+            $$
+        \onslide<3>
+            $$
+                \overbrace{n(\ce{H2})}^{n=\frac{m}{Mm}} = \underbrace{n(\ce{H2O})}_{n=\frac{m}{Mm}}
+            $$
+        \onslide<4->
+            $$
+                \frac{m(\ce{H2})}{Mm(\ce{H2})} = \frac{m(\ce{H2O})}{Mm(\ce{H2O})}
+            $$
+    \end{overprint}
+    \visible<5->{
+        \structure{Despejamos:}
+        $$
+            m(\ce{H2O})
+            =
+            m(\ce{H2})\cdot
+            \frac{Mm(\ce{H2O})}{Mm(\ce{H2})}            
+        $$
+               }
+       \visible<6->{
+           \structure{Sustituimos:}
+           $$
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{H2O})}
+               =
+               \SI{150}{\gram}
+               \cdot
+               \frac{\SI{18,02}{\cancel\gram\per\cancel\mol}}{\SI{2,02}{\cancel\gram\per\cancel\mol}}
+               =
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{1338}{\gram}}
+           $$
+           O aproximadamente\ldots
+           $$
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{H2O})}
+               =
+               \SI{150}{\gram}
+               \cdot
+               \cancelto{9}{\frac{\SI{18}{\cancel\gram\per\cancel\mol}}{\SI{2}{\cancel\gram\per\cancel\mol}}}
+               =
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{1350}{\gram}}
+           $$
+                  }
+\end{frame}

@@ -1,0 +1,153 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_desea_preparar_una_disolucion_amortiguadora_con_un_pH_5_a_partir_de_20_mL_de_HAc/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{¿$V(\ce{NaOH})$? ¿pH?}}\\[.2cm]
+	\end{center}
+	\structure{Disolución amortiguadora formada por:}
+	\begin{itemize}
+		\item	Ácido (\ce{CH3COOH} o \ce{HAc}):\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{HAc}) = \SI{20}{\milli\liter}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{HAc}] = \SI{,5}{\Molar}}\\[.2cm]
+			\qquad\qquad\qquad\qquad\qquad\qquad\qquad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_a(\ce{HAc}) = \num{1,8e-5}}\\[.2cm]
+		\item	Base (\ce{NaOH}):\qquad\qquad\qquad\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NaOH}]=\SI{,3}{\Molar}}\quad
+	\end{itemize}
+	\begin{enumerate}[label={Apartado \alph*)},font={\color{red!50!black}\bfseries}]
+		\setcounter{enumi}{1}
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HCl}]=\SI{,5}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{HCl})=\SI{5}{\milli\liter}}
+		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{[\ce{KOH}]=\SI{,4}{\Molar}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{V(\ce{KOH})=\SI{3}{\milli\liter}}\quad
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Consideraciones iniciales}
+	El ejercicio se puede hacer usando la ec. de Henderson--Hasselbalch o directamente expresando la constante de equilibrio y operando. Las dos formas son equivalentes pero La primera quizá tenga alguna operación menos. Esa es la razón por la que la hemos escogido.
+	$$
+		\pH = \underbrace{\pKa}_{\pKa = -\log K_a} + \log(\frac{[\ce{A-}]_0}{[\ce{HA}]_0})
+	$$
+	
+	\structure{Disolución amortiguadora:} existen las dos especies, ácido o base débil y su contraión conjugado. En nuestro caso \ce{HAc} y \ce{Ac-}. Hay dos formas de conseguir esa situación:
+	\begin{itemize}
+		\item Mezclar una \textbf{disolución del ácido con} otra de \textbf{su sal conjugada}.
+		\item Mezclar una \textbf{disolución del ácido con} otra de una \textbf{base fuerte antes del punto de equivalencia}.
+	\end{itemize}
+	En este ejercicio consideramos la segunda opción. Las reacciones de neutralización y de equilibrio de disociación del ácido serán:
+	\begin{center}
+		\ce{HAc(ac) + NaOH(ac) -> $\underset{\ce{NaAc(ac) -> Na+(ac) + Ac-(ac)}}{\ce{NaAc(ac)}}$ + H2O(l)}\\
+		$$
+			\ce{HA(ac) <=> H+(ac) + Ac-(ac)}\qquad K_a=\frac{[\ce{H+}][\ce{Ac-}]}{[\ce{HA}]}
+		$$
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): Volumen necesario de \ce{NaOH} \SI{,3}{\Molar}}
+	\structure{Ecuación de Henderson--Hasselbalch:} recuerda que $\pKa = -\log K_a\Rightarrow\pKa = -\log\num{1,8e-5}$
+	$$
+		\overbrace{\pH}^5 = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{[\ce{Ac-}]}{[\ce{HAc}]})\Rightarrow
+		\frac{[\ce{Ac-}]}{[\ce{HAc}]} = \overbrace{\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}}}^{M=\rfrac{n}{V}} = 10^{(5-4,74)} = \num{1,82}
+	$$
+	{\small (Despreciamos las disociaciones frente a las concentraciones iniciales, $K_a < \num{4e-4}$)}
+	\structure{N"o de moles sin reaccionar de \ce{HAc}:} $n(\ce{HAc}) = \SI{,5}{\mol\per\cancel\liter}\vdot\SI{20e-3}{\cancel\liter} = \SI{10e-3}{\mol}$
+	\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HA}) = n_{\text{reaccionan}}(\ce{NaOH}) = n_{\text{producen}}(\ce{A-})$
+	\begin{center}
+		\begin{tabular}{lccc}
+					&	\multicolumn{3}{c}{\ce{HAc(ac) + NaOH(ac) -> Na+(ac) + Ac-(ac) + H2O(l)}}					\\
+			\midrule
+			Estado	&	$n(\ce{HAc})~(\si{\mol})$	&	$n(\ce{NaOH})~(\si{\mol})$	&	$n(\ce{Ac-})~(\si{\mol})$	\\
+			\midrule
+			Inicial	&	\num{10e-3}					&	$x$							&	0							\\
+			Final	&	$\num{10e-3}-x$				&	0							&	$x$							\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\frac{n(\ce{Ac-})}{n(\ce{HAc})} = \frac{x}{\num{10e-3}-x} = \num{1,82}\Rightarrow
+		\num{2,82}x = \num{1,82e-2}\Rightarrow
+		x = n(\ce{A-}) =\SI{6,454e-3}{\mol}
+	$$
+	\structure{Según la relación estequiométrica anterior:} $n(\ce{NaOH}) = \SI{6,454e-3}{\mol}$
+	$$
+		M = \frac{n}{V}\Rightarrow V = \frac{n}{M}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V(\ce{NaOH}) = \frac{\SI{6,454e-3}{\cancel\mol}}{\SI{,3}{\cancel\mol\per\liter}} = \SI{,0215}{\liter}=\SI{21,5}{\milli\liter}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH al añadir \SI{5}{\milli\liter} de \ce{HCl} \SI{,5}{\Molar}}
+	\structure{Condiciones del anterior apartado:} Calculamos volumen total y concentración de \ce{HAc} y \ce{Ac-} después de añadir el \ce{NaOH}. $V_T = \SI{20}{\milli\liter} + \SI{21,5}{\milli\liter} = \SI{41,5}{\milli\liter}$
+	$$
+		[\ce{HA}] = \frac{\overbrace{\SI{10e-3}{\mol}-\SI{6,454e-3}{\mol}}^{\SI{3,546e-3}{\mol}}}{\SI{41,5e-3}{\liter}} = \SI{,08545}{\Molar};
+		\qquad
+		[\ce{A-}] = \frac{\SI{6,454e-3}{\mol}}{\SI{41,5e-3}{\liter}} = \SI{,1555}{\Molar}
+	$$
+	\structure{N"o de moles de \ce{HCl} añadidos:} $n(\ce{HCl}) = \SI{,5}{\mol\per\cancel\liter}\vdot\SI{5e-3}{\cancel\liter} = \SI{2,5e-3}{\mol}$
+	\structure{Volumen después de añadir el \ce{HCl}:} $V_T = \SI{41,5}{\milli\liter} + \SI{5}{\milli\liter} = \SI{46,5}{\milli\liter}$
+	\structure{\ce{HCl} (ácido fuerte) reaccionará con la \amarillo{especie básica}:}\qquad
+	$\ce{$\underset{\text{Ácido}}{\ce{HA}}$ <=> H+ + $\underset{\text{\textbf{Base}}}{\amarillo{\ce{Ac-}}}$}$
+	\begin{center}
+		\begin{tabular}{lccc}
+					&	\multicolumn{3}{c}{\ce{Ac-(ac) + HCl(ac) -> HAc(ac) + Cl-(ac)}}										\\
+			\midrule
+			Estado	&	$n(\ce{Ac-})$~(\si{\mol})		&	$n(\ce{HCl})$~(\si{\mol})	&	$n(\ce{HAc})$~(\si{\mol})		\\
+			\midrule
+			Inicial	&	\num{6,454e-3}					&	\num{2,5e-3}				&	\num{3,546e-3}					\\
+			Final	&	$\num{6,454e-3}-\num{2,5e-3}$	&	\num{0}						&	$\num{3,546e-3}+\num{2,5e-3}$	\\
+					&		=\num{3,954e-3}				&								&		=\num{6,046e-3}				\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\pH = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
+		\pH = \num{4,74} + \log(\frac{\num{3,954e-3}}{\num{6,046e-3}})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH = \num{4,56}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH al añadir \SI{3}{\milli\liter} de \ce{KOH} \SI{,4}{\Molar}}
+	\structure{Calculado anteriormente:} $V_T = \SI{41,5}{\milli\liter}$
+	$$
+		[\ce{HA}] = \SI{,08545}{\Molar};
+			\qquad
+		[\ce{A-}] = \SI{,1555}{\Molar}
+	$$
+	\structure{N"o de moles de \ce{KOH} añadidos:} $n(\ce{KOH}) = \SI{,4}{\mol\per\cancel\liter}\vdot\SI{3e-3}{\cancel\liter} = \SI{1,2e-3}{\mol}$
+	\structure{Volumen después de añadir el \ce{KOH}:} $V_T = \SI{41,5}{\milli\liter} + \SI{3}{\milli\liter} = \SI{44,5}{\milli\liter}$
+	\structure{\ce{KOH} (base fuerte) reaccionará con la \amarillo{especie ácida}:}\qquad
+	$\ce{$\underset{\text{\textbf{Ácido}}}{\amarillo{\ce{HA}}}$ <=> H+ + $\underset{\text{Base}}{\ce{Ac-}}$}$
+	\begin{center}
+		\begin{tabular}{lccc}
+			&	\multicolumn{3}{c}{\ce{HAc(ac) + KOH(ac) -> K+(ac) + Ac-(ac) + H2O(ac)}}									\\
+			\midrule
+			Estado	&	$n(\ce{HAc})$~(\si{\mol})		&	$n(\ce{KOH})$~(\si{\mol})	&	$n(\ce{Ac-})$~(\si{\mol})		\\
+			\midrule
+			Inicial	&	\num{3,546e-3}					&	\num{1,2e-3}				&	\num{6,454e-3}					\\
+			Final	&	$\num{3,546e-3}-\num{1,2e-3}$	&	\num{0}						&	$\num{6,454e-3}+\num{1,2e-3}$	\\
+					&		=\num{2,346e-3}				&								&		=\num{7,654e-3}				\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		\pH = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
+		\pH = \num{4,74} + \log(\frac{\num{7,654e-3}}{\num{2,346e-3}})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\pH = \num{5,26}}
+	$$
+\end{frame}

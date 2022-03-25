@@ -1,0 +1,184 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/dadas_las_siguientes_reacciones_de_yodo_e_hidrogeno/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): calor molar latente de sublimación del yodo}
+    \structure{Identificamos el proceso:} sublimación
+    \begin{center}
+        \ce{I2(s) -> I2(g)}
+    \end{center}
+    \visible<2->{
+        \structure{Buscamos los compuestos implicados en los estados correspondientes en las reacciones dadas:}
+        \begin{center}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(g)}} \ce{ + H2(g) -> 2 HI(g)}~~~$\Delta H_1 = \SI{-0,8}{\kilo\calorie}$\\
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(s)}} \ce{ + H2(g) -> 2 HI(g)}~~~$\Delta H_2 = \SI{12}{\kilo\calorie}$
+        \end{center}
+                }
+    \visible<3->{
+            \structure{El yodo gas debería estar en productos:}
+            \begin{overprint}
+                \onslide<3>
+                    \begin{center}
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(g)}} \ce{ + H2(g) -> 2 HI(g)}~~~$\Delta H_1 = \SI{-0,8}{\kilo\calorie}$\\
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(s)}} \ce{ + H2(g) -> 2 HI(g)}~~~$\Delta H_2 = \SI{12}{\kilo\calorie}$
+                    \end{center}
+                \onslide<4->
+                    \begin{center}
+                        2
+                        \cancel{\ce{HI(g)}}
+                        \ce{->}
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(g)}}
+                        \ce{+}
+                        \cancel{\ce{H2(g)}}
+                        ~~~$\Delta H_1 = \SI{0,8}{\kilo\calorie}$\\
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(s)}}
+                        \ce{+}
+                        \cancel{\ce{H2(g)}}
+                        \ce{->}
+                        \cancel{\ce{2 HI(g)}}
+                        ~~~$\Delta H_2 = \SI{12}{\kilo\calorie}$
+                    \end{center}
+            \end{overprint}
+                }
+    \visible<5->{
+        \structure{Sumamos ahora las reacciones y las entalpías:}
+        \begin{center}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(g)}}
+            \ce{->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{I2(s)}}
+            ~~~$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_1 = \SI{12,8}{\kilo\calorie}}$
+        \end{center}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): Calor molar de disolución del ácido yodhídrico}
+    \structure{Identificamos el proceso:} disolución
+    \begin{center}
+        \ce{HI(g) -> HI(ac)}
+    \end{center}
+    \visible<2->{
+        \structure{Buscamos los compuestos implicados en los estados correspondientes en las reacciones dadas:}
+        \begin{center}
+                \ce{I2(g) + H2(g) -> }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2 HI(g)}}~~~$\Delta H_1 = \SI{-0,8}{\kilo\calorie}$\\
+                \ce{I2(g) + H2(g) -> }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2 HI(ac)}}~~~$\Delta H_3 = \SI{-26,8}{\kilo\calorie}$
+        \end{center}
+    }
+    \visible<3->{
+        \structure{El yoduro de hidrógeno gas debería estar en reactivos:}
+        \begin{overprint}
+            \onslide<3>
+                \begin{center}
+                    \ce{I2(g)}
+                    \ce{+}
+                    \ce{H2(g)}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2HI(g)}}
+                    ~~~$\Delta H_1 = \SI{-0,8}{\kilo\calorie}$\\
+                    \ce{I2(g)}
+                    \ce{+}
+                    \ce{H2(g)}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2 HI(ac)}}
+                    ~~~$\Delta H_3 = \SI{-26,8}{\kilo\calorie}$
+                \end{center}
+            \onslide<4>
+                \begin{center}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2HI(g)}}
+                    \ce{->}
+                    \ce{I2(g)}
+                    \ce{+}
+                    \ce{H2(g)}
+                    ~~~$\Delta H_1 = \SI{0,8}{\kilo\calorie}$\\
+                    \ce{I2(g)}
+                    \ce{+}
+                    \ce{H2(g)}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2 HI(ac)}}
+                    ~~~$\Delta H_3 = \SI{-26,8}{\kilo\calorie}$
+                \end{center}
+            \onslide<5->
+                \begin{center}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2HI(g)}}
+                    \ce{->}
+                    \cancel{\ce{I2(g)}}
+                    \ce{+}
+                    \cancel{\ce{H2(g)}}
+                    ~~~$\Delta H_1 = \SI{0,8}{\kilo\calorie}$\\
+                    .\cancel{\ce{I2(g)}}
+                    \ce{+}
+                    \cancel{\ce{H2(g)}}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2 HI(ac)}}
+                    ~~~$\Delta H_3 = \SI{-26,8}{\kilo\calorie}$
+                \end{center}
+        \end{overprint}
+                }
+    \visible<6->{
+        \structure{La reacción tiene que ser mol a mol:}
+        \begin{overprint}
+            \onslide<6>
+                \begin{center}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2HI(g)}}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{2HI(ac)}}
+                    ~~~$\Delta H = \SI{-26,0}{\kilo\calorie}$
+                \end{center}
+            \onslide<7>
+                \begin{center}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{HI(g)}}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{HI(ac)}}
+                    ~~~$\Delta H = \frac{-26,0}{2}~\si{\kilo\calorie}$
+                \end{center}
+            \onslide<8>
+                \begin{center}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{HI(g)}}
+                    \ce{->}
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{HI(ac)}}
+                    ~~~$\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\Delta H = \SI{-13,0}{\kilo\calorie}}$
+                \end{center}
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): calor para disociar en sus componentes el yoduro de hidrógeno gas}
+    \structure{Reacción:} \ce{2HI(g) -> I2(g) + H2(g)}~~~$\Delta H(\ce{HI}) = \frac{0,8}{2}\si{\kilo\calorie\per\mol}$
+    \visible<2->{
+        \structure{Calor de reacción al disociar $n$ moles de \ce{HI}}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    Q(\ce{HI}) = n(\ce{HI})\cdot\Delta H(\ce{HI})
+                $$
+            \onslide<3>
+                $$
+                    Q(\ce{HI}) = \overbrace{n(\ce{HI})}^{PV=nRT\Rightarrow n=\frac{PV}{RT}}\cdot\Delta H(\ce{HI})
+                $$
+            \onslide<4->
+                $$
+                    Q(\ce{HI}) = \frac{P(\ce{HI})\cdot V(\ce{HI})}{R\cdot T(\ce{HI})}\cdot\Delta H(\ce{HI})
+                $$
+        \end{overprint}
+                }
+    \visible<5>{
+        \structure{Sustituimos:}
+        $$
+            Q(\ce{HI}) = \frac{\frac{80\cancel{0}}{76\cancel{0}}~\si{\cancel\atm}\cdot\SI{,750}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\cdot\SI{298,15}{\cancel\kelvin}}\cdot\SI{,4e3}{\calorie\per\cancel\mol}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{Q(\ce{HI}) =\SI{12,9}{\calorie}}
+        $$
+                }
+\end{frame}

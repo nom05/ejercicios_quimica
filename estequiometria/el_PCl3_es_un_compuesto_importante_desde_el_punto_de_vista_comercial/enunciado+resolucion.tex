@@ -1,0 +1,187 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_PCl3_es_un_compuesto_importante_desde_el_punto_de_vista_comercial/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge
+        $$
+            m(\ce{PCl3})?\quad\quad
+            m_{exc}(\ce{P4})?
+        $$
+    }
+    Reacción:\\[.3cm]
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{P4(s)}}
+        \ce{ + }
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{Cl2(g)}}
+        \ce{ -> }
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{PCl3(l)}}
+    $$\\[.5 cm]
+    \begin{center}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{P4})=\SI{125}{\gram}}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{m(\ce{Cl2(g)})=\SI{323}{\gram}}\\[.5cm]
+    \end{center}
+    \visible<2-|handout:0>{Pero también\ldots\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{P4}) = \SI{123,90}{\gram\per\mol}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{Cl2}) = \SI{70,91}{\gram\per\mol}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{Mm(\ce{PCl3})=\SI{137,33}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción y reactivo limitante}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \ce{P4 + Cl2 -> PCl3}
+            $$
+        \onslide<2>
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{P4}}
+                \ce{ + Cl2 -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{P}}
+                \ce{Cl3}
+            $$
+        \onslide<3>
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{P4}}
+                \ce{ + Cl2 -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{4P}}
+                \ce{Cl3}
+            $$
+        \onslide<4>
+            $$
+                \ce{P4 + }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Cl2}}
+                \ce{ -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{4}}
+                \ce{P}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Cl3}}
+            $$
+        \onslide<5>
+            $$
+                \ce{P4 + }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{6Cl2}}
+                \ce{ -> }
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{4}}
+                \ce{P}
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Cl3}}
+            $$
+        \onslide<6->
+            $$
+                \ce{P4 + 6Cl2 -> 4PCl3}
+            $$
+    \end{overprint}
+    \visible<6->{
+        $$
+            n=\frac{m}{Mm}
+        $$
+        \begin{itemize}
+            \item<6-> Según la estequiometría: $\frac{\SI{1}{\mol}\text{ de }\ce{P4}}{\SI{6}{\mol}\text{ de }\ce{Cl2}}$.
+            \item<7-> $n(\ce{P4})=\frac{\SI{125}{\cancel\gram}}{\SI{123,90}{\cancel\gram\per\mol}}=\SI{1,01}{\mol}$
+            \item<8-> $n(\ce{Cl2})=\frac{\SI{323}{\cancel\gram}}{\SI{70,91}{\cancel\gram\per\mol}}=\SI{4,56}{\mol}$
+            \item<9-> Según las cantidades de los reactivos: $\frac{\SI{1,01}{\mol}\text{ de }\ce{P4}}{\SI{4,56}{\mol}\text{ de }\ce{Cl2}}=\frac{\SI{1}{\mol}\text{ de }\ce{P4}}{\SI{4,51}{\mol}\text{ de }\ce{Cl2}}>\frac{\SI{1}{\mol}\text{ de }\ce{P4}}{\SI{6}{\mol}\text{ de }\ce{Cl2}}$.
+            \item<10-> \ldots o $\SI{4,51}{\mol}\text{ de }\ce{Cl2}<\SI{6}{\mol}\text{ de }\ce{Cl2}$
+        \end{itemize}
+                }
+    \visible<10->{
+        \centering\myovalbox{\textcolor{yellow}{\textbf{El cloro es el reactivo limitante}}}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo de la masa de \ce{PCl3}}
+    \begin{center}
+        \textbf{\ce{P4(s) + 6Cl2(g) -> 4PCl3(l)}}
+    \end{center}
+    \structure{Según la estequiometría:}
+        $$
+            \SI{6}{\mol}\text{ de }\ce{Cl2 ->}\SI{4}{\mol}\text{ de } \ce{PCl3}
+        $$
+        \begin{overprint}
+            \onslide<1>
+                $$
+                    n(\ce{Cl2})
+                    \quad ??\quad 
+                    n(\ce{PCl3})
+                $$
+            \onslide<2>    
+                $$
+                    n(\ce{Cl2})
+                    \quad >\quad 
+                    n(\ce{PCl3})
+                $$
+            \onslide<3>
+                $$
+                    4\cdot n(\ce{Cl2})
+                    \quad =\quad
+                    6\cdot n(\ce{PCl3})
+                $$
+            \onslide<4>
+                $$
+                    \overbrace{4\cdot n(\ce{Cl2})}^{n=\frac{m}{Mm}} = \underbrace{6\cdot n(\ce{PCl3})}_{n=\frac{m}{Mm}}
+                $$
+            \onslide<5->
+                $$
+                    4\cdot\frac{m(\ce{Cl2})}{Mm(\ce{Cl2})} = 6\cdot\frac{m(\ce{PCl3})}{Mm(\ce{PCl3})}
+                $$
+    \end{overprint}
+    \visible<6->{
+        \structure{Despejamos:}
+        $$
+            m(\ce{PCl3})
+            =
+            \cancelto{\frac{2}{3}}{\frac{4}{6}}
+            \cdot m(\ce{Cl2})\frac{Mm(\ce{PCl3})}{Mm(\ce{Cl2})}
+        $$
+               }
+       \visible<7->{
+           \structure{Sustituimos:}
+           $$
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{PCl3})}
+               =
+               \frac{2}{3}\cdot
+               \SI{323}{\gram}
+               \cdot
+               \frac{\SI{137,33}{\cancel\gram\per\cancel\mol}}{\SI{70,91}{\cancel\gram\per\cancel\mol}}
+               =
+               \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{417}{\gram}}
+           $$
+                  }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): masa de \ce{P4} en exceso o sin reaccionar}
+    \begin{center}
+        \textbf{\ce{P4 + 6Cl2 -> 4PCl3}}
+    \end{center}
+    $$
+        n=\frac{m}{Mm}
+    $$
+    \begin{itemize}
+        \item<1-> Según la estequiometría: $\frac{\SI{1}{\mol}\text{ de }\ce{P4}}{\SI{6}{\mol}\text{ de }\ce{Cl2}}$.
+        \item<2-> Según el reactivo limitante: $\frac{x~\si{\mol}\text{ de }\ce{P4}}{\SI{4,51}{\mol}\text{ de }\ce{Cl2}}=\frac{\SI{1}{\mol}\text{ de }\ce{P4}}{\SI{6}{\mol}\text{ de }\ce{Cl2}}\Rightarrow x=\SI{0,752}{\mol}\text{ de }\ce{P4}$.
+        \item<3-> Sin reaccionar: $\SI{1,01}{\mol} \text{ (calculado previamente)} - \SI{0,752}{\mol} = \SI{0,248}{\mol}\text{ de \ce{P4} en exceso}$.
+        \visible<4->{
+            \item<4-> $n=\frac{m}{Mm}\Rightarrow m=n\cdot Mm\Rightarrow
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m_{exceso}(\ce{P4})}
+            =\SI{0,248}{\cancel\mol}\cdot\SI{123,90}{\gram\per\cancel\mol}=
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{31}{\gram}}$
+                    }
+    \end{itemize}
+\end{frame}

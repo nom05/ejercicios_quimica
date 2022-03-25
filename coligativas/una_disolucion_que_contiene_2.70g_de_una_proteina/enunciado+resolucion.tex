@@ -1,0 +1,35 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/coligativas/una_disolucion_que_contiene_2.70g_de_una_proteina/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge ¿$Mm(\text{proteína})=Mm$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Pi=\SI{9,12}{\torr}=\SI{,012}{\atm}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T=\SI{298,15}{\kelvin}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\text{disolución})=\SI{100}{\milli\liter}=\SI{,1}{\liter}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la masa molecular de la proteína}
+	\structure{Ecuación de van't Hoff -- presión osmótica ($\Pi$), concentración ($M$):}
+	$$
+		\Pi = \overbrace{M}^{M = \rfrac{n}{V}}\vdot R\vdot T \Rightarrow \Pi = \frac{\overbrace{n}^{n=\rfrac{m}{Mm}}}{V}\vdot R\vdot T \Rightarrow
+		\Pi = \frac{m}{Mm\vdot V}\vdot R\vdot T
+	$$
+	Despejamos $\Pi$ y sustituimos por los valores correspondientes:
+	$$
+		Mm = \frac{R\vdot T}{\Pi\vdot V}\vdot m\Rightarrow Mm = \frac{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{298,15}{\cancel\kelvin}}{\SI{,012}{\cancel\atm}\vdot\SI{,1}{\cancel\liter}}\vdot\SI{2,70}{\gram}
+	$$
+	\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm=\SI{55008,675}{\gram\per\mol}}
+\end{frame}

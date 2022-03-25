@@ -1,0 +1,54 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_electrolizo_una_disolucion_de_acido_sulfurico_usando_electrodos_inertes_por_un_periodo_de_35min/enunciado.tex
+			}
+           }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        \textbf{\Large ¿Intensidad?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{P(\ce{H2}) = \SI{752}{\torr}-\SI{28}{\torr}}~
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{V(\ce{H2}) = \SI{145}{\milli\liter}}~
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{T(\ce{H2}) = \SI{301,15}{\kelvin}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{t = \SI{35}{\minute}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\text{ánodo:} (\ce{H2O/H+,O2})}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\text{cátodo:} (\ce{H+/H2})}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): intensidad de la corriente}
+    \begin{center}
+        \begin{tabular}{lc}
+            \textbf{\textit{Ánodo} (oxidación):}  & \ce{2H2O -> O2 + 4H+ + 4e-}\\
+            \textbf{\textit{Cátodo} (reducción):} & $2\times\left(\ce{2H+ + 2e- -> H2}\right)$\\
+            \midrule
+            \textbf{\textit{Total:}}  & \ce{2H2O -> O2 + 2H2}
+        \end{tabular}
+    \end{center}
+    \structure{Número de moles de \ce{H2} (ecuación de gases ideales):}
+    $$
+        n(\ce{H2}) = \frac{\SI{,953}{\cancel\atm}\cdot\SI{,145}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\cdot\SI{301,15}{\cancel\kelvin}} = \SI{5,593e-3}{\mol}
+    $$
+    \structure{Número de moles de electrones:} hay \SI{2}{\mol} de \ce{e-} por cada \SI{1}{\mol} de \ce{H2}
+    $$
+        n(\ce{e-}) = 2\times\SI{5,593e-3}{\mol} = \SI{1,119e-2}{\mol}
+    $$
+    $$
+        n(\ce{e-}) = \frac{I\cdot t}{96500}\Rightarrow I = \frac{n(\ce{e-})\cdot 96500}{t}\Rightarrow I = \frac{\SI{1,119e-2}{\cancel\mol}\cdot\SI{96500}{\coulomb\per\cancel\mol}}{\SI{35}{\cancel\minute}\cdot\SI{60}{\second\per\cancel\minute}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{I = \SI{,514}{\ampere}}
+    $$
+\end{frame}

@@ -1,0 +1,47 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/se_hace_reaccionar_un_mol_de_NaCl_con_.7_moles_de_H2SO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$n_{eq}(\ce{HCl})$?}\\[.4cm]
+		\structure{Antes del equilibrio:}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n_0(\ce{NaCl})=\SI{1}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n_0(\ce{H2SO4})=\SI{,7}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{n_0(\ce{Na2SO4})=\SI{,26}{\mol}}\\[.8cm]
+		\structure{En el equilibrio:}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n_{eq}(\ce{NaCl})=\SI{,34}{\mol}}\quad
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): número de moles de \ce{HCl} en el equilibrio (o que se han formado)}
+		\structure{Reacción:} Tenemos que distinguir cuáles son los reactivos y cuáles son los productos. Una sal (\ce{NaCl}) no reacciona con otra para dar ácidos, así que una estará en reactivos y la otra en productos. Solo nos queda cada uno de los ácidos, que serán los opuestos para que podamos ajustar la reacción.
+		\structure{Reacción:} \ce{\colorbox{red}{\textbf{2}}NaCl(ac) + \colorbox{yellow}{\textbf{1}}H2SO4(ac) <=> \colorbox{orange}{\textbf{1}}Na2SO4(ac) + \colorbox{gray}{\textbf{2}}HCl(ac)} (ajustada)\\[.3cm]
+		Construimos una tabla con el número de moles iniciales, los que reacciona y los de equilibrio (iniciales+reaccionan):
+		\begin{center}
+			\begin{tabular}{lcccc}
+				\toprule
+					(\si{\mol}) & \ce{NaCl}                      &                \ce{H2SO4}         & \ce{Na2SO4}                       & \ce{HCl} \\
+					\midrule
+					Inicial     &  \num{1}                       &                 \num{,7}          &  \num{,26}                        &    0     \\
+					Reaccionan  & $-\colorbox{red}{\textbf{2}}x$ & $-\colorbox{yellow}{\textbf{1}}x$ & $+\colorbox{orange}{\textbf{1}}x$ & $+\colorbox{gray}{\textbf{2}}x$ \\
+					Equilibrio  & $\underbrace{\num{1}-\colorbox{red}{\textbf{2}}x}_{=\num{,34}\text{ (dato)}}$ & $\num{,7}-\colorbox{yellow}{\textbf{1}}x$  & $\num{,26}+\colorbox{orange}{\textbf{1}}x$ &   $0+\colorbox{gray}{\textbf{2}}x$ \\
+					\bottomrule
+			\end{tabular}
+		\end{center}
+		\alert{NOTA:} Como no hay \ce{HCl} y \ce{Na2SO4} está en el mismo lado de la reacción, se producen ambas sustancias. Las otras sustancias tienen que disminuir en cantidad para cumplir el \textbf{principio de conservación de la masa}. Verificad siempre que los signos del número de moles que se consumen (signo negativo) y se produzcan (positivo) sean correctos.
+		$$
+			1-2x=\num{,34} \Rightarrow x=\frac{1-\num{,34}}{2} = \SI{,33}{\mol}\Rightarrow
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{n_{eq}(\ce{HCl})=\colorbox{gray}{\textbf{2}}\times\overbrace{\SI{,33}{\mol}}^x=\SI{,66}{\mol}}
+		$$
+\end{frame}

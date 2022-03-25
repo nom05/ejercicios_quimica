@@ -1,0 +1,78 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/al_aportar_cierta_cantidad_de_calor_a_una_masa_de_aluminio/enunciado.tex
+		}
+	   }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    $$
+        \text{¿}\Delta T(\ce{Cu})?
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{C_e(\ce{Al}) = \SI{0,21}{\calorie\per\gram\per\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta T(\ce{Al}) = \SI{57}{\celsius}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{C_e(\ce{Cu}) = \SI{0,093}{\calorie\per\gram\per\celsius}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Q(\ce{Al})}
+        =
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{Q(\ce{Cu})}
+        = Q
+        \quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{Al})}
+        =
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{m(\ce{Cu})}
+        = m
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (1): incremento de T de cobre}
+    \structure{Partimos de la igualdad:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                Q(\ce{Al}) = Q(\ce{Cu})
+            $$
+        \onslide<2>
+            $$
+                \overbrace{Q(\ce{Al})}^{Q=m\cdot C_e\cdot\Delta T} = \underbrace{Q(\ce{Cu})}_{Q=m\cdot C_e\cdot\Delta T}
+            $$
+        \onslide<3>
+            $$
+                \overbrace{m(\ce{Al})}^{m(\ce{Al})=m}\cdot C_e(\ce{Al})\cdot\Delta T(\ce{Al}) = \underbrace{m(\ce{Cu})}_{m(\ce{Cu})=m}\cdot C_e(\ce{Cu})\cdot\Delta T(\ce{Cu})
+            $$
+        \onslide<4>
+            $$
+                \cancel{m}\cdot C_e(\ce{Al})\cdot\Delta T(\ce{Al}) = \cancel{m}\cdot C_e(\ce{Cu})\cdot\Delta T(\ce{Cu})
+            $$
+        \onslide<5>
+            $$
+                C_e(\ce{Al})\cdot\Delta T(\ce{Al}) = C_e(\ce{Cu})\cdot\Delta T(\ce{Cu})
+            $$
+        \onslide<6->
+            $$
+                \Delta T(\ce{Cu}) = \frac{C_e(\ce{Al})}{C_e(\ce{Cu})}\cdot\Delta T(\ce{Al})
+            $$
+    \end{overprint}
+    \visible<6->{
+        \structure{Sustituimos por los correspondientes valores:}
+        $$
+                \Delta T(\ce{Cu}) = \frac{\SI{0,21}{\cancel\calorie\per\cancel\gram\per\cancel\celsius}}{\SI{0,093}{\cancel\calorie\per\cancel\gram\per\cancel\celsius}}\cdot\SI{57}{\celsius}
+        $$
+                }
+    \visible<7->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\Delta T(\ce{Cu}) = \SI{129}{\celsius}}
+        $$
+                }
+\end{frame}

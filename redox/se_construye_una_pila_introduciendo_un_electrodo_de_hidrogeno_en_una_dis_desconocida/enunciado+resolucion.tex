@@ -1,0 +1,82 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_construye_una_pila_introduciendo_un_electrodo_de_hidrogeno_en_una_dis_desconocida/enunciado.tex
+		}
+           }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large\textbf{pH}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\text{PILA}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\varepsilon_T = \SI{1,24}{\volt}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{P(\ce{H2}) = \SI{1}{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\varepsilon^0_{\ce{H+/H2}} = \SI{0}{\volt}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\text{electrodo de \ce{H2}+disolución}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{Ag+/Ag}} = \SI{,80}{\volt}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{electrodo de \ce{Ag}+dis. \ce{Ag+}}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Ag+}] = \SI{,01}{\Molar}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación del pH de una disolución}
+    \begin{tabular}{llcr}
+        \textbf{\textit{Oxidación}} & Ánodo  & $\ce{H2(g) -> 2H+ + \cancel{\ce{2e-}}}$ & $\varepsilon^0_{\text{ánodo}} = \SI{,00}{\volt}$\\
+        \textbf{\textit{Reducción}} & Cátodo & $2\times\left(\ce{Ag+(ac) + \cancel{\ce{1e-}} -> Ag(s)}\right)$ & $\varepsilon^0_{\text{cátodo}} = \SI{,80}{\volt}$\\
+        \midrule
+        \textbf{\textit{Total}} & & $\ce{H2(g) + 2Ag+(ac) -> 2H+ + 2Ag(s)}$ & $\varepsilon^0_T = \SI{,80}{\volt}$\\
+    \end{tabular}
+    \visible<2->{
+        \structure{\textbf{\underline{2 electrones}} en el proceso:} $n=2$
+        $$
+            Q = \frac{[\ce{H+}]^2}{P(\ce{H2})\vdot[\ce{Ag+}]^2}
+        $$
+        \structure{Ecuación de Nernst:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{n}\log Q
+                $$
+            \onslide<3>
+                $$
+                    \varepsilon_T-\varepsilon^0_T =  -\frac{\SI{,0592}{}}{n}\log Q
+                $$
+            \onslide<4>
+                $$
+                    \frac{n\left(\varepsilon_T-\varepsilon^0_T\right)}{\SI{,0592}{}} =  -\log\left(\frac{[\ce{H+}]^2}{P(\ce{H2})\vdot[\ce{Ag+}]^2}\right)
+                $$
+            \onslide<5>
+                $$
+                    \frac{n\left(\varepsilon_T-\varepsilon^0_T\right)}{\SI{,0592}{}} =  -\log[\ce{H+}]^2 + \cancelto{0}{\log\overbrace{P(\ce{H2})}^{P(\ce{H2}) = \SI{1}{\atm}}} +
+                    \cancelto{-4}{\log\overbrace{[\ce{Ag+}]^2}^{[\ce{Ag+}]=\SI{e-2}{\Molar}}}
+                $$
+            \onslide<6>
+                $$
+                    \frac{\overbrace{n}^{n=2}\left(\varepsilon_T-\varepsilon^0_T\right)}{\SI{,0592}{}} =  2\vdot\overbrace{-\log[\ce{H+}]}^{pH} - \underbrace{4}_{2\vdot 2}
+                $$
+            \onslide<7>
+                $$
+                    \frac{\cancel{2}\vdot(\overbrace{\varepsilon_T}^{\SI{1,24}{\volt}}-\overbrace{\varepsilon^0_T}^{\SI{,80}{\volt}})}{\SI{,0592}{}} =  \cancel{2}pH - 2\vdot\cancel{2}
+                $$
+            \onslide<8>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{pH = \frac{\left(\SI{1,24}{}-\SI{,80}{}\right)}{\SI{,0592}{}} + 2 = \SI{9,43}{}}
+                $$
+        \end{overprint}
+
+                }
+\end{frame}
+

@@ -1,0 +1,67 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/una_disolucion_es_10-3M_en_estroncio_II_y_2M_en_Ca_II/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿ion que precipita primero?\\¿[~] de primer ion cuando precipita segundo?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Sr^{2+}}]=\SI{,001}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{SrSO4})=\num{1,0e-7}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{[\ce{Ca^{2+}}]=\SI{2}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{K_{ps}(\ce{CaSO4})=\num{1,0e-5}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ion que precipita primero}
+	\begin{block}{\ce{SrSO4(s) <=> Sr^{2+}(ac) + SO4^{2-}(ac)}}
+%		\structure{Equilibrio de solubilidad:}\quad\\[.3cm]
+				\begin{center}
+					\begin{tabular}{ccc}
+						\toprule
+							Concentración(\si{\Molar}) &  [\ce{Sr^{2+}}]  				  &  [\ce{SO4^{2-}}] \\
+							Solubilidad                &    $s$    		  				  &        $s$       \\
+							Solubilidad modificada     & $s^\prime+\num{,001}\approx\num{,001}$ &        $s^\prime$      \\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+				$$
+					\overbrace{K_{ps}(\ce{SrSO4})}^{\num{1,0e-7}}=\underbrace{[\ce{Sr^{2+}}]}_{\num{,001}}\overbrace{[\ce{SO4^{2-}}]}^{s^\prime}\Rightarrow s^\prime(\ce{SrSO4})=\SI{1,0e-4}{\Molar}
+				$$
+	\end{block}
+		\begin{alertblock}{\ce{CaSO4(s) <=> Ca^{2+}(ac) + SO4^{2-}(ac)}}
+%			\structure{Equilibrio de solubilidad:}\quad\\[.3cm]
+					\begin{center}
+						\begin{tabular}{ccc}
+							\toprule
+								Concentración(\si{\Molar}) &  [\ce{Ca^{2+}}]  				  &  [\ce{SO4^{2-}}] \\
+								Solubilidad                &       $s$    		  			  &        $s$       \\
+								Solubilidad modificada     & 	   $s^\prime+\num{2}\approx\num{2}$ &        $s^\prime$      \\
+							\bottomrule
+						\end{tabular}
+					\end{center}
+					$$
+						\overbrace{K_{ps}(\ce{CaSO4})}^{\num{1,0e-5}}=\underbrace{[\ce{Ca^{2+}}]}_{\num{2}}\overbrace{[\ce{SO4^{2-}}]}^{s^\prime}\Rightarrow s^\prime(\ce{CaSO4})=\SI{5,0e-6}{\Molar}
+					$$
+		\end{alertblock}
+		El que tenga $s^\prime$ menor es el que precipitará antes. \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\ce{CaSO4}\text{ precipita antes}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): concentración de primer ion cuando precipita segundo}
+	\structure{Equilibrio de solubilidad:}\quad\ce{CaSO4(s) <=> $\underset{s^\prime+x\approx x}{\ce{Ca^{2+}(ac)}}$ + $\underset{\num{1,0e-4}}{\ce{SO4^{2-}(ac)}}$}\\[.3cm]
+	$$
+		\overbrace{K_{ps}(\ce{CaSO4})}^{\num{1,0e-5}}=\underbrace{[\ce{Ca^{2+}}]}_{x}\overbrace{[\ce{SO4^{2-}}]}^{\SI{1,0e-4}{\Molar}}\Rightarrow\num{1,0e-5}=x\cdot\num{1,0e-4}
+	$$
+	\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{[\ce{Ca^{2+}}]=\SI{,1}{\Molar}}
+\end{frame}

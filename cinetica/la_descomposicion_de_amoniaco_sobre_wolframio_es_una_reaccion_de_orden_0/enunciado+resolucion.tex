@@ -1,0 +1,83 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/la_descomposicion_de_amoniaco_sobre_wolframio_es_una_reaccion_de_orden_0/enunciado.tex
+		}
+        }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del enunciado}
+    \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿Ecuación de $v$?
+        \item ¿$k$?
+        \item ¿$v$ cuando $[\ce{NH3}]=\SI{0,015}{\Molar}$?
+    \end{enumerate}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{descomposición de \ce{NH3}}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{orden cero (0)}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{T=\SI{1100}{\kelvin}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[\ce{NH3}]=\SI{,04}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v(\ce{NH3})=\SI{2,5e-4}{\Molar\per\minute}}\quad
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ecuación de velocidad}
+    \structure{En general:}
+    $$
+        \ce{aA + bB -> cC + dD}
+    $$
+    \textbf{\textit{Ecuación de velocidad:}}
+    $$
+        -\frac{1}{a}\frac{\Delta[\ce{A}]}{\Delta t} = 
+        -\frac{1}{b}\frac{\Delta[\ce{B}]}{\Delta t} =
+         \frac{1}{c}\frac{\Delta[\ce{C}]}{\Delta t} =
+         \frac{1}{d}\frac{\Delta[\ce{D}]}{\Delta t} =
+         k[\ce{A}]^x[\ce{B}]^y
+    $$
+    \visible<2>{
+        \structure{Descomposición de \ce{NH3}:}
+        $$
+            \ce{2NH3 ->[W] N2 + 3H2}
+        $$
+        \begin{center}
+            \alert{Orden 0 (exponente de amoníaco es cero) y $v(\ce{NH3})$ no depende de concentración}
+        \end{center}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v(\ce{NH3}) = -\frac{1}{2}\frac{\Delta[\ce{NH3}]}{\Delta t} = k\vdot\cancelto{1}{[\ce{NH3}]^0}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): valor de la constante de velocidad}
+    \structure{Ecuación de velocidad:}
+    $$
+        v(\ce{NH3}) = k
+    $$
+    Pero ya sabíamos la velocidad de antemano en un cierto instante $v(\ce{NH3}) = \SI{2,5e-4}{\Molar\per\minute}$, por tanto:
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{k = \SI{2,5e-4}{\Molar\per\minute}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): velocidad cuando $[\ce{NH3}]=\SI{0,015}{\Molar}$}
+    \structure{Ecuación de velocidad:}
+    $$
+        v(\ce{NH3}) = \SI{2,5e-4}{\Molar\per\minute}
+    $$
+    Esta ecuación no depende de la concentración porque es de orden 0, por tanto:
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v(\ce{NH3}) = \SI{2,5e-4}{\Molar\per\minute}}
+    $$
+\end{frame}

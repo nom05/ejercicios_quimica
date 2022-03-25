@@ -1,0 +1,91 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/calcular_la_molaridad_y_la_molalidad_de_una_disolución_de_acido_sulfurico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		$$
+		[\ce{H2SO4}]\text{ (molaridad de \ce{H2SO4})}?
+		$$
+		$$
+		m(\ce{H2SO4})\text{ (molalidad de \ce{H2SO4})}?
+		$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{d(\ce{H2SO4})=\SI{1,198}{\gram\per\cubic\centi\meter}=\SI{1198}{\gram\per\liter}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{27}{\percent} \rfrac{m}{m}\text{ de \ce{H2SO4} puro}}
+	\end{center}
+	\visible<2-|handout:0>{Pero también\ldots\\
+		$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{H2SO4}) = \SI{98,08}{\gram\per\mol}}
+		$$
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Ejemplo en un laboratorio de Química experimental}
+	\begin{tikzpicture}
+		\begin{scope}[spy using outlines={rectangle,magnification=3.5,connect spies,size=3.5cm,height=1.8cm}]
+			\node[inner sep=0,outer sep=0,anchor=south west] (image) at (0,0)
+			{\polaroid{ 4}{.27}{/home/nicux/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/calcular_la_molaridad_y_la_molalidad_de_una_disolución_de_acido_sulfurico/figs/sulfurico_comercial}{Un paseo por el laboratorio\ldots}};
+			\spy[red!70!black] on (3.95,4.75) in node (zoom) at (-2.00,7.40);
+			\spy[blue!70!black] on (2.30,2.72) in node (zoom) at (-2.00,4.40);
+		\end{scope}
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): \underline{molaridad} del ácido sulfúrico}
+	\alert{\textbf{Sin importar el volumen ni la masa, las concentraciones se mantienen inalterables}}
+	\begin{center}
+		Nos interesa ``buscar'' expresar la concentración como \si{\mol\per\liter}
+	\end{center}
+	\structure{En \SI{1}{\liter} de ácido comercial habrá \SI{1198}{\gram} de ácido comercial (impuro)}
+	\visible<2->{
+		$$
+		\SI{1198}{\gram}\times\overbrace{\num{,27}}^{\SI{27}{\percent}\text{ de ácido puro}} = \SI{323}{\gram}\text{ de ácido puro.}
+		$$
+	}
+	\visible<3->{
+		$$
+		\underbrace{n_{\text{puro}}(\ce{H2SO4})}_{n=\rfrac{m}{Mm}} = \frac{\SI{323}{\cancel\gram}}{\SI{98,08}{\cancel\gram\per\mol}} = \SI{3,30}{\mol}
+		$$
+	}
+	\visible<4->{
+		\structure{Habíamos supuesto \SI{1}{\liter} de disolución:}
+		$$
+		\underbrace{[\ce{H2SO4}]}_{M=\rfrac{n}{V}} = \frac{\SI{3,30}{\mol}}{\SI{1}{\liter}} = \SI{3,30}{\mol\per\liter} = \SI{3,30}{\Molar}
+		$$
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): \underline{molalidad} del ácido sulfúrico}
+	\structure{En \SI{1}{\liter} de ácido comercial habrá \SI{1198}{\gram} de ácido comercial (impuro)}
+	$$
+	\overbrace{n_{\text{puro}}(\ce{H2SO4}) = \SI{3,30}{\mol}}^{\text{Previamente calculado}}
+	$$
+	\begin{center}
+		Nos interesa ``buscar'' expresar la concentración como \si{\mol\per\kilogram} (de disolvente)
+	\end{center}
+	\visible<2->{
+		$$
+		\overbrace{m}^{\small masa}(\text{disolvente}) = \underbrace{\SI{1,198}{\kilogram}}_{\text{densidad es \SI{1,198}{\kilogram\per\liter} en \SI{1}{\liter}}}-\overbrace{\SI{,323}{\kilogram}}^{\text{anterior apartado}} = \SI{,875}{\kilogram}
+		$$
+	}
+	\visible<3->{
+		$$
+		\overbrace{m}^{\small molalidad}(\ce{H2SO4}) = \frac{\SI{3,30}{\mol}}{\SI{,875}{\kilogram}} = \SI{3,77}{\mol\per\kilogram} = \SI{3,77}{m}
+		$$
+	}
+\end{frame}

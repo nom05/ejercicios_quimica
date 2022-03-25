@@ -1,0 +1,176 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/teniendo_en_cuenta_los_datos_de_la_tabla_determinar_la_ecuacion_de_v/enunciado.tex
+			}
+    	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large ¿$v$ y $k$?}
+    \end{center}
+    $$
+        \ce{A + 2B -> P}
+    $$
+    \begin{center}
+        \begin{tabular}{lSSS}
+            $v~\text{inicial}~\si{\Molar\per\second}$ &
+            5,7e-7 &
+            11,4e-7 &
+            22,8e-7\\
+            $[\ce{A}]_0$ &
+            2,0e-3 &
+            2,0e-3 &
+            4,0e-3 \\
+            $[\ce{B}]_0$ &
+            4,0e-3 &
+            8,0e-3 &
+            4,0e-3
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de ecuación de velocidad y $k$}
+    \structure{Método de velocidades iniciales:} A partir de ecuación de velocidad, construimos sistemas de ecuaciones.
+    \visible<2->{
+        \structure{Ecuación general:} $v = k\cdot[\ce{A}]^x\cdot[\ce{B}]^y$        
+                }
+    \visible<3->{
+         \structure{Con los datos de la tabla buscar ecuaciones que solo dejen una de las incógnitas por calcular:}
+         \begin{equation}\label{eq:exp1}
+             \SI{5,7e-7}{} = k\cdot(\SI{2,0e-3}{})^x\cdot(\SI{4,0e-3}{})^y
+         \end{equation}
+         \begin{equation}\label{eq:exp2}
+             \SI{11,4e-7}{} = k\cdot(\SI{2,0e-3}{})^x\cdot(\SI{8,0e-3}{})^y
+         \end{equation}
+         \begin{equation}\label{eq:exp3}
+             \SI{22,8e-7}{} = k\cdot(\SI{4,0e-3}{})^x\cdot(\SI{4,0e-3}{})^y
+         \end{equation}
+                }
+    \visible<4-17>{
+        \begin{overprint}
+            \onslide<4>
+                \structure{Dividiendo la ecuación~\eqref{eq:exp2} por ecuación~\eqref{eq:exp1}:}
+                $$
+                    \frac{\SI{11,4e-7}{}}{\SI{5,7e-7}{}} = \frac{k}{k}\cdot\frac{(\SI{2,0e-3}{})^x}{(\SI{2,0e-3}{})^x}\cdot\frac{(\SI{8,0e-3}{})^y}{(\SI{4,0e-3}{})^y}               
+                $$
+            \onslide<5>
+                $$
+                    \overbrace{\frac{\SI{11,4}{}}{\SI{5,7}{}}}^2 =
+                         \cancelto{1}{\frac{k}{k}}
+                         \cdot\left(\overbrace{\frac{\SI{2,0}{}}{\SI{2,0}{}}}^1\right)^x
+                         \cdot\left(\overbrace{\frac{\SI{8,0}{}}{\SI{4,0}{}}}^2\right)^y
+                $$
+            \onslide<6>
+                $$
+                    2 = 1^x\cdot2^y
+                $$
+            \onslide<7>
+                $$
+                    2^1 = 2^y
+                $$
+            \onslide<8>
+                $$
+                    y=1
+                $$
+            \onslide<9>
+                \structure{Dividiendo la ecuación~\eqref{eq:exp3} por ecuación~\eqref{eq:exp2}:}
+                $$
+                    \frac{\SI{22,8e-7}{}}{\SI{11,4e-7}{}} = \frac{k}{k}\cdot\frac{(\SI{4,0e-3}{})^x}{(\SI{2,0e-3}{})^x}\cdot\frac{(\SI{4,0e-3}{})^y}{(\SI{8,0e-3}{})^y}               
+                $$
+            \onslide<10>
+                $$
+                    \frac{\SI{22,8}{}}{\SI{11,4}{}} = \left(\frac{\SI{4,0}{}}{\SI{2,0}{}}\right)^x\cdot\left(\frac{\SI{4,0}{}}{\SI{8,0}{}}\right)^y               
+                $$
+            \onslide<11>
+                $$
+                    2 = 2^x\cdot\left(\frac{1}{2}\right)^1               
+                $$
+            \onslide<12>
+                $$
+                    2 = 2^x\cdot\frac{1}{2}               
+                $$
+            \onslide<13>
+                $$
+                    2\cdot 2 = 2^x
+                $$
+            \onslide<14>
+                $$
+                    x=2
+                $$
+            \onslide<15->
+                \structure{Ecuación de velocidad con coeficientes:}
+                $$
+                    v = k\cdot[\ce{A}]^2\cdot[\ce{B}]
+                $$
+        \end{overprint}
+                }
+    \visible<16->{
+        \structure{Despejamos $k$ y sustituimos por uno de los experimentos:}
+        \begin{overprint}
+            \onslide<16>
+                $$
+                    k = \frac{v}{[\ce{A}]^2\cdot[\ce{B}]}
+                $$
+            \onslide<17>
+                $$
+                    k = \frac{\SI{5,7e-7}{}}{(\SI{2,0e-3}{})^2\cdot\SI{4,0e-3}{}} = \SI{35,6}{}
+                $$
+            \onslide<18->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v = \SI{35,6}{}\cdot[\ce{A}]^2\cdot[\ce{B}]}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): $v$ y $k$ si el volumen se duplica}
+    \structure{Ecuación de Arrhenius:}
+    $$
+        k = A\cdot\exp^{\rfrac{-E_a}{RT}}
+    $$
+    \begin{center}
+        {\large \textbf{\textit{Como veis, $k$ no depende del volumen}}}
+    \end{center}
+    \visible<2->{
+        \structure{Si los reactivos son gases o líquidos:} $V=2\cdot V_0$ ($V_0$ es el volumen inicial)
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    v = \SI{35,6}{}\cdot[\ce{A}]^2\cdot[\ce{B}]
+                $$
+            \onslide<3>
+                $$
+                    v = \SI{35,6}{}\cdot\left(\frac{n(\ce{A})}{V}\right)^2\cdot\frac{n(\ce{B})}{V}
+                $$
+            \onslide<4>
+                $$
+                    v = \SI{35,6}{}\cdot\left(\frac{n(\ce{A})}{2\cdot V_0}\right)^2\cdot\frac{n(\ce{B})}{2\cdot V_0}
+                $$
+            \onslide<5>
+                $$
+                    v = \SI{35,6}{}\cdot\frac{1}{2^2}\left(\frac{n(\ce{A})}{V_0}\right)^2\cdot\frac{1}{2}\frac{n(\ce{B})}{V_0}
+                $$
+            \onslide<6>
+                $$
+                    v = \frac{1}{8}\cdot\SI{35,6}{}\cdot\left(\frac{n(\ce{A})}{V_0}\right)^2\cdot\frac{n(\ce{B})}{V_0}
+                $$
+            \onslide<7->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v = \frac{1}{8}\cdot v_0}
+                $$
+        \end{overprint}
+                }
+    \visible<7->{
+        \\$v_0$ es la velocidad inicial antes de cambiar el volumen.
+                }
+\end{frame}

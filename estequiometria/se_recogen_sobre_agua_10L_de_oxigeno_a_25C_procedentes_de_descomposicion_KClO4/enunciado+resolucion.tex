@@ -1,0 +1,137 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/se_recogen_sobre_agua_10L_de_oxigeno_a_25C_procedentes_de_descomposicion_KClO4/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        ¿m_{\text{impuro}}(\ce{KClO3})?
+    $$}
+    Reacción: 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{KClO3}(s)}
+    \ce{->}
+    \ce{KCl(s)}
+    \ce{+}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{O2(g)}}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{pureza de \ce{KClO3}} = \SI{90}{\percent}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T(\ce{O2}) = \SI{298,15}{\kelvin}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(\ce{O2}) = 745-24~\si{\torr}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{O2}) = \SI{10}{\liter}}
+        $$\\[.6cm]
+    Y la masa molecular\ldots
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{KClO3})=\SI{122,55}{\gram\per\mol}}
+        $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción}
+    \structure{Reacción:}
+    \visible<1-|handout:0>{
+        \centering\ce{KCl}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{O3}} \ce{-> KCl +}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{O2}}\\[.3cm]
+                          }
+    \visible<2-|handout:0>{
+        \centering\ce{KCl}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{O3}} \ce{-> KCl +}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{\frac{3}{2}O2}}\\[.3cm]
+                          }
+    \visible<2-|handout:0>{
+        \centering\ce{2KCl}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{O3}} \ce{-> 2KCl +}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{3O2}}\\[.3cm]
+                          }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): masa de \ce{KClO3} impuro}
+    \structure{Reacción:} \ce{2KClO3 -> 2KCl +3O2}
+    \structure{Según la estequiometría:} \SI{2}{\mol} de \ce{KClO3 ->} \SI{3}{\mol} de \ce{O2}. \visible<2->{Por tanto:
+    \begin{overprint}
+        \onslide<2>
+            $$
+                3n(\ce{KClO3}) = 2n(\ce{O2})
+            $$
+        \onslide<3>
+            $$
+                3\overbrace{n(\ce{KClO3})}^{n=\frac{m}{Mm}} = 2\underbrace{n(\ce{O2})}_{PV=nRT\Rightarrow n=\frac{PV}{RT}}
+            $$
+        \onslide<4>
+            $$
+                3\cdot\frac{m_{\text{puro}}(\ce{KClO3})}{Mm(\ce{KClO3})} = 2\cdot\frac{P(\ce{O2})\cdot V(\ce{O2})}{R\cdot T(\ce{O2})}
+            $$
+        \onslide<5->
+            $$
+                m_{\text{puro}}(\ce{KClO3}) = \frac{2}{3}\cdot Mm(\ce{KClO3})\cdot\frac{P(\ce{O2})\cdot V(\ce{O2})}{R\cdot T(\ce{O2})}
+            $$
+    \end{overprint}
+    }
+    \visible<6->{
+        \structure{Masa de \ce{KClO3} impura:}
+        \begin{overprint}
+            \onslide<6>
+                $$
+                    m_{\text{puro}}(\ce{KClO3}) < m_{\text{impuro}}(\ce{KClO3})
+                $$
+            \onslide<7->
+                $$
+                    m_{\text{puro}}(\ce{KClO3}) = \frac{9\cancel{0}}{10\cancel{0}} m_{\text{impuro}}(\ce{KClO3})
+                $$
+        \end{overprint}
+                }
+    \visible<8->{
+        \structure{Igualando las dos expresiones de $m_{\text{puro}}(\ce{KClO3})$:}
+        \begin{overprint}
+            \onslide<8>
+                $$
+                    m_{\text{puro}}(\ce{KClO3}) = m_{\text{puro}}(\ce{KClO3})
+                $$
+            \onslide<9>
+                $$
+                    \overbrace{m_{\text{puro}}(\ce{KClO3})}^{m_{\text{puro}}(\ce{KClO3}) = \frac{9}{10} m_{\text{impuro}}(\ce{KClO3})}
+                    =
+                    \underbrace{m_{\text{puro}}(\ce{KClO3})}_{m_{\text{puro}}(\ce{KClO3}) = \frac{2}{3}\cdot Mm(\ce{KClO3})\cdot\frac{P(\ce{O2})\cdot V(\ce{O2})}{R\cdot T(\ce{O2})}}
+                $$
+            \onslide<10>
+                $$
+                    \frac{9}{10} m_{\text{impuro}}(\ce{KClO3})
+                    =
+                    \frac{2}{3}\cdot Mm(\ce{KClO3})\cdot\frac{P(\ce{O2})\cdot V(\ce{O2})}{R\cdot T(\ce{O2})}
+                $$
+            \onslide<11->
+                $$
+                    m_{\text{impuro}}(\ce{KClO3})
+                    =
+                    \overbrace{\frac{10}{9}\cdot\frac{2}{3}}^{\frac{20}{27}}
+                    \cdot Mm(\ce{KClO3})\cdot P(\ce{O2})\cdot\frac{V(\ce{O2})}{R\cdot T(\ce{O2})}
+                $$
+        \end{overprint}
+                }
+        \visible<12->{
+            \structure{Sustituyendo por los valores:}
+            \begin{overprint}
+                \onslide<12>
+                    $$
+                        m_{\text{impuro}}(\ce{KClO3})
+                        =
+                        \frac{20}{27}
+                        \cdot \SI{122,549}{\gram\per\cancel\mol}\cdot \frac{745-24}{760}~\si{\cancel\atm}\cdot\frac{\SI{10}{\cancel\liter}}{\SI{0,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{298,15}{\cancel\kelvin}}
+                    $$
+                \onslide<13->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{
+                        m_{\text{impuro}}(\ce{KClO3})
+                        =
+                        \SI{35}{\gram}
+                    }
+                $$
+            \end{overprint}
+                    }
+\end{frame}

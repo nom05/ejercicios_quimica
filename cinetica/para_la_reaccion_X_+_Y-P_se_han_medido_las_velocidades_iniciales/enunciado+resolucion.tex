@@ -1,0 +1,90 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/para_la_reaccion_X_+_Y-P_se_han_medido_las_velocidades_iniciales/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿orden de reacción ($n$)? ¿constante cinética ($k$)?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{X + Y -> P}}\\[.3cm]
+		\begin{tabular}{SSS}
+			\toprule
+				{$[\ce{X}]~(\si{\Molar})$} & {$[\ce{Y}]~(\si{\Molar})$} & {$\overbrace{v_0}^{\text{velocidad inicial}}~(\si{\Molar\per\second})$} \\
+			\midrule
+				,01  & ,01  & 3,0e-6 \\
+				,005 & ,01  & 1,5e-6 \\
+				,001 & ,020 & 1,2e-6 \\
+				,001 & ,010 & 3,0e-7 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinar orden global de reacción}
+	\structure{Método de las velocidades iniciales:}\\
+	Partimos de la ecuación de la reacción y escribimos la ecuación cinética genérica:
+	$$
+		\ce{X + Y -> P}\qquad v=k\vdot[\ce{X}]^a\vdot[\ce{Y}]^b
+	$$
+	Sustituimos la ecuación genérica por los datos de la tabla en cada caso:
+	\begin{center}
+		\begin{tabular}{SSScS}
+			\toprule
+				{$[\ce{X}]~(\si{\Molar})$} & {$[\ce{Y}]~(\si{\Molar})$} & {$v_0~(\si{\Molar\per\second})$} & {Ecuación} & {N"o ecuación}\\
+			\midrule
+				,010 & ,010 & 3,0e-6 & $\num{3,0e-6}=k\cdot\num{,010}^a\cdot\num{,010}^b$ & 1 \\
+				,005 & ,010 & 1,5e-6 & $\num{1,5e-6}=k\cdot\num{,005}^a\cdot\num{,010}^b$ & 2 \\
+				,001 & ,020 & 1,2e-6 & $\num{1,2e-6}=k\cdot\num{,001}^a\cdot\num{,020}^b$ & 3 \\
+				,001 & ,010 & 3,0e-7 & $\num{3,0e-7}=k\cdot\num{,001}^a\cdot\num{,010}^b$ & 4 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	Dividimos una ecuación por otra para determinar el orden de cada reactivo (buscar estrategias que nos faciliten el cálculo como eliminar una de las incógnitas):
+	$$
+		\frac{\text{Ecuación}~1}{\text{Ecuación}~2}:\quad\frac{\num{3,0}\times\cancel{\num{e-6}}}{\num{1,5}\times\cancel{\num{e-6}}}=\frac{\cancel{k}}{\cancel{k}}\vdot\frac{\num{,01}^a}{\num{,005}^a}\vdot\cancelto{1}{\frac{\num{,01}^b}{\num{,01}^b}}\Rightarrow
+		\num{2}=\left(\frac{\num{10}}{\num{5}}\right)^a\Rightarrow
+		\num{2}^1=\num{2}^a\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{a=1}
+	$$
+	$$
+		\frac{\text{Ecuación}~3}{\text{Ecuación}~4}:\quad\frac{\num{12}\times\cancel{\num{e-7}}}{\num{3,0}\times\cancel{\num{e-7}}}=\frac{\cancel{k}}{\cancel{k}}\cdot\cancelto{1}{\frac{\num{,001}^a}{\num{,001}^a}}\cdot\frac{\num{,02}^b}{\num{,01}^b}\Rightarrow
+		\num{4}=\left(\frac{\num{2}}{\num{1}}\right)^b\Rightarrow
+		\num{2}^2=\num{2}^b\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{b=2}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow,colback=red!30]{\text{\textbf{Orden 1 para \ce{X}}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green,colback=red!30]{\text{\textbf{Orden 2 para \ce{Y}}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=green,colback=orange!30]{\text{\textbf{\underline{Orden 3 global}}}}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de la constante cinética}
+	Sustituimos los exponentes (órdenes) ya calculados en una de las ecuaciones:
+	$$
+		\text{Ecuación}~1:\quad\num{3,0e-6}=k\cdot\num{,010}^1\cdot\num{,010}^2\Rightarrow
+		\num{3,0e-6}=k\cdot\num{e-2}\cdot\overbrace{(\num{e-2})^2}^{\num{e-4}}
+	$$
+	$$
+		k=\frac{\num{3,0}\times\cancel{\num{e-6}}}{\cancel{\num{e-6}}}=\num{3,0}
+	$$
+	\structure{Unidades de $k$:} Las unidades dependen del orden global de la reacción.
+	$$
+		\frac{\si{\Molar}}{\si{\second}}=\frac{1}{\si{\second\square\Molar}}\cdot\si{\cubic\Molar}
+	$$
+	\begin{center}
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=green]{k=\SI{3,0}{\per\square\Molar\per\second}}\\[.3cm]
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{v=\num{3,0}\vdot[\ce{X}]\vdot[\ce{Y}]^2 }\\[.3cm]
+	\end{center}
+
+\end{frame}

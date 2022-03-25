@@ -1,0 +1,110 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/para_determinar_el_Kps_del_ZnS_se_emplea_pila_daniell_Zn-Zn2+--Cu2+-Cu/enunciado.tex
+			}
+           }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \textbf{\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+            \item ¿$\varepsilon_T^0$?
+            \item ¿[\ce{Zn^2+}]?
+            \item ¿$K_{ps}(\ce{ZnS})$?
+            \item ¿$\varepsilon_T$?
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\text{Pila Daniell: }\ce{Zn/Zn^2+//Cu^2+/Cu}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\text{Cátodo: }\ce{[Cu^2+] = \SI{1}{\Molar}}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\text{Ánodo: }\ce{[Na2S] = \SI{1}{\Molar}}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\varepsilon = \SI{1,78}{\volt}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): potencial normal}
+    \begin{center}
+        \begin{tabular}{lcr}
+            \textbf{\textit{Ánodo} (oxidación):}  & \ce{Zn -> Zn^2+ + 2e-} & $\varepsilon^0_{ox} = \SI{,76}{\volt}$\\
+            \textbf{\textit{Cátodo} (reducción):} & \ce{Cu^2+ + 2e- -> Cu} & $\varepsilon^0_{re} = \SI{,34}{\volt}$\\
+            \midrule
+            \textbf{\textit{Total:}}  & \ce{Zn + Cu^2+ -> Zn^2+ + Cu} & $\varepsilon^0_{to} = \SI{1,10}{\volt}$
+        \end{tabular}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\varepsilon^0_{to} = \SI{1,10}{\volt}}
+    $$
+    $$
+        \text{\textbf{\underline{2 electrones en el proceso}}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}) y (\rom{3}): concentración de Zn (\rom{2})}
+    \structure{Ecuación de Nernst:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{n}\log{Q}
+            $$
+        \onslide<2>
+            $$
+                \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{\underbrace{n}_{n=2}}\log{\frac{[\ce{Zn^2+}]}{[\ce{Cu^2+}]}}
+            $$
+        \onslide<3->
+            $$
+                \log{[\ce{Zn^2+}]} - \cancelto{0}{\log{\underbrace{[\ce{Cu^2+}]}_{[\ce{Cu^2+}]=\SI{1}{\Molar}}}} =
+                -\frac{2\cdot(\varepsilon_T - \varepsilon^0_T)}{\SI{,0592}{}}
+            $$
+    \end{overprint}
+    \visible<3->{
+        Si usamos \SI{,059}{}, \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{[\ce{Zn^2+}] = \SI{8,895e-24}{\Molar}}\\[.3cm]
+        Si usamos \SI{,0592}{}, \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{[\ce{Zn^2+}] = \SI{1,06e-23}{\Molar}}\\[.3cm]
+        Dependiendo del redondeo: \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{[\ce{Zn^2+}] \approx\SI{e-23}{\Molar}}
+                }
+    \visible<4->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{K_{ps}(\ce{ZnS}) = [\ce{Zn^2+}]\underbrace{[\ce{S^2-}]}_{[\ce{S^2-}]=\SI{1}{\Molar}}\approx\num{e-23}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): potencial del electrodo cuando $[\ce{Zn^2+}] = s$}
+    \structure{Del seminario de solubilidad:}
+    $$
+        K_{ps}(ZnS) = [\ce{Zn^2+}][\ce{S^2-}] = s^2\Rightarrow s = \sqrt{K_{ps}(\ce{ZnS})} = K_{ps}(\ce{ZnS})^{\frac{1}{2}}\Rightarrow s = 10^{-\frac{23}{2}}~\si{\Molar}=10^{-11,5}\si{\Molar}
+    $$
+    \structure{Ecuación de Nernst:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{n}\log{Q}
+            $$
+        \onslide<2>
+            $$
+                \varepsilon_T = \varepsilon^0_T -\frac{\SI{,0592}{}}{\underbrace{n}_{n=2}}\log{\frac{[\ce{Zn^2+}]}{[\ce{Cu^2+}]}}
+            $$
+        \onslide<3->
+            $$
+                \varepsilon_T = \SI{1,10}{} -\frac{\SI{,0592}{}}{2}
+                             \left(\log{[\ce{Zn^2+}]}-                    
+                \cancelto{0}{\log{\underbrace{[\ce{Cu^2+}]}_{[\ce{Cu^2+}]=\SI{1}{\Molar}}}}
+                             \right)
+            $$
+    \end{overprint}
+    \visible<3->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{\varepsilon_T = \SI{1,44}{\volt}}
+        $$
+                }
+\end{frame}

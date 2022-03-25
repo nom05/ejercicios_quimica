@@ -1,0 +1,130 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/la_reaccion_A+2B-2C_tiene_una_velocidad/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		\textbf{\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item ¿$v(\ce{C})$?
+			\item ¿$[\ce{A}]$ si \SI{1,00}{\minute}?
+			\item ¿$t$ si $[\ce{A}]$ pasa de \num{,3580} a \SI{,3500}{\Molar}?
+		\end{enumerate}}
+		\structure{Reacción:}
+		\ce{A + 2B -> 2C}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{v=\SI{1,76e-5}{\Molar\per\second}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{A}]=\SI{,3580}{\Molar}}\\[.3cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la velocidad de formación de \ce{C}}
+	\structure{En general:}
+	$$
+		\ce{aA + bB -> cC + dD}
+	$$
+	\textbf{\textit{Ecuación de velocidad general:}}
+	$$
+		v = -\frac{1}{a}\dv{[\ce{A}]}{t} =
+		    -\frac{1}{b}\dv{[\ce{B}]}{t} =
+		     \frac{1}{c}\dv{[\ce{C}]}{t} =
+		     \frac{1}{d}\dv{[\ce{D}]}{t}
+		  =  k[\ce{A}]^x[\ce{B}]^y
+	$$
+	\visible<2->{
+		\structure{En nuestro caso:}
+		$$
+			\ce{A + 2B -> 2C}
+		$$
+		\textbf{\textit{Ecuación de velocidad:}}
+		$$
+		   v = -\frac{1}{1}\dv{[\ce{A}]}{t} = 
+			   -\frac{1}{2}\dv{[\ce{B}]}{t} =
+			    \frac{1}{2}\dv{[\ce{C}]}{t}
+			 =  k\vdot[\ce{A}]^x\vdot[\ce{B}]^y
+		$$
+		Como se ve en la expresión, la velocidad ($v$) en un instante es independiente de la estequiometría de reactivos y productos. El signo negativo y dividir por el coeficiente estequiométrico hace que esté ``normalizada'' a todos los compuestos de la reacción. Por tanto:
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{v=\SI{1,76e-5}{\Molar\per\second}}
+		\end{center}
+	
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de la concentración de \ce{A} un minuto más tarde}
+	Si $v=\text{cte}$ (como es en este apartado) podemos suponer que la expresión infinitesimal se puede aproximar de forma finita en función de variaciones o incrementos:
+	$$
+		v = -\dv{[\ce{A}]}{t} \approx
+		 	-\frac{\Delta[\ce{A}]}{\Delta t}
+		  \Rightarrow
+			-\frac{\Delta[\ce{A}]}{\Delta t} = -\frac{[\ce{A}]-[\ce{A}]_0}{t-t_0}=v
+	$$
+	\structure{Datos:}
+	$t_0 =  \SI{0}{\second}\Rightarrow[\ce{A}]_0=\SI{,3580}{\Molar}$\quad\quad\quad
+	$t   = \SI{60}{\second}\Rightarrow$¿$[\ce{A}]$?
+	\begin{overprint}
+		\onslide<1>
+			$$
+				-\frac{[\ce{A}]-\overbrace{[\ce{A}]_0}^{\SI{,3580}{\Molar}}}{\underbrace{t}_{\SI{60}{\second}}-\underbrace{t_0}_{\SI{0}{\second}}}=\underbrace{v}_{\SI{1,76e-5}{\Molar\per\second}}
+			$$
+		\onslide<2>
+			$$
+				-\frac{[\ce{A}]-\SI{,3580}{\Molar}}{\SI{60}{\second}}=\SI{1,76e-5}{\Molar\per\second}
+			$$
+		\onslide<3>
+			$$
+				-([\ce{A}]-\SI{,3580}{\Molar})=\SI{1,76e-5}{\Molar\per\cancel\second}\vdot\SI{60}{\cancel\second}
+			$$
+		\onslide<4->
+			$$
+				[\ce{A}]=\SI{-1,76e-5}{\Molar\per\cancel\second}\vdot\SI{60}{\cancel\second}+\SI{,3580}{\Molar}
+			$$
+	\end{overprint}
+	\visible<4->{
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{A}]=\SI{,3569}{\Molar}}
+		\end{center}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación del tiempo transcurrido si [\ce{A}] es \SI{,3500}{\Molar}}
+	Como $v=\text{cte}$:
+	$$
+	v = -\frac{[\ce{A}]-[\ce{A}]_0}{t-t_0}=v
+	$$
+	\structure{Datos:}
+	$t_0 =  \SI{0}{\second}\Rightarrow[\ce{A}]_0=\SI{,3580}{\Molar}$\quad\quad\quad
+	¿$t$?				  $\Rightarrow$$[\ce{A}]=\SI{,3500}{\Molar}$
+	\begin{overprint}
+		\onslide<1>
+		$$
+			-\frac{\overbrace{[\ce{A}]}^{\SI{,3500}{\Molar}}-\overbrace{[\ce{A}]_0}^{\SI{,3580}{\Molar}}}{t-\underbrace{t_0}_{\SI{0}{\second}}}=\underbrace{v}_{\SI{1,76e-5}{\Molar\per\second}}
+		$$
+		\onslide<2>
+		$$
+			-\frac{\SI{,3500}{\Molar}-\SI{,3580}{\Molar}}{t}=\SI{1,76e-5}{\Molar\per\second}
+		$$
+		\onslide<3->
+		$$
+			t=\frac{\SI{,3580}{\cancel\Molar}-\SI{,3500}{\cancel\Molar}}{\SI{1,76e-5}{\cancel\Molar\per\second}}
+		$$
+	\end{overprint}
+	\visible<3->{
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{t=\SI{454,54}{\second}}\quad o\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{t=\SI{7}{\minute}~\SI{34,5}{\second}}
+		\end{center}
+	}
+\end{frame}

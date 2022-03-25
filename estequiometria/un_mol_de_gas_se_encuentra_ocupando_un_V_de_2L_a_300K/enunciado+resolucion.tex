@@ -1,0 +1,180 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/un_mol_de_gas_se_encuentra_ocupando_un_V_de_2L_a_300K/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\large ¿$P$ para gas ideal y para reales?}
+        {\large ¿Cuál se desvía más del comportamiento ideal?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n = \SI{1}{\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V = \SI{2}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T = \SI{300}{\kelvin}}
+    $$
+    \begin{center}
+        \begin{tabular}{lSS}
+            \toprule
+                     &\textbf{a}&\textbf{b}\\
+                     &\si{\square\liter\atm\per\square\mol}&\si{\liter\per\mol}\\
+            \midrule
+            \ce{Cl2} &   6,49   & 0,0562   \\
+            \ce{CO2} &   3,59   & 0,0427   \\
+            \ce{CO}  &   1,49   & 0,0399   \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): $P$ de gas ideal}
+    \structure{Ecuación de gases ideales:} Recordamos ecuación general de los gases ideales, despejamos y sustituimos.
+    \begin{overprint}
+        \onslide<1>
+            $$
+                P\vdot V=n\vdot R\vdot T
+            $$
+        \onslide<2>
+            $$
+                P = \frac{n\vdot R\vdot T}{V}
+            $$
+        \onslide<3->
+            $$
+                P = \frac{\SI{1}{\cancel\mol}\vdot\SI{0,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{300}{\cancel\kelvin}}{\SI{2}{\cancel\liter}}
+            $$
+    \end{overprint}
+    \visible<3->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P = \SI{12,3}{\atm}}
+        $$
+        \structure{Tened en mente:}
+        $$
+            \frac{P\vdot V}{n\vdot R\vdot T} = 1
+        $$
+                }
+    \visible<4->{
+        \structure{Ecuación de Van der Waals:}
+        $$
+            \frac{P\vdot V}{n\vdot R\vdot T} = \underbrace{\frac{V}{V-n\vdot b}-\frac{n\vdot a}{R\vdot T\vdot V}}_{\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{1\text{ si el gas es ideal}}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): Gases reales}
+    \structure{Operamos:} añadimos columnas calculando los factores que distancian al gas de la idealidad.\\[.4cm]
+    \begin{overprint}
+        \onslide<2>
+            \begin{center}
+                \begin{tabular}{lSS}
+                    \toprule
+                    &\textbf{a}&\textbf{b}\\
+                    &\si{\square\liter\atm\per\square\mol}&\si{\liter\per\mol}\\
+                    \midrule
+                    \ce{Cl2} &   6,49   & 0,0562   \\
+                    \ce{CO2} &   3,59   & 0,0427   \\
+                    \ce{CO}  &   1,49   & 0,0399   \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<3>
+            \begin{center}
+                \begin{tabular}{lSSS}
+                    \toprule
+                    &\textbf{a}
+                    &\textbf{b}
+                    &$\frac{V}{V-n\vdot b}$\\
+                    &\si{\square\liter\atm\per\square\mol}
+                    &\si{\liter\per\mol}
+                    & \\
+                    \midrule
+                    \ce{Cl2} &   6,49   & 0,0562 & 1,0289 \\
+                    \ce{CO2} &   3,59   & 0,0427 & 1,0218 \\
+                    \ce{CO}  &   1,49   & 0,0399 & 1,0204 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<4>
+            \begin{center}
+                \begin{tabular}{lSSSS}
+                    \toprule
+                    &\textbf{a}
+                    &\textbf{b}
+                    &$\frac{V}{V-n\vdot b}$
+                    &$\frac{n\vdot a}{R\vdot T\vdot V}$\\
+                    &\si{\square\liter\atm\per\square\mol}
+                    &\si{\liter\per\mol}
+                    &
+                    &\\
+                    \midrule
+                    \ce{Cl2} &   6,49   & 0,0562 & 1,0289 & 0,1319 \\
+                    \ce{CO2} &   3,59   & 0,0427 & 1,0218 & 0,0730 \\
+                    \ce{CO}  &   1,49   & 0,0399 & 1,0204 & 0,0303 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<5>
+            \begin{center}
+                \begin{tabular}{lSSSSS}
+                    \toprule
+                    &\textbf{a}
+                    &\textbf{b}
+                    &$\frac{V}{V-n\vdot b}$
+                    &$\frac{n\vdot a}{R\vdot T\vdot V}$
+                    &$\frac{V}{V-n\vdot b}\text{--}\frac{n\vdot a}{R\vdot T\vdot V}$\\
+                    &\si{\square\liter\atm\per\square\mol}
+                    &\si{\liter\per\mol}
+                    &
+                    &
+                    &\\
+                    \midrule
+                    \ce{Cl2} &   6,49   & 0,0562 & 1,0289 & 0,1319 & 0,8970 \\
+                    \ce{CO2} &   3,59   & 0,0427 & 1,0218 & 0,0730 & 0,9488 \\
+                    \ce{CO}  &   1,49   & 0,0399 & 1,0204 & 0,0303 & 0,9901 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<6->
+            \begin{center}
+                \begin{tabular}{lSSSSSS}
+                    \toprule
+                    gas
+                    &\textbf{a}
+                    &\textbf{b}
+                    &$\frac{V}{V-n\vdot b}$
+                    &$\frac{n\vdot a}{R\vdot T\vdot V}$
+                    &$\frac{V}{V-n\vdot b}\text{--}\frac{n\vdot a}{R\vdot T\vdot V}$
+                    &$P\text{ real}$ \\
+                    &\si{\square\liter\atm\per\square\mol}
+                    &\si{\liter\per\mol}
+                    &
+                    &
+                    &
+                    &\si{\atm}\\
+                    \midrule
+                    \ce{Cl2} &   6,49   & 0,0562 & 1,0289 & 0,1319 & 0,8970 & 11,03 \\
+                    \ce{CO2} &   3,59   & 0,0427 & 1,0218 & 0,0730 & 0,9488 & 11,67 \\
+                    \ce{CO}  &   1,49   & 0,0399 & 1,0204 & 0,0303 & 0,9901 & 12,18 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+    \end{overprint}
+    \visible<7->{
+        \structure{¿Cuál es el valor que se distancia más de 1 en la columna 6?}\\[.6cm]
+               }
+    \visible<8->{\huge \centering El \ce{Cl2} ($0,8970$) y tiene una $P(\ce{Cl2})=\SI{11,03}{\atm}$}
+\end{frame}
+
+\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/un_mol_de_gas_se_encuentra_ocupando_un_V_de_2L_a_300K/anexo.tex
+	}

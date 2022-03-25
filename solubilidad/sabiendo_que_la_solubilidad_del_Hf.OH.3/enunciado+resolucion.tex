@@ -1,0 +1,82 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/sabiendo_que_la_solubilidad_del_Hf.OH.3/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\LARGE ¿$K_{ps}(\ce{Hf(OH)3})$? ¿pH?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{solubilidad:} \SI{4,503}{\gram\per\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{Hf(OH)3}) = \SI{229,512}{\gram\per\mol}}\\[1.cm]
+		{\LARGE ¿masa en gramos de precipitado?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{V(\ce{Hf^3+}) = \SI{5}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\pH = \num{11}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $K_{ps}(\ce{Hf(OH)3})$ y pH de disolución}
+	\structure{Obtenemos la solubilidad \underline{molar}:}
+	$$
+		\SI[per-mode = fraction]{4,503e-3}{\cancel\gram\per\liter}\vdot\frac{\SI{1}{\mol}}{\SI{229,512}{\cancel\gram}} = \SI{1,962e-5}{\Molar} = s(\ce{Hf(OH)3})
+	$$
+	\structure{Equilibrio de solubilidad y solubilidad molar:} usamos la estequiometría del equilibrio de solubilidad para averiguar la relación entre $s$ y $K_{ps}$ en \ce{Hf(OH)3}
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Hf(OH)3(s) <=> Hf^3+(ac) + 3OH-(ac)}\quad K_{ps} = \ce{[Hf^3+][OH^-]^3}$}	\\
+			\midrule
+										&	[\ce{Hf^3+}]	&	[\ce{OH-}]	\\
+			\midrule
+			Solubilidad~(\si{\Molar})	&	$s$				&	$3s$
+		\end{tabular}
+	\end{center}
+	\textbf{Según la estequiometría:} $[\ce{OH-}] = 3s\Rightarrow\pH = 14 - \pOH = 14 + \log[\ce{OH-}]$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\pH = 14 + \log(3s)\Rightarrow\pH = \num{9,77}}
+	$$
+	$$
+		 K_{ps} = \overbrace{[\ce{Hf^3+}]}^s\overbrace{[\ce{OH-}]^3}^{(3s)^3 = 27s^3} = 27s^4\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{ps}(\ce{Hf(OH)3}) = \num{4,000e-18}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa de precipitado en gramos}
+	\structure{Calculamos [\ce{OH-}]:} $\pH = 11\Rightarrow[\ce{OH-}] = 10^{-14+\pH}\Rightarrow[\ce{OH-}] = \SI{e-3}{\Molar}$
+	\structure{\textbf{Va a haber precipitado porque hay más [\ce{OH-}] que el máximo del equilibrio ($s(\ce{Hf(OH)3})$)}:} $\pH = 11 > \pH (\text{dis. saturada}) = \num{9,77}$. El cálculo es equivalente con $K_{ps}$ y $Q_{ps}$.
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Hf(OH)3(s) <=> Hf^3+(ac) + 3OH-(ac)}\quad K_{ps} = \ce{[Hf^3+][OH^-]^3} = \num{4,000e-18}$}	\\
+			\midrule
+										&	[\ce{Hf^3+}]	&	[\ce{OH-}]	\\
+			\midrule
+			Solubilidad~(\si{\Molar})	&	$s^\prime$		&	\num{e-3}
+		\end{tabular}
+	\end{center}
+	\structure{Solubilidad molar modificada ($s^\prime$):}
+	$$
+		K_{ps} = s^\prime\vdot(\num{e-3})^3 = \num{4,000e-18}\Rightarrow s^\prime = \frac{\num{4,000e-18}}{\num{e-9}} = \SI{4,000e-9}{\Molar}
+	$$
+	\structure{N"o de moles solubles:}
+	$$
+		M = \frac{n}{V}\Rightarrow n = M\vdot V\Rightarrow n_{\text{soluble}} = \SI{4,000e-9}{\mol\per\cancel\liter}\vdot\SI{5}{\cancel\liter} = \SI{2,000e-8}{\mol}
+	$$
+	\structure{Antes de añadir el \ce{NaOH} teníamos:}
+	$$
+		[\ce{Hf(OH)3}] = \SI{1,962e-5}{\Molar}\Rightarrow n_{\text{total}} = \SI{1,962e-5}{\mol\per\cancel\liter}\vdot\SI{5}{\liter} = \SI{9,810e-5}{\mol}
+	$$
+	$$
+		n_{\text{precipita}} = n_{\text{total}} - n_{\text{soluble}}\Rightarrow \overbrace{m_{\text{precipita}}}^{m=n\vdot Mm} = (\num{9,810e-5}-\num{2,000e-8})~\si{\cancel\mol}\vdot\SI{229,512}{\gram\per\cancel\mol}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{m_{\text{precipitado}} = \SI{,023}{\gram}}
+	$$
+\end{frame}

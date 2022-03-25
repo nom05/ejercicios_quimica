@@ -1,0 +1,79 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/justificar_por_que_a_temperatura_ambiente_la_reaccion_endotermica_CaCO3/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1})}
+    $$
+        T(\text{inicial}) = 20-30~\si{\celsius}\Rightarrow\text{ \textbf{No espontánea}}
+    $$
+    $$
+        T(\text{final}) = \SI{1000}{\celsius}\Rightarrow\text{ \textbf{Espontánea}}
+    $$
+    \visible<2->{
+        \structure{Recordemos cómo sabemos cuando una reacción es espontánea o no:}
+        $$
+            \Delta G = \Delta H - T\vdot\Delta S
+        $$
+        \begin{overprint}
+            \onslide<2>
+                \begin{center}
+                    \begin{tabular}{cc}
+                        \toprule
+                        Situación    & Reacción     \\
+                        \midrule
+                        $\Delta G>0$ & No espontánea\\
+                        $\Delta G=0$ & Equilibrio   \\
+                        $\Delta G<0$ & Espontánea   \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<3>
+                \alert{Reacción endotérmica:} $\Delta H > 0$
+                \begin{center}
+                    \begin{tabular}{ccc}
+                        \toprule
+                            Situación    & Reacción      & Ecuación                                 \\
+                        \midrule
+                            $\Delta G>0$ & No espontánea & $\Delta G = \Delta H - T\vdot\Delta S>0$ \\
+                            $\Delta G=0$ & Equilibrio    & $\Delta G = \Delta H - T\vdot\Delta S=0$ \\
+                            $\Delta G<0$ & Espontánea    & $\Delta G = \Delta H - T\vdot\Delta S<0$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<4>
+                \alert{Reacción endotérmica:} $\Delta H > 0$
+                \begin{center}
+                    \begin{tabular}{ccc}
+                        \toprule
+                        Situación    & Reacción      & Ecuación                    \\
+                        \midrule
+                        $\Delta G>0$ & No espontánea & $\Delta H > T\vdot\Delta S$ \\
+                        $\Delta G=0$ & Equilibrio    & $\Delta H = T\vdot\Delta S$ \\
+                        $\Delta G<0$ & Espontánea    & $\Delta H < T\vdot\Delta S$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<5>
+                \alert{Reacción endotérmica:} $\Delta H > 0$
+                \begin{center}
+                    \begin{tabular}{cccc}
+                        \toprule
+                        Situación    & Reacción               & Ecuación                    & T                                    \\
+                        \midrule
+                        $\Delta G>0$ & No espontánea          & $\Delta H > T\vdot\Delta S$ & Bajas(ambiente)                      \\
+                        $\Delta G=0$ & Equilibrio             & $\Delta H = T\vdot\Delta S$ & Intermedias                          \\
+                        $\Delta G<0$ & \textbf{Espontánea}    & $\Delta H < T\vdot\Delta S$ & \textbf{Altas (\SI{1000}{\celsius})} \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+        \end{overprint}
+                }
+\end{frame}

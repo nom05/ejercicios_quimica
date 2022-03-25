@@ -1,0 +1,149 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/la_sosa_puede_prepararse_mediante_la_reaccion/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		$$
+			m(\ce{NaOH})?
+		$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Na2CO3})=\SI{1}{\kilogram}=\SI{1000}{\gram}}
+	\end{center}
+	\visible<2-|handout:0>{Pero también\ldots\\
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{Na2CO3}) = \SI{105,99}{\gram\per\mol}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{Mm(\ce{NaOH}) = \SI{40,00}{\gram\per\mol}}
+		$$
+		  Reacción sin ajustar: \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na2CO3}} + \ce{Ca(OH)2} \ce{->} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{NaOH}} + \ce{CaCO3}
+						}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción}
+	\structure{Reacción:} \textbf{\ce{Na2CO3 + Ca(OH)2 -> NaOH + CaCO3}}
+	\begin{block}{Por tanteo:}
+		En general es el más rápido. Contabilizar átomos en reactivos y átomos en los productos y ajustar las cantidades en ambos lados.\\[.3cm]
+		\begin{overprint}
+			\onslide<1>
+				\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na2}}\ce{CO3 + Ca(OH)2 -> }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na}}\ce{OH + CaCO3} (\textbf{\underline{sin ajustar}})
+			\onslide<2>
+				\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{Na\textbf{2}}}\ce{CO3 + Ca(OH)2 -> }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{2}Na}}\ce{OH + CaCO3} (\textbf{\underline{ajustado}})
+			\onslide<3>
+				\centering\ce{Na2CO3 + Ca}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{(OH)\textbf{2}}}
+				\ce{ -> }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{\textbf{2}NaOH}} (\textbf{\underline{ajustado}})
+				\ce{ + CaCO3}
+			\onslide<4>
+				\centering\ce{Na2CO3 + }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Ca}}
+				\ce{(OH)2 -> 2NaOH +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{\ce{Ca}}
+				\ce{CO3} (ajustado)
+			\onslide<5>
+				\centering\ce{Na2}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{CO3}}
+				\ce{+ Ca(OH)2 -> 2NaOH + Ca}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\ce{CO3}} (\textbf{\underline{ajustado}})
+			\onslide<6->
+				\centering\ce{Na2CO3 + Ca(OH)2 -> \textbf{2}NaOH + CaCO3}
+		\end{overprint}
+	\end{block}
+	\visible<7->{
+		\begin{alertblock}{Método aritmético:}
+			Mediante coeficientes y agrupando por átomos:\\
+			\centering\colorbox{red}{\color{white}\textbf{a}}\ce{Na2CO3} + \colorbox{green}{\textbf{b}}\ce{Ca(OH)2} \ce{->} \colorbox{blue}{\color{white}\textbf{c}}\ce{NaOH} +  \colorbox{orange}{\color{white}\textbf{d}}\ce{CaCO3}\\
+		    \begin{columns}
+	            \visible<8-|handout:0>{
+					\column{.45\textwidth}
+						\begin{flushleft}
+							\ce{Na}:\quad\textbf{2}\colorbox{red}{\color{white}\textbf{a}}=\colorbox{blue}{\color{white}\textbf{c}}\\
+							\ce{C}:\quad\colorbox{red}{\color{white}\textbf{a}}=\colorbox{orange}{\color{white}\textbf{d}}\\
+							\ce{O}:\quad\textbf{3}\colorbox{red}{\color{white}\textbf{a}} + \textbf{2}\colorbox{green}{\textbf{b}} = \colorbox{blue}{\color{white}\textbf{c}} + \textbf{3}\colorbox{orange}{\color{white}\textbf{d}}\\
+							\ce{Ca}:\quad\colorbox{green}{\textbf{b}} = \colorbox{orange}{\color{white}\textbf{d}}\\
+							\ce{H}:\quad\textbf{2}\colorbox{green}{\textbf{b}} = \colorbox{blue}{\color{white}\textbf{c}}\\
+						\end{flushleft}
+									}
+				\visible<9-|handout:0>{
+					\column{.45\textwidth}
+						\underline{Escogemos} \colorbox{red}{\color{white}\textbf{a}} = 1\\
+						Entonces:
+						\colorbox{blue}{\color{white}\textbf{c}} = \textbf{$2\times 1$}\\
+						\colorbox{orange}{\color{white}\textbf{d}} = 1\\
+						\colorbox{green}{\textbf{b}} = 1\\
+									}
+			\end{columns}
+		    \visible<10-|handout:0>{
+				\centering
+				\colorbox{red}{\color{white}\textbf{1}}
+				\colorbox{green}{\textbf{1}}
+				\colorbox{blue}{\color{white}\textbf{2}}
+				\colorbox{orange}{\color{white}\textbf{1}}
+				\\[.5cm]
+								}
+			\visible<10-|handout:0>{
+				\centering\colorbox{red}{\color{white}\textbf{1}}\ce{Na2CO3} + \colorbox{green}{\textbf{1}}\ce{Ca(OH)2} \ce{->} \colorbox{blue}{\color{white}\textbf{2}}\ce{NaOH} +  \colorbox{orange}{\color{white}\textbf{1}}\ce{CaCO3}\\
+								}
+		\end{alertblock}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): uso de la estequiometría}
+	\centering\textbf{\ce{Na2CO3 + Ca(OH)2 -> 2NaOH + CaCO3}}
+	\begin{overprint}
+		\onslide<1>
+			\centering Según la estequiometría \SI{1}{\mol} de \ce{Na2CO3} produce \SI{2}{\mol} de \ce{NaOH}
+			$$
+				\ce{\SI{1}{\mol}\text{ de \ce{Na2CO3}} -> \SI{2}{\mol}\text{ de \ce{NaOH}}}
+			$$
+		\onslide<2-3>
+			\centering Numéricamente:
+			$$
+				\ce{\SI{1}{\mol}\text{ de \ce{Na2CO3}}} < \ce{\SI{2}{\mol}\text{ de \ce{NaOH}}}
+			$$
+			\visible<3>{
+				Si multiplicamos \SI{1}{\mol} de \ce{Na2CO3} por \num{2} (coeficiente de \ce{NaOH})...
+						}
+		\onslide<4>
+			$$
+				2\times\overbrace{\ce{\SI{1}{\mol}\text{ de \ce{Na2CO3}}}}^{n(\ce{Na2CO3})} = \underbrace{\ce{\SI{2}{\mol}\text{ de \ce{NaOH}}}}_{n(\ce{NaOH})}
+			$$
+		\onslide<5->
+			$$
+				2\times n(\ce{Na2CO3}) = n(\ce{NaOH})
+			$$
+			\centering Usando $n = \rfrac{m}{Mm}$
+	\end{overprint}
+	\begin{overprint}
+		\onslide<6>
+			$$
+				2\times\frac{m(\ce{Na2CO3})}{Mm(\ce{Na2CO3})} = \frac{m(\ce{NaOH})}{Mm(\ce{NaOH})}
+			$$
+		\onslide<7->
+			$$
+				2\times\frac{m(\ce{Na2CO3})}{Mm(\ce{Na2CO3})} = \frac{m(\ce{NaOH})}{Mm(\ce{NaOH})}\Rightarrow m(\ce{NaOH})= 2\cdot m(\ce{Na2CO3})\cdot\frac{Mm(\ce{NaOH})}{Mm(\ce{Na2CO3})}
+			$$
+	\end{overprint}
+	\visible<8->{
+		$$
+			m(\ce{NaOH})= 2\cdot\SI{1000}{\gram}\cdot\frac{\SI{40,00}{\cancel\gram\per\cancel\mol}}{\SI{105,99}{\cancel\gram\per\cancel\mol}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=green]{m(\ce{NaOH}) = \SI{754,79}{\gram}}
+		$$
+				}
+\end{frame}

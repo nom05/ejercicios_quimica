@@ -1,0 +1,130 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{Una mezcla de \SI{141,812}{\gram} de cloro y \SI{6,048}{\gram} de hidrógeno se hacen reaccionar para formar cloruro de hidrógeno en el interior de un cilindro de \SI{50}{\liter} a \SI{100}{\celsius}. Si se supone que la reacción transcurre de modo total, ¿cuál es la presión total y las presiones parciales en el cilindro después de la reacción?}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\large ¿$P_T$? ¿$P(\ce{H2})$? ¿$P(\ce{Cl2})$? ¿$P(\ce{HCl})$?}
+    \end{center}
+    \structure{Reacción: }
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Cl2}}
+    \ce{ + }
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\ce{H2}}
+    \ce{->}
+    \ce{HCl}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V_T = \SI{50}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T = 100+\SI{273,15}{\kelvin}}\quad
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m(\ce{Cl2}) = \SI{141,812}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{Mm(\ce{Cl2}) = \SI{70,91}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m(\ce{H2}) = \SI{6,048}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{Mm(\ce{H2}) = \SI{2,02}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de reacción, reactivo limitante y presión parcial del gas en exceso}
+    \begin{center}
+        \structure{Reacción: }
+        \ce{Cl2 + H2 ->}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{2}
+        \ce{HCl}
+    \end{center}
+    \visible<2->{
+        \structure{Partiendo de:}
+        $$
+            n = \frac{m}{Mm}
+        $$        
+                }
+    \visible<3->{
+        $$
+            n(\ce{Cl2}) = \frac{\SI{141,812}{\cancel\gram}}{\SI{70,91}{\cancel\gram\per\mol}} = \SI{2,000}{\mol}
+        $$
+        $$
+            n(\ce{H2}) = \frac{\SI{6,048}{\cancel\gram}}{\SI{2,02}{\cancel\gram\per\mol}} = \SI{2,994}{\mol}
+        $$
+                }
+    \visible<4->{
+        \structure{Según la estequiometría:} $n(\ce{Cl2}) = n(\ce{H2})\Rightarrow$ \myovalbox{\textcolor{white}{\ce{Cl2} es el reactivo limitante por el exceso de \ce{H2}}}
+                }
+    \visible<5->{
+        \structure{Exceso de \ce{H2}:}
+            $$
+                n_{\text{exceso}}(\ce{H2}) = \SI{2,994}{\mol} - \SI{2,000}{\mol} = \SI{0,994}{\mol}
+            $$
+                }
+    \visible<6->{
+        \structure{Presión parcial del \ce{H2} a partir de la ecuación de los gases ideales}:
+        \begin{overprint}
+            \onslide<6>
+                $$
+                    P\cdot V = n\cdot R\cdot T\Rightarrow P = \frac{n\cdot R\cdot T}{V}
+                $$
+            \onslide<7>
+                $$
+                    P(\ce{H2}) = \frac{n(\ce{H2})\cdot R\cdot T}{V}
+                $$
+            \onslide<8>
+                $$
+                    P(\ce{H2}) = \frac{\SI{0,994}{\cancel\mol}\cdot\SI{0,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{373,15}{\cancel\kelvin}}{\SI{50}{\cancel\liter}}
+                $$
+            \onslide<9->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{P(\ce{H2}) = \SI{0,61}{\atm}}
+                $$
+        \end{overprint}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): Presión parcial del \ce{HCl}}
+    \structure{Según la estequiometría:} \SI{1}{\mol} de \ce{Cl2} \ce{ -> } \SI{2}{\mol} de \ce{HCl}
+    $$
+        2n(\ce{Cl2}) = n(\ce{HCl})
+    $$
+    \visible<2->{
+        \structure{A partir de la ecuación de los gases ideales vista en la diapositiva anterior:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    P(\ce{HCl}) = \frac{n(\ce{HCl})\cdot R\cdot T}{V}
+                $$
+            \onslide<3>
+                $$
+                    P(\ce{HCl}) = \frac{\overbrace{n(\ce{HCl})}^{n(\ce{HCl})=2n(\ce{Cl2})}\cdot R\cdot T}{V}
+                $$
+            \onslide<4>
+                $$
+                    P(\ce{HCl}) = \frac{2\cdot n(\ce{Cl2})\cdot R\cdot T}{V}
+                $$
+            \onslide<5->
+                $$
+                    P(\ce{HCl}) = \frac{2\cdot\SI{2,000}{\cancel\mol}\cdot\SI{0,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{373,15}{\cancel\kelvin}}{\SI{50}{\cancel\liter}}
+                $$
+        \end{overprint}
+                }
+    \visible<6->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\ce{HCl})=\SI{2,45}{\atm}}
+        $$
+               }
+   \visible<7->{
+       \structure{Mediante la ``Ley de Dalton'' obtenemos la presión total de la mezcla de gases:}
+       $$
+            P_T = \sum_{i=1}^{2} P_i = P(\ce{H2}) + P(\ce{HCl})
+       $$
+       $$
+           \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{P_T = \SI{0,61}{\atm} + \SI{2,45}{\atm} = \SI{3,06}{\atm}}
+       $$
+               }
+\end{frame}

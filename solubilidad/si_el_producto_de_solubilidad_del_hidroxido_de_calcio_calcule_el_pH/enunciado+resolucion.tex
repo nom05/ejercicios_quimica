@@ -1,0 +1,66 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/si_el_producto_de_solubilidad_del_hidroxido_de_calcio_calcule_el_pH/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\mathrm{pH}$ disolución saturada?, ¿masa en gramos de \ce{Ca(OH)2} si $\mathrm{pH}=14$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{Ca(OH)2})=\num{7,9e-6}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{Ca(OH)2})=\SI{74,0927}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\mathrm{pH}$ de disolución saturada}
+	\structure{Equilibrio de solubilidad:} \ce{Ca(OH)2(s) <=> Ca^{2+}(ac) + 2OH-(ac)}\\[.3cm]
+	$$
+		K_{ps}(\ce{Ca(OH)2})=[\ce{Ca^{2+}}][\ce{OH-}]^2=s(2s)^2=4s^3=\num{7,9e-6}
+	$$
+	$$
+		s(\ce{Ca(OH)2})=\sqrt[3]{\frac{\num{7,9e-6}}{4}}=\SI{,0125}{\Molar}\Rightarrow[\ce{OH-}]=\SI{,0251}{\Molar}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=14+\log[\ce{OH-}]=\num{12,40}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa en gramos de \ce{Ca(OH)2} con $\mathrm{pH}=14$}
+	\structure{Concentración de \ce{OH-}:}
+	$$
+		\mathrm{pH}=14\Rightarrow\mathrm{pOH}=0\Rightarrow[\ce{OH-}]=\SI{1}{\Molar}
+	$$
+	\structure{Solubilidad:}
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+			Concentración(\si{\Molar}) & $[\ce{Ca^{2+}}]$ &     [\ce{OH-}]   \\
+			Solubilidad                &    $s$    		  &       $2s$       \\
+			Solubilidad modificada     &    $s^\prime$          &  $2s^\prime+\num{1}$   \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Determinación de masa de \ce{Ca(OH)2}:}\\[.2cm]
+			$$
+				K_{ps}(\ce{Ca(OH)2})=\underbrace{[\ce{Ca^{2+}}]}_{s^\prime}{\underbrace{[\ce{OH-}]}_{2s^\prime+1\approx 1}}^2\Rightarrow
+				K_{ps}(\ce{Ca(OH)2})=s^\prime=\SI{7,9e-6}{\Molar}
+			$$
+			$$
+				M = \frac{n}{V}\Rightarrow \overbrace{n}^{n=\rfrac{m}{Mm}}=M\vdot V\Rightarrow
+				\frac{m}{Mm}=M\vdot V\Rightarrow m=Mm\vdot M\cdot V
+			$$
+			$$
+				m(\ce{Ca(OH)2})=\overbrace{Mm(\ce{Ca(OH)2})}^{\SI{74,0927}{\gram\per\cancel\mol}}\cdot\underbrace{[\ce{Ca(OH)2}]}_{s^\prime=\SI{7,9e-6}{\cancel\mol\per\cancel\liter}}\cdot\overbrace{V(\ce{Ca(OH)2})}^{\SI{,150}{\cancel\liter}}
+			$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{m(\ce{Ca(OH)2})=\SI{8,8e-5}{\gram}}
+\end{frame}

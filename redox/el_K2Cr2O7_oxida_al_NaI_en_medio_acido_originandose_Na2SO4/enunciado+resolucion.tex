@@ -1,0 +1,119 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/el_K2Cr2O7_oxida_al_NaI_en_medio_acido_originandose_Na2SO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿[\ce{NaI}]?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{NaI})=\SI{30}{\milli\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\text{concentración \ce{K2Cr2O7}}=\SI{49}{\gram\per\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{V(\ce{K2Cr2O7})=\SI{60}{\milli\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{Mm(\ce{K2Cr2O7})=\SI{294,185}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción en medio ácido}
+	\structure{Ajuste en medio ``\textbf{\underline{ácido}}''}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{K2Cr2O7(ac) + NaI(ac) -> Na2SO4(ac) + Cr2(SO4)3(ac) + I2(g)}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{+6}{\ce{Cr}}$2
+					$\overset{-2}{\ce{O}}$7^{2-}
+						+
+					$\overset{-1}{\ce{I-}}$
+						->
+					$\overset{+3}{\ce{Cr^{3+}}}$
+						+
+					$\overset{0}{\ce{I2}}$
+					}
+			$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:}\quad\ce{I- -> I2}
+			\structure{Semirreacción de reducción:}\quad\ce{Cr2O7^{2-} -> Cr^{3+}}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:}\quad\ce{\textbf{\color{red}2}I- -> \textbf{\color{red}\ce{I2}}}
+			\structure{Semirreacción de reducción:}\quad\ce{\textbf{\color{green}\ce{Cr2}}O7^{2-} -> \textbf{\color{green}2}Cr^3+}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:}\quad\ce{2I- -> I2}
+			\structure{Semirreacción de reducción:}\quad\ce{Cr2\textbf{\color{red}\ce{O7}}^2- -> 2Cr^3+ + \textbf{\color{red}\ce{7H2O}}}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{2I- -> I2}
+			\structure{Semirreacción de reducción:}\quad\ce{\textbf{\color{green}\ce{14H+}} + Cr2O7^2- -> 2Cr^3+ + \textbf{\color{green}\ce{7H2}}O}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:}\quad\ce{2I- -> I2 \textbf{\color{red}\ce{+ 2e-}}}
+							{\footnotesize (2 cargas negativas en reactivos frente a 0 en productos $\rightarrow$ 2 electrones en productos)}
+			\structure{Semirreacción de reducción:}\quad\ce{14H+ + Cr2O7^2- \textbf{\color{green}\ce{+ 6e-}} -> 2Cr^3+ + 7H2O}
+							{\footnotesize (12 cargas positivas en reactivos frente a 6 positivas en productos $\rightarrow$ 6 electrones en reactivos)}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:} $3\times\left(\ce{2I- -> I2 + 2e-}\right)$
+			\structure{Semirreacción de reducción:} $1\times\left(\ce{14H+ + Cr2O7^{2-} + 6e- -> 2Cr^{3+} + 7H2O}\right)$
+		\onslide<9>
+			\structure{Semirreacción de oxidación:}\quad\ce{6I- -> 3I2 + 6e-}
+			\structure{Semirreacción de reducción:}\quad\ce{14H+ + Cr2O7^{2-} + 6e- -> 2Cr^{3+} + 7H2O}
+		\onslide<10-11>
+			\begin{center}
+				\begin{tabular}{c}
+					\ce{6I- -> 3I2 + \cancel{6e-}} \\
+					\ce{14H+ + Cr2O7^{2-} + \cancel{6e-} -> 2Cr^{3+} + 7H2O} \\
+					\midrule
+					\ce{14H+ + Cr2O7^{2-} + 6I- -> 2Cr^{3+} + 7H2O + 3I2} \\
+				\end{tabular}				
+			\end{center}
+		\onslide<12->
+			\ce{7H2SO4(ac) + K2Cr2O7(ac) + 6NaI(ac) -> 3Na2SO4(ac) + Cr2(SO4)3(ac) + 7H2O(l) + 3I2(g) + K2SO4(ac)} \\
+	\end{overprint}
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+		\item<5-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+		\item<6-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+		\item<7-> Ajustamos número de electrones en cada reacción.
+		\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+		\item<10-> Sumamos ambas reacciones.
+		\item<11-> Simplificamos si procede (en este caso no).
+		\item<12-> Añadimos los iones que no entraban en la reacción vigilando que esté todo ajustado.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): concentración de \ce{NaI}}
+	\structure{Reacción ajustada:}\quad\ce{7H2SO4(ac) + K2Cr2O7(ac) + 6NaI(ac) -> 3Na2SO4(ac) + Cr2(SO4)3(ac) + 7H2O(l) + 3I2(g) + K2SO4(ac)}
+	\structure{Concentración molar de \ce{K2Cr2O7}:}
+		$$
+			[\ce{K2Cr2O7}]=\SI{49}{\cancel\gram\per\liter}\cdot\frac{1}{\SI{294,185}{\cancel\gram\per\mol}}=\SI{,17}{\Molar}
+		$$
+ 	\structure{Número de moles de \ce{K2Cr2O7}:}
+		$$
+			M=\frac{n}{V}\Rightarrow n=M\cdot V\Rightarrow n(\ce{K2Cr2O7})=\SI{,17}{\mol\per\cancel\liter}\cdot\SI{,060}{\cancel\liter}=\SI{,0102}{\mol}
+		$$
+	\structure{Según estequiometría:}
+		$$
+			\overbrace{n(\ce{NaI})}^{n=M\cdot V}=6\underbrace{n(\ce{K2Cr2O7})}_{n=M\cdot V}\Rightarrow
+			[\ce{NaI}]\cdot V(\ce{NaI})=6\cdot[\ce{K2Cr2O7}]\cdot V(\ce{K2Cr2O7})\Rightarrow
+		$$
+		$$
+			[\ce{NaI}]=\frac{6\cdot[\ce{K2Cr2O7}]\cdot V(\ce{K2Cr2O7})}{V(\ce{NaI})}\Rightarrow
+			[\ce{NaI}]=\frac{\num{6}\cdot\SI{,17}{\mol\per\cancel\liter}\cdot\SI{,06}{\cancel\liter}}{\SI{,03}{\liter}}
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{NaI}]=\SI{2}{\Molar}}
+		\end{center}
+\end{frame}

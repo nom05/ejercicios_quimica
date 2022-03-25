@@ -1,0 +1,99 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/que_masa_en_gramos_de_Ca.OH.2_hay_que_anhadir_a_5L_de_agua_a_25C_para_tener_1g_de_precipitado/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\LARGE ¿$m_{\text{total}}(\ce{Ca(OH)2})\equiv m_{T}(\ce{Ca(OH)2})$?\\
+			¿Habrá precipitado diluyendo o disminuyendo el pH?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V_0 = \SI{5}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m_{\text{precipitado}} = m_p(\ce{Ca(OH)2}) = \SI{1}{\gram}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_f = \SI{20}{\liter}}\qquad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\pH = \num{10}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{K_{ps}(\ce{Ca(OH)2}) = \num{5,02e-6}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{Mm(\ce{Ca(OH)2}) = \SI{74,09}{\gram\per\mol}}\quad
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): nasa de \ce{Ca(OH)2} en \SI{5}{\liter} para tener \SI{1,0}{\gram} de precipitado}
+	\structure{Equilibrio de solubilidad y solubilidad molar:} usamos la estequiometría del equilibrio de solubilidad para averiguar la relación entre $s$ y $K_{ps}$ en \ce{Ca(OH)2}
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Ca(OH)2(s) <=> Ca^2+(ac) + 2OH-(ac)}\quad K_{ps} = \ce{[Ca^2+][OH^-]^2}$}	\\
+			\midrule
+										&	[\ce{Ca^2+}]	&	[\ce{OH-}]	\\
+			\midrule
+			Solubilidad~(\si{\Molar})	&	$s$				&	$2s$
+		\end{tabular}
+	\end{center}
+	$$
+		 K_{ps} = \overbrace{[\ce{Ca^2+}]}^s\overbrace{[\ce{OH-}]^2}^{(2s)^2 = 4s^2} = 4s^3\Leftrightarrow s = \sqrt[3]{\frac{K_{ps}}{4}}\Rightarrow s = \sqrt[3]{\frac{\num{5,02e-6}}{4}} = \SI{,01079}{\Molar}
+	$$
+	\structure{¿Qué es la solubilidad molar?} Es la concentración molar máxima a la que puede llegar una sal, óxido o hidróxido en un disolvente antes de comenzar a precipitar. Calculamos el n"o de moles que tenemos disueltos en \SI{5}{\liter} con ella.
+	$$
+		M = \frac{n}{V}\Rightarrow n = M\vdot V\Rightarrow n_{\text{soluble}} = \SI{,01079}{\mol\per\cancel\liter}\vdot\SI{5}{\cancel\liter} = \SI{,05393}{\mol}
+	$$
+	\structure{Masa disuelta:}
+	$$
+		n = \frac{m}{Mm}\Rightarrow m_{disuelta} = \SI{,05393}{\cancel\mol}\vdot\SI{74,09}{\gram\per\cancel\mol} = \SI{3,9959}{\gram}
+	$$
+	\structure{$\boldmath m_T = m_{\text{disuelta}} + m_p$:}\qquad\qquad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m_T = \SI{3,9959}{\gram} + \SI{1,0}{\gram} = \SI{4,9959}{\gram}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): ¿\SI{4,9959}{\gram} se disolverán en \SI{20}{\liter} de agua?}
+	\structure{Calculamos concentración hipotética:}
+	$$
+		n = \frac{m}{Mm}\Rightarrow n = \frac{\SI{4,9959}{\cancel\gram}}{\SI{74,09}{\cancel\gram\per\mol}} = \SI{,06743}{\mol};\quad M = \frac{n}{V}\Rightarrow [\ce{Ca(OH)2}] = \frac{\SI{,06743}{\mol}}{\SI{20}{\liter}} = \SI{3,371e-3}{\Molar}
+	$$
+	\structure{Expresamos el producto iónico ($Q_{ps}$) para nuestra reacción:} $Q_{ps} = [\ce{Ca^2+}]_{\text{no eq}}\vdot[\ce{OH-}]^2_{\text{no eq}}$
+	\structure{Usamos la estequiometría para averiguar la concentración de no equilibrio de los iones:}
+	\begin{center}
+		\begin{tabular}{SSS}
+			\multicolumn{3}{r}{\ce{Ca(OH)2(s) <=> Ca^2+(ac) + 2OH-(ac)}}	\\
+			\midrule
+			{[\ce{Ca(OH)2}]~(\si{\Molar})}	&	{[\ce{Ca^2+}]~(\si{\Molar})}	&	{[\ce{OH-}]~(\si{\Molar})}	\\
+			\midrule
+			3,371e-3						&	3,371e-3						&	6,743e-3
+		\end{tabular}
+	\end{center}
+	\structure{Calculamos $\mathbf Q_{ps}$ y comparamos con $\mathbf K_{ps}$:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{Q_{ps} = \num{3,371e-3}\times (\num{6,743e-3})^2 = \num{1.533e-07} < K_{ps} = \num{5,02e-6}}
+	$$
+	\begin{center}
+		\myovalbox{\color{yellow}\textbf{NO PRECIPITA}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): ¿\SI{4,9959}{\gram} se disolverán a pH \num{10} en \SI{5}{\liter}?}
+	\structure{El producto iónico ($Q_{ps}$) para nuestra reacción:} $Q_{ps} = [\ce{Ca^2+}]_{\text{no eq}}\vdot[\ce{OH-}]^2_{\text{no eq}}$
+	\structure{Disolver \SI{4,9959}{\gram} a pH 10 implica dos cosas:}
+	\begin{itemize}
+		\item El n"o de moles de \ce{Ca^2+} que se corresponden con \SI{4,9959}{\gram} de \ce{Ca(OH)2} son (ya calculado anteriormente): $n(\ce{Ca^2+}) = \frac{\SI{4,9959}{\cancel\gram}}{\SI{74,09}{\cancel\gram\per\mol}} = \SI{,06743}{\mol}$. En este apartado volvemos a tener las condiciones iniciales de volumen (\SI{5}{\liter}). Por tanto, tendremos $[\ce{Ca^2+}] = \SI{,06743}{\mol}/\SI{5}{\liter} = \SI{,013486}{\Molar}$.
+		\item La concentración de \ce{OH-} viene dada por el pH-metro. En consecuencia:
+			$$
+				\pOH = 14-\pH\Rightarrow[\ce{OH-}] = 10^{14-\pH}\;\si{\Molar\Rightarrow}[\ce{OH-}] = \SI{e-4}{\Molar}
+			$$
+	\end{itemize}
+	\structure{Calculamos $\mathbf Q_{ps}$ y comparamos con $\mathbf K_{ps}$:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{Q_{ps} = \num{,013486}\times (\num{e-4})^2 = \num{1,34860e-10} < K_{ps} = \num{5,02e-6}}
+	$$
+	\begin{center}
+		\myovalbox{\color{yellow}\textbf{NO PRECIPITA}}
+	\end{center}
+\end{frame}

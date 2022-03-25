@@ -1,0 +1,143 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_el_pH_de_una_disolucion_0.1M_ac_acetico_y_0.1M_en_ácido_propanoico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del enunciado}
+	{\Large \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item ¿pH?
+	\end{enumerate}}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_a(\ce{CH3COOH}) = \num{1,8e-5}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{CH3COOH}]_0 = \SI{,1}{\Molar}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{K_a(\ce{CH3CH2COOH}) = \num{1,4e-5}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{[\ce{CH3CH2COOH}]_0 = \SI{,1}{\Molar}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): análisis de la disociación simultánea de los dos ácidos}
+	\begin{block}{Disociación de \ce{CH3COOH} con concentración \SI{,1}{\Molar}}
+		$$
+			\ce{CH3COOH(ac) <=> CH3COO-(ac) + H+(ac)}\quad K_a=\frac{[\ce{CH3COO-}]\vdot[\ce{H+}]}{[\ce{CH3COOH}]}=\num{1,8e-5}
+		$$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				Estado     & [\ce{CH3COOH}] (\si{\Molar}) & [\ce{CH3COO-}] (\si{\Molar}) & [\ce{H+}] (\si{\Molar}) \\
+				\midrule
+				Inicial    & $[\ce{CH3COOH}]_0=\num{,1}$ & 0                             & $y$                     \\
+				Equilibrio & $[\ce{CH3COOH}]_0-x$        & $x$                           & $x+y$                   \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Desconocemos la disociación de los dos ácidos, que afecta a los dos equilibrios simultáneamente. Por tanto, $[\ce{H+}]_{\text{total}}=x+y$.
+	\end{block}
+	\visible<2->{
+			\begin{alertblock}{Disociación de \ce{CH3CH2COOH} con concentración \SI{,1}{\Molar}}
+				$$
+					\ce{CH3CH2COOH(ac) <=> CH3CH2COO-(ac) + H+(ac)}\quad K_a=\frac{[\ce{CH3CH2COO-}]\vdot[\ce{H+}]}{[\ce{CH3CH2COOH}]}=\num{1,4e-5}
+				$$
+				\begin{center}
+					\begin{tabular}{cccc}
+						\toprule
+						Estado     & [\ce{CH3CH2COOH}] (\si{\Molar}) & [\ce{CH3CH2COO-}] (\si{\Molar}) & [\ce{H+}] (\si{\Molar}) \\
+						\midrule
+						Inicial    & $[\ce{CH3CH2COOH}]_0=\num{,1}$ & 0                             & $x$                     \\
+						Equilibrio & $[\ce{CH3CH2COOH}]_0-y$        & $y$                           & $x+y$                   \\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+			\end{alertblock}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de pH de dos ácidos débiles simultáneamente}
+	\structure{Construimos el sistema de ecuaciones usando las $K_a$ y operamos:}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\begin{aligned}
+					K_a(\ce{CH3COOH})    &= \frac{[\ce{CH3COO-}]\vdot[\ce{H+}]}{[\ce{CH3COOH}]}=\num{1,8e-5}\\
+					K_a(\ce{CH3CH2COOH}) &= \frac{[\ce{CH3CH2COO-}]\vdot[\ce{H+}]}{[\ce{CH3CH2COOH}]}=\num{1,4e-5}
+				\end{aligned}
+			$$
+		\onslide<2>
+			\structure{Suponemos que la disociación es mucho menor que las concentraciones formales en ambos casos} a la vista de las dos $K_a$ ($[\text{ácido}]\approx[\text{ácido}]_0$)
+			$$
+				\begin{aligned}
+					K_a(\ce{CH3COOH})    &= \frac{\overbrace{[\ce{CH3COO-}]}^x   \vdot\overbrace{[\ce{H+}]}^{x+y}}{\underbrace{[\ce{CH3COOH}]_0}_{\num{,1}}}   =\num{1,8e-5}\\
+					K_a(\ce{CH3CH2COOH}) &= \frac{\overbrace{[\ce{CH3CH2COO-}]}^y\vdot\overbrace{[\ce{H+}]}^{x+y}}{\underbrace{[\ce{CH3CH2COOH}]_0}_{\num{,1}}}=\num{1,4e-5}
+				\end{aligned}
+			$$
+		\onslide<3>
+			$$
+				\begin{aligned}
+					\frac{x\vdot(x+y)}{\num{,1}} &= \num{1,8e-5}\Rightarrow x^2 + xy -\num{1,8e-6} = 0\\
+					\frac{y\vdot(x+y)}{\num{,1}} &= \num{1,4e-5}\Rightarrow y^2 + xy -\num{1,4e-6} = 0\Rightarrow x = \frac{\num{1,4e-6}-y^2}{y}
+				\end{aligned}
+			$$
+		\onslide<4>
+			Se ha despejado $x$ en la segunda ecuación. La sustituimos en la primera:
+			$$
+				\overbrace{x^2}^{\left(\frac{\num{1,4e-6}-y^2}{y}\right)^2} + \underbrace{x}_{\frac{\num{1,4e-6}-y^2}{y}}y -\num{1,8e-6} = 0
+			$$
+		\onslide<5>
+			Se ha despejado $x$ en la segunda ecuación. La sustituimos en la primera:
+			$$
+				\left(\frac{\num{1,4e-6}-y^2}{y}\right)^2 + \frac{\num{1,4e-6}-y^2}{\cancel{y}}\vdot\cancel{y} -\num{1,8e-6} = 0
+			$$
+		\onslide<6>
+			$$
+				\frac{{\left(\num{1,4e-6}\right)}^2 -2\vdot\num{1,4e-6}\vdot y^2 +y^4}{y^2} + \num{1,4e-6}-y^2 -\num{1,8e-6} = 0
+			$$
+		\onslide<7>
+			$$
+				y^2\vdot\left(\frac{\num{1,96e-12} -2\vdot\num{1,4e-6}y^2 +y^4}{y^2} + \num{1,4e-6}-y^2 -\num{1,8e-6}\right) = y^2\vdot 0
+			$$
+		\onslide<8>
+			$$
+				\cancel{y^2}\vdot\frac{\num{1,96e-12} -2\vdot\num{1,4e-6}y^2 +y^4}{\cancel{y^2}} + \num{1,4e-6}y^2-y^4 -\num{1,8e-6}y^2 = 0
+			$$
+		\onslide<9>
+			$$
+				\num{1,96e-12} -\cancel{2}\vdot\num{1,4e-6}y^2 \cancel{+y^4} + \cancel{\num{1,4e-6}y^2} \cancel{-y^4} -\num{1,8e-6}y^2 = 0
+			$$
+		\onslide<10>
+			$$
+				\num{1,96e-12} -\num{1,4e-6}y^2 -\num{1,8e-6}y^2 = 0
+			$$
+		\onslide<11>
+			$$
+				-\num{3,2e-6}y^2 = -\num{1,96e-12}
+			$$
+		\onslide<12->
+			$$
+				y = +\sqrt{\frac{\num{1,96e-12}}{\num{3,2e-6}}} = [\ce{CH3CH2COO-}] = \SI{7,826e-4}{\Molar}
+			$$
+			$x$ se obtiene del despeje al principio de la resolución:
+			$$
+				x = [\ce{CH3COO-}] = \SI{,001006}{\Molar}
+			$$
+			$$
+				[\ce{H+}] = x + y = \SI{,001789}{\Molar}
+			$$
+	\end{overprint}
+	\visible<12->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\text{pH} = -\log(\num{,001789})=\num{2,75}}
+		$$
+				 }
+\end{frame}

@@ -1,0 +1,128 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_prepara_una_disolucion_reguladora_llevando_1mol_de_NH4Cl_y_1mol_de_NH3_a_un_litro/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{V_{dis} = \SI{1}{\liter}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{NH3}) = \SI{1}{\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n(\ce{NH4Cl}) = \SI{1}{\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): pH inicial}
+    \structure{A partir de la expresión derivada de la constante de equilibrio y suponiendo la disociación despreciable frente a las concentraciones iniciales:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \overbrace{pOH}^{pOH=14-pH} = pK_b + \log\frac{[\ce{NH4+}]}{[\ce{NH3}]}
+            $$
+        \onslide<2->
+            $$
+                pH = 14-pK_b + \log\frac{[\ce{NH3}]}{[\ce{NH4+}]}
+            $$
+    \end{overprint}
+    \visible<3->{
+        \structure{Como el volumen se mantiene constante, las concentraciones serán \SI{1}{\Molar} en ambos casos:}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{pH = 14-pK_b + \overbrace{\log\frac{[\ce{NH3}]}{[\ce{NH4+}]}}^{\log 1 = 0} = \SI{9,3}{}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{V_{dis} = \SI{1}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{V_{dis} = \text{constante}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{NH3}) = \SI{1}{\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n(\ce{NH4Cl}) = \SI{1}{\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n(\ce{NaOH}) = \SI{,2}{\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): pH después de añadir \SI{,2}{\mol} de \ce{NaOH}}
+    \structure{Reacción de neutralización:}
+    $$
+        \ce{NaOH(ac) + NH4+(ac) + Cl-(ac) -> NH3(ac) + NaCl(ac) + H2O(l)}
+    $$
+    \textbf{Se \underline{CONSUMEN} \SI{,2}{\mol} de \ce{NH4+}.}
+    \visible<2>{
+        \structure{Por tanto se consumen cationes de \ce{NH4+}. Suponemos que las disociaciones son despreciables frente a las concentraciones de \ce{NH3} y \ce{NH4+}:}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{pH = 14-pK_b + \log\overbrace{\frac{1+0,2}{1-0,2}}^{\frac{3}{2}} = \num{9,4}}
+        $$
+        \begin{center}
+            {\Large \textbf{¿Por qué prácticamente no cambia el pH?}}
+        \end{center}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (c)}
+    \begin{center}
+        {\huge \textbf{¿pH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{V_{dis} = \SI{1}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{V_{dis} = \text{constante}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{NH3}) = \SI{1}{\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_b(\ce{NH3}) = \SI{1,8e-5}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n(\ce{NH4Cl}) = \SI{1}{\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n(\ce{HCl}) = \SI{,5}{\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+\frametitle{\ejerciciocmd}
+\framesubtitle{Resolución (\rom{3}): pH después de añadir \SI{,5}{\mol} de \ce{HCl}}
+\structure{Reacción de neutralización:}
+$$
+\ce{HCl(ac) + NH3(ac) -> NH4+(ac) + Cl-(ac)}
+$$
+\textbf{Se \underline{CONSUMEN} \SI{,5}{\mol} de \ce{NH3}.}
+\visible<2>{
+    \structure{Por tanto se consumen moléculas de \ce{NH3}. Suponemos que las disociaciones son despreciables frente a las concentraciones de \ce{NH3} y \ce{NH4+}:}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{pH = 14-pK_b + \log\overbrace{\frac{1-0,5}{1+0,5}}^{\frac{1}{3}} = \num{8,8}}
+    $$
+}
+\end{frame}

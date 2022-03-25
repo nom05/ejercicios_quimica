@@ -1,0 +1,53 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/la_fem_de_una_pila_formada_por_dos_electrodos_de_H2_es_0.19V/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\mathrm{pH}_{\text{ánodo}}=\mathrm{pH}_A$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HCl}]=\SI{,1}{\Molar}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinar $\mathrm{pH}$ del cátodo}
+	\structure{$\mathrm{pH}$ del cátodo (ácido fuerte):}\quad$[\ce{HCl}]=[\ce{H+}]_{\text{cátodo}}=[\ce{H+}]_C=\SI{,1}{\Molar}\Rightarrow\mathrm{pH}_C=1$
+	\structure{Reacción de oxidación-reducción:}
+	\begin{center}
+		\begin{tabular}{lcr}
+			S. oxidación (ánodo): & \ce{H2(g) -> 2H+(ac) + \cancel{2e-}} & $\varepsilon^0_{\text{ox}}=\SI{,0}{\volt}$\\
+			S. reducción (cátodo): & \ce{2H+(ac) + \cancel{2e-} -> H2(g)} & $\varepsilon^0_{\text{red}}=\SI{,0}{\volt}$\\
+			\midrule
+			Reacción global: & \ce{$\underset{\text{cátodo}~(C)}{\ce{2H+(ac)}}$ + H2(g) -> $\underset{\text{ánodo}~(A)}{\ce{2H+(ac)}}$ + H2(g)} & $\varepsilon^0_{\text{total}}=\SI{,0}{\volt}$\\
+		\end{tabular}				
+	\end{center}
+	\begin{center}
+		\textbf{(Suponemos que \ce{H2} siempre a $P$ constante \SI{1}{\atm})}
+	\end{center}
+	\structure{Aplicamos la ecuación de Nernst usando:}\quad$n=2$; $Q=\frac{[\ce{H+}]^2_A}{[\ce{H+}]^2_C}$; $\varepsilon^0=\SI{0}{\volt}$; $\varepsilon=\SI{,19}{\volt}$
+	$$
+		\varepsilon=\cancelto{0}{\varepsilon^0}-\frac{\num{,0592}}{\underbrace{n}_2}\log\left(\frac{[\ce{H+}]^2_A}{[\ce{H+}]^2_C}\right)\Rightarrow
+		\varepsilon=-\frac{\num{,0592}}{2}\log\left(\frac{[\ce{H+}]_A}{[\ce{H+}]_C}\right)^2\Rightarrow
+	$$
+	$$
+		\varepsilon=\frac{\num{,0592}}{\cancel{2}}\cdot\cancel{2}\cdot\left[-\log\left(\frac{[\ce{H+}]_A}{[\ce{H+}]_C}\right)\right]\Rightarrow
+		\varepsilon=\num{,0592}\cdot\left[-\log[\ce{H+}]_A+\log[\ce{H+}]_C\right];\qquad(\mathrm{pH}=-\log[\ce{H+}])\Rightarrow
+	$$
+	$$
+		\frac{\varepsilon}{\num{,0592}}=\mathrm{pH}_A-\mathrm{pH}_C\Rightarrow
+		\mathrm{pH}_A=\overbrace{\mathrm{pH}_C}^1+\frac{\overbrace{\varepsilon}^{\num{,19}}}{\num{,0592}}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\mathrm{pH}_{\text{ánodo}}=\num{4,21}}
+	\end{center}
+
+\end{frame}

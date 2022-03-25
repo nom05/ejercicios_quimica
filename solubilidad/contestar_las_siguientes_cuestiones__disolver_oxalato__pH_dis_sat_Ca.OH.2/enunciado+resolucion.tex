@@ -1,0 +1,161 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/contestar_las_siguientes_cuestiones__disolver_oxalato__pH_dis_sat_Ca.OH.2/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (a) del problema}
+    \begin{center}
+        {\Large \textbf{¿$m(\ce{CaC2O4})$}?}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{CaC2O4}) = \SI{2,5e-9}{}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V = \SI{1}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{CaC2O4}) = \SI{128,10}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{Disolución saturada}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): masa de oxalato para \SI{1}{\liter} de disolución saturada}
+    \structure{Reacción de disociación:} \ce{CaC2O4(s) <=> Ca^{2+}(ac) + C2O4^{2-}(ac)}\\[.5cm]
+    \visible<2->{
+        \begin{overprint}
+            \onslide<2>
+                \begin{center}
+                    \begin{tabular}{cccc}
+                        \toprule
+                        Estado       & {[\ce{CaC2O4}] (\si{\Molar})}         & {[\ce{Ca^2+}] (\si{\Molar})}          & {[\ce{C2O4^2-}] (\si{\Molar})}         \\
+                        \midrule
+                        Inicial      & $[\ce{CaC2O4(s)}]_0$   & 0   & 0   \\
+                        Equilibrio   & $[\ce{CaC2O4(s)}]_0-s$ & $s$ & $s$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<3->
+                \begin{center}
+                    \begin{tabular}{cccc}
+                        \toprule
+                            Estado       & {[\ce{CaC2O4}] (\si{\Molar})}         & {[\ce{Ca^2+}] (\si{\Molar})}          & {[\ce{C2O4^2-}] (\si{\Molar})}         \\
+                        \midrule
+                            Inicial      & $[\ce{CaC2O4(s)}]_0$   & 0   & 0   \\
+                            Equilibrio   & $[\ce{CaC2O4(s)}]_0-s$ & $s$ & $s$ \\
+                            Eq. dis. sat & 0                      & $s$ & $s$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}    
+        \end{overprint}
+                }
+        \visible<4->{
+            \structure{En disolución saturada:} $Q = K_{ps}$
+            $$
+                Q = K_{ps} = [\ce{Ca^{2+}}][\ce{C2O4^{2-}}] = s^2\Rightarrow s = \sqrt{K_{ps}}
+            $$
+                    }
+        \visible<5->{
+            \begin{overprint}
+                \onslide<5>
+                    $$
+                        s = [\ce{CaC2O4}] = \frac{\overbrace{n(\ce{CaC2O4})}^{n=\frac{m}{Mm}}}{V}
+                    $$
+                \onslide<6>
+                    $$
+                        s = [\ce{CaC2O4}] = \frac{m(\ce{CaC2O4})}{Mm(\ce{CaC2O4})\vdot V}
+                    $$
+                \onslide<7>
+                    $$
+                        m(\ce{CaC2O4}) = 
+                        \underbrace{s}_{s = \sqrt{K_{ps}}}\vdot Mm(\ce{CaC2O4})\vdot V 
+                    $$
+                \onslide<8>
+                    $$
+                        m(\ce{CaC2O4}) = 
+                        \sqrt{K_{ps}}\vdot Mm(\ce{CaC2O4})\vdot V 
+                    $$
+                \onslide<9->
+                    $$
+                        m(\ce{CaC2O4}) = 
+                        \sqrt{\SI{2,5e-9}{}}\si{\cancel\mol\per\cancel\liter}\vdot\SI{128,10}{\gram\per\cancel\mol}\vdot\SI{1}{\cancel\liter} 
+                    $$
+            \end{overprint}
+                    }
+        \visible<10>{
+            $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{CaC2O4}) = \SI{6,4e-3}{\gram}}
+            $$
+                    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del apartado (b) del problema}
+    \begin{center}
+        {\Large \textbf{¿pH?}}
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{s(\ce{Ca(OH)2}) = \SI{,173}{\gram\per 100\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{Mm(\ce{Ca(OH)2}) = \SI{74,09}{\gram\per\mol}}\\[.4cm]
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{Disolución saturada}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): pH de disolución saturada de \ce{Ca(OH)2}}
+    \structure{Reacción de disociación:} \ce{Ca(OH)2(s) <=> Ca^{2+}(ac) + 2OH-(ac)}\\[.5cm]
+    \visible<2->{
+        \begin{overprint}
+            \onslide<2>
+                \begin{center}
+                    \begin{tabular}{cccc}
+                        \toprule
+                            Estado       & {[\ce{Ca(OH)2}] (\si{\Molar})}         & {[\ce{Ca^2+}] (\si{\Molar})}          & {[\ce{OH-}] (\si{\Molar})}         \\
+                        \midrule
+                            Inicial      & $[\ce{Ca(OH)2(s)}]_0$   & 0   & 0   \\
+                            Equilibrio   & $[\ce{Ca(OH)2(s)}]_0-s$ & $s$ & $2s$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}
+            \onslide<3->
+                \begin{center}
+                    \begin{tabular}{cccc}
+                        \toprule
+                            Estado       & {[\ce{Ca(OH)2}] (\si{\Molar})}         & {[\ce{Ca^2+}] (\si{\Molar})}          & {[\ce{OH-}] (\si{\Molar})}         \\
+                        \midrule
+                            Inicial      & $[\ce{Ca(OH)2(s)}]_0$   & 0   & 0   \\
+                            Equilibrio   & $[\ce{Ca(OH)2(s)}]_0-s$ & $s$ & $2s$ \\
+                            Eq. dis. sat & 0                       & $s$ & $2s$ \\
+                        \bottomrule
+                    \end{tabular}
+                \end{center}    
+        \end{overprint}
+                }
+        \visible<4->{
+            \structure{En disolución saturada (Recordad que en este caso $Q\neq s^2$):} $Q = K_{ps}$
+            $$
+                Q = K_{ps} = [\ce{Ca^{2+}}][\ce{OH-}]^2 = 4s^3
+            $$
+                    }
+        \visible<5->{
+            \structure{Según estequiometría:} $\SI{1}{\mol}\text{ de }\ce{Ca^2+ ->} \SI{2}{\mol}\text{ de }\ce{OH-} \Rightarrow s \ce{->} 2s = [\ce{OH-}]$
+                    }
+        \visible<6->{
+            \begin{overprint}
+                \onslide<6>
+                    $$
+                        [\ce{OH-}] = 2\vdot\frac{\SI{,173}{\cancel\gram}}{\SI{100}{\cancel\milli\liter}}\vdot\frac{\SI{1000}{\cancel\milli\liter}}{\SI{1}{\liter}}\vdot\frac{\SI{1}{\mol}}{\SI{74,09}{\cancel\gram}} = 2\vdot\SI{,02335}{\Molar}\approx\SI{,04670}{\Molar}
+                    $$
+                \onslide<7>
+                    $$
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{pH = 14 + \log\num{,04670} = \num{12,67}}
+                    $$
+            \end{overprint}
+                    }
+\end{frame}

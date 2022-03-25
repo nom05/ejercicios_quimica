@@ -1,0 +1,102 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/en_el_interior_del_cuerpo_humano_el_ADN_se_metaboliza/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \textbf{\Large\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿$k(\SI{310,15}{\kelvin})$?
+        \item ¿$k(\SI{313,15}{\kelvin})$?
+        \item ¿\% a \SI{310,15}{\kelvin} si $t_{\rfrac{1}{2}}(\SI{313,15}{\kelvin})$?
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{Orden 1}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{E_a = \SI{420}{\kilo\joule}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{t_{\rfrac{1}{2}}(\SI{310,15}{\kelvin}) = \SI{1414}{\minute}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): determinación de la constante cinética}
+    \structure{Ecuación cinética:}
+    $$
+        v = k\vdot[A]
+    $$
+    \structure{Ecuación cinética integrada:}
+    $$
+        \ln(\frac{[A]}{[A]_0}) = -k\vdot t
+    $$
+    \structure{Tiempo de vida media:} $t_{\rfrac{1}{2}}\Rightarrow [A]=\SI{,5}{}[A]_0$
+    $$
+        \ln(\frac{1\vdot\cancel{[\ce{A}]_0}}{2\vdot\cancel{[\ce{A}]_0}}) = -k\vdot t_{\rfrac{1}{2}}\Rightarrow
+        \cancel{\ln({1})}-\ln({2}) = -k\vdot t_{\rfrac{1}{2}}\Rightarrow
+    $$
+    $$
+        \ln({2}) = k\vdot  t_{\rfrac{1}{2}}\Rightarrow
+         k = \frac{\ln({2})}{t_{\rfrac{1}{2}}}\Rightarrow
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{k =\frac{\ln({2})}{\SI{1414}{\minute}} = \SI{4,90e-4}{\per\minute\tothe{1}}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): determinación de la constante cinética a otra temperatura}
+    \structure{Ecuación de Arrhenius:}
+    $$
+        k = A\exp(\rfrac{-E_a}{RT})\Rightarrow\ln(k)=\ln(A)-\frac{E_a}{RT}
+    $$
+    \structure{Dividiendo la expresión a dos temperaturas:}
+    $$
+        \frac{k_1}{k_2} = \frac{\cancel{A}\cdot\exp(\rfrac{-E_a}{RT_1})}{\cancel{A}\cdot\exp(\rfrac{-E_a}{RT_2})}
+    $$
+    \structure{Tomando logaritmos naturales:}
+    $$
+        \ln(\frac{k_1}{k_2}) = -\frac{E_a}{RT_1}+\frac{E_a}{RT_2}\Leftrightarrow\ln(\frac{k_1}{k_2}) = \frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right)\Leftrightarrow
+        \ln(\frac{k_2}{k_1}) = \frac{E_a}{R}\left(\frac{T_2 - T_1}{T_2\vdot T_1}\right)
+    $$
+    \structure{Sustituyendo por los valores:}
+    $$
+        \ln(\frac{k(\SI{313,15}{\kelvin})}{k(\SI{310,15}{\kelvin})}) = \frac{\SI{420e3}{\cancel\joule}}{\SI{8,314}{\cancel\joule\per\mol\per\cancel\kelvin}}
+        \left(\frac{\SI{313,15}{\cancel\kelvin}-\SI{310,15}{\cancel\kelvin}}{\SI{313,15}{\cancel\kelvin}\vdot\SI{310,15}{\cancel\kelvin}}\right)
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{k(\SI{313,15}{\kelvin})=\SI{2,334e-3}{\per\minute}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): tanto por ciento de \ac{ADN} metabolizado para $t_{\rfrac{1}{2}}(\SI{313}{\kelvin})$ a \SI{310}{\kelvin}}
+    \structure{Anteriormente habíamos visto cómo determinar $k$ mediante $t_{\rfrac{1}{2}}$:}
+    $$
+        k_2 = \frac{\ln(2)}{t_{\rfrac{1}{2}}}\Rightarrow t_{\rfrac{1}{2}}=\frac{\ln(2)}{k_2}\Rightarrow t=\SI{297,01}{\minute}
+    $$
+    \alert{¡OJO!:} este $t$ no es $t_{\rfrac{1}{2}}$ para la temperatura \SI{310}{\kelvin}.
+    \structure{Recordemos la ecuación cinética integrada:}
+    $$
+        \ln(\frac{[A]}{[A]_0}) = -k(\SI{310,15}{\kelvin})\vdot t
+    $$
+    $$
+        \frac{\cancel{[A]_0}\vdot\alpha}{\cancel{[A]_0}}=\exp(-k(\SI{310,15}{\kelvin})\vdot t)
+    $$
+    $$
+        \alpha = \exp(-k(\SI{310,15}{\kelvin})\vdot t)
+    $$
+    $$
+        \alpha = \num{,8645}\Rightarrow \%~\text{restante de \ac{ADN}} = \alpha\cdot 100
+    $$
+    $$
+        \%~\text{restante de \ac{ADN}} = \SI{86,45}{\percent}
+    $$
+	$$
+	    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\%~\text{metabolizado de \ac{ADN}} = 100 - \num{86,45} = \SI{13,54}{\percent}}
+	$$
+\end{frame}

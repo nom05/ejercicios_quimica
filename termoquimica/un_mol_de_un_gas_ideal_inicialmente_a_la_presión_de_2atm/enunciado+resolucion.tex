@@ -1,0 +1,217 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/un_mol_de_un_gas_ideal_inicialmente_a_la_presión_de_2atm/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema (\rom{1})}
+	\textbf{¿$\Delta U\text{ (Energía interna)}$, $Q$, $W$?}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{n = \SI{1}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{C_p = \frac{5}{2}R}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{C_v = \frac{3}{2}R}
+	$$
+	\structure{Estado 1:}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{P_1=\SI{2}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V_1=\SI{25}{\liter}}
+		$$
+	\structure{Estado 2:}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P_2=\SI{2}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V_2=\SI{50}{\liter}}
+		$$
+	\structure{Estado 3:}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{P_3=\SI{1}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_3=\SI{25}{\liter}}
+		$$
+	\structure{Estado 4:}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{P_4=\SI{1}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{V_4=\SI{50}{\liter}}
+		$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema (\rom{2})}
+	\textbf{¿$\Delta U\text{ (Energía interna)}$, $Q$, $W$?}
+	\structure{Proceso \rom{1}:} \colorbox{green}{\color{white}\textbf{1}}\ce{->}\colorbox{blue}{\color{white}\textbf{2}}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta P_{\rom{1}}=\SI{0}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta V_{\rom{1}}=\SI{25}{\liter}}
+		$$
+	\structure{Proceso \rom{2}:} \colorbox{blue}{\color{white}\textbf{2}}\ce{->}\colorbox{orange}{\color{white}\textbf{4}}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta P_{\rom{2}}=\SI{-1}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta V_{\rom{2}}=\SI{0}{\liter}}
+		$$
+	\structure{Proceso \rom{3}:} \colorbox{green}{\color{white}\textbf{1}}\ce{->}\colorbox{red}{\color{white}\textbf{3}}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\Delta P_{\rom{3}}=\SI{-1}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\Delta V_{\rom{3}}=\SI{0}{\liter}}
+		$$
+	\structure{Proceso \rom{4}:} \colorbox{red}{\color{white}\textbf{3}}\ce{->}\colorbox{orange}{\color{white}\textbf{4}}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\Delta P_{\rom{4}}=\SI{0}{\atm}}\quad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\Delta V_{\rom{4}}=\SI{25}{\liter}}
+		$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de las temperaturas de los estados}
+	\structure{Usando la ecuación de los gases ideales:} $P\cdot V = n\cdot R\cdot T\Rightarrow T=\rfrac{P\cdot V}{n\cdot R}$
+	\begin{columns}
+		\column{.45\textwidth}
+			\structure{Estado 1}
+				$$
+					T_1=\frac{\overbrace{P_1}^{\SI{2}{\atm}}\cdot\overbrace{V_1}^{\SI{25}{\liter}}}{\underbrace{n}_{\SI{1}{\mol}}\cdot R}=\frac{50}{R}~\si{\kelvin}
+				$$
+			\structure{Estado 2}
+				$$
+					T_2=\frac{\overbrace{P_2}^{\SI{2}{\atm}}\cdot\overbrace{V_2}^{\SI{50}{\liter}}}{\underbrace{n}_{\SI{1}{\mol}}\cdot R}=\frac{100}{R}~\si{\kelvin}
+				$$
+		\column{.45\textwidth}
+			\structure{Estado 3}
+				$$
+					T_3=\frac{\overbrace{P_3}^{\SI{1}{\atm}}\cdot\overbrace{V_3}^{\SI{25}{\liter}}}{\underbrace{n}_{\SI{1}{\mol}}\cdot R}=\frac{25}{R}~\si{\kelvin}
+				$$
+			\structure{Estado 4}
+				$$
+					T_4=\frac{\overbrace{P_4}^{\SI{1}{\atm}}\cdot\overbrace{V_4}^{\SI{50}{\liter}}}{\underbrace{n}_{\SI{1}{\mol}}\cdot R}=\frac{50}{R}~\si{\kelvin}
+				$$
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): energía interna, calor y trabajo de cada proceso}
+	\structure{Partiendo de la expresión:} $\Delta U=Q+W$
+	\visible<1->{
+		\structure{Proceso \rom{1}:} (presión constante)
+			$$
+				\Delta U_{\rom{1}} = Q_P + W_P = \overbrace{n\cdot C_P\cdot\Delta T}^{Q_P}  - \overbrace{P\cdot\Delta V_{\rom{1}}}^{W_P}
+			$$
+			\begin{overprint}
+				\onslide<1>
+					$$
+						\Delta U_{\rom{1}} = \SI{1}{\cancel\mol}\cdot\frac{5}{2}\cancel{R}~\si{\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\left(\frac{100}{\cancel{R}}-\frac{50}{\cancel{R}}\right)\si{\cancel\kelvin}
+						-\SI{2}{\atm}\cdot\SI{25}{\liter}
+					$$
+				\onslide<2->
+					$$
+						\Delta U_{\rom{1}} = \overbrace{\SI{125}{\atm\liter}}^{Q_{\rom{1}}}-\overbrace{\SI{50}{\atm\liter}}^{W_{\rom{1}}} = \SI{75}{\cancel\atm\cancel\liter}\cdot\frac{\SI{8,314}{\joule\per\cancel\mol\per\cancel\kelvin}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}}
+					$$
+			\end{overprint}
+				}
+	\visible<3->{
+		\structure{Proceso \rom{2}:} (volumen constante)
+			$$
+				\Delta U_{\rom{2}} = Q_V + W_V = \overbrace{n\cdot C_V\cdot\Delta T}^{Q_V}  - \cancelto{W_V=0}{P\cdot\Delta V_{\rom{2}}}
+			$$
+				\begin{overprint}
+					\onslide<3>
+						$$
+							\Delta U_{\rom{2}} = \SI{1}{\cancel\mol}\cdot\frac{3}{2}\cancel{R}~\si{\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\left(\frac{50}{\cancel{R}}-\frac{100}{\cancel{R}}\right)\si{\cancel\kelvin}
+						$$
+					\onslide<4>
+						$$
+							\Delta U_{\rom{2}} = \overbrace{\SI{-75}{\atm\liter}}^{Q_{\rom{2}}} = \SI{-75}{\cancel\atm\cancel\liter}\cdot\frac{\SI{8,314}{\joule\per\cancel\mol\per\cancel\kelvin}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}}
+						$$
+				\end{overprint}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): energía interna, calor y trabajo de cada proceso}
+	\structure{Partiendo de la expresión:} $\Delta U=Q+W$
+	\visible<1->{
+		\structure{Proceso \rom{3}:} (volumen constante)
+			$$
+				\Delta U_{\rom{3}} = Q_V + W_V = \overbrace{n\cdot C_V\cdot\Delta T}^{Q_V}  - \cancelto{W_V=0}{P\cdot\Delta V_{\rom{2}}}
+			$$
+			\begin{overprint}
+				\onslide<1>
+					$$
+						\Delta U_{\rom{3}} = \SI{1}{\cancel\mol}\cdot\frac{3}{2}\cancel{R}~\si{\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\left(\frac{25}{\cancel{R}}-\frac{50}{\cancel{R}}\right)\si{\cancel\kelvin}
+					$$
+				\onslide<2->
+					$$
+						\Delta U_{\rom{3}} = \overbrace{\frac{3}{2}\times\SI{-25}{\atm\liter}}^{Q_{\rom{3}}} = -\frac{75}{2}\si{\cancel\atm\cancel\liter}\cdot\frac{\SI{8,314}{\joule\per\cancel\mol\per\cancel\kelvin}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}}
+					$$
+			\end{overprint}
+				}
+	\visible<3->{
+		\structure{Proceso \rom{4}:} (presión constante)
+			$$
+				\Delta U_{\rom{4}} = Q_P + W_P = \overbrace{n\cdot C_P\cdot\Delta T}^{Q_P}  - - \overbrace{P\cdot\Delta V_{\rom{4}}}^{W_P}
+			$$
+			\begin{overprint}
+				\onslide<3>
+					$$
+						\Delta U_{\rom{4}} = \SI{1}{\cancel\mol}\cdot\frac{5}{2}\cancel{R}~\si{\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\left(\frac{50}{\cancel{R}}-\frac{25}{\cancel{R}}\right)\si{\cancel\kelvin}
+-\SI{1}{\atm}\cdot\SI{25}{\liter}
+					$$
+				\onslide<4>
+				$$
+						\Delta U_{\rom{4}} = \overbrace{\frac{125}{2}\si{\atm\liter}}^{Q_{\rom{4}}}-\overbrace{\SI{25}{\atm\liter}}^{W_{\rom{4}}} = \frac{75}{2}\si{\cancel\atm\cancel\liter}\cdot\frac{\SI{8,314}{\joule\per\cancel\mol\per\cancel\kelvin}}{\SI{,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}}
+				$$
+			\end{overprint}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): energía interna, calor y trabajo de los apartados a y b}
+	\structure{Apartado a:} Suma de procesos \rom{1} y \rom{2}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta U_{\text{apartado a}}} = \Delta U_{\rom{1}} + \Delta U_{\rom{2}}\Rightarrow\Delta U_{\text{apartado a}}=75\cdot\frac{8,314}{0,082}\si{\joule}-75\cdot\frac{8,314}{0,082}\si{\joule}=\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\SI{0}{\joule}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{Q_{\text{apartado a}}} = (125-75)\cdot\frac{8,314}{0,082}\si{\joule} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\SI{5069,5}{\joule}}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{W_{\text{apartado a}}} = -50\cdot\frac{8,314}{0,082}\si{\joule} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\SI{-5069,5}{\joule}}
+		$$
+	\visible{
+		\structure{Apartado b:} Suma de procesos \rom{3} y \rom{4}
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\Delta U_{\text{apartado b}}} = \Delta U_{\rom{3}} + \Delta U_{\rom{4}}\Rightarrow\Delta U_{\text{apartado b}}=-\frac{75}{2}\cdot\frac{8,314}{0,082}\si{\joule}+\frac{75}{2}\cdot\frac{8,314}{0,082}\si{\joule}=\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{0}{\joule}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Q_{\text{apartado a}}} = \left(-\frac{75}{2}+\frac{125}{2}\right)\cdot\frac{8,314}{0,082}\si{\joule} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{2534,8}{\joule}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{W_{\text{apartado a}}} = -25\cdot\frac{8,314}{0,082}\si{\joule} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\SI{-2534,8}{\joule}}
+			$$
+			}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): energía interna, calor y trabajo del apartado c}
+	\structure{Condiciones de este apartado:} $\Delta T=0$ y $\Delta P=0$
+    $$
+        PV=nRT\Rightarrow P\mathrm{d}V=nR\mathrm{d}T
+    $$
+    Si $\Delta T = 0$ entonces también $\mathrm{d}T=0$ si el proceso es reversible:
+	\begin{block}<2->{Proceso reversible}
+        $$
+            \mathrm{d}U = n\cdot c_V\mathrm{d}T - P\mathrm{d}V = \underbrace{\cancelto{0}{n\cdot c_V\mathrm{d}T}}_{Q=0} - \underbrace{\cancelto{0}{n\cdot R\mathrm{d}T}}_{W=0}\Rightarrow\Delta U=\SI{0}{\joule}
+        $$
+	\end{block}
+    \begin{alertblock}<3->{Proceso irreversible}
+        $$
+            \mathrm{d}U=\cancelto{Q=0}{n\cdot c_V\mathrm{d}T} - P\mathrm{d}V\Rightarrow\Delta U=-P\int\mathrm{d}V\Rightarrow \Delta U=W=\SI{-1}{\atm}\cdot\left(50-25\right)\si{\liter}=\SI{-2534,8}{\joule}
+        $$
+    \end{alertblock}
+\end{frame}

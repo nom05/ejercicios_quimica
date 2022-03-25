@@ -1,0 +1,57 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/si_se_dispone_de_un_litro_de_una_disolucion_de_AgNO3/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$m(\ce{NaCl})$ añadida?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{V=\SI{1}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{AgNO3}]=\SI{,1}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{Mm(\ce{NaCl})=\SI{58,44}{\gram\per\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{m(\ce{AgCl})=\SI{1e-4}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{K_{ps}(\ce{AgCl})=\num{1,7e-10}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{Mm(\ce{AgCl})=\SI{143,321}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): masa de \ce{NaCl} añadida}
+	$$
+		M=\frac{n}{V}\Rightarrow n=M\cdot V\Rightarrow n_{\text{inicial}}(\ce{Ag+})=\SI{,1}{\mol\per\cancel\liter}\cdot\SI{1}{\liter}
+	$$
+	\structure{La $[\ce{Ag+}]_{\text{disuelto}}$ disminuye al precipitar \SI{1e-4}{\gram} de \ce{AgCl}:}
+	$$
+		n=\frac{m}{Mm}\Rightarrow n_{\text{precipitado}}(\ce{AgCl})=\frac{\SI{1e-4}{\cancel\gram}}{\SI{143,321}{\cancel\gram\per\mol}}=\SI{6,977e-7}{\mol}
+	$$
+	$$
+		n_{\text{disuelto}}(\ce{Ag+})=\SI{,1}{\mol}-\SI{6,977e-7}{\mol}=\SI{,0999993}{\mol}\approx\SI{,1}{\mol}\Rightarrow[\ce{Ag+}]_{\text{disuelto}}=\SI{,1}{\Molar}
+	$$
+		\structure{Equilibrio de solubilidad:}
+		\begin{center}
+			\ce{AgCl(s) <=> $\underset{s^\prime+\num{,1}\approx\num{,1}}{\ce{Ag+(ac)}}$ + $\underset{s^\prime}{\ce{Cl-(ac)}}$}
+		\end{center}
+		$$
+			\overbrace{K_{ps}(AgCl)}^{\num{1,7e-10}}=\underbrace{[\ce{Ag+}]}_{s^\prime+\num{,1}}\overbrace{[\ce{Cl-}]}^{s^\prime}\Rightarrow
+			\num{1,7e-10}=\overbrace{(s^\prime+\num{,1})}^{s^\prime+\num{,1}\approx\num{,1}}\vdot s^\prime\Rightarrow
+			\num{1,7e-10}=\num{,1}\vdot s^\prime
+		$$
+		$$
+			s^\prime=\SI{1,7e-9}{\Molar}=[\ce{Cl-}]_{\text{disuelto}}\Rightarrow n(\ce{Cl-})=\SI{1,7e-9}{\mol\per\cancel\liter}\vdot\SI{1}{\cancel\liter}
+		$$
+		$$
+			n_{\text{total}}(\ce{AgCl})=\underbrace{\SI{6,977e-7}{\mol}}_{\text{precipitado}}+\underbrace{\SI{1,7e-9}{\mol}}_{\text{disuelto}}=\SI{6,994e-7}{\mol}=n_{\text{totales}}(\ce{NaCl})
+		$$
+		$$
+			\overbrace{m_{\text{total}}(\ce{NaCl})}^{m=n\cdot Mm} = \SI{6,994e-7}{\cancel\mol}\cdot\SI{58,4428}{\gram\per\cancel\mol}=\SI{4,09e-5}{\gram}=
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{m(\ce{NaCl})=\SI{,04}{\milli\gram}}
+		$$
+\end{frame}

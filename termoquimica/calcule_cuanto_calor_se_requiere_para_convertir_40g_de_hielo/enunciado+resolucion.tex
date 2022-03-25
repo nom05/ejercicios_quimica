@@ -1,0 +1,148 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/calcule_cuanto_calor_se_requiere_para_convertir_40g_de_hielo/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge $Q_{\text{absorbido}}$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=black]{m(\ce{H2O})=\SI{40}{\gram}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{c_e(\ce{H2O(s)})=c_e(\ce{H2O(g)})=\SI{,5}{\calorie\per\gram\per\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{c_e(\ce{H2O(l)})=\SI{1,0}{\calorie\per\gram\per\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{T_{\text{inicial}}=\SI{-10}{\celsius}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{T_{\text{fus}}=\SI{0}{\celsius}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{T_{\text{vap}}=\SI{100}{\celsius}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{T_{\text{final}}=\SI{120}{\celsius}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\Delta H^o_{\text{fus}}=\SI{80}{\calorie\per\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\Delta H^o_{\text{vap}}=\SI{540}{\calorie\per\gram}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): esquema del proceso termodinámico y calor total}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Partimos del siguiente estado:}
+			$$
+				\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+					}
+			$$
+		\onslide<2>
+			\structure{Calentamos hasta la temperatura de fusión:}
+			$$
+				\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{10}{\celsius}$}]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+					}
+			$$
+		\onslide<3>
+			\structure{Proceso de fusión:}
+			$$
+				\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{10}{\celsius}$}]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{blue}{Q_2}$]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(l)}}$
+					}
+			$$
+		\onslide<4>
+			\structure{Calentamos hasta la vaporización:}
+				$$
+					\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{10}{\celsius}$}]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{blue}{Q_2}$]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{green}{Q_3}$][{$\Delta T_3=\SI{100}{\celsius}$}]
+						$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+					}
+				$$
+		\onslide<5>
+			\structure{Proceso de vaporización:}
+				$$
+					\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{10}{\celsius}$}]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{blue}{Q_2}$]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{green}{Q_3}$][{$\Delta T_3=\SI{100}{\celsius}$}]
+						$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{orange}{Q_4}$]
+						$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+					}
+				$$
+		\onslide<6>
+			\structure{Calentamos hasta la temperatura final:}
+				$$
+					\ce{
+						$\underset{\SI{-10}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{10}{\celsius}$}]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(s)}}$
+						->[$\textcolor{blue}{Q_2}$]
+						$\underset{\SI{0}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{green}{Q_3}$][{$\Delta T_3=\SI{100}{\celsius}$}]
+						$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+						->[$\textcolor{orange}{Q_4}$]
+%						$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+%						->[$Q_5$][{$\Delta T_5=\SI{20}{\celsius}$}]
+%						$\underset{\SI{120}{\celsius}}{\ce{H2O(g)}}$
+					}
+				$$
+				$$
+					\ce{
+						->[$\textcolor{orange}{Q_4}$]
+						$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+						->[$Q_5$][{$\Delta T_5=\SI{20}{\celsius}$}]
+						$\underset{\SI{120}{\celsius}}{\ce{H2O(g)}}$
+					}
+				$$
+	\end{overprint}
+	\visible<2->{
+		$$
+			\textcolor{red}{Q_1} = m\cdot c_e(\ce{H2O(s)})\cdot\Delta T_1\Rightarrow \textcolor{red}{Q_1} = \SI{40}{\cancel\gram}\cdot\SI{,5}{\calorie\per\cancel\gram\per\cancel\celsius}\cdot\SI{10}{\cancel\celsius} = \SI{200}{\calorie}
+		$$
+				}
+	\visible<3->{
+		$$
+			\textcolor{blue}{Q_2} =  \SI{80}{\calorie\per\cancel\gram}\cdot\SI{40}{\cancel\gram} = \SI{3200}{\calorie}
+		$$
+				}
+	\visible<4->{
+		$$
+			\textcolor{green}{Q_3} = m\cdot c_e(\ce{H2O(l)})\cdot\Delta T_3\Rightarrow \textcolor{green}{Q_3} = \SI{40}{\cancel\gram}\cdot\SI{1,0}{\calorie\per\cancel\gram\per\cancel\celsius}\cdot\SI{100}{\cancel\celsius} = \SI{4000}{\calorie}
+		$$
+				}
+	\visible<5->{
+		$$
+			\textcolor{orange}{Q_4} =  \SI{540}{\calorie\per\cancel\gram}\cdot\SI{40}{\cancel\gram} = \SI{21600}{\calorie}
+		$$
+				}
+	\visible<6->{
+		$$
+			Q_5 = m\cdot c_e(\ce{H2O(g)})\cdot\Delta T_5\Rightarrow Q_5 = \SI{40}{\cancel\gram}\cdot\SI{,5}{\calorie\per\cancel\gram\per\cancel\celsius}\cdot\SI{20}{\cancel\celsius} = \SI{400}{\calorie}
+		$$
+		$$
+			Q_{\text{total}} = \sum_{i=1}^5 Q_i = \SI{200}{\calorie}+\SI{3200}{\calorie}+\SI{4000}{\calorie}+\SI{21600}{\calorie}+\SI{400}{\calorie}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{Q_{\text{total}} = \SI{29400}{\calorie} = \SI{29,40}{\kilo\calorie}}
+				}
+\end{frame}

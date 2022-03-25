@@ -1,0 +1,66 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/a_una_disolucion_de_CuCl2_se_le_anhade_una_lamina_de_Zn/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿[\ce{Cu^{2+}}] y [\ce{Zn^{2+}}] en el equilibrio?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{CuCl2}]=[\ce{Cu^{2+}}]=\SI{,05}{\Molar}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Cu^{2+}}/\ce{Cu})=\SI{,34}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Zn^{2+}}/\ce{Zn})=\SI{-,76}{\volt}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de concentraciones en equilibrio}
+	\structure{Reacción de oxidación-reducción:}
+	{\small\begin{center}
+		\begin{tabular}{lcr}
+			S. oxidación (ánodo): & \ce{Zn -> Zn^{2+} + \cancel{2e-}} & $\varepsilon^0_{\text{ox}}=\SI{,76}{\volt}$\\
+			S. reducción (cátodo): & \ce{Cu^{2+} + \cancel{2e-} -> Cu} & $\varepsilon^0_{\text{red}}=\SI{,34}{\volt}$\\
+			\midrule
+			Reacción global: & \ce{Cu^{2+}(ac) + Zn(s) -> Cu(s) + Zn^{2+}(ac)}  & $\varepsilon^0_{\text{total}}=\SI{1,10}{\volt}$\\
+		\end{tabular}				
+	\end{center}}
+	\structure{Ecuación de \textbf{\underline{NERNST}} y cómo determinar $K$:}
+	{\small $$
+		\text{Si }\Delta G = 0\text{ (equilibrio), entonces }\Delta G = -n\vdot F\vdot\varepsilon=0\Rightarrow\varepsilon=0
+	$$
+	$$
+		\overbrace{\varepsilon}^{\varepsilon=0} = \varepsilon^0 - \frac{\num{,0592}}{n}\log{Q}\Rightarrow
+		\varepsilon^0 = \frac{\num{,0592}}{n}\log{K}
+	$$}
+	{\small siendo $n$ el número de electrones implicados en el proceso ($n=\num{2}$). $Q$ el cociente de las concentraciones (acuosos) y presiones (gases) de productos entre las de reactivos. $K$ es la constante de equilibrio:}
+	{\small $$
+		Q=\frac{[\ce{Zn^{2+}}]}{[\ce{Cu^{2+}}]};\qquad
+		K = \frac{[\ce{Zn^{2+}}]_{\text{eq}}}{[\ce{Cu^{2+}}]_{\text{eq}}}\Rightarrow
+		\SI{1,10}{\volt} = \frac{\num{,0592}}{2}\log(\frac{[\ce{Zn^2+}]_{\text{eq}}}{[\ce{Cu^2+}]_{\text{eq}}})
+	$$
+	$$
+		\frac{\overbrace{[\ce{Zn^{2+}}]}^{\cancelto{0}{[\ce{Zn^{2+}}]_0}+x}}{\underbrace{[\ce{Cu^{2+}}]}_{[\ce{Cu^{2+}}]_0-x}}=10^{\frac{\num{1,10}\cdot\num{2}}{\num{,0592}}}=\num{1,45e37}\Rightarrow
+		\frac{x}{\num{,05}-x}=\num{1,45e37}\Rightarrow x=\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Zn^{2+}}]\approx\SI{,05}{\Molar}}
+	$$}
+	\begin{multicols}{2}
+		{\small 
+			\begin{center}
+				\begin{tabular}{lcc}
+						(\si{\Molar})	& [\ce{Cu^2+}] 		& [\ce{Zn^2+}]		\\
+					\midrule
+						Inicial			& \num{,05}			& \num{0}			\\
+						Reaccionan		& $-x$				& $+x$				\\
+						Equilibrio		& $\num{,05}-x$		& $x$
+				\end{tabular}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{Cu^{2+}}]=\SI{3,44e-39}{\Molar}}
+			\end{center}
+		}
+	\end{multicols}
+\end{frame}

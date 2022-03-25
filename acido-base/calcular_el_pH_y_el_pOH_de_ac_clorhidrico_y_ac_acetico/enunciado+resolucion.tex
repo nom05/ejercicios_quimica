@@ -1,0 +1,102 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcular_el_pH_y_el_pOH_de_ac_clorhidrico_y_ac_acetico/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large \textbf{¿pH?}}
+        {\Large \textbf{¿pOH?}}
+    \end{center}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{HCl}] = \SI{,01}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{CH3COOH}] = \SI{,01}{\Molar}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\alpha(\ce{CH3COOH}) = \SI{4,45e-2}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): pH y pOH de disolución de ácido clorhídrico}
+    \structure{Disociación de ácido fuerte:} \underline{TOTAL} según reacción: \ce{HCl(ac) -> H+(ac) + Cl-(ac)}
+    \structure{NOTA:} volumen constante.
+    \begin{center}
+        \begin{tabular}{cSSS}
+            \toprule
+                Estado  & {[\ce{HCl}] (\si{\Molar})}         & {[\ce{H+}] (\si{\Molar})}          & {[\ce{Cl-}] (\si{\Molar})}         \\
+            \midrule
+                Inicial & \SI{,01}{} & 0                & 0                \\
+                Final   & 0                & \SI{,01}{} & \SI{,01}{} \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    $$
+        pH = -\log[\ce{H+}]\Rightarrow pH = -\log 10^{-2}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{pH = \SI{2}{}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{pOH = 14 - pH = \SI{12}{}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): pH y pOH de disolución de ácido acético}
+    \structure{Disociación de ácido débil:} \underline{PARCIAL}: \ce{CH3COOH(ac) <=> H+(ac) + CH3COO-(ac)}
+    \structure{Grado de disociación:}
+    $$
+        \alpha = \frac{[\ce{H+}]}{[\ce{CH3COOH}]_{0}} = \SI{4,45e-2}{}
+    $$
+    $$
+        [\ce{CH3COOH}]_{0} = \SI{,01}{\Molar}
+    $$
+    \begin{overprint}
+        \onslide<1>
+            \begin{center}
+                \begin{tabular}{clll}
+                    \toprule
+                    Estado  & \ce{CH3COOH}           & \ce{H+}          & \ce{CH3COO-} \\
+                    \midrule
+                    Inicial & $[\ce{CH3COOH}]_{0}$   & 0                & 0            \\
+                    Final   & $[\ce{CH3COOH}]_{0}-x$ & $x$              & $x$          \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<2>
+            \begin{center}
+                \begin{tabular}{clll}
+                    \toprule
+                    Estado  & \ce{CH3COOH}           & \ce{H+}          & \ce{CH3COO-} \\
+                    \midrule
+                    Inicial & $[\ce{CH3COOH}]_{0}$   & 0                & 0            \\
+                    Final   & $[\ce{CH3COOH}]_{0}-[\ce{CH3COOH}]_{0}\alpha$ & $[\ce{CH3COOH}]_{0}\alpha$ & $[\ce{CH3COOH}]_{0}\alpha$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        \onslide<3->
+            \begin{center}
+                \begin{tabular}{clll}
+                    \toprule
+                    Estado  & \ce{CH3COOH}           & \ce{H+}          & \ce{CH3COO-} \\
+                    \midrule
+                    Inicial & $[\ce{CH3COOH}]_{0}$   & 0                & 0            \\
+                    Final   & $[\ce{CH3COOH}]_{0}(1-\alpha)$ & $[\ce{CH3COOH}]_{0}\alpha$ & $[\ce{CH3COOH}]_{0}\alpha$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+    \end{overprint}\\[.6cm]
+    \visible<4>{
+        $$
+            pH = -\log[\ce{H+}]\Rightarrow pH = -\log[\ce{CH3COOH}]_{0}\alpha\Rightarrow pH = -\log(\SI{,01}{\Molar}\cdot\SI{4,45e-2}{})
+        $$
+        $$
+             \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{pH = \SI{3,35}{}}\quad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{pOH = \SI{10,65}{}}
+        $$
+            }
+\end{frame}

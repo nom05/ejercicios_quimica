@@ -1,0 +1,148 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_desea_preparar_una_disolucion_reguladora_de_pH_8.5/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\pH = \num{8,5}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{V = \SI{1}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{K_a(\ce{HCN}) = \num{6,2e-10}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{[\ce{KCN}] = \SI{,010}{\Molar}}
+	\end{center}
+	\begin{enumerate}[label={\alph*)},font=\bfseries]
+		\item{\huge ¿$n(\ce{CN-})$ y $n(\ce{HCN})$?} cuando	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{V = \SI{1}{\liter}}\quad
+		\item{\huge ¿pH?} cuando \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{n(\ce{HA})_{\text{ác.fuerte}} = \SI{5,0e-5}{\mol}}\quad
+			 \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{V=\SI{,100}{\liter}}\\[.2cm]
+		\item{\huge ¿pH?} cuando \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{n(\ce{NaOH}) = \SI{5,0e-5}{\mol}}\quad
+			 \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{V=\SI{,100}{\liter}}\\[.2cm]
+		\item{\huge ¿pH?} cuando \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{n(\ce{NaOH}) = \SI{5,0e-5}{\mol}}\quad
+			 \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{V(\ce{H2O}) = \SI{,100}{\liter}}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación del número de moles de \ce{CN-} y \ce{HCN}}
+	\structure{Recordad:} \ce{KCN(ac) -> K+(ac) + CN-(ac)}\quad $[\ce{KCN}] = [\ce{CN-}] = \SI{,010}{\Molar}$;
+	$n(\ce{CN-}) = \SI{,010}{\mol\per\cancel\liter}\vdot\SI{1}{\cancel\liter} = \SI{1e-2}{\mol}$\\[.3cm]
+	\structure{Disociación del anión \ce{CN-}:}
+	$$
+		\ce{CN-(ac) + H2O(l) <=> HCN(ac) + OH-(ac)}\quad K_h = \frac{\overbrace{K_w}^{\num{e-14}}}{\underbrace{K_a(\ce{HCN})}_{\num{6,2e-10}}} = \frac{[\ce{HCN}]\vdot[\ce{OH-}]}{[\ce{CN-}]}=
+		\frac{5}{31}\times\num{e-4}
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\ce{CN-} se comporta como una base. Para crear una disolución amortiguadora en la que haya \ce{CN-} y \ce{HCN} tendremos que añadir algo de un ácido fuerte (\ce{HA}), siempre este último como \underline{reactivo limitante}:
+			\begin{center}
+				\begin{tabular}{lcccc}
+					& \multicolumn{4}{c}{\ce{HA(ac) + CN-(ac) -> Cl-(ac) + HCN(ac)}} \\
+					\midrule
+					(mol) 	& \ce{HA} 	& \ce{CN-} 		& \ce{Cl-} 	& \ce{HCN} 	\\
+					Inicial &  $x$		& 	\num{,01}	& \num{0} 	& \num{0} 	\\
+					Final	&  \num{0}	& $\num{,01}-x$	& $x$	 	& $x$ 	
+				\end{tabular}
+			\end{center}
+			Con esto podemos usar la reacción de disociación del \ce{HCN} ya que tenemos las dos especies: \ce{HCN(ac) <=> H+(ac) + CN-(ac)}
+		\onslide<2>
+			\begin{center}
+				\ce{HCN(ac) <=> H+(ac) + CN-(ac)}
+			\end{center}
+			\structure{Ecuación de Henderson -- Hasselbalch:} Suponemos que la disociación del ácido (\ce{HCN}) es mucho menor que las concentraciones formales (o sin disociar) de \ce{HCN} y \ce{CN-}.
+			$$
+				\pH = \pKa + \log(\frac{[\ce{CN-}]}{[\ce{HCN}]})\Rightarrow
+				\pH = \pKa + \log(\frac{[\ce{CN-}]_0}{[\ce{HCN}]_0})\Rightarrow
+				\overbrace{\pH}^{\num{8,5}} = \underbrace{\pKa}_{\num{9,21}} +
+				\log(\frac{\rfrac{\overbrace{n_0(\ce{CN-})}^{\num{,01}-x}}{\cancel{V}}}{\underbrace{\rfrac{n_0(\ce{HCN})}{\cancel{V}}}_{x}})
+			$$
+			$$
+				\num{8,5} = \num{9,21} + \log(\frac{\num{,01}-x}{x})\Rightarrow\frac{\num{,01}-x}{x} = \num{,195}\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{n(\ce{HCN}) = \SI{,0084}{\mol}}
+			$$
+			La disolución se haría añadiendo \SI{,0084}{\mol} de un ácido fuerte a \SI{,01}{\mol} de \ce{KCN}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): variación de pH si se añaden \SI{5,0e-5}{\mol} de ácido fuerte}
+	Del volumen inicial (\SI{1}{\liter}) usamos únicamente $V=\SI{,100}{\liter}$. La concentración se mantiene (y por tanto el pH = \num{8,5}) pero el número de moles hay que recalcularlo.
+	\structure{Concentración del apartado anterior:}\\
+	$[\ce{HCN}] = \frac{\SI{,0084}{\mol}}{\SI{1}{\liter}} = \SI{,0084}{\Molar}$;
+	\quad$[\ce{CN-}] = \frac{\SI{,010}{\mol}-\SI{8,4e-3}{\mol}}{\SI{1}{\liter}} = \SI{1,63e-3}{\Molar}$
+	\structure{Número de moles iniciales de este apartado:} \\
+	$n(\ce{HCN}) = \SI{8,4e-3}{\mol\per\liter}\vdot\SI{,1}{\liter} = \SI{8,4e-4}{\mol}$;
+	\quad$n(\ce{CN-}) = \SI{1,63e-3}{\mol\per\liter}\vdot\SI{,1}{\liter} = \SI{1,63e-4}{\mol}$
+	\begin{enumerate}[label={Paso \arabic*},font=\bfseries]
+		\item\structure{Reacción del compuesto \underline{básico} (\ce{CN-}) con el ácido fuerte (\ce{HA})}
+			\begin{center}
+				\ce{HA(ac) + CN-(ac) -> Cl-(ac) + HCN(ac)}\\[.15cm]
+				\begin{tabular}{lSSSS}
+					\toprule
+						(mol) 	& {\ce{HA}} 	& {\ce{CN-}} 	& {\ce{Cl-}} 	& {\ce{HCN}} 	\\
+						Inicial &  ,00005		& ,000163			& 0 	 		& ,00084 	\\
+						Final	&  0			& ,000113			& ,00005 		& ,00089	\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+		\item\structure{Usando la ecuación de Henderson -- Hasselbalch para:} \ce{HCN(ac) -> H+(ac) + CN-(ac)}
+		$$
+			\pH = \pKa + \log(\frac{[\ce{CN-}]}{[\ce{HCN}]})\Rightarrow
+			\pH = \pKa + \log(\frac{[\ce{CN-}]_0}{[\ce{HCN}]_0})\Rightarrow
+			\pH = \underbrace{\pKa}_{\num{9,21}} +
+			\log(\frac{\rfrac{\overbrace{n_0(\ce{CN-})}^{\num{,000113}}}{\cancel{V}}}{\underbrace{\rfrac{n_0(\ce{HCN})}{\cancel{V}}}_{\num{,00089}}})
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\Delta \pH = \num{8,32} - \num{8,50} = \num{-,18}}
+		$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH si se añaden \SI{5,0e-5}{\mol} de \ce{NaOH}}
+	Del volumen inicial (\SI{1}{\liter}) usamos únicamente $V=\SI{,100}{\liter}$. El número de moles inicial para reaccionar con el \ce{NaOH} es el mismo que en el anterior apartado.
+	$n(\ce{HCN}) = \SI{8,4e-4}{\mol}$; $n(\ce{CN-}) = \SI{1,63e-4}{\mol}$
+	\begin{enumerate}[label={Paso \arabic*},font=\bfseries]
+		\item\structure{Reacción del compuesto \underline{ácido} (\ce{HCN}) con la base fuerte (\ce{NaOH})}
+		\begin{center}
+			\ce{NaOH(ac) + HCN(ac) -> H2O(l) + NaCN(ac)}\\[.15cm]
+			\begin{tabular}{lSSS}
+				\toprule
+					(mol) 	& {\ce{NaOH}} 	& {\ce{HCN}} 	& {\ce{CN-}} 	\\
+					Inicial &  ,00005		& ,00084		& ,000163 		\\
+					Final	&  0			& ,00079		& ,000213		\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\item\structure{Usando la ecuación de Henderson -- Hasselbalch para:} \ce{HCN(ac) -> H+(ac) + CN-(ac)}
+		$$
+			\pH = \pKa + \log(\frac{[\ce{CN-}]}{[\ce{HCN}]})\Rightarrow
+			\pH = \pKa + \log(\frac{[\ce{CN-}]_0}{[\ce{HCN}]_0})\Rightarrow
+			\pH = \underbrace{\pKa}_{\num{9,21}} +
+			\log(\frac{\rfrac{\overbrace{n_0(\ce{CN-})}^{\num{,000213}}}{\cancel{V}}}{\underbrace{\rfrac{n_0(\ce{HCN})}{\cancel{V}}}_{\num{,00079}}})
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\pH = \num{8,64}}
+		$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH si se añaden \SI{5,0e-5}{\mol} de \ce{NaOH} a agua destilada}
+	$$
+		[\ce{NaOH}] = \frac{\SI{5e-5}{\mol}}{\SI{,1}{\liter}} = \SI{5e-4}{\Molar}
+	$$
+	\structure{NaOH es una base fuerte:} $[\ce{NaOH}] = [\ce{OH-}]\Rightarrow \pH = 14-\pOH = 14+\log[\ce{OH-}]$
+	\begin{center}
+		 \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\pH = \num{10,70}}
+	\end{center}
+\end{frame}

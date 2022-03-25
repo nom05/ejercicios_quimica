@@ -1,0 +1,92 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+            ~/Documentos/docencia/repositorio/cursos/21-22/CCMar-Química_I/bol1-termo--eq/equilibrio/el_NO2_es_un_compuesto_que_contribuye_a_la_formacion_del_esmog_fotoquimico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+    {\large $$
+        \ce{2NO2(g) <=> 2NO(g)+O2(g)}
+    $$}
+    \begin{center}
+        {\Large ¿grado de disociación, $\alpha$? ¿$K_c$? ¿$K_p$?}\\[.5cm]
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{inicial}}\equiv T_i = \SI{25}{\celsius} = \SI{298,15}{\kelvin}}\\[.3cm]
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P_{\text{inicial}}\equiv P_i = \SI{21,1}{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T_{\text{final}}\equiv T_f = \SI{300}{\celsius} = \SI{573,15}{\kelvin}}\\[.3cm]
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{P_{\text{total,final}}\equiv P_T = \SI{50}{\atm} = \SI{573,15}{\kelvin}}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): presiones en el equilibrio}
+    \structure{Usamos ecuación de los gases ideales:} para obtener la presión de \ce{NO2} en las condiciones de temperatura del equilibrio (\SI{300}{\celsius}). Como $n$ (n"o de moles) se mantiene constante, podemos escribir una expresión que relacione dos estados.
+    $$
+        P\vdot V = n\vdot R\vdot T\Rightarrow n\vdot R = \frac{P\vdot V}{T}\Rightarrow\frac{P_i\vdot\cancel{V}}{T_i} = \frac{P_f\vdot\cancel{V}}{T_f} = n\vdot R\Rightarrow
+        P_f = P_i\vdot\frac{T_f}{T_i}
+    $$
+    $$
+        P(\ce{NO2}) = \SI{21,1}{\atm}\vdot\frac{\SI{573,15}{\kelvin}}{\SI{298,15}{\kelvin}} = \SI{40,56}{\atm} = P_0
+    $$
+    \begin{center}
+        \begin{tabular}{lccc}
+            \toprule
+            \multicolumn{4}{c}{\ce{2NO2(g) <=> 2NO(g) + O2(g)}}	\\
+            \midrule
+                                &	$P(\ce{NO2})$	&	$P(\ce{NO})$	&	$P(\ce{O2})$	\\
+            Inicial				&	$P_0$			&	\num{0}			&	\num{0}			\\
+            Reaccionan			&	$-2x$			&	$2x$			&	$x$				\\
+            Equilibrio			&	$P_0-2x$		&	$2x$			&	$x$				\\
+            \cmidrule{2-4}
+            $P_{\text{total}}$	&	\multicolumn{3}{c}{$P_0 \cancel{-2x} + \cancel{2x} + x = P_0 + x = \SI{50}{\atm}$}	\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \structure{Despejamos $x$:} $x = \SI{50}{\atm} - \SI{40,56}{\atm} = \SI{9,44}{\atm}$
+    \structure{Presiones parciales en el equilibrio:}
+    \begin{itemize}
+        \item $P(\ce{NO2}) = \SI{40,56}{\atm} - 2\vdot\SI{9,44}{\atm} = \SI{21,68}{\atm}$
+        \item $P(\ce{NO})  = 2\vdot\SI{9,44}{\atm} = \SI{18,88}{\atm}$
+        \item $P(\ce{O2})  = \SI{9,44}{\atm}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): grado de disociación, $K_p$, $K_c$}
+    \begin{block}{Grado de disociación, $\alpha$}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\alpha = \frac{x}{P_0}\Rightarrow\alpha(\ce{NO2}) = \frac{\SI{9,44}{\atm}}{\SI{40,56}{\atm}} = \num{,2327}}
+        $$
+    \end{block}
+    \begin{exampleblock}{$K_p$}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_p = \frac{P(\ce{NO})^2\vdot P(\ce{O2})}{P(\ce{NO2})^2}\Rightarrow K_p = \frac{(\SI{18,88}{\atm})^2\vdot \SI{9,44}{\atm}}{(\SI{21,68}{\atm})^2} = \num{7,16}}
+        $$
+    \end{exampleblock}
+    \begin{alertblock}{$K_c$}
+        \begin{overprint}
+            \onslide<1>
+                $$
+                    P\vdot V = n\vdot R\vdot T\Rightarrow P = \frac{n}{V}\vdot R\vdot T\Rightarrow
+                    P = M\vdot R\vdot T\Rightarrow M = \frac{P}{R\vdot T}
+                $$
+                $$
+                    K_c = \frac{[\ce{NO}]^2\vdot[\ce{O2}]}{[\ce{NO2}]^2}\Rightarrow
+                    K_c = \frac{\left\{\frac{P(\ce{NO})}{\cancel{RT}}\right\}^2\vdot\left\{\frac{P(\ce{O2})}{RT}\right\}}{\left\{\frac{P(\ce{NO2})}{\cancel{RT}}\right\}^2}\Rightarrow
+                    K_c = \frac{P(\ce{NO})^2\vdot P(\ce{O2})}{P(\ce{NO2})^2}\vdot \frac{1}{RT}\Rightarrow K_c = \frac{K_p}{R\vdot T}
+                $$
+            \onslide<2->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{K_c = \frac{K_p}{R\vdot T}\Rightarrow
+                      K_p = \frac{7,16}{\SI{8,314}{\joule\per\mol\per\kelvin}\vdot\SI{573,15}{\kelvin}} = \num{,15}}
+                $$
+        \end{overprint}
+    \end{alertblock}
+\end{frame}

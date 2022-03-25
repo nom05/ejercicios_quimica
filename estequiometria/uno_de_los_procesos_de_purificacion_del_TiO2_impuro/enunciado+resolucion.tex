@@ -1,0 +1,198 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/uno_de_los_procesos_de_purificacion_del_TiO2_impuro/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        m(\ce{C})?
+    $$}
+    Reacciones:\\[.3cm]
+    \ce{TiO2(impuro) +}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{C(s)}}
+    \ce{+ Cl2(g) -> TiCl4(g) + CO2(g) + CO(g)}\\
+    \ce{TiCl4(g) + O2(g) ->}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{TiO2}(puro)}
+    \ce{+ Cl2(g)}
+    \visible<1-|handout:0>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{m_{\text{puro}}(\ce{TiO2}) = \SI{1,00}{\kilogram}}
+        $$
+                          }
+    \visible<2-|handout:0>{Pero también ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mat(\ce{C}) = \SI{12,01}{\gram\per\mol}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{TiO2}) = \SI{79,87}{\gram\per\mol}}
+        $$
+                          }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ajuste de las ecuaciones de las reacciones químicas}
+    \begin{alertblock}{NOTA IMPORTANTE DEL AJUSTE}
+        La primera reacción no es válida porque tiene infinitos ajustes.
+        $$
+            \forall n(\ce{TiO2}) > 1\text{ y }n(CO)=2\Rightarrow\exists\text{ajuste de reacción}
+        $$
+    \end{alertblock}
+    \structure{Reacción 1:}
+    \begin{overprint}
+        \onslide<1-8>
+            {\centering Ajuste de la ecuación.\\[.3cm]}
+        \onslide<9->
+            \centering\ce{2TiO2 + 3C + 4Cl2 -> 2TiCl4 + CO2 + 2CO}
+    \end{overprint}
+    \begin{overprint}
+        \onslide<1>
+            \centering\ce{TiO2 + C + Cl2 -> TiCl4 + CO2 + CO}
+        \onslide<2>
+            \centering\ce{TiO2 + C + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{Cl2}}
+            \ce{ -> Ti}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{Cl4}}
+            \ce{ + CO2 + CO}
+        \onslide<3>
+            \centering\ce{TiO2 + C + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{2\ce{Cl2}}
+            \ce{ ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{TiCl4}}
+            \ce{ + CO2 + CO}
+        \onslide<4>
+            \centering\ce{Ti}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{O2}}
+            \ce{ + C + 2Cl2 -> TiCl4 + C}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{O2}}\ce{+ C}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{O}}
+        \onslide<5>
+            \centering\ce{Ti}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{O2}}
+            \ce{ + C + 2Cl2 -> TiCl4 + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\frac{1}{2}\ce{CO2}}\ce{+ C}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{O}}
+        \onslide<6>
+            \centering\ce{TiO2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}
+            + 2\ce{Cl2 -> TiCl4 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\frac{1}{2}\ce{C}}\ce{O2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}\ce{O}
+        \onslide<7>
+            \centering\ce{TiO2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\frac{3}{2}\ce{C}}
+            + 2\ce{Cl2 -> TiCl4 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\frac{1}{2}\ce{C}}\ce{O2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{C}}\ce{O}
+        \onslide<8>
+            \centering
+            $$
+                2\times\left(\ce{TiO2 + \frac{3}{2} C + 2Cl2 -> TiCl4 + \frac{1}{2}CO2 + CO}\right)
+            $$
+    \end{overprint}
+    \visible<9->{
+        \structure{Reacción 2:}
+                }            
+    \begin{overprint}
+        \onslide<9-11>
+            {\centering Ajuste de la ecuación.\\[.3cm]}
+        \onslide<12->
+            \centering\ce{TiCl4 + O2 -> TiO2 + 2Cl2}
+    \end{overprint}
+    \begin{overprint}
+        \onslide<9>
+            \centering\ce{TiCl4 + O2 -> TiO2 + Cl2}
+        \onslide<10>
+            \centering\ce{Ti}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\ce{Cl4}}
+            \ce{ + O2 -> TiO2 + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\ce{Cl2}}
+        \onslide<11>
+            \centering\ce{Ti}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\ce{Cl4}}
+            \ce{ + O2 -> TiO2 + }
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=black]{\ce{2Cl2}}
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): ajuste simultáneo de las ecuaciones}
+    \structure{1ª Reacción:} \ce{2TiO2 + 3C + 4Cl2 -> 2TiCl4 + CO2 + 2CO}
+    \structure{2ª Reacción:} \ce{TiCl4 + O2 -> TiO2 + 2Cl2}
+    \structure{Ajuste de las reacciones secuenciales:} Comprobar que el/los producto(s) de la primera reacción tienen el mismo número de moles que los de la segunda.\\[.5cm]
+    \begin{overprint}
+        \onslide<2>
+            1ª Reacción: \ce{2TiO2 + 3C + 4Cl2 -> 2TiCl4 + CO2 + 2CO}\\
+            2ª Reacción: \ce{TiCl4 + O2 -> TiO2 + 2Cl2}
+        \onslide<3>
+            1ª Reacción: \ce{2TiO2 + 3C + 4Cl2 ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{2TiCl4}}
+            \ce{ + CO2 + 2CO}\\
+            2ª Reacción: 
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{TiCl4}}
+            \ce{+ O2 -> TiO2 + 2Cl2}
+        \onslide<4>
+            1ª Reacción: \ce{2TiO2 + 3C + 4Cl2 ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{2TiCl4}}
+            \ce{ + CO2 + 2CO}\\
+            2ª Reacción: 
+            $$
+                2\times\left(\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{TiCl4}}\ce{+ O2 -> TiO2 + 2Cl2}\right)
+            $$
+        \onslide<5>
+            1ª Reacción: \ce{2TiO2 + 3C + 4Cl2 ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{2TiCl4}}
+            \ce{ + CO2 + 2CO}\\
+            2ª Reacción: 
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=orange]{\ce{2TiCl4}}\ce{+ 2O2 -> 2TiO2 + 4Cl2}
+        \onslide<6>
+            1ª Reacción: \ce{2TiO2 + 3C + 4Cl2 -> 2TiCl4 + CO2 + 2CO}\\
+            2ª Reacción: \ce{2TiCl4 + 2O2 -> 2TiO2 + 4Cl2}
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): ajuste de las ecuaciones de las reacciones químicas}
+    \structure{Paso 1:} Relación estequiométrica entre el \ce{TiO2} puro y el \ce{C}\\[.3cm]
+    \visible<2->{
+        \begin{center}
+            \SI{3}{\mol} de \ce{C}\ce{->}\SI{2}{\mol} de \ce{TiO2} \\[.3cm]
+        \end{center}
+        $$
+            2n(\ce{C}) = 3n(\ce{TiO2}\text{ puro})
+        $$
+               }
+   \visible<3->{
+        \structure{Paso 2:} Sustituir el número de moles por las masas ($m$ e $Mm$) empleando $n=\frac{m}{Mm}$
+               }
+       \begin{overprint}
+           \onslide<3>
+                $$
+                    2\cdot\overbrace{n(\ce{C})}^{\frac{m(C)}{Mm(C)}} = 3\cdot\underbrace{n(\ce{TiO2}\text{ puro})}_{\frac{m(TiO2)}{Mm(TiO2)}}
+                $$
+           \onslide<4->
+                $$
+                    2\cdot\frac{m(C)}{Mm(C)} = 3\cdot\frac{m(TiO2)}{Mm(TiO2)}
+                $$
+       \end{overprint}
+   \visible<5->{
+        \structure{Paso 3:} Despejar $m(C)$
+        $$
+            m(C) = \frac{3}{2}m(TiO2)\frac{Mm(C)}{Mm(TiO2)}
+        $$
+               }
+   \visible<6->{
+       \structure{Paso 4:} Sustituir por los valores correspondientes:
+       $$
+           m(C) = \frac{3}{2}\cdot\SI{1000}{\gram}\cdot\frac{\SI{12,01}{\cancel\gram\per\cancel\mol}}{\SI{79,87}{\cancel\gram\per\cancel\mol}}= \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\SI{226}{\gram} = m(C)}
+       $$
+               }
+\end{frame}

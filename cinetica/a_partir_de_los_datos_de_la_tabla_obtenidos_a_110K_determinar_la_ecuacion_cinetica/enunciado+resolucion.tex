@@ -1,0 +1,80 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/a_partir_de_los_datos_de_la_tabla_obtenidos_a_110K_determinar_la_ecuacion_cinetica/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución del problema}
+    \structure{Reacción:}
+    $$
+        \ce{2NO(g) + 2H2(g) -> N2(g) + 2H2O(g)}
+    $$
+    \begin{overprint}
+        \onslide<1>
+            \structure{Ecuación de velocidad sin determinar los coeficientes y $k$:}
+            $$
+                v = k\cdot[\ce{NO}]^x\cdot[\ce{H2}]^y
+            $$
+        \onslide<2->
+            \structure{Usando la ecuación de los gases ideales:} $PV=nRT\Rightarrow \frac{n}{V} = \frac{P}{RT}\Rightarrow M=\rfrac{P}{RT}$
+            $$
+                v = k\cdot\left(\frac{P(\ce{NO})}{RT}\right)^x\left(\frac{P(\ce{H2})}{RT}\right)^y
+            $$
+    \end{overprint}
+    \structure{Método de velocidades iniciales (se omite $RT$ para que las expresiones se entiendan más fácilmente):}
+     \visible<3->{
+         \begin{equation}\label{eq:4exp1}
+             \SI{3,0e-5}{} = k\cdot(\SI{0,451}{})^x\cdot(\SI{,2255}{})^y
+         \end{equation}
+         \begin{equation}\label{eq:4exp2}
+             \SI{9,0e-5}{} = k\cdot(\SI{1,353}{})^x\cdot(\SI{,2255}{})^y
+         \end{equation}
+         \begin{equation}\label{eq:4exp3}
+             \SI{36e-5}{} = k\cdot(\SI{1,353}{})^x\cdot(\SI{,9020}{})^y
+         \end{equation}
+                  }
+    \visible<4-10>{
+        \begin{overprint}
+            \onslide<4>
+                \structure{Dividiendo la ecuación~\eqref{eq:4exp2} por ecuación~\eqref{eq:4exp1}:}
+                $$
+                    \frac{\SI{9}{}}{\SI{3}{}} = \frac{(\SI{1353}{})^x}{(\SI{451}{})^x}\cdot\frac{(\SI{2255}{})^y}{(\SI{2255}{})^y}               
+                $$
+            \onslide<5>
+                \structure{Dividiendo la ecuación~\eqref{eq:4exp2} por ecuación~\eqref{eq:4exp1}:}
+                $$
+                    3 = 3^x\Rightarrow x=1
+                $$
+            \onslide<6>
+                \structure{Dividiendo la ecuación~\eqref{eq:4exp3} por ecuación~\eqref{eq:4exp2}:}
+                $$
+                    \frac{\SI{36}{}}{\SI{9}{}} = \left(\frac{\SI{1353}{}}{\SI{1353}{}}\right)^1\cdot\left(\frac{\SI{902}{}}{\SI{225,5}{}}\right)^y
+                $$
+            \onslide<7>
+                \structure{Dividiendo la ecuación~\eqref{eq:4exp3} por ecuación~\eqref{eq:4exp2}:}
+                $$
+                    4 = 4^y\Rightarrow y=1
+                $$
+            \onslide<8>
+                \structure{Una vez calculados los exponentes, determinamos $k$ con una de las ecuaciones (p.ej. ecuación~\eqref{eq:4exp1}):}
+                $$
+                    \SI{3,0e-5}{} = k\cdot\left(\frac{\SI{,451}{}}{R\cdot\SI{110}{\kelvin}}\right)\cdot\left(\frac{\SI{,2255}{}}{R\cdot\SI{110}{\kelvin}}\right)
+                $$
+            \onslide<9>
+                \structure{Una vez calculados los exponentes, determinamos $k$ con una de las ecuaciones (p.ej. ecuación~\eqref{eq:4exp1}):}
+                $$
+                    k = \frac{\SI{3,0e-5}{}\cdot R^2\cdot\SI{110}{}^2}{\SI{,451}{}\cdot\SI{,2255}{}} = \SI{,024}{\second\per\Molar}
+                $$
+            \onslide<10>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{v = \SI{,024}{\per\Molar\per\second}\cdot\left(\frac{P(\ce{NO})}{R\cdot\SI{110}{}}\right)\cdot\left(\frac{P(\ce{H2})}{R\cdot\SI{110}{}}\right)}
+                $$
+        \end{overprint}
+                }
+\end{frame}

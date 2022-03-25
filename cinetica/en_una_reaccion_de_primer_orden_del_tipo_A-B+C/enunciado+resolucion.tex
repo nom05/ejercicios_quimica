@@ -1,0 +1,73 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/en_una_reaccion_de_primer_orden_del_tipo_A-B+C/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large ¿$t$ para $[A] = \SI{,80}{}[A]_0$?}\\[.5cm]
+    \end{center}
+    $$
+        \ce{A -> B + C}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{Orden 1}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{t=\SI{10}{\hour}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{[A]=\SI{,30}{}[A]_0}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): tiempo para que $[A]$ sea un \SI{80}{\percent} de la inicial}
+    \structure{Como la reacción es de orden 1:}
+    $$
+        v = k[A]
+    $$
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \overbrace{\ln(\frac{[A]}{[A]_0})}^{[A]=\SI{,30}{}\cdot[A]_0}
+                 = -k\cdot\underbrace{t}_{t=10}
+            $$
+        \onslide<2>
+            $$
+                \ln(\frac{\SI{,30}{}\cdot\cancel{[A]_0}}{\cancel{[A]_0}}) = -k\cdot 10
+            $$
+        \onslide<3->
+            $$
+                k = -\frac{\ln(\SI{,30}{})}{10}
+            $$
+    \end{overprint}
+    \visible<4->{
+        \structure{Repetimos el proceso de despejar en la ecuación de velocidad para:} $[A]=\SI{,80}{}[A]_0$
+        \begin{overprint}
+            \onslide<5>
+                $$
+                    \overbrace{\ln(\frac{[A]}{[A]_0})}^{[A]=\SI{,80}{}\cdot[A]_0}
+                = -\underbrace{k}_{k = -\frac{\ln(\SI{,30}{})}{10}}\cdot t
+                $$
+            \onslide<6>
+                $$
+                    \ln(\SI{,80}{}) = \frac{\ln(\SI{,30}{})}{10}\cdot t
+                $$
+            \onslide<7->
+                $$
+                    t = 10\cdot\frac{\ln(\SI{,80}{})}{\ln(\SI{,30}{})}
+                $$
+
+        \end{overprint}
+                }
+    \visible<7>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{t = \SI{1}{\hour}~\SI{51}{\minute}~\SI{12}{\second}}
+        $$
+                }
+\end{frame}

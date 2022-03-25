@@ -1,0 +1,86 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_quemaron_3g_de_C_hasta_CO2_en_un_calorímetro_de_Cu/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		\centering Determinar el poder calorífico ($PC$)
+		$$
+			PC(\ce{C})?
+		$$
+	}
+	\centering\ce{C(s) + O2(g) -> CO2(g)}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{m(\ce{C})=\SI{3}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{Cu})=\SI{1500}{\gram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{H2O})=\SI{2000}{\gram}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{T_{\text{inicial}}(\ce{Cu + H2O})=\SI{20,0}{\celsius}=\SI{293,15}{\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{T_{\text{final}}(\ce{Cu + H2O})=\SI{31,3}{\celsius}=\SI{304,45}{\kelvin}}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{C_p(\ce{Cu})=\SI{,389}{\joule\per\gram\per\kelvin}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{C_p(\ce{H2O})=\SI{4,18}{\joule\per\gram\per\kelvin}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación del calor cedido del carbono}
+	\centering\textbf{Se supone que dentro del calorímetro hay un sistema aislado.}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+	\visible<2->{
+		\structure{No se realiza ningún trabajo porque el calorímetro no cambia de volumen ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+	}
+	\visible<3->{
+		\structure{Transferencia de calor total tiene que ser cero:} $Q_{\text{total}}=Q(\ce{Cu})+Q(\ce{H2O})+Q(\ce{C})=0$
+				}
+	\visible<4->{
+		\structure{Según el criterio de signos termodinámico:}
+		\begin{itemize}
+			\item $Q(\ce{Cu})>0$ (absorbe calor)
+			\item $Q(\ce{H2O})>0$ (absorbe calor)
+			\item $Q(\ce{C})<0$ (cede calor)
+		\end{itemize}
+		\centering\structure{Quedándonos:} $Q(\ce{Cu})+Q(\ce{H2O})=-Q(C)$
+				}
+	\visible<5->{
+		\begin{overprint}
+			\onslide<5>
+				\centering\structure{Aplicando:} $Q=m\cdot C_p\cdot\Delta T$
+				$$
+					-Q(\ce{C}) = \overbrace{m(\ce{Cu})\cdot C_p(\ce{Cu})\Delta T}^{Q(\ce{Cu})}+\underbrace{m(\ce{H2O})\cdot C_p(\ce{H2O})\cdot\Delta T}_{Q(\ce{H2O})}
+				$$
+			\onslide<6->
+				\centering\structure{Operando:}
+				$$
+					Q(\ce{C}) = -\left[m(\ce{Cu})\cdot C_p(\ce{Cu}) + m(\ce{H2O})\cdot C_p(\ce{H2O})\right]\cdot\Delta T
+				$$
+		\end{overprint}
+	}
+	\visible<7->{
+		\centering\structure{Sustituimos por los valores del enunciado:}
+		$$
+			Q(\ce{C}) = -\left[\SI{1500}{\gram}\cdot\SI{,389}{\joule\per\gram\per\kelvin} + \SI{2000}{\gram}\cdot\SI{4,18}{\joule\per\gram\per\kelvin}\right]\cdot\overbrace{\SI{11,30}{\kelvin}}^{\SI{304,45}{\kelvin}-\SI{293,15}{\kelvin}}
+		$$
+		\centering\centering\myovalbox{\textcolor{yellow}{$Q(\ce{C})=\SI{-1,010e5}{\joule}=\SI{-101,06}{\kilo\joule}$}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calcular el poder calorífico del carbono}
+	$$
+		\overbrace{PC(\ce{C})}^{\text{poder calorífico}} = \frac{\SI{-1,010e5}{\joule}}{\SI{3}{\gram}}
+	$$
+	\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{PC(\ce{C}) = \SI{-33687,18}{\joule\per\gram} = \SI{-33,69}{\kilo\joule\per\gram}}
+\end{frame}

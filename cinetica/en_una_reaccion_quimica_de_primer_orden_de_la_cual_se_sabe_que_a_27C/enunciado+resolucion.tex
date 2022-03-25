@@ -1,0 +1,69 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/en_una_reaccion_quimica_de_primer_orden_de_la_cual_se_sabe_que_a_27C/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$E_a$ y $k(\SI{47}{\celsius})$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\text{Orden 1 (}n=1\text{)}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{t_{\rfrac{1}{2}}(\SI{27}{\celsius})=\SI{5000}{\second}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{t_{\rfrac{1}{2}}(\SI{37}{\celsius})=\SI{1000}{\second}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la energía de activación y $k$ a \SI{47}{\celsius}}
+	\structure{Usando la ecuación del tiempo de vida media:}
+	$$
+		t_{\rfrac{1}{2}}=\frac{\ln(2)}{k}\Rightarrow k=\frac{\ln(2)}{t_{\rfrac{1}{2}}}
+	$$
+	\structure{y empleando la ecuación de Arrhenius:}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				k=A\vdot\exp(-\frac{E_a}{RT})
+			$$
+		\onslide<2>
+			$$
+				\frac{k_2}{k_1}=\frac{\cancel{A}}{\cancel{A}}\vdot\frac{\exp(-\frac{E_a}{RT_2})}{\exp(-\frac{E_a}{RT_1})}
+			$$
+		\onslide<3>
+			$$
+				\ln(\frac{\overbrace{k_2}^{k_2=\frac{\ln(2)}{t^{(2)}_{\rfrac{1}{2}}}}}{\underbrace{k_1}_{k_1=\frac{\ln(2)}{t^{(1)}_{\rfrac{1}{2}}}}})=\frac{E_a}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)
+			$$
+		\onslide<4>
+			$$
+				\ln(\frac{\frac{\cancel{\ln(2)}}{t^{(2)}_{\rfrac{1}{2}}}}{\frac{\cancel{\ln(2)}}{t^{(1)}_{\rfrac{1}{2}}}})=\frac{E_a}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)
+			$$
+		\onslide<5>
+			$$
+				\ln(\frac{t^{(1)}_{\rfrac{1}{2}}}{t^{(2)}_{\rfrac{1}{2}}})=\frac{E_a}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)
+			$$
+		\onslide<6->
+			$$
+				\ln(\frac{\SI{5000}{\cancel\second}}{\SI{1000}{\cancel\second}})=\frac{E_a}{\SI{8,314}{\joule\per\mol\per\cancel\kelvin}}\left(\frac{1}{\SI{300,15}{\cancel\kelvin}}-\frac{1}{\SI{310,15}{\cancel\kelvin}}\right)
+			$$
+	\end{overprint}
+	\visible<6->{
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{E_a=\SI{124564,52}{\joule\per\mol}=\SI{124,56}{\kilo\joule\per\mol}}\\[.3cm]
+		\structure{Cálculo de $k_1$ (por ejemplo $k(\SI{37}{\celsius})$):}\quad$k_1=\frac{\ln(2)}{t^{(1)}_{\rfrac{1}{2}}}\Rightarrow k_1=\SI{1,386e-4}{\per\second}$
+		\structure{Para $k$ a \SI{47}{\celsius} volvemos a usar la ecuación de Arrhenius en las nuevas condiciones:}
+		\begin{overprint}
+			\onslide<6>
+				$$
+					\ln(\frac{k_2}{\SI{1,386e-4}{\per\second}})=\frac{\SI{124564,52}{\cancel\joule\per\cancel\mol}}{\SI{8,314}{\cancel\joule\per\cancel\mol\per\cancel\kelvin}}\left(\frac{1}{\SI{300,15}{\cancel\kelvin}}-\frac{1}{\SI{320,15}{\cancel\kelvin}}\right)
+				$$
+			\onslide<7>
+				\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{k(\SI{47}{\celsius})=\SI{3,134e-3}{\per\second}}
+		\end{overprint}
+				}
+\end{frame}

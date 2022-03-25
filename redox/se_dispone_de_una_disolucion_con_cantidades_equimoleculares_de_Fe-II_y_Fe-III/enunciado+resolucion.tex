@@ -1,0 +1,82 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_dispone_de_una_disolucion_con_cantidades_equimoleculares_de_Fe-II_y_Fe-III/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge 
+			¿$[\ce{Ag+}]$ si $\varepsilon_{\text{total}}=\SI{0}{\volt}$ y $K_{\text{eq}}$?
+		}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{T=\SI{25}{\celsius}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0(\ce{Fe^2+/Fe})=\SI{-,44}{\volt}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\varepsilon^0(\ce{Fe^3+/Fe})=\SI{-,036}{\volt}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\varepsilon^0(\ce{Ag+/Ag})=\SI{,7996}{\volt}}\\[.3cm]
+		\structure{Equimoleculares o equimolares:}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{[\ce{Fe^3+}]=[\ce{Fe^2+}]}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $\varepsilon(\ce{Fe^3+/Fe^2+})$}
+	Si se dispone de una disolución formada por \ce{Fe^2+} y \ce{Fe^3+} los potenciales de reducción no nos sirven directamente. El proceso que ocurre es la oxidación del \ce{Fe(II)} a \ce{Fe(III)}.
+	\begin{center}
+		{\small \begin{tabular}{ccl}
+				\ce{Fe^2+ + 2e- -> Fe} 				 & $\varepsilon^0(\ce{Fe^2+/Fe})=\SI{-,44}{\volt}$				& $\Delta G^0_{\text{red}} = -2\vdot F\vdot\varepsilon(\ce{Fe^2+/Fe})$	\\[.3cm]
+			\midrule
+			\midrule
+				\ce{Fe^3+ + 3e- -> \cancel{\ce{Fe}}} & $\varepsilon^0(\ce{Fe^3+/Fe})=\SI{-,036}{\volt}$				& $\Delta G^0_{\text{red}} = -3\vdot F\vdot\varepsilon(\ce{Fe^3+/Fe})$	\\
+				\ce{\cancel{\ce{Fe}} -> Fe^2+ + 2e-} & $\varepsilon^0(\ce{Fe/Fe^2+})=\SI{,44}{\volt}$				& $\Delta G^0_{\text{ox}} = -2\vdot F\vdot\varepsilon(\ce{Fe/Fe^2+})$	\\
+			\midrule
+				\ce{Fe^3+ +1e- -> Fe^2+} 			 & $\cancel{\varepsilon^0(\ce{Fe^3+/Fe^2+})=\SI{,404}{\volt}}$	& $\Delta G^0 = -3\vdot F\vdot\varepsilon(\ce{Fe^3+/Fe})-2\vdot F\vdot\varepsilon(\ce{Fe/Fe^2+})$	\\
+		\end{tabular}}
+	\end{center}
+	{\small $$
+		\overbrace{\Delta G^0}^{-1\vdot\cancel{F}\vdot\varepsilon^0(\ce{Fe^3+/Fe^2+})} =
+			 -3\vdot\cancel{F}\vdot\varepsilon(\ce{Fe^3+/Fe})-2\vdot\cancel{F}\vdot\varepsilon(\underbrace{\ce{Fe/Fe^2+}}_{\text{oxidación}})\Rightarrow
+		\varepsilon^0(\ce{Fe^3+/Fe^2+}) = 3\vdot\varepsilon(\ce{Fe^3+/Fe})-2\vdot\varepsilon(\underbrace{\ce{Fe^2+/Fe}}_{\text{reducción}})
+	$$}
+	$$
+		\varepsilon^0(\ce{Fe^3+/Fe^2+}) = 3\vdot\varepsilon(\ce{Fe^3+/Fe})-2\vdot\varepsilon(\ce{Fe^2+/Fe})\Rightarrow
+		\varepsilon^0(\ce{Fe^3+/Fe^2+}) = 3\vdot(\SI{-,036}{\volt})-2\vdot(\SI{-,44}{\volt})
+	$$
+	\begin{center}
+		{\Large\myovalbox{\textbf{\textcolor{yellow}{$\varepsilon^0(\ce{Fe^3+/Fe^2+}) = \SI{,772}{\volt}$}}}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): cálculo de [\ce{Ag+}] y $K_{\text{eq}}$}
+%	{\small
+		\begin{center}
+			\begin{tabular}{lcr}
+					S. oxidación (ánodo): 	& \ce{Fe^2+ -> Fe^{3+} + \cancel{1e-}} 			& $\varepsilon^0_{\text{ox}}=\SI{-,7720}{\volt}$	\\
+					S. reducción (cátodo): 	& \ce{Ag+ + \cancel{1e-} -> Ag} 				& $\varepsilon^0_{\text{red}}=\SI{,7996}{\volt}$	\\
+				\midrule
+					Reacción global:		& \ce{Fe^2+(ac) + Ag+(ac) -> Ag + Fe^3+(ac)}	& $\varepsilon^0_{\text{total}}=\SI{,0276}{\volt}$	\\
+			\end{tabular}				
+		\end{center}
+%	}
+	\structure{Datos:} $n = 1$,\quad $Q = \frac{[\ce{Fe^3+}]}{[\ce{Ag+}]\vdot[\ce{Fe^2+}]}$,\quad $\varepsilon=0$,\quad $[\ce{Fe^2+}] = [\ce{Fe^3+}]$\\
+	\structure{Si $\varepsilon=0$:}
+	$$
+		\overbrace{\varepsilon}^0 =\varepsilon^0 - \frac{\num{,0592}}{n}\log Q\Rightarrow
+		\overbrace{\varepsilon^0}^{\SI{,0276}{\volt}} = \frac{\num{,0592}}{\underbrace{n}_1}\log K_{\text{eq}}\Rightarrow
+		K_{\text{eq}} = 10^{\frac{1\vdot\num{,0276}}{\num{,0592}}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{K_{\text{eq}}=\num{2,926}}
+	$$
+	$$
+		K_{\text{eq}}=\frac{1}{[\ce{Ag+}]}\vdot\underbrace{\cancelto{1}{\frac{[\ce{Fe^3+}]}{[\ce{Fe^2+}]}}}_{[\ce{Fe^2+}] = [\ce{Fe^3+}]}\Rightarrow
+		[\ce{Ag+}] = \frac{1}{K_{\text{eq}}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{[\ce{Ag+}]=\SI{,342}{\Molar}}
+	$$
+\end{frame}

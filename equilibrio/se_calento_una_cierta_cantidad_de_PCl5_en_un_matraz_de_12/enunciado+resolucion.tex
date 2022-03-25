@@ -1,0 +1,84 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/se_calento_una_cierta_cantidad_de_PCl5_en_un_matraz_de_12/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{\text{Reacción: }\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{V=\SI{12}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{T=\SI{523,15}{\kelvin}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n(\ce{PCl5})=\SI{,21}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{PCl3})=\SI{,32}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{n(\ce{Cl2})=\SI{,32}{\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $K_p$}
+	\structure{Teniendo en cuenta la reacción:} \ce{PCl5(g) <=> PCl3(g) + Cl2(g)}
+	\structure{y usando la ecuación de los gases ideales:} $P\cdot V=n\cdot R\cdot T\Rightarrow P=\frac{n\cdot R\cdot T}{V}$
+	\structure{Las presiones parciales serán:}
+	$$
+		P(\ce{PCl3}) = \frac{\SI{,32}{\mol}\vdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{523,15}{\kelvin}}{\SI{12}{\liter}} = \SI{1,14}{\atm} = P(\ce{Cl2})
+	$$
+	$$
+		P(\ce{PCl5}) = \frac{\SI{,21}{\mol}\vdot\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{523,15}{\kelvin}}{\SI{12}{\liter}} = \SI{,75}{\atm}
+	$$
+	\structure{La presión total será en consecuencia:} $P_{\text{total}} = \num{2}\vdot\SI{1,14}{\atm} + \SI{,75}{\atm} = \SI{3,03}{\atm}$
+	\structure{La constante de equilibrio $K_p$ será:}
+	$$
+		K_p = \frac{P(\ce{PCl3})\vdot P(\ce{Cl2})}{P(\ce{PCl5})}\Rightarrow
+		K_p = \frac{\num{1,14}\vdot\num{1,14}}{\num{,75}}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_p=\num{1,74}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de $K_c$}
+	\structure{Teniendo en cuenta la reacción:} \ce{PCl5(g) <=> PCl3(g) + Cl2(g)}
+	\structure{y usando la ecuación de los gases ideales:} $P\cdot V=n\cdot R\cdot T\Rightarrow \frac{n}{V}=M=\frac{P}{R\cdot T}$
+	\structure{La constante de equilibrio $K_c$ será:}
+	$$
+		K_c = \frac{[\ce{PCl3}]\vdot[\ce{Cl2}]}{[\ce{PCl5}]}\Rightarrow
+		K_c = \frac{\frac{P(\ce{PCl3})}{\cancel{RT}}\vdot\frac{P(\ce{Cl2})}{RT}}{\frac{P(\ce{PCl5})}{\cancel{RT}}}\Rightarrow
+		K_c = \overbrace{\frac{P(\ce{PCl3})\vdot P(\ce{Cl2})}{P(\ce{PCl5})}}^{K_p}\vdot\frac{1}{RT}
+	$$
+	$$
+		K_c = K_p\vdot\frac{1}{R\vdot T}\Rightarrow
+		K_c = \num{1,74}\vdot\frac{1}{\num{,082}\vdot\num{523,15}}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_c=\num{,04063}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): determinación de $K_x$}
+	\structure{Teniendo en cuenta la reacción:} \ce{PCl5(g) <=> PCl3(g) + Cl2(g)}
+	\structure{y usando la consecuencia de la ley de Dalton:} $P_i = x_i\vdot P_{\text{total}}\Rightarrow x_i = \rfrac{P_i}{P_{\text{total}}}$
+	\structure{La constante de equilibrio $K_x$ será:}
+	$$
+		K_x = \frac{x_{\ce{PCl3}}\vdot x_{\ce{Cl2}}}{x_{\ce{PCl5}}}\Rightarrow
+		K_x = \frac{\frac{P(\ce{PCl3})}{\cancel{P_{\text{total}}}}\vdot\frac{P(\ce{Cl2})}{P_{\text{total}}}}{\frac{P(\ce{PCl5})}{\cancel{P_{\text{total}}}}}\Rightarrow
+		K_x = \overbrace{\frac{P(\ce{PCl3})\vdot P(\ce{Cl2})}{P(\ce{PCl5})}}^{K_p}\vdot\frac{1}{P_{\text{total}}}
+	$$
+	$$
+		K_x = \num{1,74}\vdot\underbrace{\frac{1}{\num{3,03}}}_{\text{calculado en Resolución~\rom{1}}}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_x=\num{,58}}
+	\end{center}
+\end{frame}

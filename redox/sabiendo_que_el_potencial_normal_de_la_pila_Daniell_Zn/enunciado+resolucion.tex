@@ -1,0 +1,72 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/sabiendo_que_el_potencial_normal_de_la_pila_Daniell_Zn/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\varepsilon_{\text{total}}$ si $[\ce{Zn^{2+}}]=\SI{1,5}{\Molar}$ y $[\ce{Cu^2+}]=\SI{,75}{\Molar}$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon^0_{\text{total}}=\SI{1,1}{\volt}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\varepsilon_{\text{total}}$ en otras condiciones que no son estándar}
+	\structure{Reacción de oxidación-reducción:}
+	\begin{center}
+		\begin{tabular}{lcr}
+			S. oxidación (ánodo): & \ce{Zn -> Zn^{2+} + \cancel{2e-}} & $\varepsilon^0_{\text{ox}}=\SI{,76}{\volt}$\\
+			S. reducción (cátodo): & \ce{Cu^{2+} + \cancel{2e-} -> Cu} & $\varepsilon^0_{\text{red}}=\SI{,34}{\volt}$\\
+			\midrule
+			Reacción global: & \ce{Cu^{2+}(ac) + Zn(s) -> Cu(s) + Zn^{2+}(ac))}  & $\varepsilon^0_{\text{total}}=\SI{1,10}{\volt}$\\
+		\end{tabular}				
+	\end{center}
+	\begin{overprint}
+		\onslide<2>
+			\structure{Recordemos dos expresiones estudiadas anteriormente:}
+			$$
+				\overbrace{\Delta G}^{\Delta G = -nF\varepsilon} = \underbrace{\Delta G^0}_{\Delta G^0 = -nF\varepsilon^0} + RT\ln{Q}
+			$$
+		\onslide<3>
+			\structure{Operamos:}
+			$$
+				-nF\varepsilon = -nF\varepsilon^0 + RT\ln{Q}
+			$$
+		\onslide<4>
+			\structure{Ecuación de \textbf{\underline{NERNST}} general expresada con logaritmo natural:}
+			$$
+				\varepsilon = \varepsilon^0 - \frac{\overbrace{R}^{R=\SI{8,314}{\joule\per\mol\per\kelvin}}\cdot T}{n\cdot\underbrace{F}_{F=\SI{96485}{\coulomb\per\mol}}}\ln{Q}
+			$$
+		\onslide<5>
+			\structure{Ecuación de \textbf{\underline{NERNST}} expresada con logaritmo decimal (si temperatura en condiciones estándar):}
+			$$
+				\varepsilon = \varepsilon^0 - \frac{\num{8,314}\cdot\num{298,15}}{n\cdot\num{96485}}\overbrace{\ln{10}}^{\num{2,303}}\cdot\log{Q}
+			$$
+		\onslide<6->
+			\structure{Ecuación de \textbf{\underline{NERNST}} expresada con logaritmo decimal (si temperatura en condiciones estándar):}
+			$$
+				\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\log{Q}
+			$$
+	\end{overprint}
+	\visible<6->{
+		siendo $n$ el número de electrones implicados en el proceso ($n=\num{2}$) y $Q$ el cociente de las concentraciones (acuosos) y presiones (gases) de productos entre las de reactivos:
+		$$
+			Q=\frac{[\ce{Zn^{2+}}]}{[\ce{Cu^{2+}}]}
+		$$
+				}
+	\visible<7>{
+		\structure{Sustituimos por los valores en la ecuación de Nernst:}
+		$$
+			\varepsilon=\num{1,10}-\frac{\num{,0592}}{2}\log\left(\frac{\num{1,5}}{\num{,75}}\right)
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\varepsilon=\SI{1,09}{\volt}}
+				}
+\end{frame}

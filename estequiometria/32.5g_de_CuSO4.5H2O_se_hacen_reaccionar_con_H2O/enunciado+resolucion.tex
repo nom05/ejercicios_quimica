@@ -1,0 +1,50 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/32.5g_de_CuSO4.5H2O_se_hacen_reaccionar_con_H2O/enunciado.tex}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿[\ce{CuSO4}]?}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{CuSO4*5H2O})=\SI{32,5}{\gram}}\quad\quad
+		\visible<2->{
+			y ...
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{CuSO4*5H2O})=\SI{249,6854}{\gram\per\mol}}\\[.5cm]
+					}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{V(\ce{H2O})=\SI{1200}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{T(\ce{H2O})=\SI{85}{\celsius}=\SI{358,15}{\kelvin}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{P(\ce{H2O})=\SI{732}{\torr}=\rfrac{\num{732}}{\num{760}}~\si{\atm}}\quad
+		\visible<2->{
+			y ...
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{Mm(\ce{H2O})=\SI{18,02}{\gram\per\milli\liter}}
+					}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la concentración molar de \ce{CuSO4*5H2O}}
+	\structure{Número de moles de cada sustancia:} $n=\rfrac{m}{Mm}\Rightarrow m=n\vdot Mm$
+	$$
+		n(\ce{CuSO4*\colorbox{red}{\color{white}\textbf{\num{5}}}H2O}) = \frac{\SI{32,5}{\cancel\gram}}{\SI{249,6854}{\cancel\gram\per\mol}} = \SI{,1302}{\mol} = n(\ce{CuSO4}) \Rightarrow
+	$$
+	Usando la ecuación de los gases ideales: $PV=nRT$
+	$$
+		n=\frac{P\vdot V}{R\vdot T}\Rightarrow n(\ce{H2O})_{\text{vapor}}=\frac{\rfrac{732}{760}~\si{\cancel\atm}\vdot\SI{1200}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{358,15}{\cancel\kelvin}} = \SI{39,355}{\mol}
+	$$
+	$$
+		m(\ce{H2O}) = \SI{39,355}{\cancel\mol}\vdot\SI{18,02}{\gram\per\cancel\mol} = \SI{709,18}{\gram} = \SI{,709}{\kilogram}
+	$$
+	\begin{overprint}
+		\onslide<2>
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{[\ce{CuSO4}]=\frac{\SI{,1302}{\mol}}{\SI{,709}{\kilogram}}=\SI{,18}{\molal}}
+			\end{center}
+	\end{overprint}
+
+\end{frame}

@@ -1,0 +1,161 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{			
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/a_817celsius_la_constante_de_eq_para_conversion_CO2_en_CO/enunciado.tex}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		\structure{Reacción:} \ce{CO2(g) + C(s) <=> 2CO(g))}
+		\begin{enumerate}
+			\item {\huge ¿\si{\percent} de mezcla?, ¿$P(\ce{CO2(g)})$ en equilibrio ($eq$)?}\\[.3cm]
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{P_{eq}^{\text{total}}=P_T=\SI{4}{\atm}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_C=\num{10}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{T=\SI{817}{\celsius}=\SI{1090,15}{\kelvin}}\\[.5cm]
+			\item {\huge ¿Equilibrio posible si \ldots?}\\[.3cm]
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{P_{\text{inicial}}(\ce{CO2(g)})= P_0(\ce{CO2}) =\SI{2}{\atm}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P_{\text{inicial}}(\ce{CO(g)})= P_0(\ce{CO}) =\SI{0}{\atm}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m_{\text{inicial}}(\ce{C(s)})= m_0(\ce{C(s)}) =\SI{2,5}{\gram}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{V=\SI{10}{\liter}}
+		\end{enumerate}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): composición de gases y presión parcial de \ce{CO2} en equilibrio}
+	\structure{Reacción:}
+	$$
+		\ce{CO2(g) + C(s) <=> 2CO(g))}\quad K_C=\frac{[\ce{CO}]^2}{[\ce{CO2}]}=10
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\structure{Expresando la concentración mediante la ecuación de los gases ideales:}
+			$$
+				P\vdot V = n\vdot R\vdot T\Rightarrow \frac{n}{V} = M =\frac{P}{R\vdot T}
+			$$
+		\onslide<2>
+			\structure{Combinando la ec. de los gases ideales y la constante de equilibrio:}
+			$$
+				K_C=\frac{\overbrace{[\ce{CO}]^2}^{\left(\frac{P(\ce{CO})}{RT}\right)^2}}{\underbrace{[\ce{CO2}]}_{\frac{P(\ce{CO2})}{RT}}}
+			$$
+		\onslide<3>
+			\structure{Combinando la ec. de los gases ideales y la constante de equilibrio:}
+			$$
+				K_C=\frac{\frac{P(\ce{CO})^2}{(RT)^{\cancel{2}}}}{\frac{P(\ce{CO2})}{\cancel{RT}}}
+			$$
+		\onslide<4>
+			\structure{Combinando la ec. de los gases ideales y la constante de equilibrio:}
+			$$
+				K_C=\frac{P(\ce{CO})^2}{P(\ce{CO2})}\vdot\frac{1}{RT}
+			$$
+		\onslide<5>
+			\structure{Aplicando la consecuencia de la ley de Dalton:} $P_i = \chi_i P_T$
+			$$
+				K_C=\frac{\chi(\ce{CO})^2\vdot P_T^{\cancel{2}}}{\chi(\ce{CO2})\vdot\cancel{P_T}}\vdot\frac{1}{RT}
+			$$
+		\onslide<6>
+			\structure{Aplicando la consecuencia de la ley de Dalton:} $P_i = \chi_i P_T$
+			$$
+				K_C=\frac{\chi(\ce{CO})^2}{\chi(\ce{CO2})}\vdot\frac{P_T}{RT}
+			$$
+		\onslide<7>
+			\structure{Operamos un poco más y sustituimos:}
+			$$
+				\frac{\chi(\ce{CO})^2}{\chi(\ce{CO2})}=\overbrace{K_C}^{\num{10}}\vdot\frac{\overbrace{R}^{\num{,082}}\vdot\overbrace{T}^{\num{1090,15}}}{\underbrace{P_T}_{\num{4}}} = \num{223,48}
+			$$
+		\onslide<8>
+			\structure{La segunda ecuación es la suma de las fracciones molares $\left(\sum_{i=1}^{2}\chi_i=\num{1}\right)$:}
+			$$
+				\left.\begin{aligned}
+					\frac{\chi(\ce{CO})^2}{\chi(\ce{CO2})}&=\num{223,48}\\
+					\chi(\ce{CO})+\chi(\ce{CO2})=1 \Rightarrow\chi(\ce{CO2})&=1-\chi(\ce{CO})
+					\end{aligned}
+				\right\}
+				\quad\frac{\chi(\ce{CO})^2}{1-\chi(\ce{CO})}=\num{223,48}
+			$$
+		\onslide<9->
+			\structure{Resolvemos la ecuación de segundo grado:}
+			$$
+				\chi(\ce{CO})^2 + \num{223,48}\chi(\ce{CO})\num{-223,48}=0 
+				\begin{cases} 
+					x_1 =\num{,9956} \\
+					\cancel{x_2 < 0}
+				\end{cases}
+			$$
+	\end{overprint}
+	\visible<9->{
+		\structure{Por tanto:}
+		$$
+			\begin{array}{rr}
+				\chi(\ce{CO})=\num{,9956}\Rightarrow  & \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\si{\percent}~\ce{CO}=\SI{99,56}{\percent}}\\[.6cm]
+				\chi(\ce{CO2})=\num{,0044}\Rightarrow & \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\si{\percent}~\ce{CO2}=\SI{,44}{\percent}}
+			\end{array}
+		$$
+		\structure{Presión parcial por la consecuencia de la ley de Dalton:}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{P(\ce{CO2})=\num{,0044}\vdot\SI{4}{\atm}=\SI{,018}{\atm}}
+		$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): averiguar si la reacción alcanza el equilibrio}
+	\structure{Reacción:}
+	$$
+		\ce{CO2(g) + C(s) <=> 2CO(g))}\quad K_C=\frac{[\ce{CO}]^2}{[\ce{CO2}]}=10
+	$$
+	\structure{Obtenemos la concentración inicial de \ce{CO2}:}
+	$$
+		P\vdot V = n\vdot R\vdot T \Rightarrow \overbrace{\frac{n}{V}}^{M}=\frac{P}{R\vdot T} \Rightarrow
+		[\ce{CO2}]_0 = \frac{\SI{2}{\cancel\atm}}{\SI{,082}{\cancel\atm\liter\per\mol\per\cancel\kelvin}\vdot\SI{1090,15}{\kelvin}} = \SI{,02237}{\Molar}
+	$$
+	\begin{center}
+		\begin{tabular}{cScS}
+			Molaridad	& {\ce{CO2(g)}} 		& {\ce{C(s)}} 	& {\ce{CO(g)}}	\\
+			\midrule
+			Inicial		& ,02237				& {sólido}		& 0				\\
+			Reaccionan	&	{$-x$}				& {$-x$}		& {$2x$}		\\
+			Equilibrio	& {$\num{,02237}-x$}	& {$-x$}		& {$2x$}
+		\end{tabular}
+	\end{center}
+	\structure{Obtenemos la \underline{concentración consumida} $x$:}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				K_c = \frac{[\ce{CO}]^2}{[\ce{CO2}]}\Rightarrow K_c = \frac{(2x)^2}{\num{,02237}-x} = \num{10,0}
+			$$
+		\onslide<2->
+			$$
+				4x^2 + 10x - \num{,2237} = 0
+				\begin{cases} 
+					x_1 =\SI{,02218}{\Molar} \\
+					\cancel{x_2 < 0}
+				\end{cases}
+			$$
+	\end{overprint}
+	\begin{overprint}
+		\onslide<2>
+			\structure{Y el número de moles consumidos de \ce{CO2} y también de \ce{C(s)}:} $n_{\text{consumido}}(\ce{CO2})=n_{\text{consumido}}(\ce{C})$
+			$$
+				M = \frac{n}{V} \Rightarrow n = M\vdot V\Rightarrow n_{\text{consumido}}(\ce{CO2})=n_{\text{consumido}}(\ce{C}) = \SI{,02218}{\mol\per\cancel\liter}\SI{10}{\cancel\liter}=
+				\SI{,2218}{\mol}
+			$$
+		\onslide<3>
+			\structure{Masa supuestamente consumida de \ce{C(s)}:}
+			$$
+				m_{\text{consumida}}(\ce{C(s)}) = \SI{,2218}{\cancel\mol}\vdot\SI{12,01}{\gram\per\cancel\mol} = \SI{2,66}{\gram}
+			$$
+		\onslide<4->
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m_{\text{inicial}}(\ce{C(s)}) = \SI{2,5}{\gram} < m_{\text{consumida}}(\ce{C(s)}) = \SI{2,66}{\gram}}\\[.4cm]
+				\alert{\textbf{El equilibrio NO es alcanzable}}
+			\end{center}
+	\end{overprint}
+\end{frame}

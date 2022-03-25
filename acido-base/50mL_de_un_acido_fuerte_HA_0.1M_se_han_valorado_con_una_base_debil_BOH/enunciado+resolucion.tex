@@ -1,0 +1,196 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/50mL_de_un_acido_fuerte_HA_0.1M_se_han_valorado_con_una_base_debil_BOH/enunciado.tex
+				}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge\textbf{¿pH?}}\\[.2cm]
+	\end{center}
+	Ácido (\ce{HA}):\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{HA}] = \SI{,1000}{\Molar}}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{HA}) = \SI{50}{\milli\liter}}\\[.2cm]
+	Base (\ce{BOH}):\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_b(\ce{BOH}) = \num{3e-5}}\\[.2cm]
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{\text{antes PE}}=\SI{65}{\milli\liter}}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{\text{PE}}=\SI{75}{\milli\liter}}\footnote{Punto de equivalencia abreviado como PE.}\quad
+	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{V_{\text{después PE}}=\SI{85}{\milli\liter}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Concentración de \ce{BOH} y número de moles de \ce{HA}}
+	En el apartado b necesitamos $V(\ce{BOH})=\SI{75}{\milli\liter}$ de base débil para alcanzar el \textbf{\underline{\ac{PE}}} con el ácido \ce{HA}.
+	\structure{Reacción de neutralizacion:}
+	\begin{center}
+		\ce{HA(ac) + BOH(ac) -> BA(ac) + H2O(l)}
+	\end{center}
+	\structure{\ac{PE}: \underline{ni reactivo limitante ni reactivo en exceso}:}
+	$$
+		\overbrace{n(\ce{HA})}^{n=M\vdot V}=\underbrace{n(\ce{BOH})}_{n=M\vdot V}
+	$$
+	$$
+		[\ce{HA}]\vdot V(\ce{HA})=[\ce{BOH}]\vdot V(\ce{BOH})\Rightarrow[\ce{BOH}]=[\ce{HA}]\vdot\frac{V(\ce{HA})}{V(\ce{BOH})}\Rightarrow
+	$$
+	$$
+		[\ce{BOH}]=\SI{,1000}{\Molar}\vdot\frac{\SI{50}{\cancel\milli\liter}}{\SI{75}{\cancel\milli\liter}}=\rfrac{2}{30}~\si{\Molar}=\SI{,067}{\Molar}
+	$$
+	\structure{Número de moles \ce{HA}:}
+	$$
+		\overbrace{n(\ce{HA})}^{n=M\vdot V}=\SI{,1000}{\mol\per\cancel\liter}\vdot\SI{50e-3}{\cancel\liter}=\SI{5,000e-3}{\mol}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): \SI{65}{\milli\liter} de \ce{BOH}}
+	\structure{Volumen total en esta etapa:} $V_{\text{total}}=V_T=(50+65)~\si{\milli\liter}=\SI{115e-3}{\liter}$
+	\structure{Número de moles de \ce{BOH}:} $n(\ce{BOH})=\rfrac{2}{30}~\si{\mol\per\cancel\liter}\vdot\SI{65e-3}{\cancel\liter}=\SI{4,333e-3}{\mol}$
+	\structure{Reacción de neutralizacion:} \ce{HA(ac) + BOH(ac) -> BA(ac) + H2O(l)}
+	\begin{center}
+		{\small \begin{tabular}{cSSS}
+			\toprule
+				Nº de moles~(\si{\mol})	& {$n(\ce{HA})$}	& {$n(\ce{BOH})$}		& {$n(\ce{BA})=n(\ce{B^+})$}	\\
+				Inicial					& 5,000e-3			& 4,333e-3				& 0								\\
+				Final					&  ,667e-3 			& 0						& 4,333e-3						\\
+			\bottomrule
+		\end{tabular}}
+	\end{center}
+	\structure{Disociación del ion conjugado de \ce{BOH} (\ce{B+})}
+	\begin{center}
+		\ce{BA(ac) -> B^+(ac) + A^-(ac)}
+		$$
+			\ce{B^+(ac) + H2O(l) <=> BOH(ac) + H^+(ac)}\quad K_h=\frac{\overbrace{K_w}^{\num{e-14}}}{K_b(\ce{BOH})}=\frac{[\ce{BOH}][\ce{H^+}]}{[\ce{B^+}]}=\num{3,3e-10}
+		$$
+	\end{center}
+	\structure{Especies ácidas:} $n(\ce{HA})=\SI{,667e-3}{\mol}$ y $n(\ce{B^+})=\SI{4,333e-3}{\mol}$:\quad
+	\begin{center}
+		\underline{$[\ce{H^+}] = [\ce{H^+}]_{\ce{HA}} + [\ce{H^+}]_{\ce{B+}}$}
+	\end{center}
+	\structure{Concentraciones con nuevo volumen:}
+	$$
+		[\ce{HA}] = \frac{\SI{,667e-3}{\mol}}{\SI{,115}{\liter}} = \SI{,006}{\Molar};\quad\quad[\ce{B+}] = \frac{\SI{4,333e-3}{\mol}}{\SI{,115}{\liter}} = \SI{,038}{\Molar}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): \SI{65}{\milli\liter} de \ce{BOH} -- Aproximación al pH}
+	En el ejercicio es importante no olvidar todas las especies ácidas y saber \emph{a priori} si $[\ce{H+}]_{\ce{B+}}$ (concentración de protones de la disociación de \ce{B+}) es despreciable.
+ 	\structure{Cálculo de $[\ce{H+}]_{\ce{B+}}$:}
+	\begin{center}
+		\begin{tabular}{cSSS}
+			\toprule
+				Concentración~(\si{\Molar})	& {$[\ce{B^+}])$}						& {$[\ce{BOH}]$}		& {$[\ce{H^+}]$}					\\
+				Inicial						& ,038				& 0						& ,006				\\
+				Equilibrio					& {$\num{,038}-x$}	& {$x$}					& {$\num{,006}+x$}	\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{De la constante de equilibrio obtenemos $x$ (despreciamos disociación por $K_h$ baja):}
+	$$
+		K_h = \frac{x\vdot(\num{,006}+x)}{\num{,038}-x}\approx\frac{x\vdot(\num{,006})}{\num{,038}}\Rightarrow x=[\ce{H^+}]_{\ce{B^+}}=\SI{2,145e-9}{\Molar}
+	$$
+	$$
+		[\ce{H^+}] \approx [\ce{H^+}]_{\ce{HA}}=\SI{,006}{\Molar}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{pH}=-\log[\ce{H^+}]\Rightarrow\text{pH}=-\log(\num{,006})=\num{2,24}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): \SI{75}{\milli\liter} de \ce{BOH}}
+	\structure{Volumen total en esta etapa:}\quad$V_T=(50+75)~\si{\milli\liter}=\SI{125e-3}{\liter}$
+	\structure{Número de moles de las especies en \ac{PE}:}\quad$n(\ce{BOH})=n(\ce{HA})=n(\ce{B^+})=\SI{5e-3}{\mol}$
+	\structure{Concentración con nuevo volumen:}\quad$[\ce{B^+}]=\frac{\SI{5e-3}{\mol}}{\SI{125e-3}{\liter}}=\SI{,040}{\Molar}$
+	\structure{Disociación de \ce{B+}}
+	\begin{center}
+		\begin{tabular}{cSSS}
+			\toprule
+				Concentración~(\si{\Molar})	& {$[\ce{B^+}])$}						& {$[\ce{BOH}]$}		& {$[\ce{H^+}]$}	\\
+				Inicial						& ,040									& 0						& 0					\\
+				Equilibrio					& {$\num{,040}-x$}						& {$x$}					& {$x$}				\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Concentración de [\ce{H+}] y pH:}
+	$$
+		\overbrace{K_h}^{\num{3,3e-10}} = \frac{x^2}{\num{,040}-x}\approx\frac{x^2}{\num{,040}}\Rightarrow x=[\ce{H^+}]=\SI{3,63e-6}{\Molar}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{pH}=-\log(\num{3,63e-6})=\num{5,44}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): \SI{85}{\milli\liter} de \ce{BOH}}
+	\structure{Volumen total en esta etapa:}\quad$V(\ce{BOH})=\SI{85}{\milli\liter} \Rightarrow V_T=(50+85)~\si{\milli\liter}=\SI{,135}{\liter}$
+	\structure{Número de moles de \ce{BOH}:}\quad$n(\ce{BOH})=\SI{,2}{\mol\per\cancel\liter}\vdot\SI{85e-3}{\cancel\liter}=\SI{17,0e-3}{\mol}$
+	\begin{center}
+		\begin{tabular}{cSSS}
+			\toprule
+				Nº de moles~(\si{\mol})	& {$n(\ce{HA})$}	& {$n(\ce{BOH})$}			& {$n(\ce{BA})=n(\ce{B^+})$}	\\
+			Inicial					& 5,0e-3				& 17,0e-3					& 0								\\
+			Final					& 0						& 12,0e-3					& 5,0e-3						\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{\underline{DISOLUCIÓN AMORTIGUADORA}:}\quad existen las dos especies \ce{BOH}/\ce{B^+}
+	$$
+		\ce{BOH(ac) <=> B+(ac) + OH-(ac)}\quad K_b=\frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]}=\num{3e-5}
+	$$
+	\begin{center}
+		\begin{tabular}{cSSS}
+			\toprule
+				Nº de moles~(\si{\mol})	& {$n(\ce{BOH})$}		& {$n(\ce{B+})$}		& {$n(\ce{OH-})$}	\\
+			\midrule
+				Inicial					& 12,0e-3				& 5,0e-3				& 0					\\
+				Equilibrio				& {$\num{12,0e-3}-x$}	& {$\num{5,0e-3}+x$}	& {$x$}				\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{6}): \SI{85}{\milli\liter} de \ce{BOH} -- Ecuación de Henderson-Hasselbalch}
+	\structure{Número de moles calculados antes sin disociación:}\quad$n_0(\ce{BOH})=\SI{12,0e-3}{\mol}$; $n_0(\ce{B+})=\SI{5,0e-3}{\mol}$
+	$$
+		\ce{BOH(ac) <=> B+(ac) + OH-(ac)}\quad K_b=\frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]}=\num{3e-5}
+	$$
+	\structure{Operando $K_b$ -- Ec. de \ac{HH}:}
+	$$
+		K_b=\frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]}\Rightarrow\log(K_b)=\log(\frac{[\ce{B+}][\ce{OH-}]}{[\ce{BOH}]})\Rightarrow\overbrace{-\log([\ce{OH-}])}^{\text{pOH}=14-\text{pH}}=\underbrace{-\log(K_b)}_{\text{p}K_b}+\log(\frac{[\ce{B+}]}{[\ce{BOH}]})
+	$$
+	\structure{Operando la Ec. \ac{HH}:}
+	$$
+		-14+\text{pH}=-\text{p}K_b-\log(\frac{[\ce{B+}]}{[\ce{BOH}]})\Rightarrow\text{pH}=\overbrace{14-\text{p}K_b}^{\text{p}K_h}+\log\left[\frac{\rfrac{(n_0(\ce{BOH})-x)}{\cancel{V}}}{\rfrac{(n_0(\ce{B+})+x)}{\cancel{V}}}\right]
+	$$
+	\structure{Ec. de Henderson-Hasselbalch -- despreciando disociación:}
+	$$
+		\text{pH}=\text{p}K_h+\log(\frac{n_0(\ce{BOH})\cancel{-x}}{n_0(\ce{B+})\cancel{+x}})\Rightarrow
+		\text{pH}=14-\num{4,52}+\log(\frac{\num{12,0e-3}}{\num{5,0e-3}})
+	$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{pH}=\num{9,86}}
+		$$
+\end{frame}
+%
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{7}): apartado d}
+	Si tenemos una disolución amortiguadora, los pequeños cambios del volumen (diluyendo, por ejemplo) no afectan al pH de la disolución.
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\text{pH}=\num{9,86}}
+	$$
+\end{frame}

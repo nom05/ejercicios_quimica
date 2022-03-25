@@ -1,0 +1,188 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/en_un_sistema_aislado_ocurren_tres_procesos_en_los_que_solo_se_permite_la_transferencia_de_calor/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del problema y consideración inicial}
+	\begin{center}
+		\textbf{\huge ¿$Q_{\text{absorbe}}(\ce{X})$?\quad¿$Q_{\text{desprendido}}(\ce{N2H4})$?\quad¿$T_{\text{final}}(\ce{H2O})$?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\text{sistema aislado con tres procesos dentro}}\\[.2cm]
+	\end{center}
+	\structure{1"er Principio de la Termodinámica:} ``En un sistema aislado la energía interna se conserva.''
+	$$
+		\Delta U = Q + \cancelto{\Delta V = 0}{W} = 0\Rightarrow Q = 0\Rightarrow Q =
+		\underbrace{Q_{\text{absorbe}}(\ce{X})}_{>0} + \underbrace{Q_{\text{desprende}}(\ce{N2H4})}_{<0} + Q(\ce{H2O}) = 0
+	$$
+	Con los dos primeros procesos (\ce{X} y \ce{N2H4}) vamos a averiguar si el agua absorbe o cede calor.
+	$$
+		Q(\ce{H2O}) = 	-\underbrace{Q_{\text{absorbe}}(\ce{X})}_{>0} -\underbrace{Q_{\text{desprende}}(\ce{N2H4})}_{<0}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del primer proceso: vaporización de \ce{X}}
+	\structure{Sustancia \ce{X}:}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{m_{\ce{X}} = \SI{150}{\gram}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\text{f.inicial líquida}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{T^{\text{inicial}}_{\ce{X}}\equiv T^i_{\ce{X}} = \SI{20}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\text{f.final gas}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{T^{\text{final}}_{\ce{X}}\equiv T^f_{\ce{X}} = \SI{150}{\celsius}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{T^{\text{ebullición}}_{\ce{X}}\equiv T^e_{\ce{X}} = \SI{75}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\Delta H_{\text{vap}}(\ce{X}) = \SI{23,2}{\kilo\joule\per\gram}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{c_e(\ce{X(l)}) = \SI{,83}{\joule\per\gram\per\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{c_e(\ce{X(g)}) = \SI{,21}{\joule\per\gram\per\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calor absorbido por la vaporización de \ce{X}}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Partimos del estado inicial según los datos del problema:}
+			$$
+				\ce{
+					$\underset{\SI{20}{\celsius}}{\ce{X(l)}}$
+				}
+			$$
+		\onslide<2>
+			\structure{Calentamos hasta la temperatura de ebuillición:}
+			$$
+				\ce{
+					$\underset{\SI{20}{\celsius}}{\ce{X(l)}}$
+					->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{55}{\celsius}$}]
+					$\underset{\SI{75}{\celsius}}{\ce{X(l)}}$
+				}
+			$$
+		\onslide<3>
+			\structure{Proceso de vaporización:}
+			$$
+				\ce{
+					$\underset{\SI{20}{\celsius}}{\ce{X(l)}}$
+					->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{55}{\celsius}$}]
+					$\underset{\SI{75}{\celsius}}{\ce{X(l)}}$
+					->[$\textcolor{blue}{Q_2}$]
+					$\underset{\SI{75}{\celsius}}{\ce{X(g)}}$
+				}
+			$$
+		\onslide<4>
+			\structure{Calentamos hasta alcanzar la temperatura final:}
+			$$
+				\ce{
+					$\underset{\SI{20}{\celsius}}{\ce{X(l)}}$
+					->[$\textcolor{red}{Q_1}$][{$\Delta T_1=\SI{55}{\celsius}$}]
+					$\underset{\SI{75}{\celsius}}{\ce{X(l)}}$
+					->[$\textcolor{blue}{Q_2}$]
+					$\underset{\SI{75}{\celsius}}{\ce{X(g)}}$
+					->[$\textcolor{green}{Q_3}$][{$\Delta T_3=\SI{75}{\celsius}$}]
+					$\underset{\SI{150}{\celsius}}{\ce{X(g)}}$
+				}
+			$$
+	\end{overprint}
+	\visible<2->{
+		$$
+			\textcolor{red}{Q_1} = m\vdot c_e(\ce{X(l)})\vdot\Delta T_1\Rightarrow \textcolor{red}{Q_1} = \SI{150}{\cancel\gram}\vdot\SI{,83}{\joule\per\cancel\gram\per\cancel\celsius}\vdot\SI{55}{\cancel\celsius} = \SI{6847.50}{\joule}
+		$$
+	}
+	\visible<3->{
+		$$
+			\textcolor{blue}{Q_2} =  \overbrace{\SI{23200}{\joule\per\cancel\gram}}^{\SI{23,2}{\kilo\joule\per\mol}}\vdot\SI{150}{\cancel\gram} = \SI{3480000}{\joule}
+		$$
+	}
+	\visible<4->{
+		$$
+			\textcolor{green}{Q_3} = m\vdot c_e(\ce{X(g)})\vdot\Delta T_3\Rightarrow \textcolor{green}{Q_3} = \SI{150}{\cancel\gram}\vdot\SI{,21}{\joule\per\cancel\gram\per\cancel\celsius}\vdot\SI{75}{\cancel\celsius} = \SI{2362.50}{\joule}
+		$$
+		$$
+			Q_{\text{total}} = \sum_{i=1}^5 Q_i = \SI{6847.50}{\joule} + \SI{3480000}{\joule} + \SI{2362.50}{\joule}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{Q_{\text{total}} = \SI{3489210.00}{\joule} = \SI{3489,21}{\kilo\joule}}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del segundo proceso: descomposición de \ce{N2H4}}
+	\structure{\ce{N2H4}:}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=orange]{m_{\ce{N2H4}} = \SI{500}{\gram}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=orange]{Mm(\ce{N2H4}) = \SI{32,04516}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=orange]{\Delta H^0_f(\ce{N2H4}) = \SI{50,4}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=orange]{\Delta H^0_f(\ce{NH3}) = \SI{-46,3}{\kilo\joule\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calor desprendido por la descomposición de la hidrazina (\ce{N2H4})}
+	\structure{Reacción ajustada de la descomposición de la hidrazina:}
+	\begin{center}
+		\ce{$\colorbox{blue}{\color{white}\textbf{3}}$N2H4(l) -> $\colorbox{blue}{\color{white}\textbf{4}}$NH3(g) + N2(g)}
+	\end{center}
+	\structure{Ley de Hess:} obtenemos la variación de entalpía de la reacción de descomposición ($\Delta H_{\text{reacción}}\equiv\Delta H_R$).
+	$$
+		n\vdot\Delta H_R = \sum_{i=1}^{\text{n"o productos}}n_i\vdot\Delta H_{f,i} -\sum_{j=1}^{\text{n"o productos}}n_j\vdot\Delta H_{f,j}
+	$$
+	\alert{\textbf{NOTA IMPORTANTE:}} todos los $\mathbf{n}$ en la ecuación de Hess son los coeficientes estequiométricos de los compuestos. No se puede olvidar el de $\Delta H_R$ para que la entalpía sea ``por \SI{1}{\mol}''.
+	$$
+		\num{3}\vdot\Delta H_R = \num{4}\vdot
+		\overbrace{\Delta H_f(\ce{NH3})}^{\SI{-46,3}{\kilo\joule\per\mol}}
+		 	+ \num{1}\vdot
+		 \cancelto{0}{\Delta H_f(\ce{N2})}
+		 	- \num{3}\vdot
+		 \overbrace{\Delta H_f(\ce{N2H4})}^{\SI{50,4}{\kilo\joule\per\mol}}\Rightarrow
+		 \Delta H_R = \frac{-336.4}{\num{3}} = \SI{-112.1}{\kilo\joule\per\mol}
+	$$
+	\structure{N"o moles de \ce{N2H4}:}
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{N2H4}) = \frac{\SI{500}{\gram}}{\SI{32,04516}{\gram\per\mol}} = \SI{15,6}{\mol}
+	$$
+	\structure{Calor cedido por la hidrazina:}
+	\centering\tcbhighmath[boxrule=0.4pt,arc=2pt,colframe=blue,drop fuzzy shadow=red]{Q_{\text{desprendido}}(\ce{N2H4}) = \SI{-112.1}{\kilo\joule\per\cancel\mol}\vdot\SI{15.6}{\cancel\mol} = \SI{-1749.6}{\kilo\joule}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del tercer proceso: \ce{H2O}}
+	\structure{\ce{H2O}:}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{V_{\ce{H2O}} = \SI{30}{\liter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{c_e(\ce{H2O(l)}) = \SI{1}{\calorie\per\gram\per\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{c_e(\ce{H2O(g)}) = c_e(\ce{H2O(s)}) = \SI{,5}{\calorie\per\gram\per\celsius}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{d(\ce{H2O(g)}) = \SI{1}{\gram\per\milli\liter}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{T(\ce{H2O(g)}) = \SI{50}{\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): ¿se enfría o se calienta el agua?}
+	\structure{Por consecuencia del 1"er Principio:}
+	$$
+		Q(\ce{H2O}) = -\underbrace{Q_{\text{absorbe}}(\ce{X})}_{\SI{3489,21}{\kilo\joule}} -\underbrace{Q_{\text{desprende}}(\ce{N2H4})}_{\SI{-1749.6}{\kilo\joule\per\mol}}\Rightarrow
+	$$
+	$$
+		Q(\ce{H2O}) = \SI{-3489,21}{\kilo\joule} + \SI{1749,6}{\kilo\joule} = \SI{-1739,61}{\kilo\joule}
+	$$
+	\begin{center}
+		\myovalbox{\color{yellow}\textbf{{\Large SE ENFRÍA}}}
+	\end{center}
+	\structure{Masa de agua:} $d = \rfrac{m}{V}\Rightarrow m=d\vdot V\Rightarrow m(\ce{H2O}) = \SI{e3}{\gram\per\cancel\liter}\vdot\SI{3e1}{\cancel\liter} = \SI{3e4}{\gram}$
+	\structure{Suponemos que el cambio de temperatura no va a cambiar la fase del agua:} de lo contrario, tendríamos que añadir más etapas.
+	$$
+		Q = m\vdot c_e\vdot\underbrace{\Delta T}_{T_f - T_i}\Rightarrow
+		T_f = \frac{Q}{m(\ce{H2O})\vdot c_e(\ce{H2O(l)})} + T_i
+	$$
+	$$
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{T_f = \frac{\overbrace{\SI{-415773.38}{\cancel\calorie}}^{\SI{-1739,61}{\kilo\joule}}}{\SI{3e4}{\cancel\gram}\vdot\SI{1}{\cancel\calorie\per\cancel\gram\per\celsius}} + \SI{50}{\celsius} = \SI{36,14}{\celsius}}
+	$$
+\end{frame}

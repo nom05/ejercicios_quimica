@@ -1,0 +1,223 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+	 \input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/en_un_deposito_de_75L_se_introducen_11g_de_CO2/enunciado.tex
+		}
+    	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        \begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+            \item {\large ¿$P(\ce{H2})$? ¿$P(\ce{CO2})$? ¿$P(\ce{CH4})$?}
+            \item {\large ¿$m(\ce{CH4})$?}
+            \item {\large ¿$d_T$?}
+        \end{enumerate}
+    \end{center}
+
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V_T = \SI{75}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P_T = \frac{1782}{760}~\si{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T = 27+273,15~\si{\kelvin}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m(\ce{CO2}) = \SI{11}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{Mm(\ce{CO2}) = \SI{44,01}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m(\ce{H2}) = \SI{8}{\gram}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{Mm(\ce{H2}) = \SI{2,02}{\gram\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=red]{Mm(\ce{CH4}) = \SI{16,04}{\gram\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Presiones parciales de los gases}
+    \structure{Combinamos la ecuación de los gases ideales con la fracción molar para un gas $A$:}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                x_A = \frac{n_A}{n_T}
+            $$
+        \onslide<2>
+            $$
+                x_A = \frac{\overbrace{n_A}^{n=\frac{m}{Mm}}}{\underbrace{n_T}_{PV=nRT\Rightarrow n=\frac{PV}{RT}}}
+            $$
+        \onslide<3>
+            $$
+                x_A = \frac{\frac{m_A}{Mm_A}}{\frac{P_T\cdot V_T}{R\cdot T}}
+            $$
+        \onslide<4->
+            $$
+                x_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot P_T\cdot V_T}
+            $$
+    \end{overprint}
+    \visible<4->{
+        \structure{Usamos la relación entre la $P$ parcial y la $P$ total de una mezcla de gases:}
+        \begin{overprint}
+            \onslide<4>
+                $$
+                    P_A = x_A\cdot P_T
+                $$
+            \onslide<5>
+                $$
+                    P_A = \overbrace{x_A}^{x_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot P_T\cdot V_T}}\cdot P_T
+                $$
+            \onslide<6>
+                $$
+                    P_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot P_T\cdot V_T}\cdot P_T
+                $$
+            \onslide<7>
+                $$
+                    P_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot\cancel{P_T}\cdot V_T}\cdot\cancel{P_T}
+                $$
+            \onslide<8->
+                $$
+                    P_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot V_T}
+                $$
+        \end{overprint}
+                }
+    \visible<9->{
+        \structure{Sustituimos por los valores y calculamos la $P$ para \ce{H2} y \ce{CO2}:}
+        $$
+            P(\ce{H2}) = \frac{\SI{8}{\cancel\gram}\cdot\SI{0,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{300,15}{\cancel\kelvin}}{\SI{2,002}{\cancel\gram\per\cancel\mol}\cdot\SI{75}{\cancel\liter}}\Rightarrow
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\ce{H2}) = \SI{1,30}{\atm}}
+        $$
+        $$
+            P(\ce{O2}) = \frac{\SI{11}{\cancel\gram}\cdot\SI{0,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{300,15}{\cancel\kelvin}}{\SI{44,01}{\cancel\gram\per\cancel\mol}\cdot\SI{75}{\cancel\liter}}\Rightarrow
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{P(\ce{O2}) = \SI{0,08}{\atm}}
+        $$
+                }
+    \visible<10->{
+        \structure{Con la Ley de Dalton (Ecuación~\eqref{eq:Dalton}) obtenemos la $P$ del tercer gas:}
+        \begin{overprint}
+            \onslide<10>
+                $$
+                    P_T = \sum_{i=1}^{n} P_i\Rightarrow\text{Si }n=3\text{ entonces: } P_T = P_1 + P_2 + P_3
+                $$
+            \onslide<11>
+                $$
+                    P_T = P(\ce{H2}) + P(\ce{CO2}) + P(\ce{CH4})\Rightarrow  P(\ce{CH4}) = P_T - P(\ce{H2}) - P(\ce{CO2})
+                $$
+            \onslide<12>
+                $$
+                    P(\ce{CH4}) = \frac{1782}{760}~\si{\atm} - \SI{1,30}{\atm} - \SI{0,08}{\atm}
+                $$
+            \onslide<13>
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(\ce{CH4}) = \SI{0,96}{\atm}}
+                $$
+        \end{overprint}
+                 }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): masa de metano}
+    \structure{Previamente obtuvimos la expresión:}
+    $$
+        P_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot V_T}
+    $$
+    \visible<2->{
+        \structure{Despejando $m_A$:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    P_A = \frac{m_A\cdot R\cdot T}{Mm_A\cdot V_T}
+                $$
+            \onslide<3->
+                $$
+                    m_A = \frac{P_A\cdot Mm_A\cdot V_T}{R\cdot T}
+                $$
+        \end{overprint}
+                }
+    \visible<3->{
+        \structure{Sustituyendo por los valores del \ce{CH4}:}
+        $$
+            m_A = \frac{\SI{0,96}{\cancel\atm}\cdot \SI{16,04}{\gram\per\cancel\mol}\cdot\SI{75}{\cancel\liter}}{\SI{0,082}{\cancel\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{300,15}{\cancel\kelvin}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m(\ce{CH4}) = \SI{47,0}{\gram}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): densidad de la mezcla de gases}
+    \structure{La densidad viene dada por esta expresión general:}
+    $$
+        d = \frac{m}{V}
+    $$
+    \begin{block}{Método de la masa molecular media}
+        \structure{Partiendo de la ecuación de los gases ideales en función de la densidad (Ecuación~\eqref{eq:densidad_gases}):}
+        \begin{overprint}
+            \onslide<1-6>
+                $$
+                    d = \frac{P_T\cdot\overline{Mm}}{R\cdot T}
+                $$
+            \onslide<7>
+                $$
+                    d = \frac{\SI{2,345}{\cancel\atm}\cdot\SI{9,14}{\gram\per\cancel\mol}}{\SI{0,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{300,15}{\cancel\kelvin}}
+                $$
+            \onslide<8->
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{d = \SI{0,88}{\gram\per\liter}}
+                $$
+        \end{overprint}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    \overline{Mm} = \sum_{i=1}^{n}x_i\cdot Mm_i
+                $$
+            \onslide<3>
+                $$
+                    \overline{Mm} = \sum_{i=1}^{n}x_i\cdot Mm_i = x(\ce{CO2})\cdot Mm(\ce{CO2}) + x(\ce{H2})\cdot Mm(\ce{H2}) + x(\ce{CH4})\cdot Mm(\ce{CH4})
+                $$
+            \onslide<4>
+                $$
+                    \overline{Mm} = \frac{n(\ce{CO2})}{n_T}\cdot Mm(\ce{CO2}) + \frac{n(\ce{H2})}{n_T}\cdot Mm(\ce{H2}) + \frac{n(\ce{CH4})}{n_T}\cdot Mm(\ce{CH4})
+                $$
+            \onslide<5>
+                $$
+                    \overline{Mm} = \frac{\SI{0,25}{\mol}}{\SI{7,14}{\mol}}\cdot Mm(\ce{CO2}) + \frac{\SI{4,00}{\mol}}{\SI{7,14}{\mol}}\cdot Mm(\ce{H2}) + \frac{\SI{2,89}{\mol}}{\SI{7,14}{\mol}}\cdot Mm(\ce{CH4})
+                $$
+            \onslide<6-7>
+                $$
+                    \overline{Mm} = \frac{\SI{0,25}{\mol}}{\SI{7,14}{\mol}}\cdot\SI{44,01}{\gram\per\mol} + \frac{\SI{4,00}{\mol}}{\SI{7,14}{\mol}}\cdot\SI{2,02}{\gram\per\mol} + \frac{\SI{2,89}{\mol}}{\SI{7,14}{\mol}}\cdot\SI{16,04}{\gram\per\mol}
+                    =
+                    \SI{9,14}{\gram\per\mol}
+                $$
+        \end{overprint}
+    \end{block}
+    \visible<9->{
+        \begin{exampleblock}{Método de masa total}
+            \begin{overprint}
+                \onslide<9>
+                    $$
+                        d = \frac{m_T}{V}
+                    $$                    
+                \onslide<10>
+                    $$
+                        d = \frac{\sum_{i=1}^{n}m_i}{V}
+                    $$
+                \onslide<11>
+                    $$
+                        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{d = \frac{(11+8+47)~\si{\gram}}{\SI{75}{\liter}} = \SI{0,88}{\gram\per\liter}}
+                    $$
+                    \structure{VER ANEXO 2 para la demostración sobre la equivalencia entre los dos métodos}
+            \end{overprint}
+        \end{exampleblock}
+               }
+\end{frame}
+
+\input{
+		~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/en_un_deposito_de_75L_se_introducen_11g_de_CO2/anexo.tex
+	}

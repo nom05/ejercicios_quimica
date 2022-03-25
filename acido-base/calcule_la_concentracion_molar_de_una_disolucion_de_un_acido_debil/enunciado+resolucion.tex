@@ -1,0 +1,55 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/calcule_la_concentracion_molar_de_una_disolucion_de_un_acido_debil/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$[\ce{HA}]_0$?}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{ácido monoprótico: } \ce{HA}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{\SI{2}{\percent} disociado}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a = \num{1,75e-5}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): concentración de ácido débil}
+	\structure{Grado de disociación: } $\SI{2}{\percent}\Rightarrow\alpha=\num{,02}\Rightarrow\alpha=\frac{[\ce{H+}]}{[\ce{HA}]_0}$
+	\structure{Ácido monoprótico débil:} \ce{HA(ac) <=> H+(ac) + A-(ac)}\quad$K_a=\frac{[\ce{H+}]\cdot[\ce{A-}]}{[\ce{HA}]}=\num{1,75e-5}$
+%	\visible<2->{
+		\structure{Tabla de concentraciones:}\\[.3cm]
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+					Concentración  & [\ce{HA}]       & [\ce{H+}] & [\ce{A-}]\\
+					{[Inicial]}    & $[\ce{HA}]_0$   &    0      &    0     \\
+					{[Equilibrio]} & $[\ce{HA}]_0-x$ &   $x$     &   $x$    \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\structure{Partimos de la constante de equilibrio $K_a$ y la definición del grado de disociación ($\alpha$):}
+			$$
+				K_a=\frac{[\ce{H+}]\cdot[\ce{A-}]}{[\ce{HA}]};\qquad
+				\alpha=\frac{[\ce{H+}]}{[\ce{HA}]_0}\Rightarrow[\ce{H+}]=\alpha\cdot[\ce{HA}]_0 = x
+			$$
+		\structure{Por tanto:} $x=[\ce{H+}]=[\ce{A-}]$
+			$$
+				K_a=\frac{\overbrace{x^2}^{x=[\ce{HA}]_0\cdot\alpha}}{[\ce{HA}]_0-\underbrace{x}_{x=[\ce{HA}]_0\cdot\alpha}}\Rightarrow
+				K_a=\frac{[\ce{HA}]^2_0\cdot\alpha^2}{[\ce{HA}]_0-[\ce{HA}]_0\cdot\alpha}\Rightarrow
+				K_a=\frac{\cancel{[\ce{HA}]_0}\cdot[\ce{HA}]_0\cdot\alpha^2}{\cancel{[\ce{HA}]_0}\cdot\left(1-\alpha\right)}\Rightarrow
+				K_a=\frac{[\ce{HA}]_0\cdot\alpha^2}{\left(1-\alpha\right)}
+			$$
+			$$
+				[\ce{HA}]_0 = K_a\cdot\frac{\left(1-\alpha\right)}{\alpha^2}\Rightarrow
+				[\ce{HA}]_0 = \num{1,75e-5}\cdot\frac{\left(1-\num{,02}\right)}{\num{,02}^2}\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HA}]_0=\SI{,044}{\Molar}}
+			$$
+\end{frame}

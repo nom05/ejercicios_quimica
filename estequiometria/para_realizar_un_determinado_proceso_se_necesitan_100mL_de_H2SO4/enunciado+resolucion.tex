@@ -1,0 +1,243 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/para_realizar_un_determinado_proceso_se_necesitan_100mL_de_H2SO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	{\huge
+		$$
+			V(\ce{H2SO4})\text{ concentrado y no puro?}
+		$$}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V_{
+				\begin{matrix}
+					\text{diluido}\footnote{NOTA: \textbf{Disolver} (Separar las partículas o moléculas de un sólido, un líquido o un gas en un líquido de forma que queden incorporadas a él) no es lo mismo que \textbf{diluir} (aumentar volumen de disolvente) en Química}\\
+					\text{no puro}
+				\end{matrix}
+				}(\ce{H2SO4})=\SI{100}{\milli\liter}=\SI{100}{\cubic\centi\meter}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\% \text{pureza}_{
+			\begin{matrix}
+				\text{diluido}\\
+				\text{no puro}
+			\end{matrix}
+			}(\ce{H2SO4})=\SI{20}{\percent}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{d_{
+			\begin{matrix}
+				\text{diluido}\\
+				\text{no puro}
+			\end{matrix}
+			}(\ce{H2SO4})=\SI{1,14}{\gram\per\cubic\centi\meter}=\SI{1,14}{\gram\per\milli\liter}}\\[.4cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{\text{\% pureza}_{
+			\begin{matrix}
+				\text{concentrado}\\
+				\text{no puro}
+			\end{matrix}
+			}(\ce{H2SO4})=\SI{98}{\percent}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=orange]{d_{
+			\begin{matrix}
+				\text{concentrado}\\
+				\text{no puro}
+			\end{matrix}
+			}(\ce{H2SO4})=\SI{1,84}{\gram\per\cubic\centi\meter}=\SI{1,84}{\gram\per\milli\liter}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinar volumen de \ce{H2SO4} concentrado no puro}
+	\structure{Nota importante:} Nos tenemos que dar cuenta que el número de moléculas de \ce{H2SO4} (y, por tanto, número de moles) es el mismo pero en diferente volumen. Usamos la parte donde tenemos más información (diluido) para obtener lo que necesitamos.\\[.4cm]
+	\begin{overprint}
+		\onslide<1>
+			\begin{center}
+				\myovalbox{\textcolor{white}{		
+						$n_{
+							\begin{matrix}
+								\text{concentrado}\\
+								\text{puro}
+							\end{matrix}
+						}(\ce{H2SO4}) = n_{
+							\begin{matrix}
+								\text{diluido}\\
+								\text{puro}
+							\end{matrix}
+						}(\ce{H2SO4})$
+						\quad\quad $V_{\text{diluido}} > V_{\text{concentrado}}$
+				}}
+			\end{center}
+		\onslide<2>
+			$$
+						\overbrace{\frac{m_{
+							\begin{matrix}
+								\text{concentrado}\\
+								\text{puro}
+							\end{matrix}
+						}}{\cancel{Mm(\ce{H2SO4})}}}^{n=\rfrac{m}{Mm}} = 
+						\underbrace{\frac{m_{
+							\begin{matrix}
+								\text{diluido}\\
+								\text{puro}
+							\end{matrix}
+						}}{\cancel{Mm(\ce{H2SO4})}}}_{n=\rfrac{m}{Mm}}
+			$$
+		\onslide<3>
+			$$
+				m_{
+						\begin{matrix}
+							\text{concentrado}\\
+							\text{puro}
+						\end{matrix}
+					} = 
+				m_{
+						\begin{matrix}
+							\text{diluido}\\
+							\text{puro}
+						\end{matrix}
+					}
+			$$
+		\onslide<4>
+			$$
+				d=\frac{m}{V}\Rightarrow
+					m_{
+						\begin{matrix}
+							\text{diluido}\\
+							\text{no puro}
+						\end{matrix}
+					}
+					=
+						d_{
+							\begin{matrix}
+								\text{diluido}\\
+								\text{no puro}
+							\end{matrix}
+						}
+					\vdot
+						V_{
+							\begin{matrix}
+								\text{diluido}\\
+								\text{no puro}
+							\end{matrix}
+						}
+					\Rightarrow
+					m_{
+						\begin{matrix}
+							\text{diluido}\\
+							\text{no puro}
+						\end{matrix}
+					}
+					= \SI{1,14}{\gram\per\cancel\milli\liter}\vdot\SI{100}{\cancel\milli\liter} = \SI{114}{\gram}
+			$$
+		\onslide<5>
+			$$
+				m_{
+					\begin{matrix}
+						\text{diluido}\\
+						\text{puro}
+					\end{matrix}
+				}
+				=
+					m_{
+						\begin{matrix}
+							\text{diluido}\\
+							\text{no puro}
+						\end{matrix}
+					}
+					\vdot
+					\overbrace{\num{,20}}^{\text{\% pureza diluido = \SI{20}{\percent}}}
+				\Rightarrow
+				m_{
+					\begin{matrix}
+						\text{diluido}\\
+						\text{puro}
+					\end{matrix}
+				}
+				=
+					\SI{114}{\gram}
+					\vdot
+					\num{,20}
+				=
+					\SI{22,8}{\gram}
+				=
+				m_{
+					\begin{matrix}
+						\text{concentrado}\\
+						\text{puro}
+					\end{matrix}
+				}
+			$$
+		\onslide<6>
+			$$
+				m_{
+					\begin{matrix}
+						\text{concentrado}\\
+						\text{puro}
+					\end{matrix}
+				}
+				=
+				\SI{22,8}{\gram}
+				\Rightarrow
+				m_{
+					\begin{matrix}
+						\text{concentrado}\\
+						\text{no puro}
+					\end{matrix}
+				}
+				=
+					\frac{\SI{22,8}{\gram}}{\underbrace{\num{,98}}_{\text{\% pureza concentrado} = \SI{98}{\percent}}}
+				=
+					\SI{23,27}{\gram}
+			$$
+		\onslide<7->
+			$$
+				m_{
+					\begin{matrix}
+						\text{concentrado}\\
+						\text{no puro}
+					\end{matrix}
+				}
+				=
+				\SI{23,27}{\gram}
+				\Rightarrow
+				d=\frac{m}{V}
+				\Rightarrow
+				V=\frac{m}{d}
+				\Rightarrow
+				V_{
+					\begin{matrix}
+						\text{concentrado}\\
+						\text{no puro}
+					\end{matrix}
+				}
+				=
+					\overbrace{\frac{m_{
+							\begin{matrix}
+								\text{concentrado}\\
+								\text{no puro}
+							\end{matrix}
+					}}{
+					\underbrace{d_{
+						\begin{matrix}
+							\text{concentrado}\\
+							\text{no puro}
+						\end{matrix}
+					}}_{\SI{1,84}{\cancel\gram\per\milli\liter}}
+						}}^{\SI{23,27}{\cancel\gram}}
+			$$
+		\end{overprint}
+	
+	\visible<7->{
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V_{
+				\begin{matrix}
+					\text{concentrado}\\
+					\text{no puro}
+				\end{matrix}
+			}(\ce{H2SO4})=\SI{12,64}{\milli\liter}}
+				}
+\end{frame}

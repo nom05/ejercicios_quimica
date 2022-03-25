@@ -1,0 +1,304 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_desean_descomponer_CaCO3_utilizando_la_E_desprendida_en_la_combustion_de_butano/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\textbf{\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item ¿$m(\ce{CH3CH2CH2CH3}) = m(\ce{C4H10})$?
+			\item ¿$m(\ce{H2O})$ a calentar?
+	\end{enumerate}}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{m(\ce{CaCO3}) = \SI{250}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{Mm(\ce{CaCO3}) = \SI{100,087}{\gram\per\mol}}
+	$$
+	\structure{Reacción: }\quad\ce{CaCO3(s) -> CaO(s) + CO2(g)}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta H_{\text{f}}(\ce{CaO})=\SI{-635,5}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{\Delta H_{\text{f}}(\ce{CaCO3})=\SI{-1207,0}{\kilo\joule\per\mol}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\Delta H_{\text{f}}(\ce{C4H10})=\SI{-124,7}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\Delta H_{\text{f}}(\ce{CO2})=\SI{-285,8}{\kilo\joule\per\mol}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\Delta H_{\text{f}}(\ce{H2O})=\SI{-393,5}{\kilo\joule\per\mol}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\Delta H_{\text{vap}}(\ce{H2O})=\SI{2257}{\joule\per\gram}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{c_e(\ce{H2O(l)}) = \SI{4,18}{\joule\per\gram\per\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{c_e(\ce{H2O(g)}) = c_e(\ce{H2O(s)}) = \SI{2,09}{\joule\per\gram\per\celsius}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calor absorbido por \ce{CaCO3}}
+	\structure{Reacción:} \ce{CaCO3(s) -> CaO(s) + CO2(g)} (Comprobar que está ajustada)
+	\begin{overprint}
+		\onslide<1>
+			\structure{Entalpía de la reacción:} usamos la ``Ley de Hess''
+			$$
+				\Delta H_{\text{reacción}}(\ce{CaCO3}) = \Delta H_R(\ce{CaCO3}) = \sum n(\text{prods})\cdot\Delta H_f(\text{prods}) - \sum n(\text{reacts})\cdot\Delta H_f(\text{reacts})
+			$$
+		\onslide<2>
+			\structure{Entalpía de la reacción:} usamos la ``Ley de Hess''
+			$$
+				\Delta H_R(\ce{CaCO3}) 
+				= 1\times\underbrace{\Delta H_f(\ce{CaO})}_{\SI{-635,5}{\kilo\joule\per\mol}}
+				+ 1\times\overbrace{\Delta H_f(\ce{CO2})}^{\SI{-393,5}{\kilo\joule\per\mol}}
+				- 1\times\underbrace{\Delta H_f(\ce{CaCO3})}_{\SI{-1207,0}{\kilo\joule\per\mol}}
+			$$
+		\onslide<3>
+			\structure{Entalpía de la reacción:} usamos la ``Ley de Hess''
+			$$
+				\Delta H_R(\ce{CaCO3}) 
+				= \SI{-635,5}{\kilo\joule\per\mol}
+				\SI{-393,5}{\kilo\joule\per\mol}
+				+ \SI{1207,0}{\kilo\joule\per\mol}
+			$$
+		\onslide<4->
+			\structure{Entalpía de la reacción:} usamos la ``Ley de Hess''
+			$$
+				\Delta H_R(\ce{CaCO3}) 
+				= \SI{178,0}{\kilo\joule\per\mol}
+			$$
+	\end{overprint}
+	\visible<5->{
+		\structure{Necesitamos el número de moles que reaccionan de \ce{CaCO3}:}
+		\begin{overprint}
+			\onslide<5>
+				$$
+					n = \frac{m}{Mm}
+				$$
+			\onslide<6>
+				$$
+					n(\ce{CaCO3}) = \frac{\SI{250}{\cancel\gram}}{\SI{100,09}{\cancel\gram\per\mol}}=\SI{2,50}{\mol}
+				$$
+		\end{overprint}
+			}
+	\visible<6->{
+		\structure{El siguiente paso es saber cuánto calor absorbe el \ce{CaCO3}:}
+		$$
+			Q_{\text{absorbido}}(\ce{CaCO3}) = \overbrace{n(\ce{CaCO3})}^{\SI{2,50}{\cancel\mol}}\cdot\underbrace{\Delta H_R(\ce{CaCO3})}_{\SI{178,0}{\kilo\joule\per\cancel\mol}}
+		$$
+		\centering\myovalbox{\textcolor{yellow}{$Q_{\text{absorbido}}(\ce{CaCO3})=\SI{444,96}{\kilo\joule}$}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calor cedido por \ce{C4H10}}
+	\centering\textbf{Suponemos que el proceso transcurre en un sistema aislado.}
+	\structure{Según el 1"er principio de la Termodinámica:} $\Delta U=0=Q_{\text{total}}+W$
+	\visible<2->{
+		\structure{No se realiza ningún trabajo ($\Delta V=0$):} $Q_{\text{total}}+\cancelto{0}{W}=0$
+				}
+	\visible<3->{
+		\begin{overprint}
+			\onslide<3>
+				\structure{Transferencia de calor total tiene que ser cero:}
+				$$
+					Q_{\text{total}}=Q_{\text{cedido}}(\ce{C4H10})+Q_{\text{absorbido}}(\ce{CaCO3})+Q_{\text{absorbido}}(\ce{H2O})=0
+				$$
+			\onslide<4>
+				\structure{Quedándonos, como cabría esperar por el criterio de signos termodinámico:}
+				$$
+					-\overbrace{Q_{\text{cedido}}(\ce{C4H10})}^{<0}=\underbrace{Q_{\text{absorbido}}(\ce{CaCO3})}_{>0}+\underbrace{Q_{\text{absorbido}}(\ce{H2O})}_{>0}
+				$$
+			\onslide<5->
+				\structure{El enunciado nos dice que:} $\left|Q_{\text{absorbido}}(\ce{CaCO3})\right|=\num{,72}\times\left|Q_{\text{cedido}}(\ce{C4H10})\right|$
+				$$
+					-Q_{\text{cedido}}(\ce{C4H10}) = \overbrace{\num{,72}\times\left|Q_{\text{cedido}}(\ce{C4H10})\right|}^{Q_{\text{absorbido}}(\ce{CaCO3})} + \underbrace{\num{,28}\times\left|Q_{\text{cedido}}(\ce{C4H10})\right|}_{Q_{\text{absorbido}}(\ce{H2O})}
+				$$
+		\end{overprint}
+				}
+	\visible<6->{
+		\structure{Por tanto:}
+			$$
+				-Q_{\text{cedido}}(\ce{C4H10}) = \overbrace{\SI{444,96}{\kilo\joule}}^{Q_{\text{absorbido}}(\ce{CaCO3})} + \underbrace{\SI{173,04}{\kilo\joule}}_{Q_{\text{absorbido}}(\ce{H2O})} = \SI{618,00}{\kilo\joule}
+			$$
+		\centering\myovalbox{\textcolor{yellow}{$Q_{\text{cedido}}(\ce{C4H10})=\SI{-618,00}{\kilo\joule}$}}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): entalpía de combustión y masa usada de \ce{C4H10}}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Ajustar reacción:} \ce{C4H10(g) + O2(g) -> CO2(g) + H2O(l)}
+		\onslide<2>
+			\structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{\textbf{C4}H10}}
+				\ce{ + O2 ->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{\textbf{C}O2}}
+				\ce{ + H2O} \textbf{(sin ajustar)}
+		\onslide<3>
+			\structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{\textbf{C4}H10}}
+				\ce{ + O2 ->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{\textbf{4C}O2}}
+				\ce{ + H2O} \textbf{(ajustado)}
+		\onslide<4>
+			\structure{Ajustar reacción:}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{C4\textbf{H10}}}
+				\ce{ + O2 ->}
+				\ce{4CO2 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{\textbf{H2}O}} \textbf{(sin ajustar)}
+		\onslide<5>
+			\structure{Ajustar reacción:}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{C4\textbf{H10}}}
+				\ce{ + O2 ->}
+				\ce{4CO2 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{\textbf{5H2}O}} \textbf{(ajustado)}
+		\onslide<6>
+			\structure{Ajustar reacción:} \ce{C4H10 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2}}
+				\ce{->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{\textbf{4}C\textbf{O2}}}
+				\ce{+}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{\textbf{5}H2\textbf{O}}} \textbf{(sin ajustar)}
+		\onslide<7>
+			\structure{Ajustar reacción:} \ce{C4H10 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{13/2O2}}
+				\ce{->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{\textbf{4}C\textbf{O2}}}
+				\ce{+}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{\textbf{5}H2\textbf{O}}} \textbf{(ajustado)}
+		\onslide<8->
+			\structure{Reacción:} \ce{C4H10(g) + 13/2O2(g) -> 4CO2(g) + 5H2O(l)}
+	\end{overprint}
+	\visible<8->{
+		\structure{Aplicando la ley de Hess nuevamente:}
+		\begin{overprint}
+			\onslide<8>
+				$$
+					\Delta H_{\text{combustión}}(\ce{C4H10}) = \Delta H_C(\ce{C4H10}) = \sum n(\text{prods})\cdot\Delta H_f(\text{prods}) - \sum n(\text{reacts})\cdot\Delta H_f(\text{reacts})
+				$$
+			\onslide<9->
+				$$
+					\Delta H_C(\ce{C4H10}) 
+					= 4\times\overbrace{\Delta H_f(\ce{CO2})}^{\SI{-393,5}{\kilo\joule\per\mol}}
+					+ 5\times\overbrace{\Delta H_f(\ce{H2O})}^{\SI{-285,8}{\kilo\joule\per\mol}}
+					- 1\times\underbrace{\Delta H_f(\ce{C4H10})}_{\SI{-1207,0}{\kilo\joule\per\mol}}
+					- \frac{13}{2}\times\cancelto{0}{\Delta H_f(\ce{O2})}
+				$$
+		\end{overprint}
+				}
+	\visible<9->{
+		\centering\myovalbox{\textcolor{yellow}{$\Delta H_C(\ce{C4H10}=\SI{-2878,3}{\kilo\joule\per\mol}$}}
+		\structure{Si dividimos $Q_{\text{cedido}}(\ce{C4H10})$ por $\Delta H_C(\ce{C4H10})$ obtenemos $n(\ce{C4H10})$:}
+		\begin{overprint}
+			\onslide<9>
+				$$
+					Q_{\text{cedido}}(\ce{C4H10}) = n(\ce{C4H10})\cdot\Delta H_C(\ce{C4H10})
+				$$
+			\onslide<10>
+				$$
+					\underbrace{n(\ce{C4H10})}_{n=\rfrac{m}{Mm}\Rightarrow m=n\cdot Mm} = \frac{Q_{\text{cedido}}(\ce{C4H10})}{\Delta H_C(\ce{C4H10})}
+				$$
+			\onslide<11>
+				$$
+					m(\ce{C4H10}) = \frac{Q_{\text{cedido}}(\ce{C4H10})}{\Delta H_C(\ce{C4H10})}\cdot Mm(\ce{C4H10})
+				$$
+			\onslide<12->
+				$$
+					m(\ce{C4H10}) = \frac{\SI{-618,00}{\cancel\kilo\joule}}{\SI{-2878,3}{\cancel\kilo\joule\per\cancel\mol}}\cdot\SI{58,12}{\gram\per\cancel\mol}
+				$$
+		\end{overprint}
+				}
+	\visible<12->{
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{m(\ce{C4H10})=\SI{12,48}{\gram}}
+				 }
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): masa de agua para calentar de \SI{25,0}{\celsius} a \SI{103,0}{\celsius}}
+		\textbf{(Masa de agua: $m(\ce{H2O}) = m$)}
+		\begin{overprint}
+		\onslide<1>
+			\structure{Partimos del siguiente estado:}
+				$$
+					\ce{
+							$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+						}
+				$$
+		\onslide<2>
+			\structure{Calentamos hasta la vaporización:}
+				$$
+					\ce{
+							$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+							->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}$}]
+							$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+						}
+				$$
+		\onslide<3>
+			\structure{Proceso de vaporización:}
+				$$
+					\ce{
+							$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+							->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}$}]
+							$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+							->[$\textcolor{orange}{Q_2}$]
+							$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+						}
+				$$
+		\onslide<4->
+			\structure{Calentamos hasta la temperatura final:}
+				$$
+					\ce{
+							$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+							->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}$}]
+							$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+							->[$\textcolor{orange}{Q_2}$]
+							$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+							->[$Q_3$][{$\Delta T_3=\SI{3}{\celsius}$}]
+							$\underset{\SI{103}{\celsius}}{\ce{H2O(g)}}$
+					}
+				$$
+	\end{overprint}
+	\visible<2->{
+		$$
+			\textcolor{green}{Q_1} = m\cdot c_e(\ce{H2O(l)})\cdot\Delta T_1
+		$$
+				}
+	\visible<3->{
+		$$
+			\textcolor{orange}{Q_2} =  m\cdot\Delta H_{\text{vap}}(\ce{H2O})
+		$$
+	}
+	\visible<4->{
+		$$
+			Q_3 = m\cdot c_e(\ce{H2O(g)})\cdot\Delta T_3
+		$$
+		\begin{overprint}
+			\onslide<4>
+				$$
+					\overbrace{Q_{\text{absorbido}}(\ce{H2O})}^{\SI{173,04}{\kilo\joule}}=\textcolor{green}{Q_1}+\textcolor{orange}{Q_2}+Q_3=
+					\Cline[green]{m\cdot c_e(\ce{H2O(l)})\cdot\Delta T_1} + \Cline[orange]{m\cdot\Delta H_{\text{vap}}} + \Cline[black]{m\cdot c_e(\ce{H2O(g)})\cdot\Delta T_3}
+				$$
+			\onslide<5>
+				\structure{Despejamos $m(\ce{H2O})$:}
+				$$
+					m(\ce{H2O}) = \frac{Q_{\text{absorbido}}(\ce{H2O})}{c_e(\ce{H2O(l)})\cdot\Delta T_1 + \Delta H_{\text{vap}} + c_e(\ce{H2O(g)})\cdot\Delta T_3}
+				$$
+			\onslide<6>
+				\structure{Sustituimos por los valores:}
+				$$
+					m(\ce{H2O}) = \frac{\SI{173,04}{\cancel\kilo\joule}}{\SI{4,18e-3}{\cancel\kilo\joule\per\gram\per\cancel\celsius}\cdot\SI{75}{\cancel\celsius} + \SI{2,257}{\cancel\kilo\joule\per\gram} + \SI{2,09e-3}{\cancel\kilo\joule\per\gram\per\cancel\celsius}\cdot\SI{3}{\cancel\celsius}}
+				$$
+		\end{overprint}
+			}
+	\visible<6->{
+		\\[.5cm]\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{m(\ce{H2O}) = \SI{67,15}{\gram}}
+				}
+\end{frame}

@@ -1,0 +1,76 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/se_anhade_plata_solida_a_una_disolucion_con_estas_concentraciones_iniciales/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del ejercicio}
+	\begin{center}
+		{\LARGE ¿$[\ce{Ag+}]_{eq}$, $[\ce{Fe^2+}]_{eq}$ y $[\ce{Fe^3+}]_{eq}$?}
+		\structure{Reacción (ajustada):}\quad\ce{Ag+(ac) + Fe^2+(ac) <=> Ag(s) + Fe^3+(ac)}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{K_c=\num{2,98}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{Ag+}]=\SI{,200}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{[\ce{Fe^2+}]=\SI{,100}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=gray]{[\ce{Fe^3+}]=\SI{,300}{\Molar}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Resolución (\rom{1}): sentido del desplazamiento del equilibrio}
+	\structure{Reacción:} \ce{Ag+(ac) + Fe^2+(ac) <=> Ag(s) + Fe^3+(ac)}\\[.3cm]
+	\structure{Determinar en qué sentido ocurre el cambio neto del equilibrio (hacia reactivos o productos):} Como están presentes todos los reactivos y productos inicialmente, necesitamos usar el producto de reacción $Q_C$ (con las concentraciones de no equilibrio) y compararlo con $K_C$.
+	$$
+		Q_C = \frac{\overbrace{[\ce{Fe^3+}]}^{\num{,300}}}{\underbrace{[\ce{Ag+}]}_{\num{,200}}\vdot\underbrace{[\ce{Fe^2+}]}_{\num{,100}}}\Rightarrow
+		Q_C = \frac{\num{,300}}{\num{,200}\vdot\num{,100}} = \num{15} > \num{2,98}=K_c
+	$$
+	\textbf{Como $Q_c$ es mayor que $K_c$}, la proporción de productos (numerador) es mayor que en el equilibrio, por lo que el \textbf{equilibrio se desplaza hacia la izquierda}. Sin embargo, puede ocurrir que el sólido no sea suficiente (\textit{reactivo limitante}) y la reacción pare antes de alcanzar el equilibrio (comprobarlo). En este caso no nos dicen nada así que suponemos que hay suficiente sólido.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Resolución (\rom{3}): concentraciones en el equilibrio}
+	\structure{Reacción:} \ce{Ag+(ac) + Fe^2+(ac) <=> Ag(s) + Fe^3+(ac)}\\[.3cm]
+	\begin{center}
+		\begin{tabular}{cccc}
+			\toprule
+				(\si{\Molar}) & [\ce{Ag+}]     & [\ce{Fe^2+}]   & [\ce{Fe^3+}]   \\
+			\midrule
+				Inicial       & \num{,200}     & \num{,100}     & \num{,300}     \\
+				Reacciona     &    $+x$        &    $+x$        &    $-x$        \\
+				Equilibrio    & $\num{,200}+x$ & $\num{,100}+x$ & $\num{,300}-x$ \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		K_c = \frac{[\ce{Fe^3+}]}{[\ce{Ag+}]\vdot[\ce{Fe^2+}]}\Rightarrow K_c = \frac{\num{,300}-x}{(\num{,200}+x)(\num{,100}+x)} = \num{2,98}
+	$$
+	$$
+		x^2 + \num{,6356}x - \num{,0807} = 0 \Rightarrow
+		\begin{dcases}
+			x_1 = \SI{,1084}{\Molar}\\
+			\cancel{x_2 < 0}
+		\end{dcases}
+	$$
+	\begin{multicols}{2}
+			Usando $x_1$ y la última fila de la tabla donde vemos las concentraciones de equilibrio:
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{Ag+}]=\SI{,200}{\Molar}+\SI{,108}{\Molar}=\SI{,308}{\Molar}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{[\ce{Fe^2+}]=\SI{,100}{\Molar}+\SI{,108}{\Molar}=\SI{,208}{\Molar}}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=gray]{[\ce{Fe^3+}]=\SI{,300}{\Molar}-\SI{,108}{\Molar}=\SI{,192}{\Molar}}
+			$$
+			Comprobamos nuestro resultado:
+			$$
+				\frac{\SI{,192}{\Molar}}{\SI{,308}{\Molar}\times\SI{,208}{\Molar}} \approx\num{3}
+			$$
+			{\footnotesize Añadiendo una cifra significativa más obtenemos el valor de \num{2,98}. Sin embargo, nuestros datos parten de tres.}
+	\end{multicols}
+\end{frame}

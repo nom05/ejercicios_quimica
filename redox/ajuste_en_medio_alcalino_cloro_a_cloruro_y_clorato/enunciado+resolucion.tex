@@ -1,0 +1,79 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+			\input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/ajuste_en_medio_alcalino_cloro_a_cloruro_y_clorato/enunciado.tex
+				}
+	  	}
+\end{frame}
+ 
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): cloro molecular a cloruro y clorato}
+	\structure{Medio alcalino:} ajuste en medio ``\textbf{\underline{básico}}''.
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{Cl2(g) + OH-(ac) -> Cl-(ac) + ClO3-(ac)}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{0}{\ce{Cl}}$2(g)
+						+
+					$\overset{-2}{\ce{O}}$
+					$\overset{+1}{\ce{H}}$-(ac)
+						->
+					$\overset{-1}{\ce{Cl}}$-(ac)
+						+
+					$\overset{+5}{\ce{Cl}}
+					$\overset{-2}{\ce{O}}3-(ac)
+				}
+			$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cl2(g) -> ClO3-(ac)}
+			\structure{Semirreacción de reducción:}\quad\ce{Cl2(g) -> Cl-(ac)}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:}\quad\ce{Cl2(g) -> 2ClO3-(ac)}
+			\structure{Semirreacción de reducción:}\quad\ce{Cl2(g) -> 2Cl-(ac)}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) -> 2ClO3-(ac) + 6H2O(l)}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) -> 2Cl-(ac)}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l)}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) -> 2Cl-(ac)}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l) + 10e-}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) + 2e- -> 2Cl-(ac)}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l) + 10e-}
+			\structure{Semirreacción de reducción:} $5\times\left(\ce{Cl2(g) + 2e- -> 2Cl-(ac)}\right)$
+		\onslide<9>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l) + 10e-}
+			\structure{Semirreacción de reducción:} \ce{5Cl2(g) + 10e- -> 10Cl-(ac)}
+		\onslide<10>
+			\begin{tabular}{c}
+				\ce{Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l) + \cancel{\ce{10e-}}} \\
+				\ce{5Cl2(g) + \cancel{\ce{10e-}} -> 10Cl-(ac)} \\
+				\midrule
+				\ce{6Cl2(g) + 12OH-(ac) -> 2ClO3-(ac) + 6H2O(l) + 10Cl-(ac)}
+			\end{tabular}
+		\onslide<11>
+			$$
+				\ce{3Cl2(g) + 6OH-(ac) -> ClO3-(ac) + 3H2O(l) + 5Cl-(ac)}
+			$$
+	\end{overprint}                 
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+		\item<5-> En el lado de la semirreacción que presente exceso de oxígenos, añadiremos tantas moléculas de agua como oxígenos hay de más.
+		\item<6-> Ajustamos en el otro lado el número de oxígenos e hidrógenos añadiendo \ce{OH-}.
+		\item<7-> Ajustamos número de electrones en cada reacción.
+		\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+		\item<10-> Sumamos ambas reacciones.
+		\item<11-> Simplificamos si procede.
+	\end{enumerate}
+\end{frame}

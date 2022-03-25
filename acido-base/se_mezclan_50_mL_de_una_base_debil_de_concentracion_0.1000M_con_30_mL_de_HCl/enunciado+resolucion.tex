@@ -1,0 +1,111 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_mezclan_50_mL_de_una_base_debil_de_concentracion_0.1000M_con_30_mL_de_HCl/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿[\ce{HCl}]? ¿pH si V(HCl) = \SI{,015}{\liter} y V(HCl) = \SI{,025}{\liter}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{BOH})=\SI{50e-3}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{BOH}]=\SI{,1000}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a(\ce{BOH})=\num{1,8e-5}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{V(\ce{HCl})=\SI{30e-3}{\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\pH=\num{1,903}}\\[.8cm]
+	\end{center}
+	\begin{flushright}
+		{\footnotesize\textbf{\ce{BOH} se refiere a la base débil}}
+	\end{flushright}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Determinación de la concentración de \ce{HCl}}
+	\structure{Reacciones que tienen lugar:}
+	\begin{center}
+		\ce{BOH(ac) + HCl(ac) -> BCl(ac) + H2O(l)} (Reacción de neutralización)\\
+		\ce{BCl(ac) -> B+(ac) + Cl-(ac))} (Reacción de disociación de la sal)\\
+	\end{center}
+	$$
+		\ce{B+(ac) + H2O(l) <=> BOH(ac) + H+(ac)}\quad K_h=\frac{K_w}{K_b}=\frac{[\ce{BOH}]\vdot[\ce{H+}]}{[\ce{B+}]}=\num{5,56e-10}
+	$$
+	\begin{overprint}
+		\onslide<1>
+			\structure{Consideraciones del ejercicio:}
+			\begin{itemize}
+				\item Podríamos calcular el pH inicial de la disolución de \ce{BOH} para ver si es mayor que el pH del enunciado (\num{1,903}) y saber quién está en exceso (\ce{HCl} o \ce{BOH}). Sin embargo, sabemos de los ejercicios de valoración que si tenemos exceso de una base, el $\pH>7$.
+				\item Como podéis ver, tenemos dos sustancias con carácter ácido: \textbf{\ce{HCl}} y \textbf{\ce{B+}}. Entonces: $[\ce{H+}]_\text{total}=[\ce{H+}]_\text{\ce{HCl}} + [\ce{H+}]_\text{\ce{B+}}$
+				\item ¿Podría ser que $[\ce{B+}]>>[\ce{HCl}]_{\text{en exceso}}$? Pensando de nuevo en el valor $\pH=\num{1,903}$, este nos indica que la disolución es bastante ácida y, como el valor de $K_h$ del ion conjugado es muy pequeño (\num{5,56e-10}) provocando una disociación moderada, esa concentración de [\ce{H+}] tiene que provenir del \ce{HCl}. Vamos a ahorrar un cálculo suponiendo que \ce{HCl} está sobradamente en exceso.
+				\item Si $\pH = -\log[\ce{H+}] = \num{1,903}$, entonces $[\ce{H+}]_\text{total}=\SI{,0125}{\Molar}$.
+				\item Si se ha consumido todo el \ce{BOH} y este es el reactivo limitante, entonces podemos asegurar: $n_{\text{inicial}}(\ce{BOH})=n(\ce{B+})=\SI{,1}{\mol\per\cancel\liter}\vdot\SI{50e-3}{\cancel\liter}=\SI{5e-3}{\mol}$
+				\item Para calcular la concentración de \ce{HCl} $V_T = \SI{50e-3}{\liter}+\SI{30e-3}{\liter}=\SI{80e-3}{\liter}\Rightarrow [\ce{B+}] = \frac{\SI{5e-3}{\mol}}{\SI{80e-3}{\liter}}=\SI{,0625}{\Molar}$
+			\end{itemize}
+		\onslide<2>
+			\begin{center}
+				\begin{tabular}{lccc}
+						& \multicolumn{3}{c}{\ce{B+(ac) + H2O(l) <=> BOH(ac) + H+(ac)}} 									\\
+					\midrule
+						(\si{\Molar}) 	& [\ce{B+}] 		& [\ce{BOH}] 	& [\ce{H+}] 									\\
+						Inicial			& \num{,0625}		&	0			& $[\ce{H+}]_{\text{\ce{HCl}}}$ 				\\
+						Equilibrio		& $\num{,0625}-x$	& $x$			& $[\ce{H+}]_{\text{\ce{HCl}}}+x=\num{,0125}$
+				\end{tabular}
+			\end{center}
+			$$
+				K_h = \frac{x\vdot\num{,0125}}{\num{,0625}-x}\approx\frac{x\vdot\num{,0125}}{\num{,0625}}\Rightarrow x=[\ce{H+}]_{\ce{B+}} = \SI{2,78e-10}{\Molar}
+			$$
+			$$
+				[\ce{H+}]_{\ce{HCl}}=\SI{,0125}{\Molar}-\SI{2,78e-10}{\Molar}\approx\SI{,0125}{\Molar}\Rightarrow [\ce{H+}]_{\ce{HCl}}=[\ce{HCl}]_{\text{exceso}} = \SI{,0125}{\Molar}
+			$$
+			\structure{Número de moles en exceso de \ce{HCl}:} $n_{\text{exceso}}(\ce{HCl})=\SI{,0125}{\Molar}\vdot\SI{80e-3}{\liter} = \SI{1e-3}{\mol}$\\[.2cm]
+			\structure{Número de moles totales de \ce{HCl}:} $n_T(\ce{HCl}) = \underbrace{n_{\text{exceso}}(\ce{HCl})}_{\SI{1e-3}{\mol}}
+			+ \underbrace{n_{\text{p.equiv.}}(\ce{HCl})}_{=n(\ce{BOH})=\SI{5e-3}{\mol}}$
+			$$
+				n_T(\ce{HCl})=\SI{6e-3}{\mol}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{HCl}]=\frac{\SI{6e-3}{\mol}}{\SI{30e-3}{\liter}}=\SI{,2}{\Molar}}
+			$$
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): Determinación del pH cuando $V(\ce{HCl})=\SI{15}{\milli\liter}$}
+	\begin{itemize}
+		\item\structure{NOTA:} Revisar otros ejercicios para ver pasos más detallados de este tipo de cálculos.
+		\item\structure{Número de moles de \ce{HCl}:} $n(\ce{HCl}) = \SI{,2}{\mol\per\cancel\liter}\vdot\SI{15e-3}{\cancel\liter}=\SI{3e-3}{\mol}$.
+		\item\alert{Del anterior apartado:} $n(\ce{BOH})=\SI{5e-3}{\mol}$.
+		\item\structure{Exceso de \ce{BOH}:} $n_{\text{exceso}}(\ce{BOH})=\SI{5e-3}{\mol}-\SI{3e-3}{\mol}=\SI{2e-3}{\mol}$.
+		\item\structure{\ce{B+} producido:} $n(\ce{B+})=\SI{3e-3}{\mol}$.
+		\item\structure{Situación:} disolución amortiguadora básica, combinando $\pH=14-\pOH$ y ecuación de Henderson -- Hasselbalch. Se incluye la aproximación que desprecia la disociación de la base frente a las concentraciones formales. Los volúmenes desaparecen del cociente de concentraciones.
+		$$
+			\pH = 14 -\pKb + \log(\frac{n_0(\ce{BOH})}{n_0(\ce{B+})})\Rightarrow \pH=\num{14}-\num{5}+\log(\num{1,8})+\log(\frac{\num{2e-3}}{\num{3e-3}})
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\pH = \num{9,079}}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): Determinación del pH cuando $V(\ce{HCl})=\SI{25}{\milli\liter}$}
+	\begin{itemize}
+		\item\structure{NOTA:} Revisar otros ejercicios para ver pasos más detallados de este tipo de cálculos.
+		\item\structure{Número de moles de \ce{HCl}:} $n(\ce{HCl}) = \SI{,2}{\mol\per\cancel\liter}\vdot\SI{25e-3}{\cancel\liter}=\SI{5e-3}{\mol}$.
+		\item\alert{Del anterior apartado:} $n(\ce{BOH})=\SI{5e-3}{\mol}$.
+		\item\structure{Punto de equivalencia ($n(\ce{HCl}) = n(\ce{BOH})=\SI{5e-3}{\mol}$):} no hay reactivo limitante ni reactivo en exceso.
+		\item\structure{\ce{B+} producido:} $n(\ce{B+})=\SI{5e-3}{\mol}$.
+		\item\structure{Volumen total y $[\ce{B+}]_0$:} $V_T = \SI{50e-3}{\liter} + \SI{25e-3}{\liter} = \SI{75e-3}{\liter}$; $[\ce{B+}]_0 = \rfrac{1}{15}~\si{\Molar}$
+		\item Se desprecia la disociación frente a la concentración formal. Expresión final para el pH en este apartado:
+		$$
+			\pH = -\frac{1}{2}\log(\frac{K_w}{15\vdot K_b})\Rightarrow\pH = -\frac{1}{2}\log(\frac{\num{e-14}}{15\vdot\num{1,8e-5}})
+		$$
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\pH = \num{5,216}}
+		\end{center}
+	\end{itemize}
+\end{frame}

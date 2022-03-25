@@ -1,0 +1,102 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/la_reaccion_A-productos_es_de_primer_orden_en_A/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large ¿$t_{\rfrac{1}{2}}$? y ¿$m(\ce{A})$ después de \SI{1}{\hour}?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{Orden 1}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m_0(\ce{A})=\SI{1,60}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{t=\SI{38}{\minute}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{A})=\SI{,40}{\gram}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación del tiempo de vida media}
+	\structure{Si la reacción es de orden 1 con respecto a \ce{A} implica:} {\tiny (revisar ejercicios anteriores para observar cómo se obtienen las expresiones)}
+	$$
+		v=k\vdot[\ce{A}];\quad \ln(\frac{[\ce{A}]}{[\ce{A}]_0})=-k\vdot t;\quad k=\frac{\ln(2)}{t_{\rfrac{1}{2}}}
+	$$
+	\visible<2->{
+		\begin{overprint}
+			\onslide<2>
+				\structure{Despejamos y sustituimos $k$ en la ecuación integrada:}
+				$$
+					\ln(\frac{[\ce{A}]}{[\ce{A}]_0})=-\overbrace{k}^{k=\frac{\ln(2)}{t_{\rfrac{1}{2}}}}\vdot t
+				$$
+			\onslide<3>
+				\structure{Usamos la definición de molaridad:} $M=\frac{n}{V}$
+				$$
+					\ln\frac{\overbrace{[\ce{A}]}^{[\ce{A}]=\frac{n(\ce{A})}{V}}}{\underbrace{[\ce{A}]_0}_{[\ce{A}]_0=\frac{n_0(\ce{A})}{V}}}=-\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t
+				$$
+			\onslide<4>
+				\structure{Usamos la definición de molaridad:} $M=\frac{n}{V}$
+				$$
+					\ln(\frac{\frac{n(\ce{A})}{\cancel{V}}}{\frac{n_0(\ce{A})}{\cancel{V}}})=-\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t
+				$$
+			\onslide<5>
+				\structure{Empleamos la relación entre el número de moles $n$ y la masa $m$:} $n=\frac{m}{Mm}$
+				$$
+					\ln\frac{\overbrace{n(\ce{A})}^{n(\ce{A})=\frac{m(\ce{A})}{Mm(\ce{A})}}}{\underbrace{n_0(\ce{A})}_{n_0(\ce{A})=\frac{m_0(\ce{A})}{Mm(\ce{A})}}}=-\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t
+				$$
+			\onslide<6>
+				\structure{Empleamos la relación entre el número de moles $n$ y la masa $m$:} $n=\frac{m}{Mm}$
+				$$
+					\ln(\frac{\frac{m(\ce{A})}{\cancel{Mm(\ce{A})}}}{\frac{m_0(\ce{A})}{\cancel{Mm(\ce{A})}}})=-\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t
+				$$
+			\onslide<7>
+				\structure{Despejamos $t_{\rfrac{1}{2}}$:}
+				$$
+					\ln(\frac{m_0(\ce{A})}{m(\ce{A})})=\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t
+				$$
+			\onslide<8->
+				\structure{Despejamos $t_{\rfrac{1}{2}}$:}
+				$$
+					t_{\rfrac{1}{2}}=\frac{\ln(2)}{\ln(\frac{m_0(\ce{A})}{m(\ce{A})})}\vdot t
+				$$
+		\end{overprint}
+				}
+		\visible<8->{
+			\structure{Sustituimos por los datos del problema:}
+			$$
+				t_{\rfrac{1}{2}}=\frac{\ln(2)}{\ln(\frac{\SI{1,60}{\cancel\gram}}{\SI{,40}{\cancel\gram}})}\vdot\SI{38}{\minute}
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{t_{\rfrac{1}{2}}=\SI{19}{\minute}}
+			$$
+					}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): determinación de la masa de \ce{A} después de \SI{1}{\hour} de reacción}
+	\structure{Con el $t_{\rfrac{1}{2}}=\SI{19}{\minute}$ y la expresión del anterior apartado solo hay que sustituir y operar:}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ln(\frac{m_0(\ce{A})}{m(\ce{A})})=\frac{\ln(2)}{t_{\rfrac{1}{2}}}\vdot t\Rightarrow
+				\ln(\frac{\SI{1,60}{\gram}}{m(\ce{A})})=\frac{\ln(2)}{\SI{19}{\cancel\minute}}\vdot\SI{60}{\cancel\minute}
+			$$
+		\onslide<2->
+			$$
+				\ln(\frac{\SI{1,60}{\gram}}{m(\ce{A})})=\ln(2^{\frac{\num{19}}{\num{60}}})\Rightarrow
+				\frac{\SI{1,60}{\gram}}{m(\ce{A})}=2^{\frac{\num{19}}{\num{60}}}\Rightarrow
+				m(\ce{A})=\frac{\SI{1,60}{\gram}}{2^{\frac{\num{19}}{\num{60}}}}
+			$$
+	\end{overprint}
+	\visible<2->{
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{A})=\SI{,18}{\gram}}
+		$$
+				}
+\end{frame}

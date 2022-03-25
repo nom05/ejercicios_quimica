@@ -1,0 +1,146 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$n$ y $k$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{\ce{A -> P}}\\[.3cm]
+		\begin{tabular}{SS}
+			\toprule
+				{$[\ce{A}]~(\si{\Molar})$} & {$t~(\si{\second})$} \\
+			\midrule
+				1      &  0   \\
+				0,9667 &  1,5 \\
+				0,9456 &  2,5 \\
+				0,9255 &  3,5 \\
+				0,9062 &  4,5 \\
+				0,8877 &  5,5 \\
+				0,8699 &  6,5 \\
+				0,8529 &  7,5 \\
+				0,8365 &  8,5 \\
+				0,8207 &  9,5 \\
+				0,8055 & 10,5 \\
+				0,7908 & 11,5 \\
+				0,7767 & 12,5 \\
+				0,7631 & 13,5 \\
+				0,7499 & 14,5 \\
+				0,7372 & 15,5 \\
+				0,7249 & 16,5 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): comprobando que la reacción es de orden 0}
+	\structure{Reacción:}\quad\ce{A -> P}
+	\structure{Ecuación cinética general:}
+	$$
+		v=-\frac{\Delta[\ce{A}]}{\Delta t}=\frac{\Delta[\ce{P}]}{\Delta t}=k[\ce{A}]^n
+	$$\\[.4cm]
+	\begin{center}
+		{\LARGE\textbf{\textit{\underline{Método integral de velocidades}}}}
+	\end{center}
+	\structure{Orden 0 ($n=0$)}
+	$$
+		-\dv{[\ce{A}]}{t}=k\overbrace{[\ce{A}]^0}^{1}\Rightarrow
+		-\dv{[\ce{A}]}{t}=k\Rightarrow\dd{[\ce{A}]}=-k\dd{t}\Rightarrow\int_{[\ce{A}]_0}^{[\ce{A}]}\dd{[\ce{A}]}=-k\int_{0}^{t}\dd{t}
+	$$
+	$$
+		[\ce{A}]-[\ce{A}]_0=-k\qty(t - 0)\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{[\ce{A}]=[\ce{A}]_0 - k\vdot t}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): comprobando que la reacción es de orden 0}
+    \begin{center}
+        \begin{figure}
+            \caption{Representación de la concentración de \ce{A} ($[\ce{A}]$) con respecto al tiempo ($t$). La cinética de la reacción \textbf{\underline{no se ajusta}} bien a una reacción de \textbf{\underline{orden 0}}. $[\ce{A}]_0$ es muy distinto, $r^2$ está alejado y la trayectoria de los puntos parece una curva frente a la recta de regresión lineal.}
+            \input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion/figs/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion-orden0.tex
+		}
+        \end{figure}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): comprobando que la reacción es de orden 1}
+	\structure{Reacción:}\quad\ce{A -> P}
+	\structure{Ecuación cinética general:}
+	$$
+		v=-\frac{\Delta[\ce{A}]}{\Delta t}=\frac{\Delta[\ce{P}]}{\Delta t}=k[\ce{A}]^n
+	$$\\[.4cm]
+	\begin{center}
+		{\LARGE\textbf{\textit{\underline{Método integral de velocidades}}}}
+	\end{center}
+	\structure{Orden 1 ($n=1$)}
+	$$
+		-\dv{[\ce{A}]}{t}=k\vdot[\ce{A}]^1\Rightarrow
+		-\dv{[\ce{A}]}{t}=k\vdot[\ce{A}]\Rightarrow\frac{\dd{[\ce{A}]}}{[\ce{A}]}=-k\dd{t}\Rightarrow\int_{[\ce{A}]_0}^{[\ce{A}]}[\ce{A}]^{-1}\dd{[\ce{A}]}=-k\int_{0}^{t}\dd{t}
+	$$
+	$$
+		\ln([\ce{A}])-\ln([\ce{A}]_0)=-k\qty(t - 0)\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{\ln([\ce{A}])=\ln([\ce{A}]_0) - k\vdot t}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): comprobando que la reacción es de orden 1}
+	\begin{center}
+		\begin{figure}
+			\caption{Representación del logaritmo neperiano de la concentración de \ce{A} ($\ln([\ce{A}])$) con respecto al tiempo ($t$). La cinética de la reacción \textbf{\underline{no se ajusta}} a una reacción de \textbf{\underline{orden 1}}. $\ln([\ce{A}]_0)$ es distinto, $r^2$ no es 1 y la trayectoria de los puntos todavía parece una curva frente a la recta de regresión lineal.}
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion/figs/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion-orden1.tex
+				}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): comprobando que la reacción es de orden 2}
+	\structure{Reacción:}\quad\ce{A -> P}
+	\structure{Ecuación cinética general:}
+	$$
+		v=-\frac{\Delta[\ce{A}]}{\Delta t}=\frac{\Delta[\ce{P}]}{\Delta t}=k[\ce{A}]^n
+	$$\\[.4cm]
+	\begin{center}
+		{\LARGE\textbf{\textit{\underline{Método integral de velocidades}}}}
+	\end{center}
+	\structure{Orden 2 ($n=2$)}
+	$$
+		-\dv{[\ce{A}]}{t}=k\vdot[\ce{A}]^2\Rightarrow
+		-\dv{[\ce{A}]}{t}=k\vdot[\ce{A}]^2\Rightarrow\frac{\dd{[\ce{A}]}}{[\ce{A}]^2}=-k\dd{t}\Rightarrow\int_{[\ce{A}]_0}^{[\ce{A}]}\frac{1}{[\ce{A}]^2}\dd{[\ce{A}]}=-k\int_{0}^{t}\dd{t}
+	$$
+	$$
+		-\frac{1}{[\ce{A}]}+\frac{1}{[\ce{A}]_0}=-k\qty(t - 0)\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=black]{\frac{1}{[\ce{A}]}=\frac{1}{[\ce{A}]_0}+k\vdot t}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{6}): comprobando que la reacción es de orden 2}
+	\begin{center}
+		\begin{figure}
+			\caption{Representación de la inversa de la concentración de \ce{A} $\left(\rfrac{1}{[\ce{A}]}\right)$ con respecto al tiempo ($t$). La cinética de la reacción \textbf{\underline{SÍ SE AJUSTA}} a una reacción de \textbf{\underline{orden 2}}. \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=yellow]{k=\SI{,0230}{\per\second\per\Molar}}.}
+			\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion/figs/para_la_reaccion_A_P_se_ha_medido_a_298K_la_concentracion-orden2.tex
+				}
+		\end{figure}
+	\end{center}
+\end{frame}

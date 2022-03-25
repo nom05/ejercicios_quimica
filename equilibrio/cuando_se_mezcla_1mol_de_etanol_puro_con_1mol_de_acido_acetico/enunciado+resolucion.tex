@@ -1,0 +1,109 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/cuando_se_mezcla_1mol_de_etanol_puro_con_1mol_de_acido_acetico/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿$K_x$?, ¿$n(\ce{CH3COOCH2CH3})$?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n_0(\ce{CH3CH2OH})=\SI{1}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n_0(\ce{CH3COOH})=\SI{1}{\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{n(\ce{CH3COOH})=\rfrac{2}{3}~\si{\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $K_x$}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Reacción incompleta:} \ce{CH3COOH(l) + CH3CH2OH(l) <=> CH3COOCH2CH3(l)}\\
+			(los carbonos están ajustados pero los hidrógenos y oxígenos no. No hay forma matemática salvo que falte un compuesto)
+		\onslide<2->
+			\structure{Reacción:} \ce{CH3COOH(l) + CH3CH2OH(l) <=> CH3COOCH2CH3(l) + H2O(l)}\\
+			\centering(faltaba una molécula de agua)
+	\end{overprint}
+	\visible<2->{
+%		\begin{overprint}
+%			\onslide<3>
+				\begin{center}
+					\begin{tabular}{ccccc}
+						\toprule
+							$n(\si{\mol})$ &\ce{CH3COOH} & \ce{CH3CH2OH} & \ce{CH3COOCH2CH3} & \ce{H2O}\\
+						\midrule
+							Inicio:        &    1        &    1          & 0                 & 0\\
+							Cambio:        &  $-y$       &  $-y$         & y                 & y\\
+							Equilibrio:    & $1-y$       & $1-y$         & y                 & y\\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+%			\onslide<4>
+				\centering Pero $y=\rfrac{2}{3}~\si{\mol}$ según el enunciado {\footnotesize (reservamos $x$ para representar la fracción molar)}.
+%			\onslide<5->
+				\begin{center}
+					\begin{tabular}{ccccc}
+						\toprule
+							$n(\si{\mol})$ &\ce{CH3COOH}     & \ce{CH3CH2OH}   & \ce{CH3COOCH2CH3} & \ce{H2O}\\
+						\midrule
+							Inicio:        &        1        &      1          & 0              & 0\\
+							Cambio:        & $-\rfrac{2}{3}$ & $-\rfrac{2}{3}$ & $\rfrac{2}{3}$ & $\rfrac{2}{3}$\\
+							Equilibrio:    &  $\rfrac{1}{3}$ &  $\rfrac{1}{3}$ & $\rfrac{2}{3}$ & $\rfrac{2}{3}$\\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+%		\end{overprint}
+				}
+	\visible<2->{
+		\structure{Por la definición de fracción molar:} $x_i=\frac{n_i}{n_{\text{total}}}$
+				$$
+					K_x = \frac{x_{\ce{CH3COOCH2CH3}}\vdot x_{\ce{H2O}}}{x_{\ce{CH3COOH}}\vdot x_{\ce{CH3CH2OH}}}\Rightarrow
+					K_x = \frac{n(\ce{CH3COOCH2CH3})\vdot\cancel{\frac{1}{n_{\text{total}}}}\vdot n(\ce{H2O})\vdot\cancel{\frac{1}{n_{\text{total}}}}}{n(\ce{CH3COOH})\vdot\cancel{\frac{1}{n_{\text{total}}}}\vdot n(\ce{CH3CH2OH})\vdot\cancel{\frac{1}{n_{\text{total}}}}}
+				$$
+				$$
+					K_x = \frac{n(\ce{CH3COOCH2CH3})\vdot n(\ce{H2O})}{n(\ce{CH3COOH})\vdot n(\ce{CH3CH2OH})}\Rightarrow
+					K_x = \frac{\frac{2}{\cancel{3}}\cdot\frac{2}{\cancel{3}}}{\frac{1}{\cancel{3}}\cdot\frac{1}{\cancel{3}}}\Rightarrow
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{K_x=4}
+				$$
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $n(\ce{C4H8O2})$ si $n_0(\ce{CH3COOH})=1$ y $n_0(\ce{CH3CH2OH})=3$}
+	\structure{Reacción:} \ce{CH3COOH(l) + CH3CH2OH(l) <=> CH3COOCH2CH3(l) + H2O(l)}\\
+	\begin{center}
+		\begin{tabular}{ccccc}
+			\toprule
+			$n(\si{\mol})$ &\ce{CH3COOH}     & \ce{CH3CH2OH}   & \ce{CH3COOCH2CH3} & \ce{H2O}\\
+			\midrule
+			Inicio:        &  1    &  3    &  0  &  0 \\
+			Cambio:        &  $-z$ &  $-z$ & $z$ & $z$\\
+			Equilibrio:    & $1-z$ & $3-z$ & $z$ & $z$\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{La constante de equilibrio será:}
+			$$
+				K_x = \frac{x_{\ce{CH3COOCH2CH3}}\vdot x_{\ce{H2O}}}{x_{\ce{CH3COOH}}\vdot x_{\ce{CH3CH2OH}}}
+				\overbrace{K_x}^4 = \frac{\overbrace{n(\ce{CH3COOCH2CH3})}^{z}\cdot\overbrace{n(\ce{H2O})}^{z}}{\underbrace{n(\ce{CH3COOH})}_{1-z}\cdot\underbrace{n(\ce{CH3CH2OH})}_{3-z}}
+			$$
+			$$
+				4 = \frac{z^2}{(1-z)\cdot(3-z)}\Rightarrow
+				4 = \frac{z^2}{z^2-4z+3}\Rightarrow
+				3z^2-16z+12 = 0
+			$$
+			\structure{Soluciones de la ecuación de 2"o grado:}
+			$$
+				z_1 = \SI{4,43}{\mol}>n_0(\ce{CH3COOH})\text{ (solución no válida)}
+			$$
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{z_2 = \SI{,903}{\mol}$\text{ de \ce{CH3COOCH2CH3}}$}
+			\end{center}
+\end{frame}

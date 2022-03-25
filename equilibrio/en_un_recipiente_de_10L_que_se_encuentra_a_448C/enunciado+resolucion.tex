@@ -1,0 +1,95 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/en_un_recipiente_de_10L_que_se_encuentra_a_448C/enunciado.tex
+				}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large\textbf{ \begin{enumerate}[label={\alph*)},font=\bfseries]
+			\item ¿$P_{\text{total}}=P_T$?
+			\item ¿$n_{\text{eq}}(\ce{I2})$?
+			\item ¿$K_p$?
+		\end{enumerate}}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{V_T = \SI{10}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{K_c = \num{50}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{T = \SI{448}{\celsius}=\SI{721,15}{\kelvin}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m(\ce{H2}) = \SI{1}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{I2}) = \SI{126,9}{\gram}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{Mm(\ce{H2}) = \SI{2,016}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{I2}) = \SI{253,809}{\gram\per\mol}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=red]{Mm(\ce{HI}) = \frac{Mm(\ce{H2})+Mm(\ce{I2})}{2} \Rightarrow Mm(\ce{HI})=\SI{127,913}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): presión total en el equilibrio}
+	\structure{Número de moles de cada especie en condiciones iniciales:}
+	$$
+		n=\frac{m}{Mm}\Rightarrow n(\ce{H2})=\frac{\SI{1}{\cancel\gram}}{\SI{2,016}{\cancel\gram\per\mol}}\approx\SI{,5}{\mol};\quad n(\ce{I2})=\frac{\SI{126,9}{\cancel\gram}}{\SI{253,809}{\cancel\gram\per\mol}}\approx\SI{,5}{\mol}
+	$$
+	\structure{Reacción de equilibrio y expresión de $K_c$:}\quad\ce{H2(g) + I2(g) <=> 2HI(g)}
+	\begin{center}
+		\begin{tabular}{lSSS}
+			\toprule
+			Estado & {$n(\ce{H2})~(\si{\mol})$} &  {$n(\ce{I2})~(\si{\mol})$} &  {$n(\ce{HI})~(\si{\mol})$} \\
+			\midrule
+			Inicial    &            ,5   &           ,5   &    0   \\
+			Reaccionan &          {$-x$} &         {$-x$} & {$2x$} \\
+			Equilibrio &  {$\num{,5}-x$} & {$\num{,5}-x$} & {$2x$} \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		K_c=\underbrace{\frac{[\ce{HI}]^2}{[\ce{H2}][\ce{I2}]}}_{M=\frac{n}{V}}=\frac{\rfrac{n(\ce{HI})^2}{\cancel{V^2}}}{\rfrac{n(\ce{H2})}{\cancel{V}}\vdot \rfrac{n(\ce{I2})}{\cancel{V}}}=\num{50}\Rightarrow
+		K_c = \frac{(2x)^2}{\left(\frac{1}{2}-x\right)\left(\frac{1}{2}-x\right)}=\num{50}\Rightarrow
+	$$
+	$$
+		 46x^2-50x+12,5=0
+		\begin{cases}
+			\cancel{x_1 = \SI{,697}{\mol}}\quad\text{(No posible)}\\
+			x_2 = \SI{,390}{\mol}\Rightarrow
+		\end{cases}
+	$$
+	$$
+		 n(\ce{H2})=n(\ce{I2})=\num{,5}-\num{,390}=\SI{,110}{\mol};\quad n(\ce{HI})=2x=\SI{,780}{\mol};\quad n_{\text{total}}=n_T=\SI{1,00}{\mol}
+	$$
+	$$
+		P_T=\sum_{i=1}^{n}\underbrace{P_i}_{P=\frac{n\vdot R\vdot T}{V}}=\sum_{i=1}^{n}n_i\vdot\frac{R\vdot T}{V}=\frac{R\vdot T}{V}\vdot n_T\Rightarrow
+		P_T=\frac{\SI{,082}{\atm\cancel\liter\per\cancel\mol\per\cancel\kelvin}\vdot\SI{721,15}{\cancel\kelvin}}{\SI{10}{\cancel\liter}}\vdot\SI{1,00}{\cancel\mol}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{P_T=\SI{5,913}{\atm}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): nº de moles de \ce{I2} en equilibrio}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n(\ce{I2})=\SI{,110}{\mol}}\quad (Calculado anteriormente)
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $K_p$}
+	Aunque siempre se puede usar la expresión:
+	$$
+		K_p = K_c\vdot(R\vdot T)^{\Delta n}
+	$$
+	vamos a cerciorarnos comparando las expresiones en función de reactivos y productos.
+	Aplicamos la \structure{ecuación de los gases ideales}: $P=\frac{n}{V}\vdot R\vdot T\Rightarrow P=M\vdot R\vdot T$
+	$$
+		K_p=\frac{P(\ce{HI})^2}{P(\ce{H2})\vdot P(\ce{I2})}=
+		\frac{([\ce{HI}]\cancel{\vdot R\vdot T})^2}{[\ce{H2}]\cancel{\vdot R\vdot T}[\ce{I2}]\cancel{\vdot R\vdot T}}=K_c\Rightarrow
+		\tcbhighmath[boxrule=0.pt,arc=.2pt,colframe=yellow,drop fuzzy shadow=black]{K_p=K_c=\num{50}}
+	$$
+\end{frame}

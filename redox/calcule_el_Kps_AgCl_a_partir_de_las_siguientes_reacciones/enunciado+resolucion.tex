@@ -1,0 +1,79 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/calcule_el_Kps_AgCl_a_partir_de_las_siguientes_reacciones/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del enunciado}
+	\begin{center}
+		{\Large\textbf{¿$K_{ps}(\ce{AgCl})$?}}\\
+	\end{center}
+	Potenciales estándar de reducción:\\[.2cm]
+	\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\ce{Ag+(ac) + 1e- -> Ag(s)}\quad\varepsilon^0=\SI{,80}{\volt}}
+		\item\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{\ce{AgCl(s) + 1e- -> Ag(s) + Cl-(ac)}\quad\varepsilon^0=\SI{,22}{\volt}}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de $K_{ps}(\ce{AgCl})$}
+	\structure{Reacción de solubilidad:}
+	$$
+		\ce{AgCl(s) <=> Ag+(ac) + Cl-(ac)}\quad K_{ps}(\ce{AgCl})=[\ce{Ag+}]\vdot[\ce{Cl-}]
+	$$
+	Tendremos que combinar las dos semirreacciones de reducción de la forma que se obtenga la reacción de solubilidad.\\[.6cm]
+	\begin{overprint}
+		\onslide<1>
+			\begin{center}
+				\begin{tabular}{c}
+					\ce{Ag+(ac) + 1e- -> Ag(s)}\quad$\varepsilon^0_{\text{reducción}}=\SI{,80}{\volt}$\\[.2cm]
+					\ce{AgCl(s) + 1e- -> Ag(s) + Cl-(ac)}\quad$\varepsilon^0_{\text{reducción}}=\SI{,22}{\volt}$
+				\end{tabular}
+			\end{center}
+		\onslide<2->
+			\begin{center}
+				\begin{tabular}{cc}
+					\ce{\cancel{Ag(s)} -> Ag+(ac) + \cancel{1e-}} & $\varepsilon^0_{\text{oxidación}}=\SI{-,80}{\volt}$\footnote{Si cambiamos el sentido de la reacción, se cambia el signo del potencial. Ahora tenemos una semirreacción de oxidación.}\\[.2cm]
+					\ce{AgCl(s) + \cancel{1e-} -> \cancel{Ag(s)} + Cl-(ac)} & $\varepsilon^0_{\text{reducción}}=\SI{,22}{\volt}$\\
+					\midrule
+					\ce{AgCl(s) -> Ag+(ac) + Cl-(ac)} & $\varepsilon^0_{\text{total}}=\SI{-,58}{\volt}$\\[.2cm]
+				\end{tabular}
+			\end{center}
+	\end{overprint}
+	\visible<2->{
+		Hay un electrón implicado en el proceso ($n=1$) y el proceso no es espontáneo ($\varepsilon^0_{\text{total}}<0$). $Q$ se expresa como:
+		$$
+			Q=[\ce{Ag+}]\vdot[\ce{Cl-}]
+		$$
+				}
+	\visible<3->{
+		\structure{Ecuación de Nernst en situación de equilibrio $\Delta G = -n\vdot F\vdot\varepsilon=0$:}
+		\begin{overprint}
+			\onslide<3>
+				$$
+					\overbrace{\varepsilon}^{\varepsilon=0} = \varepsilon^0 - \frac{R\vdot T}{n\vdot F}\ln(Q)\Rightarrow
+					\overbrace{\varepsilon}^{\varepsilon=0} = \varepsilon^0 - \frac{\num{,0592}}{n}\log(Q)\Rightarrow
+					\varepsilon^0 = \frac{\num{,0592}}{n}\log(K_{ps})
+				$$
+			\onslide<4>
+				$$
+					\log(K_{ps})=  \frac{\varepsilon^0\vdot n}{\num{,0592}}
+				$$
+			\onslide<5>
+				$$
+					K_{ps}(\ce{AgCl}) =  10^{\frac{\num{-,58}\vdot\num{1}}{\num{,0592}}}
+				$$
+			\onslide<6->
+				$$
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{K_{ps}(\ce{AgCl}) =  \num{1,59e-10}}
+				$$
+		\end{overprint}
+				}
+\end{frame}

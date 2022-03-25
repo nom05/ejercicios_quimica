@@ -1,0 +1,48 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/calcule_el_pH_necesario_para_que_inicien_la_precipitacion_los_iones_Mg_II/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$\mathrm{pH}$ para precipitar \ce{Mg}(\rom{2})?}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{MgCl2}]=\SI{,05}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{ps}(\ce{Mg(OH)2})=\num{1,35e-11}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\mathrm{pH}$ de disolución \ce{Mg(OH)2}}
+	\structure{Equilibrio de solubilidad:} \ce{Mg(OH)2(s) <=> Mg^{2+}(ac) + 2OH-(ac)}\\[.3cm]
+	\begin{center}
+		\begin{tabular}{ccc}
+			\toprule
+			Concentración(\si{\Molar}) & $[\ce{Mg^{2+}}]$ &     [\ce{OH-}]   \\
+			Solubilidad                &    $s$    		  &       $2s$       \\
+			Solubilidad modificada     &  $s^\prime+\num{,05}$  &       $2s^\prime$      \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		K_{ps}(\ce{Mg(OH)2})=\overbrace{[\ce{Mg^{2+}}]}^{s^\prime+\num{,05}\approx\num{,05}}{\underbrace{[\ce{OH-}]}_{2s^\prime}}^2\Rightarrow
+		K_{ps}(\ce{Mg(OH)2})=\num{,05}\cdot(2s^\prime)^2
+	$$
+	$$
+		\overbrace{K_{ps}(\ce{Mg(OH)2})}^{\num{1,35e-11}}=\num{,05}\cdot 4{s^\prime}^2\Rightarrow
+		s^\prime=\sqrt{\frac{\num{1,35e-11}}{4\cdot\num{,05}}}=\SI{8,22e-6}{\Molar}
+	$$
+	$$
+		[\ce{OH-}]=2s^\prime=2\times\SI{8,22e-6}{\Molar}=\SI{16,4e-6}{\Molar}
+	$$
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=\num{14}+\log\overbrace{[\ce{OH-}]}^{\SI{16,4e-6}{\Molar}}=\num{9,22}}
+	\end{center}
+\end{frame}

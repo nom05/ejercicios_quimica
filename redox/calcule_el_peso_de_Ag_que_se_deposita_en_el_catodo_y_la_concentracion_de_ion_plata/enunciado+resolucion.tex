@@ -1,0 +1,65 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/calcule_el_peso_de_Ag_que_se_deposita_en_el_catodo_y_la_concentracion_de_ion_plata/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$m(\ce{Ag})$ y $[\ce{Ag+}]$? en cátodo}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{AgNO3}]_0=[\ce{Ag+}]_0=\SI{,1}{\Molar}~\text{(concentración inicial)}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{AgNO3})=\SI{1}{\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{I=\SI{,5}{\ampere}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{t=\SI{2}{\hour}=\SI{7200}{\second}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{M_{at}(\ce{Ag})=\SI{107,868}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): masa de plata y concentración molar de ion plata}
+	\structure{Aplicamos la ley de Faraday para el número de moles de electrones del proceso:}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				n(\ce{e-})\cdot\overbrace{F}^{\SI{96485}{\coulomb\per\mol}}=\underbrace{I}_{\SI{,5}{\ampere}}\cdot\overbrace{t}^{\SI{7200}{\second}}
+			$$
+		\onslide<2->
+			$$
+				n(\ce{e-})=\frac{\SI{,5}{\ampere}\cdot\SI{7200}{\second}}{\SI{96485}{\coulomb\per\mol}}=\SI{,037}{\mol}
+			$$
+	\end{overprint}
+	\visible<2->{
+		\structure{Semirreacción de reducción:}\\[.2cm]
+		\begin{center}
+			\ce{Ag+(ac) + 1e- -> Ag(s)}\quad Según estequiometría:~$n(\ce{e-})=n(\ce{Ag+})=n(\ce{Ag})$
+		\end{center}
+				}
+	\visible<3->{
+		\structure{Masa de \ce{Ag} sólida:}
+		$$
+			n=\frac{m}{M_{at}}\Rightarrow m=n\cdot M_{at}\Rightarrow m(\ce{Ag})=\SI{,037}{\mol}\cdot\SI{107,868}{\gram\per\cancel\mol}
+			\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{Ag})=\SI{4,02}{\gram}}
+		$$
+				}
+	\visible<4->{
+		\structure{Concentración molar de ion plata:}
+		$$
+			M=\frac{n}{V}\Rightarrow n=M\cdot V\Rightarrow\overbrace{n_0(\ce{Ag+})}^{\text{iniciales}}=\SI{,1}{\mol\per\cancel\liter}\cdot\SI{1}{\cancel\liter}=\SI{,1}{\mol}
+		$$
+				}
+	\visible<5>{
+		$$
+			\underbrace{n(\ce{Ag+})}_{\text{quedan disueltos}}=\SI{,1}{\mol}-\SI{,037}{\mol}=\SI{,063}{\mol}
+		$$
+		$$
+			[\ce{Ag+}]=\frac{\SI{,063}{\mol}}{\SI{1}{\liter}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{Ag+}]=[\ce{AgNO3}]=\SI{,063}{\Molar}~\text{(concentración final)}}
+		$$
+				}
+\end{frame}

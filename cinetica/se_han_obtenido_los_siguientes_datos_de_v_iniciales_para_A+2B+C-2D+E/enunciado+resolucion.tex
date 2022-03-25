@@ -1,0 +1,157 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/se_han_obtenido_los_siguientes_datos_de_v_iniciales_para_A+2B+C-2D+E/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large ¿$n$ $R_5$ (en función de $R_1$)?}\\[.3cm]
+		\structure{Reacción:}\quad\ce{A + 2B + C -> 2D + E}\\[.3cm]
+		\begin{tabular}{SSSSc}
+			{Experimento} & {$[\ce{A}]~(\si{\Molar})$} & {$[\ce{B}]~(\si{\Molar})$} & {$[\ce{A}]~(\si{\Molar})$} & {Velocidad inicial}   \\
+			1		  & 		1,40			   &		1,40				& 			1,00			 & 		$R_1$            \\
+			2 		  & 		 ,70			   & 		1,40				& 			1,00			 & $R_2=\rfrac{1}{2} R_1$\\
+			3		  &			 ,70			   &		 ,70				& 			1,00			 & $R_3=\rfrac{1}{4} R_2$\\
+			4		  &			1,40			   & 		1,40				& 			 ,50			 & $R_4 = 16 R_3$		 \\
+			5		  & 		 ,70			   &		 ,70				& 			 ,50			 & $R_5=?$				 \\
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de órdenes, $k$ y ecuación de velocidad}
+	\structure{Reacción:}\quad\ce{A + 2B + C -> 2D + E}\\
+	\structure{Ecuación cinética general:}~$v=k[\ce{A}]^x\vdot[\ce{B}]^y\vdot[\ce{C}]^z$
+	\begin{overprint}
+		\onslide<1>
+			\structure{Ponemos $v_0$ en función de únicamente $R_1$:}\\[.3cm]
+			\begin{center}
+				\begin{tabular}{Scc}
+					{Experimento} & {Velocidad inicial}		& {Velocidad inicial ($R_1$)} \\
+					1			  & 		$R_1$           & $R_1$ \\
+					2 			  & $R_2=\rfrac{1}{2} R_1$  & $\rfrac{1}{2}R_1$\\
+					3			  & $R_3=\rfrac{1}{4} R_2$  & $\rfrac{1}{4}\vdot\rfrac{1}{2}R_1=\rfrac{1}{8}R_1$\\
+					4			  & $R_4 = 16 R_3$			& $16\vdot\rfrac{1}{8}R_1=2R_1$\\
+					5			  & ¿$R_5$?					& \\
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\structure{Ponemos $v_0$ en función de únicamente $R_1$:}\\[.3cm]
+			\begin{center}
+				\begin{tabular}{SSSSc}
+					{Experimento} & {$[\ce{A}]~(\si{\Molar})$} & {$[\ce{B}]~(\si{\Molar})$} & {$[\ce{A}]~(\si{\Molar})$} & {Velocidad inicial}   \\
+					1		  & 		1,40			   &		1,40				& 			1,00			 & 		$R_1$            \\
+					2 		  & 		 ,70			   & 		1,40				& 			1,00			 & $\rfrac{1}{2}R_1$\\
+					3		  &			 ,70			   &		 ,70				& 			1,00			 & $\rfrac{1}{8}R_1$\\
+					4		  &			1,40			   & 		1,40				& 			 ,50			 & $2R_1$		 \\
+					5		  & 		 ,70			   &		 ,70				& 			 ,50			 & $R_5=?$				 \\
+				\end{tabular}
+			\end{center}
+		\onslide<3->
+			\structure{Con los datos de la tabla del enunciado escribimos las ecuaciones cinéticas:}\\
+			$$
+				\text{Ecuación cinética general:}\quad v=k\vdot[\ce{A}]^x\vdot[\ce{B}]^y\vdot[\ce{C}]^z
+			$$
+			\begin{equation}\label{eq:exp1}
+				v_1=R_1 = k\vdot(\num{1,40})^x\vdot(\num{1,40})^y\vdot(\num{1,00})^z
+			\end{equation}
+			\begin{equation}\label{eq:exp2}
+				v_2=\frac{1}{2}R_1 = k\vdot(\num{,70})^x\vdot(\num{1,40})^y\vdot(\num{1,00})^z
+			\end{equation}
+			\begin{equation}\label{eq:exp3}
+				v_3=\frac{1}{8}R_1 = k\vdot(\num{,70})^x\vdot(\num{,70})^y\vdot(\num{1,00})^z
+			\end{equation}
+			\begin{equation}\label{eq:exp4}
+				v_4=2R_1 = k\vdot(\num{1,40})^x\vdot(\num{1,40})^y\vdot(\num{,50})^z
+			\end{equation}
+			\begin{equation}\label{eq:exp5}
+				v_5=R_5 = k\vdot(\num{,70})^x\vdot(\num{,70})^y\vdot(\num{,50})^z
+			\end{equation}\\
+	\end{overprint}
+	\begin{overprint}
+		\onslide<4>
+			\structure{Seleccionamos dos ecuaciones que solo dependan de una incógnita ($x$, $y$ o $z$) y operamos:} Por ejemplo, ec~(1)/ec~(4).
+			$$
+				\frac{v_1}{v_4}=\frac{\cancel{R_1}}{2\cancel{R_1}}=\frac{\cancel{k}}{\cancel{k}}\vdot\left(\frac{\num{1,40}^x}{\num{1,40}^x}\right)\vdot\left(\frac{\num{1,40}^y}{\num{1,40}^y}\right)\vdot\left(\frac{\num{1,00}^z}{\num{,50}^z}\right)
+			$$
+		\onslide<5>
+			\structure{Operamos usando las propiedades de las potencias:}
+			$$
+				\frac{1}{2}=\left(\frac{\num{1,40}}{\num{1,40}}\right)^x\vdot\left(\frac{\num{1,40}}{\num{1,40}}\right)^y\vdot\left(\frac{\num{1,00}}{\num{,50}}\right)^z
+			$$
+		\onslide<6>
+			\structure{Operamos usando las propiedades de las potencias:}
+			$$
+				\frac{1}{2}=1^x\vdot 1^y\vdot 2^z
+			$$
+		\onslide<7>
+			\structure{Operamos usando las propiedades de las potencias:}
+			$$
+				2^{-1}=2^z
+			$$
+		\onslide<8>
+			\structure{Operamos usando las propiedades de las potencias:}
+			$$
+				z=-1
+			$$
+		\onslide<9>
+			\structure{Repetimos el proceso con otras dos ecuaciones de velocidad:} Por ejemplo, ec~(1)/ec~(2).
+			$$
+				\frac{v_1}{v_2}=\frac{\cancel{R_1}}{\frac{1}{2}\cancel{R_1}}=\frac{\cancel{k}}{\cancel{k}}\vdot\left(\frac{\num{1,40}^x}{\num{,70}^x}\right)\vdot\left(\frac{\num{1,40}^y}{\num{1,40}^y}\right)\vdot\left(\frac{\num{1,00}^z}{\num{1,00}^z}\right)
+			$$
+		\onslide<10>
+			\structure{Operamos:}
+			$$
+				2=\left(\frac{\num{1,40}}{\num{,70}}\right)^x\vdot\left(\frac{\num{1,40}}{\num{1,40}}\right)^y\vdot\left(\frac{\num{1,00}}{\num{1,00}}\right)^z
+			$$
+		\onslide<11>
+			\structure{Operamos:}
+			$$
+				2=2^x\vdot 1^y\vdot 1^z
+			$$
+		\onslide<12>
+			\structure{Operamos:}
+			$$
+				x=1
+			$$
+		\onslide<13>
+			\structure{Repetimos el proceso con otras dos ecuaciones de velocidad:} Por ejemplo, ec~(1)/ec~(3).
+			$$
+				\frac{v_1}{v_3}=\frac{\cancel{R_1}}{\frac{1}{8}\cancel{R_1}}=\frac{\cancel{k}}{\cancel{k}}\vdot\left(\frac{\num{1,40}^x}{\num{,70}^x}\right)\vdot\left(\frac{\num{1,40}^y}{\num{,70}^y}\right)\vdot\left(\frac{\num{1,00}^z}{\num{1,00}^z}\right)
+			$$
+		\onslide<14>
+			\structure{Operamos:}
+			$$
+				8=\left(\frac{\num{1,40}}{\num{,70}}\right)^x\vdot\left(\frac{\num{1,40}}{\num{,70}}\right)^y\vdot\left(\frac{\num{1,00}}{\num{1,00}}\right)^z
+			$$
+		\onslide<15>
+			\structure{Operamos:}
+			$$
+				2^x\vdot2^y\vdot 1=8\Rightarrow 2^1\vdot2^y=2^3\Rightarrow 2^y=2^3\vdot 2^{-1}\Rightarrow y=2
+			$$
+		\onslide<16>
+			\structure{Por tanto:}
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\text{Orden 1 para \ce{A}}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\text{Orden 2 para \ce{B}}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{\text{Orden -1 para \ce{C}}}
+			$$
+
+		\onslide<17->
+			\structure{Calculamos $R_5$ expresado con $R_1$:}
+			$$
+				\frac{v_3}{v_5}=\frac{\cancel{k}}{\cancel{k}}\vdot\cancel{\left(\frac{\num{,70}}{\num{,70}}\right)^x}\vdot\cancel{\left(\frac{\num{,70}}{\num{,70}}\right)^y}\vdot\left(\frac{\num{1,00}}{\num{,50}}\right)^z=\frac{\rfrac{1}{8}\vdot R_1}{R_5}=\frac{R_1}{8R_5}\Rightarrow 2^z=\frac{R_1}{8R_5}\Rightarrow\frac{R_1}{R_5}=2^{-1}\vdot 2^3
+			$$
+			$$
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=orange]{R_5=\frac{1}{4}R_1}
+			$$
+ 	\end{overprint}
+\end{frame}

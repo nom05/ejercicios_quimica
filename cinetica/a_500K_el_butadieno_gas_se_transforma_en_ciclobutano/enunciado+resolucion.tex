@@ -1,0 +1,153 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/a_500K_el_butadieno_gas_se_transforma_en_ciclobutano/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \begin{center}
+        {\Large ¿$n$ y $k$?}\\[.5cm]
+        \schemestart
+            \chemfig{=[1]-[7]=[1]}
+            \arrow
+            \chemfig{*4(=---)}
+        \schemestop\\[.5cm]
+        \ce{
+            $\underset{\text{butadieno}~(b)}{\ce{C4H6(g)}}$
+             -> 
+            $\underset{\text{ciclobuteno}~(c)}{\ce{C4H6(g)}}$
+           }\\[.5cm]
+       \begin{tabular}{SS}
+           \toprule
+               {$t~(\si{\second})$} & {$[b]~(\si{\mol\per\liter})$}\\
+           \midrule
+                195 & ,0162 \\
+                604 & ,0147 \\
+               1246 & ,0129 \\
+               2180 & ,0110 \\
+               4140 & ,0084 \\
+               8135 & ,0057 \\
+           \bottomrule
+       \end{tabular}
+    \end{center}
+    $$
+        T = \SI{500}{\kelvin}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): comprobando si la reacción es de orden 0  (\rom{1})}
+    \structure{Reacción:} \ce{b -> c}
+    \structure{Ecuación cinética general:}
+    $$
+        v = k[b]^x = -\frac{\Delta[b]}{\Delta t}
+    $$
+    \begin{center}
+        {\Large \textbf{\textit{Método integral de velocidad}}}
+    \end{center}
+    \structure{Orden 0}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                -\dv{[b]}{t} = k\Rightarrow\dd{[b]} = -k\dd{t}\Rightarrow\int_{[b]_0}^{[b]}\dd{[b]} = -k\int_{0}^{t}\dd{t}
+            $$
+        \onslide<2>
+            $$
+                [b] = [b]_0 - kt
+            $$
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): comprobando si la reacción es de orden 0 (\rom{2})}
+    \begin{center}
+        \begin{figure}
+            \caption{Representación de la concentración de b ($[b]$) con respecto al tiempo ($t$). La reacción \textbf{\underline{no se ajusta}} bien a una reacción de \textbf{\underline{orden 0}}}
+            \input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/a_500K_el_butadieno_gas_se_transforma_en_ciclobutano/figs/butadieno-ciclobuteno-t_conc.tex
+				}
+        \end{figure}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): comprobando si la reacción es de orden 1 (\rom{1})}
+    \structure{Reacción:} \ce{b -> c}
+    \structure{Ecuación cinética general:}
+    $$
+        v = k[b]^x = -\frac{\Delta[b]}{\Delta t}
+    $$
+    \begin{center}
+        {\Large \textbf{\textit{Método integral de velocidad}}}
+    \end{center}
+    \structure{Orden 1}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                -\dv{[b]}{t} = k[b]\Rightarrow\frac{\dd{[b]}}{[b]} = -k\dd{t}\Rightarrow\int_{[b]_0}^{[b]}[b]^{-1}\dd{[b]} = -k\int_{0}^{t}\dd{t}
+            $$
+        \onslide<2>
+        $$
+            \ln([b]) = \ln([b]_0) - kt
+        $$
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): comprobando si la reacción es de orden 1 (\rom{2})}
+    \begin{center}
+        \begin{figure}
+            \caption{Representación del logaritmo neperiano de la concentración de b ($\ln([b])$) con respecto al tiempo ($t$). La reacción \textbf{\underline{no se ajusta}} bien a una reacción de \textbf{\underline{orden 1}}}
+            \input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/a_500K_el_butadieno_gas_se_transforma_en_ciclobutano/figs/butadieno-ciclobuteno-t_ln-conc.tex
+				}
+        \end{figure}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{5}): comprobando si la reacción es de orden 2 (\rom{1})}
+    \structure{Reacción:} \ce{b -> c}
+    \structure{Ecuación cinética general:}
+    $$
+        v = k[b]^x = -\frac{\Delta[b]}{\Delta t}
+    $$
+    \begin{center}
+        {\Large \textbf{\textit{Método integral de velocidad}}}
+    \end{center}
+    \structure{Orden 2}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                -\dv{[b]}{t} = k[b]^2\Rightarrow\frac{\dd{[b]}}{[b]^2} = -k\dd{t}\Rightarrow\int_{[b]_0}^{[b]}[b]^{-2}\dd{[b]} = -k\int_{0}^{t}\dd{t}
+            $$
+        \onslide<2>
+            $$
+                \frac{1}{[b]} = \frac{1}{[b]_0} + kt
+            $$
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{6}): comprobando si la reacción es de orden 2 (\rom{2})}
+    \begin{center}
+        \begin{figure}
+            \caption{Representación de la inversa de la concentración de b ($\frac{1}{[b]}$) con respecto al tiempo ($t$). La reacción \textbf{\underline{SÍ SE AJUSTA}} perfectamente a una reacción de \textbf{\underline{orden 2}}. La pendiente es $k$ ($k=\SI{,0143}{\per\second\per\Molar}$).}
+            \input{
+					~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/a_500K_el_butadieno_gas_se_transforma_en_ciclobutano/figs/butadieno-ciclobuteno-t_inv-conc.tex
+				}
+        \end{figure}
+    \end{center}
+\end{frame}

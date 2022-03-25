@@ -1,0 +1,151 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/determinar_mediante_metodo_de_t_vida_media_y_de_integracion_orden_de_reaccion_y_cte_cinetica/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): resumen de ecuaciones para los dos métodos}
+	\begin{center}
+		\ce{A -> Productos}
+	\end{center}
+	\structure{Ecuación de velocidad:} $v = -\dv{[\ce{A}]}{t} = k\vdot[\ce{A}]^x$
+	\begin{center}
+		\begin{tabular}{lccc}
+						&	\textbf{M. integraciones}	&	\textbf{M. tiempo de vida media}	&	\textbf{Relación $\mathbf{t_{\rfrac{1}{2}}\Leftrightarrow[\ce{A}]_0}$}	\\
+			\midrule
+			\underline{\textbf{\color{blue}Orden 0}}							\\
+						&	$[\ce{A}] = [\ce{A}]_0 - k\vdot t$					&
+							$t_{\rfrac{1}{2}} = \frac{[\ce{A}]_0}{2\vdot k}$	&
+							DIRECTA												\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 1}}							\\
+						&	$\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t$			&
+							$t_{\rfrac{1}{2}} = \frac{\ln 2}{k}$					&
+							NO TIENE											\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 2}}							\\
+						&	$[\ce{A}]^{-1} = [\ce{A}]^{-1}_0 + k\vdot t$		&
+						$t_{\rfrac{1}{2}} = \frac{1}{[\ce{A}]_0\vdot k}$		&
+						INVERSA
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): método del tiempo de vida media}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Datos iniciales:}
+			\begin{center}
+				\begin{tabular}{SS}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+					,80								&	  0			\\
+					,60								&	 44,26		\\
+					,40								&	106,64		\\
+					,30								&	150,90		\\	
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{SS}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+					\midrule
+					,80								&	  0			\\
+					,40								&	106,64		\\
+					\midrule
+					,60								&	 44,26		\\
+					,30								&	150,90		\\	
+				\end{tabular}
+			\end{center}
+		\onslide<3->
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{SSc}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	&
+					{\textbf{$t_{\rfrac{1}{2}}$~(\si{\second})}}	\\
+					\midrule
+					,80								&	  0			&	\multirow{2}{*}{{$\num{106,64}-\num{0}=\num{106,64}$}}		\\
+					,40								&	106,64		&																\\
+					\midrule
+					,60								&	 44,26		&	\multirow{2}{*}{{$\num{150,90}-\num{44,26}=\num{106,64}$}}	\\
+					,30								&	150,90		&																\\
+				\end{tabular}
+			\end{center}
+	\end{overprint}
+	\begin{enumerate}[label={Paso \arabic*)},font={\color{red!50!black}\bfseries}]
+		\item<2-> Emparejamos la concentración inicial con su mitad.
+		\item<3-> Calculamos el tiempo relativo necesario para pasar de esa concentración a la mitad.
+		\item<4-> Estudiamos la relación que hay entre las concentraciones iniciales de nuestras parejas y $t_{\rfrac{1}{2}}$. En nuestro caso, el tiempo no cambia a pesar de que $[\ce{A}]_0$ decrece. Por tanto, es de \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\text{\visible<4->{\textbf{ORDEN 1}}}}
+		\item<5-> Usamos la ecuación correspondiente para averiguar $k$:
+					$$
+						t_{\rfrac{1}{2}} = \frac{\ln 2}{k}\Rightarrow
+						k = \frac{\ln 2}{t_{\rfrac{1}{2}}}\Rightarrow
+						k = \frac{\ln 2}{\num{106,64}}\Rightarrow
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\visible<5->{k = \SI{6,50e-3}{\per\second}}}
+					$$
+					\textbf{Recordad incluir las \textbf{unidades} de la \textbf{constante cinética}}\\
+					\begin{center}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<5->{v=\SI{6,50e-3}{\per\second}\vdot[\ce{A}]}}
+					\end{center}
+
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): método de integración}
+	\structure{Datos iniciales:}
+	\begin{center}
+		\begin{tabular}{SS}
+			{\textbf{Concentración~(\si{\Molar})}}			&
+			{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+			,80								&	  0			\\
+			,60								&	 44,26		\\
+			,40								&	106,64		\\
+			,30								&	150,90		\\	
+		\end{tabular}
+	\end{center}
+	\structure{Comprobamos qué ecuación, de los diferentes órdenes, es la válida según nuestros datos:}\\[.2cm]
+	\begin{overprint}
+		\onslide<1>
+			\underline{\textbf{\color{red!50!black}Orden 0:}}
+			$$
+				[\ce{A}] = [\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{[\ce{A}]_0 - [\ce{A}]}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\SI{,8}{\Molar} - \SI{,6}{\Molar}}{\SI{44,26}{\second}}  &= \SI{4,52e-3}{\Molar\per\second}	\\
+					k_2 = \frac{\SI{,8}{\Molar} - \SI{,4}{\Molar}}{\SI{106,64}{\second}} &= \SI{3,75e-3}{\Molar\per\second}
+				\end{aligned}
+				\right\} k_1\neq k_2
+			$$
+			\begin{center}
+				\underline{\textbf{No es orden 0}}
+			\end{center}
+		\onslide<2->
+			\underline{\textbf{\color{red!50!black}Orden 1:}}
+			$$
+				\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{\ln(\frac{[\ce{A}]_0}{[\ce{A}]})}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\ln(\frac{\SI{,8}{\cancel\Molar}}{\SI{,6}{\cancel\Molar}})}{\SI{44,26}{\second}}  &= \SI{6,50e-3}{\per\second}\\
+					k_2 = \frac{\ln(\frac{\SI{,8}{\cancel\Molar}}{\SI{,4}{\cancel\Molar}})}{\SI{106,64}{\second}} &= \SI{6,50e-3}{\per\second}\\
+					k_3 = \frac{\ln(\frac{\SI{,8}{\cancel\Molar}}{\SI{,3}{\cancel\Molar}})}{\SI{150,90}{\second}} &= \SI{6,50e-3}{\per\second}
+				\end{aligned}
+				\right\} k_1 = k_2 = k_3
+			$$
+			\begin{center}
+				\underline{\textbf{Es orden 1}}\qquad\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<2->{v=\SI{6,50e-3}{\per\second}\vdot[\ce{A}]}}
+			\end{center}
+	\end{overprint}
+\end{frame}

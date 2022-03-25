@@ -1,0 +1,197 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/se_hacen_reaccionar_CaS_con_10mL_de_dis_HCl/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        m(\ce{CaCl2})?\quad
+        V(\ce{H2S})?
+    $$}
+    Reacción: 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{CaS}(s)}\ce{+} 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{HCl(ac)}}
+    \ce{->[\SI{88}{\percent}]}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{CaCl2(ac)}}\ce{+}
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{\ce{H2S(g)}}
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m(\ce{CaS}) = \SI{3,6}{\gram}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{V(\ce{HCl}) = \SI{10}{\milli\liter} = \SI{0,010}{\liter}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\text{pureza de \ce{HCl}} = \SI{36}{\percent}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{d(\ce{HCl}) = \SI{1,19}{\gram\per\milli\liter}}
+        $$
+        $$
+            Rto = \SI{88}{\percent}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{T(\ce{H2S}) = \SI{298,15}{\kelvin}}\quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{P(\ce{H2S}) = 746-24~\si{\torr}}
+        $$
+    \visible<2-|handout:0>{Y las masas moleculares\ldots
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{CaS})=\SI{72,143}{\gram\per\mol}} 
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mm(\ce{HCl})=\SI{36,46}{\gram\per\mol}}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{CaCl2})=\SI{110}{\gram\per\mol}}
+        $$
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): Ajuste de la reacción}
+    \structure{Reacción:}
+    \visible<1-|handout:0>{
+        \centering\ce{CaS + H}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl}} \ce{-> Ca}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl2(ac)}} \ce{+ H2S}\\[.3cm]
+    }
+    \visible<2-|handout:0>{
+        \centering\ce{CaS + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{2\ce{HCl}}\ce{-> Ca}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl2}}\ce{+ H2S}\\[.6cm]
+    }
+    \visible<3-|handout:0>{
+        \centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{CaS + 2HCl -> CaCl2 + H2S}}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): averiguar qué reactivo es el limitante}
+    \structure{Reacción:} \ce{CaS + 2HCl -> CaCl2 + H2S}
+    \structure{Número de moles de \ce{CaS}:}
+    $$
+        n(\ce{CaS}) = \frac{m(\ce{CaS})}{Mm(\ce{CaS})}\Rightarrow n(\ce{CaS}) = \frac{\SI{3,6}{\gram}}{\SI{72,143}{\gram\per\mol}} = \SI{0,050}{\mol}
+    $$
+    \visible<2->{
+        \structure{Número de moles de \ce{HCl}:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    m_{\text{puro}}(\ce{HCl}) < m_{\text{comercial}}(\ce{HCl}) 
+                $$
+            \onslide<3>
+                $$
+                    m_{\text{puro}}(\ce{HCl}) = \frac{36}{100} m_{\text{comercial}}(\ce{HCl}) 
+                $$
+            \onslide<4>
+                $$
+                    \overbrace{m_{\text{puro}}(\ce{HCl})}^{n=\frac{m}{Mm}\Rightarrow m=n\cdot Mm} = \frac{36}{100} \underbrace{m_{\text{comercial}}(\ce{HCl})}_{d=\frac{m}{V}\Rightarrow m=d\cdot V}
+                $$
+            \onslide<5>
+                $$
+                    n(\ce{HCl})\cdot Mm(\ce{HCl}) = \frac{36}{100} d_{\text{comercial}}(\ce{HCl})\cdot V_{\text{comercial}}(\ce{HCl})
+                $$
+            \onslide<6>
+                $$
+                    n(\ce{HCl}) = \frac{36}{100} \frac{d_{\text{comercial}}(\ce{HCl})\cdot V_{\text{comercial}}(\ce{HCl})}{Mm(\ce{HCl})}
+                $$
+            \onslide<7->
+                $$
+                    n(\ce{HCl}) = \frac{36}{100} \frac{\SI{1,19}{\cancel\gram\per\cancel\milli\liter}\cdot \SI{10}{\cancel\milli\liter}}{\SI{36,46}{\cancel\gram\per\mol}} = \SI{0,117}{\mol}
+                $$
+        \end{overprint}
+    }
+    \visible<8->{
+        \structure{Según estequiometría:}
+        $$
+            \frac{n(HCl)}{n(CaS)}=\frac{2}{1}
+        $$
+        \structure{Según las cantidades del problema:}
+        $$
+            \frac{n(HCl)}{n(CaS)}=\frac{0,117}{0,050}=\frac{2,34}{1}
+        $$
+                }
+    \visible<9->{
+        \structure{Comparando:} (lo que reacciona de \ce{HCl}) $2<2,34$ (lo que tenemos de \ce{HCl}). 
+        {\centering\myovalbox{\textcolor{white}{\ce{CaS} es el reactivo limitante por el exceso de \ce{HCl}}}}
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): masa de \ce{CaCl2}}
+    \structure{Según estequiometría:} $n(\ce{CaS}) = n_{\text{teo}}(\ce{CaCl2})$
+    \structure{Rendimiento de reacción:}
+    \begin{overprint}
+        \onslide<2->
+            $$
+                \frac{88}{100}n_{\text{teo}}(\ce{CaCl2}) = n_{\text{real}}(\ce{CaCl2})\Rightarrow n_{\text{teo}}(\ce{CaCl2}) = \frac{100}{88}n_{\text{real}}(\ce{CaCl2})
+            $$
+    \end{overprint}
+    \visible<3->{
+        \structure{Uniendo ambas expresiones:}
+        \begin{overprint}
+            \onslide<3>
+                $$
+                    n(\ce{CaS}) = \frac{100}{88}n_{\text{real}}(\ce{CaCl2})
+                $$
+            \onslide<4>
+                $$
+                    \overbrace{n(\ce{CaS})}^{n=\frac{m}{Mm}} = \frac{100}{88}\underbrace{n_{\text{real}}(\ce{CaCl2})}_{n=\frac{m}{Mm}}
+                $$
+            \onslide<5>
+                $$
+                    \frac{m(\ce{CaS})}{Mm(\ce{CaS})} = \frac{100}{88}\frac{m_{\text{real}}(\ce{CaCl2})}{Mm(\ce{CaCl2})}
+                $$
+            \onslide<6->
+                $$
+                    m_{\text{real}}(\ce{CaCl2}) = \frac{88}{100}m(\ce{CaS})\cdot\frac{Mm(\ce{CaCl2})}{Mm(\ce{CaS})}
+                $$
+        \end{overprint}
+                }
+    \visible<7->{
+        \structure{Sustituyendo por los valores:}
+        $$
+            m_{\text{real}}(\ce{CaCl2}) = \frac{88}{100}\SI{3,6}{\gram}\cdot\frac{\SI{110,984}{\cancel\gram\per\cancel\mol}}{\SI{72,143}{\cancel\gram\per\cancel\mol}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{m_{\text{real}}(\ce{CaCl2}) = \SI{4,9}{\gram}}
+        $$
+                }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{4}): volumen de \ce{H2S}}
+    \structure{Según la estequiometría:}  $n(\ce{CaS}) = n_{\text{teo}}(\ce{H2S})$
+    \structure{Teniendo en cuenta el rendimiento de reacción (análogo a \ce{CaCl2}):}
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \overbrace{n(\ce{CaS})}^{n=\frac{m}{Mm}} = \frac{100}{88}\underbrace{n_{\text{real}}(\ce{H2S})}_{PV=nRT\Rightarrow n=\frac{PV}{RT}}
+            $$
+        \onslide<2>
+            $$
+                \frac{m(\ce{CaS})}{Mm(\ce{CaS})} = \frac{100}{88}\frac{P(\ce{H2S})\cdot V(\ce{H2S})}{R\cdot T(\ce{H2S})}
+            $$
+        \onslide<3->
+            $$
+                V(\ce{H2S})
+                =
+                \frac{88}{100}\frac{m(\ce{CaS})}{Mm(\ce{CaS})}\cdot\frac{R\cdot T(\ce{H2S})}{P(\ce{H2S})}
+            $$
+    \end{overprint}
+    \visible<4->{
+        \begin{center}
+            \alert{¡¡Recordad que tenemos una mezcla de gases: \ce{H2S}+agua!!}
+        \end{center}
+                }
+    \visible<5->{
+        $$
+            V(\ce{H2S})
+            =
+            \frac{88}{100}\frac{\SI{3,6}{\cancel\gram}}{\SI{72,143}{\cancel\gram\per\cancel\mol}}\cdot\frac{\SI{0,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot \SI{298,15}{\cancel\kelvin}}{\colorbox{red}{\color{white}$\frac{746-24}{760}$}~\si{\cancel\atm}}
+        $$
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{H2S})
+            =
+            \SI{1,1}{\liter}}
+        $$
+                }
+\end{frame}

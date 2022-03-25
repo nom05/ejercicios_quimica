@@ -1,0 +1,66 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/coligativas/la_congelacion_de_una_disolucion_formada_al_anhadir_10g_de_un_azucar/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge ¿$Mm(\text{azúcar})=Mm(\text{az})$?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\text{az})=\SI{10}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{K_c(\text{az})=\SI{1,86}{\celsius\kilogram\per\mol}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{H2O})=\SI{100}{\milli\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T_c(\ce{H2O})=\SI{0}{\celsius}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{d(\ce{H2O})=\SI{1}{\gram\per\milli\liter}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{T_c(\ce{H2O}\text{+az})=\SI{-1,24}{\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): determinación de la masa molecular del azúcar}
+	\structure{Variación de temperatura:} $\Delta T=T_c(\ce{H2O})-T_c(\ce{H2O}\text{+az})\Rightarrow\Delta T=\SI{0}{\celsius}-(\SI{-1,24}{\celsius})=\SI{1,24}{\celsius}$
+	\visible<2->{
+		\structure{Según la expresión del descenso crioscópico:} $\Delta T=K_c\cdot\overbrace{m}^{\text{molalidad}}$\\
+		Despejamos y calculamos la molalidad:
+		$$
+			m = \frac{\Delta T}{K_c}\Rightarrow m(\text{az})=\frac{\SI{1,24}{\cancel\celsius}}{\SI{1,86}{\cancel\celsius\kilogram\per\mol}}=\frac{2}{3}~\si{\mol\per\kilogram}
+		$$
+				}
+	\visible<3->{
+		\structure{\si{\kilogram} de disolvente (agua) usando la densidad:} $d(\ce{H2O})=\SI{1}{\gram\per\milli\liter}=\SI{1e-3}{\kilogram\per\milli\liter}$
+		$$
+			d=\frac{m}{V}\Rightarrow m=d\cdot V\Rightarrow m(\ce{H2O})=\SI{1e-3}{\kilogram\per\cancel\milli\liter}\cdot\SI{100}{\cancel\milli\liter}=\SI{,1}{\kilogram}
+		$$
+				}
+	\visible<4->{
+		\structure{Usando la definición de molalidad:} $m=\rfrac{n(\text{soluto})}{\text{\si{\kilogram} disolvente}}$
+		\begin{overprint}
+			\onslide<4>
+				$$
+					\text{molalidad}(\text{az}) = \frac{\overbrace{n(\text{az})}^{n=\rfrac{m}{Mm}}}{\text{\si{\kilogram} \ce{H2O}}}
+				$$
+			\onslide<5>
+				$$
+					\text{molalidad}(\text{az}) = \frac{m(\text{az})}{Mm(\text{az})\cdot\text{\si{\kilogram} \ce{H2O}}}
+				$$
+			\onslide<6>
+				$$
+					Mm(\text{az}) = \frac{m(\text{az})}{\text{molalidad}(\text{az})\cdot\text{\si{\kilogram} \ce{H2O}}}
+				$$
+			\onslide<7->
+				$$
+					Mm(\text{az}) = \frac{\SI{10}{\gram}}{\rfrac{2}{3}~\si{\mol\per\cancel\kilogram}\cdot\SI{,1}{\cancel\kilogram}}
+				$$
+		\end{overprint}
+				}
+	\visible<7->{
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\text{az})=\SI{150}{\gram\per\mol}}
+				}
+\end{frame}

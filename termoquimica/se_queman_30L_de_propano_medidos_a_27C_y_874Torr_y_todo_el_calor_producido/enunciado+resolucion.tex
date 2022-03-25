@@ -1,0 +1,283 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/se_queman_30L_de_propano_medidos_a_27C_y_874Torr_y_todo_el_calor_producido/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    \textbf{\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+        \item ¿$Q_{\text{combustión}}(\ce{CH3CH2CH3})$? = $Q_C(\ce{C3H8})$
+        \item ¿$m(CaCO3)$?
+        \item ¿$V(\ce{CO2})$?
+    \end{enumerate}}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{C3H8}) = \SI{30}{\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{T(\ce{C3H8}) = \SI{27}{\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{P(\ce{C3H8}) = \SI{874}{\torr}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{Quemar} = \text{combustión} = \text{reacción con \ce{O2}}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_f(\ce{C3H8(g)} )   =  \SI{-103,8}{\kilo\joule\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_f(\ce{H2O(l)}  )   =  \SI{-285,8}{\kilo\joule\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\Delta H_f(\ce{CO2(g)}  )   =  \SI{-393,5}{\kilo\joule\per\mol}}
+    $$
+    \structure{Reacción:} \ce{CaCO3(s) -> CO2(g) + CaO(s)}
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{P(\ce{CO2}) = \SI{1}{\atm}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{T(\ce{CO2}) = \SI{0}{\celsius}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Rto = \SI{93}{\percent}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{CaO(s)}  )   =  \SI{-635,5}{\kilo\joule\per\mol}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{CaCO3(s)})   = \SI{-1207,0}{\kilo\joule\per\mol}}
+    $$
+    $$
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{CO2(g)}  )   =  \SI{-393,5}{\kilo\joule\per\mol}}
+    $$
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): calor de combustión emitido por \ce{C3H8}}
+    \begin{overprint}
+        \onslide<1>
+            \structure{Ajustar reacción:} \ce{C3H8(g) + O2(g) -> CO2 + H2O}
+        \onslide<2>
+            \structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{C3}}
+            \ce{H8(g) + O2(g) ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{CO2}}
+            \ce{ + H2O}
+        \onslide<3>
+            \structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{C3}}
+            \ce{H8(g) + O2(g) ->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{3CO2}}
+            \ce{ + H2O}
+        \onslide<4>
+            \structure{Ajustar reacción:} \ce{C3}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H8(g)}}
+            \ce{ + O2(g) ->}
+            \ce{3CO2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H2}}
+            \ce{O}
+        \onslide<5>
+            \structure{Ajustar reacción:} \ce{C3}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H8(g)}}
+            \ce{ + O2(g) ->}
+            \ce{3CO2 +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{4H2}}
+            \ce{O}
+        \onslide<6>
+            \structure{Ajustar reacción:} \ce{C3H8(g) +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2(g)}}
+            \ce{->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{3}}
+            \ce{C}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2}}
+            \ce{+}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{4}}
+            \ce{H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O}}
+        \onslide<7>
+            \structure{Reacción:} \ce{C3H8(g) +}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{5O2(g)}}
+            \ce{->}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{3}}
+            \ce{C}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2}}
+            \ce{+}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{4}}
+            \ce{H2}
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O}}
+        \onslide<8->
+            \structure{Reacción:} \ce{C3H8(g) + 5O2(g) ->3CO2 + 4H2O}
+    \end{overprint}
+    \visible<9->{
+        \structure{Número de moles de \ce{C3H8}:} Ecuación de los gases ideales
+        \begin{overprint}
+            \onslide<9>
+                $$
+                    P\cdot V = n\cdot R\cdot T
+                $$
+            \onslide<10>
+                $$
+                    n = \frac{P\cdot V}{R\cdot T}
+                $$
+            \onslide<11>
+                $$
+                    n(\ce{C3H8}) = \frac{P(\ce{C3H8})\cdot V(\ce{C3H8})}{R\cdot T(\ce{C3H8})}
+                $$
+            \onslide<12>
+                $$
+                    n(\ce{C3H8}) = \frac{\frac{874}{760}~\si{\cancel\atm}\cdot\SI{30}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\cdot(273,15+27)~\si{\cancel\kelvin}}
+                $$
+            \onslide<13>
+                $$
+                    n(\ce{C3H8}) = \SI{1,401}{\mol}
+                $$
+        \end{overprint}
+                }
+    \visible<14->{
+        \begin{overprint}
+            \onslide<14>
+                \structure{¿Entalpía de formación estándar del \ce{O2}?}
+            \onslide<15>
+                \structure{``La entalpía de formación estándar de un elemento puro en su estado de referencia es cero''}
+            \onslide<16>
+                \structure{Ley de Hess:}
+                $$
+                    \Delta H_C = \sum\Delta H_f(\text{productos}) - \Delta H_f(\text{reactivos})
+                $$
+            \onslide<17>
+                \structure{Ley de Hess:}
+                $$
+                    \Delta H_C = 3\times\overbrace{\Delta H_f(\ce{CO2})}^{\SI{-393,5}{\kilo\joule\per\mol}}
+                               + 4\times\underbrace{\Delta H_f(\ce{H2O})}_{\SI{-285,8}{\kilo\joule\per\mol}}
+                               - 1\times\overbrace{\Delta H_f(\ce{C3H8})}^{\SI{-103,8}{\kilo\joule\per\mol}}
+                               - 5\times\underbrace{\Delta H_f(\ce{O2})}_{\SI{0}{\kilo\joule\per\mol}}
+                $$
+            \onslide<18>
+                \structure{Ley de Hess:}
+                $$
+                    \Delta H_C = 3\cdot(\SI{-393,5}{\kilo\joule\per\mol})
+                               + 4\cdot(\SI{-285,8}{\kilo\joule\per\mol})
+                               - 1\cdot(\SI{-103,8}{\kilo\joule\per\mol})
+                               - \cancel{5\cdot\SI{0}{\kilo\joule\per\mol}}
+                $$
+            \onslide<19->
+                \structure{Ley de Hess:}
+                $$
+                    \Delta H_C = \SI{-2219,9}{\kilo\joule\per\mol}
+                $$
+        \end{overprint}
+                  }
+      \visible<20->{
+          \structure{El calor emitido por el propano será:}
+          $$
+                \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Q(\ce{C3H8}) = \SI{-2219,9}{\kilo\joule\per\cancel\mol}\cdot\SI{1,401}{\cancel\mol} = \SI{-3111,7}{\kilo\joule}}
+          $$
+                    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): masa de CaCO3}
+    \structure{Reacción:} \ce{CaCO3(s) -> CaO(s) + CO2(g)}
+    \begin{overprint}
+        \onslide<1>
+            \structure{Entalpía de la reacción:} usamos de nuevo ``Ley de Hess''
+            $$
+                \Delta H_{\text{reacción}}(\ce{CaCO3}) = \Delta H_R(\ce{CaCO3}) = \sum\Delta H_f(\text{productos}) - \Delta H_f(\text{reactivos})
+            $$
+        \onslide<2>
+            \structure{Entalpía de la reacción:} usamos de nuevo ``Ley de Hess''
+            $$
+                    \Delta H_R(\ce{CaCO3}) 
+                 = 1\times\underbrace{\Delta H_f(\ce{CaO})}_{\SI{-635,5}{\kilo\joule\per\mol}}
+                 + 1\times\overbrace{\Delta H_f(\ce{CO2})}^{\SI{-393,5}{\kilo\joule\per\mol}}
+                 - 1\times\underbrace{\Delta H_f(\ce{CaCO3})}_{\SI{-1207,0}{\kilo\joule\per\mol}}
+            $$
+        \onslide<3>
+            \structure{Entalpía de la reacción:} usamos de nuevo ``Ley de Hess''
+            $$
+                \Delta H_R(\ce{CaCO3}) 
+                = \SI{-635,5}{\kilo\joule\per\mol}
+                  \SI{-393,5}{\kilo\joule\per\mol}
+                + \SI{1207,0}{\kilo\joule\per\mol}
+            $$
+        \onslide<4->
+            \structure{Entalpía de la reacción:} usamos de nuevo ``Ley de Hess''
+            $$
+                \Delta H_R(\ce{CaCO3}) 
+                = \SI{178,0}{\kilo\joule\per\mol}
+            $$
+    \end{overprint}
+    \visible<5->{
+        \structure{El calor emitido por \ce{C3H8} es de signo opuesto al calor absorbido por \ce{CaCO3}:} Sistema cerrado
+        \begin{overprint}
+            \onslide<5>
+                $$
+                    Q_{\text{emitido}}(\ce{C3H8}) = -Q_{\text{absorbido}}(\ce{CaCO3})
+                $$
+            \onslide<6>
+                $$
+                    Q_{\text{absorbido}}(\ce{CaCO3}) = \SI{3111,7}{\kilo\joule}
+                $$
+            \onslide<7>
+                $$
+                    Q_{\text{absorbido}}(\ce{CaCO3}) = \SI{3111,7}{\kilo\joule} = n(\ce{CaCO3})\cdot\overbrace{\Delta H_R(\ce{CaCO3})}^{\SI{178,0}{\kilo\joule\per\mol}}
+                $$
+            \onslide<8>
+                $$
+                    Q_{\text{absorbido}}(\ce{CaCO3}) = \SI{3111,7}{\kilo\joule} = n(\ce{CaCO3})\cdot\SI{178,0}{\kilo\joule\per\mol}
+                $$
+            \onslide<9>
+                $$
+                    n(\ce{CaCO3}) = \frac{\SI{3111,7}{\kilo\joule}}{\SI{178,0}{\kilo\joule\per\mol}} = \SI{17,48}{\mol}
+                $$
+            \onslide<10>
+                $$
+                    \overbrace{n(\ce{CaCO3})}^{n=\frac{m}{Mm}} = \frac{\SI{3111,7}{\kilo\joule}}{\SI{178,0}{\kilo\joule\per\mol}}
+                $$
+            \onslide<11>
+                $$
+                    m(\ce{CaCO3}) = Mm(\ce{CaCO3})\cdot\frac{\SI{3111,7}{\kilo\joule}}{\SI{178,0}{\kilo\joule\per\mol}}
+                $$
+            \onslide<12->
+                $$
+                    m(\ce{CaCO3}) = \SI{100,01}{\gram\per\cancel\mol}\cdot\frac{\SI{3111,7}{\cancel\kilo\joule}}{\SI{178,0}{\cancel\kilo\joule\per\cancel\mol}}
+                $$
+        \end{overprint}
+    }
+    \visible<13->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{CaCO3}) = \SI{1748,3}{\gram} = \SI{1,75}{\kilo\gram}}
+        $$
+                  }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{3}): volumen de \ce{CO2}}
+    \structure{Reacción:} \ce{CaCO3(s) -> CaO(s) + CO2(g)}
+    \structure{Según estequiometría:} $n(\ce{CaCO3(s)}) = n(\ce{CO2(g)})$
+    \visible<2->{
+        \structure{Pero la reacción tiene $\text{Rto} = \SI{93}{\percent}$:}
+        \begin{overprint}
+            \onslide<2>
+                $$
+                    \frac{93}{100}\cdot\overbrace{n(\ce{CaCO3(s)})}^{\SI{17,48}{\mol}} = n(\ce{CO2(g)})
+                $$
+            \onslide<3>
+                $$
+                    \overbrace{n(\ce{CO2(g)})}^{PV=nRT\Rightarrow n=\frac{PV}{RT}} = \frac{93}{100}\cdot n(\ce{CaCO3(s)})
+                $$
+            \onslide<4>
+                $$
+                    \frac{P(\ce{CO2(g)})\cdot V(\ce{CO2(g)})}{R\cdot T(\ce{CO2(g)})} = \frac{93}{100}\cdot n(\ce{CaCO3(s)})
+                $$
+            \onslide<5>
+                $$
+                    V(\ce{CO2(g)}) = \frac{93}{100}\cdot\overbrace{n(\ce{CaCO3(s)})}^{\SI{17,48}{\mol}}\cdot\frac{R\cdot T(\ce{CO2(g)})}{P(\ce{CO2(g)})}
+                $$
+            \onslide<6->
+                $$
+                    V(\ce{CO2(g)}) = \frac{93}{100}\cdot\SI{17,48}{\cancel\mol}\cdot\frac{\SI{,082}{\cancel\atm\liter\per\cancel\mol\per\cancel\kelvin}\cdot\SI{273,15}{\cancel\kelvin}}{\SI{1}{\cancel\atm}}
+                $$
+        \end{overprint}
+                }
+    \visible<7->{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{CO2(g)}) = \SI{364}{\liter}}
+        $$
+                }
+\end{frame}

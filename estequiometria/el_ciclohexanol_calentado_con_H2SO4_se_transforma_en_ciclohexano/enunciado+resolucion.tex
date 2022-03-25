@@ -1,0 +1,42 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_ciclohexanol_calentado_con_H2SO4_se_transforma_en_ciclohexano/enunciado.tex}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge¿$m(\ce{C6H11OH})$?} \\[.4cm]
+		\ce{C6H11OH(l) ->[$\SI{83}{\percent}$] C6H10(l) + H2O(l)}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\eta = \SI{83}{\percent}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{m(\ce{C6H10}) = \SI{25}{\gram}}\\[.4cm]
+		Pero también ...\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{C6H11OH}) = \SI{100,16}{\gram\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{Mm(\ce{C6H10}) = \SI{82,14}{\gram\per\mol}}\\[.4cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{La reacción ya está ajustada (comprobar siempre):}
+	\begin{center}
+		\ce{C6H11OH(l) ->[$\SI{83}{\percent}$] C6H10(l) + H2O(l)}
+	\end{center}
+	\structure{Relación estequiométrica:} $n_{\text{real}}(\ce{C6H11OH}) = n_{\text{teórico}}(\ce{C6H10})$
+	\structure{Solo el \SI{83}{\percent} del n"o de moles de \ce{C6H11OH} se convierte en \ce{C6H10},} por tanto:
+	$$
+		\overbrace{\num{,83}}^{\SI{83}{\percent}}\times n_{\text{real}}(\ce{C6H11OH}) = n_{\text{real}}(\ce{C6H10})\overset{n = \rfrac{m}{Mm}}{\Rightarrow}
+		\num{,83}\vdot\frac{m(\ce{C6H11OH})}{Mm(\ce{C6H11OH})} = \frac{m(\ce{C6H10})}{Mm(\ce{C6H10})}
+	$$
+	$$
+		m(\ce{C6H11OH}) = \frac{m(\ce{C6H10})\vdot Mm(\ce{C6H11OH})}{\num{,83}\vdot Mm(\ce{C6H10})}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{C6H11OH}) = \SI{36,73}{\gram}}
+	$$
+\end{frame}

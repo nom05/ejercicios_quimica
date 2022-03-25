@@ -1,0 +1,163 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/el_CS2_puede_prepararse_a_partir_del_SO2/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\centering{\huge m(\ce{CS2})?}
+	\begin{center}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{SO2})=\SI{450}{\kilogram}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\si{\percent}\text{ rendimiento de reacción}=\SI{82}{\percent}}
+	\end{center}
+	\visible<2-|handout:0>{Pero también\ldots\\
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{SO2}) = \SI{64,06}{\gram\per\mol}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{Mm(\ce{CS2}) = \SI{76,14}{\gram\per\mol}}
+		$$
+		Reacción sin ajustar: 
+		\ce{C(s) +}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{SO2}}
+		\ce{->[\SI{82}{\percent}]}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{CS2(s)}}
+		\ce{ + CO(g)}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): ajuste de la reacción}
+	\begin{block}{Método del tanteo}
+		\begin{overprint}
+			\onslide<1>
+				\centering\ce{C +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{S}O2}}
+				\ce{->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{C\textbf{S2}}}
+				\ce{+ CO} (\textbf{\underline{sin ajustar}})
+			\onslide<2>
+				\centering\ce{C +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{\textbf{2S}O2}}
+				\ce{->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{C\textbf{S2}}}
+				\ce{+ CO} (\textbf{\underline{ajustado}})
+			\onslide<3>
+				\centering\ce{C + }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{\textbf{2}S\textbf{O2}}}
+				\ce{->}
+				\ce{CS2 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{C\textbf{O}}} (\textbf{\underline{sin ajustar}})
+			\onslide<4>
+				\centering\ce{C + }
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{\textbf{2}S\textbf{O2}}}
+				\ce{->}
+				\ce{CS2 +}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\ce{\textbf{4}C\textbf{O}}} (\textbf{\underline{ajustado}})
+			\onslide<5>
+				\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\textbf{\ce{C}}}
+				\ce{ + 2SO2 ->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\ce{\textbf{C}S2}}
+				\ce{+}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\ce{\textbf{4C}O}} (\textbf{\underline{sin ajustar}})
+			\onslide<6>
+				\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\textbf{\ce{5C}}}
+				\ce{ + 2SO2 ->}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\ce{\textbf{C}S2}}
+				\ce{+}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{\ce{\textbf{4C}O}} (\textbf{\underline{ajustado}})
+			\onslide<7->
+				\centering\textbf{\ce{5C + 2SO2 -> CS2 + 4CO}}
+		\end{overprint}
+	\end{block}
+	\visible<7->{
+	\begin{alertblock}{Método aritmético:}
+		\centering\colorbox{red}{\color{white}\textbf{a}}\ce{C} + \colorbox{green}{\textbf{b}}\ce{SO2} \ce{->} \colorbox{blue}{\color{white}\textbf{c}}\ce{CS2} +  \colorbox{orange}{\color{white}\textbf{d}}\ce{CO}\\
+		\begin{columns}
+			\visible<8-|handout:0>{
+				\column{.45\textwidth}
+				\begin{flushleft}
+					\ce{C}:\quad\colorbox{red}{\color{white}\textbf{a}} = \colorbox{blue}{\color{white}\textbf{c}} + \colorbox{orange}{\color{white}\textbf{d}}\\
+					\ce{S}:\quad\colorbox{green}{\textbf{b}} = \textbf{2}\colorbox{blue}{\color{white}\textbf{c}}\\
+					\ce{O}:\quad \textbf{2}\colorbox{green}{\textbf{b}} = \colorbox{orange}{\color{white}\textbf{d}}\\
+				\end{flushleft}
+								}
+			\visible<9-|handout:0>{
+				\column{.45\textwidth}
+				$a$ depende de $c$ y $d$.\\
+				$c$ y $d$ dependen de $b$.\\
+				Escogemos $b$ para que $c$ sea entero:\\
+				\colorbox{green}{\textbf{b}} = 2\\
+				Entonces:
+				\colorbox{blue}{\color{white}\textbf{c}}$=\rfrac{2}{2}=1$\\
+				\colorbox{orange}{\color{white}\textbf{d}}$=2\times 2=4$\\
+				\colorbox{red}{\color{white}\textbf{a}}$= 1+4=5$\\
+			}
+		\end{columns}
+		\visible<10-|handout:0>{
+			\centering
+			\colorbox{red}{\color{white}\textbf{5}}
+			\colorbox{green}{\color{white}\textbf{2}}
+			\colorbox{blue}{\color{white}\textbf{1}}
+			\colorbox{orange}{\color{white}\textbf{4}}
+			\\[.5cm]
+								}
+		\visible<10-|handout:0>{
+			\centering\colorbox{red}{\color{white}\textbf{5}}\ce{C} + \colorbox{green}{\textbf{2}}\ce{SO2} \ce{->} \colorbox{blue}{\color{white}\textbf{1}}\ce{CS2} +  \colorbox{orange}{\color{white}\textbf{4}}\ce{CO}\\
+								}
+	\end{alertblock}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): masa real de \ce{CS2}}
+	\structure{Reacción:} \ce{5C + 2SO2 ->[\SI{82}{\percent}] CS2 + 4CO}
+	\structure{Según la estequiometría:} \SI{2}{\mol} de \ce{SO2} reaccionan con \SI{1}{\mol} de \ce{CS2}, entonces:
+	\begin{overprint}
+		\onslide<1>
+			$$
+				n(\ce{SO2}) = 2\cdot n_{\text{teórico}}(\ce{CS2})
+			$$
+			Como la reacción tiene un rendimiento menor de \SI{100}{\percent} (concretamente \SI{82}{\percent})
+			$$
+				n_{\text{teórico}}(\ce{CS2}) > n_{\text{real}}(\ce{CS2})
+			$$
+		\onslide<2>
+			$$
+				n(\ce{SO2}) = 2\cdot n_{\text{teórico}}(\ce{CS2})
+			$$
+			Como la reacción tiene un rendimiento menor de \SI{100}{\percent} (concretamente \SI{82}{\percent})
+			$$
+				\frac{82}{100}\cdot n_{\text{teórico}}(\ce{CS2}) = n_{\text{real}}(\ce{CS2})\Rightarrow	n_{\text{teórico}}(\ce{CS2}) = \frac{100}{82}\cdot n_{\text{real}}(\ce{CS2})
+			$$
+		\onslide<3>
+			$$
+				n(\ce{SO2}) = 2\cdot\overbrace{n_{\text{teórico}}(\ce{CS2})}^{n_{\text{teórico}}(\ce{CS2}) = \frac{100}{82}\cdot n_{\text{real}}(\ce{CS2})}
+			$$
+		\onslide<4>
+			$$
+				\overbrace{n(\ce{SO2})}^{n=\rfrac{m}{Mm}} = 2\cdot\frac{100}{82}\cdot\underbrace{n_{\text{real}}(\ce{CS2})}_{n=\rfrac{m}{Mm}}
+			$$
+		\onslide<5>
+			$$
+				\frac{m(\ce{SO2})}{Mm(\ce{SO2})} = \overbrace{2\cdot\frac{100}{82}}^{\frac{100}{41}}\cdot\frac{m_{\text{real}}(\ce{CS2})}{Mm(\ce{CS2})}
+			$$
+		\onslide<6->
+			$$
+				m_{\text{real}}(\ce{CS2}) = m(\ce{SO2})\cdot\frac{41}{100}\cdot\frac{Mm(\ce{CS2})}{Mm(\ce{SO2})}
+			$$
+	\end{overprint}
+	\visible<6>{
+		Sustituimos por sus correspondientes valores:
+		$$
+				m_{\text{real}}(\ce{CS2}) = \SI{450}{\kilogram}\cdot\frac{41}{100}\cdot\frac{\SI{76,14}{\cancel\gram\per\cancel\mol}}{\SI{64,06}{\cancel\gram\per\cancel\mol}}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{m_{\text{real}}(\ce{CS2}) = \SI{219}{\kilogram}}
+				}
+\end{frame}

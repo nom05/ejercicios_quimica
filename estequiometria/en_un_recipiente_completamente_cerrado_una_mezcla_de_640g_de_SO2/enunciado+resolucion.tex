@@ -1,0 +1,186 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/en_un_recipiente_completamente_cerrado_una_mezcla_de_640g_de_SO2/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge
+			¿Reactivo limitante?, ¿$\eta$?, ¿$n$ de reactivos sin reaccionar?\\[.4cm]
+		}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{SO2})=\SI{640}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{m(\ce{O2})=\SI{480}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{m(\ce{SO3})=\SI{640}{\gram}}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{SO2})=\SI{64}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Mm(\ce{O2})=\SI{32}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{Mm(\ce{SO3})=\SI{80}{\gram}}\\[.4cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): reactivo limitante}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Reacción química (sin ajustar):} \ce{SO2(g) + O2(g) -> SO3(g)}\\[.6cm]
+		\onslide<2>
+			\structure{Reacción química (ajustada):} \ce{SO2(g) + 1/2O2(g) -> SO3(g)}\\[.6cm]
+		\onslide<3->
+			\structure{Reacción química (ajustada):}
+				\ce{
+						\colorbox{yellow}{\textbf{1}}
+							SO2(g) + 
+						\colorbox{orange}{\textbf{\ce{1/2}}}
+							O2(g) -> 
+						\colorbox{blue}{\color{white}\textbf{1}}
+							SO3(g)
+					}\\[.6cm]
+	\end{overprint}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Datos del problema:}
+			\begin{center}
+				\begin{tabular}{cSSS}
+					\toprule
+						Propiedad				&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}	&	{\ce{SO3(g)}}	\\
+					\midrule
+						Mm (\si{\gram\per\mol})	&	64				&	32				&	80				\\
+						m (\si{\gram})			&	640				&	480				&	640				\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\structure{Calculamos el n"o de moles del problema:} $n = \rfrac{m}{Mm}$
+			\begin{center}
+				\begin{tabular}{cSSS}
+					\toprule
+						Propiedad				&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}	&	{\ce{SO3(g)}}	\\
+					\midrule
+						Mm (\si{\gram\per\mol})	&	64				&	32				&	80				\\
+						m (\si{\gram})			&	640				&	480				&	640				\\
+						n (\si{\mol})			&	10				&	15				&	8				\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+		\onslide<3>
+			\structure{Esos n"os de moles hay que distinguirlos entre iniciales y finales, se añaden los que reaccionan:} Usamos la estequiometría de la reacción
+			\begin{center}
+				\begin{tabular}{cSSS}
+					\toprule
+						Propiedad						&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}		&	{\ce{SO3(g)}}	\\
+					\midrule
+						Mm (\si{\gram\per\mol})			&	64				&	32					&	80				\\
+						m (\si{\gram})					&	640				&	480					&	640				\\
+						n (\si{\mol})					&	10				&	15					&	8				\\
+						n iniciales (\si{\mol})			&	10				&	15					&	0				\\
+						n reaccionan (\si{\mol})		&	{$-\colorbox{yellow}{\textbf{1}}x$}							&
+															{$-\colorbox{orange}{\textbf{\ce{1/2}}}x$}					&	
+															{$+\colorbox{blue}{\color{white}\textbf{1}}x$}				\\
+						n finales teóricos (\si{\mol})	&	{$10-x$}		&	{$15-\num{,5}x$}	&	{$x$}			\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+				\onslide<4>
+					\structure{Tenemos dos alternativas para el reactivo limitante:} suponemos las dos situaciones y usamos la que es químicamente posible.
+					\begin{center}
+						\begin{tabular}{cSSSl}
+							\toprule
+								Propiedad												&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}		&	{\ce{SO3(g)}}	&										\\
+							\midrule
+								Mm (\si{\gram\per\mol})									&	64				&	32					&	80				&										\\
+								m (\si{\gram})											&	640				&	480					&	640				&										\\
+								n (\si{\mol})											&	10				&	15					&	8				&										\\
+								n iniciales (\si{\mol})									&	10				&	15					&	0				&										\\
+								n reaccionan (\si{\mol})								&	{$-\colorbox{yellow}{\textbf{1}}x$}							&
+																							{$-\colorbox{orange}{\textbf{\ce{1/2}}}x$}					&	
+																							{$+\colorbox{blue}{\color{white}\textbf{1}}x$}				&										\\
+								n finales teóricos (\si{\mol}) \textbf{posibilidad 1}	&	{$10-x=0$}		&	{$15-\num{,5}x$}	&	{$x$}			&										\\
+								Si $x=10$												&	0				&	{\colorbox{green}{\num{10}}}	&
+																																		10				&	\colorbox{green}{\textbf{POSIBLE}}	\\
+								n finales teóricos (\si{\mol}) \textbf{posibilidad 2}	&	{$10-x$}		&	{$15-\num{,5}x=0$}	&	{$x$}			&										\\
+								Si $x=30$												&	{\colorbox{red}{\cancel{\num{-20}}}}	&
+																												0					&	30				&	\colorbox{red}{\textbf{IMPOSIBLE}}	\\
+							\bottomrule
+						\end{tabular}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{El reactivo limitante es el \ce{SO2}}} porque es el que se agota antes.
+					\end{center}
+	\end{overprint}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): rendimiento de la reacción}
+	\structure{Reacción química (ajustada):} \ce{SO2(g) + 1/2O2(g) -> SO3(g)}\\[.6cm]
+	\begin{center}
+		\begin{tabular}{cSSSl}
+			\toprule
+				Propiedad				&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}		&	{\ce{SO3(g)}}	&										\\
+			\midrule
+				n (\si{\mol})			&	10				&	15					&	8				&	DATOS DEL EJERCICIO					\\
+				n finales (\si{\mol})	&	0				&	10					&	10				&	TEÓRICOS (calculados previamente)	\\
+				n finales (\si{\mol})	&	{?}				&	{?}					&	8				&	REALES								\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\structure{Definición de rendimiento:} usando el \underline{n"o de moles} de alguno de os \underline{productos}
+	$$
+		\eta = \frac{n_{\text{reales}}}{n_{\text{teóricos}}}\times 100
+	$$
+	\structure{Usando los datos de la tabla:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{
+			\eta = \frac{8}{10}\times 100 = \SI{80}{\percent}
+																				}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): cantidad de reactivos sin reaccionar}
+	\structure{Reacción química (ajustada):} \ce{SO2(g) + 1/2O2(g) -> SO3(g)}\\[.6cm]
+	\begin{overprint}
+		\onslide<1>
+			\begin{center}
+				\begin{tabular}{cSSSl}
+					\toprule
+						Propiedad					&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}		&	{\ce{SO3(g)}}	&										\\
+					\midrule
+						n (\si{\mol})				&	10				&	15					&	8				&	DATOS DEL EJERCICIO					\\
+						n finales (\si{\mol})		&	0				&	10					&	10				&	TEÓRICOS (calculados previamente)	\\
+						n finales (\si{\mol})		&	{?}				&	{?}					&	8				&	REALES								\\
+						n reaccionan (\si{\mol})	&	{$-x$}			&	{$-\ce{1/2}x$}		&	{$+x$}			&										\\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+			\structure{Si tenemos \SI{8}{\mol} de producto únicamente ...} tenemos que usar $x=8$.
+		\onslide<2->
+		\begin{center}
+			\begin{tabular}{cSSSl}
+				\toprule
+					Propiedad					&	{\ce{SO2(g)}}	&	{\ce{O2(g)}}		&	{\ce{SO3(g)}}	&										\\
+				\midrule
+					n iniciales (\si{\mol})		&	10				&	15					&	0				&	DATOS DEL EJERCICIO					\\
+					n finales (\si{\mol})		&	{?}				&	{?}					&	8				&	REALES								\\
+					n reaccionan (\si{\mol})	&	{$-x$}			&	{$-\ce{1/2}x$}		&	{$+x$}			&	(Según la estequiometría)			\\
+					n reaccionan (\si{\mol})	&	-8				&	-4					&	+8				&	$x=8$								\\
+					n finales (\si{\mol})		&	{$10-8=2$}		&	{15-4=11}			&	8				&	Por el rendimiento de reacción	\\
+				\toprule
+			\end{tabular}
+		\end{center}
+	\end{overprint}
+	\visible<2->{
+		Como estamos en un recipiente cerrado y no puede entrar ni salir nada solo ocurre la reacción y si no se completa la única solución es que queden sin reaccionar los reactivos. En otras reacciones, un rendimiento inferior al \SI{100}{\percent} puede indicar también que se ha perdido parte de los reactivos o del producto.
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n_{\text{sin reaccionar}}(\ce{SO2})=\SI{2}{\mol}}\qquad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{n_{\text{sin reaccionar}}(\ce{O2})=\SI{11}{\mol}}
+		\end{center}
+
+				}
+\end{frame}

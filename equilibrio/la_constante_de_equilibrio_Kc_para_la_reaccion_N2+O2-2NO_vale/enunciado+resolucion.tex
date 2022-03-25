@@ -1,0 +1,60 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/equilibrio/la_constante_de_equilibrio_Kc_para_la_reaccion_N2+O2-2NO_vale/enunciado.tex
+				}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large\textbf{¿N"o de moles de cada sustancia en el equilibrio?}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{K_c = \num{8,8e-4}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{V = \SI{2}{\liter}}\\[.2cm]
+		\ce{N2(g) + O2(g) <=> NO(g)} {\tiny (sin ajustar)}
+		\structure{Condiciones iniciales:}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n_0(\ce{N2}) = \SI{2,0}{\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n_0(\ce{H2}) = \SI{1,0}{\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): presión total en el equilibrio}
+	\structure{Reacción de equilibrio y expresión de $K_c$:}\quad\ce{N2(g) + H2(g) <=> 2NO(g)}
+	\begin{center}
+		\begin{tabular}{lSSS}
+			\toprule
+				Estado		& {$n(\ce{N2})~(\si{\mol})$}	&  {$n(\ce{H2})~(\si{\mol})$}	&  {$n(\ce{NO})~(\si{\mol})$}	\\
+			\midrule
+				Inicial		&            2,0				&	1,0 						&	0							\\
+				Reaccionan	&			{$-x$}				&	{$-x$}						&	{$2x$}						\\
+				Equilibrio	&			{$\num{2,0}-x$}		&	{$\num{1,0}-x$}				&	{$2x$}						\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	$$
+		K_c=\underbrace{\frac{[\ce{NO}]^2}{[\ce{N2}][\ce{H2}]}}_{M=\frac{n}{V}}=\frac{\rfrac{n(\ce{NO})^2}{\cancel{V^2}}}{\rfrac{n(\ce{N2})}{\cancel{V}}\vdot \rfrac{n(\ce{H2})}{\cancel{V}}}=\num{8,8e-4}\Rightarrow
+		K_c = \frac{(2x)^2}{\left(2-x\right)\left(1-x\right)}=\num{8,8e-4}\Rightarrow
+	$$
+	$$
+		 4544,45x^2 + 3x -2 =0
+		\begin{cases}
+			x_1 = \SI{,02065}{\mol}\\
+			\cancel{x_2 < 0}\quad\text{(Químicamente no posible)}
+		\end{cases}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{n(\ce{N2}) = \SI{2,0}{\mol} - \SI{,02065}{\mol} = \SI{1,9794}{\mol}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{n(\ce{H2}) = \SI{1,0}{\mol} - \SI{,02065}{\mol} = \SI{,9794}{\mol}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{n(\ce{NO}) = 2\times\SI{,02065}{\mol} = \SI{,0430}{\mol}}
+	$$
+\end{frame}

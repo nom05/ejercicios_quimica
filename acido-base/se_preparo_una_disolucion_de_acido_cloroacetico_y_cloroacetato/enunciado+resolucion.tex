@@ -1,0 +1,67 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/se_preparo_una_disolucion_de_acido_cloroacetico_y_cloroacetato/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge $\mathrm{pH}$}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{ClCH2COOH}]=\SI{,01}{\Molar}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{[\ce{ClCH2COONa}]=\SI{,002}{\Molar}}\\[.3cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a(\ce{ClCH2COOH})=\num{1,36e-3}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $\mathrm{pH}$ de la disolución}
+	\structure{Reacción en equilibrio:} \ce{ClCH2COOH(ac) <=> H+(ac) + ClCH2COO-(ac)}\\[.2cm]
+	\centering\alert{Ácido y su ion conjugado coexisten antes de disociación: \textbf{\underline{disolución}} \textbf{\underline{AMORTIGUADORA}}}
+	\begin{center}
+		{\small\begin{tabular}{cccc}
+			\toprule
+			Concentración(\si{\Molar}) & [\ce{ClCH2COOH}]       &  [\ce{H+}] & [\ce{ClCH2COO-}]       \\
+			{[Inicial]}                & $[\ce{ClCH2COOH}]_0$   &       0	 & $[\ce{ClCH2COO-}]_0$   \\
+			{[Equilibrio]}             & $[\ce{ClCH2COOH}]_0-x$ &      $x$   & $[\ce{ClCH2COO-}]_0+x$ \\
+			\bottomrule
+		\end{tabular}}
+	\end{center}
+	(para abreviar: $\ce{ClCH2COOH}\equiv\ce{HA}$ y $\ce{ClCH2COO-}\equiv\ce{A-}$)
+	\visible<2>{
+		\structure{\textbf{\underline{Ecuación de Henderson-Hasselbalch}}:}
+				$$
+					K_a = \frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}\Rightarrow\log{K_a} = \log[\ce{H+}]+\log(\frac{[\ce{A-}]}{[\ce{HA}]})\Rightarrow
+					\overbrace{\pH}^{-\log[\ce{H+}]} = \underbrace{\pKa}_{-\log{K_a}}+\log\left(\frac{[\ce{A-}]}{[\ce{HA}]}\right)
+				$$
+				}
+	\begin{overprint}
+		\onslide<1>
+			\begin{block}{Sin aproximación}
+				$$
+					K_a(\ce{HA})=\frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}\Rightarrow
+					\frac{x\vdot(\num{2e-3}+x)}{\num{10e-3}-x}=\num{1,36e-3}\Rightarrow
+				$$
+				$$
+					x^2+\num{3,36e-3}x-\num{1,36e-6}=0\Rightarrow x=[\ce{H+}]=\SI{2,37e-3}{\Molar}\Rightarrow
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\mathrm{pH}=-\log[\ce{H+}]=\num{2,62}}
+				$$
+			\end{block}
+		\onslide<2>
+			\begin{alertblock}{Con aproximación (en este caso no aplicable, $K_a>\num{1e-4}$)}
+						$$
+							\pH = \pKa + \log\left(\frac{[\ce{A-}]}{[\ce{HA}]}\right)=\pKa+\log\left(\frac{[\ce{A-}]_0}{[\ce{HA}]_0}\right)\Rightarrow
+							\pH = \num{2,87} + \log(\frac{\num{2e-3}}{\num{10e-3}})
+					 	$$
+					 	$$
+					 		\pH = \num{2,87} - \log 5 = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=red]{\mathrm{pH}=\cancel{\num{2,17}}}
+				 		$$
+			\end{alertblock}
+	\end{overprint}
+\end{frame}

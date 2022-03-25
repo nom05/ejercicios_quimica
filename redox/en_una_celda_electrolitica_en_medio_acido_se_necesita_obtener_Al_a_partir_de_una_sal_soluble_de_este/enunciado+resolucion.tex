@@ -1,0 +1,206 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/en_una_celda_electrolitica_en_medio_acido_se_necesita_obtener_Al_a_partir_de_una_sal_soluble_de_este/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large\textbf{
+				¿Semirreacciones y reacción ajustadas? ¿$\varepsilon^0_{\text{total}}$? ¿$\varepsilon$? ¿$V$ de disolución? ¿$t$?
+		}}\\[.4cm]
+		\begin{tabular}{cc}
+			$\varepsilon^0(\ce{Mg^2+(ac)|Mg(s)})        = \SI{-2,38}{\volt}$ & $\varepsilon^0(\ce{Al^3+(ac)|Al(s)})     = \SI{-1,66}{\volt}$\\
+			$\varepsilon^0(\ce{Ti2O3(s)|TiO(s)})        = \SI{-1,23}{\volt}$ & $\varepsilon^0(\ce{Cr^3+(ac)|Cr^2+(ac)}) = \SI{-0,42}{\volt}$\\
+			$\varepsilon^0(\ce{CO2(g)|CO(g)})           = \SI{-0,11}{\volt}$ & $\varepsilon^0(\ce{SnO(s)|Sn(s)})        = \SI{-0,10}{\volt}$\\
+			$\varepsilon^0(\ce{Cr2O7^2-(ac)|Cr^3+(ac)}) =  \SI{1,33}{\volt}$ & $\varepsilon^0(\ce{MnO4^-(ac)|Mn2+(ac)})  =  \SI{1,51}{\volt}$\\
+		\end{tabular}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{celda electrolítica}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{medio ácido}}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\varepsilon^0_{\text{total}}\text{ más cercano a cero}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{cátodo:} \ce{Al^3+}/\ce{Al}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}\\[.2cm]
+		\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\setcounter{enumi}{3}
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{[\ce{Al^3+}] = \SI{2,5}{\Molar}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\pH = \num{2}}\\[.2cm]
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{m = \SI{2}{\gram}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{I = \SI{5}{\ampere}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}
+		\end{enumerate}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Reacciones, ajuste y $\varepsilon^0_{\text{total}}$}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Consideraciones previas:}
+			\begin{itemize}
+				\item\textbf{Celda electrolítica:} el proceso no es espontáneo en condiciones estándar ($\Delta G^0 = - n\vdot F\vdot\varepsilon^0_{\text{total}} > 0$). Por tanto, $\varepsilon^0_{\text{total}}\equiv\varepsilon^0_{\text{T}} < 0$.
+				\item Según el enunciado el \textbf{ajuste es en medio ácido}.
+				\item\textbf{Cátodo/reducción:} $\varepsilon^0(\ce{Al^3+|Al}) = \SI{-1,66}{\volt}$.
+				\item\textbf{Más cercano a cero:} conseguir el valor negativo más alto de $\varepsilon^0_\text{T}$
+			\end{itemize}
+			Con estos datos y la tabla de \underline{potenciales estándar de reducción} que nos dan tenemos que escoger el potencial que, cambiado de signo para que sea un potencial estándar de oxidación, se sume a $\varepsilon^0(\ce{Al^3+|Al})$ y dé el valor más cercano a cero.
+
+			\structure{La única posibilidad es la oxidación del óxido de titanio:} $\varepsilon^0(\ce{Ti2O3|TiO}) = \SI{-1,23}{\volt}\Rightarrow\varepsilon^0(\ce{TiO|Ti2O3}) = \SI{1,23}{\volt}$
+		\onslide<2>
+			$$
+				\ce{Al^3+ + TiO -> Al + Ti2O3}
+			$$
+		\onslide<3>
+			$$
+				\ce{
+					$\overset{+3}{\ce{Al^3+}}$
+					+
+					$\overset{+2}{\ce{Ti}}$
+					$\overset{-2}{\ce{O}}$
+					->
+					$\overset{0}{\ce{Al}}$
+					+
+					$\overset{+3}{\ce{Ti}}$2
+					$\overset{-2}{\ce{O}}$3
+				}
+			$$
+		\onslide<4>
+			\structure{Semirreacción de oxidación:} (aumenta el estado de oxidación)\quad\ce{
+							$\overset{+2}{\ce{Ti}}$
+							$\overset{-2}{\ce{O}}$
+									->
+							$\overset{+3}{\ce{Ti}}$2
+							$\overset{-2}{\ce{O}}$3
+																							}
+			\structure{Semirreacción de reducción:} (disminuye el estado de oxidación)\quad\ce{
+							$\overset{+3}{\ce{Al^3+}}$
+									 ->
+							$\overset{0}{\ce{Al}}$
+							 																	}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:}\quad\ce{\textbf{\color{green}2Ti}O -> \textbf{\color{green}\ce{Ti2}}O3}
+			\structure{Semirreacción de reducción:}\quad\ce{Al^3+ -> Al}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{\textbf{\color{red}\ce{2}}Ti\textbf{\color{red}\ce{O}} + \textbf{\color{red}\ce{1H2O}} -> Ti2\textbf{\color{red}\ce{O3}}}
+			\structure{Semirreacción de reducción:}\quad\ce{Al^3+ -> Al}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:}\quad\ce{2TiO + \textbf{\color{blue}\ce{H2}}O -> Ti2O3 + \textbf{\color{blue}\ce{2H+}}}
+			\structure{Semirreacción de reducción:}\quad\ce{Al^3+ -> Al}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:}\quad\ce{2TiO + H2O -> Ti2O3 + 2H+ \textbf{\color{red}\ce{+ 2e-}}}
+			{\footnotesize (2 cargas positivas en productos frente a 0 en reactivos $\rightarrow$ 2 electrones en productos)}
+			\structure{Semirreacción de reducción:}\quad\ce{Al^3+ \textbf{\color{red}\ce{+ 3e-}} -> Al}
+			{\footnotesize (3 cargas positivas en reactivos frente a 0 positivas en productos $\rightarrow$ 3 electrones en reactivos)}
+		\onslide<9>
+			\structure{Semirreacción de oxidación:}\quad$
+						3\times\left(\ce{2TiO + H2O -> Ti2O3 + 2H+ \textbf{\color{red}\ce{+ 2e-}}}\right)
+														$
+			\structure{Semirreacción de reducción:}\quad$
+						2\times\left(\ce{Al^3+ \textbf{\color{red}\ce{+ 3e-}} -> Al}\right)
+														$
+		\onslide<10>
+			\structure{Semirreacción de oxidación:}\quad$
+						\ce{6TiO + 3H2O -> 3Ti2O3 + 6H+ \textbf{\color{red}\ce{+ 6e-}}}
+														$
+			\structure{Semirreacción de reducción:}\quad$
+						\ce{2Al^3+ \textbf{\color{red}\ce{+ 6e-}} -> 2Al}
+														$
+		\onslide<11-12>
+			\begin{center}
+				\begin{tabular}{lcr}
+					{\small Oxid., reductor (ánodo):}	&	\ce{6TiO + 3H2O -> 3Ti2O3 + 6H+ + \cancel{6e-}}	&	$\varepsilon^0_{\text{ox}}=\SI{+1,23}{\volt}$	\\
+					{\small Reduc., oxidante (cátodo):}	&	\ce{2Al^3+ + \cancel{6e-} -> 2Al}				&	$\varepsilon^0_{\text{red}}=\SI{-1,66}{\volt}$	\\
+					\midrule
+					Reacción global:																		&
+					\amarillo{\ce{6TiO(s) + 2Al^3+(ac) + 3H2O(l) -> 2Al(s) + 3Ti2O3(s) + 6H+(ac)}}			&
+					\underline{\textbf{$\varepsilon^0_{\text{T}}=\SI{-,43}{\volt}$}}	\\
+				\end{tabular}				
+			\end{center}
+			\textbf{6 electrones implicados}
+			$$
+				Q=\frac{
+							[\ce{H+}]^6
+						}{
+							[\ce{Al^3+}]^2
+						}
+			$$
+	\end{overprint}
+	\visible<-12>{
+		\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item<2-> Escribimos la reacción sin ajustar.
+			\item<3-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+			\item<4-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+			\item<5-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+			\item<6-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}.
+			\item<7-> Ajustamos los átomos de \ce{H} sumando \ce{H+}.
+			\item<8-> Ajustamos número de electrones en cada reacción.
+			\item<9-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+			\item<11-> Sumamos ambas reacciones.
+			\item<12-> Simplificamos si procede (en este caso no).
+		\end{enumerate}
+				}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): potencial con otras concentraciones no estándar}
+	\structure{Tenemos que expresar $Q$ de acuerdo a nuestra reacción y calcular su logaritmo para nuestras concentraciones:}
+	$$
+				Q=\frac{
+								[\ce{H+}]^6
+							}{
+								[\ce{Al^3+}]^2
+							}
+		\Rightarrow
+		\log Q = \log(\frac{
+								[\ce{H+}]^6
+							}{
+								[\ce{Al^3+}]^2
+							}
+					) = 6\vdot (\log[\ce{H+}]) - 2\log[\ce{Al^3+}]=
+					   -6\vdot(\overbrace{-\log[\ce{H+}]}^{\pH = 2}) - 2\log\overbrace{[\ce{Al^3+}]}^{\SI{2,5}{\Molar}}\Rightarrow
+	$$
+	$$
+		\log Q = -6\vdot 2 - 2\log(\num{2,5}) = \num{-12,796}
+	$$
+	\structure{Usando la ecuación de Nernst:}
+	$$
+		\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log Q\Rightarrow
+		\varepsilon = \num{-,43} - \frac{\num{,0592}}{6}\vdot(\num{-12,796})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \SI{-,304}{\volt}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): volumen mínimo y tiempo necesarios para precipitar \SI{2}{\gram} de aluminio}
+	\structure{Según estequiometría:} $n_{\text{consumido}}(\ce{Al^3+}) = n_{\text{producido}(\ce{Al})}$
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{Al^3+}) = \frac{\SI{2}{\cancel\gram}}{\SI{26,98}{\gram\per\mol}} = \SI{,07412}{\mol}
+	$$
+	\structure{De la expresión de la concentración:} $M = \rfrac{n}{V} \Rightarrow V = \rfrac{n}{M}$
+	$$
+		V(\ce{Al^3+}) = \frac{\SI{,07412}{\cancel\mol}}{\SI{2,5}{\cancel\mol\per\liter}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\SI{,02965}{\liter} = \SI{29,65}{\milli\liter}}
+	$$
+	\structure{Obtenemos el n"o de moles de electrones a partir de la estequiometría también:}
+	$$
+		2n(\ce{e-}) = 6n(\ce{Al^3+})\Rightarrow n(\ce{e-}) = 3n(\ce{Al^3+})
+	$$
+	\structure{Ley de Faraday:} $n(\ce{e-})\vdot F = I\vdot t$
+	$$
+		\overbrace{n(\ce{e-})}^{n(\ce{e-}) = 3n(\ce{Al^3+})}\vdot F = I\vdot t\Rightarrow
+		3n(\ce{Al^3+})\vdot F = I\vdot t\Rightarrow
+		t = \frac{3n(\ce{Al^3+})\vdot F}{I}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{t =	\frac{3\vdot\SI{,07412}{\cancel\mol}\vdot\SI{96485}{\coulomb\per\cancel\mol}}{\SI{5}{\ampere}} =
+																						\SI{4291}{\second} = \SI{1}{\hour}~\SI{11}{\minute}~4\SI{31}{\second}
+																					}
+	$$
+\end{frame}

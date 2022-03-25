@@ -1,0 +1,54 @@
+\begin{frame}
+   \frametitle{\ejerciciocmd}
+   \framesubtitle{Enunciado}
+   \textbf{
+			\input{~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/un_H2SO4_concentrado_es_del_96por_ciento_y_d/enunciado.tex}
+	       }
+\end{frame}
+
+\begin{frame}
+   \frametitle{\ejerciciocmd}
+   \framesubtitle{Datos del problema}
+   \begin{center}
+		{\huge¿\si{\gram\per\liter}, \si{\Molar}, $m(\ce{H2SO4})$?} \\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{\text{pureza} = \SI{96}{\percent}}\quad\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{d(\ce{H2SO4}) = \SI{1,84}{\gram\per\milli\liter}}\quad
+        \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{V(\ce{H2SO4}) = \SI{200}{\milli\liter}}\\[.4cm]
+        \visible<2->{
+        	Pero también ...
+		    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{Mm(\ce{H2SO4}) = \SI{98,08}{\gram\per\mol}}\\[.4cm]
+        			}
+   \end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución}
+	\structure{Masa de \ce{H2SO4} pura:} usamos la expresión de la densidad para obtener la masa de ácido concentrado (no puro). Luego aplicamos el porcentaje.
+	$$
+		d = \frac{m}{V} \Rightarrow m = d\vdot V\Rightarrow m_{\text{impuro}}(\ce{H2SO4}) = \SI{1,84}{\gram\per\cancel\milli\liter}\vdot\SI{200}{\cancel\milli\liter} =
+		    \SI{368}{\gram}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{
+			m_{\text{puro}}(\ce{H2SO4}) = \overbrace{\SI{368}{\gram}}^{\text{impuro}}\vdot\underbrace{\num{,96}}_{\text{proporción de puro}} = \SI{353,28}{\gram}
+		}
+	$$
+	\visible<2->{
+		\textbf{Si en \SI{,2}{\liter} hay \SI{353,28}{\gram}, en \SI{1}{\liter} habrá la misma proporción: \SI{1766}{\gram}}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{
+				\text{concentración: }\SI{1766}{\gram\per\liter}
+			}
+		$$
+				}
+	\visible<3->{
+		\structure{Factor de conversión usando $Mm$}
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=orange]{
+				[\ce{H2SO4}] = \SI{1766}{\cancel\gram\per\liter}\vdot\frac{\SI{1}{\mol}}{\SI{98,08}{\cancel\gram}} = \SI{18}{\Molar}
+			}
+		$$
+			}
+\end{frame}
+	

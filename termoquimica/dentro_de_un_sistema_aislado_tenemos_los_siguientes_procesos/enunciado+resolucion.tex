@@ -1,0 +1,142 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/dentro_de_un_sistema_aislado_tenemos_los_siguientes_procesos/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del problema y consideración inicial}
+	\begin{center}
+		\textbf{\huge ¿$Q(\ce{C3H8})$?\quad¿$Q(\ce{CaCO3})$?\quad¿$T_{\text{final}}(\ce{H2O})$?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\text{sistema aislado con tres procesos dentro}}\\[.2cm]
+	\end{center}
+	\structure{1"er Principio de la Termodinámica:} ``En un sistema aislado la energía interna se conserva.''
+	$$
+		\Delta U = Q + \cancelto{\Delta V = 0}{W} = 0\Rightarrow Q = 0\Rightarrow Q =
+		Q(\ce{C3H8}) + Q(\ce{CaCO3}) + Q(\ce{H2O}) = 0
+	$$
+	Con los dos primeros procesos (\ce{C3H8} y \ce{CaCO3}) vamos a averiguar si el agua absorbe o cede calor.
+	$$
+		Q(\ce{H2O}) = 	-Q(\ce{C3H8}) -Q(\ce{CaCO3})
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del primer proceso: combustión del \ce{C3H8}}
+	\structure{Combustión del \ce{C3H8}:} reacción con el \ce{O2} (reacción sin ajustar): \ce{C3H8(g) + O2(g) -> CO2(g) + H2O(l)}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{V(\ce{C3H8}) = \SI{20}{\liter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{T(\ce{C3H8}) = \SI{27}{\celsius} = \SI{300,15}{\kelvin}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{P(\ce{C3H8}) = \SI{874}{\torr} = \SI{1,15}{\atm}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\Delta H_f(\ce{C3H8}) = \SI{-103,8}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_f(\ce{H2O}) = \SI{-285,8}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{CO2}) = \SI{-393,5}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=2pt,colframe=black,drop fuzzy shadow=yellow]{R = \SI{,082}{\atm\liter\per\mol\per\kelvin}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calor cedido por la combustión de \ce{C3H8}}
+	\structure{Reacción ajustada (1"o carbonos, 2"o hidrógenos, 3"o oxígenos):} \ce{C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(l)}
+	\structure{N"o de moles de propano:} Usamos la ecuación de los gases ideales $PV=nRT$
+	$$
+		P\vdot V = n\vdot R\vdot T\Rightarrow n = \frac{P\vdot V}{R\vdot T}\Rightarrow
+		n(\ce{C3H8}) = \frac{\SI{1,15}{\cancel\atm}\vdot\SI{20}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot\SI{300,15}{\cancel\kelvin}} =
+		\SI{,9345}{\mol}
+	$$
+	\structure{Ley de Hess:} $n_{\ce{C3H8}}\vdot\Delta H_{\text{reacción}} = \sum_{i=1}^{\text{N"o prods.}}n_i\vdot\Delta H_{f,i} - \sum_{j=1}^{\text{N"o reacts.}}n_j\vdot\Delta H_{f,j}$, siendo ``$n$" los coeficientes estequiométricos de la reacción.
+	$$
+		1\vdot\Delta H_{\text{combustión}}(\ce{C3H8}) = 3\vdot(-393,5) + 4\vdot(-285,8) - \cancel{5\vdot 0} -1\vdot(-103,8)
+	$$
+	$$
+		\Delta H_{\text{combustión}}(\ce{C3H8}) = \SI{-2219,90}{\kilo\joule\per\mol}
+	$$
+	\structure{Calor desprendido:}  (sabemos que es desprendido por el signo de $\Delta H < 0$)
+	$$
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{Q(\ce{C3H8}) = \SI{-2219,90}{\kilo\joule\per\cancel\mol}\vdot\SI{,9345}{\cancel\mol} = \SI{-2074,48}{\kilo\joule}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del segundo proceso: descomposición del \ce{CaCO3}}
+	\structure{Descomposición del \ce{CaCO3}:} (ajustada, comprobar): \ce{CaCO3(s) -> CaO(s) + CO2(g)}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{m(\ce{CaCO3}) = \SI{1500}{\gram}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\Delta H_f(\ce{CaCO3}) = \SI{-1207,0}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{Mm(\ce{CaCO3}) = \SI{100,087}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_f(\ce{CaO}) = \SI{-635,5}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{CO2}) = \SI{-393,5}{\kilo\joule\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calor absorbido por la descomposición del \ce{CaCO3}}
+	\structure{Reacción ajustada de la descomposición del \ce{CaCO3}:} \ce{CaCO3(s) -> CaO(s) + CO2(g)}\\
+	\structure{Ley de Hess:} $n_{\ce{C3H8}}\vdot\Delta H_{\text{reacción}} = \sum_{i=1}^{\text{N"o prods.}}n_i\vdot\Delta H_{f,i} - \sum_{j=1}^{\text{N"o reacts.}}n_j\vdot\Delta H_{f,j}$, siendo ``$n$" los coeficientes estequiométricos de la reacción.
+	$$
+		1\vdot\Delta H_{\text{reacción}}(\ce{CaCO3}) = 1\vdot(-635,5) + 1\vdot(-393,5) -1\vdot(-1207,0)
+	$$
+	$$
+		\Delta H_{\text{reacción}}(\ce{CaCO3}) = \SI{178,00}{\kilo\joule\per\mol}
+	$$
+	\structure{N"o de moles de \ce{CaCO3}:} $n = \rfrac{m}{Mm}$
+	$$
+		n(\ce{CaCO3}) = \frac{\SI{1500}{\cancel\gram}}{\SI{100,087}{\cancel\gram\per\mol}} = \SI{14,99}{\mol}
+	$$
+	\structure{Calor absorbido:}  (sabemos que es absorbido por el signo de $\Delta H > 0$)
+	$$
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{Q(\ce{CaCO3}) = \SI{178,00}{\kilo\joule\per\cancel\mol}\vdot\SI{14,99}{\mol} = \SI{2667,68}{\kilo\joule}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del tercer proceso: \ce{H2O}}
+	\structure{\ce{H2O}:}\\
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{V_{\ce{H2O}} = \SI{20}{\liter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{c_e(\ce{H2O(l)}) = \SI[per-mode = fraction]{1}{\calorie\per\gram\per\celsius} =
+																									\SI[per-mode = fraction]{4,18}{\joule\per\gram\per\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{c_e(\ce{H2O(g)}) = c_e(\ce{H2O(s)}) = \SI[per-mode = fraction]{,5}{\calorie\per\gram\per\celsius} =
+																									\SI[per-mode = fraction]{2,09}{\joule\per\gram\per\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{d(\ce{H2O(g)}) = \SI{e3}{\kilogram\per\cubic\meter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{T(\ce{H2O(g)}) = \SI{50}{\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): ¿se enfría o se calienta el agua?}
+	\structure{Masa de agua:} $d = \rfrac{m}{V} \Rightarrow m = d\vdot V$
+	$$
+		m(\ce{H2O}) = \SI[per-mode = fraction]{e3}{\cancel\kilogram\per\cubic\meter}\vdot\SI[per-mode = fraction]{e3}{\gram\per\cancel\kilogram}\vdot
+					  \SI[per-mode = fraction]{e-3}{\cancel\cubic\meter\per\cancel\cubic\deci\meter}\vdot\SI[per-mode = fraction]{1}{\cancel\cubic\deci\meter\per\cancel\liter}\vdot
+					  \SI[per-mode = fraction]{20}{\cancel\liter} = \SI{20e3}{\gram}
+	$$
+	\structure{Por consecuencia del 1"er Principio:}
+	$$
+		Q(\ce{H2O}) = -\underbrace{Q_{\text{cede}}(\ce{C3H8})}_{\SI{-2074,48}{\kilo\joule}} -\underbrace{Q_{\text{absorbe}}(\ce{CaCO3})}_{\SI{2667,68}{\kilo\joule}}\Rightarrow
+		Q(\ce{H2O}) = \SI{-593,20}{\kilo\joule} < 0
+	$$
+	\begin{center}
+		Se desprende energía $Q(\ce{H2O}) < 0$
+		\myovalbox{\color{yellow}\textbf{{\Large SE ENFRÍA}}}
+	\end{center}
+	\structure{Suponemos que el enfriamiento ocurre en una etapa, si sobrepasamos T congelación, suponemos dos etapas, etc.}
+	$$
+		Q = m\vdot c_e\vdot\underbrace{\Delta T}_{T_f - T_i}\Rightarrow
+		T_f = \frac{Q}{m(\ce{H2O})\vdot c_e(\ce{H2O(l)})} + T_i
+	$$
+	$$
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{T_f = \frac{\overbrace{\SI{-593,20e3}{\cancel\joule}}^{\SI{-593,20}{\kilo\joule}}}{\SI{20e3}{\cancel\gram}\vdot\SI{4,18}{\cancel\joule\per\cancel\gram\per\celsius}} + \SI{50}{\celsius} = \SI{42,90}{\celsius}}
+	$$
+\end{frame}

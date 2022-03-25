@@ -1,0 +1,239 @@
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Enunciado}
+    \textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/una_aleacion_que_se_emplea_en_estructuras_de_aviones/enunciado.tex
+			}
+	}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Datos del problema}
+    {\huge $$
+        m(\ce{H2})?
+    $$}
+    Reacción: 
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{Al}}
+    + 
+    \ce{HCl(exceso)}
+    \ce{->}
+    \ce{AlCl3}
+    +
+    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{H2}}
+    \visible<1-|handout:0>{
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\text{pureza \ce{Al}} = \SI{93,7}{\percent}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{V(\ce{Al}) = \SI{0,691}{\cubic\centi\meter}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{d(\ce{Al}) = \SI{2,85}{\gram\per\cubic\centi\meter}}
+        $$
+                          }
+    \visible<2-|handout:0>{Pero también ...\\
+        $$
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{Mat(\ce{Al}) = \SI{26,98}{\gram\per\mol}}
+            \quad
+            \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{Mm(\ce{H2}) = \SI{2,02}{\gram\per\mol}}
+        $$
+                          }
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{1}): ajuste de la ecuación de la reacción química}
+    \structure{Por tanteo:}\\[.3cm]
+    \begin{overprint}
+        \onslide<1>
+            \centering\ce{Al + HCl -> AlCl3 + H2}
+        \onslide<2>
+            \centering\ce{Al + H}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl}} \ce{-> Al}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{Cl3}} \ce{+ H2}\\[.3cm]
+        \onslide<3>
+            \centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Al+\ce{3HCl}} \ce{->}\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\ce{AlCl3}} \ce{+ H2}\\[.3cm]
+        \onslide<4>
+            \centering\ce{Al + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{3H}}\ce{Cl} \ce{-> AlCl3 +} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{H2}}\\[.3cm]
+        \onslide<5>
+            \centering\ce{Al + }\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\ce{3H}}\ce{Cl} \ce{-> AlCl3 +} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\frac{3}{2}\ce{H2}}\\[.3cm]
+        \onslide<6>
+            \centering$2\times\left(\ce{Al + 3HCl -> AlCl3 +\frac{3}{2}H2}\right)$\\[.3cm]
+        \onslide<7>
+            \centering\ce{2Al + 6HCl -> 2AlCl3 +3H2}\\[.3cm]
+   \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo de la masa de hidrógeno}
+    \structure{Reacción:} \ce{2Al + 6HCl -> 2AlCl3 +3H2}\\[.3cm]
+    \structure{Paso 1:} $m_{\text{puro}}(\ce{Al})$ vs. $m_{\text{aleación}}(\ce{Al})$
+    \begin{overprint}
+        \onslide<2>
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad ??\quad
+                m_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<3>    
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad <\quad 
+                m_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<4>
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                m_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<5>
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                \underbrace{m_{\text{aleación}}(\ce{Al})}_{d=\frac{m}{V}\Rightarrow m=d\cdot V}
+            $$
+        \onslide<6->
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})
+            $$
+    \end{overprint}
+    \visible<7->{
+        \structure{Paso 2:} Número de moles de \ce{Al} puros
+                }
+    \begin{overprint}
+        \onslide<7>
+            $$
+                m_{\text{puro}}(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<8>
+            $$
+                \overbrace{m_{\text{puro}}(\ce{Al})}^{n=\frac{m}{Mm}\Rightarrow m=n\cdot Mm}
+                \quad =\quad
+                \frac{93,7}{100}
+                d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<9>
+            $$
+                n(\ce{Al})\cdot Mm(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})
+            $$
+        \onslide<10->
+            $$
+                n(\ce{Al})
+                \quad =\quad
+                \frac{93,7}{100}
+                \frac{d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})}{Mm(\ce{Al})}
+            $$
+    \end{overprint}
+    \visible<11->{
+        \structure{Paso 3:} Relación estequiométrica entre el \ce{Al} y el \ce{H2}\\[.3cm]
+        \centering\SI{2}{\mol} de \ce{Al}\ce{->}\SI{3}{\mol} de \ce{H2}\\[.3cm]
+                }
+    \begin{overprint}
+        \onslide<12>
+            $$
+                n(\ce{Al})
+                \quad ??\quad
+                n(\ce{H2})
+            $$
+        \onslide<13>    
+            $$
+                n(\ce{Al})
+                \quad <\quad
+                n(\ce{H2})
+            $$
+        \onslide<14>
+            $$
+                3n(\ce{Al})
+                \quad =\quad
+                2n(\ce{H2})
+            $$
+        \onslide<15>
+            $$
+                n(\ce{Al})
+                \quad =\quad
+                \frac{2}{3}n(\ce{H2})
+            $$
+    \end{overprint}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\ejerciciocmd}
+    \framesubtitle{Resolución (\rom{2}): cálculo de la masa del \ce{H2}}
+    \structure{Paso 4:} Igualando expresiones previas.
+    \begin{overprint}
+        \onslide<1>
+            $$
+                \frac{2}{3}n(\ce{H2})
+                \quad =\quad
+                \frac{93,7}{100}
+                \frac{d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})}{Mm(\ce{Al})}
+            $$
+        \onslide<2->
+            $$
+                n(\ce{H2})
+                \quad =\quad
+                \frac{93,7}{100}\cdot
+                \frac{3}{2}
+                \frac{d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})}{Mm(\ce{Al})}
+            $$
+    \end{overprint}
+    \visible<3->{
+        \structure{Paso 5:} Introduciendo y despejando $m(\ce{H2})$.
+                }
+        \begin{overprint}
+            \onslide<3>
+                $$
+                    \overbrace{n(\ce{H2})}^{n=\frac{m}{Mm}}
+                    \quad =\quad
+                    \frac{93,7}{100}\cdot
+                    \frac{3}{2}
+                    \frac{d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})}{Mm(\ce{Al})}
+                $$
+            \onslide<4>
+                $$
+                    \frac{m(\ce{H2})}{Mm(\ce{H2})}
+                    \quad =\quad
+                    \frac{93,7}{100}\cdot
+                    \frac{3}{2}
+                    \frac{d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})}{Mm(\ce{Al})}
+                $$
+            \onslide<5->
+                $$
+                    m(\ce{H2})
+                    \quad =\quad
+                    \frac{93,7}{100}\cdot
+                    \frac{3}{2}
+                    \frac{Mm(\ce{H2})}{Mm(\ce{Al})}
+                    d_{\text{aleación}}(\ce{Al})\cdot V_{\text{aleación}}(\ce{Al})
+                $$
+        \end{overprint}
+            \visible<6->{
+                \structure{Paso 6:} Operamos
+                $$
+                    m(\ce{H2})
+                    \quad =\quad
+                    \frac{93,7}{100}\cdot
+                    \frac{3}{2}\cdot
+                    \frac{\SI{2,02}{\cancel\gram\per\cancel\mol}}{\SI{26,48}{\cancel\gram\per\cancel\mol}}\cdot
+                    \SI{2,85}{\gram\per\cancel\cubic\centi\meter}\cdot\SI{0,691}{\cancel\cubic\centi\meter}
+                $$
+                        }
+            \visible<7->{
+                $$
+                    \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{m(\ce{H2})
+                    \quad =\quad
+                    \SI{0,21}{\gram}}
+                $$
+                        }
+\end{frame}
