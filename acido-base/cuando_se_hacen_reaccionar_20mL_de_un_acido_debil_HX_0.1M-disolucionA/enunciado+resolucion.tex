@@ -1,0 +1,235 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/acido-base/cuando_se_hacen_reaccionar_20mL_de_un_acido_debil_HX_0.1M-disolucionA/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\huge ¿pH disolución A? ¿pH disolución C?}\\[.3cm]
+		\structure{Disolución A (\ce{HX}):}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V_0(\ce{HX})=\SI{20e-3}{\liter}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HX}]_0=\SI{,1}{\Molar}}\\[.3cm]
+		\structure{Disolución B (\ce{NaOH}):}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V_0(\ce{NaOH})=\SI{10e-3}{\liter}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{[\ce{NaOH}]_0=\SI{,1}{\Molar}}\\[.3cm]
+		\structure{Disolución A+B (\ce{HX} + \ce{NaOH}):}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\pH = \num{5}}
+		\structure{Disolución C (\ce{HX} + \ce{NaOH}, otros volúmenes):}\\[.3cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V_0(\ce{HX})=\SI{30e-3}{\liter}} + 
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{V_0(\ce{NaOH})=\SI{30e-3}{\liter}}\\[.3cm]
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{[\ce{HX}]_0=\SI{,1}{\Molar}}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{[\ce{NaOH}]_0=\SI{,1}{\Molar}}
+	\end{center}
+	{{\small El subíndice ``0'' representa a las disoluciones sin mezclar}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): reacciones implicadas}
+	\alert{\textbf{Las FLECHAS son importantes. Hay reacciones irreversibles y equilibrios que influyen en la resolución del ejercicio.}}
+	\structure{Equilibrio del ácido débil:}\\
+	\begin{center}
+		\ce{HX(ac) <=> H+(ac) + X-(ac)}
+	\end{center}
+	\structure{Al añadir \ce{NaOH} ocurre la reacción de neutralización (ácido+base dan sal+agua), única flecha (irreversible):}\\
+	\begin{center}
+		\ce{HX(ac) + NaOH(ac) -> NaX(ac) + H2O(l)}
+	\end{center}
+	\structure{Disolución de la sal. No aclaran que sea insoluble. Por tanto:}
+	\begin{center}
+		\ce{NaX(ac) -> Na+(ac) + X-(ac)}
+	\end{center}
+	\begin{itemize}
+		\item\ce{Na+} proviene de una base fuerte. No tiene actividad ácido-base.
+		\item\ce{X-}, que está en el equilibrio del ácido débil, tiene carácter básico débil.
+	\end{itemize}
+	\alert{\textbf{No conocemos $K_a(\ce{HX})$, pero tenemos que $\pH = 5$ ($\pH < 7$, ácido) al juntar A+B. De ahí concluimos que \ce{HX} es el \underline{reactivo en exceso} al reaccionar con el \ce{NaOH} porque si estuviésemos en el punto de equivalencia y/o después del punto de equivalencia el pH sería básico (controlado por \ce{X-} o \ce{NaOH}). Antes de calcular el pH (usando concentraciones) los ejercicios de volumetría se resuelven como los ejercicios de estequiometría (reactivo limitante y reactivo en exceso):}} tenemos que trabajar con \underline{número de moles}.
+	\structure{A partir del punto de equivalencia:} ocurre el equilibrio del ion conjugado (básico, \ce{X-}).
+	\begin{center}
+		\ce{X-(ac) + H2O(l) <=> HX(ac) + OH-(ac)}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $K_a$ del ácido débil \ce{HX} (\rom{1})}
+		\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+			\item\structure{Averiguamos quién es el reactivo limitante}
+				$$
+					n_0(\ce{HX})=\SI{,1}{\mol\per\cancel\liter}\times\SI{20e-3}{\cancel\liter}=\SI{2e-3}{\mol}
+				$$
+				$$
+					n_0(\ce{NaOH})=\SI{,1}{\mol\per\cancel\liter}\times\SI{10e-3}{\cancel\liter}=\SI{1e-3}{\mol}
+				$$\\[.2cm]
+				\begin{center}
+					\ce{HX(ac) + NaOH(ac) -> NaX(ac) + H2O(l)}
+				\end{center}
+				\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HX})=n_{\text{reaccionan}}(\ce{NaOH})=n_{\text{producen}}(\ce{NaX})$
+				\begin{center}
+					\begin{tabular}{cccc}
+						\toprule
+						N"o de moles~(\si{\mol}) & n(\ce{HX})      					   &  n(\ce{NaOH})    & n(\ce{NaX})  \\
+						{Inicial}               & \num{2e-3}     					   &   \num{1e-3}     &  0           \\
+						{Final}                 &$\num{2e-3}-\num{1e-3}=\num{1e-4}$    &    	0		  & \num{1e-3}   \\
+						\bottomrule
+					\end{tabular}
+					\myovalbox{\textcolor{white}{
+							\ce{NaOH} es el reactivo limitante, \ce{HX} es el reactivo en exceso, como esperábamos
+					}}
+				\end{center}
+			\item\structure{Obtenemos el volumen total:}
+				$$
+					V_T = V_0(\ce{HX}) + V_0(\ce{NaOH})\Rightarrow V_T = \SI{20e-3}{\liter} + \SI{10e-3}{\liter} = \SI{30e-3}{\liter}
+				$$
+			\item\structure{Concentración de nuestro reactivo en exceso (\ce{HX}) y de nuestro producto (\ce{X-}):} tenemos un ácido débil y su ion conjugado sin contar con la disociación.
+				\begin{center}
+					\myovalbox{\textcolor{red}{\textbf{DISOLUCIÓN AMORTIGUADORA}}}
+				\end{center}
+				$$
+					[\ce{HX}]=\frac{\SI{1e-3}{\mol}}{\SI{30e-3}{\liter}}=\frac{1}{30}~\si{\Molar};\qquad
+					[\ce{X-}]=\frac{\SI{1e-3}{\mol}}{\SI{30e-3}{\liter}}=\frac{1}{30}~\si{\Molar}
+				$$
+	\end{enumerate}
+\end{frame}	
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $K_a$ del ácido débil \ce{HX} (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo de $K_a$:} $\pH = -\log[\ce{H+}] = 5 \Rightarrow [\ce{H+}] = x = \SI{e-5}{\Molar}$.
+			\begin{center}
+				\begin{tabular}{cccc}
+													& \multicolumn{3}{c}{\ce{HX(ac) <=> H+(ac) + X-(ac)}}	\\
+					\midrule
+						Concentración~(\si{\Molar}) & [\ce{HX}]					&  [\ce{H+}] 	& [\ce{X-}]					\\
+						{[Inicial]}					& $\rfrac{1}{30}$			&	\num{0}		& $\rfrac{1}{30}$			\\
+						{[Equilibrio]}				&$\rfrac{1}{30}-\underbrace{\num{e-5}}_x$ 	& 	$\underbrace{\num{e-5}}_x$	& $\rfrac{1}{30}+\underbrace{\num{e-5}}_x$ \\
+					\bottomrule
+				\end{tabular}
+			\end{center}
+			Podemos resolverlo de dos formas:
+			\begin{enumerate}[label={\alph*)},font=\bfseries]
+				\item\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podríamos considerar $x=\num{e-5}$ despreciable si $K_a<\num{e-4}$.
+					$$
+						K_a(\ce{HX})=\frac{[\ce{H+}][\ce{X-}]}{[\ce{HX}]}\Rightarrow
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a(\ce{HX})=\frac{\num{e-5}\vdot\left(\rfrac{1}{30}+\num{e-5}\right)}{\rfrac{1}{30}-\num{e-5}}
+							\approx\num{1e-5}}
+					$$
+				\item\structure{Como segunda opción, podemos tomar logaritmos decimales y operar:} Ecuación de HENDERSON -- HASSELBALCH
+					\begin{overprint}
+						\onslide<1>
+							$$
+								\log K_a(\ce{HX})=\log\left(\frac{[\ce{H+}][\ce{X-}]}{[\ce{HX}]}\right)\Rightarrow\overbrace{-\log[\ce{H+}]}^{\mathrm{pH}}=\underbrace{-\log K_a(\ce{HX})}_{\mathrm{p}K_a}+\log\left(\frac{[\ce{X-}]}{[\ce{HX}]}\right)
+							$$
+							$$
+								\pH  = \pKa + \log(\frac{[\ce{X-}]}{[\ce{HX}]})\Rightarrow
+								\pH  = \pKa + \log(\frac{[\ce{X-}]_0}{[\ce{HX}]_0})\Rightarrow
+								\pKa = \pH  - \log(\frac{[\ce{X-}]_0}{[\ce{HX}]_0})
+							$$
+						\onslide<2->
+							$$
+								K_a = 10^{-\left(\underbrace{5}_{\pH}-\overbrace{\log(\frac{\rfrac{1}{30}}{\rfrac{1}{30}})}^0\right)} = \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_a(\ce{HX}) = \num{1e-5}}
+							$$
+					\end{overprint}
+			\end{enumerate}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): pH de disolución A}
+	La disolución A solo tiene el ácido débil \ce{HX}, cuya $K_a$ es \num{e-5} y $[\ce{HX}]_0=\SI{,1}{\Molar}$
+	\begin{center}
+		\begin{tabular}{cccc}
+											&	\multicolumn{3}{c}{\ce{HX(ac) <=> H+(ac) + X-(ac)}}		\\
+			\midrule
+				Concentración~(\si{\Molar})	&	$[\ce{HX}]$		&	$[\ce{H+}]$	&	$[\ce{X-}]$			\\
+				Inicial						&	\num{,1}		&	\num{0}		&	\num{0}				\\
+				Equilibrio					&	$\num{,1}-x$	&	$x$			&	$x$					\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	Como $K_a < \num{e-4}$ podemos despreciar la disociación $x$ frente a la concentración inicial (o formal) del ácido débil.
+	$$
+		K_a(\ce{HX}) = \frac{[\ce{H+}][\ce{X-}]}{[\ce{HX}]}   = \num{e-5}\Rightarrow
+		\num{e-5}    = \frac{x^2}{\num{,1}-x}\approx\frac{x^2}{\num{,1}}\Rightarrow
+	$$
+	$$
+		[\ce{H+}] = \sqrt{\num{,1}\vdot\num{e-5}}=\SI{e-3}{\Molar}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH = -\log(\num{e-3}) = 3}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): pH de la disolución C (\rom{1})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\item\structure{Averiguamos quién es el reactivo limitante}
+		$$
+			n(\ce{HX})=\SI{,1}{\mol\per\cancel\liter}\times\SI{30e-3}{\cancel\liter}=\SI{3e-3}{\mol} = n(\ce{NaOH})
+		$$\\[.2cm]
+		\begin{center}
+			\ce{HX(ac) + NaOH(ac) -> NaX(ac) + H2O(l)}
+		\end{center}
+		\alert{Relación estequiométrica:} $n_{\text{reaccionan}}(\ce{HX})=n_{\text{reaccionan}}(\ce{NaOH})=n_{\text{producen}}(\ce{NaX})$
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				N"o de moles~(\si{\mol}) & n(\ce{HX})      						&  n(\ce{NaOH})    & n(\ce{NaX})  \\
+				{Inicial}               & \num{3e-3}     						&   \num{3e-3}     &  0           \\
+				{Final}                 &$\num{3e-3}-\num{3e-3}=\num{0}$		&    	0		  & \num{3e-3}   \\
+				\bottomrule
+			\end{tabular}
+			\myovalbox{\textcolor{white}{
+					No hay r. limitante ni r. en exceso, \underline{PUNTO DE EQUIVALENCIA}
+			}}
+			\myovalbox{\textcolor{red}{pH controlado por \ce{X-}, \textbf{pH BÁSICO}}}
+		\end{center}
+		\item\structure{Obtenemos el volumen total:}
+		$$
+			V_T = V(\ce{HX}) + V(\ce{NaOH})\Rightarrow V_T = \SI{30e-3}{\liter} + \SI{30e-3}{\liter} = \SI{60e-3}{\liter}
+		$$
+		\item\structure{Concentración de nuestro producto (\ce{X-}):} tenemos el ion conjugado de un ácido débil.
+		$$
+			[\ce{X-}]=\frac{\SI{3e-3}{\mol}}{\SI{60e-3}{\liter}}=\SI{,05}{\Molar}
+		$$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): pH de la disolución C (\rom{2})}
+	\begin{enumerate}[label={Paso \arabic*.},font=\bfseries]
+		\setcounter{enumi}{3}
+		\item\structure{Cálculo del pH:} tenemos que usar:
+		$$
+			K_h = \frac{K_w}{K_a} \Rightarrow K_h = \frac{\num{e-14}}{\num{e-5}} = \num{e-9}
+		$$
+		\begin{center}
+			\begin{tabular}{cccc}
+				& \multicolumn{3}{c}{\ce{X-(ac) + H2O(l) <=> OH-(ac) + HX(ac)}}	\\
+				\midrule
+				Concentración~(\si{\Molar}) & [\ce{X-}]			&  [\ce{OH-}] 	& [\ce{HX}]			\\
+				{[Inicial]}					& \num{,05	}		&	\num{0}		& \num{0}				\\
+				{[Equilibrio]}				&$\num{,05}-x$ 		& 	$x$			& $x$ 				\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\structure{Sustituimos valores en la ecuación de la constante de equilibrio:} Podemos considerar $x$ despreciable si $K_h<\num{e-4}$.
+			$$
+				\overbrace{K_h(\ce{X-})}^{\num{e-9}}=\frac{\overbrace{[\ce{OH-}]}^{x}\overbrace{[\ce{HX}]}^{x}}{\underbrace{[\ce{X-}]}_{\num{,05}-x}}=
+				\frac{x^2}{\num{,05}-x}\approx\frac{x^2}{\num{,05}}\Rightarrow x = [\ce{OH-}]=\SI{7,07e-6}{\Molar}
+			$$
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH = 14-\underbrace{\pOH}_{-\log[\ce{OH-}]} = \num{8,85}}
+			\end{center}
+	\end{enumerate}
+\end{frame}
