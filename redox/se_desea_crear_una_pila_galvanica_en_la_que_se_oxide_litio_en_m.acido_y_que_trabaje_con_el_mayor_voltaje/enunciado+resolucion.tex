@@ -1,0 +1,103 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/se_desea_crear_una_pila_galvanica_en_la_que_se_oxide_litio_en_m.acido_y_que_trabaje_con_el_mayor_voltaje/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large
+			\begin{enumerate}[label={\alph*)},font={\bfseries}]
+				\item ¿$\varepsilon^0_{\text{reducción}}$?
+				\item ¿$\varepsilon^0_{\text{total}}$?
+				\item ¿$n$?
+				\item ¿$Q$?
+				\item ¿$K_{\text{equilibrio}}$?
+				\item ¿$t$ y n"o de moles consumidos?
+			\end{enumerate}
+		}	
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{medio ácido}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{pila}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{Li+(ac)/Li(s)}} = \SI{-3,05}{\volt}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{Na+(ac)/Na(s)}} = \SI{-2,71}{\volt}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{TiO2+(ac)/Ti(s)}} = \SI{-,86}{\volt}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{H+(ac)/H2(g)}}  = \SI{+,00}{\volt}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{H2MoO4(ac)/Mo(s)}}  = \SI{+,11}{\volt}}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{VO2+(ac)/V^3+(ac)}}  = \SI{+,36}{\volt}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m_0(\ce{Li}) = \SI{2}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{m_0(\ce{Li}) = \SI{1,5}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{I = \SI{1,2}{\ampere}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{F = \SI{96485}{\coulomb\per\mol}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{M_{\text{at}}(\ce{Li}) = \SI{6,941}{\gram\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): semirreacciones y reacción global, potenciales, $n$, $Q$}
+	\structure{Signo del potencial del litio:} siguiendo el enunciado sabemos que \underline{\textbf{\ce{Li} se oxida}} en \underline{\textbf{medio ácido}}. El proceso es una \underline{\textbf{pila}}. Si el potencial de reducción \ce{Li+|Li} es \SI{-3,05}{\volt}, la oxidación tiene que ser \SI{+3,05}{\volt} porque es el proceso inverso. Según la termodinámica, cualquier función de estado que represente un proceso hacia una dirección, el opuesto viene dado por un cambio de signo. Como $\varepsilon$ depende de $\Delta G$, también cambia de signo.
+	
+	\structure{Selección de electrodo:} el enunciado nos dice que tenemos que conseguir el \textbf{\underline{potencial más alto}} (positivo, pila). El \underline{litio se oxida} (\SI{+3,05}{\volt}), el otro proceso que escojamos será una reducción. Como la table es de potenciales de reducción, solo tenemos que buscar el valor que, sumado a \SI{-3,05}{\volt}, sea el más alto. Por tanto: 		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{\varepsilon^0_{\ce{VO2+(ac)/V^3+(ac)}}  = \SI{+,36}{\volt}}
+	
+	\structure{Semirreacciones y reacción global ajustadas en medio ácido:}
+	\begin{center}
+		\begin{tabular}{cr}
+			\ce{2Li(s) -> 2Li+(ac) + 2e-}										&	$\varepsilon^0_{\text{ox}}    = \SI{3,05}{\volt}$	\\
+			\ce{VO2^+(ac) + 4H+(ac) + 2e- -> V^3+(ac) + 2H2O(l)}				&	$\varepsilon^0_{\text{red}}   = \SI{+,36}{\volt}$	\\
+			\midrule
+			\ce{2Li(s) + VO2^+(ac) + 4H+(ac) -> 2Li+(ac) + V^3+(ac) + 2H2O(l)}	&
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{\varepsilon^0_{\text{total}} = \SI{3,41}{\volt}}	\\
+		\end{tabular}
+	\end{center}
+	\structure{N"o de electrones implicados en el proceso REDOX y cociente de reacción $Q$:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n = 2}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=blue]{Q = \frac{[\ce{Li+}]^2[\ce{V^3+}]}{[\ce{VO2^+}][\ce{H+}]^4}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): constante de equilibrio}
+	\structure{Ecuación de NERNST:}
+	$$
+		\varepsilon = \varepsilon^0 -\frac{\num{,0592}}{n}\log Q;\quad\text{Si }\Delta G = 0\text{ (equilibrio)}\Rightarrow\varepsilon = 0\Rightarrow K_{\text{eq}} = Q\Rightarrow
+	$$
+	$$
+		0 = \varepsilon^0 -\frac{\num{,0592}}{n}\log K_{\text{eq}}\Rightarrow K_{\text{eq}} = 10^{\frac{\varepsilon^0\vdot n}{\num{,0592}}}\Rightarrow
+		K_{\text{eq}} = 10^{\frac{\num{3,41}\vdot 2}{\num{,0592}}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{K_{\text{eq}} = 10^{\num{115,20}}}
+	$$
+\end{frame}	
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): tiempo para consumir \SI{,5}{\gram} de \ce{Li}}
+	\structure{\ce{Li} consumido:} $n_{\text{consumido}}(\ce{Li}) = \SI{2,0}{\gram} - \SI{1,5}{\gram} = \SI{,5}{\gram}$
+	\structure{n"o de mol de \ce{Li}:} $n(Li) = \frac{\SI{,5}{\cancel\gram}}{\SI{6,941}{\cancel\gram\per\mol}} = \SI{,072036}{\mol}$
+	\structure{Según la estequiometría:} $n(\ce{e-}) = n(\ce{Li})\Rightarrow n(\ce{e-}) = \SI{,072036}{\mol}$
+	\structure{Leyes de Faraday:}
+	$$
+		n(\ce{e-})\vdot F = I\vdot t\Rightarrow t = \frac{n(\ce{e-})\vdot F}{I}\Rightarrow t = \frac{\SI{,072036}{\mol}\vdot\SI{96485}{\coulomb\per\mol}}{\SI{1,2}{\ampere}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{t = \SI{5791,973}{\second} = \SI{1}{\hour}~\SI{36}{\minute}~\SI{32}{\second}}
+	$$
+	\structure{Consumo de reactivos:}
+	$$
+		n(\ce{e-}) = 2 n(\ce{VO2^+})\Rightarrow n(\ce{VO2^+}) = \frac{n(\ce{e-})}{2}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{n(\ce{VO2^+}) = \frac{\SI{,072036}{\mol}}{2} = \SI{,03602}{\mol}}
+	$$
+	$$
+		4n(\ce{e-}) = 2 n(\ce{H+})\Rightarrow n(\ce{H+}) = 2n(\ce{e-})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=yellow,drop fuzzy shadow=blue]{n(\ce{H+}) = \SI{,14407}{\mol}}
+	$$
+\end{frame}
