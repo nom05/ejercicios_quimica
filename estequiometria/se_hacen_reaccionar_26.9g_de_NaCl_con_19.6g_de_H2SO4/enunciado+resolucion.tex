@@ -1,0 +1,59 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+				~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/estequiometria/se_hacen_reaccionar_26.9g_de_NaCl_con_19.6g_de_H2SO4/enunciado.tex
+			}
+		}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\LARGE
+			¿Rendimiento ($\eta$)?
+		}
+		\structure{Reactivos:}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=blue]{m(\ce{NaCl})   = \SI{26,9}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{m(\ce{H2SO4})  = \SI{19,6}{\gram}}\\[.2cm]
+		\structure{Productos:}
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{ m(\ce{Na2SO4}) = \SI{27,0}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=red]{   \ce{HCl} }
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución: rendimiento}
+	\structure{Relación entre n"o de moles y masa molecular:} $n = \rfrac{m}{Mm}$
+	\begin{center}
+		\begin{tabular}{lSSS}
+			Reacción:									&	\multicolumn{3}{c}{\ce{2NaCl(s) + H2SO4(l) -> Na2SO4(s) + 2HCl(g)}}		\\
+			\midrule
+			Compuestos									&	{\ce{NaCl}}						&	{\ce{H2SO4}}							&	{\ce{Na2SO4}}						\\
+			$Mm~(\si{\gram\per\mol})$					&	58,44							&	98,08									&	142,04								\\
+			$m_{\text{iniciales}}~(\si{\gram})$			&	26,9							&	19,6									&	  0									\\
+			$n_{\text{iniciales}}~(\si{\mol})$			&	  ,4603							&	  ,1998									&	  0									\\
+			$n_{\text{reaccionan}}~(\si{\mol})$			&	{$-2x$}							&	  {$-x$}								&	  {$+x$}							\\
+			$n_{\text{finales teóricos}}~(\si{\mol})$	&	{$\num{,4603}-2x$}				&	  {$\num{,1998}-x$}						&	  {$+x$}							\\[.2cm]
+			\midrule
+			Opción 1:									&	{$\num{,4603}-2x=0\Rightarrow$}	&											&										\\
+				\alert{\textbf{¡IMPOSIBLE!}}			&	{$x=\num{,2302}$}				&	{$\cancel{\num{-,0303}}\Rightarrow$}	&	   ,2302							\\[.2cm]
+			\midrule
+			Opción 2:									&									&	{$\num{,1998}-x=0$}						&										\\
+				\textcolor{green}{\textbf{POSIBLE}}		&	 ,0606							&	{$x=\num{,1998}$}						&	   ,1998							\\[.2cm]
+														&									&	{\textbf{R. LIMITANTE}}					&										\\
+		\end{tabular}
+	\end{center}
+	\structure{N"o de moles finales de \ce{Na2SO4}:}
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{Na2SO4}) = \frac{\SI{27}{\cancel\gram}}{\SI{142,04}{\cancel\gram\per\mol}} = \SI{,1901}{\mol}
+	$$
+	\structure{Rendimiento:}
+	$$
+		\eta = \frac{n_{\text{real}}}{n_{\text{teórico}}}\vdot\num{100}\Rightarrow\eta = \frac{\SI{,1901}{\mol}}{\SI{,1998}{\mol}}\vdot\num{100}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{\eta = \SI{95,12}{\percent}}
+	$$
+\end{frame}
