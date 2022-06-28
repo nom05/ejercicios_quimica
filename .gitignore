@@ -1,0 +1,11 @@
+*.pdf
+*.toc
+*.snm
+*.out
+*.nav
+*.log
+*.aux
+compilar_individualmente.*
+boletin.tex
+*.old
+boletin.synctex.gz
