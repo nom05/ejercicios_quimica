@@ -1,0 +1,244 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/en_una_celda_galvanica_se_desea_oxidar_Au_a_partir_de_HAuCl4/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos de la 1"a parte}
+	\begin{center}
+		{\huge\textbf{
+				¿Semirreacciones y reacción ajustadas? ¿$\varepsilon^0_{\text{total}}$? ¿$\varepsilon_{\text{total}}$? ¿$V_{\text{mínimo}}$?
+		}}\\[.4cm]
+		\begin{tabular}{cc}
+			$\varepsilon^0(\ce{Mg^2+(ac)|Mg(s)}) = \SI{-2,38}{\volt}$			&	$\varepsilon^0(\ce{Al^3+(ac)|Al(s)}) = \SI{-1,66}{\volt}$			\\[.2cm]
+			$\varepsilon^0(\ce{Ti2O3(s)|TiO(s)}) = \SI{-1,23}{\volt}$			&	$\varepsilon^0(\ce{Cr^3+(ac)|Cr^2+(ac)}) = \SI{-,42}{\volt}$		\\[.2cm]
+			$\varepsilon^0(\ce{CO2(g)|CO(g)}) = \SI{-,11}{\volt}$				&	$\varepsilon^0(\ce{AuCl4^-(ac)|Au(s),Cl^-(ac)}) = \SI{1,00}{\volt}$	\\[.2cm]
+			$\varepsilon^0(\ce{Cr2O7^2-(ac)|Cr^3+(ac)}) = \SI{1,33}{\volt}$		&	$\varepsilon^0(\ce{MnO4^-(ac)|Mn^2+(ac)}) = \SI{1,51}{\volt}$		\\[.2cm]
+		\end{tabular}\\[.4cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{celda galvánica}}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{medio ácido}}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\varepsilon^0_{\text{total}}\text{ máximo}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{\textbf{ánodo:} \ce{Au(s),Cl^-(ac)|AuCl4^-(ac)}}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{R = \SI{8,314}{\joule\per\mol\kelvin}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}\\[.2cm]
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Consideraciones previas}
+	\begin{itemize}
+		\item\textbf{Celda galvánica:} el proceso es espontáneo en condiciones estándar ($\Delta G^0 = - n\vdot F\vdot\varepsilon^0_{\text{total}} < 0$). Por tanto, $\varepsilon^0_{\text{total}}\equiv\varepsilon^0_{\text{T}} > 0$.
+		\item Explícitamente no dice nada el enunciado. Suponemos \textbf{ajuste en medio ácido}. {\small (De todas maneras, el hidrocloruro pierde un protón (medio ácido), aunque no entra en el proceso REDOX.)}
+		\item\textbf{Ánodo/oxidación:} $\varepsilon^0(\ce{Au,Cl^-|AuCl4^-}) = \SI{-1,00}{\volt}$.
+		\item\textbf{Maximizar:} conseguir el valor más alto de $\varepsilon^0_\text{T}$
+	\end{itemize}
+	Con estos datos y la tabla de \underline{potenciales estándar de reducción} que nos dan tenemos que escoger el potencial que se sume a $\varepsilon^0(\ce{Au,Cl^-|AuCl4^-})$ y dé el valor más alto posible.
+
+	\structure{La única posibilidad es la reducción del \ce{Mn(VII)}:}
+	$$
+		\varepsilon^0(\ce{MnO4^-(ac)|Mn^2+(ac)}) = \SI{1,51}{\volt}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): Reacciones, ajuste y $\varepsilon^0_{\text{total}}$}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{Au + MnO4^- +  Cl- -> Mn^2+ + AuCl4^-}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{0}{\ce{Au}}$
+					+
+					$\overset{-1}{\ce{Cl}}$^{-}
+					+
+					$\overset{+7}{\ce{Mn}}$
+					$\overset{-2}{\ce{O}}$4^{-}
+					->
+					Mn^2+
+					+
+					$\overset{+3}{\ce{Au}}$
+					$\overset{-1}{\ce{Cl}}$4^{-}
+				}
+			$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:} (aumenta el estado de oxidación)\quad\ce{
+					$\overset{0}{\ce{Au}}$
+					+
+					$\overset{-1}{\ce{Cl}}$^{-}
+					->
+					$\overset{+3}{\ce{Au}}$
+					$\overset{-1}{\ce{Cl}}$4^{-}
+			}
+			\structure{Semirreacción de reducción:} (disminuye el estado de oxidación)\quad\ce{
+					$\overset{+7}{\ce{Mn}}$
+					$\overset{-2}{\ce{O}}$4^{-}
+					->
+					Mn^2+
+			}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:}\quad\ce{
+				Au + \textbf{4\color{green}Cl}^- -> Au\textbf{{\color{green}\ce{Cl}}${}_{\text{\textbf{4}}}$}^{-}
+			}
+			\structure{Semirreacción de reducción:}\quad\ce{
+				MnO4^- -> Mn^2+
+			}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:}\quad\ce{
+				Au + 4Cl- -> AuCl_4^-
+			}
+			\structure{Semirreacción de reducción:}\quad\ce{
+				Mn\textbf{{\color{blue}\ce{O}}$_{\text{\textbf{4}}}$}^- -> 
+				Mn^2+ + \textbf{4}H2\textbf{{\color{blue}\ce{O}}}
+			}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:}\quad\ce{
+				Au + 4Cl- -> AuCl_4^-
+			}
+			\structure{Semirreacción de reducción:}\quad\ce{
+				\textbf{8{\color{orange}\ce{H+}}} + MnO4^- -> 
+				Mn^2+ + \textbf{4{\color{orange}\ce{H2}}}O
+			}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:}\quad\ce{
+				Au + 4Cl- -> AuCl_4^- \textbf{\color{red}\ce{+ 3e-}}
+			}{\footnotesize (4 cargas negativas en reactivos frente a 1 carga negativa en productos $\Rightarrow$ 3 electrones en productos)}
+			\structure{Semirreacción de reducción:}\quad\ce{
+				8H+ + MnO4^-
+				\textbf{\color{green}\ce{+ 5e-}}
+				-> 
+				Mn^2+ + 4H2O
+			}{\footnotesize (7 cargas positivas en reactivos frente a 2 cargas positivas en productos $\Rightarrow$ 5 electrones en reactivos)}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:}\quad$5\times\left(\ce{
+				Au + 4Cl- -> AuCl_4^- \textbf{\color{red}\ce{+ 3e-}}
+			}\right)$
+			\structure{Semirreacción de reducción:}\quad$3\times\left(\ce{
+				8H+ + MnO4^-
+				\textbf{\color{green}\ce{+ 5e-}}
+				-> 
+				Mn^2+ + 4H2O
+			}\right)$
+		\onslide<9>
+			\structure{Semirreacción de oxidación:}\quad\ce{
+				5Au + 20Cl- -> 5AuCl_4^- \textbf{\color{red}\ce{+ 15e-}}
+			}
+			\structure{Semirreacción de reducción:}\quad\ce{
+				24H+ + 3MnO4^-
+				\textbf{\color{green}\ce{+ 15e-}}
+				-> 
+				3Mn^2+ + 12H2O
+			}
+		\onslide<10>
+			\begin{center}
+				\begin{tabular}{lcr}
+					{\small Oxid.:}	&	\ce{5Au + 20Cl- -> 5AuCl_4^- + \cancel{15e-}}				&	$\varepsilon^0_{\text{ox}} =\SI{-1,00}{\volt}$	\\
+					{\small Reduc.:}	&	\ce{24H+ + 3MnO4^- + \cancel{15e-} -> 3Mn^2+ + 12H2O}	&	$\varepsilon^0_{\text{red}}=\SI{1,51}{\volt}$	\\
+					\midrule
+					R. global:																	&
+					\amarillo{\small\ce{5Au + 20Cl- + 24H+ + 3MnO4^- -> 5AuCl_4^- + 3Mn^2+ + 12H2O}}	&
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\varepsilon^0_{\text{T}}=\SI{,51}{\volt}}	\\
+				\end{tabular}				
+			\end{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{
+				\varepsilon^0_{\text{T}} = \varepsilon^0_{\text{ox}} + \varepsilon^0_{\text{red}}\Rightarrow
+				\varepsilon^0_{\text{T}} = \SI{-1,00}{\volt} + \SI{1,51}{\volt} = \SI{,51}{\volt}
+			}\qquad\qquad
+			\textbf{15 electrones implicados}
+			$$
+				Q=\frac{
+					[\ce{AuCl_4^-}]^5\vdot[\ce{Mn^2+}]^3
+				}{
+					[\ce{Cl-}]^{20}\vdot[\ce{H+}]^{24}\vdot[\ce{MnO4^-}]^3
+				}
+			$$
+	\end{overprint}
+	\begin{enumerate}
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+		\item<5-> Ajustamos los átomos de \ce{O} sumando \ce{H2O}. Como estamos en medio ácido, hay que hacerlo donde hay déficit de oxígenos.
+		\item<6-> Ajustamos los átomos de \ce{H} sumando \ce{H+}  (no se aplica en este caso).
+		\item<7-> Ajustamos número de electrones en cada reacción para que en reactivos y productos haya el mismo n"o de cargas.
+		\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+		\item<10-> Sumamos ambas reacciones.
+		\item<10-> Simplificamos si procede (no se aplica en este caso).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): $\varepsilon_T$ cuando todas las concentraciones son \SI{1,5}{\Molar}}
+	\structure{Ecuación de NER\textbf{N}ST:}
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\varepsilon = \varepsilon^0 - \frac{\overbrace{R}^{\SI{8,314}{\joule\per\mol\per\kelvin}}\vdot\overbrace{T}^{\SI{298,15}{\kelvin}}}{\underbrace{n}_{\text{coef.esteq. electrones}}\vdot\underbrace{F}_{\SI{96485}{\coulomb\per\mol}}}\ln Q}
+			\Leftrightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log Q}
+	$$
+	\begin{itemize}
+		\item La segunda es válida a \SI{25}{\celsius} (o \SI{298,15}{\kelvin}) o cuando no nos dicen la temperatura (la suponemos a \SI{25}{\celsius}).
+		\item En la primera ecuación se usa el logaritmo natural (base número <<$e$>>), en la segunda el logaritmo decimal (base \num{10}).
+	\end{itemize}
+	Aplicando las concentraciones del enunciado:
+	$$
+		Q=\frac{
+			[\ce{AuCl_4^-}]^5\vdot[\ce{Mn^2+}]^3
+		}{
+			[\ce{Cl-}]^{20}\vdot[\ce{H+}]^{24}\vdot[\ce{MnO4^-}]^3
+		}\Rightarrow
+		Q=\frac{
+			\num{1,5}^5\vdot\num{1,5}^3
+		}{
+			\num{1,5}^{20}\vdot\num{1,5}^{24}\vdot\num{1,5}^3
+		}
+		= \frac{\num{1,5}^8}{\num{1,5}^47}
+		= \num{1,5}^{-39}
+	$$
+	$$
+		\varepsilon_T = \num{,51} - \frac{\num{,0592}}{15}\log(\num{1,5})^{39}\Rightarrow
+		\varepsilon_T = \num{,51} + \frac{39}{15}\vdot\num{,0592}\log(\num{1,5})\Rightarrow
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{
+				\varepsilon_{\text{T}} = \SI{,54}{\volt}
+		}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): $V$ mínimo para oxidar \SI{2}{\gram} de \ce{Au} con las concentraciones del apartado anterior}
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{Au}) = \frac{\SI{2,00}{\cancel\gram}}{\SI{196,967}{\cancel\gram\per\mol}} = \SI{,010154}{\mol}
+	$$
+	\structure{Semirreacción de oxidación:} \ce{Au + 4Cl- -> AuCl4^- + 3e-}
+	\structure{Según estequiometría:} $n_{\text{consumido}}(\ce{AuCl4^-}) = n_{\text{formado}}(\ce{Au})\Rightarrow n_{\text{consumido}}(\ce{AuCl4^-}) = \SI{,010154}{\mol}$
+	\structure{Volumen mínimo:}
+	$$
+		M = \frac{n}{V}\Rightarrow V = \frac{n}{M}\Rightarrow V(\ce{HAuCl4}) = \frac{\SI{,010154}{\cancel\mol}}{\SI{1,5}{\cancel\mol\per\liter}}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V(\ce{HAuCl4}) = \SI{,00677}{\liter} = \SI{6,77}{\milli\liter}}
+	$$
+	\structure{Según estequiometría:} $n(\ce{e-}) = 3n(\ce{Au})$
+	\structure{Leyes de Faraday:}
+	$$
+		n(\ce{e-})\vdot F = I\vdot t\Rightarrow n(\ce{e-}) = \frac{I\vdot t}{F}\Rightarrow 3n(\ce{Au}) = \frac{I\vdot t}{F}\Rightarrow
+		t = \frac{3\vdot n(\ce{Au})\vdot F}{I}
+	$$
+	$$
+		t = \frac{3\vdot \SI{,010159}{\cancel\mol}\vdot\SI{96485}{\coulomb\per\cancel\mol}}{\SI{1}{\ampere}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{t = \SI{2939,12}{\second} = \SI{48}{\minute}~\SI{59,12}{\second}}
+	$$
+\end{frame}

@@ -1,0 +1,238 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/determinar-2apartados-_orden_de_reaccion_y_cte_de_v_de_reacc/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): resumen de ecuaciones para métodos de integración y $t_{\rfrac{1}{2}}$}
+	\begin{center}
+		\ce{A -> Productos}
+	\end{center}
+	\structure{Ecuación de velocidad:} $v = -\dv{[\ce{A}]}{t} = k\vdot[\ce{A}]^x$
+	\begin{center}
+		\begin{tabular}{lccc}
+						&	\textbf{M. integraciones}	&	\textbf{M. tiempo de vida media}	&	\textbf{Relación $\mathbf{t_{\rfrac{1}{2}}\Leftrightarrow[\ce{A}]_0}$}	\\
+			\midrule
+			\underline{\textbf{\color{blue}Orden 0}}										\\
+						&	$[\ce{A}] = [\ce{A}]_0 - k\vdot t$								&
+							$t_{\rfrac{1}{2}} = \frac{[\ce{A}]_0}{2\vdot k}$				&
+							DIRECTA	$\left(t_{\rfrac{1}{2}}\propto[\ce{A}]_0\right)$		\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 1}}										\\
+						&	$\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t$						&
+							$t_{\rfrac{1}{2}} = \frac{\ln 2}{k}$							&
+							NO TIENE														\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 2}}										\\
+						&	$[\ce{A}]^{-1} = [\ce{A}]^{-1}_0 + k\vdot t$					&
+						$t_{\rfrac{1}{2}} = \frac{1}{[\ce{A}]_0\vdot k}$					&
+						INVERSA $\left(t_{\rfrac{1}{2}}\propto\rfrac{1}{[\ce{A}]_0}\right)$
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): método del tiempo de vida media}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Datos iniciales:}
+			\begin{center}
+				\begin{tabular}{SS}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+					1,00							&	   0		\\
+					 ,50							&	  50		\\
+					 ,25							&	 150		\\	
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{SS}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+					\midrule
+					1,00							&	  0			\\
+					 ,50							&	 50			\\
+					\midrule
+					 ,50							&	  50		\\
+					 ,25							&	 150		\\	
+				\end{tabular}
+			\end{center}
+		\onslide<3->
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{SSc}
+					{\textbf{Concentración~(\si{\Molar})}}			&
+					{\textbf{Tiempo de reacción~(\si{\second})}}	&
+					{\textbf{$t_{\rfrac{1}{2}}$~(\si{\second})}}	\\
+					\midrule
+					1,00								&	   0		&	\multirow{2}{*}{{$\num{50}-\num{0}=\num{50}$}}		\\
+					 ,50								&	  50		&														\\
+					\midrule
+					 ,50								&	  50		&	\multirow{2}{*}{{$\num{150}-\num{50}=\num{100}$}}	\\
+					 ,25								&	 150		&														\\
+				\end{tabular}
+			\end{center}
+	\end{overprint}
+	\begin{enumerate}%[label={Paso \arabic*)},font={\color{red!50!black}\bfseries}]
+		\item<2-> Emparejamos la concentración inicial de referencia con su mitad.
+		\item<3-> Calculamos el tiempo relativo necesario para pasar de esa concentración a la mitad.
+		\item<4-> Estudiamos la relación que hay entre las concentraciones de referencia de nuestras parejas y $t_{\rfrac{1}{2}}$. En nuestro caso, el tiempo relativo aumenta cuando $[\ce{A}]_0$ decrece (pasamos de \SI{1,00}{\Molar} en la 1"a pareja a \SI{,50}{\Molar} en la 2"a). Por tanto, tenemos que comprobar que es de \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\text{\visible<4->{\textbf{ORDEN 2}}}}
+		\item<5-> Usamos la ecuación correspondiente para averiguar $k$:
+					$$
+						t_{\rfrac{1}{2}} = \frac{1}{[\ce{A}]_0\vdot k}\Rightarrow
+						k = \frac{1}{[\ce{A}]_0\vdot t_{\rfrac{1}{2}}}\Rightarrow
+						\left.
+							\begin{cases}
+								k_1 = \frac{1}{\num{1,00}\vdot \num{50}}	\\
+								k_2 = \frac{1}{ \num{,50}\vdot\num{100}}
+							\end{cases}
+						\right\}\Rightarrow
+						k_1 = k_2
+					$$
+					\textbf{Recordad incluir las \textbf{unidades} de la \textbf{constante cinética}:}\\
+					\begin{center}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\visible<5->{k = \SI{2e-2}{\per\Molar\per\second}}}\qquad
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<5->{v=\SI{2e-2}{\per\Molar\per\second}[\ce{A}]^2}}
+					\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): método de integración}
+	\structure{Datos iniciales:}
+	\begin{center}
+		\begin{tabular}{SS}
+			{\textbf{Concentración~(\si{\Molar})}}			&
+			{\textbf{Tiempo de reacción~(\si{\second})}}	\\
+			1,00							&	  0			\\
+			 ,50							&	 50			\\
+			 ,25							&	150			\\
+		\end{tabular}
+	\end{center}
+	\structure{Comprobamos qué ecuación, de los diferentes órdenes, es la válida según nuestros datos:}\\[.2cm]
+	\begin{overprint}
+		\onslide<1>
+			\underline{\textbf{\color{red!50!black}Orden 0:}}
+			$$
+				[\ce{A}] = [\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{[\ce{A}]_0 - [\ce{A}]}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\SI{1,00}{\Molar} - \SI{,50}{\Molar}}{ \SI{50}{\second}} &= \SI{,01}{\Molar\per\second}	\\
+					k_2 = \frac{\SI{1,00}{\Molar} - \SI{,25}{\Molar}}{\SI{150}{\second}} &= \frac{\num{,75}}{\num{150}}=\frac{\num{,05}}{\num{10}} = \SI{,005}{\Molar\per\second}
+				\end{aligned}
+				\right\} k_1\neq k_2
+			$$
+			\begin{center}
+				\underline{\textbf{No es de orden 0}}
+			\end{center}
+		\onslide<2>
+			\underline{\textbf{\color{red!50!black}Orden 1:}}
+			$$
+				\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{\ln(\frac{[\ce{A}]_0}{[\ce{A}]})}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\ln(\frac{\SI{1,00}{\cancel\Molar}}{\SI{,50}{\cancel\Molar}})}{ \SI{50}{\second}} &= \frac{\ln(\num{2})}{\num{50}}~\si{\per\second}\\
+					k_2 = \frac{\ln(\frac{\SI{1,00}{\cancel\Molar}}{\SI{,25}{\cancel\Molar}})}{\SI{150}{\second}} &= \frac{\ln(\num{4})}{\num{150}} = \frac{1}{3}\frac{\ln(\num{4})}{\num{50}} =
+					      \frac{\ln(4)^{\rfrac{1}{3}}}{50}=\frac{\ln(\sqrt[3]{4})}{50}~\si{\per\second}
+				\end{aligned}
+				\right.
+			$$
+			\begin{center}
+				Como $\sqrt[3]{4}\neq 2$, entonces $k_1\neq k_2$ y \underline{\textbf{no es de orden 1}.}
+			\end{center}
+		\onslide<3->
+			\underline{\textbf{\color{red!50!black}Orden 2:}}
+			$$
+				\frac{1}{[\ce{A}]} = \frac{1}{[\ce{A}]_0} + k\vdot t\Rightarrow
+				k = \frac{[\ce{A}]_0-[\ce{A}]}{t\vdot[\ce{A}]\vdot[\ce{A}]_0}
+				\left\{
+				\begin{aligned}
+					k_1 = \frac{\SI{1,00}{\cancel\Molar}-\SI{,50}{\cancel\Molar}}{\SI{1,00}{\cancel\Molar}\vdot\SI{,50}{\Molar}\vdot \SI{50}{\second}} &=
+						  \frac{1}{50}~\si{\per\Molar\per\second}	\\
+					k_2 = \frac{\SI{1,00}{\cancel\Molar}-\SI{,25}{\cancel\Molar}}{\SI{1,00}{\cancel\Molar}\vdot\SI{,25}{\Molar}\vdot\SI{150}{\second}} &=
+						  \frac{3}{150}~\si{\per\Molar\per\second} =
+					      \frac{1}{50}~\si{\per\Molar\per\second}	\\
+				\end{aligned}
+				\right.
+			$$
+			\begin{center}
+				$k_1 = k_2\Rightarrow$ \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\underline{\textbf{ES DE ORDEN 2}}}
+			\end{center}
+	\end{overprint}
+	\visible<3->{
+		\textbf{Recordad incluir las \textbf{unidades} de la \textbf{constante cinética}:}\\
+		\begin{center}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\visible<3->{k = \SI{2e-2}{\per\Molar\per\second}}}\qquad
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<3->{v=\SI{2e-2}{\per\Molar\per\second}[\ce{A}]^2}}
+		\end{center}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): método de velocidades iniciales}
+	\structure{Datos iniciales:}
+	\begin{center}
+		\begin{tabular}{SSS}
+			{[\ce{A}]~(\si{\Molar})}					&
+			{[\ce{B}]~(\si{\Molar})}					&
+			{\textbf{$v_0$~(\si{\Molar\per\second})}}	\\
+			1,00	&	 ,5	&	 ,5e-3	\\
+			1,00	&	2,0	&	2,0e-3	\\
+			2,00	&	 ,5	&	2,0e-3	\\
+		\end{tabular}
+	\end{center}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Ecuación cinética de referencia:} $v = k\vdot[\ce{A}]^x[\ce{B}]^y$
+			\structure{Sustituyendo en la ecuación con los valores de la tabla:}
+			\begin{equation}\label{eq:exp1}
+				 \num{,5e-3} = k\vdot\num{1,0}^x\vdot \num{,5}^y
+			\end{equation}
+			\begin{equation}\label{eq:exp2}
+				\num{2,0e-3} = k\vdot\num{1,0}^x\vdot\num{2,0}^y
+			\end{equation}
+			\begin{equation}\label{eq:exp3}
+				\num{2,0e-3} = k\vdot\num{2,0}^x\vdot \num{,5}^y
+			\end{equation}
+			Buscamos la forma de que nos quede una expresión en función de una de las incógnitas. Por ejemplo, $\rfrac{\text{Ec.~\eqref{eq:exp2}}}{\text{Ec.~\eqref{eq:exp1}}}$ y $\rfrac{\text{Ec.~\eqref{eq:exp3}}}{\text{Ec.~\eqref{eq:exp1}}}$:
+			$$
+				\frac{\text{\eqref{eq:exp2}}}{\text{\eqref{eq:exp1}}}:\quad
+				\frac{\num{2,0}\vdot\cancel{\num{e-3}}}{\num{,5}\vdot\cancel{\num{e-3}}}=
+				\frac{\cancel{k}}{\cancel{k}}\vdot
+				\frac{\cancel{\num{1,0}^x}}{\cancel{\num{1,0}^x}}\vdot
+				\frac{        \num{2,0}^y }{        \num{ ,5}^y }\Rightarrow
+				4 = 4^y\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=green]{y=1}
+			$$
+			$$
+				\frac{\text{\eqref{eq:exp3}}}{\text{\eqref{eq:exp1}}}:\quad
+				\frac{\num{2,0}\vdot\cancel{\num{e-3}}}{\num{,5}\vdot\cancel{\num{e-3}}}=
+				\frac{\cancel{k}}{\cancel{k}}\vdot
+				\frac{        \num{2,0}^x }{        \num{1,0}^x }\vdot
+				\frac{\cancel{\num{ ,5}^y}}{\cancel{\num{ ,5}^y}}\Rightarrow
+				4 = 2^2 = 2^x\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{x=2}
+			$$
+		\onslide<2->
+			\begin{center}
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{Orden de reacción }2+1=3}
+			\end{center}
+			\structure{Cálculo de $k$ sustituyendo en una de las ecuaciones (p.ej. la ec.~\eqref{eq:exp2}):}
+			$$
+				\num{2,0e-3} = k\vdot\num{1,0}^2\vdot\num{2,0}^1\Rightarrow
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{k = \SI{1,0e-3}{\per\square\Molar\per\second}}
+			$$
+			\structure{Ecuación cinética:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{v=\SI{1,0e-3}{\per\square\Molar\per\second}\vdot[\ce{A}]^2[\ce{B}]^1}
+	\end{overprint}
+\end{frame}

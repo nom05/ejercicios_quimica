@@ -9,7 +9,6 @@
 \usepackage{mathtools}
 \usepackage[version=4]{mhchem}
 \usepackage{blkarray}
-\usepackage[most,skins,theorems]{tcolorbox}
 \usepackage{rotating}
 \usepackage{times}
 \usepackage{graphicx}
@@ -18,20 +17,25 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{tikz}
+	\usetikzlibrary{automata,spy,shapes.misc,calc,positioning,patterns}
 \usepackage{xfrac}
 \usepackage{siunitx}
 \usepackage[super]{nth}
 \usepackage{cancel}
-\usepackage{acronym}
+\usepackage[printonlyused]{acronym}
 \usepackage{xcolor}
-\usepackage[inline]{enumitem}
+%	\usepackage[inline]{enumitem} % enumitem has compatible problems with Beamer!!
 \usepackage{xparse}
 \usepackage{physics}
 \usepackage{setspace}
 \usepackage{hanging}% http://ctan.org/pkg/hanging
 %\usepackage[bottom,norule]{footmisc}
 \usepackage{subcaption}
-
+%\usepackage{transparent}
+\usepackage{wrapfig}
+\usepackage{eurosym}
+\usepackage{tcolorbox}
+	\tcbuselibrary{most,skins,theorems,fitting,listingsutf8}
 
 %% Unidades de SIUnitx
 \DeclareSIUnit\molar{\mol\per\liter}
@@ -63,18 +67,7 @@
 	\ifdefined\imprimeresultado
 	\quad{\scriptsize\texttt{R:\quad#1.}}
 	\fi
-							}
-\newcommand{\cte}{\text{cte\,}} %para el entorno matemático
-\newcommand{\pH}{\text{pH\,}} %para el entorno matemático
-\newcommand{\pOH}{\text{pOH\,}} %para el entorno matemático
-\newcommand{\Kan}[1]{K_{a_{#1}}} %para el entorno matemático
-\newcommand{\pKa}{\text{p}K_a} %para el entorno matemático
-\newcommand{\pKan}[1]{\text{p}K_{a_{#1}}} %para el entorno matemático
-\newcommand{\pKb}{\text{p}K_b} %para el entorno matemático
-\newcommand{\pKbn}[1]{\text{p}K_{b_{#1}}} %para el entorno matemático
-\newcommand{\pKn}[1]{\text{p}K_{#1}} %para el entorno matemático
-
-\usetikzlibrary{automata,spy,shapes.misc,calc,positioning,patterns}
+}
 \newtcbox{\myovalbox}{colback=black,boxrule=0pt,arc=5pt,boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt}
 %\tcbset{colback=white,colframe=black}
 \tcbset{highlight math style={enhanced,colframe=red,colback=white,arc=0pt,boxrule=1pt}}
@@ -128,15 +121,73 @@
 }
 \makeatother
 
+\newcommand\comando[1]{
+	\begin{tcolorbox}[
+		colback=blue!75!black,
+		colframe=blue!75!black,
+		fontupper=\ttfamily,
+		colupper=blue!5!white,
+		size=small
+		]{\footnotesize $\rhd$ \textbf{#1}}
+	\end{tcolorbox}
+}
+
+\newtcblisting{consola}[2][]{
+	colback=blue!5!black,
+	colframe=blue!75!black,
+	fontupper=\bfseries,
+	colupper=blue!5!white,
+	colbacktitle=blue!75!black,
+	size=small,
+	listing only,
+	listing options={
+%       style=tcblatex,
+		basicstyle=\ttfamily\tiny,
+		language=bash,
+		numbers=left,
+		stepnumber=2,
+%		numbersep=5pt,
+		numberstyle=\tiny\color{black}
+	},
+	fonttitle=\ttfamily,
+	title={\footnotesize $\rhd$ \textbf{#2}} #1
+}
+
+\newtcolorbox{ejemplo}[1]{
+	colback=blue!5!black,
+	colframe=blue!75!black,
+	fontupper=\bfseries,
+	colupper=blue!5!white,
+	colbacktitle=blue!75!black,
+	size=small,
+	fonttitle=\ttfamily,
+	title={\footnotesize $\rhd$ \textbf{#1}}
+}
+
+\newtcbox{\minicomando}{on line,
+	arc=7pt,colback=blue!5!black,colframe=blue!75!black,colupper=blue!5!white,
+	before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,width=3cm,
+	boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt,fontupper=\bfseries\ttfamily}
+
+\DeclareTCBox{\micaja}{ s m s }
+{ nobeforeafter,colback=red!5!white,colframe=red!75!black,
+%	title={#2 (Box \thetcbcounter)},
+	title={#2},
+	fonttitle=\bfseries,
+	IfBooleanT={#1}{enhanced,drop shadow},
+	IfBooleanT={#3}{colbacktitle=red!50!white} }
+
+\DeclareTCBox{\micajados}{ s m }
+{ nobeforeafter,colback=blue!15!white,colframe=blue!75!black,
+%	title={#2 (Box \thetcbcounter)},
+	title={#2},
+	lefttitle=1mm,
+	fonttitle=\bfseries,
+	IfBooleanT={#1}{enhanced,drop shadow}
+%	IfBooleanT={#3}{colbacktitle=green!50!white} 
+}
 
 %% Definición de contadores
 \newcounter{unidadnumero}
 \newcounter{bloquejercicios}
 \newcounter{contarejercicios}
-
-%% Definición de acrónimos
-\acrodef{HH}{Henderson-Hasselbalch}
-\acrodef{SI}{Sistema Internacional de Unidades}
-\acrodef{SA}{sistema aislado}
-\acrodef{ADN}{ácido desoxirribonucleico}
-\acrodef{PE}{punto de equivalencia}

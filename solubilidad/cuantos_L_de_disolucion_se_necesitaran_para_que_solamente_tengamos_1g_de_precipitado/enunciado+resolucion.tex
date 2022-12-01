@@ -1,0 +1,90 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/cuantos_L_de_disolucion_se_necesitaran_para_que_solamente_tengamos_1g_de_precipitado/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\LARGE ¿$V$ disolución? ¿$K_{ps}(\ce{Ac(OH)3})$? ¿pH?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{solubilidad: } \SI{2,1e-3}{\gram}\text{ en }\SI{100}{\milli\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{Ac(OH)3}) = \SI{278,022}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{m_{\text{total}}(\ce{Ac(OH)3})\equiv m_T = \SI{3,1}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{m_{\text{precipitado}}(\ce{Ac(OH)3})\equiv m_{prec} = \SI{1,0}{\gram}}\\[1.cm]
+		{\LARGE se disuelve \SI{3,1}{\gram} si:}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\text{pH} = \num{8,5}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): $V$ de disolución y solubilidad molar}
+	\structure{Masa disuelta de \ce{Ac(OH)3}:} $m_{\text{disuelta}}\equiv m_{dis} = m_T - m_{prec}\Rightarrow m_{dis} = \SI{3,1}{\gram} - \SI{1,0}{\gram} = \SI{2,1}{\gram}$
+	\structure{Convertimos la solubilidad másica a unas unidades más convenientes (\unit{\gram\per\liter}):}
+	$$
+		\frac{\SI{2,1e-3}{\cancel\gram}}{\SI{100}{\cancel\milli\liter}}\vdot\frac{\SI{100}{\cancel\milli\liter}}{\SI{0,1}{\liter}} = \SI{2,1e-2}{\gram\per\liter}
+	$$
+	\structure{Volumen disuelto:}
+	$$
+		s\text{ másica} = \frac{m}{V}\Rightarrow V=\frac{m}{s\text{ másica}}\Rightarrow V=\frac{\SI{2,1}{\cancel\gram}}{\SI{2,1e-2}{\cancel\gram\per\liter}}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{V = \SI{100}{\liter}}
+	$$
+	\structure{Solubilidad molar:}
+	$$
+		s = \SI[per-mode = fraction]{2,1e-2}{\cancel\gram\per\liter}\vdot\frac{\SI{1}{\mol}}{\SI{278,022}{\cancel\gram}} = \SI{7,55e-5}{\mol\per\liter}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): $K_{ps}(\ce{Ac(OH)3})$ y pH de disolución}
+	\structure{Equilibrio de solubilidad y solubilidad molar:} usamos la estequiometría del equilibrio de solubilidad para averiguar la relación entre $s$ y $K_{ps}$ para \ce{Ac(OH)3}
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Ac(OH)3(s) <=> Ac^3+(ac) + 3OH-(ac)}\quad K_{ps} = \ce{[Ac^3+][OH^-]^3}$}	\\
+			\midrule
+			&	[\ce{Ac^3+}]	&	[\ce{OH-}]	\\
+			\midrule
+			Solubilidad~(\si{\Molar})	&	$s$				&	$3s$
+		\end{tabular}
+	\end{center}
+	\textbf{Según la estequiometría:} $[\ce{OH-}] = 3s\Rightarrow\text{pH} = 14 - \text{pOH} = 14 + \log[\ce{OH-}]$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{pH} = 14 + \log(3s)\Rightarrow\text{pH} = \num{10,36}}
+	$$
+	$$
+		K_{ps} = \overbrace{[\ce{Ac^3+}]}^s\overbrace{[\ce{OH-}]^3}^{(3s)^3 = 27s^3} = 27s^4\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{K_{ps}(\ce{Ac(OH)3}) = \num{8,79e-16}}
+	$$
+	\alert{\textbf{¡AVISO!}} $s(3s)^3 = 27s^4$. Ni es $s(3s)^3\neq 27s^3\neq 3s^4\neq 9s^4$. El ejercicio está \textbf{inmediatamente mal} si no se hace correctamente esta operación.
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): ¿se conseguirá disolver \SI{3,1}{\gram} a pH \num{8,5}?}
+	\structure{Calculamos [\ce{OH-}]:} $\text{pH} = \num{8,5}\Rightarrow[\ce{OH-}] = 10^{-14+\text{pH}}\Rightarrow[\ce{OH-}] = \SI{3,16e-6}{\Molar}$\\
+	Esta es la concentración de \ce{OH-}, pero no es $3s$ ni $s$. Además, no se debe relacionar estequiométricamente con el catión. Este valor proviene de un pH-metro y no distingue su origen.
+	\structure{Concentración de \ce{Ac^3+}:} La concentración de \ce{OH-} se ha cambiado de alguna forma que no nos dice el enunciado (añadiendo un sólido ácido sin cambiar de volumen, p.ej.), pero la cantidad de \ce{Ac^3+} suponemos que proviene de los \SI{3,1}{\gram}. Cuando comparemos $Q_{ps}$ y $K_{ps}$ sabremos si es verdad nuestra suposición.
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{Ac(OH)3}) = \frac{\SI{3,1}{\cancel\gram}}{\SI{278,022}{\cancel\gram\per\mol}} = \SI{1,11e-2}{\mol}
+	$$
+	$$
+		n(\ce{Ac(OH)3}) = n(\ce{Ac^3+}) = \SI{1,11e-2}{\mol}\Rightarrow
+		[\ce{Ac^3+}] = \frac{\SI{1,11e-2}{\mol}}{\SI{100}{\liter}} = \SI{1,11e-4}{\Molar}
+	$$
+	\structure{Producto iónico ($Q_{ps}$) \emph{vs.} producto de solubilidad ($K_{ps}$):} {\small (n.e. significa de ``no equilibrio'')}
+	$$
+		Q_{ps} = [\ce{Ac^3+}]_{\text{n.e.}}\vdot[\ce{OH-}]_{\text{n.e.}}^3\Rightarrow
+		Q_{ps} = \num{1,11e-4}\vdot(\num{3,16e-6})^3
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=yellow]{
+			Q_{ps} = \num{3,53e-21} < \num{8,79e-16} = K_{ps}(\ce{Ac(OH)3})\qquad\text{\textbf{SÍ SE DISUELVE}}
+		}
+	$$
+\end{frame}

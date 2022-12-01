@@ -1,0 +1,270 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/termoquimica/dentro_de_un_sistema_aislado_ocurren_3procesos_sin_intercambio_de_materia_ni_trabajo_entre_ellos/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del problema y consideración inicial}
+	\begin{center}
+		\textbf{\huge¿$Q(\ce{H2O})$?\quad¿$Q(\ce{C2H6})$?\quad¿$m(\ce{N2})$?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=red]{\text{sistema aislado con tres procesos dentro}}\\[.2cm]
+	\end{center}
+	\structure{1"er Principio de la Termodinámica:} ``En un sistema aislado la energía interna se conserva.''
+	$$
+		\Delta U = Q + \cancelto{\Delta V = 0}{W} = 0\Rightarrow Q = 0\Rightarrow Q =
+		Q(\ce{NH3}) + Q(\ce{H2O}) + Q(\ce{C2H6}) = 0
+	$$
+	Con el segundo y el tercer proceso (\ce{H2O} y \ce{C2H6}) vamos a averiguar si la reacción de formación de amoníaco (\ce{N2(g) + H2(g) -> NH3(g)}) absorbe o cede calor.
+	$$
+		Q(\ce{NH3}) = 	-Q(\ce{H2O}) -Q(\ce{C2H6})
+	$$
+	De todas maneras, en los datos del enunciado nos dan su variación de entalpía ($\Delta H_f^0(\ce{NH3(g)}) = \SI{-46,2}{\kilo\joule\per\mol}$), de signo negativo. Como no tiene sentido expresar un n"o de moles negativo, el calor tendrá que ser de \underline{signo negativo}:
+	$$
+		Q(\ce{NH3}) = \underbrace{n(\ce{NH3})}_{>0}\vdot\overbrace{\Delta H_f^0(\ce{NH3(g)})}^{<0}>0
+	$$
+	Esto nos puede servir para saber si se está realizando mal el ejercicio.
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del segundo proceso: calentamiento de \SI{2,5}{\liter} de \ce{H2O}}
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=blue]{V(\ce{H2O}) = \SI{2,5}{\liter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=blue]{d = \SI{1000}{\kilo\gram\per\cubic\meter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=yellow]{Mm(\ce{H2O}) = \SI{18}{\gram\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{inicial}}\equiv T_i = \SI{25}{\celsius}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=red]{T_{\text{final}}\equiv T_f = \SI{103}{\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=black]{c_e(\ce{H2O(l)}) = \SI{4,18}{\joule\per\gram\per\kelvin}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=black]{c_e(\ce{H2O(g)}) = \SI{,5}{\calorie\per\gram\per\celsius}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_{\text{vaporización}}(\ce{H2O})\equiv\Delta H_{\text{vap}}(\ce{H2O}) = \SI{40,7}{\kilo\joule\per\mol}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): calentamiento de \SI{2,5}{\liter} de agua}
+	\structure{Masa de agua:} $d = \rfrac{m}{V} \Rightarrow m = d\vdot V$
+	$$
+		m(\ce{H2O}) = \frac{\SI{1000}{\cancel\kilogram}}{\SI{1}{\cancel\cubic\meter}}\vdot
+					  \frac{\SI{1000}{\gram}}{\SI{1}{\cancel\kilogram}}\vdot
+					  \frac{\SI{1}{\cancel\cubic\meter}}{\SI{1000}{\cancel\cubic\deci\meter}}\vdot
+					  \frac{\SI{1}{\cancel\cubic\deci\meter}}{\SI{1}{\cancel\liter}}\vdot
+					  \SI{2,5}{\cancel\liter}
+		 = \SI{2,5e3}{\gram}
+	$$
+	\structure{n"o de mol de agua:} $n = \rfrac{m}{Mm}$
+	$$
+		n(\ce{H2O}) = \frac{\SI{2500}{\cancel\gram}}{\SI{18}{\cancel\gram\per\mol}} = \SI{138,89}{\mol}
+	$$
+	\structure{Esquema del proceso termodinámico y calor total:}
+	\begin{overprint}
+		\onslide<1>
+			\quad\alert{\textbf{-- Partimos del siguiente estado:}}
+			$$
+				\ce{
+					$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+				}
+			$$
+		\onslide<2>
+			\quad\alert{\textbf{-- Calentamos hasta la vaporización:}}
+			$$
+				\ce{
+					$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+					->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}=\SI{75}{\kelvin}$}]
+					$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+				}
+			$$
+		\onslide<3>
+			\quad\alert{\textbf{-- Proceso de vaporización:}}
+			$$
+				\ce{
+					$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+					->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}=\SI{75}{\kelvin}$}]
+					$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+					->[$\textcolor{orange}{Q_2}$]
+					$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+				}
+			$$
+		\onslide<4>
+			\quad\alert{\textbf{-- Calentamos hasta la temperatura final:}}
+			$$
+				\ce{
+					$\underset{\SI{25}{\celsius}}{\ce{H2O(l)}}$
+					->[$\textcolor{green}{Q_1}$][{$\Delta T_1=\SI{75}{\celsius}=\SI{75}{\kelvin}$}]
+					$\underset{\SI{100}{\celsius}}{\ce{H2O(l)}}$
+					->[$\textcolor{orange}{Q_2}$]
+					$\underset{\SI{100}{\celsius}}{\ce{H2O(g)}}$
+					->[$\textcolor{blue}{Q_3}$][{$\Delta T_3=\SI{3}{\celsius}$}]
+					$\underset{\SI{103}{\celsius}}{\ce{H2O(g)}}$
+				}
+			$$
+	\end{overprint}
+	\visible<2->{
+		$$
+			\textcolor{green}{Q_1} = m\vdot c_e(\ce{H2O(l)})\vdot\Delta T_1\Rightarrow\textcolor{green}{Q_1} = \SI{2500}{\cancel\gram}\vdot\SI{4,18}{\joule\per\cancel\gram\per\cancel\kelvin}\vdot\SI{75}{\cancel\kelvin} = \SI{783750}{\joule} = \SI{783,75}{\kilo\joule}
+		$$
+	}
+	\visible<3->{
+		$$
+			\textcolor{orange}{Q_2} =  \SI{40,7}{\kilo\joule\per\cancel\mol}\vdot\SI{138,89}{\cancel\mol} = \SI{5652,78}{\kilo\joule}
+		$$
+	}
+	\visible<4->{
+		$$
+			\textcolor{blue}{Q_3} = m\vdot c_e(\ce{H2O(g)})\vdot\Delta T_3\Rightarrow\textcolor{blue}{Q_3} = \SI{2500}{\cancel\gram}\vdot\SI{,5}{\cancel\calorie\per\cancel\gram\per\cancel\celsius}\vdot\SI{4,18}{\joule\per\cancel\calorie}\vdot\SI{3}{\cancel\celsius} =
+			\SI{15675}{\joule} = \SI{15,68}{\kilo\joule}
+		$$
+		$$
+			Q_{\text{total}} = \sum_{i=1}^3 Q_i = \SI{783,75}{\kilo\joule}+\SI{5652,78}{\kilo\joule}+\SI{15,68}{\kilo\joule}
+		$$
+		\centering\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=green]{Q_{\text{total}} = \SI{6452,20}{\kilo\joule}}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del segundo proceso: combustión del \ce{C2H6}}
+	\structure{Combustión del \ce{C2H6}:} reacción con el \ce{O2} (reacción sin ajustar):
+	\begin{center}
+		\ce{C2H6(g) + O2(g) -> CO2(g) + H2O(l)}
+	\end{center}
+	\begin{center}
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{V(\ce{C2H6}) = \SI{10}{\milli\liter}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{T(\ce{C2H6}) = \SI{25}{\celsius} = \SI{298,15}{\kelvin}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{P(\ce{C2H6}) = \SI{2,3}{\atm}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=red]{\Delta H_f(\ce{C2H6}) = \SI{-84,7}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=blue,drop fuzzy shadow=green]{\Delta H_f(\ce{CO2}) = \SI{-285,8}{\kilo\joule\per\mol}}\quad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=green,drop fuzzy shadow=blue]{\Delta H_f(\ce{H2O}) = \SI{-393,5}{\kilo\joule\per\mol}}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=2pt,colframe=black,drop fuzzy shadow=yellow]{R = \SI{,082}{\atm\liter\per\mol\per\kelvin}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): calor cedido por la combustión del \ce{C2H6}}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Ajustar reacción:} \ce{C2H6(g) + O2(g) -> CO2 + H2O}
+		\onslide<2>
+			\structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{C2}}
+			\ce{H6(g) + O2(g) ->}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{CO2}}
+			\ce{ + H2O}
+		\onslide<3>
+			\structure{Ajustar reacción:} \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{C2}}
+			\ce{H6(g) + O2(g) ->}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=yellow]{\ce{2CO2}}
+			\ce{ + H2O}
+		\onslide<4>
+			\structure{Ajustar reacción:} \ce{C2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H6(g)}}
+			\ce{ + O2(g) ->}
+			\ce{2CO2 +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H2}}
+			\ce{O}
+		\onslide<5>
+			\structure{Ajustar reacción:} \ce{C2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{H6(g)}}
+			\ce{ + O2(g) ->}
+			\ce{2CO2 +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=orange]{\ce{3H2}}
+			\ce{O}
+		\onslide<6>
+			\structure{Ajustar reacción:} \ce{C2H6(g) +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2(g)}}
+			\ce{->}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{2}}
+			\ce{C}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2}}
+			\ce{+}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{3}}
+			\ce{H2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O}}
+		\onslide<7>
+			\structure{Reacción:} \ce{C2H6(g) +}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{7/2 O2(g)}}
+			\ce{->}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{2}}
+			\ce{C}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O2}}
+			\ce{+}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{3}}
+			\ce{H2}
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=yellow]{\ce{O}}
+		\onslide<8->
+			\structure{Reacción:} \ce{C2H6(g) + 7/2 O2(g) -> 2CO2(g) + 3H2O(g)}
+	\end{overprint}
+	\visible<9->{
+		\structure{Número de moles de \ce{C2H6}:} Ecuación de los gases ideales
+			$$
+				P\vdot V = n\vdot R\vdot T		\Rightarrow
+				n(\ce{C2H6}) = \frac{\SI{2,3}{\cancel\atm}\vdot\SI{,01}{\cancel\liter}}{\SI{,082}{\cancel\atm\cancel\liter\per\mol\per\cancel\kelvin}\vdot(273,15+25)~\si{\cancel\kelvin}} = \SI{9,41e-4}{\mol}
+			$$
+	}
+	\visible<10->{
+		\structure{¿Entalpía de formación estándar del \ce{O2}?} ``La entalpía de formación estándar de un elemento puro en su estado de referencia es cero.''
+		\structure{Ley de Hess para la combustión:} $n$ en este caso es el \underline{coef. esteq.} de la r. de combustión
+		$$
+			\Delta H_C = \sum_{i=1}^{\text{n"o productos}}n_i\vdot\Delta H_{f,i} - \sum_{j=1}^{\text{n"o reactivos}}n_j\vdot\Delta H_{f,j}
+		$$
+		$$
+			\Delta H_C = 2\times\overbrace{\Delta H_f(\ce{CO2})}^{\SI{-393,5}{\kilo\joule\per\mol}}
+			+ 3\times\underbrace{\Delta H_f(\ce{H2O})}_{\SI{-285,8}{\kilo\joule\per\mol}}
+			- 1\times\overbrace{\Delta H_f(\ce{C2H6})}^{\SI{-84,7}{\kilo\joule\per\mol}}
+			- \frac{7}{2}\times\cancelto{\num{0}}{\Delta H_f(\ce{O2})}
+		$$
+		$$
+			\Delta H_C = \SI{-1559,7}{\kilo\joule\per\mol}
+		$$
+		$$
+			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Q(\ce{C2H6}) = \SI{-1559,7}{\kilo\joule\per\cancel\mol}\vdot\SI{9,41e-4}{\cancel\mol} = \SI{-1,467}{\kilo\joule}}
+		$$
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos generales del tercer proceso: síntesis o formación de \ce{NH3}}
+	\structure{Reacción de síntesis o formación:} \ce{N2(g) + 3H2(g) -> 2NH3(g)} (ajustada)\\
+	\begin{center}
+		{\huge¿$m(\ce{N2})$?}\\[.6cm]
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{\Delta H_f = \SI{-46,2}{\kilo\joule\per\mol}}\qquad
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{Mm(\ce{N2}) = \SI{28,01}{\calorie\per\gram\per\celsius}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): síntesis o formación de \ce{NH3}}
+	\structure{Por consecuencia del 1"er Principio:} $Q(\ce{NH3}) + Q(\ce{H2O}) + Q(\ce{C2H6}) = 0$
+	$$
+		Q(\ce{NH3}) = -Q(\ce{H2O}) -Q(\ce{C2H6})\Rightarrow
+		Q(\ce{NH3}) = -(\SI{+6452,20}{\kilo\joule}) - (\SI{-1,467}{\kilo\joule})
+					= \SI{-6450,74}{\kilo\joule}
+	$$
+	\structure{Reacción de síntesis o formación:} \ce{N2(g) + 3H2(g) -> 2NH3(g)} (ajustada)\\
+	$$
+		Q(\ce{NH3}) = n(\ce{NH3})\vdot\Delta H_f(\ce{NH3})												 \Rightarrow
+		n(\ce{NH3}) = \frac{Q(\ce{NH3})}{\Delta H_f(\ce{NH3})}
+	$$
+	$$
+		n(\ce{NH3}) = \frac{\SI{-6450,74}{\cancel\kilo\joule}}{\SI{-46,2}{\cancel\kilo\joule\per\mol}} = \SI{139,62}{\mol}
+	$$
+	\structure{Según estequiometría:}
+	$$
+		2n(\ce{N2}) = n(\ce{NH3})\Rightarrow n(\ce{NH2}) = \frac{n(\ce{NH3})}{2}
+	$$
+	$$
+		n = \frac{m}{Mm}\Rightarrow m = n\vdot Mm\Rightarrow m(\ce{N2})=\frac{n(\ce{NH3})}{2}\vdot Mm(\ce{N2})\Rightarrow
+		m(\ce{N2}) = \frac{\SI{139,62}{\cancel\mol}}{2}\vdot\SI{28,01}{\gram\per\cancel\mol}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.2pt,arc=2pt,colframe=red,drop fuzzy shadow=black]{m(\ce{N2}) = \SI{1955,47}{\gram}}
+	$$
+\end{frame}

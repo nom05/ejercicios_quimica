@@ -23,7 +23,7 @@
 		\item	Base (\ce{NaOH}):\qquad\qquad\qquad\quad
 			\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=blue]{[\ce{NaOH}]=\SI{,3}{\Molar}}\quad
 	\end{itemize}
-	\begin{enumerate}[label={Apartado \alph*)},font={\color{red!50!black}\bfseries}]
+	\begin{enumerate}%[label={Apartado \alph*)},font={\color{red!50!black}\bfseries}]
 		\setcounter{enumi}{1}
 		\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{[\ce{HCl}]=\SI{,5}{\Molar}}\quad
 				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{V(\ce{HCl})=\SI{5}{\milli\liter}}
@@ -37,7 +37,7 @@
 	\framesubtitle{Resolución (\rom{1}): Consideraciones iniciales}
 	El ejercicio se puede hacer usando la ec. de Henderson--Hasselbalch o directamente expresando la constante de equilibrio y operando. Las dos formas son equivalentes pero La primera quizá tenga alguna operación menos. Esa es la razón por la que la hemos escogido.
 	$$
-		\pH = \underbrace{\pKa}_{\pKa = -\log K_a} + \log(\frac{[\ce{A-}]_0}{[\ce{HA}]_0})
+		\text{pH} = \underbrace{\text{p}K_a}_{\text{p}K_a = -\log K_a} + \log(\frac{[\ce{A-}]_0}{[\ce{HA}]_0})
 	$$
 	
 	\structure{Disolución amortiguadora:} existen las dos especies, ácido o base débil y su contraión conjugado. En nuestro caso \ce{HAc} y \ce{Ac-}. Hay dos formas de conseguir esa situación:
@@ -57,9 +57,9 @@
 \begin{frame}
 	\frametitle{\ejerciciocmd}
 	\framesubtitle{Resolución (\rom{2}): Volumen necesario de \ce{NaOH} \SI{,3}{\Molar}}
-	\structure{Ecuación de Henderson--Hasselbalch:} recuerda que $\pKa = -\log K_a\Rightarrow\pKa = -\log\num{1,8e-5}$
+	\structure{Ecuación de Henderson--Hasselbalch:} recuerda que $\text{p}K_a = -\log K_a\Rightarrow\text{p}K_a = -\log\num{1,8e-5}$
 	$$
-		\overbrace{\pH}^5 = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{[\ce{Ac-}]}{[\ce{HAc}]})\Rightarrow
+		\overbrace{\text{pH}}^5 = \overbrace{\text{p}K_a}^{\num{4,74}} + \log(\frac{[\ce{Ac-}]}{[\ce{HAc}]})\Rightarrow
 		\frac{[\ce{Ac-}]}{[\ce{HAc}]} = \overbrace{\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}}}^{M=\rfrac{n}{V}} = 10^{(5-4,74)} = \num{1,82}
 	$$
 	{\small (Despreciamos las disociaciones frente a las concentraciones iniciales, $K_a < \num{4e-4}$)}
@@ -114,9 +114,9 @@
 		\end{tabular}
 	\end{center}
 	$$
-		\pH = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
-		\pH = \num{4,74} + \log(\frac{\num{3,954e-3}}{\num{6,046e-3}})\Rightarrow
-		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\pH = \num{4,56}}
+		\text{pH} = \overbrace{\text{p}K_a}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
+		\text{pH} = \num{4,74} + \log(\frac{\num{3,954e-3}}{\num{6,046e-3}})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=blue]{\text{pH} = \num{4,56}}
 	$$
 \end{frame}
 
@@ -146,8 +146,8 @@
 		\end{tabular}
 	\end{center}
 	$$
-		\pH = \overbrace{\pKa}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
-		\pH = \num{4,74} + \log(\frac{\num{7,654e-3}}{\num{2,346e-3}})\Rightarrow
-		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\pH = \num{5,26}}
+		\text{pH} = \overbrace{\text{p}K_a}^{\num{4,74}} + \log(\frac{\rfrac{n(\ce{Ac-})}{\cancel{V}}}{\rfrac{n(\ce{HAc})}{\cancel{V}}})\Rightarrow
+		\text{pH} = \num{4,74} + \log(\frac{\num{7,654e-3}}{\num{2,346e-3}})\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=green]{\text{pH} = \num{5,26}}
 	$$
 \end{frame}
