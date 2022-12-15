@@ -1,0 +1,91 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Síntesis de lejía a partir de disolución de \ce{NaCl}}
+	\structure{Primera fase -- proceso electrolítico:}
+	{\small
+		 \begin{center}
+			\begin{tabular}{ccc}
+					\ce{2Cl- -> Cl2 + 2e-}										& ox. (ánodo)		& $\varepsilon^0_{\text{ox}}=\SI{-1,36}{\volt}$	\\
+					\ce{2H2O + 2e- -> H2 ^ + 2OH-}								& red. (cátodo)		& $\varepsilon^0_{\text{re}}=\SI{-,83}{\volt}$	\\
+				\midrule
+					\ce{2Cl- + 2H2O -> Cl2 + H2 + 2OH-}							&	Global			& $\varepsilon^0_{\text{T}}=\SI{-2,19}{\volt}$	\\[.3cm]
+					{\normalsize\ce{2NaCl(ac) + 2H2O(l) -> Cl2(g) + H2(g) ^ + 2NaOH(ac)}}	& 	& 
+			\end{tabular}
+		\end{center}
+	}
+	\structure{Segunda fase -- dismutación espontánea del \ce{Cl2} en medio básico:} {\footnotesize (Si celda no particionada)}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{Cl2(g) + OH-(ac) -> Cl-(ac) + ClO-(ac)}
+			$$
+		\onslide<2>
+		$$
+			\ce{
+				$\overset{0}{\ce{Cl}}$2(g)
+					+
+				$\overset{-2}{\ce{O}}$
+				$\overset{+1}{\ce{H}}$-(ac)
+					->
+				$\overset{-1}{\ce{Cl}}$-(ac)
+					+
+				$\overset{+1}{\ce{Cl}}
+				$\overset{-2}{\ce{O}}-(ac)
+			}
+		$$
+		\onslide<3>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) -> ClO-(ac)}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) -> Cl-(ac)}
+		\onslide<4>
+			\structure{Semirreacción de oxidación:} \ce{\textbf{\textcolor{red}{\ce{Cl2}}}(g)   -> \textbf{\textcolor{red}{2}}ClO-(ac)}
+			\structure{Semirreacción de reducción:} \ce{\textbf{\textcolor{green}{\ce{Cl2}}}(g) -> \textbf{\textcolor{green}{2}}Cl-(ac)}
+		\onslide<5>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) -> \textbf{\textcolor{orange}{2}}Cl\textbf{\textcolor{orange}{\ce{O}}}-(ac) + \textbf{\textcolor{orange}{\ce{2H2O}}}(l)}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) -> 2Cl-(ac)}
+		\onslide<6>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + \textbf{\textcolor{blue}{\ce{4OH-}}}(ac) -> \textbf{\textcolor{blue}{2}}Cl\textbf{\textcolor{blue}{\ce{O}}}-(ac) + \textbf{\textcolor{blue}{\ce{2H2O}}}(l)}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) -> 2Cl-(ac)}
+		\onslide<7>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 4OH-(ac) -> 2ClO-(ac) + 2H2O(l) \textbf{\textcolor{red}{+ 2e-}}}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) \textbf{\textcolor{red}{+ 2e-}} -> 2Cl-(ac)}
+		\onslide<8>
+			\structure{Semirreacción de oxidación:} $\boldsymbol{1}\times\left(\ce{Cl2(g) + 4OH-(ac) -> 2ClO-(ac) + 2H2O(l) + 2e-}\right)$
+			\structure{Semirreacción de reducción:} $\boldsymbol{1}\times\left(\ce{Cl2(g) + 2e- -> 2Cl-(ac)}\right)$
+		\onslide<9>
+			\structure{Semirreacción de oxidación:} \ce{Cl2(g) + 4OH-(ac) -> 2ClO-(ac) + 2H2O(l) + 2e-}
+			\structure{Semirreacción de reducción:} \ce{Cl2(g) + 2e- -> 2Cl-(ac)}
+		\onslide<10>
+			\begin{center}
+				{\small
+					\begin{tabular}{c}
+						\ce{Cl2(g) + 4OH-(ac) -> 2ClO-(ac) + 2H2O(l) + \cancel{\ce{2e-}}} \\
+						\ce{Cl2(g) + \cancel{\ce{2e-}} -> 2Cl-(ac)} \\
+						\midrule
+						\ce{2Cl2(g) + 4OH-(ac) -> 2ClO-(ac) + 2H2O(l) + 2Cl-(ac)}
+					\end{tabular}
+				}
+			\end{center}
+		\onslide<11>
+			$$
+				\ce{Cl2(g) + 2OH-(ac) -> ClO-(ac) + H2O(l) + Cl-(ac)}
+			$$
+		\onslide<12>
+			$$
+				\ce{Cl2(g) + 2NaOH(ac) -> NaClO(ac) + H2O(l) + NaCl(ac)}
+			$$
+	\end{overprint}
+	{\small
+		\begin{enumerate}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+			\item<1-> Escribimos la reacción sin ajustar.
+			\item<2-> Asignamos números de oxidación.
+			\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+			\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H}.
+			\item<5-> En el lado de la semirreacción que presente exceso de oxígenos, añadiremos tantas moléculas de agua como oxígenos hay de más.
+			\item<6-> Ajustamos en el otro lado el número de oxígenos e hidrógenos añadiendo \ce{OH-}.
+			\item<7-> Ajustamos número de electrones en cada reacción.
+			\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor en cada una.
+			\item<10-> Sumamos ambas reacciones.
+			\item<11-> Simplificamos si procede.
+		\end{enumerate}
+	}
+\end{frame}

@@ -1,0 +1,228 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/redox/en_una_celda_electrolitica_se_realiza_el_proceso_de_cromado/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\Large\textbf{
+				¿Semirreacciones y reacción ajustadas? ¿$\varepsilon^0_{\text{total}}$? ¿$\varepsilon$? ¿$V$ de disolución? ¿$t$?
+		}}\\[.4cm]
+		\begin{tabular}{cc}
+			$\varepsilon^0(\ce{Mg^2+(ac)|Mg(s)})			=		\SI{-2,38}{\volt}$ &	$\varepsilon^0(\ce{SiO(s)|Si(s)}) 				=	 	 \SI{-,80}{\volt}$	\\
+			$\varepsilon^0(\ce{Cr^3+(ac)|Cr(s)})			=	 	 \SI{-,74}{\volt}$ &	$\varepsilon^0(\ce{AsO4^3-(ac)|AsO2^-(ac)})		=	 	 \SI{-,71}{\volt}$	\\
+			$\varepsilon^0(\ce{Cr^3+(ac)|Cr^2+(ac)})		=	 	 \SI{-,42}{\volt}$ &	$\varepsilon^0(\ce{AuCl4^-(ac)|Au(s),Cl-(ac)})	=	 	 \SI{1,00}{\volt}$	\\
+			$\varepsilon^0(\ce{Cr2O7^2-(ac)|Cr^3+(ac)})		=	 	 \SI{1,33}{\volt}$ &	$\varepsilon^0(\ce{MnO4^-(ac)|Mn^2+(ac)})			=	 	 \SI{1,51}{\volt}$ 	\\
+		\end{tabular}\\[.4cm]
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{[\ce{especies(ac)}] = \SI{,5}{\Molar}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}\\[.2cm]
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{R = \SI{8,314}{\joule\per\mol\per\kelvin}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{T = \SI{25}{\celsius}}\\[.2cm]
+			\item	\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{m(\ce{Cr}) = \SI{100}{\gram}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{I = \SI{20}{\ampere}}\quad
+					\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{F = \SI{96485}{\coulomb\per\mol}}
+		\end{enumerate}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): Consideraciones previas}
+	\begin{itemize}
+		\item\textbf{Celda electrolítica:} el proceso no es espontáneo en condiciones estándar ($\Delta G^0 = - n\vdot F\vdot\varepsilon^0_{\text{total}} > 0$). Por tanto, $\varepsilon^0_{\text{total}}\equiv\varepsilon^0_{\text{T}} < 0$.
+		\item Según el enunciado el \textbf{ajuste es en medio básico}.
+		\item\textbf{Cátodo/reducción:} en el enunciado nos dice que tenemos que depositar cromo sólido. El \underline{único} electrodo con cromo sólido es: $\varepsilon^0(\ce{Cr^3+(ac)|Cr(s)}) = \SI{-,74}{\volt}$.
+		\item\textbf{Más cercano a cero:} como ya sabemos quién se reduce, tenemos que escoger de la tabla el electrodo con el potencial estándar negativo. Como todos los electrodos de la tabla son de reducción, al darles la vuelta para convertirlos en oxidaciones, el signo de los potenciales cambia.
+	\end{itemize}
+	Con estos datos y la tabla de \underline{potenciales estándar de reducción} tenemos que escoger como segundo electrodo el que tenga el potencial estándar de reducción más cercano al del \ce{Cr^3+(ac)|Cr(s)}, que sea igualmente negativo (para darle la vuelta al electrodo y cambiar el signo del potencial) y menor en valor absoluto. La única opción que cumple estas condiciones es \ce{AsO4^3-(ac)|AsO2-(ac)} ya que:
+	$$
+		\varepsilon^0_{\text{red}}(\ce{AsO4^3-(ac)|AsO2-(ac)})=\SI{-,71}{\volt}<0\Rightarrow\varepsilon^0_{\text{ox}}(\ce{AsO2^-(ac)|AsO4^3-(ac)})=\SI{,71}{\volt}>0
+	$$
+	$$
+		\left|\varepsilon^0_{\text{red}}(\ce{Cr^3+(ac)|Cr(s)})\right|=\SI{,74}{\volt} > \SI{,71}{\volt}=\left|\varepsilon^0_{\text{red}}(\ce{AsO4^3-(ac)|AsO2-(ac)})\right|
+	$$
+\end{frame}
+
+\newcommand{\anodo}{Semirreacción de oxidación (ánodo)}
+\newcommand{\catodo}{Semirreacción de reducción (cátodo)}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): Reacciones, ajuste y $\varepsilon^0_{\text{total}}$}
+	\begin{overprint}
+		\onslide<1>
+			$$
+				\ce{Cr^3+ + AsO2- -> Cr + AsO4^3-}
+			$$
+		\onslide<2>
+			$$
+				\ce{
+					$\overset{+3}{\ce{Cr^3+}}$
+					+
+					$\overset{+3}{\ce{As}}$
+					$\overset{-2}{\ce{O2}}$^-
+					->
+					$\overset{0}{\ce{Cr}}$
+					+
+					$\overset{+5}{\ce{As}}$
+					$\overset{-2}{\ce{O}}$4^3-
+				}
+			$$
+		\onslide<3>
+			\structure{\anodo:} (aumenta el estado de oxidación, los electrones aparecerán en productos)\quad\ce{
+							$\overset{+3}{\ce{As}}$
+							$\overset{-2}{\ce{O2}}$^-
+									->
+							$\overset{+5}{\ce{As}}$
+							$\overset{-2}{\ce{O}}$4^3-
+																							}
+			\structure{\catodo:} (disminuye el estado de oxidación, los electrones aparecerán en reactivos)\quad\ce{
+							$\overset{+3}{\ce{Cr^3+}}$
+									 ->
+							$\overset{0}{\ce{Cr}}$
+							 																	}
+		\onslide<4>
+			\structure{\anodo:}\quad\ce{\textbf{\color{green}As}O2^- -> \textbf{\color{green}As}O4^3-}
+			\structure{\catodo:}\quad\ce{\textbf{\color{blue}Cr}^3+  -> \textbf{\color{blue}Cr}}
+		\onslide<5>
+			\structure{\anodo:}\quad\ce{As\textbf{\color{red}\ce{O2}}^- -> As\textbf{\color{red}\ce{O4}}^3- + \textbf{\color{red}\ce{2}}H2\textbf{\color{red}O}}
+			\structure{\catodo:}\quad\ce{Cr^3+ -> Cr}
+		\onslide<6>
+			\structure{\anodo:}\quad\ce{AsO2- + \textbf{\color{blue}\ce{4}}O\textbf{\color{blue}\ce{H}}^- -> AsO4^3- + \textbf{\color{blue}\ce{2H2}}O}
+			\structure{\catodo:}\quad\ce{Cr^3+ -> Cr}
+		\onslide<7>
+			\structure{\anodo:}\quad\ce{AsO2- + 4OH- -> AsO4^3- + 2H2O \textbf{\color{red}\ce{+ 2e-}}}\\
+			{\footnotesize (5 cargas negativas en reactivos frente a 3 cargas negativas en productos $\rightarrow$ 2 electrones en productos)}
+			\structure{\catodo:}\quad\ce{Cr^3+ \textbf{\color{red}\ce{+ 3e-}} -> Cr}\\
+			{\footnotesize (3 cargas positivas en reactivos frente a 0 positivas en productos $\rightarrow$ 3 electrones en reactivos)}
+		\onslide<8>
+			\structure{\anodo:}\quad
+														$
+						3\times\left(\ce{AsO2- + 4OH- -> AsO4^3- + 2H2O \textbf{\color{red}\ce{+ 2e-}}}\right)
+														$
+			\structure{\catodo:}\quad
+														$
+						2\times\left(\ce{Cr^3+ \textbf{\color{red}\ce{+ 3e-}} -> Cr}\right)
+														$
+		\onslide<9>
+			\structure{\anodo:}\quad
+														$
+						\ce{3AsO2- + 12OH- -> 3AsO4^3- + 6H2O \textbf{\color{red}\ce{+ 6e-}}}
+														$
+			\structure{\catodo:}\quad
+														$
+						\ce{2Cr^3+ \textbf{\color{red}\ce{+ 6e-}} -> 2Cr}
+														$
+		\onslide<10>
+			\begin{center}
+				\begin{tabular}{lcr}
+					{\small Oxid., reductor (ánodo):}	&	\ce{3AsO2- + 12OH- -> 3AsO4^3- + 6H2O + \cancel{6e-}}	&	$\varepsilon^0_{\text{ox}}= \SI{+,71}{\volt}$	\\
+					{\small Reduc., oxidante (cátodo):}	&	\ce{2Cr^3+ + \cancel{6e-} -> 2Cr}						&	$\varepsilon^0_{\text{red}}=\SI{-,74}{\volt}$	\\
+					\midrule
+					\multicolumn{2}{c}{
+						\amarillo{\small\ce{3AsO2-(ac) + 12OH-(ac) + 2Cr^3+(ac) -> 2Cr(s) + 3AsO4^3-(ac) + 6H2O(l)}}
+					}	&	\underline{$\varepsilon^0_{\text{Total}}=\SI{-,03}{\volt}$}	\\
+				\end{tabular}				
+			\end{center}
+			\textbf{6 electrones implicados}
+			Para $Q$ tenemos que usar \textbf{\underline{TODAS}} las \textbf{especies en medio acuoso (ac)} y en fase gas (g) de la reacción.
+			$$
+				Q=\frac{
+								[\ce{AsO4^3-}]^3
+						}{
+								[\ce{AsO2-}]^3 \vdot [\ce{OH-}]^{12} \vdot [\ce{Cr^3+}]^2
+						}
+			$$
+	\end{overprint}
+	\begin{enumerate}
+		\item<1-> Escribimos la reacción sin ajustar.
+		\item<2-> Asignamos números de oxidación omitiendo los iones que no entran en la reacción.
+		\item<3-> Escribimos las ecuaciones de las semirreacciones de oxidación y reducción.
+		\item<4-> Ajustamos los átomos diferentes al \ce{O} y al \ce{H} (sin cambios en este caso).
+		\item<5-> Ajustamos los átomos de \ce{O} sumando \ce{H2O} donde hay exceso de oxígenos (m. básico).
+		\item<6-> Ajustamos los átomos de \ce{H} sumando \ce{OH-} (m. básico).
+		\item<7-> Ajustamos número de electrones en cada reacción.
+		\item<8-> Hacemos que el número de electrones sea igual en las dos ecuaciones. Para ello multiplicamos por un factor.
+		\item<10-> Sumamos ambas reacciones.
+		\item<10-> Simplificamos si procede (en este caso no).
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): potencial con otras concentraciones no estándar}
+	\begin{center}
+		\ce{3AsO2-(ac) + 12OH-(ac) + 2Cr^3+(ac) -> 2Cr(s) + 3AsO4^3-(ac) + 6H2O(l)}
+	\end{center}
+	\structure{Tenemos que expresar $Q$ de acuerdo a nuestra reacción y calcular su logaritmo para nuestras concentraciones:} todas las especies tienen una concentración de \SI{,5}{\Molar}
+	$$
+				Q=\frac{
+									[\ce{AsO4^3-}]^3
+							}{
+									[\ce{AsO2-}]^3 \vdot [\ce{OH-}]^{12} \vdot [\ce{Cr^3+}]^2
+							}
+		\Rightarrow
+				\log Q = \log(\frac{
+									[\ce{AsO4^3-}]^3
+							}{
+									[\ce{AsO2-}]^3 \vdot [\ce{OH-}]^{12} \vdot [\ce{Cr^3+}]^2
+							}
+					) \Rightarrow
+	$$
+	$$
+		\log Q = \cancel{3\vdot\log(\num{,5}) - 3\vdot\log(\num{,5})} - 12\vdot\log(\num{,5}) - 2\vdot \log(\num{,5}) =
+					   -14\log(\rfrac{1}{2}) = 14\log(2)
+	$$
+	\structure{Usando la ecuación de Nernst:}
+	$$
+		\varepsilon = \varepsilon^0 - \frac{\num{,0592}}{n}\vdot\log Q\Rightarrow
+		\varepsilon = \num{-,03} - \frac{\num{,0592}}{6}\vdot\num{14}\vdot\overbrace{\num{,6931}}^{\log(2)}\Rightarrow
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\varepsilon = \SI{-,072}{\volt}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): volumen mínimo y tiempo necesarios para depositar \SI{100}{\gram} de cromo}
+	\structure{Según estequiometría:} $n_{\text{consumido}}(\ce{Cr^3+}) = n_{\text{producido}}(\ce{Cr})$
+	$$
+		n = \frac{m}{Mm}\Rightarrow n(\ce{Cr^3+}) = \frac{\SI{100}{\cancel\gram}}{\SI{51,9961}{\cancel\gram\per\mol}} = \SI{1,923}{\mol}
+	$$
+	\structure{De la expresión de la concentración:} $M = \rfrac{n}{V} \Rightarrow V = \rfrac{n}{M}$
+	$$
+		V(\ce{Cr^3+}) = \frac{\SI{1,923}{\cancel\mol}}{\SI{,5}{\cancel\mol\per\liter}}\Rightarrow\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{\SI{3,846}{\liter}}
+	$$
+	\structure{Obtenemos el n"o de moles de electrones a partir de la estequiometría también:}
+	$$
+		2\vdot n(\ce{e-}) = 6\vdot n(\ce{Cr^3+})\Rightarrow n(\ce{e-}) = 3\vdot n(\ce{Cr^3+})\Rightarrow n(\ce{e-}) = 3\vdot\SI{1,923}{\mol} = \SI{5,770}{\mol}
+	$$
+	\structure{Leyes de Faraday:} $n(\ce{e-})\vdot F = I\vdot t$
+	$$
+		\overbrace{n(\ce{e-})}^{n(\ce{e-}) = 3n(\ce{Cr^3+})}\vdot F = I\vdot t\Rightarrow
+		3\vdot n(\ce{Cr^3+})\vdot F = I\vdot t\Rightarrow
+		t = \frac{3\vdot n(\ce{Cr^3+})\vdot F}{I}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=green]{
+			t =	\frac{
+					\overbrace{
+						3\vdot\SI{1,923}{\cancel\mol}
+					}^{
+						\SI{5,770}{\mol}
+					}
+					\vdot\SI{96485}{\coulomb\per\cancel\mol}
+		  	}{
+		  		\SI{20}{\ampere}
+	  		} = \SI{27834,30}{\second} = \SI{7}{\hour}~\SI{43}{\minute}~\SI{54,30}{\second}
+		}
+	$$
+\end{frame}

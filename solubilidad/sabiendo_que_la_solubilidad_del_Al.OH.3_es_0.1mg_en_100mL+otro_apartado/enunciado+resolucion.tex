@@ -1,0 +1,83 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/solubilidad/sabiendo_que_la_solubilidad_del_Al.OH.3_es_0.1mg_en_100mL+otro_apartado/enunciado.tex
+		}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Datos del problema}
+	\begin{center}
+		{\LARGE ¿pH disolución saturada?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\text{solubilidad másica:} \SI{,1}{\gram}\text{ en }\SI{100}{\gram}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{Mm(\ce{Al(OH)3}) = \SI{78,00}{\gram\per\mol}}\\[1.cm]
+		{\LARGE ¿precipitará \ce{Al(OH)3}?}\\[.2cm]
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{V(\ce{Al2(SO4)3}) = \SI{5}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{[\ce{Al2(SO4)3}]  = \SI{1e-6}{\liter}}\quad
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=orange,drop fuzzy shadow=red]{\text{pH}         = \num{12}}
+	\end{center}
+\end{frame}
+
+\newcommand{\pH}{\text{pH}}
+\newcommand{\pOH}{\text{pOH}}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): pH de disolución acuosa saturada}
+	\structure{Convertimos la solubilidad másica a unas unidades más convenientes (\unit{\gram\per\liter}):}
+	$$
+		\frac{\SI{,1}{\cancel\gram}}{\SI{100}{\cancel\milli\liter}}\vdot\frac{\SI{100}{\cancel\milli\liter}}{\SI{0,1}{\liter}} = \SI{1e-3}{\gram\per\liter}
+	$$
+	\structure{Obtenemos la solubilidad \underline{molar}:}
+	$$
+		\SI[per-mode = fraction]{1e-3}{\cancel\gram\per\liter}\vdot\frac{\SI{1}{\mol}}{\SI{78,00}{\cancel\gram}} = \SI{1,282e-5}{\Molar} = s(\ce{Al(OH)3})
+	$$
+	\structure{Equilibrio de solubilidad y solubilidad molar:} usamos la estequiometría del equilibrio de solubilidad para averiguar la relación entre $s$ y [\ce{OH-}] en \ce{Al(OH)3}:
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Al(OH)3(s) <=> Al^3+(ac) + 3OH-(ac)}\quad K_{ps} = \ce{[Al^3+][OH^-]^3}$}	\\
+			\midrule
+										&	[\ce{Al^3+}]	&	[\ce{OH-}]	\\
+			Solubilidad~(\si{\Molar})	&	$s$				&	$3s$
+		\end{tabular}
+	\end{center}
+	\textbf{Según la estequiometría:} $[\ce{OH-}] = 3s\Rightarrow\pH = 14 - \pOH = 14 + \log[\ce{OH-}]$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=red]{\pH = 14 + \log(\underbrace{3\vdot\overbrace{s}^{\num{1,282e-5}}}_{\num{3,85e-5}})\Rightarrow\pH = \num{9,59}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): ¿precipitará \ce{Al(OH)3}?}
+	\structure{Equilibrio de solubilidad y solubilidad molar:} usamos la estequiometría del equilibrio de solubilidad para averiguar la relación entre $s$ y $K_{ps}$ para \ce{Al(OH)3}
+	\begin{center}
+		\begin{tabular}{lcc}
+			\multicolumn{3}{r}{$\ce{Al(OH)3(s) <=> Al^3+(ac) + 3OH-(ac)}\quad K_{ps} = \ce{[Al^3+][OH^-]^3}$}	\\
+			\midrule
+			&	[\ce{Al^3+}]	&	[\ce{OH-}]	\\
+			Solubilidad~(\si{\Molar})	&	$s$				&	$3s$
+		\end{tabular}
+	\end{center}
+	\structure{Calculamos $K_{ps}$:} ($s(\ce{Al(OH)3}) = \SI{1,282e-5}{\Molar}$, previamente calculada)
+	$$
+		 K_{ps}(\ce{Al(OH)3}) = \overbrace{[\ce{Al^3+}]}^s\overbrace{[\ce{OH-}]^3}^{(3s)^3 = 27s^3} = 27s^4 = 27\vdot(\num{1,282e-5})^4 = \num{7,29e-19}
+	$$
+	\textbf{\alert{Tenemos que calcular $Q_{ps} = \overbrace{[\ce{Al^3+}][\ce{OH-}]^3}^{\text{no equilibrio (n.e.)}}$ y compararlo con $K_{ps}$ para saber si precipita:}}
+	\structure{Calculamos [\ce{OH-}]:} $\pH = 12\Rightarrow[\ce{OH-}] = 10^{-14+\pH}\Rightarrow[\ce{OH-}] = \SI{,01}{\Molar}$
+	\structure{Sal soluble:}
+	$$
+		\ce{$\overbrace{\ce{Al2(SO4)3(s)}}^{\SI{1e-6}{\Molar}}$ -> $\overbrace{\ce{2Al^3+(ac)}}^{2\vdot\SI{1e-6}{\Molar}}$ + 3SO4^2-(ac)}
+	$$
+	$$
+		Q_{ps} = \overbrace{\num{2e-6}}^{[\ce{Al^3+}]_{\text{n.e.}}}\vdot(\overbrace{\num{,01}}^{[\ce{OH-}]_{\text{n.e.}}})^3 = \num{2e-12}\Rightarrow
+		Q_{ps} = \num{2e-12} > \num{7,29e-19} = K_{ps}
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=black,drop fuzzy shadow=yellow]{\text{\textbf{\large SÍ PRECIPITA}}}
+	$$
+\end{frame}

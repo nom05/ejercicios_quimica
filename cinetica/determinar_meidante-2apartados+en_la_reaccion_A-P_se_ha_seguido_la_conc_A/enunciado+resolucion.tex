@@ -1,0 +1,240 @@
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Enunciado}
+	\textbf{
+		\input{
+			~/Documentos/docencia/repositorio/ejercicios/quimica_general-github/cinetica/determinar_meidante-2apartados+en_la_reaccion_A-P_se_ha_seguido_la_conc_A/enunciado.tex
+		}
+	}
+ \end{frame}
+
+\newcommand{\tmedio}{t_{\rfrac{1}{2}}}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{1}): resumen de ecuaciones para métodos de integración y $\tmedio$}
+	\begin{center}
+		\ce{A -> Productos}
+	\end{center}
+	\structure{Ecuación de velocidad:} $v = -\dv{[\ce{A}]}{t} = k\vdot[\ce{A}]^x$
+	\begin{center}
+		\begin{tabular}{lccc}
+						&	\textbf{M. integración}		&	\textbf{M. tiempo de vida media}		&	\textbf{Relación $\mathbf{\tmedio\Leftrightarrow[\ce{A}]_{\text{REF}}}$}	\\
+						&	$t$ desde el inicio			&	$t$ con respecto a REF					&																					\\
+			\midrule
+			\underline{\textbf{\color{blue}Orden 0}}												\\
+						&	$[\ce{A}] = [\ce{A}]_0 - k\vdot t$										&
+							$\tmedio  = \frac{[\ce{A}]_{\text{REF}}}{2\vdot k}$						&
+							DIRECTA	$\left(\tmedio\propto[\ce{A}]_{\text{REF}}\right)$				\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 1}}												\\
+						&	$\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t$								&
+							$\tmedio = \frac{\ln 2}{k}$												&
+							NO TIENE																\\[.3cm]
+			\midrule
+			\underline{\textbf{\color{blue}Orden 2}}												\\
+						&	$[\ce{A}]^{-1} = [\ce{A}]^{-1}_0 + k\vdot t$							&
+						$\tmedio = \frac{1}{[\ce{A}]_{\text{REF}}\vdot k}$							&
+						INVERSA $\left(\tmedio\propto\rfrac{1}{[\ce{A}]_{\text{REF}}}\right)$
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{2}): método del tiempo de vida media}
+	\begin{overprint}
+		\onslide<1>
+			\structure{Datos iniciales:}
+			\begin{center}
+				\begin{tabular}{SS}
+						{\textbf{[\ce{A}]~(\unit{\Molar})}}			&
+						{\textbf{$t$ reacción~(\unit{\second})}}	\\
+					\midrule
+						1,0	&	0	\\
+						,6	&	37	\\				
+						,5	&	50	\\
+						,3	&	87
+				\end{tabular}
+			\end{center}
+		\onslide<2>
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{SS}
+						{\textbf{[\ce{A}]~(\unit{\Molar})}}			&
+						{\textbf{$t$ reacción~(\unit{\second})}}	\\
+					\midrule
+						1,0		&	  0		\\
+						 ,5		&	 50		\\
+					\midrule
+						 ,6		&	 37		\\
+						 ,3		&	 87		\\	
+				\end{tabular}
+			\end{center}
+		\onslide<3->
+			\structure{Parejas de datos:}
+			\begin{center}
+				\begin{tabular}{lSSc}
+						&
+						{\textbf{[\ce{A}]~(\unit{\Molar})}}			&
+						{\textbf{$t$ reacción~(\unit{\second})}}	&
+						{\textbf{$\tmedio$~(\unit{\second})}}		\\
+					\midrule
+						REF$\rightarrow$	&
+						1,0		&	   0	&	\multirow{2}{*}{{$\num{50}-\num{0}=\num{50}$}}	\\
+						&
+						 ,6		&	  50	&													\\
+					\midrule
+						REF$\rightarrow$	&
+						 ,6		&	 37		&	\multirow{2}{*}{{$\num{87}-\num{37}=\num{50}$}}	\\
+						&
+						 ,3		&	 87		&													\\
+				\end{tabular}
+			\end{center}
+	\end{overprint}
+	\begin{enumerate}
+		\item<2-> Emparejamos la concentración inicial de referencia con su mitad.
+		\item<3-> Calculamos el tiempo relativo necesario para pasar de esa concentración a la mitad.
+		\item<4-> Estudiamos la relación que hay entre las concentraciones de referencia de nuestras parejas y $\tmedio$. En nuestro caso, el tiempo relativo no cambia aunque $[\ce{A}]_{\text{REF}}$ decrece (pasamos de \SI{1,0}{\Molar} en la 1"a pareja a \SI{,6}{\Molar} en la 2"a). Por tanto, tenemos que comprobar que es de \tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=green,drop fuzzy shadow=black]{\text{\visible<4->{\textbf{ORDEN 1}}}}
+		\item<5-> Usamos la ecuación correspondiente para averiguar $k$:
+					$$
+						\tmedio = \frac{\ln(2)}{k}\Rightarrow
+						k = \frac{\ln(2)}{\tmedio}\Rightarrow
+						\left.
+							\begin{cases}
+								k_1 = \frac{\ln(2)}{\num{50}}	\\
+								k_2 = \frac{\ln(2)}{\num{50}}
+							\end{cases}
+						\right\}\Rightarrow
+						k_1 = k_2
+					$$
+					\textbf{Recordad incluir las \textbf{unidades} de la \textbf{constante cinética}:}\\
+					\begin{center}
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\visible<5->{k = \SI{,0138}{\per\second}}}\qquad
+						\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<5->{v=\SI{,0138}{\per\second}[\ce{A}]^1}}
+					\end{center}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{3}): método de integración}
+	\structure{Datos iniciales:}
+	\begin{center}
+		\begin{tabular}{SS}
+			{\textbf{[\ce{A}]~(\unit{\Molar})}}			&
+			{\textbf{$t$ reacción~(\unit{\second})}}	\\
+			1,0		&	 0			\\
+			 ,6		&	37			\\
+			 ,5		&	50			\\
+			 ,3		&	87			\\
+		\end{tabular}
+	\end{center}
+	\structure{Comprobamos qué ecuación, de los diferentes órdenes, es la válida según nuestros datos:}\\[.2cm]
+	\begin{overprint}
+		\onslide<1>
+			\underline{\textbf{\color{red!50!black}Orden 0:}}
+			$$
+				[\ce{A}] = [\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{[\ce{A}]_0 - [\ce{A}]}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\SI{1,0}{\Molar} - \SI{,6}{\Molar}}{\SI{37}{\second}} &= \SI{,0108}{\Molar\per\second}	\\
+					k_2 = \frac{\SI{1,0}{\Molar} - \SI{,5}{\Molar}}{\SI{50}{\second}} &= \SI{,0100}{\Molar\per\second}	\\
+					k_3 = \frac{\SI{1,0}{\Molar} - \SI{,3}{\Molar}}{\SI{87}{\second}} &= \SI{,0080}{\Molar\per\second}
+				\end{aligned}
+				\right\} k_1\neq k_2 \neq k_3
+			$$
+			\begin{center}
+				\underline{\textbf{No es de orden 0}}
+			\end{center}
+		\onslide<2>
+			\underline{\textbf{\color{red!50!black}Orden 1:}}
+			$$
+				\ln[\ce{A}] = \ln[\ce{A}]_0 - k\vdot t\Rightarrow
+				k = \frac{\ln(\frac{[\ce{A}]_0}{[\ce{A}]})}{t}\left\{
+				\begin{aligned}
+					k_1 = \frac{\ln(\frac{\SI{1,0}{\cancel\Molar}}{\SI{,6}{\cancel\Molar}})}{\SI{37}{\second}} &= \SI{,0138}{\per\second}	\\
+					k_2 = \frac{\ln(\frac{\SI{1,0}{\cancel\Molar}}{\SI{,5}{\cancel\Molar}})}{\SI{50}{\second}} &= \SI{,0138}{\per\second}	\\
+					k_3 = \frac{\ln(\frac{\SI{1,0}{\cancel\Molar}}{\SI{,3}{\cancel\Molar}})}{\SI{87}{\second}} &= \SI{,0138}{\per\second}
+				\end{aligned}
+				\right.
+			$$
+			\begin{center}
+				Como $k_1 = k_2 = k_3$. Recordad incluir las \textbf{unidades} de la \textbf{constante cinética}.\\
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\underline{\textbf{ES DE ORDEN 1}}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=red,drop fuzzy shadow=black]{\visible<2->{k = \SI{,0138}{\per\second}}}\quad
+				\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{\visible<2->{v=\SI{,0138}{\per\second}[\ce{A}]^1}}
+			\end{center}
+	\end{overprint}
+\end{frame}
+
+\newcommand{\tmed}[1]{\tmedio^{(#1)}}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{4}): energía de activación (\rom{1})}
+	\structure{Ecuación de Arrhenius:} para relacionar $k$ a distintas temperaturas. Hay varias formas, la más práctica es la siguiente:
+	$$
+		\ln(\frac{k_1}{k_2}) = \frac{E_a}{R}\left(\frac{T_1-T_2}{T_1\vdot T_2}\right)
+	$$
+	Según el enunciado, la reacción es de orden 2, pero es un dato innecesario. Reemplacemos cada $k$ en el cociente $\rfrac{k_1}{k_2}$ por el $\tmedio$ correspondiente para cada orden.\\
+	\begin{center}
+		\begin{tabular}{ccc}
+			\underline{\textbf{\color{red!50!black}Orden 0:}}	&
+			\underline{\textbf{\color{red!50!black}Orden 1:}}	&
+			\underline{\textbf{\color{red!50!black}Orden 2:}}	\\
+			$
+				k = \frac{[\ce{A}]_{\text{REF}}}{2\vdot\tmedio}\Rightarrow\frac{k_1}{k_2}=\frac{
+					\frac{\cancel{[\ce{A}]_{\text{REF}}}}{\cancel{2}\vdot\tmed{1}}
+				}{
+					\frac{\cancel{[\ce{A}]_{\text{REF}}}}{\cancel{2}\vdot\tmed{2}}
+				}
+%				= \frac{\tmed{2}}{\tmed{1}}
+			$													&
+			$
+				k = \frac{\ln(2)}{\tmedio}\Rightarrow\frac{k_1}{k_2}=\frac{
+					\frac{\cancel{\ln(2)}}{\tmed{1}}
+				}{
+					\frac{\cancel{\ln(2)}}{\tmed{2}}
+				}
+%				= \frac{\tmed{2}}{\tmed{1}}
+			$													&
+			$
+				k = \frac{1}{[\ce{A}]_{\text{REF}}\vdot\tmedio}\Rightarrow\frac{k_1}{k_2}=\frac{
+					\frac{1}{\cancel{[\ce{A}]_{\text{REF}}}\vdot\tmed{1}}
+				}{
+					\frac{1}{\cancel{[\ce{A}]_{\text{REF}}}\vdot\tmed{2}}
+				}
+%				= \frac{\tmed{2}}{\tmed{1}}
+			$													\\
+		\end{tabular}
+	\end{center}
+	Sin depender del orden, el resultado es siempre:
+	$$
+		\frac{k_1}{k_2}=\frac{\tmed{2}}{\tmed{1}}
+	$$
+\end{frame}
+
+\begin{frame}
+	\frametitle{\ejerciciocmd}
+	\framesubtitle{Resolución (\rom{5}): energía de activación (\rom{2})}
+	\structure{Ecuación de Arrhenius:} para relacionar $k$ a distintas temperaturas. Hay varias formas, la más práctica es la siguiente:
+	$$
+		\ln(\frac{k_1}{k_2}) = \frac{E_a}{R}\vdot\left(\frac{T_1-T_2}{T_1\vdot T_2}\right)\Rightarrow
+		\ln(\frac{\tmed{2}}{\tmed{1}}) = \frac{E_a}{R}\vdot\left(\frac{T_1-T_2}{T_1\vdot T_2}\right)\Rightarrow
+		E_a = R\vdot\ln(\frac{\tmed{2}}{\tmed{1}})\vdot\left(\frac{T_1\vdot T_2}{T_1-T_2}\right)
+	$$
+	$$
+		\tmed{1} = \SI{70}{\minute} = \SI{4200}{\second}\qquad T_1 = \SI{298,15}{\kelvin}
+	$$
+	$$
+		\tmed{2} = \SI{90}{\minute} = \SI{5400}{\second}\qquad T_1 = \SI{293,15}{\kelvin}
+	$$
+	Sustituimos por los correspondientes valores:
+	$$
+		E_a = \SI{8,314}{\joule\per\mol\per\cancel\kelvin}\vdot\ln(\frac{\SI{5400}{\cancel\second}}{\SI{4200}{\cancel\second}})\vdot\left(\frac{\SI{298,15}{\cancel\kelvin}\vdot\SI{293,15}{\cancel\kelvin}}{\SI{298,15}{\cancel\kelvin}-\SI{293,15}{\cancel\kelvin}}\right)
+	$$
+	$$
+		\tcbhighmath[boxrule=0.4pt,arc=4pt,colframe=blue,drop fuzzy shadow=black]{E_a = \SI{36524,32}{\joule\per\mol} = \SI{36,52}{\kilo\joule\per\mol}}
+	$$
+\end{frame}
